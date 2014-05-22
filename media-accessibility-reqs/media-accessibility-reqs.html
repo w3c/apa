@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Media Accessibility User Requirements</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<!-- 
+      === NOTA BENE ===
+      For the three scripts below, if your spec resides on dev.w3 you can check them
+      out in the same tree and use relative links so that they'll work offline,
+     -->
+		<script src='http://dev.w3.org/2009/dap/ReSpec.js/js/respec.js' class='remove'></script>
+        <!--		<script src='/dev/2009/dap/ReSpec.js/js/respec.js' class='remove'></script> -->
+		<script class="remove">
+var respecConfig = {
+    // specification status (e.g., WD, LCWD, NOTE, etc.). If in doubt use ED.
+    specStatus:           "FPWD",
+    
+    // the specification's short name, as in http://www.w3.org/TR/short-name/
+    shortName:            "media-a11y-reqs",
+
+    // if your specification has a subtitle that goes below the main
+    // formal title, define it here
+    // subtitle   :  "an excellent document",
+
+    // if you wish the publication date to be other than today, set this
+    publishDate:  "2011-12-15",
+
+    // if the specification's copyright date is a range of years, specify
+    // the start date here:
+    // copyrightStart: "2011",
+
+    // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+    // and its maturity status
+    // previousPublishDate:  "1977-03-15",
+    // previousMaturity:  "WD",
+
+    // if there a publicly available Editor's Draft, this is the link
+    edDraftURI:           "http://www.w3.org/WAI/PF/media-a11y-reqs/",
+
+    // if this is a LCWD, uncomment and set the end of its review period
+    // lcEnd: "2009-08-05",
+
+    // if you want to have extra CSS, append them to this list
+    // it is recommended that the respec.css stylesheet be kept
+    extraCSS:             ["http://dev.w3.org/2009/dap/ReSpec.js/css/respec.css"],
+
+    // editors, add as many as you like
+    // only "name" is required
+    editors:  [
+                  { name: "Shane McCarron", url: 'http://blog.halindrome.com', mailto: "shane@aptest.com",
+                  company: "Applied Testing and Technology, Inc.", companyURI:
+                  "http://www.aptest.com" },
+        { name: "Michael Cooper", 
+          company: "W3C", companyURL: "http://www.w3.org/" }
+    ],
+
+    // authors, add as many as you like. 
+    // This is optional, uncomment if you have authors as well as editors.
+    // only "name" is required. Same format as editors.
+
+    authors:  [
+        { name: "Judy Brewer", company: "W3C", companyURL: "http://www.w3.org/" },
+        { name: "Eric Carlson", company: "Apple, Inc.", companyURL: "http://www.apple.com/" },
+        { name: "John Foliot", company: "Invited Expert"},
+        { name: "Geoff Freed", company: "Invited Expert" },
+        { name: "Sean Hayes", company: "Microsoft Corporation", companyURL: "http://www.microsoft.com/" },
+        { name: "Silvia Pfeiffer", company: "Invited Expert" },
+        { name: "Janina Sajka", company: "Invited Expert" }
+    ],
+    
+    // name of the WG
+    wg:           "Protocols and Formats Working Group",
+    
+    // URI of the public WG page
+    wgURI:        "http://www.w3.org/WAI/PF/",
+    
+    // name (with the @w3c.org) of the public mailing to which comments are due
+    wgPublicList: "public-pfwg-comments",
+    
+    // URI of the patent status for this WG, for Rec-track documents
+    // !!!! IMPORTANT !!!!
+    // This is important for Rec-track documents, do not copy a patent URI from a random
+    // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+    // Team Contact.
+    wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/32212/status",
+    
+    // Depth for the TOC
+    maxTocLevel: 2,
+
+    // include introduction sections in the ToC
+    tocIntroductory: true,
+    doRDFa: true
+};
+		</script>
+		<style type="text/css">
+.req-handle
+{
+	font-weight : bold;
+	text-transform : uppercase;
+}
+.list-in-req
+{
+	list-style-type : lower-alpha;
+}
+		</style>
+	</head>
+	<body>
+		<section id="abstract">
+			<p>This document aggregates the accessibility requirements of users with disabilities that
+    the W3C HTML5 Accessibility Task Force has collected with respect to audio
+    and video on the Web. </p>
+    <p>It first provides an introduction to the needs of users with disabilties 
+    in relation to audio and video.</p>
+			<p>Then it explains what alternative content technologies have been developed
+    to help such users gain access to the content of audio and video. </p>
+			<p>A third section explains how these content technologies fit in the larger
+    picture of accessibility, both technically within a Web user agent
+    and from a production process point of view. </p>
+			<p>This document is most explicitly not a collection of baseline user agent
+    or authoring tool requirements. It is important to recognize that not all
+    user agents (nor all authoring tools) will support all the features discussed
+    in this document. Rather, this document attempts to supply a comprehensive
+    collection of user requirements needed to support media accessibility in
+    the context of HTML5. As such, it should be expected that this document
+    will continue to develop for some time. </p>
+			<p>Please also note this document is not an inventory of technology currently
+    provided by, or missing from HTML5 specification drafts. Technology listed
+    here is here because it's important for accommodating the alternative access
+    needs of users with disabilities to web-based media. This document is our
+    inventory of Media Accessibility User Requirements. </p>
+		</section>
+		<section id="sotd">
+        <p>This document is reasonably stable, and represents a consensus within the Working Group.  The Working Group is looking for
+        feedback prior to publication as a Note.</p>
+		</section>
+		<section>
+			<h2> Media Accessibility Checklist </h2>
+			<p>The following User Requirements have also been distilled into a <a href="http://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist">Media Accessibility Checklist</a>.</p>
+		</section>
+		<section>
+			<h2> Accessible Media Requirements by Type of Disability </h2>
+            <p>Editorial note: This section is a rough draft. It will be edited to align with
+           
+    <a href="http://www.w3.org/WAI/intro/people-use-web/Overview.html">How
+    People with Disabilities Use the Web</a> once that document is complete.
+    This draft is included now provide general background
+    for sections 2 and 3 of this document. </p>
+			<p>Comprehension of media may be affected by loss of visual function, loss
+            of audio function, cognitive issues, or a combination of all three. 
+            Cognitive disabilities may affect access to and/or
+    comprehension of media. Physical disabilities such as dexterity impairment,
+    loss of limbs, or loss of use of limbs may affect access to media. Once richer
+    forms of media, such as virtual reality, become more commonplace, tactile
+    issues may come into play. Control of the media player can be an important
+    issue, e.g., for people with physical disabilties, however this is typically not addressed
+    by the media formats themselves, but is a requirement of the technology used
+    to build the player. </p>
+			<section>
+				<h3> Blindness </h3>
+				<p>People who are blind cannot access information if it is presented only
+      in the visual mode. They require information in an alternative representation,
+      which typically means the audio mode, although information can also be
+      presented as text. It is important to remember that not only the main video
+      is inaccessible, but any other visible ancillary information such as stock
+      tickers, status indicators, or other on-screen graphics, as well as any
+      visual controls needed to operate the content. Since people who are blind
+      use a screen reader and/or refreshable braille display, these assistive
+      technologies (<abbr title='Assistive Technology'>AT</abbr>s) need to work hand-in-hand with the access mechanism
+      provided for the media content. </p>
+			</section>
+			<section>
+				<h3> Low vision </h3>
+				<p>People with low vision can use some visual information.
+      Depending on their visual
+      ability they might have specific issues such as difficulty discriminating
+      foreground information from background information, or discriminating colors.
+      Glare caused by excessive scattering in the eye can be a significant problem,
+      especially for very bright content or surroundings. They may be unable
+      to react quickly to transient information, and may have a narrow angle
+      of view and so may not detect key information presented temporarily where
+      they are not looking, or in text that is moving or scrolling. A person
+      using a low-vision AT aid, such as a screen magnifier, will only be viewing
+      a portion of the screen, and so must manage tracking media content via
+      their AT. They may have difficulty reading when text is too small, has
+      poor background contrast, or when outline or other fancy font types or
+      effects are used. They may be using an AT that adjusts all the colors of
+      the screen, such as inverting the colors, so the media content must be
+      viewable through the AT. </p>
+			</section>
+			<section>
+				<h3> Atypical color perception </h3>
+				<p>A significant percentage of the population has atypical color perception,
+      and may not be able to discriminate between different colors, or may miss
+      key information when coded with color only. </p>
+			</section>
+			<section>
+				<h3> Deafness </h3>
+				<p>People who are deaf generally cannot use audio. Thus, an alternative representation
+      is required, typically through synchronized captions and/or sign translation. </p>
+			</section>
+			<section>
+				<h3> Hard of hearing </h3>
+				<p>People who are hard of hearing may be able to use some audio material,
+      but might not be able to discriminate certain types of sound, and may miss
+      any information presented as audio only if it contains frequencies they
+      can't hear, or is masked by background noise or distortion. They may miss
+      audio which is too quiet, or of poor quality. Speech may be problematic
+      if it is too fast and cannot be played back more slowly. Information presented
+      using multichannel audio (e.g., stereo) may not be perceived by people
+      who are deaf in one ear. </p>
+			</section>
+			<section>
+				<h3> Deaf-blind </h3>
+				<p>Individuals who are deaf-blind have a combination of conditions that may
+      result in one of the following: blindness and deafness; blindness and difficulty
+      in hearing; low vision and deafness; or low vision and difficulty in hearing.
+      Depending on their combination of conditions, individuals who are deaf-blind
+      may need captions that can be enlarged, changed to high-contrast colors,
+      or otherwise styled; or they may need captions and/or described video that
+      can be presented with AT (e.g., a refreshable braille display). They may
+      need synchronized captions and/or described video, or they may need a non-time-based
+      transcript which they can read at their own pace. </p>
+			</section>
+			<section>
+				<h3> Physical impairment </h3>
+				<p>People with physical disabilities such as poor dexterity, loss of limbs, or
+      loss of use of limbs may use the keyboard alone rather than the combination
+      of a pointing device plus keyboard to interact with content and controls,
+      or may use a switch with an on-screen keyboard, or other assistive-technology
+      access. The player itself must be usable via the keyboard and pointing
+      devices. The user must have full access to all player controls, including
+      methods for selecting alternative content. </p>
+			</section>
+			<section>
+				<h3> Cognitive and neurological disabilities </h3>
+				<p>Cognitive and neurological disabilities include a wide range of conditions
+      that may include intellectual disabilities (called learning disabilities
+      in some regions), autism-spectrum disorders, memory impairments, mental-health
+      disabilities, attention-deficit disorders, audio- and/or visual-perceptive
+      disorders, dyslexia and dyscalculia (called learning disabilities in other
+      regions), or seizure disorders. Necessary accessibility supports vary widely
+      for these different conditions. Individuals with some conditions may process
+      information aurally better than by reading text; therefore, information
+      that is presented as text embedded in a video should also be available
+      as audio descriptions. Individuals with other conditions may need to reduce
+      distractions or flashing in presentations of video. Some conditions such
+      as autism-spectrum disorders may have multi-system effects and individuals
+      may need a combination of different accommodation.
+					Overall, the media experience for people on the autism spectrum should
+        be customizable and well designed so as to not be overwhelming. Care
+        must be taken to present a media experience that focuses on the purpose
+        of the content and provides alternative content in a clear, concise manner. </p>
+      <!--
+				<section>
+					<h4> Autism </h4>
+					<p>Individuals with an autism-spectrum disorder are commonly impacted in
+        the areas of communication, social interaction, and repetitive behaviors.
+        They can have difficulty interpreting and expressing social communication,
+        as well as difficulty shifting between context and activities. Therefore,
+        a supplemental content track could be used to focus the individual’s
+        attention on the key points of the media. For example, supplemental text
+        could point out the key educational messages or plainly state the meaning
+        of social interactions. Verbal communications could be broken down into
+        the key messages; tone of voice could be interpreted; phrases of speech
+        and communication styles such as sarcasm could be explained. </p>
+					<p>Individuals on the autism spectrum can be quite visual and learn effectively
+        from social stories. A social story is a simple description of a social
+        situation, such as an upcoming event, a social interaction, or a change
+        in routine. A social story is commonly a series of pictures, supported
+        by simple text to describe the actions, behavior, and outcomes. This
+        technique could be carried over to media by providing a social story
+        as alternative content. The media of the social story could be a combination
+        of pictures and synchronized text or audio. </p>
+					<p>Overall, the media experience for people on the autism spectrum should
+        be customizable and well designed so as to not be overwhelming. Care
+        must be taken to present a media experience that focuses on the purpose
+        of the content and provides alternative content in a clear, concise manner. </p>
+				</section>
+                -->
+			</section>
+		</section>
+		<section>
+			<h2> Alternative Content Technologies </h2>
+			<p>A number of alternative content types have been developed to help users
+    with sensory disabilities gain access to audio-visual content. This section
+    lists them, explains generally what they are, and provides a number of requirements
+    on each that need to be satisfied with technology developed in HTML5 around
+    the media elements. </p>
+			<section>
+				<h3> Described video </h3>
+				<p>Described video contains descriptive narration of key visual elements
+      designed to make visual media accessible to people who are blind or visually
+      impaired. The descriptions include actions, costumes, gestures, scene changeset
+      or any other important visual information that someone who cannot see the
+      screen might ordinarily miss. Descriptions are traditionally audio recordings
+      timed and recorded to fit into natural pauses in the program, although
+      they may also briefly obscure the main audio track. (See the section on
+      extended descriptions for an alternative approach.) The descriptions are
+      usually read by a narrator with a voice that cannot be easily confused
+      with other voices in the primary audio track. They are authored to convey
+      objective information (e.g., a yellow flower) rather than subjective judgments
+      (e.g., a beautiful flower). </p>
+				<p>As with captions, descriptions can be open or closed. </p>
+				<ul>
+					<li>
+						<strong>Open descriptions</strong> are merged with the program-audio
+        track and cannot be turned off by the viewer. </li>
+					<li>
+						<strong>Closed descriptions</strong> can be turned on and off by the
+        viewer. They can be recorded as a separate track containing descriptions
+        only, timed to play at specific spots in the timeline and played in parallel
+        with the program-audio track. </li>
+					<li> Some descriptions can be delivered as a <strong>separate audio</strong> channel
+        mixed in at the player. </li>
+					<li> Other options include a computer-generated <strong>‘text to speech’
+          track,</strong> also known as text video descriptions. This is described
+          in the next subsection. </li>
+				</ul>
+				<p>Described video provides benefits that reach beyond blind or visually
+      impaired viewers; e.g., students grappling with difficult materials or
+      concepts. Descriptions can be used to give supplemental information about
+      what is on screen—the structure of lengthy mathematical equations or the
+      intricacies of a painting, for example. </p>
+				<p>Described video is available on some television programs and in many movie
+      theaters in the U.S. and other countries. Regulations in the U.S. and Europe
+      are increasingly focusing on description, especially for television, reflecting
+      its priority with citizens who have visual impairments. The technology
+      needed to deliver and render basic video descriptions is in fact relatively
+      straightforward, being an extension of common audio-processing solutions.
+      Playback products must support multi-audio channels required for description,
+      and any product dealing with broadcast TV content must provide adequate
+      support for descriptions. Descriptions can also provide text that can be
+      indexed and searched. </p>
+				<p>Systems supporting described video that are not open descriptions must: </p>
+				<section>
+					<h4 id="DV-1"><strong class="req-handle">[DV-1]</strong> Provide an indication that descriptions are available, and
+          are active/non-active. </h4>
+				</section>
+				<section>
+					<h4 id="DV-2"><strong class="req-handle">[DV-2]</strong> Render descriptions in a time-synchronized manner, using
+          the media resource as the timebase master. </h4>
+				</section>
+				<section>
+					<h4 id="DV-3"><strong class="req-handle">[DV-3]</strong> Support multiple description tracks (e.g., discrete tracks
+          containing different levels of detail). </h4>
+				</section>
+				<section>
+					<h4 id="DV-4"><strong class="req-handle">[DV-4]</strong> Support recordings of real human speech as a track of the
+          media resource, or as an external file. </h4>
+				</section>
+				<section>
+					<h4 id="DV-5"><strong class="req-handle">[DV-5]</strong> Allow the author to independently adjust the volumes of the
+          audio description and original soundtracks. </h4>
+				</section>
+				<section>
+					<h4 id="DV-6"><strong class="req-handle">[DV-6]</strong> Allow the user to independently adjust the volumes of the
+          audio description and original soundtracks, with the user's settings
+          overriding the author's. </h4>
+				</section>
+				<section>
+					<h4 id="DV-7"><strong class="req-handle">[DV-7]</strong> Permit smooth changes in volume rather than stepped changes.
+          The degree and speed of volume change should be under provider control. </h4>
+				</section>
+				<section>
+					<h4 id="DV-8"><strong class="req-handle">[DV-8]</strong> Allow the author to provide fade and pan controls to be accurately
+          synchronised with the original soundtrack. </h4>
+				</section>
+				<section>
+					<h4 id="DV-9"><strong class="req-handle">[DV-9]</strong> Allow the author to use a codec which is optimised for voice
+          only, rather than requiring the same codec as the original soundtrack. </h4>
+				</section>
+				<section>
+					<h4 id="DV-10"><strong class="req-handle">[DV-10]</strong> Allow the user to select from among different languages
+          of descriptions, if available, even if they are different from the
+          language of the main soundtrack. </h4>
+				</section>
+				<section>
+					<h4 id="DV-11"><strong class="req-handle">[DV-11]</strong> Support the simultaneous playback of both the described
+          and non-described audio tracks so that one may be directed at separate
+          outputs (e.g., a speaker and headphones). </h4>
+				</section>
+				<section>
+					<h4 id="DV-12"><strong class="req-handle">[DV-12]</strong> Provide a means to prevent descriptions from carrying over
+          from one program or channel when the user switches to a different program
+          or channel. </h4>
+				</section>
+				<section>
+					<h4 id="DV-13"><strong class="req-handle">[DV-13]</strong> Allow the user to relocate the description track within
+          the audio field, with the user setting overriding the author setting.
+          The setting should be re-adjustable as the media plays. </h4>
+				</section>
+				<section>
+					<h4 id="DV-14"><strong class="req-handle">[DV-14]</strong> Support metadata, such as copyright information, usage rights,
+          language, etc. </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Text video description </h3>
+				<p>Described video that uses text for the description source rather than
+      a recorded voice creates specific requirements. </p>
+				<p>Text video descriptions (TVDs) are delivered to the client as text and
+      rendered locally by assistive technology such as a screen reader or a braille
+      device. This can have advantages for screen-reader users who want full
+      control of the preferred voice and speaking rate, or other options to control
+      the speech synthesis. </p>
+				<p>Text video descriptions are provided as text files containing start times
+      for each description cue. Since the duration that a screen reader takes
+      to read out a description cannot be determined during authoring of the
+      cues, it is difficult to ensure they don't obscure the main audio or other
+      description cues. This is likely to be caused by at least three reasons: </p>
+				<ul>
+					<li> An author of text video descriptions does not have a screen reader.
+        This means s/he cannot check if the description fits within the time
+        frame. Even if s/he has a screen reader, a user's screen reader will
+        be set to a different reading speed and may take longer to read the same
+        sentence. </li>
+					<li> Some screen-reader users (e.g., those who are elderly or have learning
+        disabilities) may slow down the speech rate. </li>
+					<li> A visually complicated scene (e.g., figures on a blackboard in an
+        online physics class) may require more description time than is available
+        in the program-audio track. </li>
+				</ul>
+				<p>Systems supporting text video descriptions must: </p>
+				<section>
+					<h4 id="TVD-1"><strong class="req-handle">[TVD-1]</strong> Support presentation of text video descriptions through
+          a screen reader or braille device, with playback speed control and
+          voice control and synchronisation points with the video. </h4>
+				</section>
+				<section>
+					<h4 id="TVD-2"><strong class="req-handle">[TVD-2]</strong> TVDs need to be provided in a format that contains the following
+          information:</h4>
+				</section>
+				<ol class="list-in-req">
+					<li>start time, text per description cue (the duration is determined
+              dynamically, though an end time could provide a cut point) </li>
+					<li>possibly a speech-synthesis markup to improve quality of
+              the description (existing speech synthesis markups include <a href="http://www.w3.org/TR/speech-synthesis/">SSML</a> and <a href="http://www.w3.org/TR/css3-speech/">Speech
+              CSS</a>) </li>
+					<li>accompanying metadata providing labeling for speakers, language,
+              etc. </li>
+				</ol>
+				<section>
+					<h4 id="TVD-3"><strong class="req-handle">[TVD-3]</strong> Where possible, provide a text or separate audio track privately
+          to those that need it in a mixed-viewing situation, e.g., through headphones. </h4>
+				</section>
+				<section>
+					<h4 id="TVD-4"><strong class="req-handle">[TVD-4]</strong> Where possible, provide options for authors and users to
+          deal with the overflow case: continue reading, stop reading, and pause
+          the video. (One solution from a user's point of view may be to pause
+          the video and finish reading the TVD, for example.) User preference
+          should override authored option. </h4>
+				</section>
+				<section>
+					<h4 id="TVD-5"><strong class="req-handle">[TVD-5]</strong> Support the control over speech-synthesis playback speed,
+          volume and voice, and provide synchronisation points with the video. </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Extended video descriptions </h3>
+				<p>Video descriptions are usually provided as recorded speech, timed to play
+      in the natural pauses in dialog or narration. In some types of material,
+      however, there is not enough time to present sufficient descriptions. To
+      meet such cases, the concept of extended description was developed. Extended
+      descriptions work by pausing the video and program audio at key moments,
+      playing a longer description than would normally be permitted, and then
+      resuming playback when the description is finished playing. This will naturally
+      extend the timeline of the entire presentation. This procedure has not
+      been possible in broadcast television; however, hard-disk recording and
+      on-demand Internet systems can make this a practical possibility. </p>
+				<p>Extended video description (EVD) has been reported to have benefits for
+      cognitive disabilities; for example, it might benefit people with Aspergers
+      Syndrome and other Autistic Spectrum Disorders, in that it can make connections
+      between cause and effect, point out what is important to look at, or explain
+      moods that might otherwise be missed. </p>
+				<p>Systems supporting extended audio descriptions must: </p>
+				<section>
+					<h4 id="EVD-1"><strong class="req-handle">[EVD-1]</strong> Support detailed user control as specified in <a href="#TVD-4">[TVD-4]</a> for
+          extended video descriptions. </h4>
+				</section>
+				<section>
+					<h4 id="EVD-2"><strong class="req-handle">[EVD-2]</strong> Support automatically pausing the video and main audio tracks
+          in order to play a lengthy description. </h4>
+				</section>
+				<section>
+					<h4 id="EVD-3"><strong class="req-handle">[EVD-3]</strong> Support resuming playback of video and main audio tracks
+          when the description is finished. </h4>
+					<p>Note that this is an advanced feature and would only be expected by
+      advanced systems. </p>
+				</section>
+			</section>
+			<section>
+				<h3> Clean audio </h3>
+				<p>A relatively recent development in television accessibility is the concept
+      of <a href="http://www.etsi.org/deliver/etsi_ts/101100_101199/101154/01.09.01_60/ts_101154v010901p.pdf">clean
+      audio</a>, which takes advantage of the increased adoption of multichannel
+      audio. This is primarily aimed at audiences who are hard of hearing, and
+      consists of isolating the audio channel containing the spoken dialog and
+      important non-speech information that can then be amplified or otherwise
+      modified, while other channels containing music or ambient sounds are attenuated. </p>
+				<p>Using the isolated audio track may make it possible to apply more sophisticated
+      audio processing such as pre-emphasis filters, pitch-shifting, and so on
+      to tailor the audio to the user's needs, since hearing loss is typically
+      frequency-dependent, and the user may have usable hearing in some bands
+      yet none at all in others. </p>
+				<p>Systems supporting clean audio and multiple audio tracks must: </p>
+				<section>
+					<h4 id="CA-1"><strong class="req-handle">[CA-1]</strong> Support clean audio as a separate, alternative audio track
+          from other audio-based alternative media resources. </h4>
+				</section>
+				<section>
+					<h4 id="CA-2"><strong class="req-handle">[CA-2]</strong> Support the synchronisation of multitrack audio either within
+          the same file or from separate files - preferably both. </h4>
+				</section>
+				<section>
+					<h4 id="CA-3"><strong class="req-handle">[CA-3]</strong> Support separate volume control of the different audio tracks. </h4>
+				</section>
+				<section>
+					<h4 id="CA-4"><strong class="req-handle">[CA-4]</strong> Support pre-emphasis filters, pitch-shifting, and other audio-processing
+          algorithms. </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Content navigation by content structure </h3>
+				<p>Most people are familiar with fast forward and rewind in media content.
+      However, because they progress through content based only on time, fast
+      forward and rewind are ineffective particularly when the content is being
+      used for purposes other than entertainment. People with disabilities are
+      also particularly disadvantaged if forced to rely solely on time-based
+      fast forward and rewind to study content. </p>
+				<p>Fortunately, most content is structured, and appropriate markup can expose
+      this structure to forward and rewind controls: </p>
+				<ul>
+					<li> Books generally have chapters and perhaps subsections within those
+        chapters. They also have structures such as page numbers, side-bars,
+        tables, footnotes, tables of contents, glossaries, etc. </li>
+					<li> Short music selections tend to have verses and repeating choruses. </li>
+					<li> Larger classical-music works have movements which are further dividable
+        by component parts such as exposition, development and recapitulation,
+        or theme and variations. </li>
+					<li> Operas, theatrical plays, and movies have acts and scenes within those
+        acts. </li>
+					<li> Television programs generally have clear divisions; e.g., newscasts
+        have individual stories usually wrapped within a larger structures called
+        news, weather, or sports. </li>
+					<li> A lecturer may first lay out a topic, then consider a series of approaches
+        or illustrative examples, and finally draw a conclusion. </li>
+				</ul>
+                <p>This is, of course, a <abbr title='Document Object Model'>DOM</abbr> view of 
+                content. However, effective DOM-based
+      navigation will require an additional control not typically available on
+      current media players. This real-time control, which we are calling a &quot;granularity-level
+      control,&quot; will allow the user to adjust the level of granularity applied
+      to &quot;next&quot; and &quot;previous&quot; controls. This is necessary
+      because next and previous are too cumbersome if accessing every DOM element,
+      but unsatisfactorally broad and coarse if set to only the top hierarchical
+      DOM level. Allowing the user to adjust the DOM level that next and previous
+      go to has proven very effective—hence the real-time granularity level
+      control. </p>
+				<p><strong>Two examples of granularity levels</strong> </p>
+				<p>1. In a news broadcast, the most global level (analogous to   &lt;h1&gt;)
+      might be the category called &quot;news, weather, and sports.&quot;    The
+      second level (analogous to &lt;h2&gt;) would identify each individual news
+      (or sports) story. With the granularity control set to level 1, &quot;next&quot; and &quot;previous&quot; would
+      cycle among news, weather, and sports. Set at level 2, it would cycle among
+      individual news (or sports) stories. </p>
+				<p>2. In a bilingual audiobook-plus-e-text production of Dante Alighieri's &quot;La
+      Divina Commedia,&quot; the user would choose whether to listen to the original
+      medieval Italian or its modern-language translation—possibly toggling
+      between them. Meanwhile, both the original and translated texts might appear
+      on screen, with both the original and translated text highlighted, line
+      by line, in sync with the audio narration. </p>
+				<ul>
+					<li> The most global (&lt;h1&gt;) level would be each individual book— &quot;Inferno,&quot; &quot;Purgatorio,&quot; and &quot;Paradiso.&quot; </li>
+					<li> The second (&lt;h2&gt;) level would be each individual canto. </li>
+					<li> The third (&lt;h3&gt;) level would be each individual verso. </li>
+					<li> The fourth (&lt;h4&gt;) level would be each individual line of poetry. </li>
+				</ul>
+				<p>With granularity set at level 1, &quot;next&quot; and &quot;previous&quot; would
+      cycle among the three books of &quot;La Divina Commedia.&quot;  Set at
+      level 2, they would cycle among its cantos, at level 3 among its versos,
+      and at level 4 among the individual lines of poetry text. </p>
+				<p><strong>Navigating ancillary content</strong> </p>
+				<p>There is a kind of structure, particularly in longer media resources,
+      which requires special navigational consideration. While present in the
+      media resource, it does not fit in the natural beginning-to-end progression
+      of the resource. Its consumption tends to interrupt this natural beginning-to-end
+      progression. A familiar example is a footnote or sidebar in a book. One
+      must pause reading the text narrative to read a footnote or sidebar. Yet
+      these structures are important and might require their own alternative
+      media renditions. We have chosen to call such structures &quot;ancillary
+      content structures.&quot; </p>
+				<p>Commercials, news briefs, weather updates, etc., are familiar examples
+      from television programming. While so prevalent that most of us may be
+      inured to it, they do function to interrupt the primary television program.
+      Users will want the ability to navigate past these ancillary structures—or
+      perhaps directly to them. </p>
+				<p>E-text-plus-audio productions of titles such as &quot;La Divina Commedia,&quot; described
+      above, may well include reproductions of famous frescoes or paintings interspersed
+      throughout the text, though these are not properly part of the text/content.
+      Such illustrations must be programatically discoverable by users. They
+      also need to be described. However, the user needs the option of choosing
+      when to pause for that interrupting description. </p>
+				<p>One current HTML5 media-based example of ancillary content is the Mozilla
+      Popcorn Javascript library and API which can be further explored with the
+      following three resources: </p>
+				<ul>
+					<li> <a href="https://wiki.mozilla.org/PopcornOpenVideoAPI">Mozilla PopcornOpenVideoAPI</a> documentation </li>
+					<li> <a href="http://www.webmonkey.com/2010/08/mozillas-popcorn-project-adds-extra-flavor-to-web-video/">Mozilla’s
+          Popcorn Project Adds Extra Flavor to Web Video</a> blog post </li>
+					<li> <a href="http://popcornjs.org/">Popcorn.js</a> script
+        library </li>
+				</ul>
+				<p><strong>Additional note</strong> </p>
+				<p>Media in HTML5 will be used heavily and broadly. These accessibility user
+      requirements will often find broad applicability. </p>
+				<p>Just as the structures introduced particularly by nonfiction titles make
+      books more usable, media is more usable when its inherent structure is
+      exposed by markup. Markup-based access to structure is critical for persons
+      with disabilities who cannot infer structure from purely presentational
+      queues. </p>
+				<p>Structural navigation has proven highly effective in various programs
+      of electronic book publication for persons with print disabilities. Nowadays,
+      these programs are based on the <a href="http://www.daisy.org/daisy-standard">ANSI/NISO
+      Z39.86 specifications</a>. Z39.86 structural navigation is also supported
+      by <a href="http://idpf.org/">e-publishing industry specifications</a>. </p>
+				<p>The user can navigate along the timebase using a continuous scale, and
+      by relative time units within rendered audio and animations (including
+      video and animated images) that last three or more seconds at their default
+      playback rate. (UAAG 2.0 4.9.6?) </p>
+				<p>The user can navigate by semantic structure within the time-based media,
+      such as by chapters or scenes, if present in the media (UAAG 2.0 4.9.7). </p>
+				<p>Systems supporting content navigation must: </p>
+				<section>
+					<h4 id="CN-1"><strong class="req-handle">[CN-1]</strong> Provide a means to structure media resources so that users
+          can navigate them by semantic content structure, e.g., through adding
+          a track to the video that contains navigation markers (in table-of-content
+          style). This means must allow authors to identify ancillary content
+          structures, which may be a hierarchical structure. Support keeping
+          all media representations synchronised when users navigate. </h4>
+				</section>
+				<section>
+					<h4 id="CN-2"><strong class="req-handle">[CN-2]</strong> The navigation track should provide for hierarchical structures
+          with titles for the sections. </h4>
+				</section>
+				<section>
+					<h4 id="CN-3"><strong class="req-handle">[CN-3]</strong> Support both global navigation by the larger structural elements
+          of a media work, and also the most localized atomic structures of that
+          work, even though authors may not have marked-up all levels of navigational
+          granularity. </h4>
+				</section>
+				<section>
+					<h4 id="CN-4"><strong class="req-handle">[CN-4]</strong> Support third-party provided structural navigation markup. </h4>
+				</section>
+				<section>
+					<h4 id="CN-5"><strong class="req-handle">[CN-5]</strong> Keep all content representations in sync, so that moving
+          to any particular structural element in media content also moves to
+          the corresponding point in all provided alternate media representations
+          (captions, described video, transcripts, etc) associated with that
+          work. </h4>
+				</section>
+				<section>
+					<h4 id="CN-6"><strong class="req-handle">[CN-6]</strong> Support direct access to any structural element, possibly
+          through URIs. </h4>
+				</section>
+				<section>
+					<h4 id="CN-7"><strong class="req-handle">[CN-7]</strong> Support pausing primary content traversal to provide access
+          to such ancillary content in line. </h4>
+				</section>
+				<section>
+					<h4 id="CN-8"><strong class="req-handle">[CN-8]</strong> Support skipping of ancillary content in order to not interrupt
+          content flow. </h4>
+				</section>
+				<section>
+					<h4 id="CN-9"><strong class="req-handle">[CN-9]</strong> Support access to each ancillary content item, including
+          with &quot;next&quot; and &quot;previous&quot; controls, apart from
+          accessing the primary content of the title. </h4>
+				</section>
+				<section>
+					<h4 id="CN-10"><strong class="req-handle">[CN-10]</strong> Support that in bilingual texts both the original and translated
+          texts can appear on screen, with both the original and translated text
+          highlighted, line by line, in sync with the audio narration. </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Captioning </h3>
+				<p>For people who are deaf or hard-of-hearing, captioning is a prime alternative
+      representation of audio. Captions are in the same language as the main
+      audio track and, in contrast to foreign-language subtitles, render a transcription
+      of dialog or narration as well as important non-speech information, such
+      as sound effects, music, and laughter. Historically, captions have been
+      either closed or open. Closed captions have been transmitted as data along
+      with the video but were not visible until the user elected to turn them
+      on, usually by invoking an on-screen control or menu selection. Open captions
+      have always been visible; they had been merged with the video track and
+      could not be turned off. </p>
+				<p>Ideally, captions should be a verbatim representation of the audio; however,
+      captions are sometimes edited for various reasons— for example, for reading
+      speed or for language level. In general, consumers of captions have expressed
+      that the text should represent exactly what is in the audio track. If edited
+      captions are provided, then they should be clearly marked as such, and
+      the full verbatim version should also be available as an option. </p>
+				<p>The timing of caption text can coincide with the mouth movement of the
+      speaker (where visible), but this is not strictly necessary. For timing
+      purposes, captions may sometimes precede or extend slightly after the audio
+      they represent. Captioning should also use adequate means to distinguish
+      between speakers as turn-taking occurs during conversation; this has in
+      the past been done by positioning the text near the speaker, by associating
+      different colors to different speakers, or by putting the name and a colon
+      in front of the text line of a speaker. </p>
+				<p>Captions are useful to a wide array of users in addition to their originally
+      intended audiences. Gyms, bars and restaurants regularly employ captions
+      as a way for patrons to watch television while in those establishments.
+      People learning to read or learning the language of the country where they
+      live as a second language also benefit from captions: research has shown
+      that captions help reinforce vocabulary and language. Captions can also
+      provide a powerful search capability, allowing users and search engines
+      to search the caption text to locate a specific video or an exact point
+      in a video. </p>
+				<p>Formats for captions, subtitles or foreign-language subtitles must: </p>
+				<section>
+					<h4 id="CC-1"><strong class="req-handle">[CC-1]</strong> Render text in a time-synchronized manner,
+          using the media resource as the timebase master. </h4>
+					<p class="note">Most of the time, the main audio track would be the best candidate
+        for the timebase. Where a video without audio, but with a text track,
+        is available, the video track becomes the timebase master. Also, there
+        may be situations where an explicit timing track is available. </p>
+				</section>
+				<section>
+					<h4 id="CC-2"><strong class="req-handle">[CC-2]</strong> Allow the author to specify erasures, i.e.,
+          times when no text is displayed on the screen (no text cues are active). </h4>
+					<p class="note">This should be possible both within media resources and caption
+      formats. </p>
+				</section>
+				<section>
+					<h4 id="CC-3"><strong class="req-handle">[CC-3]</strong> Allow the author to assign timestamps so
+          that one caption/subtitle follows another, with no perceivable gap
+          in between. </h4>
+					<p class="note">This means that caption cues should be able to either let the
+        start time of the subsequent cue be determined by the duration of the
+        cue or have the end time be implied by the start of the next cue. For
+        overlapping captions, explicit start and end times are then required. </p>
+				</section>
+				<section>
+					<h4 id="CC-4"><strong class="req-handle">[CC-4]</strong> Be available in a text encoding. </h4>
+					<p class="note">This means that determined character encodings should be supported
+        - which could be either by making the character encoding explicit or
+        by enforcing a single default one such as UTF-8. </p>
+				</section>
+				<section>
+					<h4 id="CC-5"><strong class="req-handle">[CC-5]</strong> Support positioning in all parts of the
+          screen - either inside the media viewport but also possibly in a determined
+          space next to the media viewport. This is particularly important when
+          multiple captions are on screen at the same time and relate to different
+          speakers, or when in-picture text is avoided. </h4>
+					<p class="note">The minimum requirement is a bounding box (with an optional background)
+        into which text is flowed, and that probably needs to be pixel aligned.
+        The absolute position of text within the bounding box is less critical,
+        although it is important to be able to avoid bad word-breaks and have
+        adequate white space around letters and so on. There is more on this
+        in a separate requirement. </p>
+					<p>The caption format could provide a min-width/min-height for its bounding
+        box, which typically is calculated from the bottom of the video viewport,
+        but can be placed elsewhere by the Web page, with the Web page being
+        able to make that box larger and scale the text relatively, too. The
+        positions inside the box should probably be into regions, such as top,
+        right, bottom, left, center. </p>
+				</section>
+				<section>
+					<h4 id="CC-6"><strong class="req-handle">[CC-6]</strong> Support the display of multiple regions
+          of text simultaneously. </h4>
+					<p class="note">This typically relates to multiple text cues that are defined
+        on overlapping times. If the cues' rendering target are made out to different
+        spatial regions, they can be displayed simultaneously. </p>
+				</section>
+				<section>
+					<h4 id="CC-7"><strong class="req-handle">[CC-7]</strong> Display multiple rows of text when rendered
+          as text in a right-to-left or left-to-right language. </h4>
+					<p class="note">Internationalization is important not just for subtitles, as captions
+      can be used in all languages. </p>
+				</section>
+				<section>
+					<h4 id="CC-8"><strong class="req-handle">[CC-8]</strong> Allow the author to specify line breaks. </h4>
+				</section>
+				<section>
+					<h4 id="CC-9"><strong class="req-handle">[CC-9]</strong> Permit a range of font faces and sizes. </h4>
+				</section>
+				<section>
+					<h4 id="CC-10"><strong class="req-handle">[CC-10]</strong> Render a background in a range of colors,
+          supporting a full range of opacities. </h4>
+				</section>
+				<section>
+					<h4 id="CC-11"><strong class="req-handle">[CC-11]</strong> Render text in a range of colors. </h4>
+					<p class="note">The user should have final control over rendering styles like
+      color and fonts; e.g., through user preferences. </p>
+				</section>
+				<section>
+					<h4 id="CC-12"><strong class="req-handle">[CC-12]</strong> Enable rendering of text with a thicker
+          outline or a drop shadow to allow for better contrast with the background. </h4>
+				</section>
+				<section>
+					<h4 id="CC-13"><strong class="req-handle">[CC-13]</strong> Where a background is used, it is preferable
+          to keep the caption background visible even in times where no text
+          is displayed, such that it minimises distraction. However, where captions
+          are infrequent the background should be allowed to disappear to enable
+          the user to see as much of the underlying video as possible. </h4>
+					<p class="note">It may be technically possible to have cues without text. </p>
+				</section>
+				<section>
+					<h4 id="CC-14"><strong class="req-handle">[CC-14]</strong> Allow the use of mixed display styles—
+          e.g., mixing paint-on captions with pop-on captions— within a single
+          caption cue or in the caption stream as a whole. Pop-on captions are
+          usually one or two lines of captions that appear on screen and remain
+          visible for one to several seconds before they disappear. Paint-on
+          captions are individual characters that are &quot;painted on&quot; from
+          left to right, not popped onto the screen all at once, and usually
+          are verbatim. Another often-used caption style in live captioning is
+          roll-up - here, cue text follows double chevrons (&quot;greater than&quot; symbols),
+          and are used to indicate different speaker identifications. Each sentence &quot;rolls
+          up&quot; to about three lines. The top line of the three disappears
+          as a new bottom line is added, allowing the continuous rolling up of
+          new lines of captions. </h4>
+					<p class="note">Similarly, in karaoke, individual characters are often &quot;painted
+      on&quot;. </p>
+				</section>
+				<section>
+					<h4 id="CC-15"><strong class="req-handle">[CC-15]</strong> Support positioning such that the lowest
+          line of captions appears at least 1/12 of the total screen height above
+          the bottom of the screen, when rendered as text in a right-to-left
+          or left-to-right language. </h4>
+				</section>
+				<section>
+					<h4 id="CC-16"><strong class="req-handle">[CC-16]</strong> Use conventions that include inserting
+          left-to-right and right-to-left segments within a vertical run (e.g.
+          Tate-chu-yoko in Japanese), when rendered as text in a top-to-bottom
+          oriented language. </h4>
+				</section>
+				<section>
+					<h4 id="CC-17"><strong class="req-handle">[CC-17]</strong> Represent content of different natural
+          languages. In some cases the inclusion of a few foreign words form
+          part of the original soundtrack, and thus need to be in the same caption
+          resource. Also allow for separate caption files for different languages
+          and on-the-fly switching between them. This is also a requirement for
+          subtitles. </h4>
+					<p class="note">Caption/subtitle files that are alternatives in different languages
+        are probably best provided in different caption resources and are user
+        selectable. Realistically, having no more than 2 languages present at
+        the same time on screen is probably the limit. </p>
+				</section>
+				<section>
+					<h4 id="CC-18"><strong class="req-handle">[CC-18]</strong> Represent content of at least those specific
+          natural languages that may be represented with [Unicode 3.2], including
+          common typographical conventions of that language (e.g., through the
+          use of furigana and other forms of ruby text). </h4>
+				</section>
+				<section>
+					<h4 id="CC-19"><strong class="req-handle">[CC-19]</strong> Present the full range of typographical
+          glyphs, layout and punctuation marks normally associated with the natural
+          language's print-writing system. </h4>
+				</section>
+				<section>
+					<h4 id="CC-20"><strong class="req-handle">[CC-20]</strong> Permit in-line mark-up for foreign words
+          or phrases. </h4>
+					<p class="note">Italics markup may be sufficient for a human user, but it is important
+        to be able to mark up languages so that the text can be rendered correctly,
+        since the same Unicode can be shared between languages and rendered differently
+        in different contexts. This is mainly an I18n issue. It is also important
+        for audio rendering, to get pronunciation correct. </p>
+				</section>
+				<section>
+					<h4 id="CC-21"><strong class="req-handle">[CC-21]</strong> Permit the distinction between different
+          speakers. </h4>
+					<p>Further, systems that support captions must: </p>
+				</section>
+				<section>
+					<h4 id="CC-22"><strong class="req-handle">[CC-22]</strong> Support captions that are provided inside
+          media resources as tracks, or in external files. </h4>
+					<p class="note">It is desirable to expose the same API to both. </p>
+				</section>
+				<section>
+					<h4 id="CC-23"><strong class="req-handle">[CC-23]</strong> Ascertain that captions are displayed in
+          sync with the media resource. </h4>
+				</section>
+				<section>
+					<h4 id="CC-24"><strong class="req-handle">[CC-24]</strong> Support user activation/deactivation of
+          caption tracks. </h4>
+					<p class="note">This requires a menu of some sort that displays the available
+      tracks for activation/deactivation. </p>
+				</section>
+				<section>
+					<h4 id="CC-25"><strong class="req-handle">[CC-25]</strong> Support edited and verbatim captions, if
+          available. </h4>
+					<p class="note">Edited and verbatim captions can be provided in two different
+        caption resources. There is a need to expose to the user how they differ,
+        similar to how there can be caption tracks in different languages. </p>
+				</section>
+				<section>
+					<h4 id="CC-26"><strong class="req-handle">[CC-26]</strong> Support multiple tracks of foreign-language
+          subtitles in different languages. </h4>
+					<p class="note">These different-language &quot;tracks&quot; can be provided in
+      different resources. </p>
+				</section>
+				<section>
+					<h4 id="CC-27"><strong class="req-handle">[CC-27]</strong> Support live-captioning functionality. </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Enhanced captions/subtitles </h3>
+				<p>Enhanced captions are timed text cues that have been enriched with further
+      information - examples are glossary definitions for acronyms and other
+      intialisms, foreign terms (for example, Latin), jargon or descriptions
+      for other difficult language. They may be age-graded, so that multiple
+      caption tracks are supplied, or the glossary function may be added dynamically
+      through machine lookup. </p>
+				<p>Glossary information can be added in the normal time allotted for the
+      cue (e.g., as a callout or other overlay), or it might take the form of
+      a hyperlink that, when activated, pauses the main content and allows access
+      to more complete explanatory material. </p>
+				<p>Such extensions can provide important additional information to the content
+      that will enable or improve the understanding of the main content to accessibility
+      users. Enhanced text cues will be particularly useful for those with restricted
+      reading skills, to subtitle users, and to caption users. Users may often
+      come across keywords in text cues that lend themselves to further in-depth
+      information or hyperlinks, such as an e-mail contact or phone number for
+      a person, a strange term that needs a Wikipedia link for definition, or
+      an idiom that needs comments to explain it to a foreign-language speaker. </p>
+				<p>Systems that support enhanced captions must: </p>
+				<section>
+					<h4 id="ECC-1"><strong class="req-handle">[ECC-1]</strong> Support metadata markup for (sections of)
+          timed text cues. </h4>
+					<p class="note">Such &quot;metadata&quot; markup can be realised through a @title
+        attribute on a &lt;span&gt; of the text, or a hyperlink to another location
+        where a term is explained, an &lt;abbr&gt; element, an   &lt;acronym&gt; element,
+        a &lt;dfn&gt; element, or through RDFa or microdata. </p>
+				</section>
+				<section>
+					<h4 id="ECC-2"><strong class="req-handle">[ECC-2]</strong> Support hyperlinks and other activation
+          mechanisms for supplementary data for (sections of) caption text. </h4>
+					<p class="note">This can be realised through inclusion of &lt;a&gt; elements or
+        buttons into timed text cues, where additional overlays could be created
+        or a different page be loaded. One needs to deal here with the need to
+        pause the media timeline for reading of the additional information. </p>
+				</section>
+				<section>
+					<h4 id="ECC-3"><strong class="req-handle">[ECC-3]</strong> Support text cues that may be longer than
+          the time available until the next text cue and thus provide overlapping
+          text cues - in this case, a feature should be provided to decide if
+          overlap is ok or should be cut or the media resource be paused while
+          the caption is displayed. Timing would be provided by the author, but
+          with the user being able to override it. </h4>
+					<p class="note">This feature is analogous to extended video descriptions - where
+        timing for a text cue is longer than the available time for the cue,
+        it may be necessary to halt the media to allow for more time to read
+        back on the text and its additional material. In this case, the pause
+        is dependent on the user's reading speed, so this may imply user control
+        or timeouts. </p>
+				</section>
+				<section>
+					<h4 id="ECC-4"><strong class="req-handle">[ECC-4]</strong> It needs to be possible to define timed
+          text cues that are allowed to overlap with each other in time and be
+          present on screen at the same time (e.g., those that come from speech
+          of different speakers), and such that are not allowed to overlap and
+          thus cause media playback pause to allow users to catch up with their
+          reading. </h4>
+					<p class="note">This could be realised through a hint on the text cue or even
+      for a whole track. </p>
+				</section>
+				<section>
+					<h4 id="ECC-5"><strong class="req-handle">[ECC-5]</strong> Allow users to define the reading speed
+          and thus define how long each text cue requires, and whether media
+          playback needs to pause sometimes to let them catch up on their reading. </h4>
+					<p class="note">This can be a setting in the UA, which will define user-interface
+      behavior. </p>
+				</section>
+			</section>
+			<section>
+				<h3> Sign translation </h3>
+				<p>Sign language shares the same concept as captioning: it presents both
+      speech and non-speech information in an alternative format. Note that due
+      to the wide regional variation in signing systems (e.g., American Sign
+      Language vs British Sign Language), sign translation may not be appropriate
+      for content with a global audience unless localized variants can be made
+      available. </p>
+				<p>Signing can be open, mixed with the video and offered as an entirely alternate
+      stream or closed (using some form of picture-in-picture or alpha-blending
+      technology). It is possible to use quite low bit rates for much of the
+      signing track, but it is important that facial, arm, hand and other body
+      gestures be delivered at sufficient resolution to support legibility. Animated
+      avatars may not currently be sufficient as a substitute for human signers,
+      although research continues in this area and it may become practical at
+      some point in the future. </p>
+				<p>Acknowledging that not all devices will be capable of handling multiple
+      video streams, this is a SHOULD requirement for browsers where hardware
+      is capable of support. Strong authoring guidance for content creator will
+      mitigate situations where user-agents are unable to support multiple video
+      streams (WCAG) - for example, on mobile devices that cannot support multiple
+      streams, authors should be encouraged to offer two versions of the media
+      stream, including one with signed captions burned into the media. </p>
+				<p>Selecting from multiple tracks for different sign languages should be
+      achieved in the same fashion that multiple caption/subtitle files are handled. </p>
+				<p>Systems supporting sign language must: </p>
+				<section>
+					<h4 id="SL-1"><strong class="req-handle">[SL-1]</strong> Support sign-language video either as a track as part of
+          a media resource or as an external file. </h4>
+				</section>
+				<section>
+					<h4 id="SL-2"><strong class="req-handle">[SL-2]</strong> Support the synchronized playback of the sign-language video
+          with the media resource. </h4>
+				</section>
+				<section>
+					<h4 id="SL-3"><strong class="req-handle">[SL-3]</strong> Support the display of sign-language video either as picture-in-picture
+          or alpha-blended overlay, as parallel video, or as the main video with
+          the original video as picture-in-picture or alpha-blended overlay.
+          Parallel video here means two discrete videos playing in sync with
+          each other. It is preferable to have one discrete   &lt;video&gt; element
+          contain all pieces for sync purposes rather than specifying multiple &lt;video&gt; elements
+          intended to work in sync. </h4>
+				</section>
+				<section>
+					<h4 id="SL-4"><strong class="req-handle">[SL-4]</strong> Support multiple sign-language tracks in several sign languages. </h4>
+				</section>
+				<section>
+					<h4 id="SL-5"><strong class="req-handle">[SL-5]</strong> Support the interactive activation/deactivation of a sign-language
+          track by the user. </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Transcripts </h3>
+				<p>While synchronized captions are generally preferable for people with hearing
+      impairments, for some users they are not viable – those who are deaf-blind,
+      for example, or those with cognitive or reading impairments that make it
+      impossible to follow synchronized captions. And even with ordinary captions,
+      it is possible to miss some information as the captions and the video require
+      two separate loci of attention. The full transcript supports different
+      user needs and is not a replacement for captioning. A transcript can either
+      be presented simultaneously with the media material, which can assist slower
+      readers or those who need more time to reference context, but it should
+      also be made available independently of the media. </p>
+				<p>A full text transcript should include information that would be in both
+      the caption and video description, so that it is a complete representation
+      of the material, as well as containing any interactive options. </p>
+				<p>Systems supporting transcripts must: </p>
+				<section>
+					<h4 id="T-1"><strong class="req-handle">[T-1]</strong> Support the provisioning of a full text transcript for the
+          media asset in a separate but linked resource, where the linkage is
+          programatically accessible to AT. </h4>
+				</section>
+				<section>
+					<h4 id="T-2"><strong class="req-handle">[T-2]</strong> Support the provisioning of both scrolling and static display
+          of a full text transcript with the media resource, e.g., in a area next
+          to the video or underneath the video, which is also AT accessible. </h4>
+				</section>
+			</section>
+		</section>
+		<section>
+			<h2> System Requirements </h2>
+			<section>
+				<h3> Access to interactive controls / menus </h3>
+				<p>Media elements offer a rich set of interaction possibilities to users.
+      These interaction possibilities must be available to all users, including
+      those that cannot use a pointer device for interaction. Further, these
+      interaction possibilities must be available to all users for all means
+      in which the controls are exposed - no matter whether they are exposed
+      by the user agent, or are scripted. Further, the interaction possibilities
+      need to be rich enough to allow all users fine grained control over media
+      playback. </p>
+				<p>It is imperative that controls be device independent, so that control
+      may be achieved by keyboard, pointing device, speech, etc. </p>
+				<p>Systems supporting keyboard accessibility must: </p>
+				<section>
+					<h4 id="KA-1"><strong class="req-handle">[KA-1]</strong> Support operation of all functionality via
+          the keyboard on systems where a keyboard is (or can be) present, and
+          where a unique focus object is employed. This does not forbid and should
+          not discourage providing mouse input or other input methods in addition
+          to keyboard operation. (UAAG 2.0 4.1.1) </h4>
+					<p class="note">This means that all interaction possibilities with media elements
+        need to be keyboard accessible; e.g., through being able to tab onto
+        the play, pause, mute buttons, and to move the playback position from
+        the keyboard. </p>
+				</section>
+				<section>
+					<h4 id="KA-2"><strong class="req-handle">[KA-2]</strong> Support a rich set of native controls for
+          media operation, including but not limited to play, pause, stop, jump
+          to beginning, jump to end, scale player size (up to full screen), adjust
+          volume, mute, captions on/off, descriptions on/off, selection of audio
+          language, selection of caption language, selection of audio description
+          language, location of captions, size of captions, video contrast/brightness,
+          playback rate, content navigation on same level (next/prev) and between
+          levels (up/down) etc. This is also a particularly important requirement
+          on mobile devices or devices without a keyboard. </h4>
+					<p class="note">This means that the @controls content attribute needs to provide
+        an extended set of control functionality including functionality for
+        accessibility users. </p>
+				</section>
+				<section>
+					<h4 id="KA-3"><strong class="req-handle">[KA-3]</strong> All functionality available to native controls
+          must also be available to scripted controls. The author would be able
+          to choose any/all of the controls, skin them and position them. </h4>
+					<p class="note">This means that new IDL attributes need to be added to the media
+      elements for the extra controls that are accessibility related. </p>
+				</section>
+				<section>
+					<h4 id="KA-4"><strong class="req-handle">[KA-4]</strong> It must always be possible to enable native
+          controls regardless of the author preference to guarantee that such
+          functionality is available and essentially override author settings
+          through user control. This is also a particularly important requirement
+          on mobile devices or devices without a keyboard. </h4>
+					<p class="note">This could be enabled through a context menu, which is keyboard
+      accessible and its keyboard access cannot be turned off. </p>
+				</section>
+				<section>
+					<h4 id="KA-5"><strong class="req-handle">[KA-5]</strong> The scripted and native controls must go
+          through the same platform-level accessibility framework (where it exists),
+          so that a user presented with the scripted version is not shut out
+          from some expected behaviour. </h4>
+					<p class="note">This is below the level of HTML and means that the accessibility
+      platform needs to be extended to allow access to these controls. </p>
+				</section>
+				<section>
+					<h4 id="KA-6"><strong class="req-handle">[KA-6]</strong> Autoplay on media elements is a particularly
+          difficult issue to manage for vision-impaired users, since the mouse
+          allows other users to an auto-playing element on a page with a single
+          interaction. Therefore, autoplay state needs to be exposed to the platform-level
+          accessibility framework. The vision-impaired user must be able to stop
+          autoplay either generally on all media elements through a setting,
+          or for particular pages through a single keyboard user interaction. </h4>
+					<p class="note">This could be enabled through encouraging publishers to us @autoplay,
+        encouraging UAs to implement accessibility settings that allow to turn
+        off all autoplay, and encouraging AT to implement a shortcut key to stop
+        all autoplay on a Web page. </p>
+				</section>
+			</section>
+			<section>
+				<h3> Granularity level control for structural navigation </h3>
+				<p>As explained in &quot;Content Navigation&quot; above, a real-time control
+      mechanism must be provided for adjusting the granularity of the specific
+      structural navigation point next and previous. Users must be able to set
+      the range/scope of next and previous in real time. </p>
+				<section>
+					<h4 id="CNS-1"><strong class="req-handle">[CNS-1]</strong> All identified structures, including ancillary content as
+          defined in &quot;Content Navigation&quot; above, must be accessible
+          with the use of &quot;next&quot; and &quot;previous,&quot; as refined
+          by the granularity control. </h4>
+				</section>
+				<section>
+					<h4 id="CNS-2"><strong class="req-handle">[CNS-2]</strong> Users must be able to discover, skip, play-in-line, or directly
+          access ancillary content structures. </h4>
+				</section>
+				<section>
+					<h4 id="CNS-3"><strong class="req-handle">[CNS-3]</strong> Users need to be able to access the granularity control
+          using any input mode, e.g., keyboard, speech, pointer, etc. </h4>
+				</section>
+				<section>
+					<h4 id="CNS-4"><strong class="req-handle">[CNS-4]</strong> Producers and authors may optionally provide additional
+          access options to identified structures, such as direct access to any
+          node in a table of contents. </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Time-scale modification </h3>
+				<p>While all devices may not support the capability, a standard control API
+      must support the ability to speed up or slow down content presentation
+      without altering audio pitch. </p>
+				<p class="note">While perhaps unfamiliar to some, this feature has been present
+      on many devices, especially audiobook players, for some 20 years now. </p>
+				<p>The user can adjust the playback rate of prerecorded time-based media
+        content, such that all of the following are true (UAAG 2.0 4.9.5): </p>
+				<section>
+					<h4 id="TSM-1"><strong class="req-handle">[TSM-1]</strong> The user can adjust the playback rate of the time-based
+          media tracks to between 50% and 250% of real time. </h4>
+				</section>
+				<section>
+					<h4 id="TSM-2"><strong class="req-handle">[TSM-2]</strong> Speech whose playback rate has been adjusted by the user
+          maintains pitch in order to limit degradation of the speech quality. </h4>
+				</section>
+				<section>
+					<h4 id="TSM-3"><strong class="req-handle">[TSM-3]</strong> All provided alternative media tracks remain synchronized
+          across this required range of playback rates. </h4>
+				</section>
+				<section>
+					<h4 id="TSM-4"><strong class="req-handle">[TSM-4]</strong> The user agent provides a function that resets the playback
+          rate to normal (100%). </h4>
+				</section>
+				<section>
+					<h4 id="TSM-5"><strong class="req-handle">[TSM-5]</strong> The user can stop, pause, and resume rendered audio and
+          animation content (including video and animated images) that last three
+          or more seconds at their default playback rate. (UAAG 2.0 4.9.6) </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Production practice and resulting requirements </h3>
+				<p>One of the biggest problems to date has been the lack of a universal system
+      for media access. In response to user requirements various countries and
+      groups have defined systems to provide accessibility, especially captioning
+      for television. However these systems are typically not compatible. In
+      some cases the formats can be inter-converted, but some formats — for example
+      DVD sub-pictures — are image based and are difficult to convert to text. </p>
+				<p>Caption formats are often geared towards delivery of the media, for example
+      as part of a television broadcast. They are not well suited to the production
+      phases of media creation. Media creators have developed their own internal
+      formats which are more amenable to the editing phase, but to date there
+      has been no common format that allows interchange of this data. </p>
+				<p>Any media based solution should attempt to reduce as far as possible layers
+      of translation between production and delivery. </p>
+				<p>In general captioners use a proprietary workstation to prepare caption
+      files; these can often export to various standard broadcast ingest formats,
+      but in general files are not inter-convertible. Most video editing suites
+      are not set up to preserve captioning, and so this has typically to be
+      added after the final edit is decided on; furthermore since this work is
+      often outsourced, the copyright holder may not hold the final editable
+      version of the captions. Thus when programming is later re-purposed, e.g.
+      a shorter edit is made, or a ‘directors cut’ produced, the captioning may
+      have to be redone in its entirety. Similarly, and particularly for news
+      footage, parts of the media may go to web before the final TV edit is made,
+      and thus the captions that are produced for the final TV edit are not available
+      for the web version. </p>
+				<p>It is important when purchasing or commissioning media, that captioning
+      and described video is taken into account and made equal priority in terms
+      of ownership, rights of use, etc., as the video and audio itself. </p>
+				<p>This is primarily an authoring requirement. It is a understood that a
+      common time-stamp format must be declared in HTML5, so that authoring tools
+      can conform to a required output. </p>
+				<p>Systems supporting accessibility needs for media must: </p>
+				<section>
+					<h4 id="PP-1"><strong class="req-handle">[PP-1]</strong> Support existing production practice for alternative content
+          resources, in particular allow for the association of separate alternative
+          content resources to media resources. Browsers cannot support all forms
+          of time-stamp formats out there, just as they cannot support all forms
+          of image formats (etc.). This necessitates a clear and unambiguous
+          declared format, so that existing authoring tools can be configured
+          to export finished files in the required format. </h4>
+				</section>
+				<section>
+					<h4 id="PP-2"><strong class="req-handle">[PP-2]</strong> Support the association of authoring and rights metadata
+          with alternative content resources, including copyright and usage information. </h4>
+				</section>
+				<section>
+					<h4 id="PP-3"><strong class="req-handle">[PP-3]</strong> Support the simple replacement of alternative content resources
+          even after publishing. This is again dependent on authoring practice
+          - if the content creator delivers a final media file that contains
+          related accessibility content inside the media wrapper (for example
+          an MP4 file), then it will require an appropriate third-party authoring
+          tool to make changes to that file - it cannot be demanded of the browser
+          to do so. </h4>
+				</section>
+				<section>
+					<h4 id="PP-4"><strong class="req-handle">[PP-4]</strong> Typically, alternative content resources are created by different
+          entities to the ones that create the media content. They may even be
+          in different countries and not be allowed to re-publish the other one's
+          content. It is important to be able to host these resources separately,
+          associate them together through the Web page author, and eventually
+          play them back synchronously to the user. </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Discovery and activation/deactivation of available alternative content
+      by the user </h3>
+				<p>As described above, individuals need a variety of media (alternative content)
+      in order to perceive and understand the content. The author or some Web
+      mechanism provides the alternative content. This alternative content may
+      be part of the original content, embedded within the media container as
+      'fallback content', or linked from the original content. The user is faced
+      with discovering the availability of alternative content. </p>
+				<p>Alternative content must be both discoverable by the user, and accessible
+      in device agnostic ways. The development of APIs and user-agent controls
+      should adhere to the following UAAG guidance: </p>
+				<p>The user agent can facilitate the discovery of alternative content by
+        following these criteria: </p>
+				<section>
+					<h4 id="DAC-1"><strong class="req-handle">[DAC-1]</strong> The user has the ability to have indicators rendered along
+          with rendered elements that have alternative content (e.g., visual
+          icons rendered in proximity of content which has short text alternatives,
+          long descriptions, or captions). In cases where the alternative content
+          has different dimensions than the original content, the user has the
+          option to specify how the layout/reflow of the document should be handled.
+          (UAAG 2.0 3.1.1). </h4>
+				</section>
+				<section>
+					<h4 id="DAC-2"><strong class="req-handle">[DAC-2]</strong> The user has a global option to specify which types of alternative
+          content by default and, in cases where the alternative content has
+          different dimensions than the original content, how the layout/reflow
+          of the document should be handled. (UAAG 2.0 3.1.2). </h4>
+				</section>
+				<section>
+					<h4 id="DAC-3"><strong class="req-handle">[DAC-3]</strong> The user can browse the alternatives and switch between
+          them. </h4>
+				</section>
+				<section>
+					<h4 id="DAC-4"><strong class="req-handle">[DAC-4]</strong> Synchronized alternatives for time-based media (e.g., captions,
+          descriptions, sign language) can be rendered at the same time as their
+          associated audio tracks and visual tracks (UAAG 2.0 3.1.3). </h4>
+				</section>
+				<section>
+					<h4 id="DAC-5"><strong class="req-handle">[DAC-5]</strong> Non-synchronized alternatives (e.g., short text alternatives,
+          long descriptions) can be rendered as replacements for the original
+          rendered content (UAAG 2.0 3.1.3). </h4>
+				</section>
+				<section>
+					<h4 id="DAC-6"><strong class="req-handle">[DAC-6]</strong> Provide the user with the global option to configure a cascade
+          of types of alternatives to render by default, in case a preferred
+          alternative content type is unavailable (UAAG 2.0 3.1.4). </h4>
+				</section>
+				<section>
+					<h4 id="DAC-7"><strong class="req-handle">[DAC-7]</strong> During time-based media playback, the user can determine
+          which tracks are available and select or deselect tracks. These selections
+          may override global default settings for captions, descriptions, etc.
+          (UAAG 2.0 4.9.8) </h4>
+				</section>
+				<section>
+					<h4 id="DAC-8"><strong class="req-handle">[DAC-8]</strong> Provide the user with the option to load time-based media
+          content such that the first frame is displayed (if video), but the
+          content is not played until explicit user request. (UAAG 2.0 4.9.2) </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Requirements on making properties available to the accessibility interface </h3>
+				<p>Often forgotten in media systems, especially with the newer forms of packaging
+      such as DVD menus and on-screen program guides, is the fact that the user
+      needs to actually get to the content, control its playback, and turn on
+      any required accessibility options. For user agents supporting accessibility
+      APIs implemented for a platform, any media controls need to be connected
+      to that API. </p>
+				<p>On self-contained products that do not support assistive technology, any
+      menus in the content need to provide information in alternative formats
+      (e.g., talking menus). Products with a separate remote control, or that
+      are self-contained boxes, should ensure the physical design does not block
+      access, and should make accessibility controls, such as the closed-caption
+      toggle, as prominent as the volume or channel controls. </p>
+				<section>
+					<h4 id="API-1"><strong class="req-handle">[API-1]</strong> The existence of alternative-content tracks for a media
+          resource must be exposed to the user agent. </h4>
+				</section>
+				<section>
+					<h4 id="API-2"><strong class="req-handle">[API-2]</strong> Since authors will need access to the alternative content
+          tracks, the structure needs to be exposed to authors as well, which
+          requires a dynamic interface. </h4>
+				</section>
+				<section>
+					<h4 id="API-3"><strong class="req-handle">[API-3]</strong> Accessibility APIs need to gain access to alternative content
+          tracks no matter whether those content tracks come from within a resource
+          or are combined through markup on the page. </h4>
+				</section>
+			</section>
+			<section>
+				<h3> Requirements on the use of the viewport </h3>
+				<p>The video viewport plays a particularly important role with respect to
+      alternative-content technologies. Mostly it provides a bounding box for
+      many of the visually represented alternative-content technologies (e.g.,
+      captions, hierarchical navigation points, sign language), although some
+      alternative content does not rely on a viewport (e.g., full transcripts,
+      descriptive video). </p>
+				<p>One key principle to remember when designing player ‘skins’ is that the
+      lower-third of the video may be needed for caption text. Caption consumers
+      rely on being able to make fast eye movements between the captions and
+      the video content. If the captions are in a non-standard place, this may
+      cause viewers to miss information. The use of this area for things such
+      as transport controls, while appealing aesthetically, may lead to accessibility
+      conflicts. </p>
+				<section>
+					<h4 id="VP-1"><strong class="req-handle">[VP-1]</strong> It must be possible to deal with three different
+          cases for the relation between the viewport size, the position of media
+          and of alternative content:</h4>
+					<ol class="list-in-req">
+						<li>the alternative content's extent is specified in relation
+              to the media viewport (e.g., picture-in-picture video, lower-third
+              captions) </li>
+						<li>the alternative content has its own independent extent,
+              but is positioned in relation to the media viewport (e.g., captions
+              above the audio, sign-language video above the audio, navigation
+              points below the controls) </li>
+						<li>the alternative content has its own independent extent and
+              doesn't need to be rendered in any relation to the media viewport
+              (e.g., text transcripts) </li>
+					</ol>
+					<p>If alternative content has a different height or width than the media
+        content, then the user agent will reflow the (HTML) viewport. (UAAG 2.0
+        3.1.4). </p>
+					<p class="note">This may create a need to provide an author hint to the Web page
+        when embedding alternate content in order to instruct the Web page how
+        to render the content: to scale with the media resource, scale independently,
+        or provide a position hint in relation to the media. On small devices
+        where the video takes up the full viewport, only limited rendering choices
+        may be possible, such that the UA may need to override author preferences. </p>
+				</section>
+				<section>
+					<h4 id="VP-2"><strong class="req-handle">[VP-2]</strong> The user can change the following characteristics
+          of visually rendered text content, overriding those specified by the
+          author or user-agent defaults (UAAG 2.0 3.6.1). (Note: this should
+          include captions and any text rendered in relation to media elements,
+          so as to be able to magnify and simplify rendered text):</h4>
+					<ol class="list-in-req">
+						<li>text scale (i.e., the general size of text), </li>
+						<li>font family, and </li>
+						<li>text color (i.e., foreground and background). </li>
+					</ol>
+					<p class="note">This should be achievable through UA configuration or even through
+        something like a <a href="http://www.greasespot.net/">greasemonkey script</a> or <a href="http://www.mozilla.org/unix/customizing.html#usercss">user
+        CSS</a> which can override styles dynamically in the browser. </p>
+				</section>
+				<section>
+					<h4 id="VP-3"><strong class="req-handle">[VP-3]</strong> Provide the user with the ability to adjust
+          the size of the time-based media up to the full height or width of
+          the containing viewport, with the ability to preserve aspect ratio
+          and to adjust the size of the playback viewport to avoid cropping,
+          within the scaling limitations imposed by the media itself. (UAAG 2.0
+          4.9.9) </h4>
+					<p class="note">This can be achieved by simply zooming into the Web page, which
+      will automatically rescale the layout and reflow the content. </p>
+				</section>
+				<section>
+					<h4 id="VP-4"><strong class="req-handle">[VP-4]</strong> Provide the user with the ability to control
+          the contrast and brightness of the content within the playback viewport.
+          (UAAG 2.0 4.9.11) </h4>
+					<p class="note">This is a user-agent device requirement and should already be
+        addressed in the UAAG. In live content, it may even be possible to adjust
+        camera settings to achieve this requirement. It is also a   &quot;SHOULD&quot; level
+        requirement, since it does not account for limitations of various devices. </p>
+				</section>
+				<section>
+					<h4 id="VP-5"><strong class="req-handle">[VP-5]</strong> Captions and subtitles traditionally occupy
+          the lower third of the video, where also controls are also usually
+          rendered. The user agent must avoiding overlapping of overlay content
+          and controls on media resources. This must also happen if, for example,
+          the controls are only visible on demand. </h4>
+					<p class="note">If there are several types of overlapping overlays, the controls
+        should stay on the bottom edge of the viewport and the others should
+        be moved above this area, all stacked above each other. </p>
+				</section>
+			</section>
+			<section>
+				<h3> Requirements on the parallel use of alternate content on potentially
+      multiple devices in parallel </h3>
+				<p>Multiple user devices must be directly addressable. It must be assumed
+      that many users will have multiple video displays and/or multiple audio-output
+      devices attached to an individual computer, or addressable via LAN. It
+      must be possible to configure certain types of media for presentation on
+      specific devices, and these configuration settings must be readily overwritable
+      on a case-by-case basis by users. </p>
+				<p>(A request to the UAAG on clarifications to a number of these points was
+      made, and a detailed response was provided. The response requires review
+      and integration into this document, but can be found today in the <a href="http://lists.w3.org/Archives/Public/public-html-a11y/2010Jul/0108.html">22 July 2010 message on this topic</a>). </p>
+				<p>Systems supporting multiple devices for accessibility must: </p>
+				<section>
+					<h4 id="MD-1"><strong class="req-handle">[MD-1]</strong> Support a platform-accessibility architecture relevant to
+          the operating environment. (UAAG 2.0 2.1.1) </h4>
+				</section>
+				<section>
+					<h4 id="MD-2"><strong class="req-handle">[MD-2]</strong> Ensure accessibility of all user-interface components including
+          the user interface, rendered content, and alternative content; make
+          available the name, role, state, value, and description via a platform-accessibility
+          architecture. (UAAG 2.0 2.1.2) </h4>
+				</section>
+				<section>
+					<h4 id="MD-3"><strong class="req-handle">[MD-3]</strong> If a feature is not supported by the accessibility architecture(s),
+          provide an equivalent feature that does support the accessibility architecture(s).
+          Document the equivalent feature in the conformance claim. (UAAG 2.0
+          2.1.3) </h4>
+				</section>
+				<section>
+					<h4 id="MD-4"><strong class="req-handle">[MD-4]</strong> If the user agent implements one or more DOMs, they must
+          be made programmatically available to assistive technologies. (UAAG
+          2.0 2.1.4) This assumes the video element will write to the DOM. </h4>
+				</section>
+				<section>
+					<h4 id="MD-5"><strong class="req-handle">[MD-5]</strong> If the user can modify the state or value of a piece of content
+          through the user interface (e.g., by checking a box or editing a text
+          area), the same degree of write access is available programmatically
+          (UAAG 2.0 2.1.5). </h4>
+				</section>
+				<section>
+					<h4 id="MD-6"><strong class="req-handle">[MD-6]</strong> If any of the following properties are supported by the accessibility-platform
+          architecture, make the properties available to the accessibility-platform
+          architecture (UAAG 2.0 2.1.6):</h4>
+					<ol class="list-in-req">
+						<li>the bounding dimensions and coordinates of rendered graphical
+              objects; </li>
+						<li>font family; </li>
+						<li>font size; </li>
+						<li>text foreground color; </li>
+						<li>text background color; </li>
+						<li>change state/value notifications. </li>
+					</ol>
+				</section>
+				<section>
+					<h4 id="MD-7"><strong class="req-handle">[MD-7]</strong> Ensure that programmatic exchanges between APIs proceed at
+          a rate such that users do not perceive a delay. (UAAG 2.0 2.1.7). </h4>
+				</section>
+			</section>
+		</section>
+		<section class="appendix">
+			<h2>Acknowledgements</h2>
+			<p>The following people contributed to the development of this document.</p>
+			<section id="ack_group">
+				<h4>Participants in the PFWG at the time of publication</h4>
+				<ol>
+					<li>David Bolter (Mozilla) </li>
+					<li>Sally Cain (Royal National Institute of Blind People)</li>
+					<li>Michael Cooper (W3C/MIT)</li>
+					<li>James Craig (Apple Inc.) </li>
+					<li>Steve Faulkner (Invited Expert, The Paciello Group) </li>
+					<li>Geoff Freed (Invited Expert, NCAM)</li>
+					<li>Jon Gunderson (Invited Expert, UIUC)</li>
+					<li>Markus Gylling (DAISY Consortium)</li>
+					<li>Sean Hayes (Microsoft Corporation)</li>
+					<li>Kenny Johar (Vision Australia) </li>
+					<li>Matthew King (IBM Corporation)</li>
+					<li>Gez Lemon (International Webmasters Association / HTML Writers Guild (IWA-HWG))</li>
+					<li>Thomas Logan (HiSoftware Inc.)</li>
+					<li>William Loughborough (Invited Expert)</li>
+					<li>Shane McCarron (Invited Expert, Aptest)</li>
+					<li>Charles McCathieNevile (Opera Software)</li>
+					<li>Mary Jo Mueller (IBM Corporation)</li>
+					<li>James Nurthen (Oracle Corporation) </li>
+					<li>Joshue O'Connor (Invited Expert) </li>
+					<li>Artur Ortega (Yahoo!, Inc.)</li>
+					<li>Sarah Pulis (Media Access Australia)</li>
+					<li>Gregory Rosmaita (Invited Expert)</li>
+					<li>Janina Sajka (Invited Expert, The Linux Foundation)</li>
+					<li>Joseph Scheuhammer (Invited Expert, Inclusive Design Research Centre, OCAD University) </li>
+					<li>Stefan Schnabel (SAP AG) </li>
+					<li>Richard Schwerdtfeger (IBM Corporation)</li>
+					<li>Lisa Seeman (Invited Expert, Aqueous) </li>
+					<li>Cynthia Shelly (Microsoft Corporation) </li>
+					<li>Andi Snow-Weaver (IBM Corporation)</li>
+					<li>Gregg Vanderheiden (Invited Expert, Trace)</li>
+					<li>Léonie Watson (Invited Expert, Nomensa)</li>
+					<li>Gottfried Zimmermann (Invited Expert, Access Technologies Group)</li>
+				</ol>
+			</section>
+			<section id="ack_others">
+				<h4>Other previously active PFWG participants and contributors</h4>
+				<p> Jim Allan (TSB), Simon Bates, Chris Blouch (AOL), Judy Brewer (W3C/MIT), Ben Caldwell (Trace), Charles Chen (Google, Inc.), Christian Cohrs, Dimitar Denev (Frauenhofer Gesellschaft), Donald Evans (AOL), Kentarou Fukuda (IBM Corporation), Becky Gibson (IBM), Alfred S. Gilman, Andres Gonzalez (Adobe Systems Inc.), Georgios Grigoriadis (SAP AG), Jeff Grimes (Oracle), Barbara Hartel, John Hrvatin (Microsoft Corporation), Masahiko Kaneko (Microsoft Corporation), Earl Johnson (Sun), Jael Kurz, Diego La Monica (International Webmasters Association / HTML Writers Guild (IWA-HWG)), Aaron Leventhal (IBM Corporation), Alex Li (SAP), Linda Mao (Microsoft), Anders Markussen (Opera Software), Matthew May (Adobe Systems Inc.), Lisa Pappas (Society for Technical Communication (STC)), Dave Pawson (RNIB), David Poehlman, Simon Pieters (Opera Software), T.V. Raman (Google, Inc.), Tony Ross (Microsoft Corporation), Martin Schaus (SAP AG), Marc Silbey (Microsoft Corporation), Henri Sivonen
+			(Mozilla), Jeanne Spellman (W3C), Henny Swan (Opera Software), Vitaly Sourikov, Mike Squillace (IBM), Ryan Williams (Oracle), Tom Wlodkowski.</p>
+			</section>
+			<section id="ack_funders">
+				<h3>Enabling funders</h3>
+				<p>This publication has been funded in part with Federal funds from the U.S. Department of Education, National Institute on Disability and Rehabilitation Research (NIDRR) under contract number ED-OSE-10-C-0067. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
+			</section>
+		</section>
+	</body>
+</html>
