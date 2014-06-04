@@ -3,7 +3,7 @@
 	<head>
 		<title>Media Accessibility User Requirements</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<!-- 
+		<!--
       === NOTA BENE ===
       For the three scripts below, if your spec resides on dev.w3 you can check them
       out in the same tree and use relative links so that they'll work offline,
@@ -13,8 +13,8 @@
 		<script class="remove">
 var respecConfig = {
     // specification status (e.g., WD, LCWD, NOTE, etc.). If in doubt use ED.
-    specStatus:           "FPWD",
-    
+    specStatus:           "ED",
+
     // the specification's short name, as in http://www.w3.org/TR/short-name/
     shortName:            "media-a11y-reqs",
 
@@ -23,7 +23,7 @@ var respecConfig = {
     // subtitle   :  "an excellent document",
 
     // if you wish the publication date to be other than today, set this
-    publishDate:  "2011-12-15",
+    // publishDate:  "2011-12-15",
 
     // if the specification's copyright date is a range of years, specify
     // the start date here:
@@ -50,11 +50,13 @@ var respecConfig = {
                   { name: "Shane McCarron", url: 'http://blog.halindrome.com', mailto: "shane@aptest.com",
                   company: "Applied Testing and Technology, Inc.", companyURI:
                   "http://www.aptest.com" },
-        { name: "Michael Cooper", 
+        { name: "Michael Cooper",
           company: "W3C", companyURL: "http://www.w3.org/" }
+				{ name: "Mark Sadecki",
+					company: "W3C", companyURL: "http://www.w3.org/" }
     ],
 
-    // authors, add as many as you like. 
+    // authors, add as many as you like.
     // This is optional, uncomment if you have authors as well as editors.
     // only "name" is required. Same format as editors.
 
@@ -67,23 +69,23 @@ var respecConfig = {
         { name: "Silvia Pfeiffer", company: "Invited Expert" },
         { name: "Janina Sajka", company: "Invited Expert" }
     ],
-    
+
     // name of the WG
     wg:           "Protocols and Formats Working Group",
-    
+
     // URI of the public WG page
     wgURI:        "http://www.w3.org/WAI/PF/",
-    
+
     // name (with the @w3c.org) of the public mailing to which comments are due
     wgPublicList: "public-pfwg-comments",
-    
+
     // URI of the patent status for this WG, for Rec-track documents
     // !!!! IMPORTANT !!!!
     // This is important for Rec-track documents, do not copy a patent URI from a random
     // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
     // Team Contact.
     wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/32212/status",
-    
+
     // Depth for the TOC
     maxTocLevel: 2,
 
@@ -109,12 +111,12 @@ var respecConfig = {
 			<p>This document aggregates the accessibility requirements of users with disabilities that
     the W3C HTML5 Accessibility Task Force has collected with respect to audio
     and video on the Web. </p>
-    <p>It first provides an introduction to the needs of users with disabilties 
+    <p>It first provides an introduction to the needs of users with disabilities
     in relation to audio and video.</p>
 			<p>Then it explains what alternative content technologies have been developed
     to help such users gain access to the content of audio and video. </p>
 			<p>A third section explains how these content technologies fit in the larger
-    picture of accessibility, both technically within a Web user agent
+    picture of accessibility, both technically within a web user agent
     and from a production process point of view. </p>
 			<p>This document is most explicitly not a collection of baseline user agent
     or authoring tool requirements. It is important to recognize that not all
@@ -124,9 +126,9 @@ var respecConfig = {
     the context of HTML5. As such, it should be expected that this document
     will continue to develop for some time. </p>
 			<p>Please also note this document is not an inventory of technology currently
-    provided by, or missing from HTML5 specification drafts. Technology listed
-    here is here because it's important for accommodating the alternative access
-    needs of users with disabilities to web-based media. This document is our
+    provided by, or missing from HTML5 specification drafts. Technology is listed
+    here because it's important for accommodating the alternative access
+    needs of users with disabilities to web-based media. This document is an
     inventory of Media Accessibility User Requirements. </p>
 		</section>
 		<section id="sotd">
@@ -135,24 +137,27 @@ var respecConfig = {
 		</section>
 		<section>
 			<h2> Media Accessibility Checklist </h2>
-			<p>The following User Requirements have also been distilled into a <a href="http://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist">Media Accessibility Checklist</a>.</p>
+			<p>The following User Requirements have also been distilled into a <a href="http://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist">Media Accessibility Checklist</a>.
+			Developers and implementers may want to refer to this checklist when
+			implementing audio and video content and features.</p>
 		</section>
 		<section>
 			<h2> Accessible Media Requirements by Type of Disability </h2>
+
             <p>Editorial note: This section is a rough draft. It will be edited to align with
-           
+
     <a href="http://www.w3.org/WAI/intro/people-use-web/Overview.html">How
     People with Disabilities Use the Web</a> once that document is complete.
     This draft is included now provide general background
     for sections 2 and 3 of this document. </p>
 			<p>Comprehension of media may be affected by loss of visual function, loss
-            of audio function, cognitive issues, or a combination of all three. 
+            of audio function, cognitive issues, or a combination of all three.
             Cognitive disabilities may affect access to and/or
     comprehension of media. Physical disabilities such as dexterity impairment,
     loss of limbs, or loss of use of limbs may affect access to media. Once richer
     forms of media, such as virtual reality, become more commonplace, tactile
     issues may come into play. Control of the media player can be an important
-    issue, e.g., for people with physical disabilties, however this is typically not addressed
+    issue, e.g., for people with physical disabilities, however this is typically not addressed
     by the media formats themselves, but is a requirement of the technology used
     to build the player. </p>
 			<section>
@@ -165,7 +170,7 @@ var respecConfig = {
       tickers, status indicators, or other on-screen graphics, as well as any
       visual controls needed to operate the content. Since people who are blind
       use a screen reader and/or refreshable braille display, these assistive
-      technologies (<abbr title='Assistive Technology'>AT</abbr>s) need to work hand-in-hand with the access mechanism
+      technologies (ATs) need to work hand-in-hand with the access mechanism
       provided for the media content. </p>
 			</section>
 			<section>
@@ -226,8 +231,8 @@ var respecConfig = {
 				<p>People with physical disabilities such as poor dexterity, loss of limbs, or
       loss of use of limbs may use the keyboard alone rather than the combination
       of a pointing device plus keyboard to interact with content and controls,
-      or may use a switch with an on-screen keyboard, or other assistive-technology
-      access. The player itself must be usable via the keyboard and pointing
+      or may use a switch with an on-screen keyboard, or other assistive technology.
+      The player itself must be usable via the keyboard and pointing
       devices. The user must have full access to all player controls, including
       methods for selecting alternative content. </p>
 			</section>
@@ -237,7 +242,7 @@ var respecConfig = {
       that may include intellectual disabilities (called learning disabilities
       in some regions), autism-spectrum disorders, memory impairments, mental-health
       disabilities, attention-deficit disorders, audio- and/or visual-perceptive
-      disorders, dyslexia and dyscalculia (called learning disabilities in other
+      disorders, dyslexia and dyscalculia (called learning disabilities in some
       regions), or seizure disorders. Necessary accessibility supports vary widely
       for these different conditions. Individuals with some conditions may process
       information aurally better than by reading text; therefore, information
@@ -359,7 +364,7 @@ var respecConfig = {
 				</section>
 				<section>
 					<h4 id="DV-7"><strong class="req-handle">[DV-7]</strong> Permit smooth changes in volume rather than stepped changes.
-          The degree and speed of volume change should be under provider control. </h4>
+          The degree and speed of volume change should be under user control. </h4>
 				</section>
 				<section>
 					<h4 id="DV-8"><strong class="req-handle">[DV-8]</strong> Allow the author to provide fade and pan controls to be accurately
@@ -434,8 +439,7 @@ var respecConfig = {
 					<li>start time, text per description cue (the duration is determined
               dynamically, though an end time could provide a cut point) </li>
 					<li>possibly a speech-synthesis markup to improve quality of
-              the description (existing speech synthesis markups include <a href="http://www.w3.org/TR/speech-synthesis/">SSML</a> and <a href="http://www.w3.org/TR/css3-speech/">Speech
-              CSS</a>) </li>
+              the description (existing speech synthesis markups include <a href="http://www.w3.org/TR/speech-synthesis/">SSML</a> and <a href="http://www.w3.org/TR/css3-speech/">CSS 3 Speech Module</a>) </li>
 					<li>accompanying metadata providing labeling for speakers, language,
               etc. </li>
 				</ol>
@@ -484,8 +488,12 @@ var respecConfig = {
 				<section>
 					<h4 id="EVD-3"><strong class="req-handle">[EVD-3]</strong> Support resuming playback of video and main audio tracks
           when the description is finished. </h4>
-					<p>Note that this is an advanced feature and would only be expected by
-      advanced systems. </p>
+					<p>Because the user is the ultimate arbiter of the rate at which TTS
+					playback occurs, it is not feasible for an author to guarantee that any
+					texted audio description can be played within the natural pauses in
+					dialog or narration of the primary audio resource. Therefore, all texted
+					descriptions must be treated as extended text descriptions potentially
+					requiring the pausing and resumption of primary resource playback.</p>
 				</section>
 			</section>
 			<section>
@@ -504,8 +512,9 @@ var respecConfig = {
       yet none at all in others. </p>
 				<p>Systems supporting clean audio and multiple audio tracks must: </p>
 				<section>
-					<h4 id="CA-1"><strong class="req-handle">[CA-1]</strong> Support clean audio as a separate, alternative audio track
-          from other audio-based alternative media resources. </h4>
+					<h4 id="CA-1"><strong class="req-handle">[CA-1]</strong> Support clean
+					audio as a separate, alternative audio track from other audio-based
+					alternative media resources, including the primary audio resource. </h4>
 				</section>
 				<section>
 					<h4 id="CA-2"><strong class="req-handle">[CA-2]</strong> Support the synchronisation of multitrack audio either within
@@ -540,22 +549,21 @@ var respecConfig = {
 					<li> Operas, theatrical plays, and movies have acts and scenes within those
         acts. </li>
 					<li> Television programs generally have clear divisions; e.g., newscasts
-        have individual stories usually wrapped within a larger structures called
+        have individual stories usually wrapped within larger structures called
         news, weather, or sports. </li>
 					<li> A lecturer may first lay out a topic, then consider a series of approaches
         or illustrative examples, and finally draw a conclusion. </li>
 				</ul>
-                <p>This is, of course, a <abbr title='Document Object Model'>DOM</abbr> view of 
-                content. However, effective DOM-based
-      navigation will require an additional control not typically available on
-      current media players. This real-time control, which we are calling a &quot;granularity-level
-      control,&quot; will allow the user to adjust the level of granularity applied
-      to &quot;next&quot; and &quot;previous&quot; controls. This is necessary
-      because next and previous are too cumbersome if accessing every DOM element,
-      but unsatisfactorally broad and coarse if set to only the top hierarchical
-      DOM level. Allowing the user to adjust the DOM level that next and previous
-      go to has proven very effective—hence the real-time granularity level
-      control. </p>
+        <p>This is, of course, a hierarchical view of content. However, effective
+				navigation of a multi-level hierarchy will require an additional control not
+				typically available using current media players. This mechanism, which we are
+				calling a &quot;granularity-level control,&quot; will allow the user to adjust the level
+				of granularity applied to &quot;next&quot; and &quot;previous&quot; controls. This is necessary
+				because next and previous are too cumbersome if accessing every node in a
+				complex hierarchy, but unsatisfactorily broad and coarse if set to only the top
+				level of the hierarchy. Allowing the user to adjust the granularity level that
+				next and previous apply to has proven very effective&#x2014;hence the adjustable
+				granularity level control.</p>
 				<p><strong>Two examples of granularity levels</strong> </p>
 				<p>1. In a news broadcast, the most global level (analogous to   &lt;h1&gt;)
       might be the category called &quot;news, weather, and sports.&quot;    The
@@ -600,16 +608,6 @@ var respecConfig = {
       Such illustrations must be programatically discoverable by users. They
       also need to be described. However, the user needs the option of choosing
       when to pause for that interrupting description. </p>
-				<p>One current HTML5 media-based example of ancillary content is the Mozilla
-      Popcorn Javascript library and API which can be further explored with the
-      following three resources: </p>
-				<ul>
-					<li> <a href="https://wiki.mozilla.org/PopcornOpenVideoAPI">Mozilla PopcornOpenVideoAPI</a> documentation </li>
-					<li> <a href="http://www.webmonkey.com/2010/08/mozillas-popcorn-project-adds-extra-flavor-to-web-video/">Mozilla’s
-          Popcorn Project Adds Extra Flavor to Web Video</a> blog post </li>
-					<li> <a href="http://popcornjs.org/">Popcorn.js</a> script
-        library </li>
-				</ul>
 				<p><strong>Additional note</strong> </p>
 				<p>Media in HTML5 will be used heavily and broadly. These accessibility user
       requirements will often find broad applicability. </p>
@@ -622,13 +620,13 @@ var respecConfig = {
       of electronic book publication for persons with print disabilities. Nowadays,
       these programs are based on the <a href="http://www.daisy.org/daisy-standard">ANSI/NISO
       Z39.86 specifications</a>. Z39.86 structural navigation is also supported
-      by <a href="http://idpf.org/">e-publishing industry specifications</a>. </p>
+      by <a href="http://www.idpf.org/">e-publishing industry specifications</a>. </p>
 				<p>The user can navigate along the timebase using a continuous scale, and
       by relative time units within rendered audio and animations (including
       video and animated images) that last three or more seconds at their default
-      playback rate. (UAAG 2.0 4.9.6?) </p>
+      playback rate. (UAAG 2.0 2.11.6) </p>
 				<p>The user can navigate by semantic structure within the time-based media,
-      such as by chapters or scenes, if present in the media (UAAG 2.0 4.9.7). </p>
+      such as by chapters or scenes, if present in the media (UAAG 2.0 2.11.7). </p>
 				<p>Systems supporting content navigation must: </p>
 				<section>
 					<h4 id="CN-1"><strong class="req-handle">[CN-1]</strong> Provide a means to structure media resources so that users
@@ -654,7 +652,7 @@ var respecConfig = {
 				<section>
 					<h4 id="CN-5"><strong class="req-handle">[CN-5]</strong> Keep all content representations in sync, so that moving
           to any particular structural element in media content also moves to
-          the corresponding point in all provided alternate media representations
+          the corresponding point in all provided alternative media representations
           (captions, described video, transcripts, etc) associated with that
           work. </h4>
 				</section>
@@ -760,7 +758,7 @@ var respecConfig = {
         in a separate requirement. </p>
 					<p>The caption format could provide a min-width/min-height for its bounding
         box, which typically is calculated from the bottom of the video viewport,
-        but can be placed elsewhere by the Web page, with the Web page being
+        but can be placed elsewhere by the web page, with the web page being
         able to make that box larger and scale the text relatively, too. The
         positions inside the box should probably be into regions, such as top,
         right, bottom, left, center. </p>
@@ -863,8 +861,8 @@ var respecConfig = {
 					<p class="note">Italics markup may be sufficient for a human user, but it is important
         to be able to mark up languages so that the text can be rendered correctly,
         since the same Unicode can be shared between languages and rendered differently
-        in different contexts. This is mainly an I18n issue. It is also important
-        for audio rendering, to get pronunciation correct. </p>
+        in different contexts. This is mainly an localization issue. It is also important
+        for audio rendering, to get correct pronunciation. </p>
 				</section>
 				<section>
 					<h4 id="CC-21"><strong class="req-handle">[CC-21]</strong> Permit the distinction between different
@@ -916,12 +914,12 @@ var respecConfig = {
       a hyperlink that, when activated, pauses the main content and allows access
       to more complete explanatory material. </p>
 				<p>Such extensions can provide important additional information to the content
-      that will enable or improve the understanding of the main content to accessibility
-      users. Enhanced text cues will be particularly useful for those with restricted
+      that will enable or improve the understanding of the main content to users of assistive
+      technology. Enhanced text cues will be particularly useful for those with restricted
       reading skills, to subtitle users, and to caption users. Users may often
       come across keywords in text cues that lend themselves to further in-depth
       information or hyperlinks, such as an e-mail contact or phone number for
-      a person, a strange term that needs a Wikipedia link for definition, or
+      a person, a strange term that needs a link to a definition, or
       an idiom that needs comments to explain it to a foreign-language speaker. </p>
 				<p>Systems that support enhanced captions must: </p>
 				<section>
@@ -935,7 +933,7 @@ var respecConfig = {
 				<section>
 					<h4 id="ECC-2"><strong class="req-handle">[ECC-2]</strong> Support hyperlinks and other activation
           mechanisms for supplementary data for (sections of) caption text. </h4>
-					<p class="note">This can be realised through inclusion of &lt;a&gt; elements or
+					<p class="note">This can be realised through inclusion of links or
         buttons into timed text cues, where additional overlays could be created
         or a different page be loaded. One needs to deal here with the need to
         pause the media timeline for reading of the additional information. </p>
@@ -961,8 +959,6 @@ var respecConfig = {
           of different speakers), and such that are not allowed to overlap and
           thus cause media playback pause to allow users to catch up with their
           reading. </h4>
-					<p class="note">This could be realised through a hint on the text cue or even
-      for a whole track. </p>
 				</section>
 				<section>
 					<h4 id="ECC-5"><strong class="req-handle">[ECC-5]</strong> Allow users to define the reading speed
@@ -980,7 +976,7 @@ var respecConfig = {
       Language vs British Sign Language), sign translation may not be appropriate
       for content with a global audience unless localized variants can be made
       available. </p>
-				<p>Signing can be open, mixed with the video and offered as an entirely alternate
+				<p>Signing can be open, mixed with the video and offered as an entirely alternative
       stream or closed (using some form of picture-in-picture or alpha-blending
       technology). It is possible to use quite low bit rates for much of the
       signing track, but it is important that facial, arm, hand and other body
@@ -990,7 +986,7 @@ var respecConfig = {
       some point in the future. </p>
 				<p>Acknowledging that not all devices will be capable of handling multiple
       video streams, this is a SHOULD requirement for browsers where hardware
-      is capable of support. Strong authoring guidance for content creator will
+      is capable of support. Strong authoring guidance for content creators will
       mitigate situations where user-agents are unable to support multiple video
       streams (WCAG) - for example, on mobile devices that cannot support multiple
       streams, authors should be encouraged to offer two versions of the media
@@ -1069,9 +1065,10 @@ var respecConfig = {
 				<section>
 					<h4 id="KA-1"><strong class="req-handle">[KA-1]</strong> Support operation of all functionality via
           the keyboard on systems where a keyboard is (or can be) present, and
-          where a unique focus object is employed. This does not forbid and should
-          not discourage providing mouse input or other input methods in addition
-          to keyboard operation. (UAAG 2.0 4.1.1) </h4>
+          where <a href="http://www.w3.org/TR/UAAG20/#def-focusable-element">focusable elements</a>
+					are used for interaction. This does not forbid and should not discourage providing mouse
+					input or other input methods in addition to keyboard operation.
+					(UAAG 2.0 2.1.1) </h4>
 					<p class="note">This means that all interaction possibilities with media elements
         need to be keyboard accessible; e.g., through being able to tab onto
         the play, pause, mute buttons, and to move the playback position from
@@ -1123,10 +1120,10 @@ var respecConfig = {
           accessibility framework. The vision-impaired user must be able to stop
           autoplay either generally on all media elements through a setting,
           or for particular pages through a single keyboard user interaction. </h4>
-					<p class="note">This could be enabled through encouraging publishers to us @autoplay,
+					<p class="note">This could be enabled through encouraging publishers to use @autoplay,
         encouraging UAs to implement accessibility settings that allow to turn
-        off all autoplay, and encouraging AT to implement a shortcut key to stop
-        all autoplay on a Web page. </p>
+        off all autoplay, and encouraging <abbr title="Assistive Technology">AT</abbr> to implement a shortcut key to stop
+        all autoplay on a web page. </p>
 				</section>
 			</section>
 			<section>
@@ -1163,7 +1160,7 @@ var respecConfig = {
 				<p class="note">While perhaps unfamiliar to some, this feature has been present
       on many devices, especially audiobook players, for some 20 years now. </p>
 				<p>The user can adjust the playback rate of prerecorded time-based media
-        content, such that all of the following are true (UAAG 2.0 4.9.5): </p>
+        content, such that all of the following are true (UAAG 2.0 2.11.4): </p>
 				<section>
 					<h4 id="TSM-1"><strong class="req-handle">[TSM-1]</strong> The user can adjust the playback rate of the time-based
           media tracks to between 50% and 250% of real time. </h4>
@@ -1183,7 +1180,7 @@ var respecConfig = {
 				<section>
 					<h4 id="TSM-5"><strong class="req-handle">[TSM-5]</strong> The user can stop, pause, and resume rendered audio and
           animation content (including video and animated images) that last three
-          or more seconds at their default playback rate. (UAAG 2.0 4.9.6) </h4>
+          or more seconds at their default playback rate. (UAAG 2.0 2.11.5) </h4>
 				</section>
 			</section>
 			<section>
@@ -1216,7 +1213,7 @@ var respecConfig = {
 				<p>It is important when purchasing or commissioning media, that captioning
       and described video is taken into account and made equal priority in terms
       of ownership, rights of use, etc., as the video and audio itself. </p>
-				<p>This is primarily an authoring requirement. It is a understood that a
+				<p>This is primarily an authoring requirement. It is understood that a
       common time-stamp format must be declared in HTML5, so that authoring tools
       can conform to a required output. </p>
 				<p>Systems supporting accessibility needs for media must: </p>
@@ -1247,7 +1244,7 @@ var respecConfig = {
           entities to the ones that create the media content. They may even be
           in different countries and not be allowed to re-publish the other one's
           content. It is important to be able to host these resources separately,
-          associate them together through the Web page author, and eventually
+          associate them together through the web page author, and eventually
           play them back synchronously to the user. </h4>
 				</section>
 			</section>
@@ -1255,7 +1252,7 @@ var respecConfig = {
 				<h3> Discovery and activation/deactivation of available alternative content
       by the user </h3>
 				<p>As described above, individuals need a variety of media (alternative content)
-      in order to perceive and understand the content. The author or some Web
+      in order to perceive and understand the content. The author or some web
       mechanism provides the alternative content. This alternative content may
       be part of the original content, embedded within the media container as
       'fallback content', or linked from the original content. The user is faced
@@ -1272,13 +1269,13 @@ var respecConfig = {
           long descriptions, or captions). In cases where the alternative content
           has different dimensions than the original content, the user has the
           option to specify how the layout/reflow of the document should be handled.
-          (UAAG 2.0 3.1.1). </h4>
+          (UAAG 2.0 1.8.7). </h4>
 				</section>
 				<section>
 					<h4 id="DAC-2"><strong class="req-handle">[DAC-2]</strong> The user has a global option to specify which types of alternative
           content by default and, in cases where the alternative content has
           different dimensions than the original content, how the layout/reflow
-          of the document should be handled. (UAAG 2.0 3.1.2). </h4>
+          of the document should be handled. (UAAG 2.0 1.8.7). </h4>
 				</section>
 				<section>
 					<h4 id="DAC-3"><strong class="req-handle">[DAC-3]</strong> The user can browse the alternatives and switch between
@@ -1287,28 +1284,27 @@ var respecConfig = {
 				<section>
 					<h4 id="DAC-4"><strong class="req-handle">[DAC-4]</strong> Synchronized alternatives for time-based media (e.g., captions,
           descriptions, sign language) can be rendered at the same time as their
-          associated audio tracks and visual tracks (UAAG 2.0 3.1.3). </h4>
+          associated audio tracks and visual tracks (UAAG 2.0 2.11.4). </h4>
 				</section>
 				<section>
 					<h4 id="DAC-5"><strong class="req-handle">[DAC-5]</strong> Non-synchronized alternatives (e.g., short text alternatives,
           long descriptions) can be rendered as replacements for the original
-          rendered content (UAAG 2.0 3.1.3). </h4>
+          rendered content (UAAG 2.0 1.1.3). </h4>
 				</section>
 				<section>
 					<h4 id="DAC-6"><strong class="req-handle">[DAC-6]</strong> Provide the user with the global option to configure a cascade
           of types of alternatives to render by default, in case a preferred
-          alternative content type is unavailable (UAAG 2.0 3.1.4). </h4>
+          alternative content type is unavailable (UAAG 2.0 1.1.4). </h4>
 				</section>
 				<section>
 					<h4 id="DAC-7"><strong class="req-handle">[DAC-7]</strong> During time-based media playback, the user can determine
           which tracks are available and select or deselect tracks. These selections
-          may override global default settings for captions, descriptions, etc.
-          (UAAG 2.0 4.9.8) </h4>
+          may override global default settings for captions, descriptions, etc. </h4>
 				</section>
 				<section>
 					<h4 id="DAC-8"><strong class="req-handle">[DAC-8]</strong> Provide the user with the option to load time-based media
           content such that the first frame is displayed (if video), but the
-          content is not played until explicit user request. (UAAG 2.0 4.9.2) </h4>
+          content is not played until explicit user request. (UAAG 2.0 2.11.2) </h4>
 				</section>
 			</section>
 			<section>
@@ -1373,9 +1369,9 @@ var respecConfig = {
 					</ol>
 					<p>If alternative content has a different height or width than the media
         content, then the user agent will reflow the (HTML) viewport. (UAAG 2.0
-        3.1.4). </p>
-					<p class="note">This may create a need to provide an author hint to the Web page
-        when embedding alternate content in order to instruct the Web page how
+        1.8.7). </p>
+					<p class="note">This may create a need to provide an author hint to the web page
+        when embedding alternative content in order to instruct the web page how
         to render the content: to scale with the media resource, scale independently,
         or provide a position hint in relation to the media. On small devices
         where the video takes up the full viewport, only limited rendering choices
@@ -1384,7 +1380,7 @@ var respecConfig = {
 				<section>
 					<h4 id="VP-2"><strong class="req-handle">[VP-2]</strong> The user can change the following characteristics
           of visually rendered text content, overriding those specified by the
-          author or user-agent defaults (UAAG 2.0 3.6.1). (Note: this should
+          author or user-agent defaults (UAAG 2.0 1.4.1). (Note: this should
           include captions and any text rendered in relation to media elements,
           so as to be able to magnify and simplify rendered text):</h4>
 					<ol class="list-in-req">
@@ -1402,14 +1398,14 @@ var respecConfig = {
           the containing viewport, with the ability to preserve aspect ratio
           and to adjust the size of the playback viewport to avoid cropping,
           within the scaling limitations imposed by the media itself. (UAAG 2.0
-          4.9.9) </h4>
-					<p class="note">This can be achieved by simply zooming into the Web page, which
+          1.8.9) </h4>
+					<p class="note">This can be achieved by simply zooming into the web page, which
       will automatically rescale the layout and reflow the content. </p>
 				</section>
 				<section>
 					<h4 id="VP-4"><strong class="req-handle">[VP-4]</strong> Provide the user with the ability to control
           the contrast and brightness of the content within the playback viewport.
-          (UAAG 2.0 4.9.11) </h4>
+          (UAAG 2.0 2.11.8) </h4>
 					<p class="note">This is a user-agent device requirement and should already be
         addressed in the UAAG. In live content, it may even be possible to adjust
         camera settings to achieve this requirement. It is also a   &quot;SHOULD&quot; level
@@ -1417,7 +1413,7 @@ var respecConfig = {
 				</section>
 				<section>
 					<h4 id="VP-5"><strong class="req-handle">[VP-5]</strong> Captions and subtitles traditionally occupy
-          the lower third of the video, where also controls are also usually
+          the lower third of the video, where controls are also usually
           rendered. The user agent must avoiding overlapping of overlay content
           and controls on media resources. This must also happen if, for example,
           the controls are only visible on demand. </h4>
@@ -1441,35 +1437,35 @@ var respecConfig = {
 				<p>Systems supporting multiple devices for accessibility must: </p>
 				<section>
 					<h4 id="MD-1"><strong class="req-handle">[MD-1]</strong> Support a platform-accessibility architecture relevant to
-          the operating environment. (UAAG 2.0 2.1.1) </h4>
+          the operating environment. (UAAG 2.0 4.1.1) </h4>
 				</section>
 				<section>
 					<h4 id="MD-2"><strong class="req-handle">[MD-2]</strong> Ensure accessibility of all user-interface components including
           the user interface, rendered content, and alternative content; make
           available the name, role, state, value, and description via a platform-accessibility
-          architecture. (UAAG 2.0 2.1.2) </h4>
+          architecture. (UAAG 2.0 4.1.2) </h4>
 				</section>
 				<section>
 					<h4 id="MD-3"><strong class="req-handle">[MD-3]</strong> If a feature is not supported by the accessibility architecture(s),
           provide an equivalent feature that does support the accessibility architecture(s).
           Document the equivalent feature in the conformance claim. (UAAG 2.0
-          2.1.3) </h4>
+          4.1.3) </h4>
 				</section>
 				<section>
 					<h4 id="MD-4"><strong class="req-handle">[MD-4]</strong> If the user agent implements one or more DOMs, they must
           be made programmatically available to assistive technologies. (UAAG
-          2.0 2.1.4) This assumes the video element will write to the DOM. </h4>
+          2.0 4.1.4) This assumes the video element will write to the DOM. </h4>
 				</section>
 				<section>
 					<h4 id="MD-5"><strong class="req-handle">[MD-5]</strong> If the user can modify the state or value of a piece of content
           through the user interface (e.g., by checking a box or editing a text
           area), the same degree of write access is available programmatically
-          (UAAG 2.0 2.1.5). </h4>
+          (UAAG 2.0 4.1.5). </h4>
 				</section>
 				<section>
 					<h4 id="MD-6"><strong class="req-handle">[MD-6]</strong> If any of the following properties are supported by the accessibility-platform
           architecture, make the properties available to the accessibility-platform
-          architecture (UAAG 2.0 2.1.6):</h4>
+          architecture (UAAG 2.0 4.1.6):</h4>
 					<ol class="list-in-req">
 						<li>the bounding dimensions and coordinates of rendered graphical
               objects; </li>
@@ -1482,7 +1478,7 @@ var respecConfig = {
 				</section>
 				<section>
 					<h4 id="MD-7"><strong class="req-handle">[MD-7]</strong> Ensure that programmatic exchanges between APIs proceed at
-          a rate such that users do not perceive a delay. (UAAG 2.0 2.1.7). </h4>
+          a rate such that users do not perceive a delay. (UAAG 2.0 4.1.7). </h4>
 				</section>
 			</section>
 		</section>
