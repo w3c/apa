@@ -106,6 +106,10 @@ var respecConfig = {
 {
 	list-style-type : lower-alpha;
 }
+.indent
+{
+    margin-left: 1em;
+}
 		</style>
 	</head>
 	<body>
@@ -258,7 +262,7 @@ var respecConfig = {
         must be taken to present a media experience that focuses on the purpose
         of the content and provides alternative content in a clear, concise manner. </p>
       <!--
-				<section>
+				<section class="indent">
 					<h4> Autism </h4>
 					<p>Individuals with an autism-spectrum disorder are commonly impacted in
         the areas of communication, social interaction, and repetitive behaviors.
@@ -339,64 +343,64 @@ var respecConfig = {
       support for descriptions. Descriptions can also provide text that can be
       indexed and searched. </p>
 				<p>Systems supporting described video that are not open descriptions must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="DV-1"><strong class="req-handle">[DV-1]</strong> Provide an indication that descriptions are available, and
           are active/non-active. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-2"><strong class="req-handle">[DV-2]</strong> Render descriptions in a time-synchronized manner, using
           the media resource as the timebase master. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-3"><strong class="req-handle">[DV-3]</strong> Support multiple description tracks (e.g., discrete tracks
           containing different levels of detail). </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-4"><strong class="req-handle">[DV-4]</strong> Support recordings of real human speech as a track of the
           media resource, or as an external file. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-5"><strong class="req-handle">[DV-5]</strong> Allow the author to independently adjust the volumes of the
           audio description and original soundtracks. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-6"><strong class="req-handle">[DV-6]</strong> Allow the user to independently adjust the volumes of the
           audio description and original soundtracks, with the user's settings
           overriding the author's. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-7"><strong class="req-handle">[DV-7]</strong> Permit smooth changes in volume rather than stepped changes.
           The degree and speed of volume change should be under user control. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-8"><strong class="req-handle">[DV-8]</strong> Allow the author to provide fade and pan controls to be accurately
           synchronised with the original soundtrack. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-9"><strong class="req-handle">[DV-9]</strong> Allow the author to use a codec which is optimised for voice
           only, rather than requiring the same codec as the original soundtrack. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-10"><strong class="req-handle">[DV-10]</strong> Allow the user to select from among different languages
           of descriptions, if available, even if they are different from the
           language of the main soundtrack. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-11"><strong class="req-handle">[DV-11]</strong> Support the simultaneous playback of both the described
           and non-described audio tracks so that one may be directed at separate
           outputs (e.g., a speaker and headphones). </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-12"><strong class="req-handle">[DV-12]</strong> Provide a means to prevent descriptions from carrying over
           from one program or channel when the user switches to a different program
           or channel. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-13"><strong class="req-handle">[DV-13]</strong> Allow the user to relocate the description track within
           the audio field, with the user setting overriding the author setting.
           The setting should be re-adjustable as the media plays. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DV-14"><strong class="req-handle">[DV-14]</strong> Support metadata, such as copyright information, usage rights,
           language, etc. </h4>
 				</section>
@@ -428,12 +432,12 @@ var respecConfig = {
         in the program-audio track. </li>
 				</ul>
 				<p>Systems supporting text video descriptions must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="TVD-1"><strong class="req-handle">[TVD-1]</strong> Support presentation of text video descriptions through
           a screen reader or braille device, with playback speed control and
           voice control and synchronisation points with the video. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="TVD-2"><strong class="req-handle">[TVD-2]</strong> TVDs need to be provided in a format that contains the following
           information:</h4>
 				</section>
@@ -445,18 +449,18 @@ var respecConfig = {
 					<li>accompanying metadata providing labeling for speakers, language,
               etc. </li>
 				</ol>
-				<section>
+				<section class="indent">
 					<h4 id="TVD-3"><strong class="req-handle">[TVD-3]</strong> Where possible, provide a text or separate audio track privately
           to those that need it in a mixed-viewing situation, e.g., through headphones. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="TVD-4"><strong class="req-handle">[TVD-4]</strong> Where possible, provide options for authors and users to
           deal with the overflow case: continue reading, stop reading, and pause
           the video. (One solution from a user's point of view may be to pause
           the video and finish reading the TVD, for example.) User preference
           should override authored option. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="TVD-5"><strong class="req-handle">[TVD-5]</strong> Support the control over speech-synthesis playback speed,
           volume and voice, and provide synchronisation points with the video. </h4>
 				</section>
@@ -479,15 +483,15 @@ var respecConfig = {
       between cause and effect, point out what is important to look at, or explain
       moods that might otherwise be missed. </p>
 				<p>Systems supporting extended audio descriptions must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="EVD-1"><strong class="req-handle">[EVD-1]</strong> Support detailed user control as specified in <a href="#TVD-4">[TVD-4]</a> for
           extended video descriptions. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="EVD-2"><strong class="req-handle">[EVD-2]</strong> Support automatically pausing the video and main audio tracks
           in order to play a lengthy description. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="EVD-3"><strong class="req-handle">[EVD-3]</strong> Support resuming playback of video and main audio tracks
           when the description is finished. </h4>
 					<p>Because the user is the ultimate arbiter of the rate at which TTS
@@ -513,19 +517,19 @@ var respecConfig = {
       frequency-dependent, and the user may have usable hearing in some bands
       yet none at all in others. </p>
 				<p>Systems supporting clean audio and multiple audio tracks must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="CA-1"><strong class="req-handle">[CA-1]</strong> Support clean
 					audio as a separate, alternative audio track from other audio-based
 					alternative media resources, including the primary audio resource. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CA-2"><strong class="req-handle">[CA-2]</strong> Support the synchronisation of multitrack audio either within
           the same file or from separate files - preferably both. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CA-3"><strong class="req-handle">[CA-3]</strong> Support separate volume control of the different audio tracks. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CA-4"><strong class="req-handle">[CA-4]</strong> Support pre-emphasis filters, pitch-shifting, and other audio-processing
           algorithms. </h4>
 				</section>
@@ -630,7 +634,7 @@ var respecConfig = {
 				<p>The user can navigate by semantic structure within the time-based media,
       such as by chapters or scenes, if present in the media (UAAG 2.0 2.11.7). </p>
 				<p>Systems supporting content navigation must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="CN-1"><strong class="req-handle">[CN-1]</strong> Provide a means to structure media resources so that users
           can navigate them by semantic content structure, e.g., through adding
           a track to the video that contains navigation markers (in table-of-content
@@ -638,44 +642,44 @@ var respecConfig = {
           structures, which may be a hierarchical structure. Support keeping
           all media representations synchronised when users navigate. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CN-2"><strong class="req-handle">[CN-2]</strong> The navigation track should provide for hierarchical structures
           with titles for the sections. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CN-3"><strong class="req-handle">[CN-3]</strong> Support both global navigation by the larger structural elements
           of a media work, and also the most localized atomic structures of that
           work, even though authors may not have marked-up all levels of navigational
           granularity. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CN-4"><strong class="req-handle">[CN-4]</strong> Support third-party provided structural navigation markup. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CN-5"><strong class="req-handle">[CN-5]</strong> Keep all content representations in sync, so that moving
           to any particular structural element in media content also moves to
           the corresponding point in all provided alternative media representations
           (captions, described video, transcripts, etc) associated with that
           work. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CN-6"><strong class="req-handle">[CN-6]</strong> Support direct access to any structural element, possibly
           through URIs. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CN-7"><strong class="req-handle">[CN-7]</strong> Support pausing primary content traversal to provide access
           to such ancillary content in line. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CN-8"><strong class="req-handle">[CN-8]</strong> Support skipping of ancillary content in order to not interrupt
           content flow. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CN-9"><strong class="req-handle">[CN-9]</strong> Support access to each ancillary content item, including
           with &quot;next&quot; and &quot;previous&quot; controls, apart from
           accessing the primary content of the title. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CN-10"><strong class="req-handle">[CN-10]</strong> Support that in bilingual texts both the original and translated
           texts can appear on screen, with both the original and translated text
           highlighted, line by line, in sync with the audio narration. </h4>
@@ -717,7 +721,7 @@ var respecConfig = {
       to search the caption text to locate a specific video or an exact point
       in a video. </p>
 				<p>Formats for captions, subtitles or foreign-language subtitles must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="CC-1"><strong class="req-handle">[CC-1]</strong> Render text in a time-synchronized manner,
           using the media resource as the timebase master. </h4>
 					<p class="note">Most of the time, the main audio track would be the best candidate
@@ -725,13 +729,13 @@ var respecConfig = {
         is available, the video track becomes the timebase master. Also, there
         may be situations where an explicit timing track is available. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-2"><strong class="req-handle">[CC-2]</strong> Allow the author to specify erasures, i.e.,
           times when no text is displayed on the screen (no text cues are active). </h4>
 					<p class="note">This should be possible both within media resources and caption
       formats. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-3"><strong class="req-handle">[CC-3]</strong> Allow the author to assign timestamps so
           that one caption/subtitle follows another, with no perceivable gap
           in between. </h4>
@@ -740,13 +744,13 @@ var respecConfig = {
         cue or have the end time be implied by the start of the next cue. For
         overlapping captions, explicit start and end times are then required. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-4"><strong class="req-handle">[CC-4]</strong> Be available in a text encoding. </h4>
 					<p class="note">This means that determined character encodings should be supported
         - which could be either by making the character encoding explicit or
         by enforcing a single default one such as UTF-8. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-5"><strong class="req-handle">[CC-5]</strong> Support positioning in all parts of the
           screen - either inside the media viewport but also possibly in a determined
           space next to the media viewport. This is particularly important when
@@ -765,39 +769,39 @@ var respecConfig = {
         positions inside the box should probably be into regions, such as top,
         right, bottom, left, center. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-6"><strong class="req-handle">[CC-6]</strong> Support the display of multiple regions
           of text simultaneously. </h4>
 					<p class="note">This typically relates to multiple text cues that are defined
         on overlapping times. If the cues' rendering target are made out to different
         spatial regions, they can be displayed simultaneously. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-7"><strong class="req-handle">[CC-7]</strong> Display multiple rows of text when rendered
           as text in a right-to-left or left-to-right language. </h4>
 					<p class="note">Internationalization is important not just for subtitles, as captions
       can be used in all languages. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-8"><strong class="req-handle">[CC-8]</strong> Allow the author to specify line breaks. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-9"><strong class="req-handle">[CC-9]</strong> Permit a range of font faces and sizes. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-10"><strong class="req-handle">[CC-10]</strong> Render a background in a range of colors,
           supporting a full range of opacities. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-11"><strong class="req-handle">[CC-11]</strong> Render text in a range of colors. </h4>
 					<p class="note">The user should have final control over rendering styles like
       color and fonts; e.g., through user preferences. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-12"><strong class="req-handle">[CC-12]</strong> Enable rendering of text with a thicker
           outline or a drop shadow to allow for better contrast with the background. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-13"><strong class="req-handle">[CC-13]</strong> Where a background is used, it is preferable
           to keep the caption background visible even in times where no text
           is displayed, such that it minimises distraction. However, where captions
@@ -805,7 +809,7 @@ var respecConfig = {
           the user to see as much of the underlying video as possible. </h4>
 					<p class="note">It may be technically possible to have cues without text. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-14"><strong class="req-handle">[CC-14]</strong> Allow the use of mixed display styles—
           e.g., mixing paint-on captions with pop-on captions— within a single
           caption cue or in the caption stream as a whole. Pop-on captions are
@@ -822,19 +826,19 @@ var respecConfig = {
 					<p class="note">Similarly, in karaoke, individual characters are often &quot;painted
       on&quot;. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-15"><strong class="req-handle">[CC-15]</strong> Support positioning such that the lowest
           line of captions appears at least 1/12 of the total screen height above
           the bottom of the screen, when rendered as text in a right-to-left
           or left-to-right language. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-16"><strong class="req-handle">[CC-16]</strong> Use conventions that include inserting
           left-to-right and right-to-left segments within a vertical run (e.g.
           Tate-chu-yoko in Japanese), when rendered as text in a top-to-bottom
           oriented language. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-17"><strong class="req-handle">[CC-17]</strong> Represent content of different natural
           languages. In some cases the inclusion of a few foreign words form
           part of the original soundtrack, and thus need to be in the same caption
@@ -846,18 +850,18 @@ var respecConfig = {
         selectable. Realistically, having no more than 2 languages present at
         the same time on screen is probably the limit. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-18"><strong class="req-handle">[CC-18]</strong> Represent content of at least those specific
           natural languages that may be represented with [Unicode 3.2], including
           common typographical conventions of that language (e.g., through the
           use of furigana and other forms of ruby text). </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-19"><strong class="req-handle">[CC-19]</strong> Present the full range of typographical
           glyphs, layout and punctuation marks normally associated with the natural
           language's print-writing system. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-20"><strong class="req-handle">[CC-20]</strong> Permit in-line mark-up for foreign words
           or phrases. </h4>
 					<p class="note">Italics markup may be sufficient for a human user, but it is important
@@ -866,40 +870,40 @@ var respecConfig = {
         in different contexts. This is mainly an localization issue. It is also important
         for audio rendering, to get correct pronunciation. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-21"><strong class="req-handle">[CC-21]</strong> Permit the distinction between different
           speakers. </h4>
-					<p>Further, systems that support captions must: </p>
 				</section>
-				<section>
+				<p>Further, systems that support captions must: </p>
+				<section class="indent">
 					<h4 id="CC-22"><strong class="req-handle">[CC-22]</strong> Support captions that are provided inside
           media resources as tracks, or in external files. </h4>
 					<p class="note">It is desirable to expose the same API to both. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-23"><strong class="req-handle">[CC-23]</strong> Ascertain that captions are displayed in
           sync with the media resource. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-24"><strong class="req-handle">[CC-24]</strong> Support user activation/deactivation of
           caption tracks. </h4>
 					<p class="note">This requires a menu of some sort that displays the available
       tracks for activation/deactivation. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-25"><strong class="req-handle">[CC-25]</strong> Support edited and verbatim captions, if
           available. </h4>
 					<p class="note">Edited and verbatim captions can be provided in two different
         caption resources. There is a need to expose to the user how they differ,
         similar to how there can be caption tracks in different languages. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-26"><strong class="req-handle">[CC-26]</strong> Support multiple tracks of foreign-language
           subtitles in different languages. </h4>
 					<p class="note">These different-language &quot;tracks&quot; can be provided in
       different resources. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CC-27"><strong class="req-handle">[CC-27]</strong> Support live-captioning functionality. </h4>
 				</section>
 			</section>
@@ -924,7 +928,7 @@ var respecConfig = {
       a person, a strange term that needs a link to a definition, or
       an idiom that needs comments to explain it to a foreign-language speaker. </p>
 				<p>Systems that support enhanced captions must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="ECC-1"><strong class="req-handle">[ECC-1]</strong> Support metadata markup for (sections of)
           timed text cues. </h4>
 					<p class="note">Such &quot;metadata&quot; markup can be realised through a @title
@@ -932,7 +936,7 @@ var respecConfig = {
         where a term is explained, an &lt;abbr&gt; element, an   &lt;acronym&gt; element,
         a &lt;dfn&gt; element, or through RDFa or microdata. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="ECC-2"><strong class="req-handle">[ECC-2]</strong> Support hyperlinks and other activation
           mechanisms for supplementary data for (sections of) caption text. </h4>
 					<p class="note">This can be realised through inclusion of links or
@@ -940,7 +944,7 @@ var respecConfig = {
         or a different page be loaded. One needs to deal here with the need to
         pause the media timeline for reading of the additional information. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="ECC-3"><strong class="req-handle">[ECC-3]</strong> Support text cues that may be longer than
           the time available until the next text cue and thus provide overlapping
           text cues - in this case, a feature should be provided to decide if
@@ -954,7 +958,7 @@ var respecConfig = {
         is dependent on the user's reading speed, so this may imply user control
         or timeouts. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="ECC-4"><strong class="req-handle">[ECC-4]</strong> It needs to be possible to define timed
           text cues that are allowed to overlap with each other in time and be
           present on screen at the same time (e.g., those that come from speech
@@ -962,7 +966,7 @@ var respecConfig = {
           thus cause media playback pause to allow users to catch up with their
           reading. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="ECC-5"><strong class="req-handle">[ECC-5]</strong> Allow users to define the reading speed
           and thus define how long each text cue requires, and whether media
           playback needs to pause sometimes to let them catch up on their reading. </h4>
@@ -996,15 +1000,15 @@ var respecConfig = {
 				<p>Selecting from multiple tracks for different sign languages should be
       achieved in the same fashion that multiple caption/subtitle files are handled. </p>
 				<p>Systems supporting sign language must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="SL-1"><strong class="req-handle">[SL-1]</strong> Support sign-language video either as a track as part of
           a media resource or as an external file. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="SL-2"><strong class="req-handle">[SL-2]</strong> Support the synchronized playback of the sign-language video
           with the media resource. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="SL-3"><strong class="req-handle">[SL-3]</strong> Support the display of sign-language video either as picture-in-picture
           or alpha-blended overlay, as parallel video, or as the main video with
           the original video as picture-in-picture or alpha-blended overlay.
@@ -1013,10 +1017,10 @@ var respecConfig = {
           contain all pieces for sync purposes rather than specifying multiple &lt;video&gt; elements
           intended to work in sync. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="SL-4"><strong class="req-handle">[SL-4]</strong> Support multiple sign-language tracks in several sign languages. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="SL-5"><strong class="req-handle">[SL-5]</strong> Support the interactive activation/deactivation of a sign-language
           track by the user. </h4>
 				</section>
@@ -1037,12 +1041,12 @@ var respecConfig = {
       the caption and video description, so that it is a complete representation
       of the material, as well as containing any interactive options. </p>
 				<p>Systems supporting transcripts must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="T-1"><strong class="req-handle">[T-1]</strong> Support the provisioning of a full text transcript for the
           media asset in a separate but linked resource, where the linkage is
           programatically accessible to AT. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="T-2"><strong class="req-handle">[T-2]</strong> Support the provisioning of both scrolling and static display
           of a full text transcript with the media resource, e.g., in a area next
           to the video or underneath the video, which is also AT accessible. </h4>
@@ -1064,7 +1068,7 @@ var respecConfig = {
 				<p>It is imperative that controls be device independent, so that control
       may be achieved by keyboard, pointing device, speech, etc. </p>
 				<p>Systems supporting keyboard accessibility must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="KA-1"><strong class="req-handle">[KA-1]</strong> Support operation of all functionality via
           the keyboard on systems where a keyboard is (or can be) present, and
           where <a href="http://www.w3.org/TR/UAAG20/#def-focusable-element">focusable elements</a>
@@ -1076,7 +1080,7 @@ var respecConfig = {
         the play, pause, mute buttons, and to move the playback position from
         the keyboard. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="KA-2"><strong class="req-handle">[KA-2]</strong> Support a rich set of native controls for
           media operation, including but not limited to play, pause, stop, jump
           to beginning, jump to end, scale player size (up to full screen), adjust
@@ -1090,14 +1094,14 @@ var respecConfig = {
         an extended set of control functionality including functionality for
         accessibility users. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="KA-3"><strong class="req-handle">[KA-3]</strong> All functionality available to native controls
           must also be available to scripted controls. The author would be able
           to choose any/all of the controls, skin them and position them. </h4>
 					<p class="note">This means that new IDL attributes need to be added to the media
       elements for the extra controls that are accessibility related. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="KA-4"><strong class="req-handle">[KA-4]</strong> It must always be possible to enable native
           controls regardless of the author preference to guarantee that such
           functionality is available and essentially override author settings
@@ -1106,7 +1110,7 @@ var respecConfig = {
 					<p class="note">This could be enabled through a context menu, which is keyboard
       accessible and its keyboard access cannot be turned off. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="KA-5"><strong class="req-handle">[KA-5]</strong> The scripted and native controls must go
           through the same platform-level accessibility framework (where it exists),
           so that a user presented with the scripted version is not shut out
@@ -1114,7 +1118,7 @@ var respecConfig = {
 					<p class="note">This is below the level of HTML and means that the accessibility
       platform needs to be extended to allow access to these controls. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="KA-6"><strong class="req-handle">[KA-6]</strong> Autoplay on media elements is a particularly
           difficult issue to manage for vision-impaired users, since the mouse
           allows other users to an auto-playing element on a page with a single
@@ -1134,21 +1138,21 @@ var respecConfig = {
       mechanism must be provided for adjusting the granularity of the specific
       structural navigation point next and previous. Users must be able to set
       the range/scope of next and previous in real time. </p>
-				<section>
+				<section class="indent">
 					<h4 id="CNS-1"><strong class="req-handle">[CNS-1]</strong> All identified structures, including ancillary content as
           defined in &quot;Content Navigation&quot; above, must be accessible
           with the use of &quot;next&quot; and &quot;previous,&quot; as refined
           by the granularity control. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CNS-2"><strong class="req-handle">[CNS-2]</strong> Users must be able to discover, skip, play-in-line, or directly
           access ancillary content structures. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CNS-3"><strong class="req-handle">[CNS-3]</strong> Users need to be able to access the granularity control
           using any input mode, e.g., keyboard, speech, pointer, etc. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="CNS-4"><strong class="req-handle">[CNS-4]</strong> Producers and authors may optionally provide additional
           access options to identified structures, such as direct access to any
           node in a table of contents. </h4>
@@ -1163,23 +1167,23 @@ var respecConfig = {
       on many devices, especially audiobook players, for some 20 years now. </p>
 				<p>The user can adjust the playback rate of prerecorded time-based media
         content, such that all of the following are true (UAAG 2.0 2.11.4): </p>
-				<section>
+				<section class="indent">
 					<h4 id="TSM-1"><strong class="req-handle">[TSM-1]</strong> The user can adjust the playback rate of the time-based
           media tracks to between 50% and 250% of real time. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="TSM-2"><strong class="req-handle">[TSM-2]</strong> Speech whose playback rate has been adjusted by the user
           maintains pitch in order to limit degradation of the speech quality. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="TSM-3"><strong class="req-handle">[TSM-3]</strong> All provided alternative media tracks remain synchronized
           across this required range of playback rates. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="TSM-4"><strong class="req-handle">[TSM-4]</strong> The user agent provides a function that resets the playback
           rate to normal (100%). </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="TSM-5"><strong class="req-handle">[TSM-5]</strong> The user can stop, pause, and resume rendered audio and
           animation content (including video and animated images) that last three
           or more seconds at their default playback rate. (UAAG 2.0 2.11.5) </h4>
@@ -1219,7 +1223,7 @@ var respecConfig = {
       common time-stamp format must be declared in HTML5, so that authoring tools
       can conform to a required output. </p>
 				<p>Systems supporting accessibility needs for media must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="PP-1"><strong class="req-handle">[PP-1]</strong> Support existing production practice for alternative content
           resources, in particular allow for the association of separate alternative
           content resources to media resources. Browsers cannot support all forms
@@ -1228,11 +1232,11 @@ var respecConfig = {
           declared format, so that existing authoring tools can be configured
           to export finished files in the required format. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="PP-2"><strong class="req-handle">[PP-2]</strong> Support the association of authoring and rights metadata
           with alternative content resources, including copyright and usage information. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="PP-3"><strong class="req-handle">[PP-3]</strong> Support the simple replacement of alternative content resources
           even after publishing. This is again dependent on authoring practice
           - if the content creator delivers a final media file that contains
@@ -1241,7 +1245,7 @@ var respecConfig = {
           tool to make changes to that file - it cannot be demanded of the browser
           to do so. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="PP-4"><strong class="req-handle">[PP-4]</strong> Typically, alternative content resources are created by different
           entities to the ones that create the media content. They may even be
           in different countries and not be allowed to re-publish the other one's
@@ -1264,7 +1268,7 @@ var respecConfig = {
       should adhere to the following UAAG guidance: </p>
 				<p>The user agent can facilitate the discovery of alternative content by
         following these criteria: </p>
-				<section>
+				<section class="indent">
 					<h4 id="DAC-1"><strong class="req-handle">[DAC-1]</strong> The user has the ability to have indicators rendered along
           with rendered elements that have alternative content (e.g., visual
           icons rendered in proximity of content which has short text alternatives,
@@ -1273,37 +1277,37 @@ var respecConfig = {
           option to specify how the layout/reflow of the document should be handled.
           (UAAG 2.0 1.8.7). </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DAC-2"><strong class="req-handle">[DAC-2]</strong> The user has a global option to specify which types of alternative
           content by default and, in cases where the alternative content has
           different dimensions than the original content, how the layout/reflow
           of the document should be handled. (UAAG 2.0 1.8.7). </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DAC-3"><strong class="req-handle">[DAC-3]</strong> The user can browse the alternatives and switch between
           them. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DAC-4"><strong class="req-handle">[DAC-4]</strong> Synchronized alternatives for time-based media (e.g., captions,
           descriptions, sign language) can be rendered at the same time as their
           associated audio tracks and visual tracks (UAAG 2.0 2.11.4). </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DAC-5"><strong class="req-handle">[DAC-5]</strong> Non-synchronized alternatives (e.g., short text alternatives,
           long descriptions) can be rendered as replacements for the original
           rendered content (UAAG 2.0 1.1.3). </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DAC-6"><strong class="req-handle">[DAC-6]</strong> Provide the user with the global option to configure a cascade
           of types of alternatives to render by default, in case a preferred
           alternative content type is unavailable (UAAG 2.0 1.1.4). </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DAC-7"><strong class="req-handle">[DAC-7]</strong> During time-based media playback, the user can determine
           which tracks are available and select or deselect tracks. These selections
           may override global default settings for captions, descriptions, etc. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="DAC-8"><strong class="req-handle">[DAC-8]</strong> Provide the user with the option to load time-based media
           content such that the first frame is displayed (if video), but the
           content is not played until explicit user request. (UAAG 2.0 2.11.2) </h4>
@@ -1323,16 +1327,16 @@ var respecConfig = {
       are self-contained boxes, should ensure the physical design does not block
       access, and should make accessibility controls, such as the closed-caption
       toggle, as prominent as the volume or channel controls. </p>
-				<section>
+				<section class="indent">
 					<h4 id="API-1"><strong class="req-handle">[API-1]</strong> The existence of alternative-content tracks for a media
           resource must be exposed to the user agent. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="API-2"><strong class="req-handle">[API-2]</strong> Since authors will need access to the alternative content
           tracks, the structure needs to be exposed to authors as well, which
           requires a dynamic interface. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="API-3"><strong class="req-handle">[API-3]</strong> Accessibility APIs need to gain access to alternative content
           tracks no matter whether those content tracks come from within a resource
           or are combined through markup on the page. </h4>
@@ -1353,7 +1357,7 @@ var respecConfig = {
       cause viewers to miss information. The use of this area for things such
       as transport controls, while appealing aesthetically, may lead to accessibility
       conflicts. </p>
-				<section>
+				<section class="indent">
 					<h4 id="VP-1"><strong class="req-handle">[VP-1]</strong> It must be possible to deal with three different
           cases for the relation between the viewport size, the position of media
           and of alternative content:</h4>
@@ -1379,7 +1383,7 @@ var respecConfig = {
         where the video takes up the full viewport, only limited rendering choices
         may be possible, such that the UA may need to override author preferences. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="VP-2"><strong class="req-handle">[VP-2]</strong> The user can change the following characteristics
           of visually rendered text content, overriding those specified by the
           author or user-agent defaults (UAAG 2.0 1.4.1). (Note: this should
@@ -1394,7 +1398,7 @@ var respecConfig = {
         something like a <a href="http://www.greasespot.net/">greasemonkey script</a> or <a href="http://www.mozilla.org/unix/customizing.html#usercss">user
         CSS</a> which can override styles dynamically in the browser. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="VP-3"><strong class="req-handle">[VP-3]</strong> Provide the user with the ability to adjust
           the size of the time-based media up to the full height or width of
           the containing viewport, with the ability to preserve aspect ratio
@@ -1404,7 +1408,7 @@ var respecConfig = {
 					<p class="note">This can be achieved by simply zooming into the web page, which
       will automatically rescale the layout and reflow the content. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="VP-4"><strong class="req-handle">[VP-4]</strong> Provide the user with the ability to control
           the contrast and brightness of the content within the playback viewport.
           (UAAG 2.0 2.11.8) </h4>
@@ -1413,7 +1417,7 @@ var respecConfig = {
         camera settings to achieve this requirement. It is also a   &quot;SHOULD&quot; level
         requirement, since it does not account for limitations of various devices. </p>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="VP-5"><strong class="req-handle">[VP-5]</strong> Captions and subtitles traditionally occupy
           the lower third of the video, where controls are also usually
           rendered. The user agent must avoiding overlapping of overlay content
@@ -1437,34 +1441,34 @@ var respecConfig = {
       made, and a detailed response was provided. The response requires review
       and integration into this document, but can be found today in the <a href="http://lists.w3.org/Archives/Public/public-html-a11y/2010Jul/0108.html">22 July 2010 message on this topic</a>). </p>
 				<p>Systems supporting multiple devices for accessibility must: </p>
-				<section>
+				<section class="indent">
 					<h4 id="MD-1"><strong class="req-handle">[MD-1]</strong> Support a platform-accessibility architecture relevant to
           the operating environment. (UAAG 2.0 4.1.1) </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="MD-2"><strong class="req-handle">[MD-2]</strong> Ensure accessibility of all user-interface components including
           the user interface, rendered content, and alternative content; make
           available the name, role, state, value, and description via a platform-accessibility
           architecture. (UAAG 2.0 4.1.2) </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="MD-3"><strong class="req-handle">[MD-3]</strong> If a feature is not supported by the accessibility architecture(s),
           provide an equivalent feature that does support the accessibility architecture(s).
           Document the equivalent feature in the conformance claim. (UAAG 2.0
           4.1.3) </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="MD-4"><strong class="req-handle">[MD-4]</strong> If the user agent implements one or more DOMs, they must
           be made programmatically available to assistive technologies. (UAAG
           2.0 4.1.4) This assumes the video element will write to the DOM. </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="MD-5"><strong class="req-handle">[MD-5]</strong> If the user can modify the state or value of a piece of content
           through the user interface (e.g., by checking a box or editing a text
           area), the same degree of write access is available programmatically
           (UAAG 2.0 4.1.5). </h4>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="MD-6"><strong class="req-handle">[MD-6]</strong> If any of the following properties are supported by the accessibility-platform
           architecture, make the properties available to the accessibility-platform
           architecture (UAAG 2.0 4.1.6):</h4>
@@ -1478,7 +1482,7 @@ var respecConfig = {
 						<li>change state/value notifications. </li>
 					</ol>
 				</section>
-				<section>
+				<section class="indent">
 					<h4 id="MD-7"><strong class="req-handle">[MD-7]</strong> Ensure that programmatic exchanges between APIs proceed at
           a rate such that users do not perceive a delay. (UAAG 2.0 4.1.7). </h4>
 				</section>
