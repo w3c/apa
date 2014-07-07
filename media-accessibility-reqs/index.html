@@ -42,10 +42,6 @@ var respecConfig = {
     // if this is a LCWD, uncomment and set the end of its review period
     // lcEnd: "2009-08-05",
 
-    // if you want to have extra CSS, append them to this list
-    // it is recommended that the respec.css stylesheet be kept
-    extraCSS:             ["http://dev.w3.org/2009/dap/ReSpec.js/css/respec.css"],
-
     // editors, add as many as you like
     // only "name" is required
     editors:  [
@@ -1067,9 +1063,9 @@ var respecConfig = {
       playback. </p>
 				<p>It is imperative that controls be device independent, so that control
       may be achieved by keyboard, pointing device, speech, etc. </p>
-				<p>Systems supporting keyboard accessibility must: </p>
+				<p>Systems supporting accessibility for interactive controls must: </p>
 				<section class="indent">
-					<h4 id="KA-1"><strong class="req-handle">[KA-1]</strong> Support operation of all functionality via
+					<h4 id="IC-1"><strong class="req-handle">[IC-1]</strong> Support operation of all functionality via
           the keyboard on systems where a keyboard is (or can be) present, and
           where <a href="http://www.w3.org/TR/UAAG20/#def-focusable-element">focusable elements</a>
 					are used for interaction. This does not forbid and should not discourage providing mouse
@@ -1081,7 +1077,7 @@ var respecConfig = {
         the keyboard. </p>
 				</section>
 				<section class="indent">
-					<h4 id="KA-2"><strong class="req-handle">[KA-2]</strong> Support a rich set of native controls for
+					<h4 id="IC-2"><strong class="req-handle">[IC-2]</strong> Support a rich set of native controls for
           media operation, including but not limited to play, pause, stop, jump
           to beginning, jump to end, scale player size (up to full screen), adjust
           volume, mute, captions on/off, descriptions on/off, selection of audio
@@ -1095,14 +1091,14 @@ var respecConfig = {
         accessibility users. </p>
 				</section>
 				<section class="indent">
-					<h4 id="KA-3"><strong class="req-handle">[KA-3]</strong> All functionality available to native controls
+					<h4 id="IC-3"><strong class="req-handle">[IC-3]</strong> All functionality available to native controls
           must also be available to scripted controls. The author would be able
           to choose any/all of the controls, skin them and position them. </h4>
 					<p class="note">This means that new IDL attributes need to be added to the media
       elements for the extra controls that are accessibility related. </p>
 				</section>
 				<section class="indent">
-					<h4 id="KA-4"><strong class="req-handle">[KA-4]</strong> It must always be possible to enable native
+					<h4 id="IC-4"><strong class="req-handle">[IC-4]</strong> It must always be possible to enable native
           controls regardless of the author preference to guarantee that such
           functionality is available and essentially override author settings
           through user control. This is also a particularly important requirement
@@ -1111,7 +1107,7 @@ var respecConfig = {
       accessible and its keyboard access cannot be turned off. </p>
 				</section>
 				<section class="indent">
-					<h4 id="KA-5"><strong class="req-handle">[KA-5]</strong> The scripted and native controls must go
+					<h4 id="IC-5"><strong class="req-handle">[IC-5]</strong> The scripted and native controls must go
           through the same platform-level accessibility framework (where it exists),
           so that a user presented with the scripted version is not shut out
           from some expected behaviour. </h4>
@@ -1119,7 +1115,7 @@ var respecConfig = {
       platform needs to be extended to allow access to these controls. </p>
 				</section>
 				<section class="indent">
-					<h4 id="KA-6"><strong class="req-handle">[KA-6]</strong> Autoplay on media elements is a particularly
+					<h4 id="IC-6"><strong class="req-handle">[IC-6]</strong> Autoplay on media elements is a particularly
           difficult issue to manage for vision-impaired users, since the mouse
           allows other users to an auto-playing element on a page with a single
           interaction. Therefore, autoplay state needs to be exposed to the platform-level
@@ -1312,6 +1308,23 @@ var respecConfig = {
           content such that the first frame is displayed (if video), but the
           content is not played until explicit user request. (UAAG 2.0 2.11.2) </h4>
 				</section>
+				<section class="indent">
+					<h4 id="DAC-9"><strong class="req-handle">[DAC-9]</strong> Provide the user with the option to record alternative content
+                    along with the primary content on devices where recording is available. </h4>
+                    <div class="note"
+					<p>This feature can be user configurable to allow maximum flexibility in trading off the
+                    anticipated future need for the description against the amount of extra data storage required. A flexible
+                    solution giving maximum control to the user would be to provide a global setting with the following
+                    options:</p>
+                    <ul>
+                        <li>Always record the alternative content (the best default option, since a resource recorded by one user may later be
+                        accessed by another different user who may have different and unanticipated requirements);</li>
+                        <li>Record the alternative content only if it is active at the time of recording;</li>
+                        <li>Ask at recording time whether to record the alternative content;</li>
+                        <li>Never record the alternative content.</li>
+                    </ul>
+                    </div>
+				</section>
 			</section>
 			<section>
 				<h3> Requirements on making properties available to the accessibility interface </h3>
@@ -1429,8 +1442,7 @@ var respecConfig = {
 				</section>
 			</section>
 			<section>
-				<h3> Requirements on the parallel use of alternate content on potentially
-      multiple devices in parallel </h3>
+				<h3>Requirements on secondary screens and other devices</h3>
 				<p>Multiple user devices must be directly addressable. It must be assumed
       that many users will have multiple video displays and/or multiple audio-output
       devices attached to an individual computer, or addressable via LAN. It
