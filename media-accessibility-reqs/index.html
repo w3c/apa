@@ -110,9 +110,8 @@ var respecConfig = {
 	</head>
 	<body>
 		<section id="abstract">
-			<p>This document aggregates the accessibility requirements of users with disabilities that
-    the W3C HTML5 Accessibility Task Force has collected with respect to audio
-    and video on the Web. </p>
+			<p>This document presents the accessibility requirements users with disabilities have
+            with respect to audio and video on the web. </p>
     <p>It first provides an introduction to the needs of users with disabilities
     in relation to audio and video.</p>
 			<p>Then it explains what alternative content technologies have been developed
@@ -126,7 +125,7 @@ var respecConfig = {
     in this document. Rather, this document attempts to supply a comprehensive
     collection of user requirements needed to support media accessibility in
     the context of HTML5. As such, it should be expected that this document
-    will continue to develop for some time. </p>
+    will continue to evolve for some time. </p>
 			<p>Please also note this document is not an inventory of technology currently
     provided by, or missing from HTML5 specification drafts. Technology is listed
     here because it's important for accommodating the alternative access
@@ -150,7 +149,7 @@ var respecConfig = {
 
     <a href="http://www.w3.org/WAI/intro/people-use-web/Overview.html">How
     People with Disabilities Use the Web</a> once that document is complete.
-    This draft is included now provide general background
+    This draft is included now to provide general background
     for sections 2 and 3 of this document. </p>
 			<p>Comprehension of media may be affected by loss of visual function, loss
             of audio function, cognitive issues, or a combination of all three.
@@ -545,8 +544,8 @@ var respecConfig = {
         chapters. They also have structures such as page numbers, side-bars,
         tables, footnotes, tables of contents, glossaries, etc. </li>
 					<li> Short music selections tend to have verses and repeating choruses. </li>
-					<li> Larger classical-music works have movements which are further dividable
-        by component parts such as exposition, development and recapitulation,
+					<li> Larger classical-music works have movements which can be divided into
+        components such as exposition, development and recapitulation,
         or theme and variations. </li>
 					<li> Operas, theatrical plays, and movies have acts and scenes within those
         acts. </li>
@@ -569,7 +568,7 @@ var respecConfig = {
 				<p><strong>Two examples of granularity levels</strong> </p>
 				<p>1. In a news broadcast, the most global level (analogous to   &lt;h1&gt;)
       might be the category called &quot;news, weather, and sports.&quot;    The
-      second level (analogous to &lt;h2&gt;) would identify each individual news
+      second level (analogous to &lt;h2&gt;) would identify individual news
       (or sports) story. With the granularity control set to level 1, &quot;next&quot; and &quot;previous&quot; would
       cycle among news, weather, and sports. Set at level 2, it would cycle among
       individual news (or sports) stories. </p>
@@ -1068,8 +1067,9 @@ var respecConfig = {
 					<h4 id="IC-1"><strong class="req-handle">[IC-1]</strong> Support operation of all functionality via
           the keyboard on systems where a keyboard is (or can be) present, and
           where <a href="http://www.w3.org/TR/UAAG20/#def-focusable-element">focusable elements</a>
-					are used for interaction. This does not forbid and should not discourage providing mouse
-					input or other input methods in addition to keyboard operation.
+					are used for interaction. This does not forbid and should not discourage
+                    providing pointing device
+					or other input methods in addition to keyboard operation.
 					(UAAG 2.0 2.1.1) </h4>
 					<p class="note">This means that all interaction possibilities with media elements
         need to be keyboard accessible; e.g., through being able to tab onto
@@ -1117,8 +1117,9 @@ var respecConfig = {
 				</section>
 				<section class="indent">
 					<h4 id="IC-6"><strong class="req-handle">[IC-6]</strong> Autoplay on media elements is a particularly
-          difficult issue to manage for vision-impaired users, since the mouse
-          allows other users to an auto-playing element on a page with a single
+          difficult issue to manage for vision-impaired users. Pointing devices allow 
+          other users access to 
+          an auto-playing element on a page with a single
           interaction. Therefore, autoplay state needs to be exposed to the platform-level
           accessibility framework. The vision-impaired user must be able to stop
           autoplay either generally on all media elements through a setting,
