@@ -1449,42 +1449,47 @@ var respecConfig = {
 			</section>
 			<section>
 				<h3>Requirements on secondary screens and other devices</h3>
-				<p>Multiple user devices must be directly addressable. It must be assumed
-      that many users will have multiple video displays and/or multiple audio-output
-      devices attached to an individual computer, or addressable via LAN. It
-      must be possible to configure certain types of media for presentation on
-      specific devices, and these configuration settings must be readily overwritable
-      on a case-by-case basis by users. </p>
-				<p>Systems supporting multiple devices for accessibility must: </p>
+				<p>Multiple secondary user devices must be directly addressable. This
+                   functionality is increasingly also known  by the new term, &quot;Second Screen,&quot;
+                   even though there may be more than two screens in any given viewing
+                   environment, and even though not all secondary devices are video displays. It
+                   must be assumed that many users will have at least one additional display
+                   device (such as a tablet), and/or at least one additional audio output device
+                   (such as a Bluetooth headset) attached to a primary video display device, an
+                   individual computer, or locally addressable on a LAN. It
+                   must be possible to configure certain types of media for presentation on
+                   specific devices, and these configuration settings must be readily overwritable
+                   on a case-by-case basis by users. </p>
+				<p>Systems supporting secondary devices must: </p>
 				<div class="indent">
-					<div class='requirement' id="MD-1"><strong class="req-handle">[MD-1]</strong> Support a platform-accessibility architecture relevant to
+					<div class='requirement' id="SD-1"><strong class="req-handle">[SD-1]</strong> Support a platform-accessibility architecture relevant to
           the operating environment. (UAAG 2.0 4.1.1) </div>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="MD-2"><strong class="req-handle">[MD-2]</strong> Ensure accessibility of all user-interface components including
+					<div class='requirement' id="SD-2"><strong class="req-handle">[SD-2]</strong> Ensure accessibility of all user-interface components including
           the user interface, rendered content, and alternative content; make
           available the name, role, state, value, and description via a platform-accessibility
           architecture. (UAAG 2.0 4.1.2) </div>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="MD-3"><strong class="req-handle">[MD-3]</strong> If a feature is not supported by the accessibility architecture(s),
+					<div class='requirement' id="SD-3"><strong class="req-handle">[SD-3]</strong> If a feature is not supported by the accessibility architecture(s),
           provide an equivalent feature that does support the accessibility architecture(s).
           Document the equivalent feature in the conformance claim. (UAAG 2.0
           4.1.3) </div>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="MD-4"><strong class="req-handle">[MD-4]</strong> If the user agent implements one or more DOMs, they must
+					<div class='requirement' id="SD-4"><strong class="req-handle">[SD-4]</strong> If the user agent implements one or more DOMs, they must
           be made programmatically available to assistive technologies. (UAAG
           2.0 4.1.4) This assumes the video element will write to the DOM. </div>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="MD-5"><strong class="req-handle">[MD-5]</strong> If the user can modify the state or value of a piece of content
+					<div class='requirement' id="SD-5"><strong class="req-handle">[SD-5]</strong> If the user can modify the state or value of a piece of content
           through the user interface (e.g., by checking a box or editing a text
           area), the same degree of write access is available programmatically
           (UAAG 2.0 4.1.5). </div>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="MD-6"><strong class="req-handle">[MD-6]</strong> If any of the following properties are supported by the accessibility-platform
+					<div class='requirement' id="SD-6"><strong class="req-handle">[SD-6]</strong> If any of the following properties are supported by the accessibility-platform
           architecture, make the properties available to the accessibility-platform
           architecture (UAAG 2.0 4.1.6):</div>
 					<ol class="list-in-req">
@@ -1498,7 +1503,7 @@ var respecConfig = {
 					</ol>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="MD-7"><strong class="req-handle">[MD-7]</strong> Ensure that programmatic exchanges between APIs proceed at
+					<div class='requirement' id="SD-7"><strong class="req-handle">[SD-7]</strong> Ensure that programmatic exchanges between APIs proceed at
           a rate such that users do not perceive a delay. (UAAG 2.0 4.1.7). </div>
 				</div>
 			</section>
