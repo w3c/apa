@@ -189,19 +189,24 @@ var respecConfig = {
       to react quickly to transient information, and may have a narrow angle
       of view and so may not detect key information presented temporarily where
       they are not looking, or in text that is moving or scrolling. A person
-      using a low-vision AT aid, such as a screen magnifier, will only be viewing
+      will likely use screen magnification software.  This means that they will only be viewing
       a portion of the screen, and so must manage tracking media content via
       their AT. They may have difficulty reading when text is too small, has
-      poor background contrast, or when outline or other fancy font types or
-      effects are used. They may be using an AT that adjusts all the colors of
+      poor background contrast (too high or too low), or when outlined or other fancy font types or
+      effects are used. If the font is an image, it is likely to appear grainy when magnified.
+      They may be using an AT that adjusts all the colors of
       the screen, such as inverting the colors, so the media content must be
-      viewable through the AT. </p>
+      viewable through the AT. Users with low vision will often benefit from the same 
+      text streams and instructions that are sometimes hidden or displayed off screen for 
+      users of screen readers or refreshable Braille. </p>
 			</section>
 			<section>
 				<h3> Atypical color perception </h3>
 				<p>A significant percentage of the population has atypical color perception,
       and may not be able to discriminate between different colors, or may miss
-      key information when coded with color only. </p>
+      key information when coded with color only.  They might have difficulty discriminating
+      foreground information from background information, or discriminating colors.  Such issues 
+      can be minimized when the user has the ability to customize the color and contrast of text content. </p>
 			</section>
 			<section>
 				<h3> Deafness </h3>
@@ -1051,6 +1056,10 @@ var respecConfig = {
 					<div class='requirement' id="T-2"><strong class="req-handle">[T-2]</strong> Support the provisioning of both scrolling and static display
           of a full text transcript with the media resource, e.g., in an area next
           to the video or underneath the video, which is also AT accessible. </div>
+				</div>
+				<div class="indent">
+					<div class='requirement' id="T-3"><strong class="req-handle">[T-3]</strong> Allow the user to customize the visual rendering of the full 
+					text transcript, e.g., font, font size, foreground and background color, line, letter and word spacing. </div>
 				</div>
 			</section>
 		</section>
