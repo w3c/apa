@@ -3,13 +3,6 @@
 	<head>
 		<title>Media Accessibility User Requirements</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<!--
-      === NOTA BENE ===
-      For the three scripts below, if your spec resides on dev.w3 you can check them
-      out in the same tree and use relative links so that they'll work offline,
-     -->
-	<!-- <script src='http://dev.w3.org/2009/dap/ReSpec.js/js/respec.js' class='remove'></script> -->
-        <!--		<script src='/dev/2009/dap/ReSpec.js/js/respec.js' class='remove'></script> -->
         <script src='https://www.w3.org/Tools/respec/respec-w3c-common'
             async class='remove'></script>
 		<script class="remove">
@@ -37,7 +30,7 @@ var respecConfig = {
     // previousMaturity:  "WD",
 
     // if there a publicly available Editor's Draft, this is the link
-    edDraftURI:           "http://www.w3.org/WAI/PF/media-a11y-reqs/",
+    edDraftURI: "http://w3c.github.io/pfwg/media-accessibility-reqs/",
 
     // if this is a LCWD, uncomment and set the end of its review period
     // lcEnd: "2009-08-05",
@@ -89,7 +82,7 @@ var respecConfig = {
 
     // include introduction sections in the ToC
     tocIntroductory: true,
-    doRDFa: true
+    doRDFa: 1.1
 };
 		</script>
 		<style type="text/css">
@@ -147,39 +140,32 @@ var respecConfig = {
 			implementing audio and video content and features.</p>
 		</section>
 		<section>
-			<h2> Accessible Media Requirements by Type of Disability </h2>
+			<h2>Summary of Accessible Media Requirements by Type of Disability </h2>
 
-            <p>Editorial note: This section is a rough draft. It will be edited to align with
-
-    <a href="http://www.w3.org/WAI/intro/people-use-web/Overview.html">How
-    People with Disabilities Use the Web</a> once that document is complete.
-    This draft is included now to provide general background
-    for sections 2 and 3 of this document. </p>
-			<p>Comprehension of media may be affected by loss of visual function, loss
-            of audio function, cognitive issues, or a combination of all three.
-            Cognitive disabilities may affect access to and/or
-    comprehension of media. Physical disabilities such as dexterity impairment,
-    loss of limbs, or loss of use of limbs may affect access to media. Once richer
-    forms of media, such as virtual reality, become more commonplace, tactile
-    issues may come into play. Control of the media player can be an important
-    issue, e.g., for people with physical disabilities, however this is typically not addressed
-    by the media formats themselves, but is a requirement of the technology used
-    to build the player. </p>
+             <p rel="bibo:issue" typeof="bibo:Issue"><span
+             resource="http://www.w3.org/2014/11/17-html-a11y-media-minutes.html" 
+             rel="bibo:affirmedBy">This section provides examples of the accessibility
+            requirements of people with auditory, cognitive, neurological,
+            physical, speech, or visual disabilities to access and
+            comprehend media, including requirements for media formats and
+            media player technologies. For a broader exploration of how
+            people with different disabilities interact with web content and
+            tools, see <a
+            href="http://www.w3.org/WAI/intro/people-use-web/Overview.html">How
+            People with Disabilities Use the Web</a>.</span></p>
 			<section>
-				<h3> Blindness </h3>
-				<p>People who are blind cannot access information if it is presented only
-      in the visual mode. They require information in an alternative representation,
-      which typically means the audio mode, although information can also be
-      presented as text. It is important to remember that not only the main video
-      is inaccessible, but any other visible ancillary information such as stock
-      tickers, status indicators, or other on-screen graphics, as well as any
-      visual controls needed to operate the content. Since people who are blind
-      use a screen reader and/or refreshable braille display, these assistive
-      technologies (ATs) need to work hand-in-hand with the access mechanism
-      provided for the media content. </p>
+				<h3>Visual: Blindness </h3>
+             <p rel="bibo:issue" typeof="bibo:Issue"><span
+             resource="http://www.w3.org/2014/11/17-html-a11y-media-minutes.html" 
+             rel="bibo:affirmedBy">People who are blind cannot access visual information in
+                videos, player controls, status indicators, etc. They need
+                the information in an alternative representation of audio or
+                text. People who are blind use a screen reader and/or
+                refreshable braille display, and media content needs to be
+                operable with these assistive technologies (ATs).</span></p>
 			</section>
 			<section>
-				<h3> Low vision </h3>
+				<h3>Visual: Low vision </h3>
 				<p>People with low vision can use some visual information.
       Depending on their visual
       ability they might have specific issues such as difficulty discriminating
@@ -201,20 +187,20 @@ var respecConfig = {
       users of screen readers or refreshable Braille. </p>
 			</section>
 			<section>
-				<h3> Atypical color perception </h3>
-				<p>A significant percentage of the population has atypical color perception,
-      and may not be able to discriminate between different colors, or may miss
-      key information when coded with color only.  They might have difficulty discriminating
-      foreground information from background information, or discriminating colors.  Such issues 
-      can be minimized when the user has the ability to customize the color and contrast of text content. </p>
+				<h3>Visual: Atypical color perception </h3>
+				<p>People with atypical color perception (often called
+                "color blindness") may not be able to 
+      to discriminate between different colors, or may miss
+      key information when coded with color only, such as colors in media
+      controls and text overlays.</p>
 			</section>
 			<section>
-				<h3> Deafness </h3>
+				<h3>Auditory: Deafness </h3>
 				<p>People who are deaf generally cannot use audio. Thus, an alternative representation
       is required, typically through synchronized captions and/or sign translation. </p>
 			</section>
 			<section>
-				<h3> Hard of hearing </h3>
+				<h3>Auditory: Hard of hearing </h3>
 				<p>People who are hard of hearing may be able to use some audio material,
       but might not be able to discriminate certain types of sound, and may miss
       any information presented as audio only if it contains frequencies they
@@ -225,7 +211,7 @@ var respecConfig = {
       who are deaf in one ear. </p>
 			</section>
 			<section>
-				<h3> Deaf-blind </h3>
+				<h3>Auditory & Visual: Deaf-blind </h3>
 				<p>Individuals who are deaf-blind have a combination of conditions that may
       result in one of the following: blindness and deafness; blindness and difficulty
       in hearing; low vision and deafness; or low vision and difficulty in hearing.
@@ -238,13 +224,15 @@ var respecConfig = {
 			</section>
 			<section>
 				<h3> Physical impairment </h3>
-				<p>People with physical disabilities such as poor dexterity, loss of limbs, or
-      loss of use of limbs may use the keyboard alone rather than the combination
-      of a pointing device plus keyboard to interact with content and controls,
-      or may use a switch with an on-screen keyboard, or other assistive technology.
-      The player itself must be usable via the keyboard and pointing
-      devices. The user must have full access to all player controls, including
-      methods for selecting alternative content. </p>
+				<p>Some people with physical disabilities such as limited
+                muscle control (including tremors, lack of coordination, and
+                paralysis), pain that impedes movement, or missing limbs
+                cannot use a keyboard or mouse to interact with content and
+                controls. Some use a keyboard but not a pointing device,
+                some use a switch with an on-screen keyboard, and some use
+                other assistive technology. The media player must be usable
+                with only a keyboard, including access to all player
+                controls and methods for selecting alternative content.</p>
 			</section>
 			<section>
 				<h3> Cognitive and neurological disabilities </h3>
@@ -1520,7 +1508,14 @@ var respecConfig = {
 				</div>
 			</section>
 		</section>
-		<section class="appendix">
+            <section class='appendix' id="A_checklist">
+            <h2 id="A_checklist">Media Accessibility User Requirements Checklist</h2>
+            <p class='note'>A live version of these requirements is
+            available in the Wiki at <a
+            href="http://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist">http://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist</a>.</p>
+            <div data-include="checklist.html"></div>
+            </section>
+            <section class='appendix'>
 			<h2>Acknowledgments</h2>
 			<p>The following people contributed to the development of this document.</p>
 			<section id="ack_group">
