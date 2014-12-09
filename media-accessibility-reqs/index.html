@@ -9,6 +9,7 @@
 var respecConfig = {
     // specification status (e.g., WD, LCWD, NOTE, etc.). If in doubt use ED.
     specStatus:           "ED",
+    processVersion:       "2005",
 
     // the specification's short name, as in http://www.w3.org/TR/short-name/
     shortName:            "media-accessibility-reqs",
@@ -26,8 +27,9 @@ var respecConfig = {
 
     // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
     // and its maturity status
-    // previousPublishDate:  "1977-03-15",
-    // previousMaturity:  "WD",
+    previousPublishDate:  "2014-08-14",
+    previousMaturity:  "WD",
+    previousDiffURI:        "http://www.w3.org/TR/2014/WD-media-accessibility-reqs-20140814/",
 
     // if there a publicly available Editor's Draft, this is the link
     edDraftURI: "http://w3c.github.io/pfwg/media-accessibility-reqs/",
@@ -787,22 +789,53 @@ var respecConfig = {
 				</div>
 				<div class="indent">
 					<div class='requirement' id="CC-9"><strong class="req-handle">[CC-9]</strong> Permit a range of font faces and sizes. </div>
+                    <p class='note'>The legibility of the rendered text depends upon the
+                    size of the text as perceived by the viewer.  This is in turn dependent upon the display
+                    size and the distance between the display and the viewer.  Users must be able to select an
+                    appropriate format for their environment.  See also <a href="#CC-11">CC-11</a> below.</p>
 				</div>
 				<div class="indent">
 					<div class='requirement' id="CC-10"><strong class="req-handle">[CC-10]</strong> Render a background in a range of colors,
           supporting a full range of opacity levels. </div>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="CC-11"><strong class="req-handle">[CC-11]</strong> Render text in a range of colors. </div>
-					<p class="note">The user should have final control over rendering styles like
-      color and fonts; e.g., through user preferences. </p>
+					<div class='requirement' id="CC-11"><strong class="req-handle">[CC-11]</strong> Render
+                    text in a range of colors.  The user should have final control over rendering styles like
+                    color and fonts; e.g., through user preferences. 
+                    <p class='note'>A default palette of colors suitable for users with atypical
+                    color perception
+                    should be available to distinguish editorial concepts such as speakers.
+                    There are likely to be conflicting requirements between different users
+                    with differing cognitive conditions to maximize the accessibility of
+                    content, so full color customization should be available. For example
+                    users with cognitive conditions such as dyslexia (itself an umbrella label
+                    for a variety of conditions), ADHD, and Asperger's may find that viewing
+                    content that is given a particular color cast, akin to viewing through
+                    blue eyeglasses, helps them to read presented text.</p>
+                    <p class='note'>While users must have the ability to customize their experience, 
+                    it is preferable that developers do
+                    their best to ensure the legibility of the content they are presenting.  For example, the
+                    use of media type checking and alternate style sheets is a common technique for tuning the
+                    size and style of fonts used depending on the output device (e.g., a large monitor vs. a
+                    small smart-phone screen). Ideally, a combination of techniques such as this along with
+                    sensible system-provided defaults will reduce the need for end-users to customize beyond
+                    general system settings.</p> 
+                    </div>
 				</div>
 				<div class="indent">
 					<div class='requirement' id="CC-12"><strong class="req-handle">[CC-12]</strong> Enable rendering of text with a thicker
           outline or a drop shadow to allow for better contrast with the background. </div>
+                    <p class='note'>The use of drop shadows is not a suitable general alternative to 
+                    displaying text on a non-transparent background.  For example, white text with drop
+                    shadows on a transparent background is not legible over white content (e.g., footage of
+                    snow).</p>
+                    <p class='note'>The use of drop shadows can increase the sense of 'busyness', and can have
+                    negative impacts upon viewers with some cognitive conditions.  In general developers will
+                    improve text legibility of they avoid the use of drop shadows.</p>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="CC-13"><strong class="req-handle">[CC-13]</strong> Where a background is used, it is preferable
+					<div class='requirement' id="CC-13"><strong class="req-handle">[CC-13]</strong> Where a
+                    background is used, it should be possible
           to keep the caption background visible even in times where no text
           is displayed, such that it minimizes distraction. However, where captions
           are infrequent the background should be allowed to disappear to enable
@@ -822,15 +855,26 @@ var respecConfig = {
           and are used to indicate different speaker identifications. Each sentence &quot;rolls
           up&quot; to about three lines. The top line of the three disappears
           as a new bottom line is added, allowing the continuous rolling up of
-          new lines of captions. </div>
+          new lines of captions.
+          When displaying captions using the paint-on style, it is important to ensure
+          that the final words that are displayed are visible for enough time for them to be read.</div>
 					<p class="note">Similarly, in karaoke, individual characters are often &quot;painted
       on&quot;. </p>
+                <p class='note'>The comprehension and appreciation of captions and subtitles depends on
+                how well matched they are 'editorially' to the related video content. In
+                particular the pacing of the content should be reflected in the caption
+                text; for example a fast paced drama is likely to benefit from
+                relatively short captions that change more often in comparison to a slow
+                paced one. In the most extreme case, very fast changing short subtitles can cause
+                readability problems because they can prevent viewers from having enough
+                attention to consider the video; such extremes should be avoided.</p>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="CC-15"><strong class="req-handle">[CC-15]</strong> Support positioning such that the lowest
-          line of captions appears at least 1/12 of the total screen height above
-          the bottom of the screen, when rendered as text in a right-to-left
-          or left-to-right language. </div>
+					<div class='requirement' id="CC-15"><strong class="req-handle">[CC-15]</strong> Support
+                    positioning such that the edge of the captions is a sufficient distance from the
+                    nearest screen edge to permit readability (e.g., at least 1/12 of the total screen height above
+                    the bottom of the screen, when rendered as text in a right-to-left or left-to-right
+                    language). </div>
 				</div>
 				<div class="indent">
 					<div class='requirement' id="CC-16"><strong class="req-handle">[CC-16]</strong> Use conventions that include inserting
@@ -906,6 +950,11 @@ var respecConfig = {
 				<div class="indent">
 					<div class='requirement' id="CC-27"><strong class="req-handle">[CC-27]</strong> Support live-captioning functionality. </div>
 				</div>
+                <div class="indent">
+                    <div class="requirement" id="CC-28"><strong class="req-handle">[CC-28]</strong> Enable the
+                    bounding box of the background area to be extended by a preset distance relative to the
+                    foreground text contained with that background area.</div>
+                </div>
 			</section>
 			<section>
 				<h3> Enhanced captions/subtitles </h3>
@@ -1449,9 +1498,12 @@ var respecConfig = {
           rendered. The user agent must avoid overlapping of overlay content
           and controls on media resources. This must also happen if, for example,
           the controls are only visible on demand. </div>
-					<p class="note">If there are several types of overlapping overlays, the controls
-        should stay on the bottom edge of the viewport and the others should
-        be moved above this area, all stacked above each other. </p>
+					<p class="note">If there are several types of overlapping overlays, they should be
+                    positioned as far as possible from editorially important content.  In particular, they
+                    should avoid obscuring video components such as mouths, "burned in text" (embedded
+                    captions or other annotations in the main video stream), etc.  Users typically expect
+                    controls to appear at the bottom of the viewport.  Controls should not be prevented from
+                    becoming usable due to repositioning.</p>
 				</div>
 			</section>
 			<section>
