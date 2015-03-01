@@ -80,12 +80,43 @@ var respecConfig = {
 			<h2>Introduction</h2>
 			<section>
 				<h3>Goals</h3>
+                <p>Numerous guidelines exist for creating and supporting content that is accessible to people with disabilities, on and off the Web. When these guidelines are supported in the entire web ecosystem, content creators can author accessible content, and expect the accessibility features to be made available by user agents, including assistive technologies when needed. Authoring tools support creation of accessible content, and accessibility features survive transmission to different systems or conversion of content to different formats.</p>
+                <p>Nearly all of these accessibility features depend on support in some form from the technology in which content is encoded, transmitted, and sometimes transformed. But there is not yet a set of well-documented guidance for such technologies. Instead, requirements are inferred from authoring and user agent guidelines. This makes it complicated for technology creators to ensure they have met the full set of needs. Review from accessibility specialists is limited by bandwidth and expertise, so does not fully address that problem. As a result, varying technologies provide various levels of support with varying levels of compatibility with other technologies. These issues at the core layers of Web technology impact the progress that can be made from support of higher-level guidelines.</p>
+                <p>Web Technology Accessibility Guidelines aims to fill this gap. It is intended to be a single, well-considered set of guidelines addressing specifically the features technologies need to provide to support accessible. These guidelines relate to the requirements of other guidelines but should not be confused with them. The goal of WTAG is to provide a single source of guidelines for Web technology accessibility. They relate to other guidelines and documentation to provide additional information and rationale for the requirement, but are intended to be a self-sufficient set of guidelines that technology creators can follow.</p>
 			</section>
 			<section>
 				<h3>Audience</h3>
+                <p>The primary audience of WTAG is creators of Web technologies. Most of the guidelines relate to content and presentation technologies like HTML, CSS, SVG, PDF, audio/video formats, etc. Some guidelines also address data formats, interchange formats, transmission protocols, etc., usually aimed at ensuring these technologies preserve the accessibility features of content impacted by these technologies. Because of this broad set of relevant technologies, all Web technology creators are considered part of the audience for WTAG.</p>
+                <p>Secondary audience include creators of higher level accessibility guidelines and other advocates for web accessibility features. Because WTAG has a strong grounding in user needs, researchers and advocates who identify the accessibility requirements of web users with disabilities are also an important audience.</p>
 			</section>
+				<section>
+					<h4>Scope</h4>
+					<p>Web Technology Accessibility Guidelines is a product of the World Wide Web Consortium and as such targets only the accessibility requirements of web technologies. Many of the user needs are the same for web use and non-web use, so WTAG will necessarily overlap and hopefully be compatible with similar guidelines addressing non-web space. Nonetheless, WTAG is not designed to be used for non-web technologies and there could be key differences. Furthermore, there are user needs that exist outside the web that do not impact the web, and those needs are completely unaddressed by WTAG.</p>
+                    <p>In spite of these caveats about the scope of WTAG, this scope will evolve as the Web does. More and more technologies are becoming part of the Web, and bringing user needs to the Web along with them. For instance, strictly hardware accessibility issues may be non-web requirements, but the Web of Things brings many of these issues closer to the Web than in the past. WTAG will need to reflect this evolution, and future versions may be required to address user needs that are new to the Web.</p>
+				</section>
 			<section>
 				<h3>Approach</h3>
+                <p>The goal of WTAG is to help ensure that web technologies meet the needs of users with disabilities. Therefore the first step in the development of these guidelines is to inventory known user needs. Where user needs are suspected but known, related work may expand the inventory through research when feasible. Many user needs affecting web content accessibility are well known and documented in multiple places. These needs are collected and related to each other in order to arrive at a single set of known needs. Sources examined in the development of these guidelines include:</p>
+				<ul>
+					<li><a href="http://www.jtc1access.org/documents/swga_339_DTR_29138-1_User_Needs_Summary.zip">JTC 1 User Needs</a>;
+					</li>
+					<li><a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a>;</li>
+					<li><a href="http://www.w3.org/TR/UAAG20/">UAAG 2.0</a>;</li>
+					<li><a href="http://www.w3.org/TR/ATAG20/">ATAG 2.0</a>;</li>
+					<li><a href="https://www.w3.org/WAI/GL/mobile-a11y-tf/wiki/Main_Page">Mobile gap analysis</a>;</li>
+					<li><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">Cognitive gap analyses</a>;</li>
+					<li><a href="http://www.w3.org/TR/media-accessibility-reqs/">Media Accessibility User Requirements</a>;</li>
+					<li> Sources from other advocacy organizations.</li>
+				</ul>
+                <p>The second stage in development of the guidelines is to identify ways these needs can be met. There are three high-level ways user needs can be met:</p>
+                <ul>
+                    <li>technology features;</li>
+                    <li>author implementation;</li>
+                    <li>user agent support.</li>
+                </ul>
+                <p>Some needs can be met with present technology only via one of these routes. Other needs can be met by more than one route, and for content to be accessible it is only required that one of the available routes be implemented. Many needs, however, require more than one route to be implemented together for the need to be met. The most common example is that a technology provides a feature, the author uses that feature in the content, and the user agent makes the result available to the user.</p>
+                <p>All of these ways of meeting user needs are identfied, along with their relationships to each other. Once these approaches are identified, the result is separate lists of requirements for content technologies, authors, and user agents. The relationship among the routes may play a role in prioritization of guidelines, since needs that can only be met by one route may be more important to meet by that route, than needs that could be met by other means as well.</p>
+                <p>The set of approaches to meeting user needs that affects technology features becomes the base information for the Web Technology Accessibility Guidelines. (The other two routes, while important to the analysis, are not directly relevant to WTAG but may inform other work.) These approaches are prioritized, organized, and translated into guidelines-type language to become the Web Technology Accessibility Guidelines.</p>
 			</section>
 			<section>
 				<h3>Explanation of User Needs</h3>
@@ -98,20 +129,6 @@ var respecConfig = {
 				<p>Identify user needs that we plan to provide guidance on meeting. These should describe the needs of humans as they currently exist (i.e., without significant evolution or cyborgization from early 21st century norms), and therefore is as era-independent as possible with current knowledge. The focus is on the needs of people with disabilities, but because that is sometimes a relative / contextual condition, a significant proportion of mainstream needs will also be identified. </p>
 				<p>At least two levels of needs may be identified. The first is truly generic needs, requirements users have to access and use content such as perceive and understand it, and should be stable over time. The second layer is needs specific to technologies of the day, such as ability to understand and operate controls. This layer may be understood as an implementation of the generic needs, so may not be classed as user needs in the end. Regardless of its classification, it will be an important component of understanding the space. This level of needs evolves as technology and design patterns do, so needs to be maintainable separately from the generic needs. </p>
 				<p>Our knowledge of user needs come from a variety of sources. They should be mapped / credited to the sources to help in later communication. Sources currently under examination: </p>
-				<ul>
-					<li><a href="http://www.jtc1access.org/documents/swga_339_DTR_29138-1_User_Needs_Summary.zip">JTC 1 User Needs</a>
-					</li>
-					<li><a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a>
-					</li>
-					<li><a href="http://www.w3.org/TR/UAAG20/">UAAG 2.0</a>
-					</li>
-					<li><a href="http://www.w3.org/TR/ATAG20/">ATAG 2.0</a>
-					</li>
-					<li><a href="https://www.w3.org/WAI/GL/mobile-a11y-tf/wiki/Main_Page">Mobile gap analysis</a></li>
-					<li><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">Cognitive gap analyses</a></li>
-					<li><a href="http://www.w3.org/TR/media-accessibility-reqs/">Media Accessibility User Requirements</a></li>
-					<li> Sources from other advocacy organizations </li>
-				</ul>
 				<section>
 					<h4>Assumptions </h4>
 					<ul>
@@ -127,10 +144,6 @@ var respecConfig = {
 						<li> Signals (non-actionable state indicators) </li>
 						<li> Alerts (dialogs, alarms, etc.) </li>
 					</ul>
-				</section>
-				<section>
-					<h4>Scope</h4>
-					<p>Not addressing non-Web, but that is also a shifting scope as more and more non-Web technologies impact the Web (automotive, Web of Things, etc.).</p>
 				</section>
 			</section>
 			<section>
