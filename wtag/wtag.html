@@ -173,32 +173,6 @@ var respecConfig = {
 					</ul>
 				</section>
 			</section>
-			<section>
-				<h3>Ways to Meet User Needs</h3>
-				<p>User needs need to be analyzed for how they can be met. The following ways of meeting needs are currently understood: </p>
-				<ul>
-					<li> Author design </li>
-					<li> Author technical implementation </li>
-					<li> User agent accessibility support of standard features </li>
-					<li> User agent support of author-implemented accessibility features </li>
-					<li> Assistive technology support (including accessibility API mediation) </li>
-				</ul>
-				<section>
-					<h4>Author Implementation</h4>
-				</section>
-				<section>
-					<h4>User Agent Features</h4>
-					<section>
-						<h5>Accessibility Support in Mainstream User Agents</h5>
-					</section>
-					<section>
-						<h5>Assistive Technology</h5>
-					</section>
-					<section>
-						<h5>Accessibility APIs</h5>
-					</section>
-				</section>
-			</section>
 		</section>
 		<section>
 			<h2>Collected User Needs</h2>
@@ -427,72 +401,103 @@ var respecConfig = {
 		</section>
 		<section>
 			<h2>Meeting User Needs</h2>
-			<p>This is a preliminary draft to document how user needs are met in various ways. For each user need, ways to meet it are proposed for: </p>
+            <p class="note">This is a preliminary draft to document how user needs are met in various ways. </p>
+            <p>For each user need, ways to meet it are proposed for: </p>
 			<ul>
 				<li> Technologies </li>
 				<li> Content Authors </li>
 				<li> User Agents </li>
 			</ul>
 			<p>Other categories may be included later. Many user needs can be met in more than one way. The mechanism to meet user needs in one of the above areas may require support from one or more of the other areas. </p>
-			<p>This version of the resource is primarily to show the structure, not yet a comprehensive documentation of how user needs can be met. </p>
-			<table>
-				<thead>
-					<tr>
-						<th> User Need </th>
-						<th> Technology </th>
-						<th> Content Author </th>
-						<th> User Agent </th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th rowspan="2" scope="rowgroup"> Text Alternatives </th>
-						<td>Provide a mechanism for author to create text alternatives and associate with content </td>
-						<td>Create text alternative content and associate with primary content using features of the content technology</td>
-						<td>Expose text alternatives provided by the author </td>
-					</tr>
-					<tr>
-						<td>Define parseable and semantically rich content encoding that supports automated creation of text alternatives</td>
-						<td>Encode content using a content technology that is sufficiently rich that machines can create useful automated text alternatives</td>
-						<td>Create automated text alternative content based on the semantics of the primary content</td>
-					</tr>
-					<tr>
-						<th rowspan="6" scope="rowgroup"> Color Contrast </th>
-						<td>Provide color definition features that allow authors to set colors to meet requirements </td>
-						<td>Use only colors that meet luminosity contrast guidelines </td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td>Provide color definition features that allow users to override author-set colors </td>
-						<td> </td>
-						<td>Provide a feature for users to override author colors </td>
-					</tr>
-					<tr>
-						<td>Provide color definition semantics that allow colors of common object types to be globally remapped easily </td>
-						<td>Use semantically defined color mappings to allow user global preferences to be easily applied </td>
-						<td>Support semantically defined color mappings to allow users to define global preferences that are easily applied across a range of content </td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>Provide a feature to allow users to define their own color preferences </td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td></td>
-						<td>Provide a feature to allow users to request "high contrast" mode </td>
-						<td></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td>Provide a "high contrast" mode that overrides author colors</td>
-					</tr>
-				</tbody>
-			</table>
+			<section>
+				<h3>Ways to Meet User Needs</h3>
+				<p>User needs need to be analyzed for how they can be met. The following ways of meeting needs are currently understood: </p>
+				<ul>
+					<li> Author design </li>
+					<li> Author technical implementation </li>
+					<li> User agent accessibility support of standard features </li>
+					<li> User agent support of author-implemented accessibility features </li>
+					<li> Assistive technology support (including accessibility API mediation) </li>
+				</ul>
+				<section>
+					<h4>Author Implementation</h4>
+				</section>
+				<section>
+					<h4>User Agent Features</h4>
+					<section>
+						<h5>Accessibility Support in Mainstream User Agents</h5>
+					</section>
+					<section>
+						<h5>Assistive Technology</h5>
+					</section>
+					<section>
+						<h5>Accessibility APIs</h5>
+					</section>
+				</section>
+			</section>
+            <section>
+                <h3>Meeting User Needs Table</h3>
+                <p class="note">This version of the resource is primarily to show the structure, not yet a comprehensive documentation of how user needs can be met. </p>
+                <p>The table below shows how two of the user needs identified above might be met by technology features, author implementation, and user agent support. Each row of the table shows a related set of approaches, in which the approach in column depends on successful implementation of the approaches in the other columns for that row. For instance, many author features depend on support from the technology as well as exposure from the user agents. Some approaches to meeting user needs do not require support from others, which is reflected by rows with blank columns. For instance, it is possible for a user agent to meet certain needs with no particular support provided by the technology or author. This layout is preliminary and a more expressive layout is sought.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th> User Need </th>
+                            <th> Technology </th>
+                            <th> Content Author </th>
+                            <th> User Agent </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th rowspan="2" scope="rowgroup"> Text Alternatives </th>
+                            <td>Provide a mechanism for author to create text alternatives and associate with content </td>
+                            <td>Create text alternative content and associate with primary content using features of the content technology</td>
+                            <td>Expose text alternatives provided by the author </td>
+                        </tr>
+                        <tr>
+                            <td>Define parseable and semantically rich content encoding that supports automated creation of text alternatives</td>
+                            <td>Encode content using a content technology that is sufficiently rich that machines can create useful automated text alternatives</td>
+                            <td>Create automated text alternative content based on the semantics of the primary content</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="6" scope="rowgroup"> Color Contrast </th>
+                            <td>Provide color definition features that allow authors to set colors to meet requirements </td>
+                            <td>Use only colors that meet luminosity contrast guidelines </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>Provide color definition features that allow users to override author-set colors </td>
+                            <td> </td>
+                            <td>Provide a feature for users to override author colors </td>
+                        </tr>
+                        <tr>
+                            <td>Provide color definition semantics that allow colors of common object types to be globally remapped easily </td>
+                            <td>Use semantically defined color mappings to allow user global preferences to be easily applied </td>
+                            <td>Support semantically defined color mappings to allow users to define global preferences that are easily applied across a range of content </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Provide a feature to allow users to define their own color preferences </td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Provide a feature to allow users to request "high contrast" mode </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>Provide a "high contrast" mode that overrides author colors</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 		</section>
 		<section>
 			<h2>Web Technology Accessibility Guidelines</h2>
-			<p class="ednote">Disclaimer</p>
+			<p class="note">The content below is merely initial draft content intended to show how guidelines aimed at web technology developers might look. It has not yet been related to the user needs and ways of meeting them outlined above. It serves as initial brainstorming to help demonstrate viability of this set of guidelines.</p>
 			<section>
 				<h2>Alternative Content</h2>
 				<ul>
