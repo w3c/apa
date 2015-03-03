@@ -96,27 +96,51 @@ var respecConfig = {
 				</section>
 			<section>
 				<h3>Approach</h3>
-                <p>The goal of WTAG is to help ensure that web technologies meet the needs of users with disabilities. Therefore the first step in the development of these guidelines is to inventory known user needs. Where user needs are suspected but known, related work may expand the inventory through research when feasible. Many user needs affecting web content accessibility are well known and documented in multiple places. These needs are collected and related to each other in order to arrive at a single set of known needs. Sources examined in the development of these guidelines include:</p>
-				<ul>
-					<li><a href="http://www.jtc1access.org/documents/swga_339_DTR_29138-1_User_Needs_Summary.zip">JTC 1 User Needs</a>;
-					</li>
-					<li><a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a>;</li>
-					<li><a href="http://www.w3.org/TR/UAAG20/">UAAG 2.0</a>;</li>
-					<li><a href="http://www.w3.org/TR/ATAG20/">ATAG 2.0</a>;</li>
-					<li><a href="https://www.w3.org/WAI/GL/mobile-a11y-tf/wiki/Main_Page">Mobile gap analysis</a>;</li>
-					<li><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">Cognitive gap analyses</a>;</li>
-					<li><a href="http://www.w3.org/TR/media-accessibility-reqs/">Media Accessibility User Requirements</a>;</li>
-					<li> Sources from other advocacy organizations.</li>
-				</ul>
-                <p>The second stage in development of the guidelines is to identify ways these needs can be met. There are three high-level ways user needs can be met:</p>
+                <p>The goal of WTAG is to help ensure that web technologies meet the needs of users with disabilities. To do this, the work involves three stages:</p>
                 <ul>
-                    <li>technology features;</li>
-                    <li>author implementation;</li>
-                    <li>user agent support.</li>
+                    <li>Inventory user needs;</li>
+                    <li>Identify ways to meet needs;</li>
+                    <li>Develop technology guidelines.</li>
                 </ul>
-                <p>Some needs can be met with present technology only via one of these routes. Other needs can be met by more than one route, and for content to be accessible it is only required that one of the available routes be implemented. Many needs, however, require more than one route to be implemented together for the need to be met. The most common example is that a technology provides a feature, the author uses that feature in the content, and the user agent makes the result available to the user.</p>
-                <p>All of these ways of meeting user needs are identfied, along with their relationships to each other. Once these approaches are identified, the result is separate lists of requirements for content technologies, authors, and user agents. The relationship among the routes may play a role in prioritization of guidelines, since needs that can only be met by one route may be more important to meet by that route, than needs that could be met by other means as well.</p>
-                <p>The set of approaches to meeting user needs that affects technology features becomes the base information for the Web Technology Accessibility Guidelines. (The other two routes, while important to the analysis, are not directly relevant to WTAG but may inform other work.) These approaches are prioritized, organized, and translated into guidelines-type language to become the Web Technology Accessibility Guidelines.</p>
+                <section>
+                    <h4>Inventory user needs</h4>
+                    <p>The first step in the development of these guidelines is to inventory known user needs. Many user needs affecting web content accessibility are well known and documented in multiple places. These needs are collected and related to each other in order to arrive at a single set of known needs. Sources examined in the development of these guidelines include:</p>
+                    <ul>
+                        <li><a href="http://www.jtc1access.org/documents/swga_339_DTR_29138-1_User_Needs_Summary.zip">JTC 1 User Needs</a>;
+                        </li>
+                        <li><a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a>;</li>
+                        <li><a href="http://www.w3.org/TR/UAAG20/">UAAG 2.0</a>;</li>
+                        <li><a href="http://www.w3.org/TR/ATAG20/">ATAG 2.0</a>;</li>
+                        <li><a href="https://www.w3.org/WAI/GL/mobile-a11y-tf/wiki/Main_Page">Mobile gap analysis</a>;</li>
+                        <li><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">Cognitive gap analyses</a>;</li>
+                        <li><a href="http://www.w3.org/TR/media-accessibility-reqs/">Media Accessibility User Requirements</a>;</li>
+                        <li> Sources from other advocacy organizations.</li>
+                    </ul>
+                    <p class="note">Note the goal of this exercise is not to supplant other good work in this field. The aim is to assemble disparate sources if knowledge about user needs in one place, to facilitate analysis. This work is likely to spin off from the core work of developing WTAG. If another organization creates a sufficiently rich collection of documented user needs it will be possible to use that resource rather than reinvent the work in W3C.</p>
+                </section>
+                <section>
+                    <h4>Identify ways to meet needs</h4>
+                    <p>The second stage in development of the guidelines is to identify ways these needs can be met. There are three high-level ways user needs can be met:</p>
+                    <ul>
+                        <li>technology features;</li>
+                        <li>author implementation;</li>
+                        <li>user agent support.</li>
+                    </ul>
+				<p>These are not mutually exclusive categories. A given user need could be met by more than one of these categories, but the ability of a given category to meet a user need implies the need for guidelines targeting that category. In policy setting and evaluation there may be a preference hierarchy for how best to meet needs, e.g., user agent support of standard features is preferred, but author technical override is needed if user agent support is lacking. </p>
+                    <p>Some needs can be met with present technology only via one of these routes. Other needs can be met by more than one route, and for content to be accessible it is only required that one of the available routes be implemented. Many needs, however, require more than one route to be implemented together for the need to be met. The most common example is that a technology provides a feature, the author uses that feature in the content, and the user agent makes the result available to the user.</p>
+                    <p>All of these ways of meeting user needs are identfied, along with their relationships to each other. Once these approaches are identified, the result is separate lists of requirements for content technologies, authors, and user agents. The relationship among the routes may play a role in prioritization of guidelines, since needs that can only be met by one route may be more important to meet by that route, than needs that could be met by other means as well.</p>
+                </section>
+                <section>
+                    <h4>Develop technology guidelines</h4>
+				    <p>From the above analyses, it should also be easy to see where content technology features are required to make it possible to meet user needs. For example: </p><ul>
+						<li> If the author must implement something, the technology must provide a feature for the author to implement. </li>
+						<li> If the user need is met by design, the technology must provide suitably rich design capabilities. </li>
+						<li> If the user need is met by user agents, the technology must provide a sufficiently rich definition of the object for user agents to implement. </li>
+					</ul>
+                    <p>Not all technologies will address all ways of meeting user needs. For instance, CSS is primarily design-oriented, and HTML is somewhat semantics-oriented. The technology requirements may need conformance profiles or some other way of guiding technology developers seeking to follow them. It may not be easy to state in a general prescriptive way whether a given technology should, for instance, provide a richer design capability to meet a user need or should instead rely on better semantics for assistive technology-oriented content alternatives. A good structure of the technology requirements should help make it clear that <i>some</i> method of meeting a given user need is important. Horizontal review may continue to be important in guiding technology developers through the possibilities. </p>
+                    <p>The set of approaches to meeting user needs that affects technology features becomes the base information for the Web Technology Accessibility Guidelines. (The other two routes, while important to the analysis, are not directly relevant to WTAG but may inform other work.) These approaches are prioritized, organized, and translated into guidelines-type language to become the Web Technology Accessibility Guidelines.</p>
+                    <p>With the above analyses done, it should be easy to see how current guidelines address which user needs. In turn it should be easy to see where current guidelines to not meet user needs, that in theory should be able to be met by activities within the remit of that set of guidelines. This should be important input into WAI 3.0 / WAI 2020 planning.</p>
+                </section>
 			</section>
 			<section>
 				<h3>Explanation of User Needs</h3>
@@ -128,7 +152,10 @@ var respecConfig = {
 				-->
 				<p>Identify user needs that we plan to provide guidance on meeting. These should describe the needs of humans as they currently exist (i.e., without significant evolution or cyborgization from early 21st century norms), and therefore is as era-independent as possible with current knowledge. The focus is on the needs of people with disabilities, but because that is sometimes a relative / contextual condition, a significant proportion of mainstream needs will also be identified. </p>
 				<p>At least two levels of needs may be identified. The first is truly generic needs, requirements users have to access and use content such as perceive and understand it, and should be stable over time. The second layer is needs specific to technologies of the day, such as ability to understand and operate controls. This layer may be understood as an implementation of the generic needs, so may not be classed as user needs in the end. Regardless of its classification, it will be an important component of understanding the space. This level of needs evolves as technology and design patterns do, so needs to be maintainable separately from the generic needs. </p>
-				<p>Our knowledge of user needs come from a variety of sources. They should be mapped / credited to the sources to help in later communication. Sources currently under examination: </p>
+                <section>
+                    <h4>Evolution of user needs</h4>
+                    <p>Where user needs are suspected but known, related work may expand the inventory through research when feasible. Therefore the set of documented user needs will evolve over time. A given set of guidelines including WTAG, however, can only address needs that were known at the time of development of the guidelines.</p>
+                </section>
 				<section>
 					<h4>Assumptions </h4>
 					<ul>
@@ -156,13 +183,6 @@ var respecConfig = {
 					<li> User agent support of author-implemented accessibility features </li>
 					<li> Assistive technology support (including accessibility API mediation) </li>
 				</ul>
-				<p>These are not mutually exclusive categories. A given user need could be met by more than one of these categories, but the ability of a given category to meet a user need implies the need for guidelines targeting that category. In policy setting and evaluation there may be a preference hierarchy for how best to meet needs, e.g., user agent support of standard features is preferred, but author technical override is needed if user agent support is lacking. </p>
-				<section><h4>Technology Support</h4><p>From the above analyses, it should also be easy to see where content technology features are required to make it possible to meet user needs. For example: </p><ul>
-						<li> If the author must implement something, the technology must provide a feature for the author to implement. </li>
-						<li> If the user need is met by design, the technology must provide suitably rich design capabilities. </li>
-						<li> If the user need is met by user agents, the technology must provide a sufficiently rich definition of the object for user agents to implement. </li>
-					</ul><p>Not all technologies will address all ways of meeting user needs. For instance, CSS is primarily design-oriented, and HTML is somewhat semantics-oriented. The technology requirements may need conformance profiles or some other way of guiding technology developers seeking to follow them. It may not be easy to state in a general prescriptive way whether a given technology should, for instance, provide a richer design capability to meet a user need or should instead rely on better semantics for assistive technology-oriented content alternatives. A good structure of the technology requirements should help make it clear that <i>some</i> method of meeting a given user need is important. Horizontal review may continue to be important in guiding technology developers through the possibilities. </p> With the above analyses done, it should be easy to see how current guidelines address which user needs. In turn it should be easy to see where current guidelines to not meet user
-					needs, that in theory should be able to be met by activities within the remit of that set of guidelines. This should be important input into WAI 3.0 / WAI 2020 planning. </section>
 				<section>
 					<h4>Author Implementation</h4>
 				</section>
