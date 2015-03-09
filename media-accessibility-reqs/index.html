@@ -304,12 +304,8 @@ var respecConfig = {
       or any other important visual information that someone who cannot see the
       screen might ordinarily miss. Descriptions are traditionally audio recordings
       timed and recorded to fit into natural pauses in the program, although
-      they may also briefly obscure the main audio track. (See the section on
-      extended descriptions for an alternative approach.) The descriptions are
-      usually read by a narrator with a voice that cannot be easily confused
-      with other voices in the primary audio track. They are authored to convey
-      objective information (e.g., a yellow flower) rather than subjective judgments
-      (e.g., a beautiful flower). </p>
+      they may also briefly obscure the main audio track (see the section on
+      extended descriptions for an alternative approach).</p>
 				<p>As with captions, descriptions can be open or closed. </p>
 				<ul>
 					<li>
@@ -348,15 +344,14 @@ var respecConfig = {
 				</div>
 				<div class="indent">
 					<div class='requirement' id="DV-2"><strong class="req-handle">[DV-2]</strong> Render descriptions in a time-synchronized manner, using
-          the media resource as the timebase master. </div>
+          the primary media resource as the timebase master. </div>
 				</div>
 				<div class="indent">
 					<div class='requirement' id="DV-3"><strong class="req-handle">[DV-3]</strong> Support multiple description tracks (e.g., discrete tracks
           containing different levels of detail). </div>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="DV-4"><strong class="req-handle">[DV-4]</strong> Support recordings of real human speech as a track of the
-          media resource, or as an external file. </div>
+					<div class='requirement' id="DV-4"><strong class="req-handle">[DV-4]</strong> Support recordings of high quality speech as a track of the media resource, or as an external file. </div>
 				</div>
 				<div class="indent">
 					<div class='requirement' id="DV-5"><strong class="req-handle">[DV-5]</strong> Allow the author to independently adjust the volumes of the
@@ -390,18 +385,13 @@ var respecConfig = {
           outputs (e.g., a speaker and headphones). </div>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="DV-12"><strong class="req-handle">[DV-12]</strong> Provide a means to prevent descriptions from carrying over
-          from one program or channel when the user switches to a different program
-          or channel. </div>
-				</div>
-				<div class="indent">
-					<div class='requirement' id="DV-13"><strong class="req-handle">[DV-13]</strong> Allow
-                    the user to relocate the pan location of the description track within
+					<div class='requirement' id="DV-12"><strong class="req-handle">[DV-12]</strong> Allow
+                    the user to relocate the pan location of the various audio tracks within
           the audio field, with the user setting overriding the author setting.
           The setting should be re-adjustable as the media plays. </div>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="DV-14"><strong class="req-handle">[DV-14]</strong> Support metadata, such as copyright information, usage rights,
+					<div class='requirement' id="DV-13"><strong class="req-handle">[DV-13]</strong> Support metadata, such as copyright information, usage rights,
           language, etc. </div>
 				</div>
 			</section>
@@ -1500,9 +1490,13 @@ var respecConfig = {
           and controls on media resources. This must also happen if, for example,
           the controls are only visible on demand. </div>
 					<p class="note">If there are several types of overlapping overlays, they should be
-                    positioned as far as possible from editorially important content.  In particular, they
+                    positioned such that they do not obscure editorially important content.  In
+                    particular, user agents
                     should avoid obscuring video components such as mouths, "burned in text" (embedded
-                    captions or other annotations in the main video stream), etc.  Users typically expect
+                    captions or other annotations in the main video stream), etc.  When in
+                    constrained environments where it is impossible to avoid obscuring all of these
+                    components, user agents should make every effort to avoid the most important of
+                    them.  Users typically expect
                     controls to appear at the bottom of the viewport.  Controls should not be prevented from
                     becoming usable due to repositioning.</p>
 				</div>
