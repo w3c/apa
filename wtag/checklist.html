@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>WTAG Checklist</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<style type="text/css">
+			@counter-style checklist
+				 {
+					system: cyclic;
+					symbols: ☐;
+					suffix: " ";
+				}
+			.checklist {
+				list-style-type: checklist;
+			}
+			.checklist ul {
+				list-style-type: disc;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>WTAG Checklist</h1>
+		<section>
+			<h2>For technologies creating objects that don't have an inherent text representation</h2>
+			<ul class="checklist">
+				<li>Provide a mechanism to create short text alternatives that label the object<ul>
+						<li>Explanation</li>
+					</ul></li>
+				<li>Provide a mechanism to create extended text alternatives for fallback content </li>
+				<li>Allow text alternatives to be semantically "rich" e.g., with page structure, text style, hyperlinks, etc. </li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies allowing visual rendering of content</h2>
+			<ul class="checklist">
+				<li>Item
+					<ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies providing author control over color</h2>
+			<ul class="checklist">
+				<li>Allow users to override colors of text and user interface components.  </li>
+				<li>Provide a feature for authors to define semantically available "color classes" that users can easily map to custom colors, and give preference to this vs. coloring objects individually.  </li>
+				<li>Provide a feature for users to choose color schemata that work for them.  </li>
+				<li>Ensure that the foreground and background color of an object can be reported to the user via AT.  </li>
+				<li>Provide ways to set foreground and background colors separately for all objects.  </li>
+				<li>Define compositing rules for foreground and background colors well.   </li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies providing time-based visual media</h2>
+			<ul class="checklist">
+				<li>Item
+					<ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies providing audio</h2>
+			<ul class="checklist">
+				<li>Item
+					<ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies providing features to accept user input</h2>
+			<ul class="checklist">
+				<li>Provide a mechanism to label user input controls.</li>
+				<li>Provide a mechanism to report and set the state or value of controls programmatically.</li>
+				<li>Provide support for multiple types of input hardware (keyboard, pointing device, touch screen, voice recognition, etc.), or define hardware-agnostic input methods.<ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies providing internationalization support</h2>
+			<ul class="checklist">
+				<li>Ensure that accessibility features can be internationalized to the same degree as other features, including multiple language alternatives, language identification and changes, text directionality identification, etc.<ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies defining document or GUI semantics</h2>
+			<ul class="checklist">
+				<li> For every user interface object type, define the "type" of object as a role to AAPIs. </li>
+				<li> For every user interface object type, define how authors provide or user agent determines the "accessible name" for AAPIs. </li>
+				<li> For user interface objects that can have states, properties, or values, define how authors can set these and how these are exposed to AAPIs. </li>
+				<li> When providing imperative mechanisms to implement technology features (e.g., scripts), provide a way for authors to expose accessibility information to AAPIs. </li>
+				<li> Provide a way to title Web pages and sections of content. </li>
+				<li> Provide a way to clearly indicate the target of a hyperlink and function of a control. </li>
+				<li> Provide a way to indicate content language, for the page as a whole and for blocks of content. </li>
+				<li> Provide a way for authors to support understanding of abbreviations / acronyms / initialisms, idioms, jargon, etc. </li>
+				<li> Provide a mechanism to support correct machine pronunciation of ambiguously spelled terms (e.g., in the phrase "I am content with this content" there are different correct pronunciations of the lexeme "content").  </li>
+				<li> Provide declarative mechanisms (that have accessibility semantics pre-defined in the spec) to implement technology features whenever possible. </li>
+				<li> Define unambiguous ways to express relationships between units of content, such as object nesting, ID referencing, etc. </li>
+				<li> Prefer structural semantics to presentational semantics. </li>
+				<li> When providing presentational semantics, define ways they can be easily mapped to structural semantics, e.g., to support restyling or meaningful exposure to AAPIs. </li>
+				<li> Minimize the need for alternative content by supporting a comprehensive set of authoring use cases. (e.g., don't make authors resort to text in images to get the style they want) </li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies providing user interaction features</h2>
+			<ul class="checklist">
+				<li>Item <ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies allowing time limits</h2>
+			<ul class="checklist">
+				<li>Item <ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies providing content fallback mechanisms</h2>
+			<ul>
+				<li> Provide a way to explicitly mark content as not needing alternative content because it does not perform an important role. </li>
+				<li> Provide a way to explicitly indicate when author declined to provide alternative content. </li>
+				<li> Provide a way to explicitly indicate that authoring tool is unable to generate or obtain alternative content. </li>
+				<li> Provide a way to explicitly associate alternative content with the primary content. </li>
+				<li> Allow multiple types and instances of alternative content to be associated with primary content. </li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies allowing text content</h2>
+			<ul>
+				<li> Provide a way to define non-text alternatives for text content. </li>
+				<li> Provide a way to define non-text alternatives for non-text content . </li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies providing visual graphics</h2>
+			<ul class="checklist">
+				<li>Item <ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies </h2>
+			<ul class="checklist">
+				<li>Item <ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies </h2>
+			<ul class="checklist">
+				<li>Item <ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>For technologies </h2>
+			<ul class="checklist">
+				<li>Item <ul>
+						<li>Explanation</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</body>
+</html>
