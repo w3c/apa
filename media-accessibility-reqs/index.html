@@ -337,7 +337,8 @@ var respecConfig = {
       and any product dealing with broadcast TV content must provide adequate
       support for descriptions. Descriptions can also provide text that can be
       indexed and searched. </p>
-				<p>Systems supporting described video that are not open descriptions must: </p>
+				<p>Systems supporting described video where the descriptions are available as
+                independent file or channel resources must: </p>
 				<div class="indent">
 					<div class='requirement' id="DV-1"><strong class="req-handle">[DV-1]</strong> Provide an indication that descriptions are available, and
           are active/non-active. </div>
@@ -1492,8 +1493,10 @@ var respecConfig = {
           rendered. The user agent must avoid overlapping of overlay content
           and controls on media resources. This must also happen if, for example,
           the controls are only visible on demand. </div>
-					<p class="note">If there are several types of overlapping overlays, they should be
-                    positioned such that they do not obscure editorially important content.  In
+					<p class="note">If there are several types of overlapping overlays (including 
+                    captions and subtitles), implementations should attempt to ensure that none of
+                    them overlaps with editorially important content.
+                    In
                     particular, user agents
                     should avoid obscuring video components such as mouths, "burned in text" (embedded
                     captions or other annotations in the main video stream), etc.  When in
