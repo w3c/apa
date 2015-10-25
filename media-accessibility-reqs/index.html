@@ -165,7 +165,7 @@ var respecConfig = {
                 the information in an alternative representation of audio or
                 text. People who are blind use a screen reader and/or
                 refreshable Braille display, and media content needs to be
-                operable with these assistive technologies (ATs).</span></p>
+                operable with these assistive technologies (<abbr title="Assistive Technologies">ATs</abbr>).</span></p>
 			</section>
 			<section>
 				<h3>Visual: Low vision </h3>
@@ -193,7 +193,7 @@ var respecConfig = {
 				<h3>Visual: Atypical color perception </h3>
 				<p>People with atypical color perception (often called
                 "color blindness") may not be able to 
-      to discriminate between different colors, or may miss
+      discriminate between different colors, or may miss
       key information when coded with color only, such as colors in media
       controls and text overlays.</p>
 			</section>
@@ -218,7 +218,7 @@ var respecConfig = {
       </p>
 			</section>
 			<section>
-				<h3>Auditory & Visual: Deaf-blind </h3>
+				<h3>Auditory &amp; Visual: Deaf-blind </h3>
 				<p>Individuals who are deaf-blind have a combination of conditions that may
       result in one of the following: blindness and deafness; blindness and difficulty
       in hearing; low vision and deafness; or low vision and difficulty in hearing.
@@ -532,7 +532,7 @@ var respecConfig = {
           algorithms. </div>
 				</div>
 			</section>
-			<section>
+			<section id="contentnav">
 				<h3> Content navigation by content structure </h3>
 				<p>Most people are familiar with fast forward and rewind in media content.
       However, because they progress through content based only on time, fast
@@ -571,7 +571,7 @@ var respecConfig = {
 				<p><strong>Two examples of granularity levels</strong> </p>
 				<p>1. In a news broadcast, the most global level (analogous to   &lt;h1&gt;)
       might be the category called &quot;news, weather, and sports.&quot;    The
-      second level (analogous to &lt;h2&gt;) would identify individual news
+      second level (analogous to &lt;h2&gt;) would identify each individual news
       (or sports) story. With the granularity control set to level 1, &quot;next&quot; and &quot;previous&quot; would
       cycle among news, weather, and sports. Set at level 2, it would cycle among
       individual news (or sports) stories. </p>
@@ -805,7 +805,8 @@ var respecConfig = {
                     with differing cognitive conditions to maximize the accessibility of
                     content, so full color customization should be available. For example
                     users with cognitive conditions such as dyslexia (itself an umbrella label
-                    for a variety of conditions), ADHD, and Asperger's may find that viewing
+                    for a variety of conditions), <abbr title="Attention deficit hyperactivity disorder">ADHD</abbr>,
+                    and Asperger's may find that viewing
                     content that is given a particular color cast, akin to viewing through
                     blue eyeglasses, helps them to read presented text.</p>
                     <p class='note'>While users must have the ability to customize their experience, 
@@ -849,7 +850,7 @@ var respecConfig = {
           left to right, not popped onto the screen all at once, and usually
           are verbatim. Another often-used caption style in live captioning is
           roll-up - here, cue text follows double chevrons (&quot;greater than&quot; symbols),
-          and are used to indicate different speaker identifications. Each sentence &quot;rolls
+          and is used to indicate different speaker identifications. Each sentence &quot;rolls
           up&quot; to about three lines. The top line of the three disappears
           as a new bottom line is added, allowing the continuous rolling up of
           new lines of captions.
@@ -881,11 +882,11 @@ var respecConfig = {
 				</div>
 				<div class="indent">
 					<div class='requirement' id="CC-17"><strong class="req-handle">[CC-17]</strong> Represent content of different natural
-          languages. In some cases the inclusion of a few foreign words form
-          part of the original soundtrack, and thus need to be in the same caption
+          languages. In some cases the inclusion of a few foreign words forms
+          part of the original soundtrack, and thus needs to be in the same caption
           resource. Also allow for separate caption files for different languages
           and on-the-fly switching between them. This is also a requirement for
-          subtitles. </div>
+          subtitles. See also [CC-20]</div>
 					<p class="note">Caption/subtitle files that are alternatives in different languages
         are probably best provided in different caption resources and are user
         selectable. Realistically, having no more than 2 languages present at
@@ -957,7 +958,7 @@ var respecConfig = {
 				<h3> Enhanced captions/subtitles </h3>
 				<p>Enhanced captions are timed text cues that have been enriched with further
       information - examples are glossary definitions for acronyms and other
-      intialisms, foreign terms (for example, Latin), jargon or descriptions
+      initialisms, foreign terms (for example, Latin), jargon or descriptions
       for other difficult language. They may be age-graded, so that multiple
       caption tracks are supplied, or the glossary function may be added dynamically
       through machine lookup. </p>
@@ -977,7 +978,7 @@ var respecConfig = {
 				<div class="indent">
 					<div class='requirement' id="ECC-1"><strong class="req-handle">[ECC-1]</strong> Support metadata markup for (sections of)
           timed text cues. </div>
-					<p class="note">Such &quot;metadata&quot; markup can be realized through a @title
+					<p class="note">Such &quot;metadata&quot; markup can be realized through a title
         attribute on a &lt;span&gt; of the text, or a hyperlink to another location
         where a term is explained, an &lt;abbr&gt; element, an   &lt;acronym&gt; element,
         a &lt;dfn&gt; element, or through RDFa or microdata. </p>
@@ -1141,7 +1142,7 @@ var respecConfig = {
           playback rate, content navigation on same level (next/prev) and between
           levels (up/down) etc. This is also a particularly important requirement
           on mobile devices or devices without a keyboard. </div>
-					<p class="note">This means that the @controls content attribute needs to provide
+					<p class="note">This means that the controls content attribute needs to provide
         an extended set of control functionality including functionality for
         accessibility users. </p>
 				</div>
@@ -1188,13 +1189,13 @@ var respecConfig = {
 			</section>
 			<section>
 				<h3> Granularity level control for structural navigation </h3>
-				<p>As explained in &quot;Content Navigation&quot; above, a real-time control
+                <p>As explained in &quot;<a href="#contentnav">Content navigation</a>&quot; above, a real-time control
       mechanism must be provided for adjusting the granularity of the specific
       structural navigation point next and previous. Users must be able to set
       the range/scope of next and previous in real time. </p>
 				<div class="indent">
 					<div class='requirement' id="CNS-1"><strong class="req-handle">[CNS-1]</strong> All identified structures, including ancillary content as
-          defined in &quot;Content Navigation&quot; above, must be accessible
+                        defined in &quot;<a href="#contentnav">Content navigation</a>&quot; above, must be accessible
           with the use of &quot;next&quot; and &quot;previous,&quot; as refined
           by the granularity control. </div>
 				</div>
