@@ -850,7 +850,7 @@ var respecConfig = {
           left to right, not popped onto the screen all at once, and usually
           are verbatim. Another often-used caption style in live captioning is
           roll-up - here, cue text follows double chevrons (&quot;greater than&quot; symbols),
-          and is used to indicate different speaker identifications. Each sentence &quot;rolls
+          and is used to identify different speakers. Each sentence &quot;rolls
           up&quot; to about three lines. The top line of the three disappears
           as a new bottom line is added, allowing the continuous rolling up of
           new lines of captions.
@@ -883,14 +883,13 @@ var respecConfig = {
 				<div class="indent">
 					<div class='requirement' id="CC-17"><strong class="req-handle">[CC-17]</strong> Represent content of different natural
           languages. In some cases the inclusion of a few foreign words forms
-          part of the original soundtrack, and thus needs to be in the same caption
-          resource. Also allow for separate caption files for different languages
+          part of the original soundtrack, and thus needs to be so indicated in the caption.
+          Also allow for separate caption files for different languages
           and on-the-fly switching between them. This is also a requirement for
           subtitles. See also [CC-20]</div>
 					<p class="note">Caption/subtitle files that are alternatives in different languages
-        are probably best provided in different caption resources and are user
-        selectable. Realistically, having no more than 2 languages present at
-        the same time on screen is probably the limit. </p>
+        are probably better provided in different caption resources and should be user
+        selectable. Realistically, no more than 2 languages should be present at the same time on the screen.</p>
 				</div>
 				<div class="indent">
 					<div class='requirement' id="CC-18"><strong class="req-handle">[CC-18]</strong> Represent content of at least those specific
@@ -933,11 +932,10 @@ var respecConfig = {
       tracks for activation/deactivation. </p>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="CC-25"><strong class="req-handle">[CC-25]</strong> Support edited and verbatim captions, if
-          available. </div>
-					<p class="note">Edited and verbatim captions can be provided in two different
-        caption resources. There is a need to expose to the user how they differ,
-        similar to how there can be caption tracks in different languages. </p>
+					<div class='requirement' id="CC-25"><strong class="req-handle">[CC-25]</strong> Support both edited and verbatim
+                        captions when available. </div>
+					<p class="note">Edited and verbatim captions may be provided in two separate
+                    caption resources. How these differ should be explained to the user.</p>
 				</div>
 				<div class="indent">
 					<div class='requirement' id="CC-26"><strong class="req-handle">[CC-26]</strong> Support multiple tracks of foreign-language
@@ -946,7 +944,8 @@ var respecConfig = {
       different resources. </p>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="CC-27"><strong class="req-handle">[CC-27]</strong> Support live-captioning functionality. </div>
+					<div class='requirement' id="CC-27"><strong class="req-handle">[CC-27]</strong> Support multiple tracks of
+                        foreign-language subtitles including multiple subtitle tracks in the same foreigh language.</div>
 				</div>
                 <div class="indent">
                     <div class="requirement" id="CC-28"><strong class="req-handle">[CC-28]</strong> Enable the
@@ -986,32 +985,34 @@ var respecConfig = {
 				<div class="indent">
 					<div class='requirement' id="ECC-2"><strong class="req-handle">[ECC-2]</strong> Support hyperlinks and other activation
           mechanisms for supplementary data for (sections of) caption text. </div>
-					<p class="note">This can be realized through inclusion of links or
+					<p class="note">This could be realized by including hyperlinks or
         buttons into timed text cues, where additional overlays could be created
-        or a different page be loaded. One needs to deal here with the need to
+        or a different page loaded. One needs to deal here with the need to
         pause the media timeline for reading of the additional information. </p>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="ECC-3"><strong class="req-handle">[ECC-3]</strong> Support text cues that may be longer than
-          the time available until the next text cue and thus provide overlapping
-          text cues - in this case, a feature should be provided to decide if
-          overlap is ok or should be cut or the media resource be paused while
-          the caption is displayed. Timing would be provided by the author, but
-          with the user being able to override it. </div>
-					<p class="note">This feature is analogous to extended video descriptions - where
-        timing for a text cue is longer than the available time for the cue,
-        it may be necessary to halt the media to allow for more time to read
-        back on the text and its additional material. In this case, the pause
-        is dependent on the user's reading speed, so this may imply user control
-        or timeouts. </p>
+					<div class='requirement' id="ECC-3"><strong class="req-handle">[ECC-3]</strong>Support text cues that may be longer
+                        than the time available until the
+                        next text cue, thus providing overlapping text cues. In such instances,
+                        users should be enabled to decide whether they prefer to see overlapping
+                        text, or automatically shorten display time, or to have the media
+                        resource paused while the caption is displayed. Timing should be
+                        provided by the author, but the user should always be able to override
+                        the author's timings.</div>
+					<p class="note">This feature is analogous to extended video descriptions - where timing
+                    for a text cue is longer than the available time for the cue. It may be
+                    necessary to halt the media to allow the user more time to read the text
+                    and its additional material. In such cases the pause is dependent on the
+                    user's reading speed, so this implies user control or automated
+                    timeouts.</p>
 				</div>
 				<div class="indent">
-					<div class='requirement' id="ECC-4"><strong class="req-handle">[ECC-4]</strong> It needs to be possible to define timed
-          text cues that are allowed to overlap with each other in time and be
-          present on screen at the same time (e.g., those that come from speech
-          of different speakers), and such that are not allowed to overlap and
-          thus cause media playback pause to allow users to catch up with their
-          reading. </div>
+					<div class='requirement' id="ECC-4"><strong class="req-handle">[ECC-4]</strong> Support timed text cues that are
+                        allowed to overlap with each other in
+                        time and be present on screen at the same time (e.g., those that come
+                        from the speech of different individuals). Also support timed text cues that are
+                        not allowed to overlap, so that playback will be paused in order to
+                        allow users to catch up with their reading.</div>
 				</div>
 				<div class="indent">
 					<div class='requirement' id="ECC-5"><strong class="req-handle">[ECC-5]</strong> Allow users to define the reading speed
