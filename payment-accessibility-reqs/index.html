@@ -123,28 +123,25 @@ var respecConfig = {
 <section id="sotd">
     <p>This document is a very early editors draft.</p>
 </section>
-<section>
+<section id="S_types">
     <h2>Summary of Accessible Payment Requirements by Type of Disability </h2>
 
     <p>This section provides examples of the accessibility
     requirements of people with auditory, cognitive, neurological,
     physical, speech, or visual disabilities to access and
-    comprehend media, including requirements for media formats and
-    media player technologies. For a broader exploration of how
+    comprehend web content.
+    For a broader exploration of how
     people with different disabilities interact with web content and
-    tools, see <a
-        href="http://www.w3.org/WAI/intro/people-use-web/Overview.html">How
-        People with Disabilities Use the Web</a>.</p>
+    tools, see <a href="http://www.w3.org/WAI/intro/people-use-web/Overview.html">How
+    People with Disabilities Use the Web</a>.</p>
     <section>
         <h3>Visual: Blindness </h3>
-        <p rel="bibo:issue" typeof="bibo:Issue"><span
-            resource="http://www.w3.org/2014/11/17-html-a11y-media-minutes.html" 
-            rel="bibo:affirmedBy">People who are blind cannot access visual information in
-            videos, player controls, status indicators, etc. They need
+        <p> People who are blind cannot access visual information in
+            prompts, selectors, status indicators, etc. They need
             the information in an alternative representation of audio or
             text. People who are blind use a screen reader and/or
-            refreshable Braille display, and media content needs to be
-            operable with these assistive technologies (<abbr title="Assistive Technologies">ATs</abbr>).</span></p>
+            refreshable Braille display, and content needs to be
+            operable with these assistive technologies (<abbr title="Assistive Technologies">ATs</abbr>).</p>
     </section>
     <section>
         <h3>Visual: Low vision </h3>
@@ -158,14 +155,15 @@ var respecConfig = {
         of view and so may not detect key information presented temporarily where
         they are not looking, or in text that is moving or scrolling. A person
         will likely use screen magnification software.  This means that they will only be viewing
-        a portion of the screen, and so must manage tracking media content via
+        a portion of the screen, and so must manage content (e.g., pop-up windows
+        or dynamic prompts) via
         their AT. They may have difficulty reading when text is too small, has
         poor background contrast (too high or too low), or when outlined or other fancy font types or
         effects are used. If the font is an image, it is likely to appear grainy when magnified.
         They may be using an AT that adjusts all the colors of
-        the screen, such as inverting the colors, so the media content must be
+        the screen, such as inverting the colors, so the content must be
         viewable through the AT. Users with low vision will often benefit from the same 
-        text streams and instructions that are sometimes hidden or displayed off screen for 
+        augmented content or instructions that are sometimes hidden or displayed off screen for 
         users of screen readers or refreshable Braille. </p>
     </section>
     <section>
@@ -173,28 +171,8 @@ var respecConfig = {
         <p>People with atypical color perception (often called
         "color blindness") may not be able to 
         discriminate between different colors, or may miss
-        key information when coded with color only, such as colors in media
-        controls and text overlays.</p>
-    </section>
-    <section>
-        <h3>Auditory: Deafness </h3>
-        <p>People who are deaf generally cannot use audio. Thus, an alternative representation
-        is required, typically through synchronized captions and/or sign translation. </p>
-    </section>
-    <section>
-        <h3>Auditory: Hard of hearing </h3>
-        <p>People who are hard of hearing may be able to use some audio material,
-        but might not be able to discriminate certain types of sound, and may miss
-        any information presented as audio only if it contains frequencies they
-        can't hear, or is masked by background noise or distortion. They may miss
-        audio which is too quiet, or of poor quality. Speech may be challenging
-        if it is too fast and cannot be played back more slowly. Information presented
-        using multichannel audio (e.g., stereo) may not be perceived by people
-        who are deaf in one ear.
-        People with cochlear implants may not
-        have issues with audio volume levels, but comprehension may be
-        challenging if the media experience is overwhelming.
-        </p>
+        key information when coded with color only, such as colors in selection
+        boxes or prompts embedded in input fields.</p>
     </section>
     <section>
         <h3>Auditory &amp; Visual: Deaf-blind </h3>
@@ -202,23 +180,21 @@ var respecConfig = {
         result in one of the following: blindness and deafness; blindness and difficulty
         in hearing; low vision and deafness; or low vision and difficulty in hearing.
         Depending on their combination of conditions, individuals who are deaf-blind
-        may need captions that can be enlarged, changed to high-contrast colors,
-        or otherwise styled; or they may need captions and/or described video that
-        can be presented with AT (e.g., a refreshable Braille display). They may
-        need synchronized captions and/or described video, or they may need a non-time-based
-        transcript which they can read at their own pace. </p>
+        may need text that can be enlarged, changed to high-contrast colors,
+        or otherwise styled; or they may need text that
+        can be presented with AT (e.g., a refreshable Braille display). </p>
     </section>
     <section>
         <h3> Physical impairment </h3>
         <p>Some people with physical disabilities such as limited
         muscle control (including tremors, lack of coordination, and
-        paralysis), pain that impedes movement, or missing limbs
+        paralysis), pain that impedes movement, or missing limbs,
         cannot use a keyboard or mouse to interact with content and
         controls. Some use a keyboard but not a pointing device,
         some use a switch with an on-screen keyboard, and some use
-        other assistive technology. The media player must be usable
-        with only a keyboard, including access to all player
-        controls and methods for selecting alternative content.</p>
+        other assistive technology. The content must be usable
+        with only a keyboard, including making selections of items that might have
+        otherwise been done with a pointing device.</p>
     </section>
     <section>
         <h3> Cognitive disabilities </h3>
@@ -231,36 +207,38 @@ var respecConfig = {
         conditions vary widely.
         Individuals with some conditions may process
         information aurally better than by reading text; therefore, information
-        that is presented as text embedded in a video should also be available
+        that is presented as images (e.g., a so-called <em>captcha</em> image)
+        should also be available
         as audio descriptions. Individuals with other conditions may need to reduce
-        distractions or flashing in presentations of video. Some conditions, such
+        distractions or flashing. Some conditions, such
         as autism-spectrum disorders, may have multisystem effects. Individuals
         may need a combination of different accommodations.
-        Overall, the media experience for people on the autism spectrum should
+        Overall, the user experience for people on the autism spectrum should
         be customizable and well designed so as to not be overwhelming. Care
-        must be taken to present a media experience that focuses on the purpose
+        must be taken to present an experience that focuses on the purpose
         of the content and provides alternative content in a clear, concise manner. </p>
     </section>
 </section>
-<section>
+<section id="S_alternative_technologies">
     <h2>Alternative Content Technologies </h2>
     <p>A number of alternative content types have been developed to help users
     with sensory disabilities gain access to textual web content. This section
     lists them, explains generally what they are, and provides a number of requirements
     on each that need to be satisfied with technology developed in / supported by HTML5.</p>
+    <p>@@@@@ this is where we need the most work @@@@@</p>
 </section>
-<section>
+<section id="S_system_requirements">
     <h2> System Requirements </h2>
     <section>
         <h3> Access to interactive controls / menus </h3>
-        <p>Media elements offer a rich set of interaction possibilities to users.
+        <p>Payment interfaces offer a rich set of interaction possibilities to users.
         These interaction possibilities must be available to all users, including
         those that cannot use a pointer device for interaction. Further, these
         interaction possibilities must be available to all users for all means
         in which the controls are exposed - no matter whether they are exposed
         by the user agent, or are scripted. Further, the interaction possibilities
-        need to be rich enough to allow all users fine grained control over media
-        playback. </p>
+        need to be rich enough to allow all users complete access to the
+        payment interface.</p>
         <p>It is imperative that controls be device independent, so that control
         may be achieved by keyboard, pointing device, speech, etc. </p>
         <p>Systems supporting accessibility for interactive controls must: </p>
@@ -269,23 +247,25 @@ var respecConfig = {
                 the keyboard on systems where a keyboard is (or can be) present, and
                 where focusable elements
                 are used for interaction. This does not forbid and should not discourage
-                providing pointing device
+                a providing pointing device
                 or other input methods in addition to keyboard operation.
             </div>
-            <p class="note">This means that all interaction possibilities with media elements
+            <p class="note">This means that all interaction possibilities with
+            payment interaces
             need to be keyboard accessible; e.g., through being able to tab onto
-            the play, pause, mute buttons, and to move the playback position from
-            the keyboard. </p>
+            the various fields, select among payment methods, authenticate, etc.
+            via the keyboard. </p>
         </div>
         <div class="indent">
-            <div class='requirement' id="IC-3"><strong class="req-handle">[IC-3]</strong> All functionality available to native controls
+            <div class='requirement' id="IC-2"><strong class="req-handle">[IC-2]</strong> All functionality available to native controls
                 must also be available to scripted controls. The author would be able
                 to choose any/all of the controls, style them and position them. </div>
-            <p class="note">This means that new IDL attributes need to be added to the media
-            elements for the extra controls that are accessibility related. </p>
+            <p class="note">This may mean that user agents need to expose the UI
+            aspects of embedded payment controls so that they can be adequately
+            scripted and controlled.</p>
         </div>
         <div class="indent">
-            <div class='requirement' id="IC-5"><strong class="req-handle">[IC-5]</strong> The scripted and native controls must go
+            <div class='requirement' id="IC-3"><strong class="req-handle">[IC-3]</strong> The scripted and native controls must go
                 through the same platform-level accessibility framework (where it exists),
                 so that a user presented with the scripted version is not
                 excluded from participating in or experiencing 
@@ -296,187 +276,26 @@ var respecConfig = {
     </section>
     <section>
         <h3> Requirements on making properties available to the accessibility interface </h3>
-        <p>Often forgotten in media systems, especially with the newer forms of packaging
-        such as DVD menus and on-screen program guides, is the fact that the user
-        needs to actually get to the content, control its playback, and turn on
-        any required accessibility options. For user agents supporting accessibility
-        APIs implemented for a platform, any media controls need to be connected
-        to that API. </p>
-        <p>On self-contained products that do not support assistive technology, any
+        <p>On self-contained products that do not support assistive technology
+        (e.g., a kiosk on a train platform), any
         menus in the content need to provide information in alternative formats
-        (e.g., talking menus). Products with a separate remote control, or that
+        (e.g., talking menus). Products with an external control, or that
         are self-contained boxes, should ensure the physical design does not block
         access, and should make accessibility controls, such as the closed-caption
-        toggle, as prominent as the volume or channel controls. </p>
+        toggle, as prominent as the other controls. </p>
         <div class="indent">
-            <div class='requirement' id="API-1"><strong class="req-handle">[API-1]</strong> The existence of alternative-content tracks for a media
-                resource must be exposed to the user agent. </div>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="API-2"><strong class="req-handle">[API-2]</strong> Since authors will need access to the alternative content
-                tracks, the structure needs to be exposed to authors as well, which
+            <div class='requirement' id="API-1"><strong
+                    class="req-handle">[API-1]</strong> Since authors will need
+                access to any alternative content
+                made available by the payment system to the end user, the structure needs to be exposed to authors as well, which
                 requires a dynamic interface. </div>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="API-3"><strong class="req-handle">[API-3]</strong> Accessibility APIs need to gain access to alternative content
-                tracks no matter whether those content tracks come from within a resource
+            <div class='requirement' id="API-2"><strong class="req-handle">[API-2]</strong> Accessibility APIs need to gain access to alternative content
+                no matter whether that content comes from within a resource
                 or are combined through markup on the page. </div>
         </div>
     </section>
-    <section>
-        <h3> Requirements on the use of the viewport </h3>
-        <p>The video viewport plays a particularly important role with respect to
-        alternative-content technologies. Mostly it provides a bounding box for
-        many of the visually represented alternative-content technologies (e.g.,
-        captions, hierarchical navigation points, sign language), although some
-        alternative content does not rely on a viewport (e.g., full transcripts,
-        descriptive video). </p>
-        <p>One key principle to remember when designing player ‘skins’ is that the
-        lower-third of the video may be needed for caption text. Caption consumers
-        rely on being able to make fast eye movements between the captions and
-        the video content. If the captions are in a non-standard place, this may
-        cause viewers to miss information. The use of this area for things such
-        as transport controls, while appealing aesthetically, may lead to accessibility
-        conflicts. </p>
-        <div class="indent">
-            <div class='requirement' id="VP-1"><strong class="req-handle">[VP-1]</strong> It must be possible to deal with three different
-                cases for the relation between the viewport size, the position of media
-                and of alternative content:</div>
-            <ol class="list-in-req">
-                <li>the alternative content's extent is specified in relation
-                to the media viewport (e.g., picture-in-picture video, lower-third
-                captions) </li>
-                <li>the alternative content has its own independent extent,
-                but is positioned in relation to the media viewport (e.g., captions
-                above the audio, sign-language video above the audio, navigation
-                points below the controls) </li>
-                <li>the alternative content has its own independent extent and
-                doesn't need to be rendered in any relation to the media viewport
-                (e.g., text transcripts) </li>
-            </ol>
-            <p>If alternative content has a different height or width than the media
-            content, then the user agent will reflow the (HTML) viewport.  </p>
-            <p class="note">This may create a need to provide an author hint to the web page
-            when embedding alternative content in order to instruct the web page how
-            to render the content: to scale with the media resource, scale independently,
-            or provide a position hint in relation to the media. On small devices
-            where the video takes up the full viewport, only limited rendering choices
-            may be possible, such that the UA may need to override author preferences. </p>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="VP-2"><strong class="req-handle">[VP-2]</strong> The user can change the following characteristics
-                of visually rendered text content, overriding those specified by the
-                author or user-agent defaults  (Note: this should
-                include captions and any text rendered in relation to media elements,
-                so as to be able to magnify and simplify rendered text):</div>
-            <ol class="list-in-req">
-                <li>text scale (i.e., the general size of text), </li>
-                <li>font family</li>
-                <li>text color (i.e., foreground and background) </li>
-                <li>letter spacing (tracking and kerning)</li>
-                <li>line spacing (or line height), and</li>
-                <li>word spacing.</li>
-            </ol>
-            <p class="note">This should be achievable through UA configuration or user defined javascript or CSS which can override styles dynamically in the browser. </p>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="VP-3"><strong class="req-handle">[VP-3]</strong> Provide the user with the ability to adjust
-                the size of the time-based media up to the full height or width of
-                the containing viewport, with the ability to preserve aspect ratio
-                and to adjust the size of the playback viewport to avoid cropping,
-                within the scaling limitations imposed by the media itself.  </div>
-            <p class="note">This can be achieved by simply zooming into the web page, which
-            will automatically rescale the layout and reflow the content. </p>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="VP-4"><strong class="req-handle">[VP-4]</strong> Provide the user with the ability to control
-                the contrast and brightness of the content within the playback viewport.
-            </div>
-            <p class="note">This is a user-agent device requirement and should already be
-            addressed in the UAAG. In live content, it may even be possible to adjust
-            camera settings to achieve this requirement. It is also a   &quot;SHOULD&quot; level
-            requirement, since it does not account for limitations of various devices. </p>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="VP-5"><strong class="req-handle">[VP-5]</strong> Captions and subtitles traditionally occupy
-                the lower third of the video, where controls are also usually
-                rendered. The user agent must avoid overlapping of overlay content
-                and controls on media resources. This must also happen if, for example,
-                the controls are only visible on demand. </div>
-            <p class="note">If there are several types of overlapping overlays (including 
-            captions and subtitles), implementations should attempt to ensure that none of
-            them overlaps with editorially important content.
-            In
-            particular, user agents
-            should avoid obscuring video components such as mouths, "burned in text" (embedded
-            captions or other annotations in the main video stream), etc.  When in
-            constrained environments where it is impossible to avoid obscuring all of these
-            components, user agents should make every effort to avoid the most important of
-            them.  Users typically expect
-            controls to appear at the bottom of the viewport.  Controls should not be prevented from
-            becoming usable due to repositioning.</p>
-        </div>
-    </section>
-    <section>
-        <h3>Requirements on secondary screens and other devices</h3>
-        <p>Multiple secondary user devices must be directly addressable. This
-        functionality is increasingly also known  by the new term, &quot;Second Screen,&quot;
-        even though there may be more than two screens in any given viewing
-        environment, and even though not all secondary devices are video displays. It
-        must be assumed that many users will have at least one additional display
-        device (such as a tablet), and/or at least one additional audio output device
-        (such as a Bluetooth headset) attached to a primary video display device, an
-        individual computer, or locally addressable on a LAN. It
-        must be possible to configure certain types of media for presentation on
-        specific devices, and these configuration settings must be readily overwritable
-        on a case-by-case basis by users. </p>
-        <p>Systems supporting secondary devices must: </p>
-        <div class="indent">
-            <div class='requirement' id="SD-1"><strong class="req-handle">[SD-1]</strong> Support a platform-accessibility architecture relevant to
-                the operating environment.  </div>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="SD-2"><strong class="req-handle">[SD-2]</strong> Ensure accessibility of all user-interface components including
-                the user interface, rendered content, and alternative content; make
-                available the name, role, state, value, and description via a platform-accessibility
-                architecture.  </div>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="SD-3"><strong class="req-handle">[SD-3]</strong> If a feature is not supported by the accessibility architecture(s),
-                provide an equivalent feature that does support the accessibility architecture(s).
-                Document the equivalent feature in the conformance claim.  </div>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="SD-4"><strong class="req-handle">[SD-4]</strong> If the user agent implements one or more DOMs, they must
-                be made programmatically available to assistive technologies.  This assumes the video element will write to the DOM. </div>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="SD-5"><strong class="req-handle">[SD-5]</strong> If the user can modify the state or value of a piece of content
-                through the user interface (e.g., by checking a box or editing a text
-                area), the same degree of write access is available programmatically
-            </div>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="SD-6"><strong class="req-handle">[SD-6]</strong> If any of the following properties are supported by the accessibility-platform
-                architecture, make the properties available to the accessibility-platform
-                architecture </div>
-            <ol class="list-in-req">
-                <li>the bounding dimensions and coordinates of rendered graphical
-                objects; </li>
-                <li>font family; </li>
-                <li>font size; </li>
-                <li>text foreground color; </li>
-                <li>text background color; </li>
-                <li>change state/value notifications. </li>
-            </ol>
-        </div>
-        <div class="indent">
-            <div class='requirement' id="SD-7"><strong class="req-handle">[SD-7]</strong> Ensure that programmatic exchanges between APIs proceed at
-                a rate such that users do not perceive a delay.  </div>
-        </div>
-    </section>
 </section>
-<section class='appendix'>
+<section id="S_acknowledgements" class='appendix'>
     <h2>Acknowledgments</h2>
     <p>The following people contributed to the development of this document.</p>
     <section id="ack_group">
