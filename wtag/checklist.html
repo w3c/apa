@@ -25,19 +25,19 @@
 		<p>Web technologies address a variety of needs, and very few technologies are intended to address all situations. This checklist is organized by types of features that a technology may provide. If the technology provides such a feature, the checklist items under the heading are applicable and should be examined. If the technology does not provide such a feature, the checklist items under the heading are not applicable and can be passed over.</p>
 		<section>
 			<h2>If technology creates objects that don't have an inherent text representation</h2>
+			<p>This includes primarily images, video, and audio but can also include other forms of complex content. Objects should also be directly accesible, but text alternatives are needed as a universal fallback.</p>
 			<ul class="checklist">
-				<li>There is a mechanism to create short text alternatives that label the object<ul>
+				<li>There is a mechanism to create short text alternatives that label the object.<ul>
 						<li>Explanation</li>
 					</ul></li>
-				<li>There is a mechanism to create extended text alternatives for fallback content </li>
+				<li>There is a mechanism to create extended text alternatives for fallback content.</li>
 				<li>Text alternatives can be semantically "rich" e.g., with page structure, text style, hyperlinks, etc. </li>
 			</ul>
 		</section>
 		<section>
 			<h2>If technology allows visual rendering of content</h2>
 			<ul class="checklist">
-				<li>Item
-					<ul>
+				<li>There is a defined way for a non-visual rendering to be created.<ul>
 						<li>Explanation</li>
 					</ul>
 				</li>
@@ -56,28 +56,29 @@
 		</section>
 		<section>
 			<h2>If technology provides time-based visual media</h2>
+			<p>@@Reference MAUR and its checklist</p>
 			<ul class="checklist">
-				<li>Item
-					<ul>
+				<li>It is possible for authors to provide detailed text descriptions, audio descriptions, or both of the important content in the media.<ul>
 						<li>Explanation</li>
-					</ul>
-				</li>
+					</ul></li>
+				<li> It is possible for authors to syncronize descriptions with the visual content.</li>
+				<li>It is possible for to provide descriptions even when the content is live.</li>
 			</ul>
 		</section>
 		<section>
 			<h2>If technology provides audio</h2>
 			<ul class="checklist">
-				<li>Item
-					<ul>
+				<li>It is possible for authors to provide transcriptions.<ul>
 						<li>Explanation</li>
-					</ul>
-				</li>
+					</ul></li>
+				<li>It is possible for authors to provide synchronized captions, either open (on by default for all users)</li>
 			</ul>
 		</section>
 		<section>
 			<h2>If technology provides features to accept user input</h2>
 			<ul class="checklist">
-				<li>There is a mechanism to label user input controls.</li>
+				<li>There is a mechanism to label user input controls in an umbiguous and clear manner.</li>
+				<li>If there is an input error, it is possible to associate the error message clearly with the specific control that is in error.</li>
 				<li>There is a mechanism to report and set the state or value of controls programmatically.</li>
 				<li>Authors can address multiple types of input hardware (keyboard, pointing device, touch screen, voice recognition, etc.), or the technology supports hardware-agnostic input methods.<ul>
 						<li>Explanation</li>
@@ -158,21 +159,30 @@
 			</ul>
 		</section>
 		<section>
-			<h2>If technology </h2>
+			<h2>If technology defines a transmission protocol</h2>
 			<ul class="checklist">
-				<li>Item <ul>
+				<li>Use of the protocol does not cause any aspect of the content, including metadata which could contain important accessibility information, to be removed.<ul>
 						<li>Explanation</li>
-					</ul>
-				</li>
+					</ul></li>
+				<li>It is possible to use third-party accessibility enhancement services while using the protocol. </li>
 			</ul>
 		</section>
 		<section>
-			<h2>If technology </h2>
-			<ul class="checklist">
-				<li>Item <ul>
-						<li>Explanation</li>
+			<h2>If technology defines accessible alternative features</h2>
+			<ul>
+				<li>Accessible alternatives themselves meet the same bar of accessibility.</li>
+				<li>
+					<ul>
+						<li>For instance, captions should be able to have color and style changed by the user. Text alternatives should allow rich content. Audio descriptions should be separable from other sound.</li>
 					</ul>
 				</li>
+			</ul>
+			<h2>If technology defines an API</h2>
+			<ul class="checklist">
+				<li>If the API can be used for structured content, it provides features to represent all aspects of the content including hidden accessibility features.<ul>
+						<li>Explanation</li>
+					</ul></li>
+				<li>If the API relies on user agents to generate a user interface, the specification provides guidance about accessibility requirements needed to enable full interaction with the API. </li>
 			</ul>
 		</section>
 		<section>
