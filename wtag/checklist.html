@@ -24,14 +24,12 @@
 		<p>This is a draft checklist to support <a href="wtag.html">Web Technology Accessibility Guidelines (WTAG)</a> prepared by the <a href="http://www.w3.org/WAI/PF/">Protocols and Format Working Group</a> and expected to be continued by the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. The goal of WTAG is to describe the features that web technologies should provide to ensure it is possible to create content that is accessible to users with disabilities. The full Web Technology Accessibility Guidelines references an analysis of user requirements and provides comprehensive guidance to technology developers. This checklist extracts that information at a high level to aid in self-review of technologies. Specification developers can use this to help ensure the technology will address features likely to be raised during horizontal review from accessibility proponents.</p>
 		<p>Web technologies address a variety of needs, and very few technologies are intended to address all situations. This checklist is organized by types of features that a technology may provide. If the technology provides such a feature, the checklist items under the heading are applicable and should be examined. If the technology does not provide such a feature, the checklist items under the heading are not applicable and can be passed over.</p>
 		<section>
-			<h2>If technology creates objects that don't have an inherent text representation</h2>
-			<p>This includes primarily images, video, and audio but can also include other forms of complex content. Objects should also be directly accesible, but text alternatives are needed as a universal fallback.</p>
-			<ul class="checklist">
-				<li>There is a mechanism to create short text alternatives that label the object.<ul>
-						<li>Explanation</li>
+			<h2>If technology allows text content</h2>
+			<ul>
+				<li>Authors can define non-text alternatives for text content. <ul>
+						<li>(visual, auditory, haptic) </li>
 					</ul></li>
-				<li>There is a mechanism to create extended text alternatives for fallback content.</li>
-				<li>Text alternatives can be semantically "rich" e.g., with page structure, text style, hyperlinks, etc. </li>
+				<li>Authors can define non-text alternatives for non-text content. </li>
 			</ul>
 		</section>
 		<section>
@@ -65,8 +63,7 @@
 			</ul>
 		</section>
 		<section>
-			<h2>If technology provides time-based visual media</h2>
-			<p>@@Reference MAUR and its checklist</p>
+			<h2>If technology provides time-based visual media (see also the <a href="https://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist">Media Accessibility Checklist</a>)</h2>
 			<ul class="checklist">
 				<li>It is possible for authors to provide detailed text descriptions, audio descriptions, or both of the important content in the media.<ul>
 						<li>Explanation</li>
@@ -91,29 +88,6 @@
 			</ul>
 		</section>
 		<section>
-			<h2>If technology provides features to accept user input</h2>
-			<ul class="checklist">
-				<li>There is a mechanism to label user input controls in an umbiguous and clear manner.</li>
-				<li>Authors can associate extended help information with a control.</li>
-				<li>If there is an input error, it is possible to associate the error message clearly with the specific control that is in error.</li>
-				<li>There is a mechanism to report and set the state or value of controls programmatically.</li>
-				<li>Authors can address multiple types of input hardware (keyboard, pointing device, touch screen, voice recognition, etc.), or the technology supports hardware-agnostic input methods.<ul>
-						<li>Explanation</li>
-					</ul></li>
-				<li>User input does not require specific physical characteristics (e.g., fingerprint readers).</li>
-				<li>Authors can ensure a "meaningful" order of controls exists regardless of presentation. </li>
-			</ul>
-		</section>
-		<section>
-			<h2>If technology provides internationalization support</h2>
-			<ul class="checklist">
-				<li>Accessibility features can be internationalized to the same degree as other features, including multiple language alternatives, language identification and changes, text directionality identification, etc.<ul>
-						<li>Explanation</li>
-					</ul>
-				</li>
-			</ul>
-		</section>
-		<section>
 			<h2>If technology defines document semantics</h2>
 			<ul class="checklist">
 				<li>Authors can title Web pages and sections of content. </li>
@@ -129,6 +103,20 @@
 				<li>Support a comprehensive set of authoring use cases to minimize the need for alternative content. (e.g., don't make authors resort to text in images to get the style they want).</li>
 				<li>Semantics allow precise and replicable location information in the document to be deteremined.</li>
 				<li>Semantics exist to convey meaning that is commonly conveyed via presentation.</li>
+			</ul>
+		</section>
+		<section>
+			<h2>If technology provides features to accept user input</h2>
+			<ul class="checklist">
+				<li>There is a mechanism to label user input controls in an umbiguous and clear manner.</li>
+				<li>Authors can associate extended help information with a control.</li>
+				<li>If there is an input error, it is possible to associate the error message clearly with the specific control that is in error.</li>
+				<li>There is a mechanism to report and set the state or value of controls programmatically.</li>
+				<li>Authors can address multiple types of input hardware (keyboard, pointing device, touch screen, voice recognition, etc.), or the technology supports hardware-agnostic input methods.<ul>
+						<li>Explanation</li>
+					</ul></li>
+				<li>User input does not require specific physical characteristics (e.g., fingerprint readers).</li>
+				<li>Authors can ensure a "meaningful" order of controls exists regardless of presentation. </li>
 			</ul>
 		</section>
 		<section>
@@ -154,6 +142,17 @@
 			</ul>
 		</section>
 		<section>
+			<h2>If technology creates objects that don't have an inherent text representation</h2>
+			<p>This includes primarily images, video, and audio but can also include other forms of complex content. Objects should also be directly accesible, but text alternatives are needed as a universal fallback.</p>
+			<ul class="checklist">
+				<li>There is a mechanism to create short text alternatives that label the object.<ul>
+						<li>Explanation</li>
+					</ul></li>
+				<li>There is a mechanism to create extended text alternatives for fallback content.</li>
+				<li>Text alternatives can be semantically "rich" e.g., with page structure, text style, hyperlinks, etc. </li>
+			</ul>
+		</section>
+		<section>
 			<h2>If technology provides content fallback mechanisms</h2>
 			<ul>
 				<li>Authors can explicitly mark content as not needing alternative content because it does not perform an important role. </li>
@@ -167,15 +166,6 @@
 			</ul>
 		</section>
 		<section>
-			<h2>If technology allows text content</h2>
-			<ul>
-				<li>Authors can define non-text alternatives for text content. <ul>
-						<li>(visual, auditory, haptic) </li>
-					</ul></li>
-				<li>Authors can define non-text alternatives for non-text content. </li>
-			</ul>
-		</section>
-		<section>
 			<h2>If technology provides visual graphics</h2>
 			<ul class="checklist">
 				<li>Item <ul>
@@ -185,30 +175,20 @@
 			</ul>
 		</section>
 		<section>
-			<h2>If technology defines a transmission protocol</h2>
+			<h2>If technology provides internationalization support</h2>
 			<ul class="checklist">
-				<li>Use of the protocol does not cause any aspect of the content, including metadata which could contain important accessibility information, to be removed.<ul>
+				<li>Accessibility features can be internationalized to the same degree as other features, including multiple language alternatives, language identification and changes, text directionality identification, etc.<ul>
 						<li>Explanation</li>
-					</ul></li>
-				<li>It is possible to use third-party accessibility enhancement services while using the protocol. </li>
+					</ul>
+				</li>
 			</ul>
 		</section>
 		<section>
 			<h2>If technology defines accessible alternative features</h2>
 			<ul>
-				<li>Accessible alternatives themselves meet the same bar of accessibility.</li>
-				<li>
-					<ul>
+				<li>Accessible alternatives themselves meet the same bar of accessibility.<ul>
 						<li>For instance, captions should be able to have color and style changed by the user. Text alternatives should allow rich content. Audio descriptions should be separable from other sound.</li>
-					</ul>
-				</li>
-			</ul>
-			<h2>If technology defines an API</h2>
-			<ul class="checklist">
-				<li>If the API can be used for structured content, it provides features to represent all aspects of the content including hidden accessibility features.<ul>
-						<li>Explanation</li>
 					</ul></li>
-				<li>If the API relies on user agents to generate a user interface, the specification provides guidance about accessibility requirements needed to enable full interaction with the API. </li>
 			</ul>
 		</section>
 		<section>
@@ -218,6 +198,24 @@
 						<li>Explanation</li>
 					</ul>
 				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>If technology defines an API</h2>
+			<ul class="checklist">
+				<li>If the API can be used for structured content, it provides features to represent all aspects of the content including hidden accessibility features.<ul>
+						<li>Explanation</li>
+					</ul></li>
+				<li>If the API relies on user agents to generate a user interface, the specification provides guidance about accessibility requirements needed to enable full interaction with the API. </li>
+			</ul>
+		</section>
+		<section>
+			<h2>If technology defines a transmission protocol</h2>
+			<ul class="checklist">
+				<li>Use of the protocol does not cause any aspect of the content, including metadata which could contain important accessibility information, to be removed.<ul>
+						<li>Explanation</li>
+					</ul></li>
+				<li>It is possible to use third-party accessibility enhancement services while using the protocol. </li>
 			</ul>
 		</section>
 	</body>
