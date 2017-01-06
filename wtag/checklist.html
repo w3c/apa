@@ -39,8 +39,18 @@
 			<ul class="checklist">
 				<li>There is a defined way for a non-visual rendering to be created.<ul>
 						<li>Explanation</li>
-					</ul>
-				</li>
+					</ul></li>
+				<li>Content can be resized.</li>
+				<li>Luminosity and hue contrast can adapt to user requirements.</li>
+				<li>Text presentation attributes can be changed.<ul>
+						<li> Typeface, font weight, font style,  ine / word / letter spacing, margins, line length, justification</li>
+					</ul></li>
+				<li>Visual presentation of pointers and cursors can be adjusted.</li>
+				<li>Changing content presentation does not render it unreadable.<ul>
+						<li>clipping, flow</li>
+					</ul></li>
+				<li>Technology does not allow blinking or flashing of content, or provides a feature for users to quickly turn it off or permanently disable it.</li>
+				<li>It is possible to make navigation order correspond to the visual presentation.</li>
 			</ul>
 		</section>
 		<section>
@@ -61,8 +71,10 @@
 				<li>It is possible for authors to provide detailed text descriptions, audio descriptions, or both of the important content in the media.<ul>
 						<li>Explanation</li>
 					</ul></li>
-				<li> It is possible for authors to syncronize descriptions with the visual content.</li>
+				<li>It is possible for authors to syncronize descriptions with the visual content.</li>
 				<li>It is possible for to provide descriptions even when the content is live.</li>
+				<li>User can pause, stop, replay media.</li>
+				<li>Users can send output to alternate device.</li>
 			</ul>
 		</section>
 		<section>
@@ -71,19 +83,25 @@
 				<li>It is possible for authors to provide transcriptions.<ul>
 						<li>Explanation</li>
 					</ul></li>
-				<li>It is possible for authors to provide synchronized captions, either open (on by default for all users)</li>
+				<li>It is possible for authors to provide synchronized captions, either open (on by default for all users).</li>
+				<li>User can adjust volume level </li>
+				<li>Contrast between foreground and background audio is sufficient </li>
+				<li>Unnecessary background audio can be muted separately from the foreground audio </li>
+				<li>@@Technology does not include triggers for audiosensitive seizures or allows those triggers to be disabled.</li>
 			</ul>
 		</section>
 		<section>
 			<h2>If technology provides features to accept user input</h2>
 			<ul class="checklist">
 				<li>There is a mechanism to label user input controls in an umbiguous and clear manner.</li>
+				<li>Authors can associate extended help information with a control.</li>
 				<li>If there is an input error, it is possible to associate the error message clearly with the specific control that is in error.</li>
 				<li>There is a mechanism to report and set the state or value of controls programmatically.</li>
 				<li>Authors can address multiple types of input hardware (keyboard, pointing device, touch screen, voice recognition, etc.), or the technology supports hardware-agnostic input methods.<ul>
 						<li>Explanation</li>
-					</ul>
-				</li>
+					</ul></li>
+				<li>User input does not require specific physical characteristics (e.g., fingerprint readers).</li>
+				<li>Authors can ensure a "meaningful" order of controls exists regardless of presentation. </li>
 			</ul>
 		</section>
 		<section>
@@ -96,28 +114,31 @@
 			</ul>
 		</section>
 		<section>
-			<h2>If technology defines document or GUI semantics</h2>
+			<h2>If technology defines document semantics</h2>
 			<ul class="checklist">
-				<li>For every user interface object type, the "type" of object can be exposed as a role to AAPIs. </li>
-				<li>For every user interface object type, there is a clearly defined mechanism for authors to provide and / or user agents determines the "accessible name" for AAPIs. </li>
-				<li>For user interface objects that can have states, properties, or values, authors can set these and these can be exposed to AAPIs. </li>
-				<li>When providing imperative mechanisms to implement technology features (e.g., scripts), authors can expose accessibility information to AAPIs. </li>
 				<li>Authors can title Web pages and sections of content. </li>
 				<li>Authors can clearly indicate the target of a hyperlink and function of a control. </li>
 				<li>Authors can indicate content language, for the page as a whole and for blocks of content. </li>
 				<li>Authors can support understanding of abbreviations / acronyms / initialisms, idioms, jargon, etc. </li>
 				<li>Authors can support correct machine pronunciation of ambiguously spelled terms (e.g., in the phrase "I am content with this content" there are different correct pronunciations of the lexeme "content"). </li>
+				<li>Authors can identify regions of content, particularly the "main" region.</li>
 				<li>Declarative mechanisms (that have accessibility semantics pre-defined in the spec) are used to implement technology features whenever possible. </li>
 				<li>There are unambiguous ways to express relationships between units of content, such as object nesting, ID referencing, etc. </li>
 				<li>Prefer structural semantics to presentational semantics. </li>
 				<li>When providing presentational semantics, they can be easily mapped to structural semantics, e.g., to support restyling or meaningful exposure to AAPIs. </li>
-				<li>Support a comprehensive set of authoring use cases to minimize the need for alternative content. (e.g., don't make authors resort to text in images to get the style they want) </li>
+				<li>Support a comprehensive set of authoring use cases to minimize the need for alternative content. (e.g., don't make authors resort to text in images to get the style they want).</li>
+				<li>Semantics allow precise and replicable location information in the document to be deteremined.</li>
+				<li>Semantics exist to convey meaning that is commonly conveyed via presentation.</li>
 			</ul>
 		</section>
 		<section>
 			<h2>If technology provides user interaction features</h2>
 			<ul class="checklist">
-				<li>Item <ul>
+				<li>For every user interface object type, the "type" of object can be exposed as a role to AAPIs. </li>
+				<li>For every user interface object type, there is a clearly defined mechanism for authors to provide and / or user agents determines the "accessible name" for AAPIs. </li>
+				<li>For user interface objects that can have states, properties, or values, authors can set these and these can be exposed to AAPIs. </li>
+				<li>When providing imperative mechanisms to implement technology features (e.g., scripts), authors can expose accessibility information to AAPIs. </li>
+				<li>User can obtain help information about the widget.<ul>
 						<li>Explanation</li>
 					</ul>
 				</li>
@@ -126,10 +147,10 @@
 		<section>
 			<h2>If technology allows time limits</h2>
 			<ul class="checklist">
-				<li>Item <ul>
+				<li>A feature exists to allow time limits to be extended.<ul>
 						<li>Explanation</li>
-					</ul>
-				</li>
+					</ul></li>
+				<li>Time limits for different parts of a task, such as reading instructions vs providing input, can be set seprately. </li>
 			</ul>
 		</section>
 		<section>
@@ -140,13 +161,18 @@
 				<li>Authors can explicitly indicate that authoring tool is unable to generate or obtain alternative content. </li>
 				<li>Authors can explicitly associate alternative content with the primary content. </li>
 				<li>Authors can associate multiple types and instances of alternative content with primary content. </li>
+				<li>Alternate content can be easily found from the initial content.<ul>
+						<li>Replaces, referenced directly from, at same location of intiial content.</li>
+					</ul></li>
 			</ul>
 		</section>
 		<section>
 			<h2>If technology allows text content</h2>
 			<ul>
-				<li>Authors can define non-text alternatives for text content. </li>
-				<li>Authors can define non-text alternatives for non-text content . </li>
+				<li>Authors can define non-text alternatives for text content. <ul>
+						<li>(visual, auditory, haptic) </li>
+					</ul></li>
+				<li>Authors can define non-text alternatives for non-text content. </li>
 			</ul>
 		</section>
 		<section>
@@ -186,9 +212,9 @@
 			</ul>
 		</section>
 		<section>
-			<h2>If technology </h2>
+			<h2>If technology provides content directly for end-users</h2>
 			<ul class="checklist">
-				<li>Item <ul>
+				<li>Content can be encoded in a manner that allows machine transformation into accessible output<ul>
 						<li>Explanation</li>
 					</ul>
 				</li>
