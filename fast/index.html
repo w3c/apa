@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="dc:language" content="en" lang="">
+  <style>
+    /*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+    
+    .hljs {
+      display: block;
+      overflow-x: auto;
+      padding: 0.5em;
+      color: #333;
+      background: #f8f8f8;
+    }
+    
+    .hljs-comment,
+    .hljs-quote {
+      color: #998;
+      font-style: italic;
+    }
+    
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-subst {
+      color: #333;
+      font-weight: bold;
+    }
+    
+    .hljs-number,
+    .hljs-literal,
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-tag .hljs-attr {
+      color: #008080;
+    }
+    
+    .hljs-string,
+    .hljs-doctag {
+      color: #d14;
+    }
+    
+    .hljs-title,
+    .hljs-section,
+    .hljs-selector-id {
+      color: #900;
+      font-weight: bold;
+    }
+    
+    .hljs-subst {
+      font-weight: normal;
+    }
+    
+    .hljs-type,
+    .hljs-class .hljs-title {
+      color: #458;
+      font-weight: bold;
+    }
+    
+    .hljs-tag,
+    .hljs-name,
+    .hljs-attribute {
+      color: #000080;
+      font-weight: normal;
+    }
+    
+    .hljs-regexp,
+    .hljs-link {
+      color: #009926;
+    }
+    
+    .hljs-symbol,
+    .hljs-bullet {
+      color: #990073;
+    }
+    
+    .hljs-built_in,
+    .hljs-builtin-name {
+      color: #0086b3;
+    }
+    
+    .hljs-meta {
+      color: #999;
+      font-weight: bold;
+    }
+    
+    .hljs-deletion {
+      background: #fdd;
+    }
+    
+    .hljs-addition {
+      background: #dfd;
+    }
+    
+    .hljs-emphasis {
+      font-style: italic;
+    }
+    
+    .hljs-strong {
+      font-weight: bold;
+    }
+  </style>
+  <style>
+    /* --- ISSUES/NOTES --- */
+    
+    div.issue-title,
+    div.note-title,
+    div.ednote-title,
+    div.warning-title {
+      padding-right: 1em;
+      min-width: 7.5em;
+      color: #b9ab2d;
+    }
+    
+    div.issue-title {
+      color: #e05252;
+    }
+    
+    div.note-title,
+    div.ednote-title {
+      color: #2b2;
+    }
+    
+    div.warning-title {
+      color: #f22;
+    }
+    
+    div.issue-title span,
+    div.note-title span,
+    div.ednote-title span,
+    div.warning-title span {
+      text-transform: uppercase;
+    }
+    
+    div.note,
+    div.issue,
+    div.ednote,
+    div.warning {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+    
+    .note>p:first-child,
+    .ednote>p:first-child,
+    .issue>p:first-child,
+    .warning>p:first-child {
+      margin-top: 0
+    }
+    
+    .issue,
+    .note,
+    .ednote,
+    .warning {
+      padding: .5em;
+      border-left-width: .5em;
+      border-left-style: solid;
+    }
+    
+    div.issue,
+    div.note,
+    div.ednote,
+    div.warning {
+      padding: 1em 1.2em 0.5em;
+      margin: 1em 0;
+      position: relative;
+      clear: both;
+    }
+    
+    span.note,
+    span.ednote,
+    span.issue,
+    span.warning {
+      padding: .1em .5em .15em;
+    }
+    
+    .issue {
+      border-color: #e05252;
+      background: #fbe9e9;
+    }
+    
+    .note,
+    .ednote {
+      border-color: #52e052;
+      background: #e9fbe9;
+    }
+    
+    .warning {
+      border-color: #f11;
+      border-width: .2em;
+      border-style: solid;
+      background: #fbe9e9;
+    }
+    
+    .warning-title:before {
+      content: "⚠";
+      /*U+26A0 WARNING SIGN*/
+      font-size: 3em;
+      float: left;
+      height: 100%;
+      padding-right: .3em;
+      vertical-align: top;
+      margin-top: -0.5em;
+    }
+    
+    li.task-list-item {
+      list-style: none;
+    }
+    
+    input.task-list-item-checkbox {
+      margin: 0 0.35em 0.25em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <title>Web Technology Accessibility Guidelines</title>
+
+
+  <style id="respec-mainstyle">
+    /*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+    /* Override code highlighter background */
+    
+    .hljs {
+      background: transparent !important;
+    }
+    /* --- INLINES --- */
+    
+    em.rfc2119 {
+      text-transform: lowercase;
+      font-style: normal;
+      color: #900;
+    }
+    
+    h1 acronym,
+    h2 acronym,
+    h3 acronym,
+    h4 acronym,
+    h5 acronym,
+    h6 acronym,
+    a acronym,
+    h1 abbr,
+    h2 abbr,
+    h3 abbr,
+    h4 abbr,
+    h5 abbr,
+    h6 abbr,
+    a abbr {
+      border: none;
+    }
+    
+    dfn {
+      font-weight: bold;
+    }
+    
+    a.internalDFN {
+      color: inherit;
+      border-bottom: 1px solid #99c;
+      text-decoration: none;
+    }
+    
+    a.externalDFN {
+      color: inherit;
+      border-bottom: 1px dotted #ccc;
+      text-decoration: none;
+    }
+    
+    a.bibref {
+      text-decoration: none;
+    }
+    
+    cite .bibref {
+      font-style: normal;
+    }
+    
+    code {
+      color: #C83500;
+    }
+    
+    th code {
+      color: inherit;
+    }
+    /* --- TOC --- */
+    
+    .toc a,
+    .tof a {
+      text-decoration: none;
+    }
+    
+    a .secno,
+    a .figno {
+      color: #000;
+    }
+    
+    ul.tof,
+    ol.tof {
+      list-style: none outside none;
+    }
+    
+    .caption {
+      margin-top: 0.5em;
+      font-style: italic;
+    }
+    /* --- TABLE --- */
+    
+    table.simple {
+      border-spacing: 0;
+      border-collapse: collapse;
+      border-bottom: 3px solid #005a9c;
+    }
+    
+    .simple th {
+      background: #005a9c;
+      color: #fff;
+      padding: 3px 5px;
+      text-align: left;
+    }
+    
+    .simple th[scope="row"] {
+      background: inherit;
+      color: inherit;
+      border-top: 1px solid #ddd;
+    }
+    
+    .simple td {
+      padding: 3px 10px;
+      border-top: 1px solid #ddd;
+    }
+    
+    .simple tr:nth-child(even) {
+      background: #f0f6ff;
+    }
+    /* --- DL --- */
+    
+    .section dd>p:first-child {
+      margin-top: 0;
+    }
+    
+    .section dd>p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .section dd {
+      margin-bottom: 1em;
+    }
+    
+    .section dl.attrs dd,
+    .section dl.eldef dd {
+      margin-bottom: 0;
+    }
+    
+    #respec-ui {
+      position: fixed;
+      display: flex;
+      flex-direction: row-reverse;
+      top: 20px;
+      right: 20px;
+      width: 202px;
+      text-align: right;
+    }
+    
+    #respec-pill,
+    .respec-info-button {
+      background: #fff;
+      height: 2.5em;
+      color: rgb(120, 120, 120);
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 8px 0 rgba(100, 100, 100, .5);
+    }
+    
+    .respec-info-button {
+      border: none;
+      opacity: .5;
+      border-radius: 2em;
+      margin-right: 1em;
+      min-width: 3.5em;
+    }
+    
+    .respec-info-button:focus {
+      opacity: 1;
+      transition: opacity .2s;
+    }
+    
+    #respec-pill:disabled {
+      font-size: 2.8px;
+      text-indent: -9999em;
+      border-top: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-right: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-bottom: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-left: 1.1em solid #ffffff;
+      transform: translateZ(0);
+      animation: respec-spin .5s infinite linear;
+      box-shadow: none;
+    }
+    
+    #respec-pill:disabled,
+    #respec-pill:disabled:after {
+      border-radius: 50%;
+      width: 10em;
+      height: 10em;
+    }
+    
+    @keyframes respec-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    #respec-pill:hover,
+    #respec-pill:focus {
+      color: rgb(0, 0, 0);
+      background-color: rgb(245, 245, 245);
+      transition: color .2s;
+    }
+    
+    #respec-menu {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #fff;
+      box-shadow: 1px 1px 8px 0 rgba(100, 100, 100, .5);
+      width: 200px;
+      display: none;
+      text-align: left;
+      margin-top: 32px;
+      font-size: .8em;
+    }
+    
+    #respec-menu li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .respec-save-button {
+      background: #fff;
+      border: 1px solid #000;
+      border-radius: 5px;
+      padding: 5px;
+      margin: 5px;
+      display: block;
+      width: 100%;
+      color: #000;
+      text-decoration: none;
+      text-align: center;
+      font-size: inherit;
+    }
+    
+    #respec-ui button:focus,
+    #respec-pill:focus,
+    .respec-option:focus {
+      outline: 0;
+      outline-style: none;
+    }
+    
+    #respec-pill-error {
+      background-color: red;
+      color: white;
+    }
+    
+    #respec-pill-warning {
+      background-color: orange;
+      color: white;
+    }
+    
+    .respec-warning-list,
+    .respec-error-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: sans-serif;
+      background-color: rgb(255, 251, 230);
+      font-size: .9em;
+    }
+    
+    .respec-warning-list li,
+    .respec-error-list li {
+      padding: 0.4em 0.7em;
+    }
+    
+    .respec-warning-list li::before {
+      content: "⚠️";
+      padding-right: .5em;
+    }
+    
+    .respec-warning-list li {
+      color: rgb(92, 59, 0);
+      border-bottom: thin solid rgb(255, 245, 194);
+    }
+    
+    .respec-error-list,
+    .respec-error-list li {
+      background-color: rgb(255, 240, 240);
+    }
+    
+    .respec-error-list li::before {
+      content: "💥";
+      padding-right: .5em;
+    }
+    
+    .respec-error-list li {
+      padding: 0.4em 0.7em;
+      color: rgb(92, 59, 0);
+      border-bottom: thin solid rgb(255, 215, 215);
+    }
+    
+    #respec-overlay {
+      display: block;
+      opacity: 0;
+      position: fixed;
+      z-index: 10000;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background: #000;
+    }
+    
+    .respec-modal {
+      display: block;
+      position: fixed;
+      opacity: 0;
+      z-index: 11000;
+      margin: auto;
+      top: 10%;
+      background: #fff;
+      border: 5px solid #666;
+      min-width: 20%;
+      width: 85%;
+      padding: 0;
+      max-height: 80%;
+      overflow-y: auto;
+      margin: 0 -.5cm
+    }
+    
+    @media screen and (min-width: 78em) {
+      .respec-modal {
+        width: 64%;
+      }
+    }
+    
+    .respec-modal h3 {
+      margin: 0;
+      padding: .2em;
+      text-align: center;
+      color: black;
+      background: linear-gradient(to bottom, rgba(238, 238, 238, 1) 0%, rgba(238, 238, 238, 1) 50%, rgba(204, 204, 204, 1) 100%);
+      font-size: 1em;
+    }
+    
+    .respec-modal .inside p {
+      padding-left: 1cm;
+    }
+    
+    #respec-menu button.respec-option {
+      background: white;
+      padding: 0 .2cm;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: inherit;
+      padding: 1.2em 1.2em;
+    }
+    
+    #respec-menu button.respec-option:hover,
+    #respec-menu button:focus {
+      background-color: #eeeeee;
+    }
+    
+    .respec-cmd-icon {
+      padding-right: .5em;
+    }
+    
+    #respec-ui button.respec-option:last-child {
+      border: none;
+      border-radius: inherit;
+    }
+    
+    .respec-offending-element {
+      display: inline-block;
+      position: relative;
+      background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x;
+    }
+    
+    @supports (text-decoration-style: wavy) {
+      .respec-offending-element {
+        background: none;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: red;
+      }
+    }
+    
+    #issue-summary>ul,
+    .respec-dfn-list {
+      column-count: 2;
+    }
+    
+    #issue-summary li,
+    .respec-dfn-list li {
+      list-style: none;
+    }
+    
+    @media print {
+      .removeOnSave {
+        display: none;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED">
+  <link rel="canonical" href="https://www.w3.org/TR/wtag/">
+  <meta name="generator" content="ReSpec 11.2.1">
+  <script id="initialUserConfig" type="application/json">
+    {
+      "specStatus": "ED",
+      "shortName": "wtag",
+      "edDraftURI": "http://w3c.github.io/pfwg/wtag/wtag.html",
+      "editors": [
+      {
+        "name": "Michael Cooper",
+        "company": "W3C",
+        "companyURL": "http://www.w3.org/"
+      }],
+      "wg": "Protocols and Formats Working Group",
+      "wgURI": "http://www.w3.org/WAI/PF/",
+      "wgPublicList": "wai-xtech",
+      "wgPatentURI": "http://www.w3.org/2004/01/pp-impl/32212/status",
+      "tocIntroductory": true,
+      "doRDFa": 1.1
+    }
+  </script>
+</head>
+<body aria-busy="false" class="h-entry toc-inline" id="respecDocument">
+  <div class="head" role="contentinfo" id="respecHeader">
+    <p>
+      <a class="logo" href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" height="48" width="72"></a>
+    </p>
+    <h1 class="title p-name" id="title" property="dcterms:title">Web Technology Accessibility Guidelines</h1>
+    <h2 id="w3c-editor-s-draft-31-march-2017"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2017-03-31">31 March 2017</time></h2>
+    <dl>
+      <dt>This version:</dt>
+      <dd><a class="u-url" href="http://w3c.github.io/pfwg/wtag/wtag.html">http://w3c.github.io/pfwg/wtag/wtag.html</a></dd>
+      <dt>Latest published version:</dt>
+      <dd><a href="https://www.w3.org/TR/wtag/">https://www.w3.org/TR/wtag/</a></dd>
+      <dt>Latest editor's draft:</dt>
+      <dd><a href="http://w3c.github.io/pfwg/wtag/wtag.html">http://w3c.github.io/pfwg/wtag/wtag.html</a></dd>
+      <dt>Editor:</dt>
+      <dd class="p-author h-card vcard" property="bibo:editor" resource="_:editor0"><span property="rdf:first" typeof="foaf:Person"><span property="foaf:name" class="p-name fn">Michael Cooper</span>, <a property="foaf:workplaceHomepage" class="p-org org h-org h-card" href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a></span>
+        <span property="rdf:rest" resource="rdf:nil"></span>
+      </dd>
+
+    </dl>
+    <p class="copyright">
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2017
+
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+      <a href="https://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>).
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+      <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.
+    </p>
+    <hr title="Separator for header">
+  </div>
+
+  <section id="abstract" class="introductory" property="dc:abstract">
+    <!--OddPage-->
+    <h2 id="h-abstract" resource="#h-abstract"><span property="xhv:role" resource="xhv:heading">Abstract</span></h2>Web Technology Accessibility Guidelines advises creators of technical specifications how to ensure their technology meets the needs of user with disabilities. It addresses primarily web content technologies but also relates to any technology that affects web content sent to users, including client-side APIs, transmission protocols, and interchange formats. Specifications that implement these guidelines make it possible for content authors and user agents to render the content in an accessible manner to people with a wide range of abilities.
+    <p> </p>
+  </section>
+
+  <section id="sotd" class="introductory">
+    <!--OddPage-->
+    <h2 id="h-sotd" resource="#h-sotd"><span property="xhv:role" resource="xhv:heading">Status of This Document</span></h2>
+    <p>
+      <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
+    </p>
+
+
+    <p>
+      This document was published by the <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working Group</a> as an Editor's Draft. If you wish to make comments regarding this document, please send them to
+      <a href="mailto:wai-xtech@w3.org">wai-xtech@w3.org</a> (<a href="mailto:wai-xtech-request@w3.org?subject=subscribe">subscribe</a>,
+      <a href="https://lists.w3.org/Archives/Public/wai-xtech/">archives</a>). All comments are welcome.
+    </p>
+    <p>
+      Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.
+    </p>
+    <p>
+      This document was produced by a group operating under the
+      <a id="sotd_patent" property="w3p:patentRules" href="https://www.w3.org/Consortium/Patent-Policy-20040205/">5 February 2004 <abbr title="World Wide Web Consortium">W3C</abbr> Patent
+              Policy</a>.
+      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="http://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent
+                disclosures</a> made in connection with the deliverables of the group; that page also includes instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains
+      <a href="https://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential
+              Claim(s)</a> must disclose the information in accordance with
+      <a href="https://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
+              6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+    </p>
+    <p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2017/Process-20170301/">1 March 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+    </p>
+
+  </section>
+  <nav id="toc">
+    <h2 class="introductory" id="table-of-contents" resource="#table-of-contents"><span property="xhv:role" resource="xhv:heading">Table of Contents</span></h2>
+    <ol class="toc" role="directory">
+      <li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li>
+      <li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li>
+      <li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a>
+        <ol class="toc">
+          <li class="tocline"><a href="#goals" class="tocxref"><span class="secno">1.1 </span>Goals</a></li>
+          <li class="tocline"><a href="#audience" class="tocxref"><span class="secno">1.2 </span>Audience</a></li>
+          <li class="tocline"><a href="#scope" class="tocxref"><span class="secno">1.3 </span>Scope</a></li>
+          <li class="tocline"><a href="#approach" class="tocxref"><span class="secno">1.4 </span>Approach</a>
+            <ol class="toc">
+              <li class="tocline"><a href="#inventory-user-needs" class="tocxref"><span class="secno">1.4.1 </span>Inventory user needs</a></li>
+              <li class="tocline"><a href="#identify-ways-to-meet-needs" class="tocxref"><span class="secno">1.4.2 </span>Identify ways to meet needs</a></li>
+              <li class="tocline"><a href="#develop-technology-guidelines" class="tocxref"><span class="secno">1.4.3 </span>Develop technology guidelines</a></li>
+            </ol>
+          </li>
+          <li class="tocline"><a href="#explanation-of-user-needs" class="tocxref"><span class="secno">1.5 </span>Explanation of User Needs</a>
+            <ol class="toc">
+              <li class="tocline"><a href="#evolution-of-user-needs" class="tocxref"><span class="secno">1.5.1 </span>Evolution of user needs</a></li>
+              <li class="tocline"><a href="#assumptions" class="tocxref"><span class="secno">1.5.2 </span>Assumptions </a></li>
+              <li class="tocline"><a href="#applicability-of-needs" class="tocxref"><span class="secno">1.5.3 </span>Applicability of Needs </a></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li class="tocline"><a href="#collected-user-needs" class="tocxref"><span class="secno">2. </span>Collected User Needs</a></li>
+      <li class="tocline"><a href="#meeting-user-needs" class="tocxref"><span class="secno">3. </span>Meeting User Needs</a>
+        <ol class="toc">
+          <li class="tocline"><a href="#ways-to-meet-user-needs" class="tocxref"><span class="secno">3.1 </span>Ways to Meet User Needs</a>
+            <ol class="toc">
+              <li class="tocline"><a href="#author-implementation" class="tocxref"><span class="secno">3.1.1 </span>Author Implementation</a></li>
+              <li class="tocline"><a href="#user-agent-features" class="tocxref"><span class="secno">3.1.2 </span>User Agent Features</a>
+                <ol class="toc">
+                  <li class="tocline"><a href="#accessibility-support-in-mainstream-user-agents" class="tocxref"><span class="secno">3.1.2.1 </span>Accessibility Support in Mainstream User Agents</a></li>
+                  <li class="tocline"><a href="#assistive-technology" class="tocxref"><span class="secno">3.1.2.2 </span>Assistive Technology</a></li>
+                  <li class="tocline"><a href="#accessibility-apis" class="tocxref"><span class="secno">3.1.2.3 </span>Accessibility APIs</a></li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li class="tocline"><a href="#meeting-user-needs-table" class="tocxref"><span class="secno">3.2 </span>Meeting User Needs Table</a></li>
+        </ol>
+      </li>
+      <li class="tocline"><a href="#web-technology-accessibility-guidelines" class="tocxref"><span class="secno">4. </span>Web Technology Accessibility Guidelines</a>
+        <ol class="toc">
+          <li class="tocline"><a href="#alternative-content" class="tocxref"><span class="secno">4.1 </span>Alternative Content</a>
+            <ol class="toc">
+              <li class="tocline"><a href="#text-alternatives" class="tocxref"><span class="secno">4.1.1 </span>Text Alternatives</a></li>
+              <li class="tocline"><a href="#rich-alternatives" class="tocxref"><span class="secno">4.1.2 </span>Rich Alternatives</a></li>
+            </ol>
+          </li>
+          <li class="tocline"><a href="#color" class="tocxref"><span class="secno">4.2 </span>Color</a></li>
+          <li class="tocline"><a href="#device-independence" class="tocxref"><span class="secno">4.3 </span>Device Independence</a>
+            <ol class="toc">
+              <li class="tocline"><a href="#universal-meaning-support" class="tocxref"><span class="secno">4.3.1 </span>Universal meaning support</a></li>
+              <li class="tocline"><a href="#compatibility-with-aapis" class="tocxref"><span class="secno">4.3.2 </span>Compatibility with AAPIs</a></li>
+              <li class="tocline"><a href="#hardware-interfaces" class="tocxref"><span class="secno">4.3.3 </span>Hardware Interfaces</a></li>
+            </ol>
+          </li>
+          <li class="tocline"><a href="#user-customization" class="tocxref"><span class="secno">4.4 </span>User Customization</a></li>
+          <li class="tocline"><a href="#user-control" class="tocxref"><span class="secno">4.5 </span>User Control</a>
+            <ol class="toc">
+              <li class="tocline"><a href="#blinking-flashing" class="tocxref"><span class="secno">4.5.1 </span>Blinking / Flashing</a></li>
+              <li class="tocline"><a href="#automatic-actions" class="tocxref"><span class="secno">4.5.2 </span>Automatic actions</a></li>
+              <li class="tocline"><a href="#time-based-content" class="tocxref"><span class="secno">4.5.3 </span>Time-based content</a></li>
+            </ol>
+          </li>
+          <li class="tocline"><a href="#focus" class="tocxref"><span class="secno">4.6 </span>Focus</a></li>
+          <li class="tocline"><a href="#audiovisual-content" class="tocxref"><span class="secno">4.7 </span>Audiovisual Content</a></li>
+          <li class="tocline"><a href="#extensibility" class="tocxref"><span class="secno">4.8 </span>Extensibility</a></li>
+          <li class="tocline"><a href="#alternate-view-modalities" class="tocxref"><span class="secno">4.9 </span>Alternate view modalities</a></li>
+          <li class="tocline"><a href="#timing" class="tocxref"><span class="secno">4.10 </span>Timing</a></li>
+          <li class="tocline"><a href="#user-input" class="tocxref"><span class="secno">4.11 </span>User input</a></li>
+        </ol>
+      </li>
+      <li class="tocline"><a href="#acknowledgments" class="tocxref"><span class="secno">A. </span>Acknowledgments</a>
+        <ol class="toc">
+          <li class="tocline"><a href="#ack_group" class="tocxref"><span class="secno">A.1 </span>Participants in the PFWG at the time of publication</a></li>
+          <li class="tocline"><a href="#ack_funders" class="tocxref"><span class="secno">A.2 </span>Enabling funders</a></li>
+        </ol>
+      </li>
+    </ol>
+  </nav>
+
+  <section id="introduction" typeof="bibo:Chapter" resource="#introduction" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-introduction" resource="#h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Introduction</span>
+    </h2>
+
+    <section id="goals" typeof="bibo:Chapter" resource="#goals" property="bibo:hasPart">
+      <h3 id="h-goals" resource="#h-goals"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.1 </span>Goals</span>
+      </h3>
+      <p>Numerous guidelines exist for creating and supporting content that is accessible to people with disabilities, on and off the Web. When these guidelines are supported in the entire web ecosystem, content creators can author accessible content, and expect the accessibility features to be made available by user agents, including assistive technologies when needed. Authoring tools support creation of accessible content, and accessibility features survive transmission to different systems or conversion of content to different formats.</p>
+      <p>Nearly all of these accessibility features depend on support in some form from the technology in which content is encoded, transmitted, and sometimes transformed. But there is not yet a set of well-documented guidance for such technologies. Instead, requirements are inferred from authoring and user agent guidelines. This makes it complicated for technology creators to ensure they have met the full set of needs. Review from accessibility specialists is limited by bandwidth and expertise, so does not fully address that problem. As a result, varying technologies provide various levels of support with varying levels of compatibility with other technologies. These issues at the core layers of Web technology impact the progress that can be made from support of higher-level guidelines.</p>
+      <p>Web Technology Accessibility Guidelines aims to fill this gap. It is intended to be a single, well-considered set of guidelines addressing specifically the features technologies need to provide to support accessible. These guidelines relate to the requirements of other guidelines but should not be confused with them. The goal of WTAG is to provide a single source of guidelines for Web technology accessibility. They relate to other guidelines and documentation to provide additional information and rationale for the requirement, but are intended to be a self-sufficient set of guidelines that technology creators can follow.</p>
+    </section>
+
+    <section id="audience" typeof="bibo:Chapter" resource="#audience" property="bibo:hasPart">
+      <h3 id="h-audience" resource="#h-audience"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.2 </span>Audience</span>
+      </h3>
+      <p>The primary audience of WTAG is creators of Web technologies. Most of the guidelines relate to content and presentation technologies like HTML, CSS, SVG, PDF, audio/video formats, etc. Some guidelines also address data formats, interchange formats, transmission protocols, etc., usually aimed at ensuring these technologies preserve the accessibility features of content impacted by these technologies. Because of this broad set of relevant technologies, all Web technology creators are considered part of the audience for WTAG.</p>
+      <p>Secondary audience include creators of higher level accessibility guidelines and other advocates for web accessibility features. Because WTAG has a strong grounding in user needs, researchers and advocates who identify the accessibility requirements of web users with disabilities are also an important audience.</p>
+    </section>
+
+    <section id="scope" typeof="bibo:Chapter" resource="#scope" property="bibo:hasPart">
+      <h3 id="h-scope" resource="#h-scope"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.3 </span>Scope</span>
+      </h3>
+      <p>Web Technology Accessibility Guidelines is a product of the World Wide Web Consortium and as such targets only the accessibility requirements of web technologies. Many of the user needs are the same for web use and non-web use, so WTAG will necessarily overlap and hopefully be compatible with similar guidelines addressing non-web space. Nonetheless, WTAG is not designed to be used for non-web technologies and there could be key differences. Furthermore, there are user needs that exist outside the web that do not impact the web, and those needs are completely unaddressed by WTAG.</p>
+      <p>In spite of these caveats about the scope of WTAG, this scope will evolve as the Web does. More and more technologies are becoming part of the Web, and bringing user needs to the Web along with them. For instance, strictly hardware accessibility issues may be non-web requirements, but the Web of Things brings many of these issues closer to the Web than in the past. WTAG will need to reflect this evolution, and future versions may be required to address user needs that are new to the Web.</p>
+    </section>
+
+    <section id="approach" typeof="bibo:Chapter" resource="#approach" property="bibo:hasPart">
+      <h3 id="h-approach" resource="#h-approach"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.4 </span>Approach</span>
+      </h3>
+      <p>The goal of WTAG is to help ensure that web technologies meet the needs of users with disabilities. To do this, the work involves three stages:</p>
+      <ul>
+        <li>Inventory user needs;</li>
+        <li>Identify ways to meet needs;</li>
+        <li>Develop technology guidelines.</li>
+      </ul>
+
+      <section id="inventory-user-needs" typeof="bibo:Chapter" resource="#inventory-user-needs" property="bibo:hasPart">
+        <h4 id="h-inventory-user-needs" resource="#h-inventory-user-needs"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.4.1 </span>Inventory user needs</span>
+        </h4>
+        <p>The first step in the development of these guidelines is to inventory known user needs. Many user needs affecting web content accessibility are well known and documented in multiple places. These needs are collected and related to each other in order to arrive at a single set of known needs. Sources examined in the development of these guidelines include:</p>
+        <ul>
+          <li><a href="http://www.jtc1access.org/documents/swga_339_DTR_29138-1_User_Needs_Summary.zip">JTC 1 User Needs</a>;
+          </li>
+          <li><a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a>;</li>
+          <li><a href="http://www.w3.org/TR/UAAG20/">UAAG 2.0</a>;</li>
+          <li><a href="http://www.w3.org/TR/ATAG20/">ATAG 2.0</a>;</li>
+          <li><a href="https://www.w3.org/WAI/GL/mobile-a11y-tf/wiki/Main_Page">Mobile gap analysis</a>;</li>
+          <li><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">Cognitive gap analyses</a>;</li>
+          <li><a href="http://www.w3.org/TR/media-accessibility-reqs/">Media Accessibility User Requirements</a>;</li>
+          <li> Sources from other advocacy organizations.</li>
+        </ul>
+        <div class="note">
+          <div class="note-title marker" aria-level="5" role="heading" id="h-note1"><span>Note</span></div>
+          <p class="">Note the goal of this exercise is not to supplant other good work in this field. The aim is to assemble disparate sources if knowledge about user needs in one place, to facilitate analysis. This work is likely to spin off from the core work of developing WTAG. If another organization creates a sufficiently rich collection of documented user needs it will be possible to use that resource rather than reinvent the work in <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+        </div>
+      </section>
+
+      <section id="identify-ways-to-meet-needs" typeof="bibo:Chapter" resource="#identify-ways-to-meet-needs" property="bibo:hasPart">
+        <h4 id="h-identify-ways-to-meet-needs" resource="#h-identify-ways-to-meet-needs"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.4.2 </span>Identify ways to meet needs</span>
+        </h4>
+        <p>The second stage in development of the guidelines is to identify ways these needs can be met. There are three high-level ways user needs can be met:</p>
+        <ul>
+          <li>technology features;</li>
+          <li>author implementation;</li>
+          <li>user agent support.</li>
+        </ul>
+        <p>These are not mutually exclusive categories. A given user need could be met by more than one of these categories, but the ability of a given category to meet a user need implies the need for guidelines targeting that category. In policy setting and evaluation there may be a preference hierarchy for how best to meet needs, e.g., user agent support of standard features is preferred, but author technical override is needed if user agent support is lacking. </p>
+        <p>Some needs can be met with present technology only via one of these routes. Other needs can be met by more than one route, and for content to be accessible it is only required that one of the available routes be implemented. Many needs, however, require more than one route to be implemented together for the need to be met. The most common example is that a technology provides a feature, the author uses that feature in the content, and the user agent makes the result available to the user.</p>
+        <p>All of these ways of meeting user needs are identfied, along with their relationships to each other. Once these approaches are identified, the result is separate lists of requirements for content technologies, authors, and user agents. The relationship among the routes may play a role in prioritization of guidelines, since needs that can only be met by one route may be more important to meet by that route, than needs that could be met by other means as well.</p>
+      </section>
+
+      <section id="develop-technology-guidelines" typeof="bibo:Chapter" resource="#develop-technology-guidelines" property="bibo:hasPart">
+        <h4 id="h-develop-technology-guidelines" resource="#h-develop-technology-guidelines"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.4.3 </span>Develop technology guidelines</span>
+        </h4>
+        <p>From the above analyses, it should also be easy to see where content technology features are required to make it possible to meet user needs. For example: </p>
+        <ul>
+          <li> If the author must implement something, the technology must provide a feature for the author to implement. </li>
+          <li> If the user need is met by design, the technology must provide suitably rich design capabilities. </li>
+          <li> If the user need is met by user agents, the technology must provide a sufficiently rich definition of the object for user agents to implement. </li>
+        </ul>
+        <p>Not all technologies will address all ways of meeting user needs. For instance, CSS is primarily design-oriented, and HTML is somewhat semantics-oriented. The technology requirements may need conformance profiles or some other way of guiding technology developers seeking to follow them. It may not be easy to state in a general prescriptive way whether a given technology should, for instance, provide a richer design capability to meet a user need or should instead rely on better semantics for assistive technology-oriented content alternatives. A good structure of the technology requirements should help make it clear that <i>some</i> method of meeting a given user need is important. Horizontal review may continue to be important in guiding technology developers through the possibilities. </p>
+        <p>The set of approaches to meeting user needs that affects technology features becomes the base information for the Web Technology Accessibility Guidelines. (The other two routes, while important to the analysis, are not directly relevant to WTAG but may inform other work.) These approaches are prioritized, organized, and translated into guidelines-type language to become the Web Technology Accessibility Guidelines.</p>
+        <p>With the above analyses done, it should be easy to see how current guidelines address which user needs. In turn it should be easy to see where current guidelines to not meet user needs, that in theory should be able to be met by activities within the remit of that set of guidelines. This should be important input into WAI 3.0 / WAI 2020 planning.</p>
+      </section>
+    </section>
+
+    <section id="explanation-of-user-needs" typeof="bibo:Chapter" resource="#explanation-of-user-needs" property="bibo:hasPart">
+      <h3 id="h-explanation-of-user-needs" resource="#h-explanation-of-user-needs"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.5 </span>Explanation of User Needs</span>
+      </h3>
+      <!--
+				<figure>
+					<img src="img/usability-accessibility.png" xmlns="http://www.w3.org/1999/xhtml"/>
+					<figcaption>Accessibility needs become mainstream needs over time</figcaption>
+				</figure>
+				-->
+      <p>Identify user needs that we plan to provide guidance on meeting. These should describe the needs of humans as they currently exist (i.e., without significant evolution or cyborgization from early 21st century norms), and therefore is as era-independent as possible with current knowledge. The focus is on the needs of people with disabilities, but because that is sometimes a relative / contextual condition, a significant proportion of mainstream needs will also be identified. </p>
+      <p>At least two levels of needs may be identified. The first is truly generic needs, requirements users have to access and use content such as perceive and understand it, and should be stable over time. The second layer is needs specific to technologies of the day, such as ability to understand and operate controls. This layer may be understood as an implementation of the generic needs, so may not be classed as user needs in the end. Regardless of its classification, it will be an important component of understanding the space. This level of needs evolves as technology and design patterns do, so needs to be maintainable separately from the generic needs. </p>
+
+      <section id="evolution-of-user-needs" typeof="bibo:Chapter" resource="#evolution-of-user-needs" property="bibo:hasPart">
+        <h4 id="h-evolution-of-user-needs" resource="#h-evolution-of-user-needs"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.5.1 </span>Evolution of user needs</span>
+        </h4>
+        <p>Where user needs are suspected but known, related work may expand the inventory through research when feasible. Therefore the set of documented user needs will evolve over time. A given set of guidelines including WTAG, however, can only address needs that were known at the time of development of the guidelines.</p>
+      </section>
+
+      <section id="assumptions" typeof="bibo:Chapter" resource="#assumptions" property="bibo:hasPart">
+        <h4 id="h-assumptions" resource="#h-assumptions"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.5.2 </span>Assumptions </span>
+        </h4>
+        <ul>
+          <li> User is accessing Web content on hardware / OS / AT combination that supports their needs. This may not always be true for shared device / public kiosk situations, but that issue is out of scope. </li>
+        </ul>
+      </section>
+
+      <section id="applicability-of-needs" typeof="bibo:Chapter" resource="#applicability-of-needs" property="bibo:hasPart">
+        <h4 id="h-applicability-of-needs" resource="#h-applicability-of-needs"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.5.3 </span>Applicability of Needs </span>
+        </h4>
+        <ul>
+          <li> Content </li>
+          <li> Controls (buttons, fields, etc.) </li>
+          <li> Input indicators (mouse, keyboard cursors) </li>
+          <li> Signals (non-actionable state indicators) </li>
+          <li> Alerts (dialogs, alarms, etc.) </li>
+        </ul>
+      </section>
+    </section>
+  </section>
+
+  <section id="collected-user-needs" typeof="bibo:Chapter" resource="#collected-user-needs" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-collected-user-needs" resource="#h-collected-user-needs"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Collected User Needs</span>
+    </h2>
+    <p>This is a <b>draft</b> user needs collection. It may or may not be prove desirable to prioritize needs in order to yield manageable sets. These needs will be cross-referenced to authoritative sources that also express the same requirement. </p>
+    <p>In the list below, there may be overlap between user needs, and known ways to meet user needs. These will need to be teased out over the course of the project.</p>
+    <ul>
+      <li> Content perceivable in form other than produced by author
+        <ul>
+          <li> Alternate content can be provided
+            <ul>
+              <li> Text alternatives </li>
+              <li> Visual alternative</li>
+              <li> Auditory alternative</li>
+              <li> Tactile alternative</li>
+            </ul>
+          </li>
+          <li> Content encoded in manner that permits machine transformation </li>
+          <li> Different alternate content for different signals</li>
+          <li> Alternate content findable
+            <ul>
+              <li> In same time and location as control </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li> Enable direct perception of output for people with wide range of perception disabilities
+        <ul>
+          <li> Visual presentation perceivable across a range of vision impairments
+            <ul>
+              <li> Luminosity contrast sufficient </li>
+              <li> Hue contrast sufficient for certain color perception disorders </li>
+              <li> Pointers and cursors can be perceived
+                <ul>
+                  <li> Resize </li>
+                  <li> Recolor </li>
+                  <li> Reshape </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li> On-request location indicator
+        <ul>
+          <li> Auditory content perceivable for audio cues., 5.8 Sufficient quality (e.g. volume, direction, clarity, frequency) for audio feedback.)
+            <ul>
+              <li> Volume </li>
+              <li> Direction </li>
+              <li> Clarity </li>
+              <li> Frequency </li>
+            </ul>
+          </li>
+          <li> Tactile indications perceivable (not web? But probably will be)
+            <ul>
+              <li> Distinct enough to accommodate reduced sensitivity </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li> Adjustability of output
+        <ul>
+          <li> Visual presentation can be adjusted to meet needs of user
+            <ul>
+              <li> Text can be resized
+                <ul>
+                  <li> Content format allows resize </li>
+                  <li> Author provides resize feature </li>
+                </ul>
+              </li>
+              <li> Resize of text does not break presentation
+                <ul>
+                  <li> Layout resizes with text (zoom) </li>
+                  <li> Layout self-adjusts to text resizes (reflow) (not fixed units) </li>
+                </ul>
+              </li>
+              <li> Color scheme can be changed
+                <ul>
+                  <li> Content format defines color style scheme that user or user agent can override </li>
+                  <li> Author provides color switch options </li>
+                </ul>
+              </li>
+              <li> Luminosity contrast can be changed
+                <ul>
+                  <li> User agent exaggerates luminosity differences </li>
+                  <li> Author provides color switch options </li>
+                </ul>
+              </li>
+              <li> Typeface, font weight, font style can be changed </li>
+              <li> Line / word / letter spacing can be changed </li>
+              <li> Margins can be changed </li>
+              <li> Line length can be changed </li>
+              <li> Justification can be changed </li>
+            </ul>
+          </li>
+          <li> Auditory content can be adjusted to meet needs of user
+            <ul>
+              <li> User can adjust volume level </li>
+              <li> Contrast between foreground and background audio is sufficient </li>
+              <li> Unnecessary background audio can be muted separately from the foreground audio </li>
+            </ul>
+          </li>
+          <li> User can control time-based media
+            <ul>
+              <li> User can pause, stop, replay media </li>
+            </ul>
+          </li>
+          <li> Send output to alternate device, for better accessibility or to manage security / privacy in public space to manage overhearing / looking over shoulder of large print </li>
+        </ul>
+      </li>
+      <li> User can navigate content effectively
+        <ul>
+          <li> Useful navigation order [also relates to efficient usage] </li>
+          <li> Structured audio </li>
+          <li> Navigation supports different thinking styles </li>
+        </ul>
+      </li>
+      <li> Meaning conveyed by style perceivable to users that is presented through color to be also presented in another way that does not rely on color.)
+        <ul>
+          <li> Author provides multiple redundant style cues </li>
+          <li> Meaning supported by programmatically determined semantics </li>
+        </ul>
+      </li>
+      <li> Input is device independent
+        <ul>
+          <li> Input does not require pointing device </li>
+          <li> Support keyboard input with only visual feedback.) </li>
+          <li> Allow speech input </li>
+          <li> Input does not require speech input </li>
+        </ul>
+      </li>
+      <li> Enable input for users with wide range of abilities
+        <ul>
+          <li> Do not require simultaneous actions </li>
+          <li> Do not require precision in movement </li>
+          <li> Allow input with different parameters for speed, acceleration, etc. </li>
+        </ul>
+      </li>
+      <li> User can manage distractions
+        <ul>
+          <li> Autoplay of any moving content can be prevented </li>
+          <li> Blinking or movement can be easily stopped </li>
+          <li> Layout helps user find important content </li>
+          <li> Cursor blinking can be turned off </li>
+        </ul>
+      </li>
+      <li> User can avoid personal risk
+        <ul>
+          <li> Photosensitive seizures
+            <ul>
+              <li> Flash can be prevented </li>
+              <li> Content with flash can be reliably warned in advance and avoided </li>
+              <li> Unexpected flash can be immediately stopped </li>
+            </ul>
+          </li>
+          <li> Audiosensitive seizures
+            <ul>
+              <li> @@ triggering condition can be prevented </li>
+              <li> Content with @@ triggering condition can be reliably warned in advance and avoided </li>
+              <li> Unexpected @@ triggering condition can be immediately stopped </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li> Important alerts can reach the user quickly
+        <ul>
+          <li> Multi-frequency audio </li>
+          <li> Vibration ) </li>
+        </ul>
+      </li>
+      <li> Users can discover content on the page
+        <ul>
+          <li> Headings identify regions of content </li>
+          <li> Regions of content are programmatically determined </li>
+          <li> User can skip to main content </li>
+          <li> Controls and their functions are programmatically determined </li>
+          <li> Controls have contrast with their surroundings </li>
+          <li> Location of controls is predictable </li>
+        </ul>
+      </li>
+      <li> Support users with instructions (@@overlaps with understand, avoid confusion)
+        <ul>
+          <li> Instructions for accessible interaction </li>
+        </ul>
+      </li>
+      <li> Users can understand content, navigation, and available interactions
+        <ul>
+          <li> Description of layout available (WCAG @@ Table Summary)
+            <ul>
+              <li> Description does not depend on specific sensory characteristics </li>
+            </ul>
+          </li>
+          <li> Simple wording in instructions </li>
+          <li> Use standard icon / design / description conventions .) </li>
+          <li> Don’t require hierarchical thinking </li>
+          <li> Clear instructions for interaction </li>
+        </ul>
+      </li>
+      <li> Users are not confused
+        <ul>
+          <li> Style does not imply perceived affordance of non-actionable features </li>
+          <li> Not confused with non-indicating tactile objects </li>
+          <li> Predictability / consistency of design
+            <ul>
+              <li> Objects don’t change their function </li>
+            </ul>
+          </li>
+          <li> Minimize reliance on user short-term memory </li>
+          <li> Provide guidance for multi-step processes </li>
+          <li> Simplified interface available </li>
+        </ul>
+      </li>
+      <li> Do not require specific physical characteristics (non-web? Handedness, having hands, etc.)
+        <ul>
+          <li> Alternative biometric identification </li>
+        </ul>
+      </li>
+      <li> Avoid errors
+        <ul>
+          <li> Avoid accidental activation of controls
+            <ul>
+              <li> Due to tremors etc. </li>
+              <li>Due to overly small and proximate controls</li>
+              <li>Due to design confusion</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li> Recover from errors
+        <ul>
+          <li> Notification when error detected </li>
+          <li> Instructions on error recovery </li>
+          <li> Ability to correct error </li>
+          <li> Ability to redo task </li>
+        </ul>
+      </li>
+      <li> Complete time-sensitive tasks
+        <ul>
+          <li> Ability to complete task in allotted time
+            <ul>
+              <li> Support ability to plan task execution strategy </li>
+              <li> Avoid distractions (see separate topic) </li>
+            </ul>
+          </li>
+          <li> Ability to extend time
+            <ul>
+              <li> More time to read </li>
+              <li> More time to complete task </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li> Support efficient usage
+        <ul>
+          <li> Change characteristics (speed, voice, pitch, accent) of audio alternatives </li>
+          <li> Provide accessibility preferences that take effect immediately </li>
+          <li> Persistent preferences across sessions </li>
+          <li> Clear accessibility feature settings </li>
+        </ul>
+      </li>
+      <li> Don’t override accessibility features
+        <ul>
+          <li> Preferences, e.g., typeface, color, size, layout, volume, contrast…) </li>
+          <li> Preferences return to default state when switching users [not web?] </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="meeting-user-needs" typeof="bibo:Chapter" resource="#meeting-user-needs" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-meeting-user-needs" resource="#h-meeting-user-needs"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>Meeting User Needs</span>
+    </h2>
+    <div class="note">
+      <div class="note-title marker" aria-level="3" role="heading" id="h-note2"><span>Note</span></div>
+      <p class="">This is a preliminary draft to document how user needs are met in various ways. </p>
+    </div>
+    <p>For each user need, ways to meet it are proposed for: </p>
+    <ul>
+      <li> Technologies </li>
+      <li> Content Authors </li>
+      <li> User Agents </li>
+    </ul>
+    <p>Other categories may be included later. Many user needs can be met in more than one way. The mechanism to meet user needs in one of the above areas may require support from one or more of the other areas. </p>
+
+    <section id="ways-to-meet-user-needs" typeof="bibo:Chapter" resource="#ways-to-meet-user-needs" property="bibo:hasPart">
+      <h3 id="h-ways-to-meet-user-needs" resource="#h-ways-to-meet-user-needs"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1 </span>Ways to Meet User Needs</span>
+      </h3>
+      <p>User needs need to be analyzed for how they can be met. The following ways of meeting needs are currently understood: </p>
+      <ul>
+        <li> Author design </li>
+        <li> Author technical implementation </li>
+        <li> User agent accessibility support of standard features </li>
+        <li> User agent support of author-implemented accessibility features </li>
+        <li> Assistive technology support (including accessibility API mediation) </li>
+      </ul>
+
+      <section id="author-implementation" typeof="bibo:Chapter" resource="#author-implementation" property="bibo:hasPart">
+        <h4 id="h-author-implementation" resource="#h-author-implementation"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1.1 </span>Author Implementation</span>
+        </h4>
+      </section>
+
+      <section id="user-agent-features" typeof="bibo:Chapter" resource="#user-agent-features" property="bibo:hasPart">
+        <h4 id="h-user-agent-features" resource="#h-user-agent-features"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1.2 </span>User Agent Features</span>
+        </h4>
+
+        <section id="accessibility-support-in-mainstream-user-agents" typeof="bibo:Chapter" resource="#accessibility-support-in-mainstream-user-agents" property="bibo:hasPart">
+          <h5 id="h-accessibility-support-in-mainstream-user-agents" resource="#h-accessibility-support-in-mainstream-user-agents"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1.2.1 </span>Accessibility Support in Mainstream User Agents</span>
+          </h5>
+        </section>
+
+        <section id="assistive-technology" typeof="bibo:Chapter" resource="#assistive-technology" property="bibo:hasPart">
+          <h5 id="h-assistive-technology" resource="#h-assistive-technology"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1.2.2 </span>Assistive Technology</span>
+          </h5>
+        </section>
+
+        <section id="accessibility-apis" typeof="bibo:Chapter" resource="#accessibility-apis" property="bibo:hasPart">
+          <h5 id="h-accessibility-apis" resource="#h-accessibility-apis"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1.2.3 </span>Accessibility APIs</span>
+          </h5>
+        </section>
+      </section>
+    </section>
+
+    <section id="meeting-user-needs-table" typeof="bibo:Chapter" resource="#meeting-user-needs-table" property="bibo:hasPart">
+      <h3 id="h-meeting-user-needs-table" resource="#h-meeting-user-needs-table"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2 </span>Meeting User Needs Table</span>
+      </h3>
+      <div class="note">
+        <div class="note-title marker" aria-level="4" role="heading" id="h-note3"><span>Note</span></div>
+        <p class="">This version of the resource is primarily to show the structure, not yet a comprehensive documentation of how user needs can be met. </p>
+      </div>
+      <p>The table below shows how two of the user needs identified above might be met by technology features, author implementation, and user agent support. Each row of the table shows a related set of approaches, in which the approach in column depends on successful implementation of the approaches in the other columns for that row. For instance, many author features depend on support from the technology as well as exposure from the user agents. Some approaches to meeting user needs do not require support from others, which is reflected by rows with blank columns. For instance, it is possible for a user agent to meet certain needs with no particular support provided by the technology or author. This layout is preliminary and a more expressive layout is sought.</p>
+      <table>
+        <thead>
+          <tr>
+            <th> User Need </th>
+            <th> Technology </th>
+            <th> Content Author </th>
+            <th> User Agent </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowspan="2" scope="rowgroup"> Text Alternatives </th>
+            <td>Provide a mechanism for author to create text alternatives and associate with content </td>
+            <td>Create text alternative content and associate with primary content using features of the content technology</td>
+            <td>Expose text alternatives provided by the author </td>
+          </tr>
+          <tr>
+            <td>Define parseable and semantically rich content encoding that supports automated creation of text alternatives</td>
+            <td>Encode content using a content technology that is sufficiently rich that machines can create useful automated text alternatives</td>
+            <td>Create automated text alternative content based on the semantics of the primary content</td>
+          </tr>
+          <tr>
+            <th rowspan="6" scope="rowgroup"> Color Contrast </th>
+            <td>Provide color definition features that allow authors to set colors to meet requirements </td>
+            <td>Use only colors that meet luminosity contrast guidelines </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td>Provide color definition features that allow users to override author-set colors </td>
+            <td> </td>
+            <td>Provide a feature for users to override author colors </td>
+          </tr>
+          <tr>
+            <td>Provide color definition semantics that allow colors of common object types to be globally remapped easily </td>
+            <td>Use semantically defined color mappings to allow user global preferences to be easily applied </td>
+            <td>Support semantically defined color mappings to allow users to define global preferences that are easily applied across a range of content </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Provide a feature to allow users to define their own color preferences </td>
+            <td> </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Provide a feature to allow users to request "high contrast" mode </td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Provide a "high contrast" mode that overrides author colors</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+  <section id="web-technology-accessibility-guidelines" typeof="bibo:Chapter" resource="#web-technology-accessibility-guidelines" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-web-technology-accessibility-guidelines" resource="#h-web-technology-accessibility-guidelines"><span property="xhv:role" resource="xhv:heading"><span class="secno">4. </span>Web Technology Accessibility Guidelines</span>
+    </h2>
+    <div class="note">
+      <div class="note-title marker" aria-level="3" role="heading" id="h-note4"><span>Note</span></div>
+      <p class="">The content below is merely initial draft content intended to show how guidelines aimed at web technology developers might look. It has not yet been related to the user needs and ways of meeting them outlined above. It serves as initial brainstorming to help demonstrate viability of this set of guidelines.</p>
+    </div>
+
+    <section id="alternative-content" typeof="bibo:Chapter" resource="#alternative-content" property="bibo:hasPart">
+      <h3 id="h-alternative-content" resource="#h-alternative-content"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.1 </span>Alternative Content</span>
+      </h3>
+      <ul>
+        <li> Provide a way to explicitly mark content as not needing alternative content because it does not perform an important role. </li>
+        <li> Provide a way to explicitly indicate when author declined to provide alternative content. </li>
+        <li> Provide a way to explicitly indicate that authoring tool is unable to generate or obtain alternative content. </li>
+        <li> Provide a way to explicitly associate alternative content with the primary content. </li>
+        <li> Allow multiple types and instances of alternative content to be associated with primary content. </li>
+      </ul>
+
+      <section id="text-alternatives" typeof="bibo:Chapter" resource="#text-alternatives" property="bibo:hasPart">
+        <h4 id="h-text-alternatives" resource="#h-text-alternatives"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.1.1 </span>Text Alternatives</span>
+        </h4>
+        <ul>
+          <li> Provide a way to define short text alternatives / labels for non-text content. </li>
+          <li> Provide a way to define long text alternatives for non-text content. </li>
+          <li> Allow text alternatives to be semantically "rich" e.g., with page structure, text style, hyperlinks, etc. </li>
+        </ul>
+      </section>
+
+      <section id="rich-alternatives" typeof="bibo:Chapter" resource="#rich-alternatives" property="bibo:hasPart">
+        <h4 id="h-rich-alternatives" resource="#h-rich-alternatives"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.1.2 </span>Rich Alternatives</span>
+        </h4>
+        <ul>
+          <li> Provide a way to define non-text alternatives for text content. </li>
+          <li> Provide a way to define non-text alternatives for non-text content . </li>
+        </ul>
+      </section>
+    </section>
+
+    <section id="color" typeof="bibo:Chapter" resource="#color" property="bibo:hasPart">
+      <h3 id="h-color" resource="#h-color"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.2 </span>Color</span>
+      </h3>
+      <ul>
+        <li> Allow users to override colors of text and user interface components. </li>
+        <li> Provide a feature for authors to define semantically available "color classes" that users can easily map to custom colors, and give preference to this vs. coloring objects individually. </li>
+        <li> Provide a feature for users to choose color schemata that work for them. </li>
+        <li> Ensure that the foreground and background color of an object can be reported to the user via AT. </li>
+        <li> Provide ways to set foreground and background colors separately for all objects. </li>
+        <li> Define compositing rules for foreground and background colors well. </li>
+        <li> @@similar for patterns, gradients, etc. </li>
+      </ul>
+    </section>
+
+    <section id="device-independence" typeof="bibo:Chapter" resource="#device-independence" property="bibo:hasPart">
+      <h3 id="h-device-independence" resource="#h-device-independence"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.3 </span>Device Independence</span>
+      </h3>
+      <ul>
+        <li> Define a conformance model sufficiently robust that implementations of all types can process content without variations due to different handling of conformance violations. </li>
+      </ul>
+
+      <section id="universal-meaning-support" typeof="bibo:Chapter" resource="#universal-meaning-support" property="bibo:hasPart">
+        <h4 id="h-universal-meaning-support" resource="#h-universal-meaning-support"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.3.1 </span>Universal meaning support</span>
+        </h4>
+        <ul>
+          <li> Provide declarative mechanisms (that have accessibility semantics pre-defined in the spec) to implement technology features whenever possible. </li>
+          <li> Define unambiguous ways to express relationships between units of content, such as object nesting, ID referencing, etc. </li>
+          <li> Prefer structural semantics to presentational semantics. </li>
+          <li> When providing presentational semantics, define ways they can be easily mapped to structural semantics, e.g., to support restyling or meaningful exposure to AAPIs. </li>
+          <li> Minimize the need for alternative content by supporting a comprehensive set of authoring use cases. (e.g., don't make authors resort to text in images to get the style they want) </li>
+        </ul>
+      </section>
+
+      <section id="compatibility-with-aapis" typeof="bibo:Chapter" resource="#compatibility-with-aapis" property="bibo:hasPart">
+        <h4 id="h-compatibility-with-aapis" resource="#h-compatibility-with-aapis"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.3.2 </span>Compatibility with AAPIs</span>
+        </h4>
+        <ul>
+          <li> For every user interface object type, define the "type" of object as a role to AAPIs. </li>
+          <li> For every user interface object type, define how authors provide or user agent determines the "accessible name" for AAPIs. </li>
+          <li> For user interface objects that can have states, properties, or values, define how authors can set these and how these are exposed to AAPIs. </li>
+          <li> When providing imperative mechanisms to implement technology features (e.g., scripts), provide a way for authors to expose accessibility information to AAPIs. </li>
+          <li> Provide a way to title Web pages and sections of content. </li>
+          <li> Provide a way to clearly indicate the target of a hyperlink and function of a control. </li>
+          <li> Provide a way to indicate content language, for the page as a whole and for blocks of content. </li>
+          <li> Provide a way for authors to support understanding of abbreviations / acronyms / initialisms, idioms, jargon, etc. </li>
+          <li> Provide a mechanism to support correct machine pronunciation of ambiguously spelled terms (e.g., in the phrase "I am content with this content" there are different correct pronunciations of the lexeme "content"). </li>
+        </ul>
+      </section>
+
+      <section id="hardware-interfaces" typeof="bibo:Chapter" resource="#hardware-interfaces" property="bibo:hasPart">
+        <h4 id="h-hardware-interfaces" resource="#h-hardware-interfaces"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.3.3 </span>Hardware Interfaces</span>
+        </h4>
+        <ul>
+          <li> Abstract hardware interfaces so various device types can simulate each others' functions. </li>
+          <li> Always provide a keyboard interface to interact with content. </li>
+        </ul>
+      </section>
+    </section>
+
+    <section id="user-customization" typeof="bibo:Chapter" resource="#user-customization" property="bibo:hasPart">
+      <h3 id="h-user-customization" resource="#h-user-customization"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.4 </span>User Customization</span>
+      </h3>
+      <ul>
+        <li> Provide ways for display of content to be resized without loss of effective layout. </li>
+        <li> Define adaptive layout mechanisms that optimize for different display conditions (screen size, font size, lighting, noise, etc.) well. </li>
+        <li> Separate layout semantics from content so users or tools can easily create alternate layouts. </li>
+        <li> Provide ways for users to easily select font preferences (size, weight, family, specific typeface, etc.). </li>
+        <li> Provide mechanisms for users to easily apply custom display requirements that preserve presentation of meaning without knowledge the idiosyncratic implementation of content. </li>
+      </ul>
+    </section>
+
+    <section id="user-control" typeof="bibo:Chapter" resource="#user-control" property="bibo:hasPart">
+      <h3 id="h-user-control" resource="#h-user-control"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5 </span>User Control</span>
+      </h3>
+
+      <section id="blinking-flashing" typeof="bibo:Chapter" resource="#blinking-flashing" property="bibo:hasPart">
+        <h4 id="h-blinking-flashing" resource="#h-blinking-flashing"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5.1 </span>Blinking / Flashing</span>
+        </h4>
+        <ul>
+          <li> Define a mechanism to warn users of flashing content. </li>
+          <li> Define a mechanism to identify potentially flashing content to user agents so they can suppress it on user preference. </li>
+          <li> Define declarative mechanisms for features that could cause blinking or flashing so their parameters can be more easily controlled by user agents than imperative mechanisms. </li>
+        </ul>
+      </section>
+
+      <section id="automatic-actions" typeof="bibo:Chapter" resource="#automatic-actions" property="bibo:hasPart">
+        <h4 id="h-automatic-actions" resource="#h-automatic-actions"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5.2 </span>Automatic actions</span>
+        </h4>
+        <ul>
+          <li> Provide a way for users to prevent time-based content from playing automatically, e.g., as a user agent preference that implementations must provide. </li>
+          <li> Provide a way for users to request no interruptions. Note, bona fide emergency interruptions should still be allowed. </li>
+          <li> Define that there will be not automatic action leading to a change of context when focus lands on a given element. </li>
+        </ul>
+      </section>
+
+      <section id="time-based-content" typeof="bibo:Chapter" resource="#time-based-content" property="bibo:hasPart">
+        <h4 id="h-time-based-content" resource="#h-time-based-content"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.5.3 </span>Time-based content</span>
+        </h4>
+        <ul>
+          <li> Provide a way for users to pause and stop time-based content. </li>
+          <li> Provide a way for users to start or restart time-based content. </li>
+        </ul>
+      </section>
+    </section>
+
+    <section id="focus" typeof="bibo:Chapter" resource="#focus" property="bibo:hasPart">
+      <h3 id="h-focus" resource="#h-focus"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.6 </span>Focus</span>
+      </h3>
+      <ul>
+        <li> Any object that can respond to user interaction must be capable of receiving keyboard focus and actuating from keyboard input. </li>
+        <li> Common objects defined by the technology should be specified to be focusable by default. </li>
+        <li> Provide a means for authors to make objects focusable explicitly. </li>
+        <li> Define a complete focus movement model including cycling past the end, recovering from unexpectedly lost focus, etc. so they keyboard focus is always somewhere meaningful and findable. </li>
+        <li> Provide sensory and programmatic indication of focus location at all times. </li>
+        <li> If allowing authors to restyle focus indicators, provide a mechanism for users to override, particularly to "unhide" focus indicators. </li>
+      </ul>
+    </section>
+
+    <section id="audiovisual-content" typeof="bibo:Chapter" resource="#audiovisual-content" property="bibo:hasPart">
+      <h3 id="h-audiovisual-content" resource="#h-audiovisual-content"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.7 </span>Audiovisual Content</span>
+      </h3>
+      <ul>
+        <li> Provide a mechanism to associate synchronized text tracks with audio or visual tracks (to support captions, subtitles). </li>
+        <li> Provide support for at least two audio tracks so volume of foreground and background audio can be set separately. </li>
+      </ul>
+    </section>
+
+    <section id="extensibility" typeof="bibo:Chapter" resource="#extensibility" property="bibo:hasPart">
+      <h3 id="h-extensibility" resource="#h-extensibility"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.8 </span>Extensibility</span>
+      </h3>
+      <ul>
+        <li> When providing extension mechanisms, ensure the tools exist to allow developers to provide the same level of accessibility in extensions that are possible in the root technology. This may involve exposing API methods or other properties that would otherwise not be needed. </li>
+        <li> Allow extensions to intersect so accessibility features in one extension can automatically work in others. </li>
+      </ul>
+    </section>
+
+    <section id="alternate-view-modalities" typeof="bibo:Chapter" resource="#alternate-view-modalities" property="bibo:hasPart">
+      <h3 id="h-alternate-view-modalities" resource="#h-alternate-view-modalities"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.9 </span>Alternate view modalities</span>
+      </h3>
+      <ul>
+        <li> Provide ways for linear (1-dimensional) presentations of content to presented in a different subjective order than graphical (2-dimensional) presentations. </li>
+        <li> Provide ways for focus order to adapt to presentation order in order to remain meaningful. </li>
+        <li> @@support for haptic and other modalities? </li>
+      </ul>
+    </section>
+
+    <section id="timing" typeof="bibo:Chapter" resource="#timing" property="bibo:hasPart">
+      <h3 id="h-timing" resource="#h-timing"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.10 </span>Timing</span>
+      </h3>
+      <ul>
+        <li> Do not create time limitations on user interaction (e.g., actuate a default behavior if the user does not respond within a set window) unless such limitations are intrinsic to the functionality. </li>
+        <li> When creating time limitations on user interaction, provide mechanisms for users to be informed in advance of those limitations. </li>
+        <li> When creating time limitations on user interaction, provide a way for users to request additional time. </li>
+        <li> Provide an interface between content and servers so users can be informed of and request changes to time limitations of the server. </li>
+      </ul>
+    </section>
+
+    <section id="user-input" typeof="bibo:Chapter" resource="#user-input" property="bibo:hasPart">
+      <h3 id="h-user-input" resource="#h-user-input"><span property="xhv:role" resource="xhv:heading"><span class="secno">4.11 </span>User input</span>
+      </h3>
+      <ul>
+        <li> Provide ways to indicate if user input controls must have input ("required") or not accepting input ("disabled"). </li>
+        <li> Provide a way to associate information about input validation errors with the specific control(s) with input problems. </li>
+        <li> Provide a way for authors to provide context-sensitive help to users, and for users to access this via standard user agent features. </li>
+      </ul>
+    </section>
+  </section>
+
+  <section class="appendix" id="acknowledgments" typeof="bibo:Chapter" resource="#acknowledgments" property="bibo:hasPart">
+    <!--OddPage-->
+    <h2 id="h-acknowledgments" resource="#h-acknowledgments"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>Acknowledgments</span>
+    </h2>
+    <p>The following people contributed to the development of this document.</p>
+
+    <section id="ack_group" typeof="bibo:Chapter" resource="#ack_group" property="bibo:hasPart">
+      <h3 id="h-ack_group" resource="#h-ack_group"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.1 </span>Participants in the PFWG at the time of publication</span>
+      </h3>
+      <ol>
+        <li>David Bolter (Mozilla) </li>
+        <li>Sally Cain (Royal National Institute of Blind People)</li>
+        <li>Michael Cooper (<abbr title="World Wide Web Consortium">W3C</abbr>/<abbr title="Massachusetts Institute of Technology">MIT</abbr>)</li>
+        <li>James Craig (Apple Inc.) </li>
+        <li>Steve Faulkner (Invited Expert, The Paciello Group) </li>
+        <li>Geoff Freed (Invited Expert, NCAM)</li>
+        <li>Jon Gunderson (Invited Expert, UIUC)</li>
+        <li>Markus Gylling (DAISY Consortium)</li>
+        <li>Sean Hayes (Microsoft Corporation)</li>
+        <li>Kenny Johar (Vision Australia) </li>
+        <li>Matthew King (IBM Corporation)</li>
+        <li>Gez Lemon (International Webmasters Association / HTML Writers Guild (IWA-HWG))</li>
+        <li>Thomas Logan (HiSoftware Inc.)</li>
+        <li>William Loughborough (Invited Expert)</li>
+        <li>Shane McCarron (Invited Expert, Aptest)</li>
+        <li>Charles McCathieNevile (Opera Software)</li>
+        <li>Mary Jo Mueller (IBM Corporation)</li>
+        <li>James Nurthen (Oracle Corporation) </li>
+        <li>Joshue O'Connor (Invited Expert) </li>
+        <li>Artur Ortega (Yahoo!, Inc.)</li>
+        <li>Sarah Pulis (Media Access Australia)</li>
+        <li>Gregory Rosmaita (Invited Expert)</li>
+        <li>Janina Sajka (Invited Expert, The Linux Foundation)</li>
+        <li>Joseph Scheuhammer (Invited Expert, Inclusive Design Research Centre, OCAD University) </li>
+        <li>Stefan Schnabel (SAP AG) </li>
+        <li>Richard Schwerdtfeger (IBM Corporation)</li>
+        <li>Lisa Seeman (Invited Expert, Aqueous) </li>
+        <li>Cynthia Shelly (Microsoft Corporation) </li>
+        <li>Andi Snow-Weaver (IBM Corporation)</li>
+        <li>Gregg Vanderheiden (Invited Expert, Trace)</li>
+        <li>Léonie Watson (Invited Expert, Nomensa)</li>
+        <li>Gottfried Zimmermann (Invited Expert, Access Technologies Group)</li>
+      </ol>
+    </section>
+
+    <section id="ack_funders" typeof="bibo:Chapter" resource="#ack_funders" property="bibo:hasPart">
+      <h3 id="h-ack_funders" resource="#h-ack_funders"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.2 </span>Enabling funders</span>
+      </h3>
+      <p>This publication has been funded in part with Federal funds from the U.S. Department of Education, National Institute on Disability and Rehabilitation Research (NIDRR) under contract number ED-OSE-10-C-0067. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
+    </section>
+  </section>
+
+
+  <p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+  <script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
+</body>
+</html>
