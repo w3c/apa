@@ -24,7 +24,6 @@ before_script:
   - git config --global user.name "michael-n-cooper"
   
 script:
-  - cd ../..
   - mkdir gh-pages
   - cd gh-pages
   - git clone --depth=1 --branch=gh-pages https://github.com/w3c/apa.git
