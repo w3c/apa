@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>[DRAFT] Web Technology Accessibility Guidelines Checklist</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href="https://www.w3.org/StyleSheets/TR/W3C-ED" rel="stylesheet" />
+		<style type="text/css">
+			@counter-style checklist
+				 {
+					system: cyclic;
+					symbols: ☐;
+					suffix: " ";
+				}
+			
+			.checklist
+			{
+				list-style-type:checklist;
+			}
+			.checklist ul
+			{
+				list-style-type:disc;
+			}
+			th, td {
+				border: thin dotted grey;
+				border-collapse: collapse;
+				padding: .5ex;
+			}
+			table, tbody {
+				border: medium solid black;
+				border-collapse: collapse;
+			}
+			th {
+				text-align: left;
+			}
+			th[scope=rowgroup] {
+				text-align: center;
+				background-color: black;
+				color: white;
+			}
+			th[scope=rowgroup] a:link, th[scope=rowgroup] a:hover, th[scope=rowgroup] a:active {
+				color: teal;
+			}
+			th[scope=rowgroup] a:visited {
+				color: aqua;
+			}
+			td:first-child::before {
+				content: "☐ ";
+			}
+		</style>
+	</head>
+	<body>
+<h1>[DRAFT] Web Technology Accessibility Guidelines Checklist</h1>
+<p>This is a draft checklist to support <a href="wtag.html">Web Technology Accessibility Guidelines (WTAG)</a> prepared by the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. The goal of WTAG is to describe the features that web technologies should provide to ensure it is possible to create content that is accessible to users with disabilities. The full Web Technology Accessibility Guidelines references an analysis of user requirements, describes how technologies, content authoring, and user agents work together to meet these needs, and provides comprehensive guidance to technology developers. This checklist extracts that information at a high level to aid in self-review of technologies. Specification developers can use this to help ensure the technology will address features likely to be raised during horizontal review from accessibility proponents.</p>
+<p>Web technologies address a variety of needs, and play a variety of roles in web accessibility. Content languages describe primary content, styling languages impact presentation, APIs enable manipulation and data interchange, and protocols tie it all together. Each of these types of technologies can impact accessibility. </p>
+<p>This checklist is organized by types of features that a technology may provide. If the technology provides such a feature, the checklist items under the heading are applicable and should be examined. If the technology does not provide such a feature, the checklist items under the heading are not applicable and can be passed over.</p>
+<p>Note on name: the name of this checklist may be changed. A current proposal is "Framework for Accessibility in the Specification of (Web) Technologies" (FAST).</p>
+<table>
+<caption></caption>
+<thead>
+<tr>
+<th scope="col">Checkpoint</th>
+<th scope="col">Explanation</th>
+<th scope="col">References</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology allows visual rendering of content</th>
+</tr>
+<tr>
+<td>There is a defined way for a non-visual rendering to be created. </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+<tr>
+<td>Content can be resized.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Luminosity and hue contrast can adapt to user requirements.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Text presentation attributes can be changed. </td>
+<td> Typeface, font weight, font style, line / word / letter spacing, margins, line length, justification</td>
+<td></td>
+</tr>
+<tr>
+<td>Visual presentation of pointers and cursors can be adjusted.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Changing content presentation does not render it unreadable. </td>
+<td>clipping, flow</td>
+<td></td>
+</tr>
+<tr>
+<td>Technology does not allow blinking or flashing of content, or provides a feature for users to quickly turn it off or permanently disable it.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>It is possible to make navigation order correspond to the visual presentation.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology provides author control over color</th>
+</tr>
+<tr>
+<td>There is a mechanism for users to override colors of text and user interface components. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>There is a feature for authors to define semantically available "color classes" that users can easily map to custom colors, and give preference to this vs. coloring objects individually. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>There is a feature for users to choose color schemata that work for them. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>The foreground and background color of an object can be reported to the user via AT. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>There are ways to set foreground and background colors separately for all objects. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Compositing rules for foreground and background colors are well defined. </td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology provides features to accept user input</th>
+</tr>
+<tr>
+<td>There is a mechanism to label user input controls in an umbiguous and clear manner.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can associate extended help information with a control.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>If there is an input error, it is possible to associate the error message clearly with the specific control that is in error.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>There is a mechanism to report and set the state or value of controls programmatically.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can address multiple types of input hardware (keyboard, pointing device, touch screen, voice recognition, etc.), or the technology supports hardware-agnostic input methods. </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+<tr>
+<td>User input does not require specific physical characteristics (e.g., fingerprint readers).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can ensure a "meaningful" order of controls exists regardless of presentation. </td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology provides user interaction features</th>
+</tr>
+<tr>
+<td>For every user interface object type, the "type" of object can be exposed as a role to AAPIs. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>For every user interface object type, there is a clearly defined mechanism for authors to provide and / or user agents determines the "accessible name" for AAPIs. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>For user interface objects that can have states, properties, or values, authors can set these and these can be exposed to AAPIs. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>When providing imperative mechanisms to implement technology features (e.g., scripts), authors can expose accessibility information to AAPIs. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>User can obtain help information about the widget. </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology defines document semantics</th>
+</tr>
+<tr>
+<td>Authors can title Web pages and sections of content. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can clearly indicate the target of a hyperlink and function of a control. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can indicate content language, for the page as a whole and for blocks of content. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can support understanding of abbreviations / acronyms / initialisms, idioms, jargon, etc. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can support correct machine pronunciation of ambiguously spelled terms (e.g., in the phrase "I am content with this content" there are different correct pronunciations of the lexeme "content"). </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can identify regions of content, particularly the "main" region.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Declarative mechanisms (that have accessibility semantics pre-defined in the spec) are used to implement technology features whenever possible. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>There are unambiguous ways to express relationships between units of content, such as object nesting, ID referencing, etc. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Prefer structural semantics to presentational semantics. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>When providing presentational semantics, they can be easily mapped to structural semantics, e.g., to support restyling or meaningful exposure to AAPIs. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Support a comprehensive set of authoring use cases to minimize the need for alternative content. (e.g., don't make authors resort to text in images to get the style they want).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Semantics allow precise and replicable location information in the document to be deteremined.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Semantics exist to convey meaning that is commonly conveyed via presentation.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology provides time-based visual media (see also the <a href="https://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist">Media Accessibility Checklist</a>)</th>
+</tr>
+<tr>
+<td>It is possible for authors to provide detailed text descriptions, audio descriptions, or both of the important content in the media. </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+<tr>
+<td>It is possible for authors to syncronize descriptions with the visual content.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>It is possible for to provide descriptions even when the content is live.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>User can pause, stop, replay media.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Users can send output to alternate device.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology provides audio</th>
+</tr>
+<tr>
+<td>It is possible for authors to provide transcriptions. </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+<tr>
+<td>It is possible for authors to provide synchronized captions, either open (on by default for all users).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>User can adjust volume level </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Contrast between foreground and background audio is sufficient </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Unnecessary background audio can be muted separately from the foreground audio </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>@@Technology does not include triggers for audiosensitive seizures or allows those triggers to be disabled.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology allows time limits</th>
+</tr>
+<tr>
+<td>A feature exists to allow time limits to be extended. </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+<tr>
+<td>Time limits for different parts of a task, such as reading instructions vs providing input, can be set seprately. </td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology allows text content</th>
+</tr>
+<tr>
+<td>Authors can define non-text alternatives for text content. </td>
+<td>(visual, auditory, haptic) </td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can define non-text alternatives for non-text content. </td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology creates objects that don't have an inherent text representation</th>
+</tr>
+<tr>
+<td colspan="3">This includes primarily images, video, and audio but can also include other forms of complex content. Objects should also be directly accesible, but text alternatives are needed as a universal fallback.</td>
+</tr>
+<tr>
+<td>There is a mechanism to create short text alternatives that label the object. </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+<tr>
+<td>There is a mechanism to create extended text alternatives for fallback content.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Text alternatives can be semantically "rich" e.g., with page structure, text style, hyperlinks, etc. </td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology provides content fallback mechanisms</th>
+</tr>
+<tr>
+<td>Authors can explicitly mark content as not needing alternative content because it does not perform an important role. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can explicitly indicate when author declined to provide alternative content. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can explicitly indicate that authoring tool is unable to generate or obtain alternative content. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can explicitly associate alternative content with the primary content. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authors can associate multiple types and instances of alternative content with primary content. </td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alternate content can be easily found from the initial content. </td>
+<td>Replaces, referenced directly from, at same location of intiial content.</td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology provides visual graphics</th>
+</tr>
+<tr>
+<td>Item </td>
+<td>This is a developing area, being explored by the <a href="https://www.w3.org/WAI/PF/svg-a11y-tf/">SVG Accessibility Task Force</a>.</td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology provides internationalization support</th>
+</tr>
+<tr>
+<td>Accessibility features can be internationalized to the same degree as other features, including multiple language alternatives, language identification and changes, text directionality identification, etc. </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology defines accessible alternative features</th>
+</tr>
+<tr>
+<td>Accessible alternatives themselves meet the same bar of accessibility. </td>
+<td>For instance, captions should be able to have color and style changed by the user. Text alternatives should allow rich content. Audio descriptions should be separable from other sound.</td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology provides content directly for end-users</th>
+</tr>
+<tr>
+<td>Content can be encoded in a manner that allows machine transformation into accessible output </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology defines an API</th>
+</tr>
+<tr>
+<td>If the API can be used for structured content, it provides features to represent all aspects of the content including hidden accessibility features. </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+<tr>
+<td>If the API relies on user agents to generate a user interface, the specification provides guidance about accessibility requirements needed to enable full interaction with the API. </td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<th colspan="3" scope="rowgroup">If technology defines a transmission protocol</th>
+</tr>
+<tr>
+<td>Use of the protocol does not cause any aspect of the content, including metadata which could contain important accessibility information, to be removed. </td>
+<td>Explanation</td>
+<td></td>
+</tr>
+<tr>
+<td>It is possible to use third-party accessibility enhancement services while using the protocol. </td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
