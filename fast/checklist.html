@@ -50,10 +50,9 @@
 	</head>
 	<body>
 <h1>[DRAFT] Web Technology Accessibility Guidelines Checklist</h1>
-<p>This is a draft checklist to support <a href="wtag.html">Web Technology Accessibility Guidelines (WTAG)</a> prepared by the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. The goal of WTAG is to describe the features that web technologies should provide to ensure it is possible to create content that is accessible to users with disabilities. The full Web Technology Accessibility Guidelines references an analysis of user requirements, describes how technologies, content authoring, and user agents work together to meet these needs, and provides comprehensive guidance to technology developers. This checklist extracts that information at a high level to aid in self-review of technologies. Specification developers can use this to help ensure the technology will address features likely to be raised during horizontal review from accessibility proponents.</p>
+<p>This is a draft checklist to support <a href="/">Framework for Accessibility in the Specification of Technologies (FAST)</a> prepared by the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. The goal of WTAG is to describe the features that web technologies should provide to ensure it is possible to create content that is accessible to users with disabilities. The full framework references an analysis of user requirements, describes how technologies, content authoring, and user agents work together to meet these needs, and provides comprehensive guidance to technology developers. This checklist extracts that information at a high level to aid in self-review of technologies. Specification developers can use this to help ensure the technology will address features likely to be raised during horizontal review from accessibility proponents.</p>
 <p>Web technologies address a variety of needs, and play a variety of roles in web accessibility. Content languages describe primary content, styling languages impact presentation, APIs enable manipulation and data interchange, and protocols tie it all together. Each of these types of technologies can impact accessibility. </p>
 <p>This checklist is organized by types of features that a technology may provide. If the technology provides such a feature, the checklist items under the heading are applicable and should be examined. If the technology does not provide such a feature, the checklist items under the heading are not applicable and can be passed over.</p>
-<p>Note on name: the name of this checklist may be changed. A current proposal is "Framework for Accessibility in the Specification of (Web) Technologies" (FAST).</p>
 <table>
 <caption></caption>
 <thead>
@@ -69,42 +68,42 @@
 </tr>
 <tr>
 <td>There is a defined way for a non-visual rendering to be created. </td>
-<td>Explanation</td>
+<td>Content is frequently authored with visual rendering the primary consideration. Some technologies, such as image formats, explicitly focus on visual rendering. Some users are not able to access visual content, and must use other forms of the content, such as text or audio. Content that is well-structured allows automated conversion into alternate formats, or content can provide explicit non-visual alternatives. Image and video technologies can and should provide support for automated transformation or for alternative versions as appropriate. Other technologies that are not as explicitly visual but that are likely to be renderd visually, such as text formats and often structured data, need to ensure that non-visual rendering can be as easily achieved as visual rendering.</td>
 <td></td>
 </tr>
 <tr>
 <td>Content can be resized.</td>
-<td></td>
-<td></td>
+<td>Many users need content to be displayed larger than the default, not just because of un-sharp vision but also to mitigate other visual perception difficulties such as difficulty separating foreground from background. Depending on device and situation, content can also be displayed smaller than the author expects, so needs to be resizable even if the intended default size is suitable. Technologies should provide features to allow user resize, without experiencing problems such as pixelation, clipping, excessive scrolling, etc. Support for resizing therefore requires a variety of features to be enabled by the technology.</td>
+<td><a href="https://www.w3.org/TR/WCAG20/#visual-audio-contrast-scale">WCAG 2.0 Resize text</a></td>
 </tr>
 <tr>
 <td>Luminosity and hue contrast can adapt to user requirements.</td>
-<td></td>
-<td></td>
+<td>Users with color vision deficits and other visual impairments have more difficulty separating certain foreground from background colors than average. The <a href="https://www.w3.org/TR/WCAG20/#contrast-ratiodef">WCAG 2.0 luminosity contrast ratio</a> describes a way to calculate this contrast, but sometimes even content that passes the guidelines is insufficient. Technologies should provide ways to obtain increase or customized contrast, e.g., via a "high contrast mode".</td>
+<td><a href="https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast">WCAG 2.0 Contrast (minimume)</a><br /><a href="https://www.w3.org/TR/WCAG20/#visual-audio-contrast7">WCAG 2.0 Contrast (enhanced)</a></td>
 </tr>
 <tr>
 <td>Text presentation attributes can be changed. </td>
-<td> Typeface, font weight, font style, line / word / letter spacing, margins, line length, justification</td>
+<td>Some users with visual impairments and learning disabilities find that customizing text presentation improves their ability to distinguish letters, track lines, etc. Technologies should provide features allowing users to customize typeface, font weight, font style, line / word / letter spacing, margins, line length, justification.</td>
 <td></td>
 </tr>
 <tr>
 <td>Visual presentation of pointers and cursors can be adjusted.</td>
-<td></td>
+<td>Sometimes pointer and cursor indicators are difficult for users to distinguish and locate, and incessant animation, even simple blinking, can be excessively distracting for some users. Technologies that define pointer and cursor indicators should provide features for user to customize size, color, and animation.</td>
 <td></td>
 </tr>
 <tr>
 <td>Changing content presentation does not render it unreadable. </td>
-<td>clipping, flow</td>
+<td>Many accessibility requirements come down to allowing users to customize presentation. When presentation is changed in a way the author or designer did not anticipate, unexpected side effects often appear that create new problems. A frequent situation is when content is resized but the region for the content is not, causing the content to be clipped. Another is when regions resize but do not reposition, making it difficult to use the content at the new scale. Change of font attributes sometimes leads to a similar problem, such as when users change to a heavier font but the space allocated for characters does not increase. Technologies should provide features to ensure that change of display attributes does not create unintended side effects.</td>
 <td></td>
 </tr>
 <tr>
 <td>Technology does not allow blinking or flashing of content, or provides a feature for users to quickly turn it off or permanently disable it.</td>
-<td></td>
+<td>Technologies should not provide features that allow authors to create content that <a href="https://www.w3.org/TR/WCAG20/#blinksdef">blinks</a> (which can be excessively distracting) or <a href="https://www.w3.org/TR/WCAG20/#flash-def">flashes</a> (which can be medically disastrous). However, technologies that provide general animation features (even simple ones) may be unable to rule out author usages that create these effects. It is important for such technologies to provide a feature for users to stop animation, or prevent it until requested. More complex technologies should also provide means to mark potentially problematic content, warn users who have opted into the warning, and give users the option to skip or suppress problematic regions of content.</td>
 <td></td>
 </tr>
 <tr>
 <td>It is possible to make navigation order correspond to the visual presentation.</td>
-<td></td>
+<td>Flexible display mechanisms can cause content to appear in unpredicted locations. This is often a good feature as it allows optimization of display. However, the navigation order of such content sometimes does not match the perceived order, and users have difficulty using linear (i.e., keyboard-based) navigation effectively. Technologies should provide features to ensure when the visual order of content changes, the interaction order changes to match.</td>
 <td></td>
 </tr>
 </tbody>
@@ -114,32 +113,32 @@
 </tr>
 <tr>
 <td>There is a mechanism for users to override colors of text and user interface components. </td>
-<td></td>
+<td>Custom color settings benefits not only users with visual perception impairments, but also users who can be distracted by certain colors or combinatinos. Technologies should provide features to allow users to set their own colors or contrast for text (including background) and standard user interface components. </td>
 <td></td>
 </tr>
 <tr>
 <td>There is a feature for authors to define semantically available "color classes" that users can easily map to custom colors, and give preference to this vs. coloring objects individually. </td>
-<td></td>
+<td>Allowing user override of author design is most effective when the technology provides rich semantics for content, on which author or default colors are based, that can be easily recolored in a meaningful manner. Technologies should define semantics, or a way for authors to define and communicate the semantics they use, to allow most effective recoloring with minimal advance knowledge of site implementation.</td>
 <td></td>
 </tr>
 <tr>
 <td>There is a feature for users to choose color schemata that work for them. </td>
-<td></td>
+<td>Content authors are frequently concerned with branding, and want to ensure that the color scheme of content communicates the brand. But when the color scheme makes content inaccessible to users this goal can be counter-productive. Technologies can increase author control and user accessibility by providing a way for authors to define multiple color schemes, allowing more accessible schemes still to partake in the branding process, and allowing users to choose from among available schemes. </td>
 <td></td>
 </tr>
 <tr>
 <td>The foreground and background color of an object can be reported to the user via AT. </td>
-<td></td>
+<td>Experienced color of content is frequently the way users refer to it; for instance in "redlined" text people may say "find my edits in red". Users of assistive technologies who cannot perceive the color directly therefore still have a need to know the color in order to interact with others. Therefore, technologies should define a way for foreground and background color to be reported to assistive technologies and easily searched.</td>
 <td></td>
 </tr>
 <tr>
 <td>There are ways to set foreground and background colors separately for all objects. </td>
-<td></td>
+<td>Color contrast problems often arise when the foreground color of one object is overlaid onto the (foreground or background) color of another object, resulting in an unintended contrast. It is therefore important for technologies to allow both the foreground and background color of objects to be set to reasonable values and avoid this overlay problem.</td>
 <td></td>
 </tr>
 <tr>
 <td>Compositing rules for foreground and background colors are well defined. </td>
-<td></td>
+<td>When color compositing rules are not clearly designed, unexpected color contrast can occur. The most frequent problem is when aliasing of edges causes visual artifacts, which in the case of text with its narrow strokes can significantly impact perception. Impacts of borders, shadows, and transparency can also lead to inaccessible contrast. Therefore technologies should specify compositing rules very precisely.</td>
 <td></td>
 </tr>
 </tbody>
@@ -149,37 +148,37 @@
 </tr>
 <tr>
 <td>There is a mechanism to label user input controls in an umbiguous and clear manner.</td>
-<td></td>
+<td>When collecting user input, users must know what input is required for each control. Often this is made evident by visual context, but this does not help non-visual users or users of alternate visual presentations such as magnification. When labels are provided, if they are not programmatically associated with the control, users may not be able to find the correct label. Therefore it is important for technologies to provide ways to associate labels with their controls.</td>
 <td></td>
 </tr>
 <tr>
 <td>Authors can associate extended help information with a control.</td>
-<td></td>
+<td>When authors request user input that may require special assistance, such as details of the input format required or how to find an account number on a bill, they may provide extended help in addition to the label. Even if this is positioned near the control, some users may not reliably find it. Therefore technologies should provide a way for authors to explicitly attach extended help (including links to extended help) directly to the control.</td>
 <td></td>
 </tr>
 <tr>
 <td>If there is an input error, it is possible to associate the error message clearly with the specific control that is in error.</td>
-<td></td>
+<td>If a user inputs data that is not accepted by the system, a report of the issue is made and the user given an opportunity to correct the input. Such error messages are frequently provided at the top of the form, from where it can be difficult for the user to locate the control that needs input corrected. Even if the error message is positioned closer to the control, it can be difficult to find the correct control. Therefore, much like labels and help content, technologies need to provide a way to associate error messages directly with the control to which they apply.</td>
 <td></td>
 </tr>
 <tr>
 <td>There is a mechanism to report and set the state or value of controls programmatically.</td>
-<td></td>
+<td>While much user input is collected using platform input services, some users use assistive technologies that work better when interacting programmatically with the content directly, effectively in an alternate user interface. For this to work, technologies need to provide a means for assistive technologies to get and set the nature, state, and value of input controls.</td>
 <td></td>
 </tr>
 <tr>
 <td>Authors can address multiple types of input hardware (keyboard, pointing device, touch screen, voice recognition, etc.), or the technology supports hardware-agnostic input methods. </td>
-<td>Explanation</td>
+<td>A basic tenet of accessibility is that users should be able to user input and output hardware that is optimal for them. Some use alternate versions of familiar hardware, such as keyboard-compatible and pointing devices, while others use less widespread types of hardware, such as voice recognition, single-switch devices, Braille displays, etc. Technologies should design content input and output methods to be agnostic to the specific hardware used, and provide application programming interfaces for supported hardware types such as keyboard and pointer so other hardware can effectively interact. Technologies should also emphasize the most hardware-neutral form of authoring feasible via more abstract events, and when providing hardware-specific features ensure that multiple types of hardware can be addressed.</td>
 <td></td>
 </tr>
 <tr>
 <td>User input does not require specific physical characteristics (e.g., fingerprint readers).</td>
-<td></td>
+<td>Some user input depends on specific physical characteristics of users. For instance, early touch screens required users to have a physical, not a prosthetic, finger, and fingerprint readers also require users to have a fingerprint. Some users do not have the ability to interact with such devices. Technologies should not require specific user characteristics, and should provide alternate ways to accomplish tasks if such features are provided.</td>
 <td></td>
 </tr>
 <tr>
 <td>Authors can ensure a "meaningful" order of controls exists regardless of presentation. </td>
-<td></td>
+<td>Much like the issue of navigation order deviating from display order mentioned above, control order is another frequent source of confusion for users when presentation has been customized. Technologies should provide ways for authors to define the intended order of user input controls.</td>
 <td></td>
 </tr>
 </tbody>
