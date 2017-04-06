@@ -188,27 +188,27 @@
 </tr>
 <tr>
 <td>For every user interface object type, the "type" of object can be exposed as a role to AAPIs. </td>
-<td></td>
+<td>A major way some users with disabilities access content is via assistive technologies, which provide various supplemental supports for interaction. Many assistive technologies interact with content primarily via accessibility APIs, which contain an abstract model of the content that includes information about each object. The "type" of an object is important for users to know how to use it, which is typically exposed to accessibility APIs as a "role". Technologies should ensure features have a defined type and, if necessary, document accessibility API mappings for the several APIs in use.</td>
 <td></td>
 </tr>
 <tr>
 <td>For every user interface object type, there is a clearly defined mechanism for authors to provide and / or user agents determines the "accessible name" for AAPIs. </td>
-<td></td>
+<td>Accessibility APIs provide an "accessible name" for each object, which labels it for the user. The accessible name is frequently the label for a form control or the text alternative for an object. Technologies should define how the accessible name for each object type can be determined, and provide features to allow authors to set the accessible name.</td>
 <td></td>
 </tr>
 <tr>
 <td>For user interface objects that can have states, properties, or values, authors can set these and these can be exposed to AAPIs. </td>
-<td></td>
+<td>Along with the role, many objects require information about properties, states, and values to be fully usable. Properties are generally specific to object types and refine the type of object; states are also specific to object type and provide information about a changeable condition such as checked status of a checkbox or visibility status of an object. All objects have values as well, which is often the text content but can be from another source, such as the user input in a form control. Technologies should define ways for user agents to expose and authors to set properties, states, and values in accessibility APIs that are relevent to full understanding of and interaction with the object type.</td>
 <td></td>
 </tr>
 <tr>
 <td>When providing imperative mechanisms to implement technology features (e.g., scripts), authors can expose accessibility information to AAPIs. </td>
-<td></td>
+<td>Declarative technologies provide structured semantic helping authors to define complete models for objects that can be exposed to accessibility APIs. Imperative technologies give more freedom to the author but provide less built-in accessibility semantics, and sometimes do not provide a way to address accessibility APIs at all. Technologies that use imperative mechanisms to author content need to provide full interfaces to accessibility APIs so authors can set the complete object model.</td>
 <td></td>
 </tr>
 <tr>
 <td>User can obtain help information about the widget. </td>
-<td>Explanation</td>
+<td>Especially with novel widgets, users sometimes need context-specific help to learn how to use the widget effectively. This information is only useful if users can easily find it. Therefore, technologies should provide a mechanism for help information to be directly associated with and reachable from the control.</td>
 <td></td>
 </tr>
 </tbody>
@@ -217,10 +217,15 @@
 <th colspan="3" scope="rowgroup">If technology defines document semantics</th>
 </tr>
 <tr>
-<td>Authors can title Web pages and sections of content. </td>
-<td></td>
+<td>Authors can title Web pages. </td>
+<td>Web content is classically exposed on "pages", each of which contains a different chunk of content. To help users easily identify their location in a set of pages, and navigate to the correct page, each pages should have a title that is effectivley metadata. Technologies should provide ways for authors to create unique titles for each page. </td>
 <td></td>
 </tr>
+				<tr>
+					<td>Authors can title sections of content. </td>
+					<td>Web content is frequently divided into multiple sections, each of which has a distinct topic. Users navigate among these sections to find the content most relevant to their purpose, which is especially important for users of assistive technology that don't provide a two-dimensional view of the content. Technologies should provide a mechanism for authors to provide section titles to help users navigate and identify their location.</td>
+					<td></td>
+				</tr>
 <tr>
 <td>Authors can clearly indicate the target of a hyperlink and function of a control. </td>
 <td></td>
