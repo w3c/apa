@@ -68,18 +68,18 @@
 </tr>
 <tr>
 <td>There is a defined way for a non-visual rendering to be created. </td>
-<td>Content is frequently authored with visual rendering the primary consideration. Some technologies, such as image formats, explicitly focus on visual rendering. Some users are not able to access visual content, and must use other forms of the content, such as text or audio. Content that is well-structured allows automated conversion into alternate formats, or content can provide explicit non-visual alternatives. Image and video technologies can and should provide support for automated transformation or for alternative versions as appropriate. Other technologies that are not as explicitly visual but that are likely to be renderd visually, such as text formats and often structured data, need to ensure that non-visual rendering can be as easily achieved as visual rendering.</td>
+<td>Content is frequently authored with visual rendering the primary consideration. Some technologies, such as image formats, explicitly focus on visual rendering. Some users are not able to access visual content, and must use other forms of the content, such as text or audio. Content that is well-structured allows automated conversion into alternate formats, or content can provide explicit non-visual alternatives. Image and video technologies can and should provide support for automated transformation or for alternative versions as appropriate. Other technologies that are not as explicitly visual but that are likely to be rendered visually, such as text formats and often structured data, need to ensure that non-visual rendering can be as easily achieved as visual rendering.</td>
 <td></td>
 </tr>
 <tr>
 <td>Content can be resized.</td>
-<td>Many users need content to be displayed larger than the default, not just because of un-sharp vision but also to mitigate other visual perception difficulties such as difficulty separating foreground from background. Depending on device and situation, content can also be displayed smaller than the author expects, so needs to be resizable even if the intended default size is suitable. Technologies should provide features to allow user resize, without experiencing problems such as pixelation, clipping, excessive scrolling, etc. Support for resizing therefore requires a variety of features to be enabled by the technology.</td>
+<td>Many users need content to be displayed larger than the default, not just because of un-sharp vision but also to mitigate other visual perception difficulties such as difficulty separating foreground from background. Depending on device and situation, content can also be displayed smaller than the author expects, so needs to be resizeable even if the intended default size is suitable. Technologies should provide features to allow user resize, without experiencing problems such as pixelation, clipping, excessive scrolling, etc. Support for resizing therefore requires a variety of features to be enabled by the technology.</td>
 <td><a href="https://www.w3.org/TR/WCAG20/#visual-audio-contrast-scale">WCAG 2.0 Resize text</a></td>
 </tr>
 <tr>
 <td>Luminosity and hue contrast can adapt to user requirements.</td>
 <td>Users with color vision deficits and other visual impairments have more difficulty separating certain foreground from background colors than average. The <a href="https://www.w3.org/TR/WCAG20/#contrast-ratiodef">WCAG 2.0 luminosity contrast ratio</a> describes a way to calculate this contrast, but sometimes even content that passes the guidelines is insufficient. Technologies should provide ways to obtain increase or customized contrast, e.g., via a "high contrast mode".</td>
-<td><a href="https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast">WCAG 2.0 Contrast (minimume)</a><br /><a href="https://www.w3.org/TR/WCAG20/#visual-audio-contrast7">WCAG 2.0 Contrast (enhanced)</a></td>
+<td><a href="https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast">WCAG 2.0 Contrast (minimum)</a><br /><a href="https://www.w3.org/TR/WCAG20/#visual-audio-contrast7">WCAG 2.0 Contrast (enhanced)</a></td>
 </tr>
 <tr>
 <td>Text presentation attributes can be changed. </td>
@@ -113,7 +113,7 @@
 </tr>
 <tr>
 <td>There is a mechanism for users to override colors of text and user interface components. </td>
-<td>Custom color settings benefits not only users with visual perception impairments, but also users who can be distracted by certain colors or combinatinos. Technologies should provide features to allow users to set their own colors or contrast for text (including background) and standard user interface components. </td>
+<td>Custom color settings benefits not only users with visual perception impairments, but also users who can be distracted by certain colors or combinations. Technologies should provide features to allow users to set their own colors or contrast for text (including background) and standard user interface components. </td>
 <td></td>
 </tr>
 <tr>
@@ -147,7 +147,7 @@
 <th colspan="3" scope="rowgroup">If technology provides features to accept user input</th>
 </tr>
 <tr>
-<td>There is a mechanism to label user input controls in an umbiguous and clear manner.</td>
+<td>There is a mechanism to label user input controls in an unambiguous and clear manner.</td>
 <td>When collecting user input, users must know what input is required for each control. Often this is made evident by visual context, but this does not help non-visual users or users of alternate visual presentations such as magnification. When labels are provided, if they are not programmatically associated with the control, users may not be able to find the correct label. Therefore it is important for technologies to provide ways to associate labels with their controls.</td>
 <td></td>
 </tr>
@@ -187,22 +187,22 @@
 <th colspan="3" scope="rowgroup">If technology provides user interaction features</th>
 </tr>
 <tr>
-<td>For every user interface object type, the "type" of object can be exposed as a role to AAPIs. </td>
+<td>For every user interface object type, the "type" of object can be exposed as a role to accessibility APIs. </td>
 <td>A major way some users with disabilities access content is via assistive technologies, which provide various supplemental supports for interaction. Many assistive technologies interact with content primarily via accessibility APIs, which contain an abstract model of the content that includes information about each object. The "type" of an object is important for users to know how to use it, which is typically exposed to accessibility APIs as a "role". Technologies should ensure features have a defined type and, if necessary, document accessibility API mappings for the several APIs in use.</td>
 <td></td>
 </tr>
 <tr>
-<td>For every user interface object type, there is a clearly defined mechanism for authors to provide and / or user agents determines the "accessible name" for AAPIs. </td>
+<td>For every user interface object type, there is a clearly defined mechanism for authors to provide and / or user agents determines the "accessible name" for accessibility APIs. </td>
 <td>Accessibility APIs provide an "accessible name" for each object, which labels it for the user. The accessible name is frequently the label for a form control or the text alternative for an object. Technologies should define how the accessible name for each object type can be determined, and provide features to allow authors to set the accessible name.</td>
 <td></td>
 </tr>
 <tr>
-<td>For user interface objects that can have states, properties, or values, authors can set these and these can be exposed to AAPIs. </td>
-<td>Along with the role, many objects require information about properties, states, and values to be fully usable. Properties are generally specific to object types and refine the type of object; states are also specific to object type and provide information about a changeable condition such as checked status of a checkbox or visibility status of an object. All objects have values as well, which is often the text content but can be from another source, such as the user input in a form control. Technologies should define ways for user agents to expose and authors to set properties, states, and values in accessibility APIs that are relevent to full understanding of and interaction with the object type.</td>
+<td>For user interface objects that can have states, properties, or values, authors can set these and these can be exposed to accessibility APIs. </td>
+<td>Along with the role, many objects require information about properties, states, and values to be fully usable. Properties are generally specific to object types and refine the type of object; states are also specific to object type and provide information about a changeable condition such as checked status of a checkbox or visibility status of an object. All objects have values as well, which is often the text content but can be from another source, such as the user input in a form control. Technologies should define ways for user agents to expose and authors to set properties, states, and values in accessibility APIs that are relevant to full understanding of and interaction with the object type.</td>
 <td></td>
 </tr>
 <tr>
-<td>When providing imperative mechanisms to implement technology features (e.g., scripts), authors can expose accessibility information to AAPIs. </td>
+<td>When providing imperative mechanisms to implement technology features (e.g., scripts), authors can expose accessibility information to accessibility APIs. </td>
 <td>Declarative technologies provide structured semantic helping authors to define complete models for objects that can be exposed to accessibility APIs. Imperative technologies give more freedom to the author but provide less built-in accessibility semantics, and sometimes do not provide a way to address accessibility APIs at all. Technologies that use imperative mechanisms to author content need to provide full interfaces to accessibility APIs so authors can set the complete object model.</td>
 <td></td>
 </tr>
@@ -218,7 +218,7 @@
 </tr>
 <tr>
 <td>Authors can title Web pages. </td>
-<td>Web content is classically exposed on "pages", each of which contains a different chunk of content. To help users easily identify their location in a set of pages, and navigate to the correct page, each pages should have a title that is effectivley metadata. Technologies should provide ways for authors to create unique titles for each page. </td>
+<td>Web content is classically exposed on "pages", each of which contains a different chunk of content. To help users easily identify their location in a set of pages, and navigate to the correct page, each pages should have a title that is effectively metadata. Technologies should provide ways for authors to create unique titles for each page. </td>
 <td></td>
 </tr>
 				<tr>
@@ -228,7 +228,7 @@
 				</tr>
 <tr>
 <td>Authors can clearly indicate the target of a hyperlink and function of a control. </td>
-<td>Hyperlinks and controls cause changes to the user experience. It is important that users know what change will happen, or what the result of navigating a hyperlink will be. Default or contextual indications may be sufficient for some users but not all. Technologies must provide features allowing authors to unambiuguously provide this information.</td>
+<td>Hyperlinks and controls cause changes to the user experience. It is important that users know what change will happen, or what the result of navigating a hyperlink will be. Default or contextual indications may be sufficient for some users but not all. Technologies must provide features allowing authors to unambiguously provide this information.</td>
 <td></td>
 </tr>
 <tr>
@@ -238,12 +238,12 @@
 </tr>
 <tr>
 <td>Authors can support understanding of abbreviations / acronyms / initialisms, idioms, jargon, etc. </td>
-<td>Abbreviations, acronyms, initialisms, idioms, and jargon comprise usages of content that may not be familiar to all users, so it can be helfpul for authors to provide suplemental information about meaning. Abbreviations, acronyms, and initialisms are also often frequently pronounced different from their spelling, their special nature may not be obvious from pronunciation alone. Therefore technologies should allow authors to provide pronunciation and meaning guidance for these language features.</td>
+<td>Abbreviations, acronyms, initialisms, idioms, and jargon comprise usages of content that may not be familiar to all users, so it can be helpful for authors to provide supplemental information about meaning. Abbreviations, acronyms, and initialisms are also often frequently pronounced different from their spelling, their special nature may not be obvious from pronunciation alone. Therefore technologies should allow authors to provide pronunciation and meaning guidance for these language features.</td>
 <td></td>
 </tr>
 <tr>
 <td>Authors can support correct machine pronunciation of ambiguously spelled terms (e.g., in the phrase "I am content with this content" there are different correct pronunciations of the lexeme "content"). </td>
-<td>Many languages have lexical features that can be pronuonced different ways and that carry different meanings. Context generally clarifies intent, but this can be less effective when assistive technologies use default pronunciations. Therefore technologies should provide features to allow authors to clarify pronunciation intent when needed.</td>
+<td>Many languages have lexical features that can be pronounced different ways and that carry different meanings. Context generally clarifies intent, but this can be less effective when assistive technologies use default pronunciations. Therefore technologies should provide features to allow authors to clarify pronunciation intent when needed.</td>
 <td></td>
 </tr>
 <tr>
@@ -267,7 +267,7 @@
 <td></td>
 </tr>
 <tr>
-<td>When providing presentational semantics, they can be easily mapped to structural semantics, e.g., to support restyling or meaningful exposure to AAPIs. </td>
+<td>When providing presentational semantics, they can be easily mapped to structural semantics, e.g., to support restyling or meaningful exposure to accessibility APIs. </td>
 <td>If technologies do provide presentational semantics, they should define clear mappings to existing structural semantics as well, allowing users to interact with content on the basis of implied structure.</td>
 <td></td>
 </tr>
@@ -297,7 +297,7 @@
 <td></td>
 </tr>
 <tr>
-<td>It is possible for authors to syncronize descriptions with the visual content.</td>
+<td>It is possible for authors to synchronize descriptions with the visual content.</td>
 <td>Descriptions are sometimes more helpful when they can be accessed along with the main video content. Technologies should provide a mechanism to synchronize descriptions, e.g., via additional audio tracks, timed text, etc.</td>
 <td></td>
 </tr>
@@ -343,7 +343,7 @@
 </tr>
 <tr>
 <td>Unnecessary background audio can be muted separately from the foreground audio </td>
-<td>When background audio makes understanding of content too difficult, users should be able to suppress it without losing the foreground audio. Technologies should provide features to make this possible, e.g,. via support of multiple audio tracks.</td>
+<td>When background audio makes understanding of content too difficult, users should be able to suppress it without losing the foreground audio. Technologies should provide features to make this possible, e.g., via support of multiple audio tracks.</td>
 <td></td>
 </tr>
 <tr>
@@ -373,7 +373,7 @@
 </tr>
 <tr>
 <td>Authors can define non-text alternatives for text content. </td>
-<td>While text is the universal accessible alternative, it is still not the best format for some users. Technologies should allow authors to provide non-text alternatives to text content when needed. Various types of alternatives are useful in different situations, including visual such as icons or movies, auditory such as pronuncation cues and recorded speech, and haptic.</td>
+<td>While text is the universal accessible alternative, it is still not the best format for some users. Technologies should allow authors to provide non-text alternatives to text content when needed. Various types of alternatives are useful in different situations, including visual such as icons or movies, auditory such as pronunciation cues and recorded speech, and haptic.</td>
 <td></td>
 </tr>
 <tr>
@@ -428,7 +428,7 @@
 </tr>
 <tr>
 <td>Authors can explicitly associate alternative content with the primary content. </td>
-<td>Technologies should enable authors to associate alternative content unambiously with the main content.</td>
+<td>Technologies should enable authors to associate alternative content unambiguously with the main content.</td>
 <td></td>
 </tr>
 <tr>
@@ -438,7 +438,7 @@
 </tr>
 <tr>
 <td>Alternate content can be easily found from the initial content. </td>
-<td>Replaces, referenced directly from, at same location of intiial content.</td>
+<td>Replaces, referenced directly from, at same location of initial content.</td>
 <td></td>
 </tr>
 </tbody>
@@ -458,7 +458,7 @@
 </tr>
 <tr>
 <td>Accessibility features can be internationalized to the same degree as other features </td>
-<td>Technologies that support internationalization must not overlook accessibility features. In particular for content alternatives, technologies should support including multiple language alternatives, language identification and changes within alterntive content, text directionality identification, etc.</td>
+<td>Technologies that support internationalization must not overlook accessibility features. In particular for content alternatives, technologies should support including multiple language alternatives, language identification and changes within alternative content, text directionality identification, etc.</td>
 <td></td>
 </tr>
 </tbody>
@@ -503,7 +503,7 @@
 </tr>
 <tr>
 <td>Use of the protocol does not cause any aspect of the content, including metadata which could contain important accessibility information, to be removed. </td>
-<td>Transmission protocols exhange content between devices. Sometimes protocols remove content viewed as unimportant, or restrict what can be transmitted for security or provenance reasons. This can have unintended impacts on accessibility features in the content. Technologies defining transmission profiles need to ensure all aspects of the content relevant to accessibility are included.</td>
+<td>Transmission protocols exchange content between devices. Sometimes protocols remove content viewed as unimportant, or restrict what can be transmitted for security or provenance reasons. This can have unintended impacts on accessibility features in the content. Technologies defining transmission profiles need to ensure all aspects of the content relevant to accessibility are included.</td>
 <td></td>
 </tr>
 <tr>
