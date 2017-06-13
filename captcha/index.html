@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		<title>Inaccessibilty of CAPTCHA 2</title>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+		<script src="../biblio.js" class="remove"></script>
+		<script src="respec-config.js" class="remove"></script>
+	</head>
+	<body>
+		<section id="abstract">
+			<p>A common method of limiting access to services made available over the Web is visual verification of a bitmapped image. This presents a major problem to users who are blind, have low vision, or have a learning disability such as dyslexia. This document examines a number of potential solutions that allow systems to test for human users while preserving access by users with disabilities.</p>
+		</section>
+		<section id="sotd">
+			<p>This is an Editors' draft of a revision of the Working Group Note <a href="https://www.w3.org/TR/turingtest/">Inaccessibility of CAPTCHA: Alternatives to Visual Turing Tests on the Web</a> published in 2005.</p>
+		</section>
+		<section>
+			<h2>The problem</h2>
+			<p>Web sites with resources that are attractive to aggregators (travel and event ticket sites, etc.) or other forms of automation (Web-based email, weblogs and message boards) have taken measures to ensure that they can offer their service to individual users without having their content harvested or otherwise exploited by Web robots.</p>
+			<p>The most popular solution at present is the use of graphical representations of text in registration or comment areas. The site attempts to verify that the user in question is in fact a human by requiring the user to read a distorted set of characters from a bitmapped image, then enter those characters into a form.</p>
+			<p>Researchers at Carnegie Mellon University have pioneered this method, which they have called <abbr title="Completely Automated Public Turing 
+  test to Tell Computers and Humans Apart">CAPTCHA</abbr> (Completely Automated Public Turing test to Tell Computers and Humans Apart) [[CAPTCHA]]. Various groups are at work on projects based on or similar to this original, and for the purpose of this paper, the term "CAPTCHA" is used to refer to all of these projects collectively. A Turing test [[TURING]], named after famed computer scientist Alan Turing, is any system of tests designed to differentiate a human from a computer.</p>
+			<p>This type of visual and textual verification comes at a huge price to users who are blind, visually impaired or dyslexic. Naturally, this image has no text equivalent accompanying it, as that would make it a giveaway to computerized systems. In many cases, these systems make it impossible for users with certain disabilities to create accounts, write comments, or make purchases on these sites, that is, CAPTCHAs fail to properly recognize users with disabilities as human.</p>
+			<section>
+				<h3>A false sense of security</h3>
+				<p>It is important to note that, like seemingly every security system that has preceded it, this system can be defeated by those who benefit most from doing so. For example, spammers can pay a programmer to aggregate these images and feed them one by one to a human operator, who could easily verify hundreds of them each hour. The efficacy of visual verification systems is low, and their usefulness is nullified once they are commonly exploited.</p>
+				<p>A history of how CAPTCHA has been adopted over the years is instructive. Larger sites adopted CAPTCHA because their resources were easy to abuse for the purposes of sending spam or conducting anonymous, illegal activity.</p>
+				<p>In recent times, however, inaccessible-by-design technologies such as CAPTCHA have spread to smaller sites, and to new applications which further confound assistive technology. Banking site ING Direct's "PIN Guard" [[PINGUARD]] uses a visual keypad to associate letters on the keyboard with numbers in a user's passcode. Users who cannot see the code, or understand the juxtaposition of letters and numbers, are unable to access their own financial data on this site.</p>
+				<p>CAPTCHA is now in frequent use in the comment areas of message boards and personal weblogs. Many bloggers claim that CAPTCHA challenges are successful in eradicating comment spam, but below a certain threshold of popularity, any other method of comment spam control should be reasonably successful -- and more accessible to users with disabilities.</p>
+				<p>A number of data points on this false sense of security have arisen since this document was first published. Part of the CAPTCHA Project at Carnegie Mellon University, where the technique was developed, was a group intended to defeat new CAPTCHAs as they were created. One of the first documented attacks on the system was by a Carnegie Mellon student, who associated CAPTCHA images with access to an adult Web site, thus gaining free human labor to crack the authentication. High-value Web resources are always at risk for social-engineering attacks of this nature, as humans can be hired, sometimes at near-slave wages, to defeat hundreds if not thousands of these tests per hour.</p>
+				<p>External projects such as [[BREAKING]], <a href="#ref-AICAPTCHA">[AICAPTCHA</a>] and [[PWNTCHA]] have shown methodologies and results indicating that many of the systems can be defeated by computers with between 88% and 100% accuracy, using optical character recognition. [[BREAKINGOCR]] outlines a CAPTCHA defeat on PHP- and ASP-based systems, in which known-valid session IDs are cached and reused to circumvent several popular CAPTCHA schemes. The "Screen Scraper" attack reported by the Anti-Phishing Working Group [[ANTIPHISHING]] defeats the [[PINGUARD]] technique by capturing the screen when the user clicks to enter their secret code.<br />
+				</p>
+				<p>It is a logical fallacy, then, to hail CAPTCHA as a spam-busting panacea. Even 10% accuracy by a computer amounts to system failure, just at a slower rate. It is also faulty logic to believe that the adoption of CAPTCHA in large sites is evidence of its supremacy in fighting spam. Indeed, a number of techniques are as effective as CAPTCHA, without causing the human interaction step that causes usability and accessibility issues.</p>
+			</section>
+		</section>
+		<section>
+			<h2>A hierarchy of needs</h2>
+			<p>Sites implementing verification have very different needs, and they fall into a hierarchy. As the bar for authentication is raised, so is the risk that many users may be marginalized, and the damage that may cause.</p>
+			<section>
+				<h3>Privilege</h3>
+				<p>Most systems implement security in some form or another to preserve privileges for certain users. Authentication of a privileged user without a personal identification scheme that cannot be repudiated is the current mechanism for all but the most secure sites on the Web. We can open accounts on any number of email services, portals, newspapers, and message boards without providing any credentials of our own, such as a passport, driver's license or serial number. In these situations, the first priority may be to point users to the resources they may access; security itself may not take precedence until exploitable details such as credit card information is stored on a given site.</p>
+			</section>
+			<section>
+				<h3>Humanity</h3>
+				<p>Systems that offer attractive privileges are often exploited, particularly when users can do so anonymously. The ability to create several accounts to multiply a user's privileges is often the cause for these Turing tests to be put into place. It is understood to be fact that human users interacting with sites cannot consume resources as quickly as programs designed to acquire and use free privileges. These sites wish to provide credentials to humans while eliminating robot access to the same resources.</p>
+			</section>
+			<section>
+				<h3>Identity</h3>
+				<p>Beyond humanity is unique human identity. A person's identity (including such details as nationality, property, or even personal features) needs to be established authoritatively in order to guarantee everything from secure and legal financial transactions, to the security of medical and legal information, to fair elections. All of these are becoming increasingly available online, including Web-based voting, which has undergone trials in Sweden, Switzerland, France, the United Kingdom, Estonia, and the United States.</p>
+				<p>It is important to determine solutions for verifying unique identity in users, while balancing the needs of all potential users of such a system. The cost of failure ranges from inconvenience in privilege-based models to the denial of basic human rights in some identity-based systems.</p>
+			</section>
+		</section>
+		<section>
+			<h2>Possible solutions</h2>
+			<p>There are many techniques available to users to discourage or eliminate fraudulent account creations or uses. Several of them may be as effective as the visual verification technique while being more accessible to people with disabilities. Others may be overlaid as an accommodation for the purposes of accessibility. Seven alternatives are listed below, with their individual pros and cons. Many are achievable today, while some hint at a near future that may render this need obsolete.</p>
+			<section>
+				<h3>Logic puzzles</h3>
+				<p>The goal of visual verification is to separate human from machine. One reasonable way to do this is to test for logic. Simple mathematical word puzzles, trivia, and the like may raise the bar for robots, at least to the point where using them is more attractive elsewhere.</p>
+				<p>Problems: Users with cognitive disabilities may still have trouble. Answers may need to be handled flexibly, if they require free-form text. A system would have to maintain a vast number of questions, or shift them around programmatically, in order to keep spiders from capturing them all. This approach is also subject to defeat by human operators.</p>
+			</section>
+			<section>
+				<h3>Sound output</h3>
+				<p>To reframe the problem, text is easy to manipulate, which is good for assistive technologies, but just as good for robots. So, a logical means of trying to solve this problem is to offer another non-textual method of using the same content. Hotmail serves a sound file that can be listened to if the visual verification is not suitable for the user.</p>
+				<p>However, according to a CNet article [[NEWSCOM]], Hotmail's sound output, which is itself distorted to avoid the same programmatic abuse, was unintelligible to all four test subjects, all of whom had "good hearing". Users who are deaf-blind, don't have or use a sound card, work in noisy environments, or don't have required sound plugins are likewise left in the lurch. Since this content is auditory in nature, users often have to write down the code before entering it, which is very inconvenient. Worst of all, some implementations of this technique are JavaScript-based, or designed in such a way that some blind users may not be able to access them. Machines, on the other hand, may even have greater success with voice recognition software than they do with OCR on visual CAPTCHAs.</p>
+			</section>
+			<section>
+				<h3>Limited-use accounts</h3>
+				<p>Users of free accounts very rarely need full and immediate access to a site's resources. For example, users who are searching for concert tickets may need to conduct only three searches a day, and new email users may only need to send a canned notification of their new address to their friends, and a few other free-form messages. Sites may create policies that limit the frequency of interaction explicitly (that is, by disabling an account for the rest of the day) or implicitly (by slowing the response times incrementally). Creating limits for new users can be an effective means of making high-value sites unattractive targets to robots.</p>
+				<p>The drawbacks to this approach include having to take a trial-and-error approach to determine a useful technique. It requires site designers to look at statistics of normal and exceptional users, and determine whether a bright line exists between them.</p>
+			</section>
+			<section>
+				<h3>Non-interactive checks</h3>
+				<p>While CAPTCHA and other interactive approaches to spam control are sometimes effective, they do make using a site more complex. This is often unnecessary, as a large number of non-interactive mechanisms exist to check for spam or other invalid content.</p>
+				<p>This category contains two popular non-interactive approaches: spam filtering, in which an automated tool evaluates the <em>content</em> of a transaction, and heuristic checks, which evaluate the <em>behavior</em> of the client.</p>
+				<section>
+					<h4>Spam filtering</h4>
+					<p>Applications that use "hot words" to flag spam content, or Bayesian filtering to detect other patterns consistent with spam, are very popular, and quite effective. While such systems may experience false negatives from time to time, properly-tuned systems are as effective as a CAPTCHA approach, while also removing the added cognitive burden on the user.</p>
+					<p>Most major blogging software contains spam filtering capabilities, or can be fitted with a plug-in for this functionality. Many of these filters can automatically delete messages that reach a certain spam threshold, and mark questionable messages for manual moderation. More advanced systems can control attacks based on post frequency, filter content sent using the [[TRACKBACK]] protocol, and ban users by IP address range, temporarily or permanently.</p>
+				</section>
+				<section>
+					<h4>Heuristic checks</h4>
+					<p>Heuristics are discoveries in a process that seem to indicate a given result. It may be possible to detect the presence of a robotic user based on the volume of data the user requests, series of common pages visited, IP addresses, data entry methods, or other signature data that can be collected.</p>
+					<p>Again, this requires a good look at the data of a site. If pattern-matching algorithms can't find good heuristics, then this is not a good solution. Also, polymorphism, or the creation of changing footprints, is apt to result, if it hasn't already, in robots, just as polymorphic ("stealth") viruses appeared to get around virus checkers looking for known viral footprints.</p>
+					<p>Another heuristic approach identified in [[KILLBOTS]] involves the use of CAPTCHA images, with a twist: how the user reacts to the test is as important as whether or not it was solved. This system, which was designed to thwart distributed denial of service (DDoS) attacks, bans automated attackers which make repeated attempts to retrieve a certain page, while protecting against marking humans incorrectly as automated traffic. When the server's load drops below a certain level, the authentication process is removed entirely.</p>
+				</section>
+			</section>
+			<section>
+				<h3>Federated identity systems</h3>
+				<p>Competing efforts by Microsoft and the Liberty Alliance are attempting to establish a "federated network identity" system, which can allow a user to create an account, set his or her preferences, payment data, etc., and have that data persist across all sites that use the same service. This sort of system, which is making inroads in both Web sites and Web Services, would allow a portable form of identification across the Web.</p>
+				<section>
+					<h4>Single sign-on</h4>
+					<p>Ironically enough, the Passport system itself is one of the very same services that currently utilizes visual verification techniques. These single sign-on services will have to be among the most accessible on the Web in order to offer these benefits to people with disabilities. Additionally, use of these services will need to be ubiquitous to truly solve the problems addressed here once and for all.</p>
+				</section>
+				<section>
+					<h4>Public-key infrastructure solutions</h4>
+					<p>Another approach is to use certificates for individuals who wish to verify their identity. The certificate can be issued in such a way as to ensure something close to a one-person-one-vote system by for example issuing these identifiers in person and enabling users to develop distributed trust networks, or having the certificates issued by highly trusted authorities such as governments. These type of systems have been implemented for securing web pages, and for authenticating email.</p>
+					<p>The cost of creating fraudulent certificates needs to be high enough to destroy the value of producing them in most cases. Sites would need to use mechanisms which are widely implemented in user agents.</p>
+					<p>A subset of this concept, in which only people with disabilities who are affected by other verification systems would register, raises a privacy concern in that the user would need to telegraph to every site that she has a disability. The stigma of users with disabilities having to register themselves to receive the same services should be avoided. With that said, there are a few instances in which users may <em>want</em> to inform sites of their disabilities or other needs: sites such as Bookshare [[BOOKSHARE]] require evidence of a visual disability in order to allow users to access printed materials which are often unavailable in audio or Braille form. An American copyright provision known as the Chafee Amendment [[CHAFEE]] allows copyrighted materials to be reproduced in forms that are only usable by blind and visually impaired users. A public-key infrastructure system would allow Bookshare's maintainers to
+						ensure that the site and its users are in compliance with copyright law.</p>
+				</section>
+				<section>
+					<h4>Biometrics</h4>
+					<p>On the horizon, a more foolproof method of user verification is being formulated in the field of biometric technology. A host of tests, from fingerprint and retinal scanning to DNA matching, promise to check a person's identity authoritatively, effectively limiting the ability of spammers to create infinite email accounts. Microsoft has announced a new biometric system in its Longhorn operating system, complete with a new, secure connector to capture this data. Biometrics will very likely be used in conjunction with single sign-on services.</p>
+					<p>Again, the weakness here is based on infrastructure. It will take several years for biometric hardware to penetrate a market, and some political and social issues exist which may hold back the process. Biometric systems will also have to take into account the fact that not all people have the same physical features: for example, retinal scanning does not work for a user who was born without eyes.</p>
+				</section>
+			</section>
+			<section>
+				<h3>Other approaches</h3>
+				<p>One approach that remains somewhat popular where identity is concerned is the use of existing artifacts of identity, such as credit cards and national IDs such as the Social Security number in the United States. While these systems do provide an easy way to verify users against systems at low cost, their value has been discounted in this paper due to their insecurity. Moreover, systems which collect this data from large numbers of users create a more attractive target for identity theft than they ever did for misappropriation of services.</p>
+				<p>Recently, Google has sent its account creation keys to new users via a Short Message Service (SMS) message. While introducing new complications such as somewhat limited worldwide penetration for mobile phones, thereby creating a different sort of barrier, and poor accessibility to SMS features among users who are blind, it does limit the extent to which large systems can be exploited. It's not feasible, for example, for someone to use thousands of phones to farm account keys daily, then exchange them for new phones when the service refuses to send more keys. Sadly, the Google account creation system still requires a CAPTCHA in addition to this security measure. This technique is included to encourage innovative thought around using architectural constraints, with real costs involved, to impact the feasibility of exploiting a Web resource.</p>
+			</section>
+		</section>
+		<section>
+			<h2>Conclusion</h2>
+			<p>Sites with attractive resources and millions of users will always have a need for access control systems that limit widespread abuse. At that level, it is reasonable to employ many concurrent approaches, including audio and visual CAPTCHA, to do so. However, it must be noted that human users will fall through the cracks in these systems, and it will be necessary for sites like these to ensure that users with disabilities will have some human-operated means of interacting with a given resource in a reasonable amount of time.</p>
+			<p>The widespread use of CAPTCHA in low-volume, low-resource sites, on the other hand, is unnecessarily damaging to the experience of users with disabilities. An explicitly inaccessible access control mechanism should not be promoted as a solution, especially when other systems exist that are not only more accessible, but may be more effective, as well. It is strongly recommended that smaller sites adopt spam filtering and/or heuristic checks in place of CAPTCHA.</p>
+			<p>Lastly, new approaches focusing on using exclusively visual or auditory means for access control, such as the "PIN Guard" mentioned above, should be scrapped until a reliable method exists for users who cannot access them to authenticate themselves. A short-term security benefit is not worth threatening a person's autonomy by denying them access to such important data as their finances.</p>
+		</section>
+		<div data-include="../acknowledgements.html" data-include-replace="true"></div>
+	</body>
+</html>

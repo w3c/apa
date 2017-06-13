@@ -30,6 +30,7 @@ script:
   - cd apa
   - cp -R ../../w3c/apa/fast/* fast
   - cp -R ../../w3c/apa/media-accessibility-reqs/* media-accessibility-reqs
+  - node ../../node_modules/respec/tools/respec2html.js --src file://`pwd`/../../w3c/apa/captcha/index.html --out captcha/index.html
   - node ../../node_modules/respec/tools/respec2html.js --src file://`pwd`/../../w3c/apa/fast/index.html --out fast/index.html
   - node ../../node_modules/respec/tools/respec2html.js --src file://`pwd`/../../w3c/apa/payment-accessibility-reqs/index.html --out payment-accessibility-reqs/index.html
   - node ../../node_modules/respec/tools/respec2html.js --src file://`pwd`/../../w3c/apa/media-accessibility-reqs/index.html --out media-accessibility-reqs/index.html
