@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Web Technology Accessibility Guidelines</title>
+		<title>Framework for Accessible Specification of Technologies (FAST)</title>
         <script src='https://www.w3.org/Tools/respec/respec-w3c-common' async="async" class='remove'></script>
 		<script class="remove">
 var respecConfig = {
@@ -9,8 +9,8 @@ var respecConfig = {
     specStatus:           "ED",
     //processVersion:       "2014",
 
-    // the specification's short name, as in http://www.w3.org/TR/short-name/
-    shortName:            "wtag",
+    // the specification's short name, as in https://www.w3.org/TR/short-name/
+    shortName:            "fast",
 
     // if your specification has a subtitle that goes below the main
     // formal title, define it here
@@ -28,10 +28,10 @@ var respecConfig = {
     // and its maturity status
     //previousPublishDate:  "2014-08-14",
     //previousMaturity:  "WD",
-    //previousDiffURI:        "http://www.w3.org/TR/2014/WD-media-accessibility-reqs-20140814/",
+    //previousDiffURI:        "https://www.w3.org/TR/2014/WD-media-accessibility-reqs-20140814/",
 
     // if there a publicly available Editor's Draft, this is the link
-    edDraftURI: "http://w3c.github.io/pfwg/wtag/wtag.html",
+    edDraftURI: "https://w3c.github.io/apa/fast/",
 
     // if this is a LCWD, uncomment and set the end of its review period
     // lcEnd: "2009-08-05",
@@ -40,7 +40,7 @@ var respecConfig = {
     // only "name" is required
     editors:  [
         { name: "Michael Cooper",
-          company: "W3C", companyURL: "http://www.w3.org/" },
+          company: "W3C", companyURL: "https://www.w3.org/" },
     ],
 
     // authors, add as many as you like.
@@ -48,20 +48,20 @@ var respecConfig = {
     // only "name" is required. Same format as editors.
 
     // name of the WG
-    wg:           "Protocols and Formats Working Group",
+    wg:           "Accessible Platform Architectures Working Group",
 
     // URI of the public WG page
-    wgURI:        "http://www.w3.org/WAI/PF/",
+    wgURI:        "https://www.w3.org/WAI/APA/",
 
     // name (with the @w3c.org) of the public mailing to which comments are due
-    wgPublicList: "wai-xtech",
+    wgPublicList: "public-apa",
 
     // URI of the patent status for this WG, for Rec-track documents
     // !!!! IMPORTANT !!!!
     // This is important for Rec-track documents, do not copy a patent URI from a random
     // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
     // Team Contact.
-    wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/32212/status",
+    wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/83907/status",
 
     // Depth for the TOC
     //maxTocLevel: 2,
@@ -73,7 +73,7 @@ var respecConfig = {
 		</script>
 	</head>
 	<body>
-		<section id="abstract">Web Technology Accessibility Guidelines advises creators of technical specifications how to ensure their technology meets the needs of user with disabilities. It addresses primarily web content technologies but also relates to any technology that affects web content sent to users, including client-side APIs, transmission protocols, and interchange formats. Specifications that implement these guidelines make it possible for content authors and user agents to render the content in an accessible manner to people with a wide range of abilities.<p> </p></section>
+		<section id="abstract">Framework for Accessible Specification of Technologies (FAST) advises creators of technical specifications how to ensure their technology meets the needs of user with disabilities. It addresses primarily web content technologies but also relates to any technology that affects web content sent to users, including client-side APIs, transmission protocols, and interchange formats. Specifications that implement these guidelines make it possible for content authors and user agents to render the content in an accessible manner to people with a wide range of abilities.<p> </p></section>
 		<section id="sotd">
 		</section>
 		<section>
@@ -82,21 +82,21 @@ var respecConfig = {
 				<h3>Goals</h3>
                 <p>Numerous guidelines exist for creating and supporting content that is accessible to people with disabilities, on and off the Web. When these guidelines are supported in the entire web ecosystem, content creators can author accessible content, and expect the accessibility features to be made available by user agents, including assistive technologies when needed. Authoring tools support creation of accessible content, and accessibility features survive transmission to different systems or conversion of content to different formats.</p>
                 <p>Nearly all of these accessibility features depend on support in some form from the technology in which content is encoded, transmitted, and sometimes transformed. But there is not yet a set of well-documented guidance for such technologies. Instead, requirements are inferred from authoring and user agent guidelines. This makes it complicated for technology creators to ensure they have met the full set of needs. Review from accessibility specialists is limited by bandwidth and expertise, so does not fully address that problem. As a result, varying technologies provide various levels of support with varying levels of compatibility with other technologies. These issues at the core layers of Web technology impact the progress that can be made from support of higher-level guidelines.</p>
-                <p>Web Technology Accessibility Guidelines aims to fill this gap. It is intended to be a single, well-considered set of guidelines addressing specifically the features technologies need to provide to support accessible. These guidelines relate to the requirements of other guidelines but should not be confused with them. The goal of WTAG is to provide a single source of guidelines for Web technology accessibility. They relate to other guidelines and documentation to provide additional information and rationale for the requirement, but are intended to be a self-sufficient set of guidelines that technology creators can follow.</p>
+                <p>Framework for Accessible Specification of Technologies aims to fill this gap. It is intended to be a single, well-considered set of guidelines addressing specifically the features technologies need to provide to support accessible. These guidelines relate to the requirements of other guidelines but should not be confused with them. The goal of FAST is to provide a single source of guidelines for Web technology accessibility. They relate to other guidelines and documentation to provide additional information and rationale for the requirement, but are intended to be a self-sufficient set of guidelines that technology creators can follow.</p>
 			</section>
 			<section>
 				<h3>Audience</h3>
-                <p>The primary audience of WTAG is creators of Web technologies. Most of the guidelines relate to content and presentation technologies like HTML, CSS, SVG, PDF, audio/video formats, etc. Some guidelines also address data formats, interchange formats, transmission protocols, etc., usually aimed at ensuring these technologies preserve the accessibility features of content impacted by these technologies. Because of this broad set of relevant technologies, all Web technology creators are considered part of the audience for WTAG.</p>
-                <p>Secondary audience include creators of higher level accessibility guidelines and other advocates for web accessibility features. Because WTAG has a strong grounding in user needs, researchers and advocates who identify the accessibility requirements of web users with disabilities are also an important audience.</p>
+                <p>The primary audience of FAST is creators of Web technologies. Most of the guidelines relate to content and presentation technologies like HTML, CSS, SVG, PDF, audio/video formats, etc. Some guidelines also address data formats, interchange formats, transmission protocols, etc., usually aimed at ensuring these technologies preserve the accessibility features of content impacted by these technologies. Because of this broad set of relevant technologies, all Web technology creators are considered part of the audience for FAST.</p>
+                <p>Secondary audience include creators of higher level accessibility guidelines and other advocates for web accessibility features. Because FAST has a strong grounding in user needs, researchers and advocates who identify the accessibility requirements of web users with disabilities are also an important audience.</p>
 			</section>
 				<section>
 					<h4>Scope</h4>
-					<p>Web Technology Accessibility Guidelines is a product of the World Wide Web Consortium and as such targets only the accessibility requirements of web technologies. Many of the user needs are the same for web use and non-web use, so WTAG will necessarily overlap and hopefully be compatible with similar guidelines addressing non-web space. Nonetheless, WTAG is not designed to be used for non-web technologies and there could be key differences. Furthermore, there are user needs that exist outside the web that do not impact the web, and those needs are completely unaddressed by WTAG.</p>
-                    <p>In spite of these caveats about the scope of WTAG, this scope will evolve as the Web does. More and more technologies are becoming part of the Web, and bringing user needs to the Web along with them. For instance, strictly hardware accessibility issues may be non-web requirements, but the Web of Things brings many of these issues closer to the Web than in the past. WTAG will need to reflect this evolution, and future versions may be required to address user needs that are new to the Web.</p>
+					<p>Framework for Accessible Specification of Technologies is a product of the World Wide Web Consortium and as such targets only the accessibility requirements of web technologies. Many of the user needs are the same for web use and non-web use, so FAST will necessarily overlap and hopefully be compatible with similar guidelines addressing non-web space. Nonetheless, FAST is not designed to be used for non-web technologies and there could be key differences. Furthermore, there are user needs that exist outside the web that do not impact the web, and those needs are completely unaddressed by FAST.</p>
+                    <p>In spite of these caveats about the scope of FAST, this scope will evolve as the Web does. More and more technologies are becoming part of the Web, and bringing user needs to the Web along with them. For instance, strictly hardware accessibility issues may be non-web requirements, but the Web of Things brings many of these issues closer to the Web than in the past. FAST will need to reflect this evolution, and future versions may be required to address user needs that are new to the Web.</p>
 				</section>
 			<section>
 				<h3>Approach</h3>
-                <p>The goal of WTAG is to help ensure that web technologies meet the needs of users with disabilities. To do this, the work involves three stages:</p>
+                <p>The goal of FAST is to help ensure that web technologies meet the needs of users with disabilities. To do this, the work involves three stages:</p>
                 <ul>
                     <li>Inventory user needs;</li>
                     <li>Identify ways to meet needs;</li>
@@ -109,15 +109,15 @@ var respecConfig = {
                         <li><a href="http://www.jtc1access.org/documents/swga_339_DTR_29138-1_User_Needs_Summary.zip">JTC 1 User Needs</a>;
                         </li>
                     	<li><a href="https://www.iso.org/standard/70913.html">ISO/IEC 30071-1 Information technology — Development of user interface accessibility — Part 1: A code of practice for creating accessible ICT products and services</a></li>
-                        <li><a href="http://www.w3.org/TR/WCAG20/">WCAG 2.0</a>;</li>
-                        <li><a href="http://www.w3.org/TR/UAAG20/">UAAG 2.0</a>;</li>
-                        <li><a href="http://www.w3.org/TR/ATAG20/">ATAG 2.0</a>;</li>
+                        <li><a href="https://www.w3.org/TR/WCAG20/">WCAG 2.0</a>;</li>
+                        <li><a href="https://www.w3.org/TR/UAAG20/">UAAG 2.0</a>;</li>
+                        <li><a href="https://www.w3.org/TR/ATAG20/">ATAG 2.0</a>;</li>
                         <li><a href="https://www.w3.org/WAI/GL/mobile-a11y-tf/wiki/Main_Page">Mobile gap analysis</a>;</li>
                         <li><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">Cognitive gap analyses</a>;</li>
-                        <li><a href="http://www.w3.org/TR/media-accessibility-reqs/">Media Accessibility User Requirements</a>;</li>
+                        <li><a href="https://www.w3.org/TR/media-accessibility-reqs/">Media Accessibility User Requirements</a>;</li>
                         <li> Sources from other advocacy organizations.</li>
                     </ul>
-                    <p class="note">Note the goal of this exercise is not to supplant other good work in this field. The aim is to assemble disparate sources if knowledge about user needs in one place, to facilitate analysis. This work is likely to spin off from the core work of developing WTAG. If another organization creates a sufficiently rich collection of documented user needs it will be possible to use that resource rather than reinvent the work in W3C.</p>
+                    <p class="note">Note the goal of this exercise is not to supplant other good work in this field. The aim is to assemble disparate sources if knowledge about user needs in one place, to facilitate analysis. This work is likely to spin off from the core work of developing FAST. If another organization creates a sufficiently rich collection of documented user needs it will be possible to use that resource rather than reinvent the work in W3C.</p>
                 </section>
                 <section>
                     <h4>Identify ways to meet needs</h4>
@@ -139,7 +139,7 @@ var respecConfig = {
 						<li> If the user need is met by user agents, the technology must provide a sufficiently rich definition of the object for user agents to implement. </li>
 					</ul>
                     <p>Not all technologies will address all ways of meeting user needs. For instance, CSS is primarily design-oriented, and HTML is somewhat semantics-oriented. The technology requirements may need conformance profiles or some other way of guiding technology developers seeking to follow them. It may not be easy to state in a general prescriptive way whether a given technology should, for instance, provide a richer design capability to meet a user need or should instead rely on better semantics for assistive technology-oriented content alternatives. A good structure of the technology requirements should help make it clear that <i>some</i> method of meeting a given user need is important. Horizontal review may continue to be important in guiding technology developers through the possibilities. </p>
-                    <p>The set of approaches to meeting user needs that affects technology features becomes the base information for the Web Technology Accessibility Guidelines. (The other two routes, while important to the analysis, are not directly relevant to WTAG but may inform other work.) These approaches are prioritized, organized, and translated into guidelines-type language to become the Web Technology Accessibility Guidelines.</p>
+                    <p>The set of approaches to meeting user needs that affects technology features becomes the base information for the Framework for Accessible Specification of Technologies. (The other two routes, while important to the analysis, are not directly relevant to FAST but may inform other work.) These approaches are prioritized, organized, and translated into guidelines-type language to become the Framework for Accessible Specification of Technologies.</p>
                     <p>With the above analyses done, it should be easy to see how current guidelines address which user needs. In turn it should be easy to see where current guidelines to not meet user needs, that in theory should be able to be met by activities within the remit of that set of guidelines. This should be important input into WAI 3.0 / WAI 2020 planning.</p>
                 </section>
 			</section>
@@ -147,7 +147,7 @@ var respecConfig = {
 				<h3>Explanation of User Needs</h3>
 				<!--
 				<figure>
-					<img src="img/usability-accessibility.png" xmlns="http://www.w3.org/1999/xhtml"/>
+					<img src="img/usability-accessibility.png" xmlns="https://www.w3.org/1999/xhtml"/>
 					<figcaption>Accessibility needs become mainstream needs over time</figcaption>
 				</figure>
 				-->
@@ -155,7 +155,7 @@ var respecConfig = {
 				<p>At least two levels of needs may be identified. The first is truly generic needs, requirements users have to access and use content such as perceive and understand it, and should be stable over time. The second layer is needs specific to technologies of the day, such as ability to understand and operate controls. This layer may be understood as an implementation of the generic needs, so may not be classed as user needs in the end. Regardless of its classification, it will be an important component of understanding the space. This level of needs evolves as technology and design patterns do, so needs to be maintainable separately from the generic needs. </p>
                 <section>
                     <h4>Evolution of user needs</h4>
-                    <p>Where user needs are suspected but known, related work may expand the inventory through research when feasible. Therefore the set of documented user needs will evolve over time. A given set of guidelines including WTAG, however, can only address needs that were known at the time of development of the guidelines.</p>
+                    <p>Where user needs are suspected but known, related work may expand the inventory through research when feasible. Therefore the set of documented user needs will evolve over time. A given set of guidelines including FAST, however, can only address needs that were known at the time of development of the guidelines.</p>
                 </section>
 				<section>
 					<h4>Assumptions </h4>
@@ -497,7 +497,7 @@ var respecConfig = {
             </section>
 		</section>
 		<section>
-			<h2>Web Technology Accessibility Guidelines</h2>
+			<h2>Framework for Accessible Specification of Technologies</h2>
 			<p class="note">The content below is merely initial draft content intended to show how guidelines aimed at web technology developers might look. It has not yet been related to the user needs and ways of meeting them outlined above. It serves as initial brainstorming to help demonstrate viability of this set of guidelines.</p>
 			<section>
 				<h2>Alternative Content</h2>
