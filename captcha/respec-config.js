@@ -39,6 +39,11 @@ var respecConfig = {
 	// only "name" is required
 	editors: [
 		{
+			name: "Scott Hollier",
+			mailto: "scott@hollier.info",
+			w3cid: 43274
+		},
+		{
 			name: "Janina Sajka",
 			url: "http://rednote.net/",
 			mailto: "janina@rednote.net",
