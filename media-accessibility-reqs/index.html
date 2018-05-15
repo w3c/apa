@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 20.7.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 20.11.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -287,7 +287,7 @@ details.respec-tests-details > li {
   "specStatus": "WD",
   "processVersion": "2005",
   "shortName": "media-accessibility-reqs",
-  "publishDate": "2018-04-18",
+  "publishDate": "2018-05-15",
   "copyrightStart": "2012",
   "license": "document",
   "previousPublishDate": "2014-08-14",
@@ -353,8 +353,8 @@ details.respec-tests-details > li {
   "maxTocLevel": 2,
   "tocIntroductory": true,
   "doRDFa": 1.1,
-  "publishISODate": "2018-04-18T00:00:00.000Z",
-  "generatedSubtitle": "Working Draft 18 April 2018"
+  "publishISODate": "2018-05-15T00:00:00.000Z",
+  "generatedSubtitle": "Working Draft 15 May 2018"
 }</script><meta name="description" content="This document presents the accessibility requirements users with disabilities have
             with respect to audio and video on the web."></head>
 	<body class="h-entry toc-inline"><div class="head">
@@ -363,9 +363,9 @@ details.respec-tests-details > li {
   </a>
   <h1 id="title" class="title p-name">Media Accessibility User Requirements</h1>
   
-  <h2 id="w3c-working-draft-18-april-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time class="dt-published" datetime="2018-04-18">18 April 2018</time></h2>
+  <h2 id="w3c-working-draft-15-may-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time class="dt-published" datetime="2018-05-15">15 May 2018</time></h2>
   <dl>
-    <dt>This version:</dt><dd><a class="u-url" href="https://www.w3.org/TR/2018/WD-media-accessibility-reqs-20180418/">https://www.w3.org/TR/2018/WD-media-accessibility-reqs-20180418/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/media-accessibility-reqs/">https://www.w3.org/TR/media-accessibility-reqs/</a></dd>
+    <dt>This version:</dt><dd><a class="u-url" href="https://www.w3.org/TR/2018/WD-media-accessibility-reqs-20180515/">https://www.w3.org/TR/2018/WD-media-accessibility-reqs-20180515/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/media-accessibility-reqs/">https://www.w3.org/TR/media-accessibility-reqs/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="http://w3c.github.io/pfwg/media-accessibility-reqs/">http://w3c.github.io/pfwg/media-accessibility-reqs/</a></dd>
     
     
@@ -1045,7 +1045,7 @@ details.respec-tests-details > li {
 				<div class="indent">
 					<div class="requirement" id="CC-1"><strong class="req-handle">[CC-1]</strong> Render text in a time-synchronized manner,
           using the media resource as the timebase master. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span></div><p class="">Most of the time, the main audio track would be the best candidate
+					<div class="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span></div><p class="">Most of the time, the main audio track would be the best candidate
         for the timebase. Where a video without audio, but with a text track,
         is available, the video track becomes the timebase master. Also, there
         may be situations where an explicit timing track is available. </p></div>
@@ -1053,21 +1053,21 @@ details.respec-tests-details > li {
 				<div class="indent">
 					<div class="requirement" id="CC-2"><strong class="req-handle">[CC-2]</strong> Allow the author to specify erasures, i.e.,
           times when no text is displayed on the screen (no text cues are active). </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><p class="">This should be possible both within media resources and caption
+					<div class="note" id="issue-container-generatedID-0"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><p class="">This should be possible both within media resources and caption
       formats. </p></div>
 				</div>
 				<div class="indent">
 					<div class="requirement" id="CC-3"><strong class="req-handle">[CC-3]</strong> Allow the author to assign timestamps so
           that one caption/subtitle follows another, with no perceivable gap
           in between. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-1" aria-level="4"><span>Note</span></div><p class="">This means that caption cues should be able to either let the
+					<div class="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="4"><span>Note</span></div><p class="">This means that caption cues should be able to either let the
         start time of the subsequent cue be determined by the duration of the
         cue or have the end time be implied by the start of the next cue. For
         overlapping captions, explicit start and end times are then required. </p></div>
 				</div>
 				<div class="indent">
 					<div class="requirement" id="CC-4"><strong class="req-handle">[CC-4]</strong> Be available in a text encoding. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-2" aria-level="4"><span>Note</span></div><p class="">This means that determined character encodings should be supported
+					<div class="note" id="issue-container-generatedID-2"><div role="heading" class="note-title marker" id="h-note-2" aria-level="4"><span>Note</span></div><p class="">This means that determined character encodings should be supported
         - which could be either by making the character encoding explicit or
         by enforcing a single default one such as UTF-8. </p></div>
 				</div>
@@ -1077,7 +1077,7 @@ details.respec-tests-details > li {
           space next to the media viewport. This is particularly important when
           multiple captions are on screen at the same time and relate to different
           speakers, or when in-picture text is avoided. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-3" aria-level="4"><span>Note</span></div><p class="">The minimum requirement is a bounding box (with an optional background)
+					<div class="note" id="issue-container-generatedID-3"><div role="heading" class="note-title marker" id="h-note-3" aria-level="4"><span>Note</span></div><p class="">The minimum requirement is a bounding box (with an optional background)
         into which text is flowed, and that probably needs to be pixel aligned.
         The absolute position of text within the bounding box is less critical,
         although it is important to be able to avoid bad word-breaks and have
@@ -1093,14 +1093,14 @@ details.respec-tests-details > li {
 				<div class="indent">
 					<div class="requirement" id="CC-6"><strong class="req-handle">[CC-6]</strong> Support the display of multiple regions
           of text simultaneously. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-4" aria-level="4"><span>Note</span></div><p class="">This typically relates to multiple text cues that are defined
+					<div class="note" id="issue-container-generatedID-4"><div role="heading" class="note-title marker" id="h-note-4" aria-level="4"><span>Note</span></div><p class="">This typically relates to multiple text cues that are defined
         on overlapping times. If the cues' rendering target are made out to different
         spatial regions, they can be displayed simultaneously. </p></div>
 				</div>
 				<div class="indent">
 					<div class="requirement" id="CC-7"><strong class="req-handle">[CC-7]</strong> Display multiple rows of text when rendered
           as text in a right-to-left or left-to-right language. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-5" aria-level="4"><span>Note</span></div><p class="">Internationalization is important not just for subtitles, as captions
+					<div class="note" id="issue-container-generatedID-5"><div role="heading" class="note-title marker" id="h-note-5" aria-level="4"><span>Note</span></div><p class="">Internationalization is important not just for subtitles, as captions
       can be used in all languages. </p></div>
 				</div>
 				<div class="indent">
@@ -1108,7 +1108,7 @@ details.respec-tests-details > li {
 				</div>
 				<div class="indent">
 					<div class="requirement" id="CC-9"><strong class="req-handle">[CC-9]</strong> Permit a range of font faces and sizes. </div>
-                    <div class="note"><div role="heading" class="note-title marker" id="h-note-6" aria-level="4"><span>Note</span></div><p class="">The legibility of the rendered text depends upon the
+                    <div class="note" id="issue-container-generatedID-6"><div role="heading" class="note-title marker" id="h-note-6" aria-level="4"><span>Note</span></div><p class="">The legibility of the rendered text depends upon the
                     size of the text as perceived by the viewer.  This is in turn dependent upon the display
                     size and the distance between the display and the viewer.  Users must be able to select an
                     appropriate format for their environment.  See also <a href="#CC-11">CC-11</a> below.</p></div>
@@ -1121,7 +1121,7 @@ details.respec-tests-details > li {
 					<div class="requirement" id="CC-11"><strong class="req-handle">[CC-11]</strong> Render
                     text in a range of colors.  The user should have final control over rendering styles like
                     color and fonts; e.g., through user preferences. 
-                    <div class="note"><div role="heading" class="note-title marker" id="h-note-7" aria-level="4"><span>Note</span></div><p class="">A default palette of colors suitable for users with atypical
+                    <div class="note" id="issue-container-generatedID-7"><div role="heading" class="note-title marker" id="h-note-7" aria-level="4"><span>Note</span></div><p class="">A default palette of colors suitable for users with atypical
                     color perception
                     should be available to distinguish editorial concepts such as speakers.
                     There are likely to be conflicting requirements between different users
@@ -1132,7 +1132,7 @@ details.respec-tests-details > li {
                     and Asperger's may find that viewing
                     content that is given a particular color cast, akin to viewing through
                     blue eyeglasses, helps them to read presented text.</p></div>
-                    <div class="note"><div role="heading" class="note-title marker" id="h-note-8" aria-level="4"><span>Note</span></div><p class="">While users must have the ability to customize their experience, 
+                    <div class="note" id="issue-container-generatedID-8"><div role="heading" class="note-title marker" id="h-note-8" aria-level="4"><span>Note</span></div><p class="">While users must have the ability to customize their experience, 
                     it is preferable that developers do
                     their best to ensure the legibility of the content they are presenting.  For example, the
                     use of Media Queries and alternate style sheets based upon screen size
@@ -1146,11 +1146,11 @@ details.respec-tests-details > li {
 				<div class="indent">
 					<div class="requirement" id="CC-12"><strong class="req-handle">[CC-12]</strong> Enable rendering of text with a thicker
           outline or a drop shadow to allow for better contrast with the background. </div>
-                    <div class="note"><div role="heading" class="note-title marker" id="h-note-9" aria-level="4"><span>Note</span></div><p class="">The use of drop shadows is not a suitable general alternative to 
+                    <div class="note" id="issue-container-generatedID-9"><div role="heading" class="note-title marker" id="h-note-9" aria-level="4"><span>Note</span></div><p class="">The use of drop shadows is not a suitable general alternative to 
                     displaying text on a non-transparent background.  For example, white text with drop
                     shadows on a transparent background is not legible over white content (e.g., footage of
                     snow).</p></div>
-                    <div class="note"><div role="heading" class="note-title marker" id="h-note-10" aria-level="4"><span>Note</span></div><p class="">The use of drop shadows can increase the sense of 'busyness', and can have
+                    <div class="note" id="issue-container-generatedID-10"><div role="heading" class="note-title marker" id="h-note-10" aria-level="4"><span>Note</span></div><p class="">The use of drop shadows can increase the sense of 'busyness', and can have
                     negative impacts upon viewers with some cognitive conditions.  In general developers will
                     improve text legibility of they avoid the use of drop shadows.</p></div>
 				</div>
@@ -1161,7 +1161,7 @@ details.respec-tests-details > li {
           is displayed, such that it minimizes distraction. However, where captions
           are infrequent the background should be allowed to disappear to enable
           the user to see as much of the underlying video as possible. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-11" aria-level="4"><span>Note</span></div><p class="">It may be technically possible to have cues without text. </p></div>
+					<div class="note" id="issue-container-generatedID-11"><div role="heading" class="note-title marker" id="h-note-11" aria-level="4"><span>Note</span></div><p class="">It may be technically possible to have cues without text. </p></div>
 				</div>
 				<div class="indent">
 					<div class="requirement" id="CC-14"><strong class="req-handle">[CC-14]</strong> Allow the use of mixed display styles—
@@ -1179,9 +1179,9 @@ details.respec-tests-details > li {
           new lines of captions.
           When displaying captions using the paint-on style, it is important to ensure
           that the final words that are displayed are visible for enough time for them to be read.</div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-12" aria-level="4"><span>Note</span></div><p class="">Similarly, in karaoke, individual characters are often "painted
+					<div class="note" id="issue-container-generatedID-12"><div role="heading" class="note-title marker" id="h-note-12" aria-level="4"><span>Note</span></div><p class="">Similarly, in karaoke, individual characters are often "painted
       on". </p></div>
-                <div class="note"><div role="heading" class="note-title marker" id="h-note-13" aria-level="4"><span>Note</span></div><p class="">The comprehension and appreciation of captions and subtitles depends on
+                <div class="note" id="issue-container-generatedID-13"><div role="heading" class="note-title marker" id="h-note-13" aria-level="4"><span>Note</span></div><p class="">The comprehension and appreciation of captions and subtitles depends on
                 how well matched they are 'editorially' to the related video content. In
                 particular the pacing of the content should be reflected in the caption
                 text; for example a fast paced drama is likely to benefit from
@@ -1210,7 +1210,7 @@ details.respec-tests-details > li {
           Also allow for separate caption files for different languages
           and on-the-fly switching between them. This is also a requirement for
           subtitles. See also [CC-20]</div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-14" aria-level="4"><span>Note</span></div><p class="">Caption/subtitle files that are alternatives in different languages
+					<div class="note" id="issue-container-generatedID-14"><div role="heading" class="note-title marker" id="h-note-14" aria-level="4"><span>Note</span></div><p class="">Caption/subtitle files that are alternatives in different languages
         are probably better provided in different caption resources and should be user
         selectable. Realistically, no more than 2 languages should be present at the same time on the screen.</p></div>
 				</div>
@@ -1228,7 +1228,7 @@ details.respec-tests-details > li {
 				<div class="indent">
 					<div class="requirement" id="CC-20"><strong class="req-handle">[CC-20]</strong> Permit in-line mark-up for foreign words
           or phrases. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-15" aria-level="4"><span>Note</span></div><p class="">Italics markup may be sufficient for a human user, but it is important
+					<div class="note" id="issue-container-generatedID-15"><div role="heading" class="note-title marker" id="h-note-15" aria-level="4"><span>Note</span></div><p class="">Italics markup may be sufficient for a human user, but it is important
         to be able to mark up languages so that the text can be rendered correctly,
         since the same Unicode can be shared between languages and rendered differently
         in different contexts. This is mainly an localization issue. It is also important
@@ -1242,7 +1242,7 @@ details.respec-tests-details > li {
 				<div class="indent">
 					<div class="requirement" id="CC-22"><strong class="req-handle">[CC-22]</strong> Support captions that are provided inside
           media resources as tracks, or in external files. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-16" aria-level="4"><span>Note</span></div><p class="">It is desirable to expose the same API to both. </p></div>
+					<div class="note" id="issue-container-generatedID-16"><div role="heading" class="note-title marker" id="h-note-16" aria-level="4"><span>Note</span></div><p class="">It is desirable to expose the same API to both. </p></div>
 				</div>
 				<div class="indent">
 					<div class="requirement" id="CC-23"><strong class="req-handle">[CC-23]</strong> Ascertain that captions are displayed in
@@ -1251,19 +1251,19 @@ details.respec-tests-details > li {
 				<div class="indent">
 					<div class="requirement" id="CC-24"><strong class="req-handle">[CC-24]</strong> Support user activation/deactivation of
           caption tracks. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-17" aria-level="4"><span>Note</span></div><p class="">This requires a menu of some sort that displays the available
+					<div class="note" id="issue-container-generatedID-17"><div role="heading" class="note-title marker" id="h-note-17" aria-level="4"><span>Note</span></div><p class="">This requires a menu of some sort that displays the available
       tracks for activation/deactivation. </p></div>
 				</div>
 				<div class="indent">
 					<div class="requirement" id="CC-25"><strong class="req-handle">[CC-25]</strong> Support both edited and verbatim
                         captions when available. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-18" aria-level="4"><span>Note</span></div><p class="">Edited and verbatim captions may be provided in two separate
+					<div class="note" id="issue-container-generatedID-18"><div role="heading" class="note-title marker" id="h-note-18" aria-level="4"><span>Note</span></div><p class="">Edited and verbatim captions may be provided in two separate
                     caption resources. How these differ should be explained to the user.</p></div>
 				</div>
 				<div class="indent">
 					<div class="requirement" id="CC-26"><strong class="req-handle">[CC-26]</strong> Support multiple tracks of
                         foreign-language subtitles including multiple subtitle tracks in the same foreign language.</div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-19" aria-level="4"><span>Note</span></div><p class="">These different-language "tracks" can be provided in
+					<div class="note" id="issue-container-generatedID-19"><div role="heading" class="note-title marker" id="h-note-19" aria-level="4"><span>Note</span></div><p class="">These different-language "tracks" can be provided in
       different resources. </p></div>
 				</div>
 				<div class="indent">
@@ -1299,7 +1299,7 @@ details.respec-tests-details > li {
 				<div class="indent">
 					<div class="requirement" id="ECC-1"><strong class="req-handle">[ECC-1]</strong> Support metadata markup for (sections of)
           timed text cues. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-20" aria-level="4"><span>Note</span></div><p class="">Such "metadata" markup can be realized through a title
+					<div class="note" id="issue-container-generatedID-20"><div role="heading" class="note-title marker" id="h-note-20" aria-level="4"><span>Note</span></div><p class="">Such "metadata" markup can be realized through a title
         attribute on a &lt;span&gt; of the text, or a hyperlink to another location
         where a term is explained, an &lt;abbr&gt; element, an   &lt;acronym&gt; element,
         a &lt;dfn&gt; element, or through RDFa or microdata. </p></div>
@@ -1307,7 +1307,7 @@ details.respec-tests-details > li {
 				<div class="indent">
 					<div class="requirement" id="ECC-2"><strong class="req-handle">[ECC-2]</strong> Support hyperlinks and other activation
           mechanisms for supplementary data for (sections of) caption text. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-21" aria-level="4"><span>Note</span></div><p class="">This could be realized by including hyperlinks or
+					<div class="note" id="issue-container-generatedID-21"><div role="heading" class="note-title marker" id="h-note-21" aria-level="4"><span>Note</span></div><p class="">This could be realized by including hyperlinks or
         buttons into timed text cues, where additional overlays could be created
         or a different page loaded. One needs to deal here with the need to
         pause the media timeline for reading of the additional information. </p></div>
@@ -1321,7 +1321,7 @@ details.respec-tests-details > li {
                         resource paused while the caption is displayed. Timing should be
                         provided by the author, but the user should always be able to override
                         the author's timings.</div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-22" aria-level="4"><span>Note</span></div><p class="">This feature is analogous to extended video descriptions - where timing
+					<div class="note" id="issue-container-generatedID-22"><div role="heading" class="note-title marker" id="h-note-22" aria-level="4"><span>Note</span></div><p class="">This feature is analogous to extended video descriptions - where timing
                     for a text cue is longer than the available time for the cue. It may be
                     necessary to halt the media to allow the user more time to read the text
                     and its additional material. In such cases the pause is dependent on the
@@ -1340,7 +1340,7 @@ details.respec-tests-details > li {
 					<div class="requirement" id="ECC-5"><strong class="req-handle">[ECC-5]</strong> Allow users to define the reading speed
           and thus define how long each text cue requires, and whether media
           playback needs to pause sometimes to let them catch up on their reading. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-23" aria-level="4"><span>Note</span></div><p class="">This can be a setting in the UA, which will define user-interface
+					<div class="note" id="issue-container-generatedID-23"><div role="heading" class="note-title marker" id="h-note-23" aria-level="4"><span>Note</span></div><p class="">This can be a setting in the UA, which will define user-interface
       behavior. </p></div>
 				</div>
 			</section>
@@ -1450,7 +1450,7 @@ details.respec-tests-details > li {
                     providing pointing device
 					or other input methods in addition to keyboard operation.
 					 </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-24" aria-level="4"><span>Note</span></div><p class="">This means that all interaction possibilities with media elements
+					<div class="note" id="issue-container-generatedID-24"><div role="heading" class="note-title marker" id="h-note-24" aria-level="4"><span>Note</span></div><p class="">This means that all interaction possibilities with media elements
         need to be keyboard accessible; e.g., through being able to tab onto
         the play, pause, mute buttons, and to move the playback position from
         the keyboard. </p></div>
@@ -1465,7 +1465,7 @@ details.respec-tests-details > li {
           playback rate, content navigation on same level (next/prev) and between
           levels (up/down) etc. This is also a particularly important requirement
           on mobile devices or devices without a keyboard. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-25" aria-level="4"><span>Note</span></div><p class="">This means that the controls content attribute needs to provide
+					<div class="note" id="issue-container-generatedID-25"><div role="heading" class="note-title marker" id="h-note-25" aria-level="4"><span>Note</span></div><p class="">This means that the controls content attribute needs to provide
         an extended set of control functionality including functionality for
         accessibility users. </p></div>
 				</div>
@@ -1473,7 +1473,7 @@ details.respec-tests-details > li {
 					<div class="requirement" id="IC-3"><strong class="req-handle">[IC-3]</strong> All functionality available to native controls
           must also be available to scripted controls. The author would be able
           to choose any/all of the controls, style them and position them. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-26" aria-level="4"><span>Note</span></div><p class="">This means that new IDL attributes need to be added to the media
+					<div class="note" id="issue-container-generatedID-26"><div role="heading" class="note-title marker" id="h-note-26" aria-level="4"><span>Note</span></div><p class="">This means that new IDL attributes need to be added to the media
       elements for the extra controls that are accessibility related. </p></div>
 				</div>
 				<div class="indent">
@@ -1483,7 +1483,7 @@ details.respec-tests-details > li {
           functionality is available and essentially override author settings
           through user control. This is also a particularly important requirement
           on mobile devices or devices without a keyboard. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-27" aria-level="4"><span>Note</span></div><p class="">This could be enabled through a context menu, which is keyboard
+					<div class="note" id="issue-container-generatedID-27"><div role="heading" class="note-title marker" id="h-note-27" aria-level="4"><span>Note</span></div><p class="">This could be enabled through a context menu, which is keyboard
       accessible and its keyboard access cannot be turned off. </p></div>
 				</div>
 				<div class="indent">
@@ -1492,7 +1492,7 @@ details.respec-tests-details > li {
           so that a user presented with the scripted version is not
           excluded from participating in or experiencing 
           some expected behavior. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-28" aria-level="4"><span>Note</span></div><p class="">This is below the level of HTML and means that the accessibility
+					<div class="note" id="issue-container-generatedID-28"><div role="heading" class="note-title marker" id="h-note-28" aria-level="4"><span>Note</span></div><p class="">This is below the level of HTML and means that the accessibility
       platform needs to be extended to allow access to these controls. </p></div>
 				</div>
 				<div class="indent">
@@ -1504,7 +1504,7 @@ details.respec-tests-details > li {
           accessibility framework. The vision-impaired user must be able to stop
           autoplay either generally on all media elements through a setting,
           or for particular pages through a single keyboard user interaction. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-29" aria-level="4"><span>Note</span></div><p class="">This could be enabled through encouraging publishers to use @autoplay,
+					<div class="note" id="issue-container-generatedID-29"><div role="heading" class="note-title marker" id="h-note-29" aria-level="4"><span>Note</span></div><p class="">This could be enabled through encouraging publishers to use @autoplay,
         encouraging UAs to implement accessibility settings that allow turning
         off all autoplay, and encouraging <abbr title="Assistive Technology">AT</abbr> to implement a shortcut key to stop
         all autoplay on a web page. </p></div>
@@ -1541,7 +1541,7 @@ details.respec-tests-details > li {
 				<p>While all devices may not support the capability, a standard control API
       must support the ability to speed up or slow down content presentation
       without altering audio pitch. </p>
-				<div class="note"><div role="heading" class="note-title marker" id="h-note-30" aria-level="4"><span>Note</span></div><p class="">While perhaps unfamiliar to some, this feature has been present
+				<div class="note" id="issue-container-generatedID-30"><div role="heading" class="note-title marker" id="h-note-30" aria-level="4"><span>Note</span></div><p class="">While perhaps unfamiliar to some, this feature has been present
       on many devices, especially audiobook players, for some 20 years now. </p></div>
 				<p>The user can adjust the playback rate of prerecorded time-based media
         content, such that all of the following are true  </p>
@@ -1693,7 +1693,7 @@ details.respec-tests-details > li {
 				<div class="indent">
 					<div class="requirement" id="DAC-9"><strong class="req-handle">[DAC-9]</strong> Provide the user with the option to record alternative content
                     along with the primary content on devices where recording is available. </div>
-                    <div class="note"><div role="heading" class="note-title marker" id="h-note-31" aria-level="4"><span>Note</span></div><div class="">
+                    <div class="note" id="issue-container-generatedID-31"><div role="heading" class="note-title marker" id="h-note-31" aria-level="4"><span>Note</span></div><div class="">
 					<p>This feature can be user configurable to allow maximum flexibility in trading off the
                     anticipated future need for the description against the amount of extra data storage required. A flexible
                     solution giving maximum control to the user would be to provide a global setting with the following
@@ -1770,7 +1770,7 @@ details.respec-tests-details > li {
 					</ol>
 					<p>If alternative content has a different height or width than the media
         content, then the user agent will reflow the (HTML) viewport.  </p>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-32" aria-level="4"><span>Note</span></div><p class="">This may create a need to provide an author hint to the web page
+					<div class="note" id="issue-container-generatedID-32"><div role="heading" class="note-title marker" id="h-note-32" aria-level="4"><span>Note</span></div><p class="">This may create a need to provide an author hint to the web page
         when embedding alternative content in order to instruct the web page how
         to render the content: to scale with the media resource, scale independently,
         or provide a position hint in relation to the media. On small devices
@@ -1791,7 +1791,7 @@ details.respec-tests-details > li {
 						<li>line spacing (or line height), and</li>
 						<li>word spacing.</li>
 					</ol>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-33" aria-level="4"><span>Note</span></div><p class="">This should be achievable through UA configuration or user defined javascript or CSS which can override styles dynamically in the browser. </p></div>
+					<div class="note" id="issue-container-generatedID-33"><div role="heading" class="note-title marker" id="h-note-33" aria-level="4"><span>Note</span></div><p class="">This should be achievable through UA configuration or user defined javascript or CSS which can override styles dynamically in the browser. </p></div>
 				</div>
 				<div class="indent">
 					<div class="requirement" id="VP-3"><strong class="req-handle">[VP-3]</strong> Provide the user with the ability to adjust
@@ -1799,14 +1799,14 @@ details.respec-tests-details > li {
           the containing viewport, with the ability to preserve aspect ratio
           and to adjust the size of the playback viewport to avoid cropping,
           within the scaling limitations imposed by the media itself.  </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-34" aria-level="4"><span>Note</span></div><p class="">This can be achieved by simply zooming into the web page, which
+					<div class="note" id="issue-container-generatedID-34"><div role="heading" class="note-title marker" id="h-note-34" aria-level="4"><span>Note</span></div><p class="">This can be achieved by simply zooming into the web page, which
       will automatically rescale the layout and reflow the content. </p></div>
 				</div>
 				<div class="indent">
 					<div class="requirement" id="VP-4"><strong class="req-handle">[VP-4]</strong> Provide the user with the ability to control
           the contrast and brightness of the content within the playback viewport.
            </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-35" aria-level="4"><span>Note</span></div><p class="">This is a user-agent device requirement and should already be
+					<div class="note" id="issue-container-generatedID-35"><div role="heading" class="note-title marker" id="h-note-35" aria-level="4"><span>Note</span></div><p class="">This is a user-agent device requirement and should already be
         addressed in the UAAG. In live content, it may even be possible to adjust
         camera settings to achieve this requirement. It is also a   "<em class="rfc2119" title="SHOULD">SHOULD</em>" level
         requirement, since it does not account for limitations of various devices. </p></div>
@@ -1817,7 +1817,7 @@ details.respec-tests-details > li {
           rendered. The user agent must avoid overlapping of overlay content
           and controls on media resources. This must also happen if, for example,
           the controls are only visible on demand. </div>
-					<div class="note"><div role="heading" class="note-title marker" id="h-note-36" aria-level="4"><span>Note</span></div><p class="">If there are several types of overlapping overlays (including 
+					<div class="note" id="issue-container-generatedID-36"><div role="heading" class="note-title marker" id="h-note-36" aria-level="4"><span>Note</span></div><p class="">If there are several types of overlapping overlays (including 
                     captions and subtitles), implementations should attempt to ensure that none of
                     them overlaps with editorially important content.
                     In
@@ -1892,7 +1892,7 @@ details.respec-tests-details > li {
 		</section>
             <section class="appendix" id="A_checklist">
             <!--OddPage--><h2 id="a-media-accessibility-user-requirements-checklist"><span class="secno">A. </span>Media Accessibility User Requirements Checklist</h2>
-            <div class="note"><div role="heading" class="note-title marker" id="h-note-37" aria-level="3"><span>Note</span></div><p class="">A table-ized version of the requirements in
+            <div class="note" id="issue-container-generatedID-37"><div role="heading" class="note-title marker" id="h-note-37" aria-level="3"><span>Note</span></div><p class="">A table-ized version of the requirements in
             this document is
             available in the Wiki at <a href="http://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist">http://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist</a>.</p></div>
     </section>
