@@ -8,6 +8,7 @@ var respecConfig = {
 	permalinkHide:     false,
 	tocIntroductory: true,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+	subtitle: "Alternatives to Visual Turing Tests on the Web",
 	specStatus:           "ED",
 	//crEnd:                "",
 	//perEnd:               "",
