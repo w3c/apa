@@ -14,7 +14,7 @@ var respecConfig = {
 	diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName:            "turingtest-2",
+	shortName:            "turingtest",
 	
 	
 	// if you wish the publication date to be other than today, set this
