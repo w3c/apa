@@ -58,6 +58,14 @@ var respecConfig = {
 			w3cid: 34017
 		}
 	],
+	formerEditors: [
+		{
+			name: "Matt May",
+			company: "W3C",
+			companyURI: "https://www.w3.org",
+			w3cid: 33323
+		}
+	],
 	
 	// authors, add as many as you like.
 	// This is optional, uncomment if you have authors as well as editors.
