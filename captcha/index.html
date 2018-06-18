@@ -78,13 +78,13 @@ part of one audio CAPTCHA prove difficult to understand.</p>
 				<p>This category contains two popular non-interactive approaches: <a>spam filtering</a>, in which an automated tool evaluates the <em>content</em> of a transaction, and <a>heuristic</a> checks, which evaluate the <em>behavior</em> of the client.</p>
 				<section>
 					<h4>Spam filtering</h4>
-					<p>Applications that use <a>continuous authentication</a> and &quot;<a>hot words</a>&quot; to flag spam content, or <a>Bayesian filtering</a> to detect other patterns consistent with spam, are very popular, and quite effective. While such risk analysis systems may experience false negatives from time to time, properly-tuned systems can achieve results comparable to a traditional visual <a>CAPTCHA</a>, while also removing the added cognitive burden on the user and eliminating access barriers.</p>
+					<p>Applications that use <a>continuous authentication</a> and &quot;hot words&quot; to flag spam content, or <a>Bayesian filtering</a> to detect other patterns consistent with spam, are very popular, and quite effective. While such risk analysis systems may experience false negatives from time to time, properly-tuned systems can achieve results comparable to a traditional visual <a>CAPTCHA</a>, while also removing the added cognitive burden on the user and eliminating access barriers.</p>
 					<p>Most major blogging software contains <a>spam filtering</a> capabilities, or can be fitted with a plug-in for this functionality. Many of these filters can automatically delete messages that reach a certain spam threshold, and mark questionable messages for manual moderation. More advanced systems can control attacks based on posting frequency, filter content sent using the [[TRACKBACK]] protocol, and ban users by IP address range, temporarily or permanently.</p>
 				</section>
 				<section>
 					<h4>Heuristic checks and the Google reCAPTCHA</h4>
 					<p><a>Heuristics</a> are discoveries in a process that seem to indicate a given result. It may be possible to detect the presence of a robotic user based on the volume of data the user requests, series of common pages visited, IP addresses, data entry methods, or other signature data that can be collected.</p>
-					<p>Again, this requires a careful examination of site data. If pattern-matching algorithms can't find good heuristics, then this is not a good solution. Also, <a>polymorphism</a>, or the creation of changing footprints, is apt to result, if it hasn't already, in robots, just as polymorphic (&quot;stealth&quot;) viruses appeared to get around virus checkers looking for known viral footprints.</p>
+					<p>Again, this requires a careful examination of site data. If pattern-matching algorithms can't find good heuristics, then this is not a good solution. Also, polymorphism, or the creation of changing footprints, is apt to result, if it hasn't already, in robots, just as polymorphic (&quot;stealth&quot;) viruses appeared to get around virus checkers looking for known viral footprints.</p>
 					<p>Another heuristic approach identified in [[KILLBOTS]] involves the use of <a>CAPTCHA</a> images, with a twist: how the user reacts to the test is as important as whether or not it was solved. This system, which was designed to thwart distributed denial of service (DDoS) attacks, bans automated attackers which make repeated attempts to retrieve a certain page, while protecting against marking humans incorrectly as automated traffic. When the server's load drops below a certain level, the CAPTCHA-based authentication process is removed entirely.</p>
 					<p>An example of a CAPTCHA based on this approach is the Google reCAPTCHA [[recaptcha]] which features a checkbox labelled ‘I am not a robot’ or similar phrasing. The process works by collecting data such as mouse movement and keyboard navigation to determine whether the user is human or robot, while keeping the CAPTCHA process relatively simple.</p>
 					<p>Anecdotal evidence suggests that this CAPTCHA is currently the most accessible CAPTCHA solution and can be completed with a variety of <a>assistive technologies</a>. However, there is little formalized research investigating whether this is indeed the case. There is also the additional concern that a user's failure to interact appropriately with the reCATPCHA challenge or to satisfy the heuristic tests results in the presentation of a traditional inaccessible CAPTCHA as a fall-back mechanism.</p>
@@ -156,10 +156,12 @@ part of one audio CAPTCHA prove difficult to understand.</p>
 				<dd>Mechanism to determine that a user is still the one previously verified without requiring constant re-authentication.</dd>
 				<dt><dfn data-lt="heuristics">heuristic</dfn></dt>
 				<dd>Way to solve a problem with good reliability but not perfection.</dd>
+				<!--
 				<dt><dfn data-lt="hot words">hot word</dfn></dt>
 				<dd>@@</dd>
 				<dt><dfn>polymorphism</dfn></dt>
 				<dd>@@</dd>
+				-->
 				<dt><dfn>public-key infrastructure</dfn></dt>
 				<dd>Authentication of the entity which has encrypted content via a registered decryption key.</dd>
 				<dt><dfn data-lt="robots|web robot|web robots">robot</dfn></dt>
