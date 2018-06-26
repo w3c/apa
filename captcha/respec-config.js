@@ -8,13 +8,14 @@ var respecConfig = {
 	permalinkHide:     false,
 	tocIntroductory: true,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+	subtitle: "Alternatives to Visual Turing Tests on the Web",
 	specStatus:           "ED",
 	//crEnd:                "",
 	//perEnd:               "",
 	diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName:            "turingtest-2",
+	shortName:            "turingtest",
 	
 	
 	// if you wish the publication date to be other than today, set this
@@ -24,8 +25,8 @@ var respecConfig = {
 	
 	// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
 	// and its maturity status
-	//previousPublishDate:  "",
-	//previousMaturity:  "WD",
+	previousPublishDate:  "2005-11-23",
+	previousMaturity:  "NOTE",
 	//prevRecURI: "",
 	//previousDiffURI: "",
 	
@@ -56,6 +57,14 @@ var respecConfig = {
 			company: "W3C",
 			companyURI: "https://www.w3.org",
 			w3cid: 34017
+		}
+	],
+	formerEditors: [
+		{
+			name: "Matt May",
+			company: "W3C",
+			companyURI: "https://www.w3.org",
+			w3cid: 33323
 		}
 	],
 	
