@@ -1,5 +1,5 @@
 var biblio = {
-	"AICAPTCHA": {
+	"aicaptcha": {
 		"title": "aiCaptcha: Using AI to beat CAPTCHA and post comment spam",
 		"publishDate": "",
 		"authors": ["Casey Chesnut"],
@@ -8,7 +8,7 @@ var biblio = {
 		"publisher": "",
 		"href": "http://www.brains-n-brawn.com/default.aspx?vDir=aicaptcha"
 	},
-	"ANTIPHISHING": {
+	"antiphishing": {
 		"title": "Phishing Activity Trends Report",
 		"publishDate": "July, 2005",
 		"authors": [],
@@ -17,16 +17,7 @@ var biblio = {
 		"publisher": "Anti-Phishing Working Group",
 		"href": "http://antiphishing.org/APWG_Phishing_Activity_Report_Jul_05.pdf"
 	},
-	"BOOKSHARE": {
-		"title": "Bookshare.org home page",
-		"publishDate": "",
-		"authors": [],
-		"editors": [],
-		"etAl": "false",
-		"publisher": "",
-		"href": "http://www.bookshare.org"
-	},
-	"BREAKING": {
+	"breaking": {
 		"title": "Breaking CAPTCHAs Without Using OCR",
 		"publishDate": "",
 		"authors": ["Howard Yeend"],
@@ -35,7 +26,7 @@ var biblio = {
 		"publisher": "",
 		"href": "http://www.cs.berkeley.edu/%7Emori/gimpy/gimpy.html"
 	},
-	"BREAKINGOCR": {
+	"breakingocr": {
 		"title": "Breaking CAPTCHAs Without Using OCR",
 		"publishDate": "",
 		"authors": ["Howard Yeend"],
@@ -44,16 +35,7 @@ var biblio = {
 		"publisher": "",
 		"href": "http://www.puremango.co.uk/cm_breaking_captcha_115.php"
 	},
-	"CAPTCHA": {
-		"title": "The CAPTCHA Project",
-		"publishDate": "",
-		"authors": [],
-		"editors": [],
-		"etAl": "false",
-		"publisher": "Carnegie Mellon University",
-		"href": "http://www.captcha.net"
-	},
-	"CHAFEE": {
+	"chafee": {
 		"title": "17 USC 121, Limitations on exclusive rights: reproduction for blind or other people with disabilities (also known as the Chafee Amendment)",
 		"publishDate": "",
 		"authors": [],
@@ -62,7 +44,7 @@ var biblio = {
 		"publisher": "",
 		"href": "http://www.copyright.gov/title17/92chap1.html"
 	},
-	"KILLBOTS": {
+	"killbots": {
 		"title": "Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds",
 		"publishDate": "",
 		"authors": [
@@ -76,7 +58,7 @@ var biblio = {
 		"publisher": "",
 		"href": "http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"
 	},
-	"NEWSCOM": {
+	"newscom": {
 		"title": "Spam-bot tests flunk the blind",
 		"publishDate": "2 July 2003",
 		"authors": ["Paul Festa"],
@@ -85,7 +67,7 @@ var biblio = {
 		"publisher": "News.com",
 		"href": "http://news.com.com/2100-1032-1022814.html"
 	},
-	"PINGUARD": {
+	"pinguard": {
 		"title": "PIN Guard",
 		"publishDate": "",
 		"authors": [],
@@ -94,7 +76,7 @@ var biblio = {
 		"publisher": "ING Direct site",
 		"href": "https://secure1.ingdirect.com/tpw/popup_whatIsThis.html"
 	},
-	"PWNTCHA": {
+	"pwntcha": {
 		"title": "PWNtcha - CAPTCHA decoder",
 		"publishDate": "",
 		"authors": ["Sam Hocevar"],
@@ -103,16 +85,7 @@ var biblio = {
 		"publisher": "",
 		"href": "http://sam.zoy.org/pwntcha/"
 	},
-	"TRACKBACK": {
-		"title": "Trackback",
-		"publishDate": "",
-		"authors": [],
-		"editors": [],
-		"etAl": "false",
-		"publisher": "Wikipedia",
-		"href": "http://en.wikipedia.org/wiki/Trackback"
-	},
-	"TURING": {
+	"turing": {
 		"title": "The Turing Test",
 		"publishDate": "2002",
 		"authors": [],
@@ -287,6 +260,16 @@ var biblio = {
         "title": "CAPTCHA Security: A Case Study",
         "publisher": "Security & Privacy, IEEE, 7(4)",
         "doi": "doi:10.1109/MSP.2009.84"
+    },
+    "36-cfr-1194": {
+    	"title": "36 CFR Appendix C to Part 1194, Functional Performance Criteria and Technical Requirements",
+    	"href": "https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194",
+    	"publisher": "Legal Information Institute"
+    },
+    "en-301-549": {
+    	"title": "EN 301 549: Accessibility requirements suitable for public procurement of ICT products and services in Europe",
+    	"publisher": "CEN/CENELEC/ETSI",
+    	"href": "http://mandate376.standards.eu/standard"
     },
     "mobile-auth": {
         "authors": [
