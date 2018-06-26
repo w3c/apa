@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 21.0.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- PERMALINKS --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 21.3.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- PERMALINKS --- */
 
 .permalink {
   width: 1px;
@@ -23,9 +23,11 @@
 }
 </style>
 		
-		<title>Inaccessibility of CAPTCHA 2</title>
+		<title>Inaccessibility of CAPTCHA</title>
 		
-		<style id="respec-mainstyle">/*****************************************************************
+		
+		
+	<style id="respec-mainstyle">/*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
@@ -199,9 +201,7 @@ details.respec-tests-details > li {
     display: none;
   }
 }
-</style>
-		
-	<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/turingtest-2/"><script id="initialUserConfig" type="application/json">{
+</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/turingtest/"><script id="initialUserConfig" type="application/json">{
   "trace": true,
   "useExperimentalStyles": true,
   "doRDFa": "1.1",
@@ -209,11 +209,14 @@ details.respec-tests-details > li {
   "permalinkEdge": true,
   "permalinkHide": false,
   "tocIntroductory": true,
+  "subtitle": "Alternatives to Visual Turing Tests on the Web",
   "specStatus": "ED",
   "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
-  "shortName": "turingtest-2",
+  "shortName": "turingtest",
   "copyrightStart": "2017",
   "license": "document",
+  "previousPublishDate": "2005-11-23",
+  "previousMaturity": "NOTE",
   "edDraftURI": "https://w3c.github.io/apa/captcha/",
   "editors": [
     {
@@ -234,6 +237,14 @@ details.respec-tests-details > li {
       "company": "W3C",
       "companyURI": "https://www.w3.org",
       "w3cid": 34017
+    }
+  ],
+  "formerEditors": [
+    {
+      "name": "Matt May",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org",
+      "w3cid": 33323
     }
   ],
   "wg": "Accessible Platform Architectures Working Group",
@@ -269,7 +280,8 @@ details.respec-tests-details > li {
       "editors": [],
       "etAl": "false",
       "publisher": "",
-      "href": "http://www.bookshare.org"
+      "href": "http://www.bookshare.org",
+      "id": "bookshare"
     },
     "BREAKING": {
       "title": "Breaking CAPTCHAs Without Using OCR",
@@ -309,7 +321,8 @@ details.respec-tests-details > li {
       "editors": [],
       "etAl": "false",
       "publisher": "",
-      "href": "http://www.copyright.gov/title17/92chap1.html"
+      "href": "http://www.copyright.gov/title17/92chap1.html",
+      "id": "chafee"
     },
     "KILLBOTS": {
       "title": "Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds",
@@ -323,7 +336,8 @@ details.respec-tests-details > li {
       "editors": [],
       "etAl": "false",
       "publisher": "",
-      "href": "http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"
+      "href": "http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/",
+      "id": "killbots"
     },
     "NEWSCOM": {
       "title": "Spam-bot tests flunk the blind",
@@ -334,7 +348,8 @@ details.respec-tests-details > li {
       "editors": [],
       "etAl": "false",
       "publisher": "News.com",
-      "href": "http://news.com.com/2100-1032-1022814.html"
+      "href": "http://news.com.com/2100-1032-1022814.html",
+      "id": "newscom"
     },
     "PINGUARD": {
       "title": "PIN Guard",
@@ -363,7 +378,8 @@ details.respec-tests-details > li {
       "editors": [],
       "etAl": "false",
       "publisher": "Wikipedia",
-      "href": "http://en.wikipedia.org/wiki/Trackback"
+      "href": "http://en.wikipedia.org/wiki/Trackback",
+      "id": "trackback"
     },
     "TURING": {
       "title": "The Turing Test",
@@ -381,7 +397,8 @@ details.respec-tests-details > li {
       ],
       "date": "April 2009",
       "title": "Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use",
-      "publisher": "In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems"
+      "publisher": "In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+      "id": "eval-audio"
     },
     "video-events": {
       "authors": [
@@ -400,7 +417,8 @@ details.respec-tests-details > li {
       ],
       "date": "2015",
       "title": "Design, Testing and Implementation of a New Authentication Method Using Multiple Devices",
-      "publisher": "J. Ligatti, D. Goldgof, & Y. Liu (Eds.): ProQuest Dissertations Publishing"
+      "publisher": "J. Ligatti, D. Goldgof, & Y. Liu (Eds.): ProQuest Dissertations Publishing",
+      "id": "auth-mult"
     },
     "captchastar": {
       "authors": [
@@ -409,14 +427,16 @@ details.respec-tests-details > li {
         "Spolaor, R."
       ],
       "date": "2015",
-      "title": "CAPTCHaStar! A novel CAPTCHA based on interactive shape discovery"
+      "title": "CAPTCHaStar! A novel CAPTCHA based on interactive shape discovery",
+      "id": "captchastar"
     },
     "captcha-ld": {
       "authors": [
         "Gafni, R.",
         "Nagar, I."
       ],
-      "title": "The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities"
+      "title": "The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities",
+      "id": "captcha-ld"
     },
     "civil-rights-captcha": {
       "authors": [
@@ -428,7 +448,15 @@ details.respec-tests-details > li {
       "title": "Machine learning and empathy: the Civil Rights CAPTCHA",
       "publisher": "Concurrency and Computation: Practice and Experience, 28(4)",
       "pages": "1310-1323",
-      "doi": "doi:10.1002/cpe.3632"
+      "doi": "doi:10.1002/cpe.3632",
+      "id": "civil-rights-captcha"
+    },
+    "iso-8859-1": {
+      "title": "Information technology -- 8-bit single-byte coded graphic character sets -- Part 1: Latin alphabet No. 1",
+      "href": "https://www.iso.org/standard/28245.html",
+      "publisher": "International Organization for Standardization",
+      "date": "1998",
+      "id": "iso-8859-1"
     },
     "facecaptcha": {
       "authors": [
@@ -442,7 +470,8 @@ details.respec-tests-details > li {
       "title": "FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers",
       "publisher": "An International Journal, 72(2)",
       "pages": "1215-1237. ",
-      "doi": "doi:10.1007/s11042-013-1422-z"
+      "doi": "doi:10.1007/s11042-013-1422-z",
+      "id": "facecaptcha"
     },
     "video-captcha-security": {
       "authors": [
@@ -458,7 +487,8 @@ details.respec-tests-details > li {
       ],
       "date": "2015",
       "title": "Social and egocentric image classification for scientific and privacy applications",
-      "publisher": "D. Crandall, J. Bollen, A. Kapadia, & P. Radivojac (Eds.): ProQuest Dissertations Publishing."
+      "publisher": "D. Crandall, J. Bollen, A. Kapadia, & P. Radivojac (Eds.): ProQuest Dissertations Publishing.",
+      "id": "social-classification"
     },
     "facial-captcha-attack": {
       "authors": [
@@ -468,7 +498,8 @@ details.respec-tests-details > li {
       "title": "A computer vision attack on the ARTiFACIAL CAPTCHA",
       "publisher": "An International Journal, 74(13)",
       "pages": "4583-4597",
-      "doi": "doi:10.1007/s11042-013-1823-z"
+      "doi": "doi:10.1007/s11042-013-1823-z",
+      "id": "facial-captcha-attack"
     },
     "defeat-line-noise": {
       "authors": [
@@ -481,7 +512,8 @@ details.respec-tests-details > li {
       "title": "Defeating line-noise CAPTCHAs with multiple quadratic snakes",
       "publisher": "Computers & Security, 37",
       "pages": "91-110",
-      "doi": "doi:10.1016/j.cose.2013.05.003"
+      "doi": "doi:10.1016/j.cose.2013.05.003",
+      "id": "defeat-line-noise"
     },
     "3d-captcha-security": {
       "authors": [
@@ -493,7 +525,14 @@ details.respec-tests-details > li {
       "title": "On the security of text-based 3D CAPTCHAs",
       "publisher": "Computers & Security, 45",
       "pages": "84-99",
-      "doi": "doi:10.1016/j.cose.2014.05.004"
+      "doi": "doi:10.1016/j.cose.2014.05.004",
+      "id": "3d-captcha-security"
+    },
+    "recaptcha": {
+      "title": "reCAPTCHA",
+      "publisher": "Google",
+      "href": "https://www.google.com/recaptcha/",
+      "id": "recaptcha"
     },
     "recaptcha-attacks": {
       "authors": [
@@ -506,7 +545,8 @@ details.respec-tests-details > li {
       "title": "HMM-based Attacks on Google's ReCAPTCHA with Continuous Visual and Audio Symbols",
       "publisher": "Journal of Information Processing, 23(6)",
       "pages": "814-826",
-      "doi": "doi:10.2197/ipsjjip.23.814"
+      "doi": "doi:10.2197/ipsjjip.23.814",
+      "id": "recaptcha-attacks"
     },
     "task-completion": {
       "authors": [
@@ -518,7 +558,8 @@ details.respec-tests-details > li {
       "date": "2010",
       "title": "Towards a universally usable human interaction proof: evaluation of task completion strategies",
       "publisher": "ACM Transactions on Accessible Computing (TACCESS), 2(4)",
-      "pages": "15"
+      "pages": "15",
+      "id": "task-completion"
     },
     "captcha-robustness": {
       "authors": [
@@ -528,7 +569,8 @@ details.respec-tests-details > li {
       "title": "Effects of Text Rotation, String Length, and Letter Format on Text-based CAPTCHA Robustness",
       "publisher": "Journal of Applied Security Research, 11(3)",
       "pages": "349-361",
-      "doi": "doi:10.1080/19361610.2016.1178553"
+      "doi": "doi:10.1080/19361610.2016.1178553",
+      "id": "captcha-robustness"
     },
     "captcha-security": {
       "authors": [
@@ -538,7 +580,8 @@ details.respec-tests-details > li {
       "date": "2009",
       "title": "CAPTCHA Security: A Case Study",
       "publisher": "Security & Privacy, IEEE, 7(4)",
-      "doi": "doi:10.1109/MSP.2009.84"
+      "doi": "doi:10.1109/MSP.2009.84",
+      "id": "captcha-security"
     },
     "mobile-auth": {
       "authors": [
@@ -562,22 +605,23 @@ details.respec-tests-details > li {
       "title": "Game-based image semantic CAPTCHA on handset devices",
       "publisher": "An International Journal, 74(14)",
       "pages": "5141-5156",
-      "doi": "doi:10.1007/s11042-013-1666-7"
+      "doi": "doi:10.1007/s11042-013-1666-7",
+      "id": "game-captcha"
     }
   },
-  "publishDate": "2018-06-09",
-  "publishISODate": "2018-06-09T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 09 June 2018"
-}</script><meta name="description" content="Because robots on the web are both ubiquitous and pernicious, various approaches have been employed over many years attempting to distinguish human users of web sites from robots.  Indeed, the activity of web robots is commonly described as &quot;an attack.&quot; While the traditional &quot;CAPTCHA&quot; approach asking the user to identify text in an image remains popular, other mechanisms such as multi-device authentication and Google reCAPTCHA are gaining in prominence."></head>
+  "publishDate": "2018-06-26",
+  "publishISODate": "2018-06-26T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 26 June 2018"
+}</script><meta name="description" content="Because robots on the web are both ubiquitous and pernicious, various approaches have been employed over many years attempting to distinguish human users of web sites from robots. Indeed, the activity of web robots is commonly described as &quot;an attack.&quot; While the traditional &quot;CAPTCHA&quot; approach asking the user to identify text in an image remains popular, other mechanisms such as multi-device authentication and Google reCAPTCHA [recaptcha] are gaining in prominence."></head>
 	<body class="h-entry toc-inline"><div class="head">
   <a href="https://www.w3.org/" class="logo">
       <img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C">
   </a>
-  <h1 id="title" class="title p-name">Inaccessibility of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> 2</h1>
-  
-  <h2 id="w3c-editor-s-draft-09-june-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-06-09">09 June 2018</time></h2>
+  <h1 id="title" class="title p-name">Inaccessibility of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></h1>
+  <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
+  <h2 id="w3c-editor-s-draft-26-june-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-06-26">26 June 2018</time></h2>
   <dl>
-    <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/turingtest-2/">https://www.w3.org/TR/turingtest-2/</a></dd>
+    <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/turingtest/">https://www.w3.org/TR/turingtest/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd>
     
     
@@ -587,7 +631,7 @@ details.respec-tests-details > li {
     
     <dt>Editors:</dt>
     <dd class="p-author h-card vcard" data-editor-id="43274"><a class="ed_mailto u-email email p-name" href="mailto:scott@hollier.info">Scott Hollier</a></dd><dd class="p-author h-card vcard" data-editor-id="33688"><a class="ed_mailto u-email email p-name" href="mailto:janina@rednote.net">Janina Sajka</a></dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd>
-    
+    <dt>Former editor:</dt><dd class="p-author h-card vcard" data-editor-id="33323"><span class="p-name fn">Matt May</span> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd>
     
     
   </dl>
@@ -612,7 +656,7 @@ details.respec-tests-details > li {
 </div>
 		<section id="abstract" class="introductory">
 			<!--OddPage--><h2 id="abstract-0">Abstract</h2>
-			<p>Because robots on the web are both ubiquitous and pernicious, various approaches have been employed over many years attempting to distinguish human users of web sites from robots.  Indeed, the activity of web robots is commonly described as "an attack." While the traditional "<abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr>" approach asking the user to identify text in an image remains popular, other mechanisms such as multi-device authentication and Google reCAPTCHA are gaining in prominence.</p>
+			<p>Because <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">robots</a> on the web are both ubiquitous and pernicious, various approaches have been employed over many years attempting to distinguish human users of web sites from robots. Indeed, the activity of web robots is commonly described as "an attack." While the traditional "<abbr title="Completely Automated Public Turing Test"><a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a></abbr>" approach asking the user to identify text in an image remains popular, other mechanisms such as multi-device authentication and Google reCAPTCHA [<cite><a class="bibref" href="#bib-recaptcha">recaptcha</a></cite>] are gaining in prominence.</p>
 			<p>For people with disabilities however, it often remains the case that the challenge employed determines that the user is not human resulting in a denial of service to that user. Furthermore, since research findings also indicate that many popular <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> techniques are no longer particularly effective or  secure, it is necessary to reconsider which available approaches can block robots while still supporting ingress for people with disabilities.</p>
 			<p>This document examines a number of potential solutions that allow systems to test for human users, and the extent to
 			which these solutions adequately accommodate people with disabilities.</p>
@@ -658,39 +702,39 @@ details.respec-tests-details > li {
           
           
         </p><p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#the-problem" class="tocxref"><span class="secno">1. </span>The problem</a></li><li class="tocline"><a href="#security-effectiveness" class="tocxref"><span class="secno">2. </span>Security effectiveness</a></li><li class="tocline"><a href="#types-of-captcha-and-access-implications" class="tocxref"><span class="secno">3. </span>Types of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> and access implications</a><ol class="toc"><li class="tocline"><a href="#traditional-character-based-captcha" class="tocxref"><span class="secno">3.1 </span>Traditional character-based <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a></li><li class="tocline"><a href="#logic-puzzles" class="tocxref"><span class="secno">3.2 </span>Logic puzzles</a></li><li class="tocline"><a href="#sound-output" class="tocxref"><span class="secno">3.3 </span>Sound output</a></li><li class="tocline"><a href="#limited-use-accounts" class="tocxref"><span class="secno">3.4 </span>Limited-use accounts</a></li><li class="tocline"><a href="#non-interactive-checks" class="tocxref"><span class="secno">3.5 </span>Non-interactive checks</a><ol class="toc"><li class="tocline"><a href="#spam-filtering" class="tocxref"><span class="secno">3.5.1 </span>Spam filtering</a></li><li class="tocline"><a href="#heuristic-checks-and-the-google-recaptcha" class="tocxref"><span class="secno">3.5.2 </span>Heuristic checks and the Google ReCAPTCHA</a></li></ol></li><li class="tocline"><a href="#federated-identity-systems" class="tocxref"><span class="secno">3.6 </span>Federated identity systems</a><ol class="toc"><li class="tocline"><a href="#single-sign-on" class="tocxref"><span class="secno">3.6.1 </span>Single sign-on</a></li><li class="tocline"><a href="#public-key-infrastructure-solutions" class="tocxref"><span class="secno">3.6.2 </span>Public-key infrastructure solutions</a></li><li class="tocline"><a href="#biometrics" class="tocxref"><span class="secno">3.6.3 </span>Biometrics</a></li></ol></li><li class="tocline"><a href="#multiple-user-devices" class="tocxref"><span class="secno">3.7 </span>Multiple user devices </a></li><li class="tocline"><a href="#image-and-video" class="tocxref"><span class="secno">3.8 </span>Image and video </a><ol class="toc"><li class="tocline"><a href="#visual-comparison-captchas" class="tocxref"><span class="secno">3.8.1 </span>Visual comparison CAPTCHAs </a></li><li class="tocline"><a href="#d-captcha" class="tocxref"><span class="secno">3.8.2 </span>3D <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a></li><li class="tocline"><a href="#video-game-captcha" class="tocxref"><span class="secno">3.8.3 </span>Video Game <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a></li></ol></li></ol></li><li class="tocline"><a href="#conclusion" class="tocxref"><span class="secno">4. </span>Conclusion</a></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">A. </span>References</a><ol class="toc"><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">A.1 </span>Informative references</a></li></ol></li></ol></nav>
-		<section>
-			<!--OddPage--><h2 id="the-problem"><span class="secno">1. </span>The problem</h2>
-			<p>Web sites with resources that are attractive to aggregators such as sign-up Web pages, travel and event ticket sites, Web-based email accounts, and social media portals have taken measures to ensure that they can offer their service to individual users without exposing their data and content to Web robots.</p>
-			<p>An early solution was the use of graphical representations of text in registration or comment areas of the web site. The site would attempt to verify that the user was in fact a human by requiring the user to complete a task commonly referred to as a Completely Automated Public Turing test [<cite><a class="bibref" href="#bib-CAPTCHA">CAPTCHA</a></cite>]. The asumption was that humans would find this task easy, while robots would find it nearly impossible to perform.</p>
-			<p>The <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> was initially developed by researchers at Carnegie Mellon University and has been primarily associated with a technique whereby an individual had to identify a distorted set of characters from a bitmapped image, then enter those characters into a form. However, in recent times the types of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> that appear on Web sites and mobile apps have changed significantly. As such, the term "<abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr>" is used in this document to refer to all approaches which are specifically designed to differentiate a human from a computer.</p>
-			<p>While online users broadly have reported finding traditional CAPTCHAs frustrating to complete, it is generally assumed that a <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> can be resolved within a few incorrect attempts. The point of distinction for people with disabilities is that a <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> not only separates computers from humans, but also removes people with disabilities from performing the requested procedure. For example, asking  users who are blind, visually impaired or dyslexic to identify textual characters in a distorted graphic is asking them to perform a task they are least able to accomplish. Similarly, asking users who are Deaf or hearing impaired to identify and transcribe in writing the content of an audio caption is asking them to perform a task they're least likely to accomplish. Furthermore, traditional CAPTCHAs have generally presumed that all Web users can read a particular character set or English-based words, thus making the test inaccessible to a large number of Web users worldwide.</p>
-			<p>While Accessibility best practices require, and assistive technologies expect, substantive graphical images to be authored with text equivalents, alternative text on <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> images  would clearly be self-defeating. Nevertheless, a <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> without an accessible and usable alternative makes it impossible for users with certain disabilities to create accounts, write comments, or make purchases on such sites. In essence, such CAPTCHAs fail to properly recognize users with disabilities as human, obstructing their participation in contemporary society. Such issues also extend to situational disabilities whereby a user may not be able to effectively view a traditional <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> on a mobile device due to the small screen size, or hear an audio-based <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> in a noisy environment.</p>
+        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a href="#security-effectiveness" class="tocxref"><span class="secno">2. </span>Security effectiveness</a></li><li class="tocline"><a href="#types-of-captcha-and-access-implications" class="tocxref"><span class="secno">3. </span>Types of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> and access implications</a><ol class="toc"><li class="tocline"><a href="#traditional-character-based-captcha" class="tocxref"><span class="secno">3.1 </span>Traditional character-based <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a></li><li class="tocline"><a href="#logic-puzzles" class="tocxref"><span class="secno">3.2 </span>Logic puzzles</a></li><li class="tocline"><a href="#sound-output" class="tocxref"><span class="secno">3.3 </span>Sound output</a></li><li class="tocline"><a href="#limited-use-accounts" class="tocxref"><span class="secno">3.4 </span>Limited-use accounts</a></li><li class="tocline"><a href="#non-interactive-checks" class="tocxref"><span class="secno">3.5 </span>Non-interactive checks</a><ol class="toc"><li class="tocline"><a href="#spam-filtering" class="tocxref"><span class="secno">3.5.1 </span>Spam filtering</a></li><li class="tocline"><a href="#heuristic-checks-and-the-google-recaptcha" class="tocxref"><span class="secno">3.5.2 </span>Heuristic checks and the Google reCAPTCHA</a></li></ol></li><li class="tocline"><a href="#federated-identity-systems" class="tocxref"><span class="secno">3.6 </span>Federated identity systems</a><ol class="toc"><li class="tocline"><a href="#single-sign-on" class="tocxref"><span class="secno">3.6.1 </span>Single sign-on</a></li><li class="tocline"><a href="#public-key-infrastructure-solutions" class="tocxref"><span class="secno">3.6.2 </span>Public-key infrastructure solutions</a></li><li class="tocline"><a href="#biometrics" class="tocxref"><span class="secno">3.6.3 </span>Biometrics</a></li></ol></li><li class="tocline"><a href="#multiple-user-devices" class="tocxref"><span class="secno">3.7 </span>Multiple user devices </a></li><li class="tocline"><a href="#image-and-video" class="tocxref"><span class="secno">3.8 </span>Image and video </a><ol class="toc"><li class="tocline"><a href="#visual-comparison-captchas" class="tocxref"><span class="secno">3.8.1 </span>Visual comparison CAPTCHAs </a></li><li class="tocline"><a href="#x3d-captcha" class="tocxref"><span class="secno">3.8.2 </span>3D <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a></li><li class="tocline"><a href="#video-game-captcha" class="tocxref"><span class="secno">3.8.3 </span>Video Game <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a></li></ol></li></ol></li><li class="tocline"><a href="#conclusion" class="tocxref"><span class="secno">4. </span>Conclusion</a></li><li class="tocline"><a href="#terms" class="tocxref"><span class="secno">A. </span>Terms</a></li><li class="tocline"><a href="#acknowledgments" class="tocxref"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#contributors-to-this-version" class="tocxref"><span class="secno">B.1 </span>Contributors to this version:</a></li><li class="tocline"><a href="#contributors-to-the-previous-version" class="tocxref"><span class="secno">B.2 </span>Contributors to the previous version:</a></li><li class="tocline"><a href="#enabling-funders" class="tocxref"><span class="secno">B.3 </span>Enabling Funders</a></li></ol></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">C. </span>References</a><ol class="toc"><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">C.1 </span>Informative references</a></li></ol></li></ol></nav>
+		<section id="introduction">
+			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<span class="permalink"><a href="#introduction" aria-label="Permalink for 1. Introduction" title="Permalink for 1. Introduction"><span>§</span></a></span></h2>
+			<p>Web sites with resources that are attractive to aggregators such as sign-up web pages, travel and event ticket sites, web-based email accounts, and social media portals have taken measures to ensure that they can offer their service to individual users without exposing their data and content to <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">web robots</a>.</p>
+			<p>An early solution was the use of graphical representations of text in registration or comment areas of the web site. The site would attempt to verify that the user was in fact a human by requiring the user to complete a task commonly referred to as a Completely Automated Public <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing Test</a>, or <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a>. The asumption was that humans would find this task easy, while robots would find it nearly impossible to perform.</p>
+			<p>The <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> was initially developed by researchers at Carnegie Mellon University and has been primarily associated with a technique whereby an individual had to identify a distorted set of characters from a bitmapped image, then enter those characters into a form. However, in recent times the types of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> that appear on web sites and mobile apps have changed significantly. As such, the term "<abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr>" is used in this document to refer to all approaches which are specifically designed to differentiate a human from a computer.</p>
+			<p>While online users broadly have reported finding traditional CAPTCHAs frustrating to complete, it is generally assumed that a <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> can be resolved within a few incorrect attempts. The point of distinction for people with disabilities is that a <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> not only separates computers from humans, but also removes people with disabilities from performing the requested procedure. For example, asking  users who are blind, visually impaired or dyslexic to identify textual characters in a distorted graphic is asking them to perform a task they are least able to accomplish. Similarly, asking users who are deaf or hearing impaired to identify and transcribe in writing the content of an audio caption is asking them to perform a task they're least likely to accomplish. Furthermore, traditional CAPTCHAs have generally presumed that all web users can read a particular character set or English-based words, thus making the test inaccessible to a large number of web users worldwide.</p>
+			<p>While Accessibility best practices require, and <a href="#dfn-assistive-technologies" class="internalDFN" data-link-type="dfn">assistive technologies</a> expect, substantive graphical images to be authored with text equivalents, <a href="#dfn-alternative-text" class="internalDFN" data-link-type="dfn">alternative text</a> on <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> images  would clearly be self-defeating. Nevertheless, a <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> without an accessible and usable alternative makes it impossible for users with certain disabilities to create accounts, write comments, or make purchases on such sites. In essence, such CAPTCHAs fail to properly recognize users with disabilities as human, obstructing their participation in contemporary society. Such issues also extend to situational disabilities whereby a user may not be able to effectively view a traditional <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> on a mobile device due to the small screen size, or hear an audio-based <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> in a noisy environment.</p>
 		</section>
-		<section>
-			<!--OddPage--><h2 id="security-effectiveness"><span class="secno">2. </span>Security effectiveness</h2>
-			<p>It is important to acknowledge that using a <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> as a security solution is becoming increasingly ineffective. Current <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> methods that rely primarily on traditional image-based approaches or logic problems can be largely cracked using both complex and simple computer algorithms. Research suggests that approximately 20% of traditional CAPTCHAs can be broken using OCR algorithms [<cite><a class="bibref" href="#bib-civil-rights-captcha">civil-rights-captcha</a></cite>] [<cite><a class="bibref" href="#bib-facial-captcha-attack">facial-captcha-attack</a></cite>].</p>
+		<section id="security-effectiveness">
+			<!--OddPage--><h2 id="x2-security-effectiveness"><span class="secno">2. </span>Security effectiveness<span class="permalink"><a href="#security-effectiveness" aria-label="Permalink for 2. Security effectiveness" title="Permalink for 2. Security effectiveness"><span>§</span></a></span></h2>
+			<p>It is important to acknowledge that using a <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a> as a security solution is becoming increasingly ineffective. Current <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> methods that rely primarily on traditional image-based approaches or logic problems can be largely cracked using both complex and simple computer algorithms. Research suggests that approximately 20% of traditional CAPTCHAs can be broken using OCR algorithms [<cite><a class="bibref" href="#bib-civil-rights-captcha">civil-rights-captcha</a></cite>] [<cite><a class="bibref" href="#bib-facial-captcha-attack">facial-captcha-attack</a></cite>].</p>
 			<p>In addition, pattern-matching algorithms in some instances can achieve an even higher success rate of cracking CAPTCHAs [<cite><a class="bibref" href="#bib-captcha-security">captcha-security</a></cite>] [<cite><a class="bibref" href="#bib-recaptcha-attacks">recaptcha-attacks</a></cite>]. While efforts are being made to strengthen traditional <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> security, more robust security solutions risk reducing the typical user's ability to understand the CATPCHA that needs to be resolved [<cite><a class="bibref" href="#bib-defeat-line-noise">defeat-line-noise</a></cite>]. Furthermore, captchas have been solved for good and ill through crowd sourcing, with the solutions sometimes stored for reuse.</p>
 			<p>Therefore it is highly recommended that alternative security methods, such as two-step or multi-device verification, are considered in preference to traditional image-based <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> methods for both security and accessibility reasons.</p>
 		</section>
-		<section>
-			<!--OddPage--><h2 id="types-of-captcha-and-access-implications"><span class="secno">3. </span>Types of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> and access implications</h2>
-			<p>There are many techniques available to web sites to discourage or eliminate fraudulent activities such as inappropriate account creation. Several of them may be as effective as the visual verification technique while being more accessible to people with disabilities. Others may be overlaid as an accommodation for the purposes of accessibility. The following list highlights common <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> types and their respective accessibility implications.</p>
-			<section>
-				<h3 id="traditional-character-based-captcha"><span class="secno">3.1 </span>Traditional character-based <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></h3>
-				<p>The traditional character-based <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr>, as previously discussed, is largely inaccessible and insecure. It focuses on the presentation of letters or words presented in an image and designed to be difficult for robots to identify. The user is then asked to enter the <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> information into a form.</p>
-				<p>The use of a traditional <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> is particularly problematic for people who are blind, as the screen readers they rely on to use web content cannot process the image, thus preventing them from uncovering the information required by the form. Because the characters embedded in a captcha are often distorted or have other characters in close proximity to each other in order to foil technological solution by robots, they are also very difficult for users with other visual disabilities. This common <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> technique is less reliably solved by users with cognitive and learning disabilities [<cite><a class="bibref" href="#bib-captcha-ld">captcha-ld</a></cite>]. Because they're intentionally distorted to foil robots, they also foil users who do not possess sufficiently acute vision to "see" beyond the presented distortion and uncover the text the site requires in order to proceed.</p>
-				<p>In addition, there is currently a dominant assumption that all web users can understand English, which is clearly not the case. Native and literate Arabic or Thai speakers, for example, should not be assumed to possess proficiency with the ISO8859-1 character set—demonstrating an important barrier imposed by CAPTCHAs based on written English and related language character sets [<cite><a class="bibref" href="#bib-captcha-robustness">captcha-robustness</a></cite>].</p>
+		<section id="types-of-captcha-and-access-implications">
+			<!--OddPage--><h2 id="x3-types-of-captcha-and-access-implications"><span class="secno">3. </span>Types of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> and access implications<span class="permalink"><a href="#types-of-captcha-and-access-implications" aria-label="Permalink for 3. Types of CAPTCHA and access implications" title="Permalink for 3. Types of CAPTCHA and access implications"><span>§</span></a></span></h2>
+			<p>There are many techniques available to web sites to discourage or eliminate fraudulent activities such as inappropriate account creation. Several of them may be as effective as the visual verification technique while being more accessible to people with disabilities. Others may be overlaid as an accommodation for the purposes of accessibility. The following list highlights common <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a> types and their respective accessibility implications.</p>
+			<section id="traditional-character-based-captcha">
+				<h3 id="x3-1-traditional-character-based-captcha"><span class="secno">3.1 </span>Traditional character-based <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr><span class="permalink"><a href="#traditional-character-based-captcha" aria-label="Permalink for 3.1 Traditional character-based CAPTCHA" title="Permalink for 3.1 Traditional character-based CAPTCHA"><span>§</span></a></span></h3>
+				<p>The traditional character-based <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a>, as previously discussed, is largely inaccessible and insecure. It focuses on the presentation of letters or words presented in an image and designed to be difficult for <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">robots</a> to identify. The user is then asked to enter the <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> information into a form.</p>
+				<p>The use of a traditional <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> is particularly problematic for people who are blind, as the <a href="#dfn-screen-readers" class="internalDFN" data-link-type="dfn">screen readers</a> they rely on to use web content cannot process the image, thus preventing them from uncovering the information required by the form. Because the characters embedded in a captcha are often distorted or have other characters in close proximity to each other in order to foil technological solution by robots, they are also very difficult for users with other visual disabilities. This common <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> technique is less reliably solved by users with cognitive and learning disabilities [<cite><a class="bibref" href="#bib-captcha-ld">captcha-ld</a></cite>]. Because they're intentionally distorted to foil robots, they also foil users who do not possess sufficiently acute vision to "see" beyond the presented distortion and uncover the text the site requires in order to proceed.</p>
+				<p>In addition, there is currently a dominant assumption that all web users can understand English, which is clearly not the case. Native and literate Arabic or Thai speakers, for example, should not be assumed to possess proficiency with the ISO 8859-1 [<cite><a class="bibref" href="#bib-iso-8859-1">iso-8859-1</a></cite>] character set—demonstrating an important barrier imposed by CAPTCHAs based on written English and related language character sets [<cite><a class="bibref" href="#bib-captcha-robustness">captcha-robustness</a></cite>].</p>
 			</section>
-			<section>
-				<h3 id="logic-puzzles"><span class="secno">3.2 </span>Logic puzzles</h3>
-				<p>The goal of visual verification is to separate human from machine. One reasonable way to do this is to test for logic. Simple mathematical or word puzzles, trivia, or similar logic tests may raise the bar for robots, at least to the point where using them is more attractive elsewhere.</p>
-				<p>Problems: Users with cognitive disabilities may still have trouble. Answers may need to be handled flexibly, if they require free-form text. A system would have to maintain a vast number of questions, or shift them around programmatically, in order to keep spiders from capturing them all for use by web robots. This approach is also subject to defeat by human operators engaged in crowd-sourcing activity on behalf of attackers.</p>
+			<section id="logic-puzzles">
+				<h3 id="x3-2-logic-puzzles"><span class="secno">3.2 </span>Logic puzzles<span class="permalink"><a href="#logic-puzzles" aria-label="Permalink for 3.2 Logic puzzles" title="Permalink for 3.2 Logic puzzles"><span>§</span></a></span></h3>
+				<p>The goal of visual verification is to separate human from machine. One reasonable way to do this is to test for logic. Simple mathematical or word puzzles, trivia, or similar logic tests may raise the bar for <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">robots</a>, at least to the point where using them is more attractive elsewhere.</p>
+				<p>Problems: Users with cognitive disabilities may still have trouble. Answers may need to be handled flexibly, if they require free-form text. A system would have to maintain a vast number of questions, or shift them around programmatically, in order to keep <a href="#dfn-spiders" class="internalDFN" data-link-type="dfn">spiders</a> from capturing them all for use by web robots. This approach is also subject to defeat by human operators engaged in crowd-sourcing activity on behalf of attackers.</p>
 			</section>
-			<section>
-				<h3 id="sound-output"><span class="secno">3.3 </span>Sound output</h3>
-				<p>To reframe the problem, text is easy to manipulate, which is good for assistive technologies, but just as good for robots. One logical solution to this problem is to offer another non-textual method of using the same content. To achieve this, audio is played that contains a series of characters, words, or phrases being read out which the user then needs to enter into a form. As with visual <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> however, robots are also capable of recognizing spoken content—as Amazon's Alexa and Android's "OK Google," among other spoken dialog systems, have so ably demonstrated. Consequently, the characters, words, or phrases the user is to uncover and transcribe in the form are also distorted in an audio <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> and are usually played over a sonic environment of obfiscating sounds.</p>
-				<p>The industry recognized this problem early. CNet reported [<cite><a class="bibref" href="#bib-NEWSCOM">NEWSCOM</a></cite>] "Hotmail's sound output, which is itself distorted to avoid the same programmatic abuse, was unintelligible to all
+			<section id="sound-output">
+				<h3 id="x3-3-sound-output"><span class="secno">3.3 </span>Sound output<span class="permalink"><a href="#sound-output" aria-label="Permalink for 3.3 Sound output" title="Permalink for 3.3 Sound output"><span>§</span></a></span></h3>
+				<p>To reframe the problem, text is easy to manipulate, which is good for <a href="#dfn-assistive-technologies" class="internalDFN" data-link-type="dfn">assistive technologies</a>, but just as good for <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">robots</a>. One logical solution to this problem is to offer another non-textual method of using the same content. To achieve this, audio is played that contains a series of characters, words, or phrases being read out which the user then needs to enter into a form. As with visual <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a> however, robots are also capable of recognizing spoken content—as Amazon's Alexa and Android's "OK Google," among other spoken dialog systems, have so ably demonstrated. Consequently, the characters, words, or phrases the user is to uncover and transcribe in the form are also distorted in an audio <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> and are usually played over a sonic environment of obfiscating sounds.</p>
+				<p>The industry recognized this problem early. CNet reported [<cite><a class="bibref" href="#bib-newscom">NEWSCOM</a></cite>] "Hotmail's sound output, which is itself distorted to avoid the same programmatic abuse, was unintelligible to all
 				four test subjects, all of whom had good hearing."</p>
 				<p>If the sound output, which is itself distorted to avoid the same programmatic abuse, can render the <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> difficult to hear; there can also be confusion in understanding whether a number is to be entered as a numerical value or as a word, e.g. ‘7’ or ‘seven’. Often the audio <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> user will hear sounds which seem to be words or numerical values that should be entered, but turn out to be just background noise.</p>
 
@@ -706,104 +750,158 @@ part of one audio <abbr title="Completely Automated Public Turing Test">CAPTCHA<
 
 				<p>Users who are deaf-blind, don't have or use a sound card, find themselves in noisy environments, or don't have required sound plugins properly configured and functioning, are thus also prevented from proceeding. Similarly, users of browsers which do not support easy direction of sound output to a particular audio device, or to all available audio devices on the system, are also hampered.</p>
 				
-				<p>Although auditory forms of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> that present distorted speech create recognition difficulties for screen reader users, the accuracy with which such users can complete the <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> tasks is increased if the user interface is carefully designed to prevent screen reader audio and <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> audio from being intermixed. This can be achieved by implementing functions for controlling the audio that do not require the user to move focus away from the text response field [<cite><a class="bibref" href="#bib-eval-audio">eval-audio</a></cite>].</p>
+				<p>Although auditory forms of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> that present distorted speech create recognition difficulties for <a href="#dfn-screen-readers" class="internalDFN" data-link-type="dfn">screen reader</a> users, the accuracy with which such users can complete the <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> tasks is increased if the user interface is carefully designed to prevent screen reader audio and <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> audio from being intermixed. This can be achieved by implementing functions for controlling the audio that do not require the user to move focus away from the text response field [<cite><a class="bibref" href="#bib-eval-audio">eval-audio</a></cite>].</p>
 				<p>Experiments with a combined auditory and visual <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> requiring users to identify well known objects by recognizing either images or sounds, suggest that this technique is highly usable by screen reader users. However, its security-related properties remain to be explored [<cite><a class="bibref" href="#bib-task-completion">task-completion</a></cite>].</p>
 			</section>
-			<section>
-				<h3 id="limited-use-accounts"><span class="secno">3.4 </span>Limited-use accounts</h3>
-				<p>Users of free accounts very rarely need full and immediate access to a site's resources. For example, users who are searching for concert tickets may need to conduct only three searches a day, and new email users may only need to send the same notification of their new address to their friends. Sites may create policies that limit the frequency of interaction explicitly (that is, by disabling an account for the rest of the day) or implicitly (by slowing the response times incrementally). Creating limits for new users can be an effective means of making high-value sites unattractive targets to robots.</p>
+			<section id="limited-use-accounts">
+				<h3 id="x3-4-limited-use-accounts"><span class="secno">3.4 </span>Limited-use accounts<span class="permalink"><a href="#limited-use-accounts" aria-label="Permalink for 3.4 Limited-use accounts" title="Permalink for 3.4 Limited-use accounts"><span>§</span></a></span></h3>
+				<p>Users of free accounts very rarely need full and immediate access to a site's resources. For example, users who are searching for concert tickets may need to conduct only three searches a day, and new email users may only need to send the same notification of their new address to their friends. Sites may create policies that limit the frequency of interaction explicitly (that is, by disabling an account for the rest of the day) or implicitly (by slowing the response times incrementally). Creating limits for new users can be an effective means of making high-value sites unattractive targets to <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">robots</a>.</p>
 				<p>Drawbacks to this approach include the need to perform sufficient testing and data collection to determine useful limits that will serve human users yet frustrate robots. It requires site designers to look at statistics of normal and exceptional users, and determine whether clear demarcation exists between them.</p>
 			</section>
-			<section>
-				<h3 id="non-interactive-checks"><span class="secno">3.5 </span>Non-interactive checks</h3>
-				<p>While <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> and other interactive approaches to limiting the activities of web robots are sometimes effective, they do make using a site more complex. This is often unnecessary, as a large number of non-interactive mechanisms exist to check for spam or other invalid content typically introduced by robots.</p>
-				<p>This category contains two popular non-interactive approaches: spam filtering, in which an automated tool evaluates the <em>content</em> of a transaction, and heuristic checks, which evaluate the <em>behavior</em> of the client.</p>
-				<section>
-					<h4 id="spam-filtering"><span class="secno">3.5.1 </span>Spam filtering</h4>
-					<p>Applications that use continuous authentication and "hot words" to flag spam content, or Bayesian filtering to detect other patterns consistent with spam, are very popular, and quite effective. While such risk analysis systems may experience false negatives from time to time, properly-tuned systems can achieve results comparable to a traditional visual <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr>, while also removing the added cognitive burden on the user and eliminating access barriers.</p>
-					<p>Most major blogging software contains spam filtering capabilities, or can be fitted with a plug-in for this functionality. Many of these filters can automatically delete messages that reach a certain spam threshold, and mark questionable messages for manual moderation. More advanced systems can control attacks based on posting frequency, filter content sent using the [<cite><a class="bibref" href="#bib-TRACKBACK">TRACKBACK</a></cite>] protocol, and ban users by IP address range, temporarily or permanently.</p>
+			<section id="non-interactive-checks">
+				<h3 id="x3-5-non-interactive-checks"><span class="secno">3.5 </span>Non-interactive checks<span class="permalink"><a href="#non-interactive-checks" aria-label="Permalink for 3.5 Non-interactive checks" title="Permalink for 3.5 Non-interactive checks"><span>§</span></a></span></h3>
+				<p>While <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a> and other interactive approaches to limiting the activities of <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">web robots</a> are sometimes effective, they do make using a site more complex. This is often unnecessary, as a large number of non-interactive mechanisms exist to check for spam or other invalid content typically introduced by robots.</p>
+				<p>This category contains two popular non-interactive approaches: <a href="#dfn-spam-filtering" class="internalDFN" data-link-type="dfn">spam filtering</a>, in which an automated tool evaluates the <em>content</em> of a transaction, and <a href="#dfn-heuristics" class="internalDFN" data-link-type="dfn">heuristic</a> checks, which evaluate the <em>behavior</em> of the client.</p>
+				<section id="spam-filtering">
+					<h4 id="x3-5-1-spam-filtering"><span class="secno">3.5.1 </span>Spam filtering<span class="permalink"><a href="#spam-filtering" aria-label="Permalink for 3.5.1 Spam filtering" title="Permalink for 3.5.1 Spam filtering"><span>§</span></a></span></h4>
+					<p>Applications that use <a href="#dfn-continuous-authentication" class="internalDFN" data-link-type="dfn">continuous authentication</a> and "hot words" to flag spam content, or <a href="#dfn-bayesian-filtering" class="internalDFN" data-link-type="dfn">Bayesian filtering</a> to detect other patterns consistent with spam, are very popular, and quite effective. While such risk analysis systems may experience false negatives from time to time, properly-tuned systems can achieve results comparable to a traditional visual <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a>, while also removing the added cognitive burden on the user and eliminating access barriers.</p>
+					<p>Most major blogging software contains <a href="#dfn-spam-filtering" class="internalDFN" data-link-type="dfn">spam filtering</a> capabilities, or can be fitted with a plug-in for this functionality. Many of these filters can automatically delete messages that reach a certain spam threshold, and mark questionable messages for manual moderation. More advanced systems can control attacks based on posting frequency, filter content sent using the [<cite><a class="bibref" href="#bib-trackback">TRACKBACK</a></cite>] protocol, and ban users by IP address range, temporarily or permanently.</p>
 				</section>
-				<section>
-					<h4 id="heuristic-checks-and-the-google-recaptcha"><span class="secno">3.5.2 </span>Heuristic checks and the Google ReCAPTCHA</h4>
-					<p>Heuristics are discoveries in a process that seem to indicate a given result. It may be possible to detect the presence of a robotic user based on the volume of data the user requests, series of common pages visited, IP addresses, data entry methods, or other signature data that can be collected.</p>
+				<section id="heuristic-checks-and-the-google-recaptcha">
+					<h4 id="x3-5-2-heuristic-checks-and-the-google-recaptcha"><span class="secno">3.5.2 </span>Heuristic checks and the Google reCAPTCHA<span class="permalink"><a href="#heuristic-checks-and-the-google-recaptcha" aria-label="Permalink for 3.5.2 Heuristic checks and the Google reCAPTCHA" title="Permalink for 3.5.2 Heuristic checks and the Google reCAPTCHA"><span>§</span></a></span></h4>
+					<p><a href="#dfn-heuristics" class="internalDFN" data-link-type="dfn">Heuristics</a> are discoveries in a process that seem to indicate a given result. It may be possible to detect the presence of a robotic user based on the volume of data the user requests, series of common pages visited, IP addresses, data entry methods, or other signature data that can be collected.</p>
 					<p>Again, this requires a careful examination of site data. If pattern-matching algorithms can't find good heuristics, then this is not a good solution. Also, polymorphism, or the creation of changing footprints, is apt to result, if it hasn't already, in robots, just as polymorphic ("stealth") viruses appeared to get around virus checkers looking for known viral footprints.</p>
-					<p>Another heuristic approach identified in [<cite><a class="bibref" href="#bib-KILLBOTS">KILLBOTS</a></cite>] involves the use of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> images, with a twist: how the user reacts to the test is as important as whether or not it was solved. This system, which was designed to thwart distributed denial of service (DDoS) attacks, bans automated attackers which make repeated attempts to retrieve a certain page, while protecting against marking humans incorrectly as automated traffic. When the server's load drops below a certain level, the <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr>-based authentication process is removed entirely.</p>
-					<p>An example of a <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> based on this approach is the Google ReCAPTCHA which features a checkbox labelled ‘I am not a robot’ or similar phrasing. The process works by collecting data such as mouse movement and keyboard navigation to determine whether the user is human or robot, while keeping the <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> process relatively simple.</p>
-					<p>Anecdotal evidence suggests that this <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> is currently the most accessible <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> solution and can be completed with a variety of assistive technologies. However, there is little formalized research investigating whether this is indeed the case. There is also the additional concern that a user's failure to interact appropriately with the reCATPCHA challenge or to satisfy the heuristic tests results in the presentation of a traditional inaccessible <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> as a fall-back mechanism.</p>
+					<p>Another heuristic approach identified in [<cite><a class="bibref" href="#bib-killbots">KILLBOTS</a></cite>] involves the use of <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a> images, with a twist: how the user reacts to the test is as important as whether or not it was solved. This system, which was designed to thwart distributed denial of service (DDoS) attacks, bans automated attackers which make repeated attempts to retrieve a certain page, while protecting against marking humans incorrectly as automated traffic. When the server's load drops below a certain level, the <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr>-based authentication process is removed entirely.</p>
+					<p>An example of a <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> based on this approach is the Google reCAPTCHA [<cite><a class="bibref" href="#bib-recaptcha">recaptcha</a></cite>] which features a checkbox labelled ‘I am not a robot’ or similar phrasing. The process works by collecting data such as mouse movement and keyboard navigation to determine whether the user is human or robot, while keeping the <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> process relatively simple.</p>
+					<p>Anecdotal evidence suggests that this <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> is currently the most accessible <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> solution and can be completed with a variety of <a href="#dfn-assistive-technologies" class="internalDFN" data-link-type="dfn">assistive technologies</a>. However, there is little formalized research investigating whether this is indeed the case. There is also the additional concern that a user's failure to interact appropriately with the reCATPCHA challenge or to satisfy the heuristic tests results in the presentation of a traditional inaccessible <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> as a fall-back mechanism.</p>
 				</section>
 			</section>
-			<section>
-				<h3 id="federated-identity-systems"><span class="secno">3.6 </span>Federated identity systems</h3>
+			<section id="federated-identity-systems">
+				<h3 id="x3-6-federated-identity-systems"><span class="secno">3.6 </span>Federated identity systems<span class="permalink"><a href="#federated-identity-systems" aria-label="Permalink for 3.6 Federated identity systems" title="Permalink for 3.6 Federated identity systems"><span>§</span></a></span></h3>
 				<p>Many large companies such as Microsoft, Apple, Amazon, Google and the <a href="http://kantarainitiative.org/">Kantara Initiative</a> have created competing "federated network identity" systems, which can allow a user to create an account, set his or her preferences, payment data, etc., and have that data persist across all sites and devices that use the same service. Due to large companies now requiring a federated identity to use cloud-based services on their respective digital ecosystems, the popularity of federated identities has increased significantly. As a result, many web sites and services allow a portable form of authentication and identification across the Web.</p>
-				<section>
-					<h4 id="single-sign-on"><span class="secno">3.6.1 </span>Single sign-on</h4>
+				<section id="single-sign-on">
+					<h4 id="x3-6-1-single-sign-on"><span class="secno">3.6.1 </span>Single sign-on<span class="permalink"><a href="#single-sign-on" aria-label="Permalink for 3.6.1 Single sign-on" title="Permalink for 3.6.1 Single sign-on"><span>§</span></a></span></h4>
 					<p>Single sign-on services will need to be among the most accessible services on the Web in order to offer equal benefits to people with disabilities. Additionally, use of these services will need to be ubiquitous to truly solve the problems addressed here once and for all.</p>
 				</section>
-				<section>
-					<h4 id="public-key-infrastructure-solutions"><span class="secno">3.6.2 </span>Public-key infrastructure solutions</h4>
+				<section id="public-key-infrastructure-solutions">
+					<h4 id="x3-6-2-public-key-infrastructure-solutions"><span class="secno">3.6.2 </span>Public-key infrastructure solutions<span class="permalink"><a href="#public-key-infrastructure-solutions" aria-label="Permalink for 3.6.2 Public-key infrastructure solutions" title="Permalink for 3.6.2 Public-key infrastructure solutions"><span>§</span></a></span></h4>
 					<p>Another approach is to use certificates for individuals who wish to verify their identity. The certificate can be issued in such a way as to ensure something close to a one-person-one-vote system; e.g. by issuing these certificates in person and enabling users to develop distributed trust networks, or by having these certificates issued from highly trusted authorities such as governments. These types of systems have been implemented for securing web pages, and for authenticating email.</p>
 					<p>The cost of creating fraudulent certificates needs to be high enough to destroy the value of producing them in most cases. Sites would need to use mechanisms which are widely implemented in user agents.</p>
-					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed.  However such approaches raise significant privacy and stigmatation concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. basedBookshare [<cite><a class="bibref" href="#bib-BOOKSHARE">BOOKSHARE</a></cite>] whose services are only available to persons with documented print disabilities. Bookshare provides its users access to printed materials which are otherwise unavailable in accessible alternative formats such as audio or Braille. An American copyright provision known as the Chafee Amendment [<cite><a class="bibref" href="#bib-CHAFEE">CHAFEE</a></cite>] allows copyrighted materials to be reproduced in specialized forms that are only usable by print disabled users. A public-key infrastructure system would allow Bookshare's maintainers to ensure that the site and its users are in compliance with copyright
+					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed.  However such approaches raise significant privacy and stigmatation concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. basedBookshare [<cite><a class="bibref" href="#bib-bookshare">BOOKSHARE</a></cite>] whose services are only available to persons with documented print disabilities. Bookshare provides its users access to printed materials which are otherwise unavailable in accessible alternative formats such as audio or Braille. An American copyright provision known as the Chafee Amendment [<cite><a class="bibref" href="#bib-chafee">CHAFEE</a></cite>] allows copyrighted materials to be reproduced in specialized forms that are only usable by print disabled users. A <a href="#dfn-public-key-infrastructure" class="internalDFN" data-link-type="dfn">public-key infrastructure</a> system would allow Bookshare's maintainers to ensure that the site and its users are in compliance with copyright
 						law.</p>
 				</section>
-				<section>
-					<h4 id="biometrics"><span class="secno">3.6.3 </span>Biometrics</h4>
-					<p>Biometric identifiers have become a popular authentication method, especially on mobile platforms. Some physical characteristic of the user, such as a fingerprint or a facial profile, is first acquired and then recognized to verify the individual's identity. This process effectively limits the ability of web robots to create a large number of false identities.</p>
+				<section id="biometrics">
+					<h4 id="x3-6-3-biometrics"><span class="secno">3.6.3 </span>Biometrics<span class="permalink"><a href="#biometrics" aria-label="Permalink for 3.6.3 Biometrics" title="Permalink for 3.6.3 Biometrics"><span>§</span></a></span></h4>
+					<p>Biometric identifiers have become a popular authentication method, especially on mobile platforms. Some physical characteristic of the user, such as a fingerprint or a facial profile, is first acquired and then recognized to verify the individual's identity. This process effectively limits the ability of <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">web robots</a> to create a large number of false identities.</p>
 					<p>However, biometric authentication mechanisms also need to be carefully designed to avoid introducing accessibility barriers. Individuals who lack the biological characteristics required by the particular authentication method, e.g., fingers, or who are unable to perform the enrollment or identification procedures are effectively  precluded from using it. This can result in  denial of access to certain users with disabilities on systems relying on biometrics for authentication. Consequently, reliance on a single biometric identifier to identify a user is now insufficient to satisfy public sector procurement standards in the European Union (<a href="http://mandate376.standards.eu/standard/technical-requirements/biometrics">EN 301 549, section 5.3</a>) and regulations under section 508 of the Rehabilitation Act and section 255 of the Communications Act in the United States (<a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">36 CFR 1194, Appendix C</a>, section 403).</p>
-					<p>Where biometrics are used as an alternative to <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr>, systems should be designed to allow users to choose among multiple and unrelated biometric identifiers. It should also be noted that biometrics can uniquely identify individuals, making this alternative unsuitable for applications in which it is necessary to preserve the user's anonymity (i.e., the application is required to verify solely that the user is human, without obtaining identifying information).</p>
+					<p>Where biometrics are used as an alternative to <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a>, systems should be designed to allow users to choose among multiple and unrelated biometric identifiers. It should also be noted that biometrics can uniquely identify individuals, making this alternative unsuitable for applications in which it is necessary to preserve the user's anonymity (i.e., the application is required to verify solely that the user is human, without obtaining identifying information).</p>
 				</section>
 			</section>
-			<section>
-				<h3 id="multiple-user-devices"><span class="secno">3.7 </span>Multiple user devices </h3>
-				<p>The user of multiple devices such as a computer, smartphone, tablet and/or wearable could provide additional support for user authentication. This could assist in addressing accessibility issues by using assistive technologies on each device to confirm the user is a human and is a specific user [<cite><a class="bibref" href="#bib-auth-mult">auth-mult</a></cite>]. The use of biometrics, as previously discussed, could also serve as one such device authentication mechanism.</p>
+			<section id="multiple-user-devices">
+				<h3 id="x3-7-multiple-user-devices"><span class="secno">3.7 </span>Multiple user devices <span class="permalink"><a href="#multiple-user-devices" aria-label="Permalink for 3.7 Multiple user devices " title="Permalink for 3.7 Multiple user devices "><span>§</span></a></span></h3>
+				<p>The user of multiple devices such as a computer, smartphone, tablet and/or wearable could provide additional support for user authentication. This could assist in addressing accessibility issues by using <a href="#dfn-assistive-technologies" class="internalDFN" data-link-type="dfn">assistive technologies</a> on each device to confirm the user is a human and is a specific user [<cite><a class="bibref" href="#bib-auth-mult">auth-mult</a></cite>]. The use of biometrics, as previously discussed, could also serve as one such device authentication mechanism.</p>
 			</section>
-			<section>
-				<h3 id="image-and-video"><span class="secno">3.8 </span>Image and video </h3>
-				<section>
-					<h4 id="visual-comparison-captchas"><span class="secno">3.8.1 </span>Visual comparison CAPTCHAs </h4>
-					<p>There are a number of new <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> techniques based on the identification of still images. This can include requiring the user to identify whether an image is a man or a woman, or whether an image is human-shaped or avatar-shaped among other comparison solutions [<cite><a class="bibref" href="#bib-captchastar">captchastar</a></cite>] [<cite><a class="bibref" href="#bib-facecaptcha">facecaptcha</a></cite>] [<cite><a class="bibref" href="#bib-social-classification">social-classification</a></cite>].</p>
+			<section id="image-and-video">
+				<h3 id="x3-8-image-and-video"><span class="secno">3.8 </span>Image and video <span class="permalink"><a href="#image-and-video" aria-label="Permalink for 3.8 Image and video " title="Permalink for 3.8 Image and video "><span>§</span></a></span></h3>
+				<section id="visual-comparison-captchas">
+					<h4 id="x3-8-1-visual-comparison-captchas"><span class="secno">3.8.1 </span>Visual comparison CAPTCHAs <span class="permalink"><a href="#visual-comparison-captchas" aria-label="Permalink for 3.8.1 Visual comparison CAPTCHAs " title="Permalink for 3.8.1 Visual comparison CAPTCHAs "><span>§</span></a></span></h4>
+					<p>There are a number of new <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a> techniques based on the identification of still images. This can include requiring the user to identify whether an image is a man or a woman, or whether an image is human-shaped or avatar-shaped among other comparison solutions [<cite><a class="bibref" href="#bib-captchastar">captchastar</a></cite>] [<cite><a class="bibref" href="#bib-facecaptcha">facecaptcha</a></cite>] [<cite><a class="bibref" href="#bib-social-classification">social-classification</a></cite>].</p>
 					<p>While alternative audio comparison CAPTCHAs could be provided such as using similar or different sounds for comparison, the reliance on visual comparison alone would make these techniques difficult, if not impossible for people with vision-related disabilities to use.</p>
 				</section>
-				<section>
-					<h4 id="d-captcha"><span class="secno">3.8.2 </span>3D <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></h4>
-					<p>A 3D representation of letters and numbers can make it more difficult for OCR software to identify them, in turn increasing the security of the <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> [<cite><a class="bibref" href="#bib-3d-captcha-security">3d-captcha-security</a></cite>]. However, this solution raises similar accessibility issues to traditional CAPTCHAs.</p>
+				<section id="x3d-captcha">
+					<h4 id="x3-8-2-3d-captcha"><span class="secno">3.8.2 </span>3D <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr><span class="permalink"><a href="#x3d-captcha" aria-label="Permalink for 3.8.2 3D CAPTCHA" title="Permalink for 3.8.2 3D CAPTCHA"><span>§</span></a></span></h4>
+					<p>A 3D representation of letters and numbers can make it more difficult for OCR software to identify them, in turn increasing the security of the <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a> [<cite><a class="bibref" href="#bib-3d-captcha-security">3d-captcha-security</a></cite>]. However, this solution raises similar accessibility issues to traditional CAPTCHAs.</p>
 					<p>We recommend further exploration of the use of risk analysis techniques (as exemplified by the approach that Google engineers have taken) to reduce the need for <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr>.</p>
 				</section>
-				<section>
-					<h4 id="video-game-captcha"><span class="secno">3.8.3 </span>Video Game <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></h4>
-					<p>This process suggests the completion of a basic video game as a <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr>. The benefits include the removal of language barriers, and multiple interface methods could potentially make such a solution accessible [<cite><a class="bibref" href="#bib-game-captcha">game-captcha</a></cite>]. It would also have the benefit of making CAPCHA solving an enjoyable process, reducing the frustrations generally associated with traditional CAPTCHAs.</p>
+				<section id="video-game-captcha">
+					<h4 id="x3-8-3-video-game-captcha"><span class="secno">3.8.3 </span>Video Game <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr><span class="permalink"><a href="#video-game-captcha" aria-label="Permalink for 3.8.3 Video Game CAPTCHA" title="Permalink for 3.8.3 Video Game CAPTCHA"><span>§</span></a></span></h4>
+					<p>This process suggests the completion of a basic video game as a <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a>. The benefits include the removal of language barriers, and multiple interface methods could potentially make such a solution accessible [<cite><a class="bibref" href="#bib-game-captcha">game-captcha</a></cite>]. It would also have the benefit of making CAPCHA solving an enjoyable process, reducing the frustrations generally associated with traditional CAPTCHAs.</p>
 				</section>
 			</section>
 		</section>
-		<section>
-			<!--OddPage--><h2 id="conclusion"><span class="secno">4. </span>Conclusion</h2>
-			<p>The evolution of <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> techniques has demonstrated that traditional solutions such as text-based characters contained in images are not only challenging for people with disabilities, but also insecure. While a majority of CAPTCHAs in use remain challenging for people with disabilities to complete, recent developments, including the Google reCAPTCHA, multi-device authentication, and the increased prevalence of Federated identity systems currently provide the most accessible and flexible options in separating humans from robots.</p>
+		<section id="conclusion">
+			<!--OddPage--><h2 id="x4-conclusion"><span class="secno">4. </span>Conclusion<span class="permalink"><a href="#conclusion" aria-label="Permalink for 4. Conclusion" title="Permalink for 4. Conclusion"><span>§</span></a></span></h2>
+			<p>The evolution of <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></a> techniques has demonstrated that traditional solutions such as text-based characters contained in images are not only challenging for people with disabilities, but also insecure. While a majority of CAPTCHAs in use remain challenging for people with disabilities to complete, recent developments, including the Google reCAPTCHA [<cite><a class="bibref" href="#bib-recaptcha">recaptcha</a></cite>], multi-device authentication, and the increased prevalence of Federated identity systems currently provide the most accessible and flexible options in separating humans from robots.</p>
 			<p>However, while some <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> solutions are better than others, there is currently no ideal solution. It is important then to exercise care that any implemented <abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr> technology correctly identify people with disabilities as human.</p>
 		</section>
-		<h2 id="acknowledgments">Acknowledgments<span class="permalink"><a href="#acknowledgments" aria-label="Permalink for Acknowledgments" title="Permalink for Acknowledgments"><span>§</span></a></span></h2>
-		<p>Thanks to the following contributors: Kentarou Fukuda, Marc-Antoine Garrigue, Al Gilman, Charles McCathieNevile, David Pawson, David Poehlman, Janina Sajka, and Jason White.</p>
-		<p>This publication has been funded in part with U.S. Federal funds from the Department of Education, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR), initially under contract number ED-OSE-10-C-0067 and currently under contract number HHSP23301500054C. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
+		<section class="appendix" id="terms">
+			<!--OddPage--><h2 id="a-terms"><span class="secno">A. </span>Terms<span class="permalink"><a href="#terms" aria-label="Permalink for A. Terms" title="Permalink for A. Terms"><span>§</span></a></span></h2>
+			<p>The following terms are used in this document:</p>
+			<dl>
+				<dt><dfn data-dfn-type="dfn" id="dfn-alternative-text">alternative text</dfn></dt>
+				<dd>Text that is associated with, and provides a brief description or label of, non-text content.</dd>
+				<dt><dfn data-lt="assistive technologies|assistive technology" data-dfn-type="dfn" id="dfn-assistive-technologies">assistive technology</dfn></dt>
+				<dd>
+				Hardware and / or software that acts as a <a href="#dfn-user-agent" class="internalDFN" data-link-type="dfn">user agent</a>, or along with a mainstream user agent, to provide functionality to meet the requirements of users with disabilities that go beyond those offered by mainstream user agents.
+				</dd>
+				<dt><dfn data-lt="bayesian filtering|bayesian filter" data-dfn-type="dfn" id="dfn-bayesian-filtering">Bayesian filter</dfn></dt>
+				<dd>Recursive probabilistic <a href="#dfn-heuristics" class="internalDFN" data-link-type="dfn">heuristic</a> to categorize content, typically used in <a href="#dfn-spam-filtering" class="internalDFN" data-link-type="dfn">spam filtering</a>.</dd>
+				<dt><dfn data-lt="completely automated public turing test|captcha" data-dfn-type="dfn" id="dfn-completely-automated-public-turing-test"><abbr title="Completely Automated Public Turing Test">CAPTCHA</abbr></dfn></dt>
+				<dd>"Completely Automated Public <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing Test</a> to tell Computers and Humans Apart", which presents a challenge that is expected to be difficult for machines to respond correctly and possible for humans to respond correctly.</dd>
+				<dt><dfn data-dfn-type="dfn" id="dfn-continuous-authentication">continuous authentication</dfn></dt>
+				<dd>Mechanism to determine that a user is still the one previously verified without requiring constant re-authentication.</dd>
+				<dt><dfn data-lt="heuristics|heuristic" data-dfn-type="dfn" id="dfn-heuristics">heuristic</dfn></dt>
+				<dd>Way to solve a problem with good reliability but not perfection.</dd>
+				<!--
+				<dt><dfn data-lt="hot words">hot word</dfn></dt>
+				<dd>@@</dd>
+				<dt><dfn>polymorphism</dfn></dt>
+				<dd>@@</dd>
+				-->
+				<dt><dfn data-dfn-type="dfn" id="dfn-public-key-infrastructure">public-key infrastructure</dfn></dt>
+				<dd>Authentication of the entity which has encrypted content via a registered decryption key.</dd>
+				<dt><dfn data-lt="robots|web robot|web robots|robot" data-dfn-type="dfn" id="dfn-robots">robot</dfn></dt>
+				<dd>Software application that performs automated tasks on web content.</dd>
+				<dt><dfn data-lt="screen readers|screen reader" data-dfn-type="dfn" id="dfn-screen-readers">screen reader</dfn></dt>
+				<dd><a href="#dfn-assistive-technologies" class="internalDFN" data-link-type="dfn">Assistive technology</a> that renders content as speech.</dd>
+				<dt><dfn data-lt="spam filtering|spam filter" data-dfn-type="dfn" id="dfn-spam-filtering">spam filter</dfn></dt>
+				<dd>Software that processes email messages to separate undesired, usually automated, messages from desired messages.</dd>
+				<dt><dfn data-lt="spiders|spider" data-dfn-type="dfn" id="dfn-spiders">spider</dfn></dt>
+				<dd><a href="#dfn-robots" class="internalDFN" data-link-type="dfn">Robot</a> that processes web content and recursively follows links to process the content at the link target.</dd>
+				<dt><dfn data-dfn-type="dfn" id="dfn-turing-test">Turing test</dfn></dt>
+				<dd>A challenge presented to a computer to determine if it can be perceived as human.</dd>
+				<dt><dfn data-dfn-type="dfn" id="dfn-user-agent">user agent</dfn></dt>
+				<dd>Any software that retrieves, renders and facilitates end user interaction with web content.</dd>
+			</dl>
+		</section>
+		<section class="appendix" id="acknowledgments">
+		<!--OddPage--><h2 id="b-acknowledgments"><span class="secno">B. </span>Acknowledgments<span class="permalink"><a href="#acknowledgments" aria-label="Permalink for B. Acknowledgments" title="Permalink for B. Acknowledgments"><span>§</span></a></span></h2>
+			<section id="contributors-to-this-version">
+				<h3 id="b-1-contributors-to-this-version"><span class="secno">B.1 </span>Contributors to this version:<span class="permalink"><a href="#contributors-to-this-version" aria-label="Permalink for B.1 Contributors to this version:" title="Permalink for B.1 Contributors to this version:"><span>§</span></a></span></h3>
+				<ul>
+					<li>Judy Brewer, <abbr title="World Wide Web Consortium">W3C</abbr></li>
+					<li>Michael Cooper, <abbr title="World Wide Web Consortium">W3C</abbr></li>
+					<li>John Foliot, Deque Systems Inc.</li>
+					<li>Scott Hollier, Invited Expert</li>
+					<li>Janina Sajka, Invited Expert</li>
+					<li>Jason White, Educational Testing Service</li>
+				</ul>
+			</section>
+			<section id="contributors-to-the-previous-version">
+				<h3 id="b-2-contributors-to-the-previous-version"><span class="secno">B.2 </span>Contributors to the previous version:<span class="permalink"><a href="#contributors-to-the-previous-version" aria-label="Permalink for B.2 Contributors to the previous version:" title="Permalink for B.2 Contributors to the previous version:"><span>§</span></a></span></h3>
+				<ul>
+					<li>Kentarou Fukuda</li>
+					<li>Marc-Antoine Garrigue</li>
+					<li>Al Gilman</li>
+					<li>Charles McCathie-Nevile</li>
+					<li>David Pawson</li>
+					<li>David Poehlman</li>
+					<li>Janina Sajka</li>
+					<li>Jason White</li>
+				</ul>
+			</section>
+			<section id="enabling-funders">
+				<h3 id="b-3-enabling-funders"><span class="secno">B.3 </span>Enabling Funders<span class="permalink"><a href="#enabling-funders" aria-label="Permalink for B.3 Enabling Funders" title="Permalink for B.3 Enabling Funders"><span>§</span></a></span></h3>
+				<p>This publication has been funded in part with U.S. Federal funds from the Health and Human Services, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR) under contract number HHSP23301500054C. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Health and Human Services, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
+			</section>
+		</section>
 	
 
-<section id="references" class="appendix"><!--OddPage--><h2 id="a-references"><span class="secno">A. </span>References<span class="permalink"><a href="#references" aria-label="Permalink for A. References" title="Permalink for A. References"><span>§</span></a></span></h2><section id="informative-references"><h3 id="a-1-informative-references"><span class="secno">A.1 </span>Informative references<span class="permalink"><a href="#informative-references" aria-label="Permalink for A.1 Informative references" title="Permalink for A.1 Informative references"><span>§</span></a></span></h3><dl class="bibliography"><dt id="bib-3d-captcha-security">[3d-captcha-security]</dt><dd><cite>On the security of text-based 3D CAPTCHAs</cite>. Nguyen, V. D.; Chow, Y.-W.; Susilo, W.. Computers &amp; Security, 45. 2014. 
-</dd><dt id="bib-auth-mult">[auth-mult]</dt><dd><cite>Design, Testing and Implementation of a New Authentication Method Using Multiple Devices</cite>. Cetin, C.. J. Ligatti, D. Goldgof, &amp; Y. Liu (Eds.): ProQuest Dissertations Publishing. 2015. 
-</dd><dt id="bib-BOOKSHARE">[BOOKSHARE]</dt><dd><a href="http://www.bookshare.org"><cite>Bookshare.org home page</cite></a>. URL: <a href="http://www.bookshare.org">http://www.bookshare.org</a>
-</dd><dt id="bib-CAPTCHA">[CAPTCHA]</dt><dd><a href="http://www.captcha.net"><cite>The CAPTCHA Project</cite></a>.  Carnegie Mellon University. URL: <a href="http://www.captcha.net">http://www.captcha.net</a>
-</dd><dt id="bib-captcha-ld">[captcha-ld]</dt><dd><cite>The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities</cite>. Gafni, R.; Nagar, I..
-</dd><dt id="bib-captcha-robustness">[captcha-robustness]</dt><dd><cite>Effects of Text Rotation, String Length, and Letter Format on Text-based CAPTCHA Robustness</cite>. Tangmanee, C.. Journal of Applied Security Research, 11(3). 2016. 
-</dd><dt id="bib-captcha-security">[captcha-security]</dt><dd><cite>CAPTCHA Security: A Case Study</cite>. Yan, J.; El Ahmad, A. S.. Security &amp; Privacy, IEEE, 7(4). 2009. 
-</dd><dt id="bib-captchastar">[captchastar]</dt><dd><cite>CAPTCHaStar! A novel CAPTCHA based on interactive shape discovery</cite>. Conti, M.; Guarisco, C.; Spolaor, R..2015. 
-</dd><dt id="bib-CHAFEE">[CHAFEE]</dt><dd><a href="http://www.copyright.gov/title17/92chap1.html"><cite>17 USC 121, Limitations on exclusive rights: reproduction for blind or other people with disabilities (also known as the Chafee Amendment)</cite></a>. URL: <a href="http://www.copyright.gov/title17/92chap1.html">http://www.copyright.gov/title17/92chap1.html</a>
-</dd><dt id="bib-civil-rights-captcha">[civil-rights-captcha]</dt><dd><cite>Machine learning and empathy: the Civil Rights CAPTCHA</cite>. Hernández-Castro, C. J.; Barrero, D. F.; R-Moreno, M. D.. Concurrency and Computation: Practice and Experience, 28(4). 2016. 
-</dd><dt id="bib-defeat-line-noise">[defeat-line-noise]</dt><dd><cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite>. Nakaguro, Y.; Dailey, M. N.; Marukatat, S.; Makhanov, S. S.. Computers &amp; Security, 37. 2013. 
-</dd><dt id="bib-eval-audio">[eval-audio]</dt><dd><cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite>. Bigham, J. P.; Cavender, A. C.. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. April 2009. 
-</dd><dt id="bib-facecaptcha">[facecaptcha]</dt><dd><cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite>. Kim, J.; Kim, S.; Yang, J.; Ryu, J.-h.; Wohn, K.. An International Journal, 72(2). 2014. 
-</dd><dt id="bib-facial-captcha-attack">[facial-captcha-attack]</dt><dd><cite>A computer vision attack on the ARTiFACIAL CAPTCHA</cite>. Li, Q.. An International Journal, 74(13). 2015. 
-</dd><dt id="bib-game-captcha">[game-captcha]</dt><dd><cite>Game-based image semantic CAPTCHA on handset devices</cite>. Yang, T.-I.; Koong, C.-S.; Tseng, C.-C.. An International Journal, 74(14). 2015. 
-</dd><dt id="bib-KILLBOTS">[KILLBOTS]</dt><dd><a href="http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"><cite>Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a>. Srikanth Kandula; Dina Katabi; Matthias Jacob; Arthur Burger et al.URL: <a href="http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/">http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/</a>
-</dd><dt id="bib-NEWSCOM">[NEWSCOM]</dt><dd><a href="http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a>. Paul Festa et al. News.com. URL: <a href="http://news.com.com/2100-1032-1022814.html">http://news.com.com/2100-1032-1022814.html</a>
-</dd><dt id="bib-recaptcha-attacks">[recaptcha-attacks]</dt><dd><cite>HMM-based Attacks on Google's ReCAPTCHA with Continuous Visual and Audio Symbols</cite>. Sano, S.; Otsuka, T.; Itoyama, K.; Okuno, H. G.. Journal of Information Processing, 23(6). 2015. 
-</dd><dt id="bib-social-classification">[social-classification]</dt><dd><cite>Social and egocentric image classification for scientific and privacy applications</cite>. Korayem, M.. D. Crandall, J. Bollen, A. Kapadia, &amp; P. Radivojac (Eds.): ProQuest Dissertations Publishing. 2015. 
-</dd><dt id="bib-task-completion">[task-completion]</dt><dd><cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite>. Sauer, G.; Lazar, J.; Hochheiser, H.; Feng, J.. ACM Transactions on Accessible Computing (TACCESS), 2(4). 2010. 
-</dd><dt id="bib-TRACKBACK">[TRACKBACK]</dt><dd><a href="http://en.wikipedia.org/wiki/Trackback"><cite>Trackback</cite></a>.  Wikipedia. URL: <a href="http://en.wikipedia.org/wiki/Trackback">http://en.wikipedia.org/wiki/Trackback</a>
-</dd></dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+<section id="references" class="appendix">
+      <!--OddPage--><h2 id="c-references"><span class="secno">C. </span>References<span class="permalink"><a href="#references" aria-label="Permalink for C. References" title="Permalink for C. References"><span>§</span></a></span></h2>
+      
+    <section id="informative-references">
+        <h3 id="c-1-informative-references"><span class="secno">C.1 </span>Informative references<span class="permalink"><a href="#informative-references" aria-label="Permalink for C.1 Informative references" title="Permalink for C.1 Informative references"><span>§</span></a></span></h3>
+      <dl class="bibliography">
+        <dt id="bib-3d-captcha-security">[3d-captcha-security]</dt><dd><cite>On the security of text-based 3D CAPTCHAs</cite>. Nguyen, V. D.; Chow, Y.-W.; Susilo, W.. Computers &amp; Security, 45. 2014. </dd><dt id="bib-auth-mult">[auth-mult]</dt><dd><cite>Design, Testing and Implementation of a New Authentication Method Using Multiple Devices</cite>. Cetin, C.. J. Ligatti, D. Goldgof, &amp; Y. Liu (Eds.): ProQuest Dissertations Publishing. 2015. </dd><dt id="bib-bookshare">[BOOKSHARE]</dt><dd><a href="http://www.bookshare.org"><cite>Bookshare.org home page</cite></a>. URL: <a href="http://www.bookshare.org">http://www.bookshare.org</a></dd><dt id="bib-captcha-ld">[captcha-ld]</dt><dd><cite>The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities</cite>. Gafni, R.; Nagar, I..</dd><dt id="bib-captcha-robustness">[captcha-robustness]</dt><dd><cite>Effects of Text Rotation, String Length, and Letter Format on Text-based CAPTCHA Robustness</cite>. Tangmanee, C.. Journal of Applied Security Research, 11(3). 2016. </dd><dt id="bib-captcha-security">[captcha-security]</dt><dd><cite>CAPTCHA Security: A Case Study</cite>. Yan, J.; El Ahmad, A. S.. Security &amp; Privacy, IEEE, 7(4). 2009. </dd><dt id="bib-captchastar">[captchastar]</dt><dd><cite>CAPTCHaStar! A novel CAPTCHA based on interactive shape discovery</cite>. Conti, M.; Guarisco, C.; Spolaor, R..2015. </dd><dt id="bib-chafee">[CHAFEE]</dt><dd><a href="http://www.copyright.gov/title17/92chap1.html"><cite>17 USC 121, Limitations on exclusive rights: reproduction for blind or other people with disabilities (also known as the Chafee Amendment)</cite></a>. URL: <a href="http://www.copyright.gov/title17/92chap1.html">http://www.copyright.gov/title17/92chap1.html</a></dd><dt id="bib-civil-rights-captcha">[civil-rights-captcha]</dt><dd><cite>Machine learning and empathy: the Civil Rights CAPTCHA</cite>. Hernández-Castro, C. J.; Barrero, D. F.; R-Moreno, M. D.. Concurrency and Computation: Practice and Experience, 28(4). 2016. </dd><dt id="bib-defeat-line-noise">[defeat-line-noise]</dt><dd><cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite>. Nakaguro, Y.; Dailey, M. N.; Marukatat, S.; Makhanov, S. S.. Computers &amp; Security, 37. 2013. </dd><dt id="bib-eval-audio">[eval-audio]</dt><dd><cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite>. Bigham, J. P.; Cavender, A. C.. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. April 2009. </dd><dt id="bib-facecaptcha">[facecaptcha]</dt><dd><cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite>. Kim, J.; Kim, S.; Yang, J.; Ryu, J.-h.; Wohn, K.. An International Journal, 72(2). 2014. </dd><dt id="bib-facial-captcha-attack">[facial-captcha-attack]</dt><dd><cite>A computer vision attack on the ARTiFACIAL CAPTCHA</cite>. Li, Q.. An International Journal, 74(13). 2015. </dd><dt id="bib-game-captcha">[game-captcha]</dt><dd><cite>Game-based image semantic CAPTCHA on handset devices</cite>. Yang, T.-I.; Koong, C.-S.; Tseng, C.-C.. An International Journal, 74(14). 2015. </dd><dt id="bib-iso-8859-1">[iso-8859-1]</dt><dd><a href="https://www.iso.org/standard/28245.html"><cite>Information technology -- 8-bit single-byte coded graphic character sets -- Part 1: Latin alphabet No. 1</cite></a>.  International Organization for Standardization. 1998. URL: <a href="https://www.iso.org/standard/28245.html">https://www.iso.org/standard/28245.html</a></dd><dt id="bib-killbots">[KILLBOTS]</dt><dd><a href="http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"><cite>Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a>. Srikanth Kandula; Dina Katabi; Matthias Jacob; Arthur Burger et al.URL: <a href="http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/">http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/</a></dd><dt id="bib-newscom">[NEWSCOM]</dt><dd><a href="http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a>. Paul Festa et al. News.com. URL: <a href="http://news.com.com/2100-1032-1022814.html">http://news.com.com/2100-1032-1022814.html</a></dd><dt id="bib-recaptcha">[recaptcha]</dt><dd><a href="https://www.google.com/recaptcha/"><cite>reCAPTCHA</cite></a>.  Google. URL: <a href="https://www.google.com/recaptcha/">https://www.google.com/recaptcha/</a></dd><dt id="bib-recaptcha-attacks">[recaptcha-attacks]</dt><dd><cite>HMM-based Attacks on Google's ReCAPTCHA with Continuous Visual and Audio Symbols</cite>. Sano, S.; Otsuka, T.; Itoyama, K.; Okuno, H. G.. Journal of Information Processing, 23(6). 2015. </dd><dt id="bib-social-classification">[social-classification]</dt><dd><cite>Social and egocentric image classification for scientific and privacy applications</cite>. Korayem, M.. D. Crandall, J. Bollen, A. Kapadia, &amp; P. Radivojac (Eds.): ProQuest Dissertations Publishing. 2015. </dd><dt id="bib-task-completion">[task-completion]</dt><dd><cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite>. Sauer, G.; Lazar, J.; Hochheiser, H.; Feng, J.. ACM Transactions on Accessible Computing (TACCESS), 2(4). 2010. </dd><dt id="bib-trackback">[TRACKBACK]</dt><dd><a href="http://en.wikipedia.org/wiki/Trackback"><cite>Trackback</cite></a>.  Wikipedia. URL: <a href="http://en.wikipedia.org/wiki/Trackback">http://en.wikipedia.org/wiki/Trackback</a></dd>
+      </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
