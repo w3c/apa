@@ -104,13 +104,13 @@ var biblio = {
 		"href": "http://sam.zoy.org/pwntcha/"
 	},
 	"TRACKBACK": {
-		"title": "Trackback",
+		"title": "TrackBack Specification",
 		"publishDate": "",
 		"authors": [],
 		"editors": [],
 		"etAl": "false",
-		"publisher": "Wikipedia",
-		"href": "http://en.wikipedia.org/wiki/Trackback"
+		"publisher": "Movable Type",
+		"href": "https://movabletype.org/documentation/trackback/specification.html"
 	},
 	"TURING": {
 		"title": "The Turing Test",
@@ -287,6 +287,16 @@ var biblio = {
         "title": "CAPTCHA Security: A Case Study",
         "publisher": "Security & Privacy, IEEE, 7(4)",
         "doi": "doi:10.1109/MSP.2009.84"
+    },
+    "36-cfr-1194": {
+    	"title": "36 CFR Appendix C to Part 1194, Functional Performance Criteria and Technical Requirements",
+    	"href": "https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194",
+    	"publisher": "Legal Information Institute"
+    },
+    "en-301-549": {
+    	"title": "EN 301 549: Accessibility requirements suitable for public procurement of ICT products and services in Europe",
+    	"publisher": "CEN/CENELEC/ETSI",
+    	"href": "http://mandate376.standards.eu/standard"
     },
     "mobile-auth": {
         "authors": [
