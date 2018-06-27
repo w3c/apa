@@ -677,9 +677,9 @@ details.respec-tests-details > li {
       "id": "game-captcha"
     }
   },
-  "publishDate": "2018-06-26",
-  "publishISODate": "2018-06-26T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 26 June 2018"
+  "publishDate": "2018-06-27",
+  "publishISODate": "2018-06-27T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 27 June 2018"
 }</script><meta name="description" content="Various approaches have been employed over many years to distinguish human users of web sites from robots. While the traditional CAPTCHA approach of asking the user to identify obscured text in an image remains common, other mechanisms are gaining in prominence. These approaches generally require users to perform a task believed to be possible for humans and difficult for robots, but the nature of the task inherently excludes many people with disabilities, resulting in an incorrect denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, so it is necessary to consider alternative approaches to block robots, yet ensure these approaches support access for people with disabilities. This document examines a number of potential solutions that allow systems to test for human users, and the extent to which these solutions adequately accommodate people with disabilities."></head>
 	<body class="h-entry toc-inline"><div class="head">
   <a href="https://www.w3.org/" class="logo">
@@ -687,7 +687,7 @@ details.respec-tests-details > li {
   </a>
   <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
   <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
-  <h2 id="w3c-editor-s-draft-26-june-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-06-26">26 June 2018</time></h2>
+  <h2 id="w3c-editor-s-draft-27-june-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-06-27">27 June 2018</time></h2>
   <dl>
     <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/turingtest/">https://www.w3.org/TR/turingtest/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd>
@@ -773,7 +773,7 @@ details.respec-tests-details > li {
 			<p>Web sites with resources that are attractive to aggregators such as sign-up web pages, travel and event ticket sites, web-based email accounts, and social media portals have taken measures to ensure that they can offer their service to individual users without exposing their data and content to <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">web robots</a>.</p>
 			<p>An early solution was the use of graphical representations of text in registration or comment areas of the web site. The site would attempt to verify that the user was in fact a human by requiring the user to complete a task commonly referred to as a Completely Automated Public <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing Test</a>, or <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn">CAPTCHA</a>. The assumption was that humans would find this task easy, while robots would find it nearly impossible to perform.</p>
 			<p>The CAPTCHA was initially developed by researchers at Carnegie Mellon University and has been primarily associated with a technique whereby an individual had to identify a distorted set of characters from a bit-mapped image, then enter those characters into a form. However, in recent times the types of CAPTCHA that appear on web sites and mobile apps have changed significantly. As such, the term “CAPTCHA” is used in this document to refer to all approaches which are specifically designed to differentiate a human from a computer.</p>
-			<p>While online users broadly have reported finding traditional CAPTCHAs frustrating to complete, it is generally assumed that a CAPTCHA can be resolved within a few incorrect attempts. The point of distinction for people with disabilities is that a CAPTCHA not only separates computers from humans, but also removes people with disabilities from performing the requested procedure. For example, asking users who are blind, visually impaired or dyslexic to identify textual characters in a distorted graphic is asking them to perform a task they are least able to accomplish. Similarly, asking users who are deaf or hearing impaired to identify and transcribe in writing the content of an audio caption is asking them to perform a task they’re least likely to accomplish. Furthermore, traditional CAPTCHAs have generally presumed that all web users can read a particular character set or English-based words, thus making the test inaccessible to a large number of web users worldwide.</p>
+			<p>While online users broadly have reported finding traditional CAPTCHAs frustrating to complete, it is generally assumed that a CAPTCHA can be resolved within a few incorrect attempts. The point of distinction for people with disabilities is that a CAPTCHA not only separates computers from humans, but also removes people with disabilities from performing the requested procedure. For example, asking users who are blind, visually impaired or dyslexic to identify textual characters in a distorted graphic is asking them to perform a task they are least able to accomplish. Similarly, asking users who are deaf or hearing impaired to identify and transcribe in writing the content of an audio CAPTCHA is asking them to perform a task they’re least likely to accomplish. Furthermore, traditional CAPTCHAs have generally presumed that all web users can read a particular character set or English-based words, thus making the test inaccessible to a large number of web users worldwide.</p>
 			<p>While Accessibility best practices require, and <a href="#dfn-assistive-technologies" class="internalDFN" data-link-type="dfn">assistive technologies</a> expect, substantive graphical images to be authored with text equivalents, <a href="#dfn-alternative-text" class="internalDFN" data-link-type="dfn">alternative text</a> on CAPTCHA images  would clearly be self-defeating. Nevertheless, a CAPTCHA without an accessible and usable alternative makes it impossible for users with certain disabilities to create accounts, write comments, or make purchases on such sites. In essence, such CAPTCHAs fail to properly recognize users with disabilities as human, obstructing their participation in contemporary society. Such issues also extend to situational disabilities whereby a user may not be able to effectively view a traditional CAPTCHA on a mobile device due to the small screen size, or hear an audio-based CAPTCHA in a noisy environment.</p>
 		</section>
 		<section id="security-effectiveness">
@@ -919,7 +919,7 @@ part of one audio CAPTCHA prove difficult to understand.</p>
 				<dt><dfn data-lt="robots|web robot|web robots|robot" data-dfn-type="dfn" id="dfn-robots">robot</dfn></dt>
 				<dd>Software application that performs automated tasks on web content.</dd>
 				<dt><dfn data-lt="screen readers|screen reader" data-dfn-type="dfn" id="dfn-screen-readers">screen reader</dfn></dt>
-				<dd><a href="#dfn-assistive-technologies" class="internalDFN" data-link-type="dfn">Assistive technology</a> that renders content as speech.</dd>
+				<dd><a href="#dfn-assistive-technologies" class="internalDFN" data-link-type="dfn">Assistive technology</a> that renders content as speech or Braille.</dd>
 				<dt><dfn data-lt="spam filtering|spam filter" data-dfn-type="dfn" id="dfn-spam-filtering">spam filter</dfn></dt>
 				<dd>Software that processes email messages to separate undesired, usually automated, messages from desired messages.</dd>
 				<dt><dfn data-lt="spiders|spider" data-dfn-type="dfn" id="dfn-spiders">spider</dfn></dt>
@@ -940,6 +940,7 @@ part of one audio CAPTCHA prove difficult to understand.</p>
 					<li>John Foliot, Deque Systems Inc.</li>
 					<li>Scott Hollier, Invited Expert</li>
 					<li>Janina Sajka, Invited Expert</li>
+					<li>David Sloan, The Paciello Group, LLC</li>
 					<li>Jason White, Educational Testing Service</li>
 				</ul>
 			</section>
