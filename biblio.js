@@ -42,7 +42,7 @@ var biblio = {
 		"editors": [],
 		"etAl": "false",
 		"publisher": "",
-		"href": "http://www.copyright.gov/title17/92chap1.html"
+		"href": "https://www.copyright.gov/title17/92chap1.html"
 	},
 	"killbots": {
 		"title": "Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds",
@@ -56,7 +56,7 @@ var biblio = {
 		"editors": [],
 		"etAl": "false",
 		"publisher": "",
-		"href": "http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"
+		"href": "https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/"
 	},
 	"newscom": {
 		"title": "Spam-bot tests flunk the blind",
@@ -65,7 +65,7 @@ var biblio = {
 		"editors": [],
 		"etAl": "false",
 		"publisher": "News.com",
-		"href": "http://news.com.com/2100-1032-1022814.html"
+		"href": "https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html"
 	},
 	"pinguard": {
 		"title": "PIN Guard",
