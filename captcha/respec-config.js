@@ -94,7 +94,7 @@ var respecConfig = {
 	wgURI:        "https://www.w3.org/WAI/APA/",
 	
 	// name (with the @w3c.org) of the public mailing to which comments are due
-	wgPublicList: "public-apa@w3.org",
+	wgPublicList: "public-apa",
 	
 	// URI of the patent status for this WG, for Rec-track documents
 	// !!!! IMPORTANT !!!!
