@@ -9,7 +9,7 @@ var respecConfig = {
 	tocIntroductory: true,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
 	subtitle: "Alternatives to Visual Turing Tests on the Web",
-	specStatus:           "ED",
+	specStatus:           "WD",
 	//crEnd:                "",
 	//perEnd:               "",
 	diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
@@ -19,7 +19,7 @@ var respecConfig = {
 	
 	
 	// if you wish the publication date to be other than today, set this
-	//publishDate:  "2014-12-11",
+	publishDate:  "2018-06-28",
 	copyrightStart:  "2018",
 	license: "w3c-software-doc",
 	
@@ -94,7 +94,7 @@ var respecConfig = {
 	wgURI:        "https://www.w3.org/WAI/APA/",
 	
 	// name (with the @w3c.org) of the public mailing to which comments are due
-	wgPublicList: "public-apa@w3.org",
+	wgPublicList: "public-apa",
 	
 	// URI of the patent status for this WG, for Rec-track documents
 	// !!!! IMPORTANT !!!!
