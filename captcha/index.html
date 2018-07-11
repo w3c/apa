@@ -63,6 +63,23 @@ part of one audio CAPTCHA prove difficult to understand.</p>
 				
 				<p>Although auditory forms of CAPTCHA that present distorted speech create recognition difficulties for <a>screen reader</a> users, the accuracy with which such users can complete the CAPTCHA tasks is increased if the user interface is carefully designed to prevent screen reader audio and CAPTCHA audio from being intermixed. This can be achieved by implementing functions for controlling the audio that do not require the user to move focus away from the text response field; see <cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite> [[eval-audio]].</p>
 				<p>Experiments with a combined auditory and visual CAPTCHA requiring users to identify well known objects by recognizing either images or sounds, suggest that this technique is highly usable by screen reader users. However, its security-related properties remain to be explored, as mentioned in <cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite> [[task-completion]].</p>
+			      </section>
+                              			<section>
+				<h3>Image and video </h3>
+				<section>
+					<h4>Visual comparison CAPTCHAs </h4>
+					<p>There are a number of new <a>CAPTCHA</a> techniques based on the identification of still images. This can include requiring the user to identify whether an image is a man or a woman, or whether an image is human-shaped or avatar-shaped among other comparison solutions, such as <cite>CAPTCHaStar! A novel CAPTCHA based on interactive shape discovery</cite>, [[captchastar]], <cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite> [[facecaptcha]], and <cite>Social and egocentric image classification for scientific and privacy applications</cite> [[social-classification]].</p>
+					<p>While alternative audio comparison CAPTCHAs could be provided such as using similar or different sounds for comparison, the reliance on visual comparison alone would make these techniques difficult, if not impossible for people with vision-related disabilities to use.</p>
+				</section>
+				<section>
+					<h4>3D CAPTCHA</h4>
+					<p>A 3D representation of letters and numbers can make it more difficult for OCR software to identify them, in turn increasing the security of the <a>CAPTCHA</a>, described in <cite>On the security of text-based 3D CAPTCHAs</cite> [[3d-captcha-security]]. However, this solution raises similar accessibility issues to traditional CAPTCHAs.</p>
+					<p>We recommend further exploration of the use of risk analysis techniques (as exemplified by the approach that Google engineers have taken) to reduce the need for CAPTCHA.</p>
+				</section>
+				<section>
+					<h4>Video Game CAPTCHA</h4>
+					<p>This process suggests the completion of a basic video game as a <a>CAPTCHA</a>, like  <cite>Game-based image semantic CAPTCHA on handset devices</cite> [[game-captcha]]. The benefits include the removal of language barriers, and multiple interface methods could potentially make such a solution accessible. It would also have the benefit of making CAPCHA solving an enjoyable process, reducing the frustrations generally associated with traditional CAPTCHAs.</p>
+				</section>
 			</section>
 			<section>
 				<h3>Limited-use accounts</h3>
@@ -112,23 +129,6 @@ part of one audio CAPTCHA prove difficult to understand.</p>
 			<section>
 				<h3>Multiple user devices </h3>
 				<p>The user of multiple devices such as a computer, smartphone, tablet and/or wearable could provide additional support for user authentication, as in <cite>Design, Testing and Implementation of a New Authentication Method Using Multiple Devices</cite> [[auth-mult]]. This could assist in addressing accessibility issues by using <a>assistive technologies</a> on each device to confirm the user is a human and is a specific user. The use of biometrics, as previously discussed, could also serve as one such device authentication mechanism.</p>
-			</section>
-			<section>
-				<h3>Image and video </h3>
-				<section>
-					<h4>Visual comparison CAPTCHAs </h4>
-					<p>There are a number of new <a>CAPTCHA</a> techniques based on the identification of still images. This can include requiring the user to identify whether an image is a man or a woman, or whether an image is human-shaped or avatar-shaped among other comparison solutions, such as <cite>CAPTCHaStar! A novel CAPTCHA based on interactive shape discovery</cite>, [[captchastar]], <cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite> [[facecaptcha]], and <cite>Social and egocentric image classification for scientific and privacy applications</cite> [[social-classification]].</p>
-					<p>While alternative audio comparison CAPTCHAs could be provided such as using similar or different sounds for comparison, the reliance on visual comparison alone would make these techniques difficult, if not impossible for people with vision-related disabilities to use.</p>
-				</section>
-				<section>
-					<h4>3D CAPTCHA</h4>
-					<p>A 3D representation of letters and numbers can make it more difficult for OCR software to identify them, in turn increasing the security of the <a>CAPTCHA</a>, described in <cite>On the security of text-based 3D CAPTCHAs</cite> [[3d-captcha-security]]. However, this solution raises similar accessibility issues to traditional CAPTCHAs.</p>
-					<p>We recommend further exploration of the use of risk analysis techniques (as exemplified by the approach that Google engineers have taken) to reduce the need for CAPTCHA.</p>
-				</section>
-				<section>
-					<h4>Video Game CAPTCHA</h4>
-					<p>This process suggests the completion of a basic video game as a <a>CAPTCHA</a>, like  <cite>Game-based image semantic CAPTCHA on handset devices</cite> [[game-captcha]]. The benefits include the removal of language barriers, and multiple interface methods could potentially make such a solution accessible. It would also have the benefit of making CAPCHA solving an enjoyable process, reducing the frustrations generally associated with traditional CAPTCHAs.</p>
-				</section>
 			</section>
 		</section>
 		<section>
