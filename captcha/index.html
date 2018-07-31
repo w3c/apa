@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 22.0.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 22.3.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -32,6 +32,10 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
     border-color: #e05252;
     background: #fbe9e9;
 }
+.issue.closed span.issue-number {
+    text-decoration: line-through;
+}
+
 .note, .ednote {
     border-color: #52e052;
     background: #e9fbe9;
@@ -152,6 +156,10 @@ a.bibref {
   text-decoration: none;
 }
 
+#references :target {
+  background: #eaf3ff;
+}
+
 cite .bibref {
   font-style: normal;
 }
@@ -259,9 +267,9 @@ details.respec-tests-details[open] {
   z-index: 999999;
   position: absolute;
   border: thin solid #cad3e2;
-  border-radius: .3em;
+  border-radius: 0.3em;
   background-color: white;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
 }
 
 details.respec-tests-details[open] > summary {
@@ -677,9 +685,9 @@ details.respec-tests-details > li {
       "id": "game-captcha"
     }
   },
-  "publishDate": "2018-06-27",
-  "publishISODate": "2018-06-27T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 27 June 2018"
+  "publishDate": "2018-07-31",
+  "publishISODate": "2018-07-31T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 31 July 2018"
 }</script><meta name="description" content="Various approaches have been employed over many years to distinguish human users of web sites from robots. While the traditional CAPTCHA approach of asking the user to identify obscured text in an image remains common, other mechanisms are gaining in prominence. These approaches generally require users to perform a task believed to be possible for humans and difficult for robots, but the nature of the task inherently excludes many people with disabilities, resulting in an incorrect denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, so it is necessary to consider alternative approaches to block robots, yet ensure these approaches support access for people with disabilities. This document examines a number of potential solutions that allow systems to test for human users, and the extent to which these solutions adequately accommodate people with disabilities."></head>
 	<body class="h-entry toc-inline"><div class="head">
   <a href="https://www.w3.org/" class="logo">
@@ -687,7 +695,7 @@ details.respec-tests-details > li {
   </a>
   <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
   <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
-  <h2 id="w3c-editor-s-draft-27-june-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-06-27">27 June 2018</time></h2>
+  <h2 id="w3c-editor-s-draft-31-july-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-07-31">31 July 2018</time></h2>
   <dl>
     <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/turingtest/">https://www.w3.org/TR/turingtest/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd>
