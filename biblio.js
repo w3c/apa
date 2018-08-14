@@ -148,6 +148,16 @@ var biblio = {
         "pages": "1310-1323",
         "doi": "doi:10.1002/cpe.3632"
     },
+    "privacy-by-design": {
+	"authors": [
+	    "Hörbe, R.",
+	    "Hötzendorfer, W."
+	],
+	"date": "2015",
+	"title": "Privacy by design in federated identity management",
+	"publisher": "Security and Privacy Workshops (SPW), 2015 IEEE",
+	"pages": "167-174"
+    },
     "iso-8859-1": {
     	"title": "Information technology -- 8-bit single-byte coded graphic character sets -- Part 1: Latin alphabet No. 1",
     	"href": "https://www.iso.org/standard/28245.html",
