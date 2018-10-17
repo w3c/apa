@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 22.3.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 23.4.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -224,11 +224,11 @@ table.simple {
 
 /* --- DL --- */
 
-.section dd > p:first-child {
+.section dd>p:first-child {
   margin-top: 0;
 }
 
-.section dd > p:last-child {
+.section dd>p:last-child {
   margin-bottom: 0;
 }
 
@@ -241,7 +241,7 @@ table.simple {
   margin-bottom: 0;
 }
 
-#issue-summary > ul,
+#issue-summary>ul,
 .respec-dfn-list {
   column-count: 2;
 }
@@ -257,7 +257,7 @@ details.respec-tests-details {
   vertical-align: top;
 }
 
-details.respec-tests-details > * {
+details.respec-tests-details>* {
   padding-right: 2em;
 }
 
@@ -270,20 +270,82 @@ details.respec-tests-details[open] {
   padding-bottom: 0.5em;
 }
 
-details.respec-tests-details[open] > summary {
+details.respec-tests-details[open]>summary {
   border-bottom: thin solid #cad3e2;
   padding-left: 1em;
   margin-bottom: 1em;
   line-height: 2em;
 }
 
-details.respec-tests-details > ul {
+details.respec-tests-details>ul {
   width: 100%;
   margin-top: -0.3em;
 }
 
-details.respec-tests-details > li {
+details.respec-tests-details>li {
   padding-left: 1em;
+}
+
+a[href].self-link:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+aside.example .marker > a.self-link {
+  color: inherit;
+}
+
+h2>a.self-link,
+h3>a.self-link,
+h4>a.self-link,
+h5>a.self-link,
+h6>a.self-link {
+  border: none;
+  color: inherit;
+  font-size: 83%;
+  height: 2em;
+  left: -1.6em;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: opacity .2s;
+  width: 2em;
+}
+
+h2>a.self-link::before,
+h3>a.self-link::before,
+h4>a.self-link::before,
+h5>a.self-link::before,
+h6>a.self-link::before {
+  content: "§";
+  display: block;
+}
+
+@media (max-width: 767px) {
+  dd {
+    margin-left: 0;
+  }
+
+  /* Don't position self-link in headings off-screen */
+  h2>a.self-link,
+  h3>a.self-link,
+  h4>a.self-link,
+  h5>a.self-link,
+  h6>a.self-link {
+    left: auto;
+    top: auto;
+  }
 }
 
 @media print {
@@ -319,9 +381,9 @@ details.respec-tests-details > li {
   "maxTocLevel": 2,
   "tocIntroductory": true,
   "doRDFa": 1.1,
-  "publishDate": "2018-07-31",
-  "publishISODate": "2018-07-31T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 31 July 2018"
+  "publishDate": "2018-10-17",
+  "publishISODate": "2018-10-17T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 17 October 2018"
 }</script><meta name="description" content="This document presents the accessibility requirements users with disabilities have
     with respect to making payments on the web."></head>
 <body class="h-entry toc-inline"><div class="head">
@@ -330,7 +392,7 @@ details.respec-tests-details > li {
   </a>
   <h1 id="title" class="title p-name">Payment Accessibility User Requirements</h1>
   
-  <h2 id="w3c-editor-s-draft-31-july-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-07-31">31 July 2018</time></h2>
+  <h2><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-10-17">17 October 2018</time></h2>
   <dl>
     <dt>This version:</dt><dd><a class="u-url" href="http://w3c.github.io/apa/payment-accessibility-reqs/">http://w3c.github.io/apa/payment-accessibility-reqs/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/payment-accessibility-reqs/">https://www.w3.org/TR/payment-accessibility-reqs/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="http://w3c.github.io/apa/payment-accessibility-reqs/">http://w3c.github.io/apa/payment-accessibility-reqs/</a></dd>
@@ -365,7 +427,7 @@ details.respec-tests-details > li {
       </p>
   <hr title="Separator for header">
 </div>
-<section id="abstract" class="introductory"><!--OddPage--><h2 id="abstract-0">Abstract</h2>
+<section id="abstract" class="introductory"><!--OddPage--><h2>Abstract</h2>
     <p>This document presents the accessibility requirements users with disabilities have
     with respect to making payments on the web. </p>
     <p>It first provides an introduction to the needs of users with disabilities
@@ -387,21 +449,19 @@ details.respec-tests-details > li {
     needs of users with disabilities to web-based payments. This document is an
     inventory of Payment Accessibility User Requirements. </p>
 </section>
-<section id="sotd" class="introductory"><!--OddPage--><h2 id="status-of-this-document">Status of This Document</h2><p>
+<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p>
         <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
       </p><p>This document is a very early editors draft.</p><p>
           This document was published by the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an Editor's Draft.
           
-          
-            Comments regarding this document are welcome. Please send them to
-            <a href="mailto:public-APA-comments@w3.org">public-APA-comments@w3.org</a>
-            (<a href="mailto:public-APA-comments-request@w3.org?subject=subscribe">subscribe</a>,
-            <a href="https://lists.w3.org/Archives/Public/public-APA-comments/">archives</a>).
-          
-          
-          
-          
-        </p><p>
+          </p><p>
+            
+            Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-APA-comments@w3.org">public-APA-comments@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-APA-comments/">archives</a>).
+            
+            </p><p>
             Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
             Membership. This is a draft document and may be updated, replaced or obsoleted by other
             documents at any time. It is inappropriate to cite this document as other than work in
@@ -430,7 +490,7 @@ details.respec-tests-details > li {
         </p><p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
         </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#S_types" class="tocxref"><span class="secno">1. </span>Summary of Accessible Payment Requirements by Type of Disability </a><ol class="toc"><li class="tocline"><a href="#visual-blindness" class="tocxref"><span class="secno">1.1 </span>Visual: Blindness </a></li><li class="tocline"><a href="#visual-low-vision" class="tocxref"><span class="secno">1.2 </span>Visual: Low vision </a></li><li class="tocline"><a href="#visual-atypical-color-perception" class="tocxref"><span class="secno">1.3 </span>Visual: Atypical color perception </a></li><li class="tocline"><a href="#auditory-visual-deaf-blind" class="tocxref"><span class="secno">1.4 </span>Auditory &amp; Visual: Deaf-blind </a></li><li class="tocline"><a href="#physical-impairment" class="tocxref"><span class="secno">1.5 </span> Physical impairment </a></li><li class="tocline"><a href="#cognitive-disabilities" class="tocxref"><span class="secno">1.6 </span> Cognitive disabilities </a></li></ol></li><li class="tocline"><a href="#S_alternative_technologies" class="tocxref"><span class="secno">2. </span>Alternative Content Technologies </a></li><li class="tocline"><a href="#S_system_requirements" class="tocxref"><span class="secno">3. </span> System Requirements </a><ol class="toc"><li class="tocline"><a href="#access-to-interactive-controls-menus" class="tocxref"><span class="secno">3.1 </span> Access to interactive controls / menus </a></li><li class="tocline"><a href="#requirements-on-making-properties-available-to-the-accessibility-interface" class="tocxref"><span class="secno">3.2 </span> Requirements on making properties available to the accessibility interface </a></li></ol></li><li class="tocline"><a href="#S_acknowledgements" class="tocxref"><span class="secno">A. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#ack_group" class="tocxref"><span class="secno">A.1 </span>Participants and Contributors</a></li></ol></li></ol></nav>
 <section id="S_types">
-    <!--OddPage--><h2 id="x1-summary-of-accessible-payment-requirements-by-type-of-disability"><span class="secno">1. </span>Summary of Accessible Payment Requirements by Type of Disability </h2>
+    <!--OddPage--><h2 id="x1-summary-of-accessible-payment-requirements-by-type-of-disability"><span class="secno">1. </span>Summary of Accessible Payment Requirements by Type of Disability <a class="self-link" aria-label="§" href="#S_types"></a></h2>
 
     <p>This section provides examples of the accessibility
     requirements of people with auditory, cognitive, neurological,
@@ -441,7 +501,7 @@ details.respec-tests-details > li {
     tools, see <a href="http://www.w3.org/WAI/intro/people-use-web/Overview.html">How
     People with Disabilities Use the Web</a>.</p>
     <section id="visual-blindness">
-        <h3 id="x1-1-visual-blindness"><span class="secno">1.1 </span>Visual: Blindness </h3>
+        <h3 id="x1-1-visual-blindness"><span class="secno">1.1 </span>Visual: Blindness <a class="self-link" aria-label="§" href="#visual-blindness"></a></h3>
         <p> People who are blind cannot access visual information in
             prompts, selectors, status indicators, etc. They need
             the information in an alternative representation of audio or
@@ -450,7 +510,7 @@ details.respec-tests-details > li {
             operable with these assistive technologies (<abbr title="Assistive Technologies">ATs</abbr>).</p>
     </section>
     <section id="visual-low-vision">
-        <h3 id="x1-2-visual-low-vision"><span class="secno">1.2 </span>Visual: Low vision </h3>
+        <h3 id="x1-2-visual-low-vision"><span class="secno">1.2 </span>Visual: Low vision <a class="self-link" aria-label="§" href="#visual-low-vision"></a></h3>
         <p>People with low vision can use some visual information.
         Depending on their visual
         ability they might have specific issues such as difficulty discriminating
@@ -473,7 +533,7 @@ details.respec-tests-details > li {
         users of screen readers or refreshable Braille. </p>
     </section>
     <section id="visual-atypical-color-perception">
-        <h3 id="x1-3-visual-atypical-color-perception"><span class="secno">1.3 </span>Visual: Atypical color perception </h3>
+        <h3 id="x1-3-visual-atypical-color-perception"><span class="secno">1.3 </span>Visual: Atypical color perception <a class="self-link" aria-label="§" href="#visual-atypical-color-perception"></a></h3>
         <p>People with atypical color perception (often called
         "color blindness") may not be able to 
         discriminate between different colors, or may miss
@@ -481,7 +541,7 @@ details.respec-tests-details > li {
         boxes or prompts embedded in input fields.</p>
     </section>
     <section id="auditory-visual-deaf-blind">
-        <h3 id="x1-4-auditory-visual-deaf-blind"><span class="secno">1.4 </span>Auditory &amp; Visual: Deaf-blind </h3>
+        <h3 id="x1-4-auditory-visual-deaf-blind"><span class="secno">1.4 </span>Auditory &amp; Visual: Deaf-blind <a class="self-link" aria-label="§" href="#auditory-visual-deaf-blind"></a></h3>
         <p>Individuals who are deaf-blind have a combination of conditions that may
         result in one of the following: blindness and deafness; blindness and difficulty
         in hearing; low vision and deafness; or low vision and difficulty in hearing.
@@ -491,7 +551,7 @@ details.respec-tests-details > li {
         can be presented with AT (e.g., a refreshable Braille display). </p>
     </section>
     <section id="physical-impairment">
-        <h3 id="x1-5-physical-impairment"><span class="secno">1.5 </span> Physical impairment </h3>
+        <h3 id="x1-5-physical-impairment"><span class="secno">1.5 </span> Physical impairment <a class="self-link" aria-label="§" href="#physical-impairment"></a></h3>
         <p>Some people with physical disabilities such as limited
         muscle control (including tremors, lack of coordination, and
         paralysis), pain that impedes movement, or missing limbs,
@@ -503,7 +563,7 @@ details.respec-tests-details > li {
         otherwise been done with a pointing device.</p>
     </section>
     <section id="cognitive-disabilities">
-        <h3 id="x1-6-cognitive-disabilities"><span class="secno">1.6 </span> Cognitive disabilities </h3>
+        <h3 id="x1-6-cognitive-disabilities"><span class="secno">1.6 </span> Cognitive disabilities <a class="self-link" aria-label="§" href="#cognitive-disabilities"></a></h3>
         <p>Cognitive disabilities include a wide range of conditions
         that may include intellectual disabilities (called learning disabilities
         in some regions), autism-spectrum disorders, memory impairments, mental-health
@@ -526,7 +586,7 @@ details.respec-tests-details > li {
     </section>
 </section>
 <section id="S_alternative_technologies">
-    <!--OddPage--><h2 id="x2-alternative-content-technologies"><span class="secno">2. </span>Alternative Content Technologies </h2>
+    <!--OddPage--><h2 id="x2-alternative-content-technologies"><span class="secno">2. </span>Alternative Content Technologies <a class="self-link" aria-label="§" href="#S_alternative_technologies"></a></h2>
     <p>A number of alternative content types have been developed to help users
     with sensory disabilities gain access to textual web content. This section
     lists them, explains generally what they are, and provides a number of requirements
@@ -534,9 +594,9 @@ details.respec-tests-details > li {
     <p>@@@@@ this is where we need the most work @@@@@</p>
 </section>
 <section id="S_system_requirements">
-    <!--OddPage--><h2 id="x3-system-requirements"><span class="secno">3. </span> System Requirements </h2>
+    <!--OddPage--><h2 id="x3-system-requirements"><span class="secno">3. </span> System Requirements <a class="self-link" aria-label="§" href="#S_system_requirements"></a></h2>
     <section id="access-to-interactive-controls-menus">
-        <h3 id="x3-1-access-to-interactive-controls-menus"><span class="secno">3.1 </span> Access to interactive controls / menus </h3>
+        <h3 id="x3-1-access-to-interactive-controls-menus"><span class="secno">3.1 </span> Access to interactive controls / menus <a class="self-link" aria-label="§" href="#access-to-interactive-controls-menus"></a></h3>
         <p>Payment interfaces offer a rich set of interaction possibilities to users.
         These interaction possibilities must be available to all users, including
         those that cannot use a pointer device for interaction. Further, these
@@ -581,7 +641,7 @@ details.respec-tests-details > li {
         </div>
     </section>
     <section id="requirements-on-making-properties-available-to-the-accessibility-interface">
-        <h3 id="x3-2-requirements-on-making-properties-available-to-the-accessibility-interface"><span class="secno">3.2 </span> Requirements on making properties available to the accessibility interface </h3>
+        <h3 id="x3-2-requirements-on-making-properties-available-to-the-accessibility-interface"><span class="secno">3.2 </span> Requirements on making properties available to the accessibility interface <a class="self-link" aria-label="§" href="#requirements-on-making-properties-available-to-the-accessibility-interface"></a></h3>
         <p>On self-contained products that do not support assistive technology
         (e.g., a kiosk on a train platform), any
         menus in the content need to provide information in alternative formats
@@ -601,10 +661,10 @@ details.respec-tests-details > li {
     </section>
 </section>
 <section id="S_acknowledgements" class="appendix">
-    <!--OddPage--><h2 id="a-acknowledgments"><span class="secno">A. </span>Acknowledgments</h2>
+    <!--OddPage--><h2 id="a-acknowledgments"><span class="secno">A. </span>Acknowledgments<a class="self-link" aria-label="§" href="#S_acknowledgements"></a></h2>
     <p>The following people contributed to the development of this document.</p>
     <section id="ack_group">
-        <h3 id="a-1-participants-and-contributors"><span class="secno">A.1 </span>Participants and Contributors</h3>
+        <h3 id="a-1-participants-and-contributors"><span class="secno">A.1 </span>Participants and Contributors<a class="self-link" aria-label="§" href="#ack_group"></a></h3>
         <p>Participants in the APA:</p>
         <p>Other contributors and commenters:</p>
         <p>Additionally, the following <abbr title="World Wide Web Consortium">W3C</abbr> groups contributed to, and

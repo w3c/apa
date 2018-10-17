@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 22.3.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 23.4.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -224,11 +224,11 @@ table.simple {
 
 /* --- DL --- */
 
-.section dd > p:first-child {
+.section dd>p:first-child {
   margin-top: 0;
 }
 
-.section dd > p:last-child {
+.section dd>p:last-child {
   margin-bottom: 0;
 }
 
@@ -241,7 +241,7 @@ table.simple {
   margin-bottom: 0;
 }
 
-#issue-summary > ul,
+#issue-summary>ul,
 .respec-dfn-list {
   column-count: 2;
 }
@@ -257,7 +257,7 @@ details.respec-tests-details {
   vertical-align: top;
 }
 
-details.respec-tests-details > * {
+details.respec-tests-details>* {
   padding-right: 2em;
 }
 
@@ -270,20 +270,82 @@ details.respec-tests-details[open] {
   padding-bottom: 0.5em;
 }
 
-details.respec-tests-details[open] > summary {
+details.respec-tests-details[open]>summary {
   border-bottom: thin solid #cad3e2;
   padding-left: 1em;
   margin-bottom: 1em;
   line-height: 2em;
 }
 
-details.respec-tests-details > ul {
+details.respec-tests-details>ul {
   width: 100%;
   margin-top: -0.3em;
 }
 
-details.respec-tests-details > li {
+details.respec-tests-details>li {
   padding-left: 1em;
+}
+
+a[href].self-link:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+aside.example .marker > a.self-link {
+  color: inherit;
+}
+
+h2>a.self-link,
+h3>a.self-link,
+h4>a.self-link,
+h5>a.self-link,
+h6>a.self-link {
+  border: none;
+  color: inherit;
+  font-size: 83%;
+  height: 2em;
+  left: -1.6em;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: opacity .2s;
+  width: 2em;
+}
+
+h2>a.self-link::before,
+h3>a.self-link::before,
+h4>a.self-link::before,
+h5>a.self-link::before,
+h6>a.self-link::before {
+  content: "§";
+  display: block;
+}
+
+@media (max-width: 767px) {
+  dd {
+    margin-left: 0;
+  }
+
+  /* Don't position self-link in headings off-screen */
+  h2>a.self-link,
+  h3>a.self-link,
+  h4>a.self-link,
+  h5>a.self-link,
+  h6>a.self-link {
+    left: auto;
+    top: auto;
+  }
 }
 
 @media print {
@@ -295,7 +357,7 @@ details.respec-tests-details > li {
   "specStatus": "WD",
   "processVersion": "2005",
   "shortName": "media-accessibility-reqs",
-  "publishDate": "2018-07-31",
+  "publishDate": "2018-10-17",
   "copyrightStart": "2012",
   "license": "document",
   "previousPublishDate": "2014-08-14",
@@ -361,8 +423,8 @@ details.respec-tests-details > li {
   "maxTocLevel": 2,
   "tocIntroductory": true,
   "doRDFa": 1.1,
-  "publishISODate": "2018-07-31T00:00:00.000Z",
-  "generatedSubtitle": "Working Draft 31 July 2018"
+  "publishISODate": "2018-10-17T00:00:00.000Z",
+  "generatedSubtitle": "Working Draft 17 October 2018"
 }</script><meta name="description" content="This document presents the accessibility requirements users with disabilities have
             with respect to audio and video on the web."></head>
 	<body class="h-entry toc-inline"><div class="head">
@@ -371,9 +433,9 @@ details.respec-tests-details > li {
   </a>
   <h1 id="title" class="title p-name">Media Accessibility User Requirements</h1>
   
-  <h2 id="w3c-working-draft-31-july-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time class="dt-published" datetime="2018-07-31">31 July 2018</time></h2>
+  <h2><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time class="dt-published" datetime="2018-10-17">17 October 2018</time></h2>
   <dl>
-    <dt>This version:</dt><dd><a class="u-url" href="https://www.w3.org/TR/2018/WD-media-accessibility-reqs-20180731/">https://www.w3.org/TR/2018/WD-media-accessibility-reqs-20180731/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/media-accessibility-reqs/">https://www.w3.org/TR/media-accessibility-reqs/</a></dd>
+    <dt>This version:</dt><dd><a class="u-url" href="https://www.w3.org/TR/2018/WD-media-accessibility-reqs-20181017/">https://www.w3.org/TR/2018/WD-media-accessibility-reqs-20181017/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/media-accessibility-reqs/">https://www.w3.org/TR/media-accessibility-reqs/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="http://w3c.github.io/pfwg/media-accessibility-reqs/">http://w3c.github.io/pfwg/media-accessibility-reqs/</a></dd>
     
     
@@ -406,7 +468,7 @@ details.respec-tests-details > li {
       </p>
   <hr title="Separator for header">
 </div>
-		<section id="abstract" class="introductory"><!--OddPage--><h2 id="abstract-0">Abstract</h2>
+		<section id="abstract" class="introductory"><!--OddPage--><h2>Abstract</h2>
 			<p>This document presents the accessibility requirements users with disabilities have
             with respect to audio and video on the web. </p>
     <p>It first provides an introduction to the needs of users with disabilities
@@ -428,22 +490,20 @@ details.respec-tests-details > li {
     needs of users with disabilities to web-based media. This document is an
     inventory of Media Accessibility User Requirements. </p>
 		</section>
-		<section id="sotd" class="introductory"><!--OddPage--><h2 id="status-of-this-document">Status of This Document</h2><p>
+		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p>
         <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
       </p><p>This document is reasonably stable, and represents a consensus within the Working Group.  The Working Group is looking for
         feedback prior to publication as a Note.</p><p>
           This document was published by the <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working Group</a> as a Working Draft.
           This document is intended to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
-          
-            Comments regarding this document are welcome. Please send them to
-            <a href="mailto:public-PFWG-comments@w3.org">public-PFWG-comments@w3.org</a>
-            (<a href="mailto:public-PFWG-comments-request@w3.org?subject=subscribe">subscribe</a>,
-            <a href="https://lists.w3.org/Archives/Public/public-PFWG-comments/">archives</a>).
-          
-          
-          
-          
-        </p><p>
+          </p><p>
+            
+            Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-PFWG-comments@w3.org">public-PFWG-comments@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-PFWG-comments/">archives</a>).
+            
+            </p><p>
             Publication as a Working Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
             Membership. This is a draft document and may be updated, replaced or obsoleted by other
             documents at any time. It is inappropriate to cite this document as other than work in
@@ -479,7 +539,7 @@ details.respec-tests-details > li {
 			implementing audio and video content and features.</p>
         </section> -->
 		<section id="summary-of-accessible-media-requirements-by-type-of-disability">
-			<!--OddPage--><h2 id="x1-summary-of-accessible-media-requirements-by-type-of-disability"><span class="secno">1. </span>Summary of Accessible Media Requirements by Type of Disability </h2>
+			<!--OddPage--><h2 id="x1-summary-of-accessible-media-requirements-by-type-of-disability"><span class="secno">1. </span>Summary of Accessible Media Requirements by Type of Disability <a class="self-link" aria-label="§" href="#summary-of-accessible-media-requirements-by-type-of-disability"></a></h2>
 
              <p rel="bibo:issue" typeof="bibo:Issue"><span resource="http://www.w3.org/2014/11/17-html-a11y-media-minutes.html" rel="bibo:affirmedBy">This section provides examples of the accessibility
             requirements of people with auditory, cognitive, neurological,
@@ -490,7 +550,7 @@ details.respec-tests-details > li {
             tools, see <a href="http://www.w3.org/WAI/intro/people-use-web/Overview.html">How
             People with Disabilities Use the Web</a>.</span></p>
 			<section id="visual-blindness">
-				<h3 id="x1-1-visual-blindness"><span class="secno">1.1 </span>Visual: Blindness </h3>
+				<h3 id="x1-1-visual-blindness"><span class="secno">1.1 </span>Visual: Blindness <a class="self-link" aria-label="§" href="#visual-blindness"></a></h3>
              <p rel="bibo:issue" typeof="bibo:Issue"><span resource="http://www.w3.org/2014/11/17-html-a11y-media-minutes.html" rel="bibo:affirmedBy">People who are blind cannot access visual information in
                 videos, player controls, status indicators, etc. They need
                 the information in an alternative representation of audio or
@@ -499,7 +559,7 @@ details.respec-tests-details > li {
                 operable with these assistive technologies (<abbr title="Assistive Technologies">ATs</abbr>).</span></p>
 			</section>
 			<section id="visual-low-vision">
-				<h3 id="x1-2-visual-low-vision"><span class="secno">1.2 </span>Visual: Low vision </h3>
+				<h3 id="x1-2-visual-low-vision"><span class="secno">1.2 </span>Visual: Low vision <a class="self-link" aria-label="§" href="#visual-low-vision"></a></h3>
 				<p>People with low vision can use some visual information.
       Depending on their visual
       ability they might have specific issues such as difficulty discriminating
@@ -521,7 +581,7 @@ details.respec-tests-details > li {
       users of screen readers or refreshable Braille. </p>
 			</section>
 			<section id="visual-atypical-color-perception">
-				<h3 id="x1-3-visual-atypical-color-perception"><span class="secno">1.3 </span>Visual: Atypical color perception </h3>
+				<h3 id="x1-3-visual-atypical-color-perception"><span class="secno">1.3 </span>Visual: Atypical color perception <a class="self-link" aria-label="§" href="#visual-atypical-color-perception"></a></h3>
 				<p>People with atypical color perception (often called
                 "color blindness") may not be able to 
       discriminate between different colors, or may miss
@@ -529,12 +589,12 @@ details.respec-tests-details > li {
       controls and text overlays.</p>
 			</section>
 			<section id="auditory-deafness">
-				<h3 id="x1-4-auditory-deafness"><span class="secno">1.4 </span>Auditory: Deafness </h3>
+				<h3 id="x1-4-auditory-deafness"><span class="secno">1.4 </span>Auditory: Deafness <a class="self-link" aria-label="§" href="#auditory-deafness"></a></h3>
 				<p>People who are deaf generally cannot use audio. Thus, an alternative representation
       is required, typically through synchronized captions and/or sign translation. </p>
 			</section>
 			<section id="auditory-hard-of-hearing">
-				<h3 id="x1-5-auditory-hard-of-hearing"><span class="secno">1.5 </span>Auditory: Hard of hearing </h3>
+				<h3 id="x1-5-auditory-hard-of-hearing"><span class="secno">1.5 </span>Auditory: Hard of hearing <a class="self-link" aria-label="§" href="#auditory-hard-of-hearing"></a></h3>
 				<p>People who are hard of hearing may be able to use some audio material,
       but might not be able to discriminate certain types of sound, and may miss
       any information presented as audio only if it contains frequencies they
@@ -549,7 +609,7 @@ details.respec-tests-details > li {
       </p>
 			</section>
 			<section id="auditory-visual-deaf-blind">
-				<h3 id="x1-6-auditory-visual-deaf-blind"><span class="secno">1.6 </span>Auditory &amp; Visual: Deaf-blind </h3>
+				<h3 id="x1-6-auditory-visual-deaf-blind"><span class="secno">1.6 </span>Auditory &amp; Visual: Deaf-blind <a class="self-link" aria-label="§" href="#auditory-visual-deaf-blind"></a></h3>
 				<p>Individuals who are deaf-blind have a combination of conditions that may
       result in one of the following: blindness and deafness; blindness and difficulty
       in hearing; low vision and deafness; or low vision and difficulty in hearing.
@@ -561,7 +621,7 @@ details.respec-tests-details > li {
       transcript which they can read at their own pace. </p>
 			</section>
 			<section id="physical-impairment">
-				<h3 id="x1-7-physical-impairment"><span class="secno">1.7 </span> Physical impairment </h3>
+				<h3 id="x1-7-physical-impairment"><span class="secno">1.7 </span> Physical impairment <a class="self-link" aria-label="§" href="#physical-impairment"></a></h3>
 				<p>Some people with physical disabilities such as limited
                 muscle control (including tremors, lack of coordination, and
                 paralysis), pain that impedes movement, or missing limbs
@@ -573,7 +633,7 @@ details.respec-tests-details > li {
                 controls and methods for selecting alternative content.</p>
 			</section>
 			<section id="cognitive-disabilities">
-				<h3 id="x1-8-cognitive-disabilities"><span class="secno">1.8 </span> Cognitive disabilities </h3>
+				<h3 id="x1-8-cognitive-disabilities"><span class="secno">1.8 </span> Cognitive disabilities <a class="self-link" aria-label="§" href="#cognitive-disabilities"></a></h3>
 				<p>Cognitive disabilities include a wide range of conditions
       that may include intellectual disabilities (called learning disabilities
       in some regions), autism-spectrum disorders, memory impairments, mental-health
@@ -622,14 +682,14 @@ details.respec-tests-details > li {
 			</section>
 		</section>
 		<section id="alternative-content-technologies">
-			<!--OddPage--><h2 id="x2-alternative-content-technologies"><span class="secno">2. </span> Alternative Content Technologies </h2>
+			<!--OddPage--><h2 id="x2-alternative-content-technologies"><span class="secno">2. </span> Alternative Content Technologies <a class="self-link" aria-label="§" href="#alternative-content-technologies"></a></h2>
 			<p>A number of alternative content types have been developed to help users
     with sensory disabilities gain access to audio-visual content. This section
     lists them, explains generally what they are, and provides a number of requirements
     on each that need to be satisfied with technology developed in HTML5 around
     the media elements. </p>
 			<section id="described-video">
-				<h3 id="x2-1-described-video"><span class="secno">2.1 </span> Described video </h3>
+				<h3 id="x2-1-described-video"><span class="secno">2.1 </span> Described video <a class="self-link" aria-label="§" href="#described-video"></a></h3>
 				<p>Described video contains descriptive narration of key visual elements
       designed to make visual media accessible to people who are blind or visually
       impaired. The descriptions include actions, costumes, gestures, scene changes
@@ -732,7 +792,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="text-video-description">
-				<h3 id="x2-2-text-video-description"><span class="secno">2.2 </span> Text video description </h3>
+				<h3 id="x2-2-text-video-description"><span class="secno">2.2 </span> Text video description <a class="self-link" aria-label="§" href="#text-video-description"></a></h3>
 				<p>Described video that uses text for the description source rather than
       a recorded voice creates specific requirements. </p>
 				<p>Text video descriptions (TVDs) are delivered to the client as text and
@@ -794,7 +854,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="extended-video-descriptions">
-				<h3 id="x2-3-extended-video-descriptions"><span class="secno">2.3 </span> Extended video descriptions </h3>
+				<h3 id="x2-3-extended-video-descriptions"><span class="secno">2.3 </span> Extended video descriptions <a class="self-link" aria-label="§" href="#extended-video-descriptions"></a></h3>
 				<p>Video descriptions are usually provided as recorded speech, timed to play
       in the natural pauses in dialog or narration. In some types of material,
       however, there is not enough time to present sufficient descriptions. To
@@ -832,7 +892,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="clean-audio">
-				<h3 id="x2-4-clean-audio"><span class="secno">2.4 </span> Clean audio </h3>
+				<h3 id="x2-4-clean-audio"><span class="secno">2.4 </span> Clean audio <a class="self-link" aria-label="§" href="#clean-audio"></a></h3>
 				<p>A relatively recent development in television accessibility is the concept
       of <a href="http://www.etsi.org/deliver/etsi_ts/101100_101199/101154/01.09.01_60/ts_101154v010901p.pdf">clean
       audio</a>, which takes advantage of the increased adoption of multichannel
@@ -864,7 +924,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="contentnav">
-				<h3 id="x2-5-content-navigation-by-content-structure"><span class="secno">2.5 </span> Content navigation by content structure </h3>
+				<h3 id="x2-5-content-navigation-by-content-structure"><span class="secno">2.5 </span> Content navigation by content structure <a class="self-link" aria-label="§" href="#contentnav"></a></h3>
 				<p>Most people are familiar with fast forward and rewind in media content.
       However, because they progress through content based only on time, fast
       forward and rewind are ineffective particularly when the content is being
@@ -1015,7 +1075,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="captioning">
-				<h3 id="x2-6-captioning"><span class="secno">2.6 </span> Captioning </h3>
+				<h3 id="x2-6-captioning"><span class="secno">2.6 </span> Captioning <a class="self-link" aria-label="§" href="#captioning"></a></h3>
 				<p>For people who are deaf or hard-of-hearing, captioning is a prime alternative
       representation of audio. Captions are in the same language as the main
       audio track and, in contrast to foreign-language subtitles, render a transcription
@@ -1284,7 +1344,7 @@ details.respec-tests-details > li {
                 </div>
 			</section>
 			<section id="enhanced-captions-subtitles">
-				<h3 id="x2-7-enhanced-captions-subtitles"><span class="secno">2.7 </span> Enhanced captions/subtitles </h3>
+				<h3 id="x2-7-enhanced-captions-subtitles"><span class="secno">2.7 </span> Enhanced captions/subtitles <a class="self-link" aria-label="§" href="#enhanced-captions-subtitles"></a></h3>
 				<p>Enhanced captions are timed text cues that have been enriched with further
       information - examples are glossary definitions for acronyms and other
       initialisms, foreign terms (for example, Latin), jargon or descriptions
@@ -1353,7 +1413,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="sign-translation">
-				<h3 id="x2-8-sign-translation"><span class="secno">2.8 </span> Sign translation </h3>
+				<h3 id="x2-8-sign-translation"><span class="secno">2.8 </span> Sign translation <a class="self-link" aria-label="§" href="#sign-translation"></a></h3>
 				<p>Sign language shares the same concept as captioning: it presents both
       speech and non-speech information in an alternative format. Note that due
       to the wide regional variation in signing systems (e.g., American Sign
@@ -1404,7 +1464,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="transcripts">
-				<h3 id="x2-9-transcripts"><span class="secno">2.9 </span> Transcripts </h3>
+				<h3 id="x2-9-transcripts"><span class="secno">2.9 </span> Transcripts <a class="self-link" aria-label="§" href="#transcripts"></a></h3>
 				<p>While synchronized captions are generally preferable for people with hearing
       impairments, for some users they are not viable – those who are deaf-blind,
       for example, or those with cognitive or reading impairments that make it
@@ -1436,9 +1496,9 @@ details.respec-tests-details > li {
 			</section>
 		</section>
 		<section id="system-requirements">
-			<!--OddPage--><h2 id="x3-system-requirements"><span class="secno">3. </span> System Requirements </h2>
+			<!--OddPage--><h2 id="x3-system-requirements"><span class="secno">3. </span> System Requirements <a class="self-link" aria-label="§" href="#system-requirements"></a></h2>
 			<section id="access-to-interactive-controls-menus">
-				<h3 id="x3-1-access-to-interactive-controls-menus"><span class="secno">3.1 </span> Access to interactive controls / menus </h3>
+				<h3 id="x3-1-access-to-interactive-controls-menus"><span class="secno">3.1 </span> Access to interactive controls / menus <a class="self-link" aria-label="§" href="#access-to-interactive-controls-menus"></a></h3>
 				<p>Media elements offer a rich set of interaction possibilities to users.
       These interaction possibilities must be available to all users, including
       those that cannot use a pointer device for interaction. Further, these
@@ -1519,7 +1579,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="granularity-level-control-for-structural-navigation">
-				<h3 id="x3-2-granularity-level-control-for-structural-navigation"><span class="secno">3.2 </span> Granularity level control for structural navigation </h3>
+				<h3 id="x3-2-granularity-level-control-for-structural-navigation"><span class="secno">3.2 </span> Granularity level control for structural navigation <a class="self-link" aria-label="§" href="#granularity-level-control-for-structural-navigation"></a></h3>
                 <p>As explained in "<a href="#contentnav">Content navigation</a>" above, a real-time control
       mechanism must be provided for adjusting the granularity of the specific
       structural navigation point next and previous. Users must be able to set
@@ -1545,7 +1605,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="time-scale-modification">
-				<h3 id="x3-3-time-scale-modification"><span class="secno">3.3 </span> Time-scale modification </h3>
+				<h3 id="x3-3-time-scale-modification"><span class="secno">3.3 </span> Time-scale modification <a class="self-link" aria-label="§" href="#time-scale-modification"></a></h3>
 				<p>While all devices may not support the capability, a standard control API
       must support the ability to speed up or slow down content presentation
       without altering audio pitch. </p>
@@ -1576,7 +1636,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="production-practice-and-resulting-requirements">
-				<h3 id="x3-4-production-practice-and-resulting-requirements"><span class="secno">3.4 </span> Production practice and resulting requirements </h3>
+				<h3 id="x3-4-production-practice-and-resulting-requirements"><span class="secno">3.4 </span> Production practice and resulting requirements <a class="self-link" aria-label="§" href="#production-practice-and-resulting-requirements"></a></h3>
 				<p>One of the biggest challenges to date has been the lack of a universal system
       for media access. In response to user requirements various countries and
       groups have defined systems to provide accessibility, especially captioning
@@ -1642,7 +1702,7 @@ details.respec-tests-details > li {
 			</section>
 			<section id="discovery-and-activation-deactivation-of-available-alternative-content-by-the-user">
 				<h3 id="x3-5-discovery-and-activation-deactivation-of-available-alternative-content-by-the-user"><span class="secno">3.5 </span> Discovery and activation/deactivation of available alternative content
-      by the user </h3>
+      by the user <a class="self-link" aria-label="§" href="#discovery-and-activation-deactivation-of-available-alternative-content-by-the-user"></a></h3>
 				<p>As described above, individuals need a variety of media (alternative content)
       in order to perceive and understand the content. The author or some web
       mechanism provides the alternative content. This alternative content may
@@ -1717,7 +1777,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="requirements-on-making-properties-available-to-the-accessibility-interface">
-				<h3 id="x3-6-requirements-on-making-properties-available-to-the-accessibility-interface"><span class="secno">3.6 </span> Requirements on making properties available to the accessibility interface </h3>
+				<h3 id="x3-6-requirements-on-making-properties-available-to-the-accessibility-interface"><span class="secno">3.6 </span> Requirements on making properties available to the accessibility interface <a class="self-link" aria-label="§" href="#requirements-on-making-properties-available-to-the-accessibility-interface"></a></h3>
 				<p>Often forgotten in media systems, especially with the newer forms of packaging
       such as DVD menus and on-screen program guides, is the fact that the user
       needs to actually get to the content, control its playback, and turn on
@@ -1746,7 +1806,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="requirements-on-the-use-of-the-viewport">
-				<h3 id="x3-7-requirements-on-the-use-of-the-viewport"><span class="secno">3.7 </span> Requirements on the use of the viewport </h3>
+				<h3 id="x3-7-requirements-on-the-use-of-the-viewport"><span class="secno">3.7 </span> Requirements on the use of the viewport <a class="self-link" aria-label="§" href="#requirements-on-the-use-of-the-viewport"></a></h3>
 				<p>The video viewport plays a particularly important role with respect to
       alternative-content technologies. Mostly it provides a bounding box for
       many of the visually represented alternative-content technologies (e.g.,
@@ -1840,7 +1900,7 @@ details.respec-tests-details > li {
 				</div>
 			</section>
 			<section id="requirements-on-secondary-screens-and-other-devices">
-				<h3 id="x3-8-requirements-on-secondary-screens-and-other-devices"><span class="secno">3.8 </span>Requirements on secondary screens and other devices</h3>
+				<h3 id="x3-8-requirements-on-secondary-screens-and-other-devices"><span class="secno">3.8 </span>Requirements on secondary screens and other devices<a class="self-link" aria-label="§" href="#requirements-on-secondary-screens-and-other-devices"></a></h3>
 				<p>Multiple secondary user devices must be directly addressable. This
                    functionality is increasingly also known  by the new term, "Second Screen,"
                    even though there may be more than two screens in any given viewing
@@ -1899,16 +1959,16 @@ details.respec-tests-details > li {
 			</section>
 		</section>
             <section class="appendix" id="A_checklist">
-            <!--OddPage--><h2 id="a-media-accessibility-user-requirements-checklist"><span class="secno">A. </span>Media Accessibility User Requirements Checklist</h2>
+            <!--OddPage--><h2 id="a-media-accessibility-user-requirements-checklist"><span class="secno">A. </span>Media Accessibility User Requirements Checklist<a class="self-link" aria-label="§" href="#A_checklist"></a></h2>
             <div class="note" id="issue-container-generatedID-37"><div role="heading" class="note-title marker" id="h-note-37" aria-level="3"><span>Note</span></div><p class="">A table-ized version of the requirements in
             this document is
             available in the Wiki at <a href="http://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist">http://www.w3.org/WAI/PF/HTML/wiki/Media_Accessibility_Checklist</a>.</p></div>
     </section>
             <section class="appendix" id="acknowledgments">
-			<!--OddPage--><h2 id="b-acknowledgments"><span class="secno">B. </span>Acknowledgments</h2>
+			<!--OddPage--><h2 id="b-acknowledgments"><span class="secno">B. </span>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgments"></a></h2>
 			<p>The following people contributed to the development of this document.</p>
 			<section id="ack_group">
-                <h3 id="b-1-participants-and-contributors"><span class="secno">B.1 </span>Participants and Contributors</h3>
+                <h3 id="b-1-participants-and-contributors"><span class="secno">B.1 </span>Participants and Contributors<a class="self-link" aria-label="§" href="#ack_group"></a></h3>
 				<p>Participants in the PFWG and HTML-WG's HTML Accessibility
                     Task Force:</p>
                 <ol>
@@ -1957,7 +2017,7 @@ details.respec-tests-details > li {
             </ol>
 			</section>
 			<section id="ack_funders">
-				<h3 id="b-2-enabling-funders"><span class="secno">B.2 </span>Enabling funders</h3>
+				<h3 id="b-2-enabling-funders"><span class="secno">B.2 </span>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
 				<p>This publication has been funded in part with Federal funds from the U.S. Department of Education, National Institute on Disability and Rehabilitation Research (NIDRR) under contract number ED-OSE-10-C-0067. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
 			</section>
 		</section>
