@@ -6,6 +6,7 @@ var respecConfig = {
 	includePermalinks: true,
 	permalinkEdge:     true,
 	permalinkHide:     false,
+	noRecTrack: true,
 	tocIntroductory: true,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
 	subtitle: "Alternatives to Visual Turing Tests on the Web",
@@ -94,7 +95,7 @@ var respecConfig = {
 	wgURI:        "https://www.w3.org/WAI/APA/",
 	
 	// name (with the @w3c.org) of the public mailing to which comments are due
-	wgPublicList: "public-apa@w3.org",
+	wgPublicList: "public-apa",
 	
 	// URI of the patent status for this WG, for Rec-track documents
 	// !!!! IMPORTANT !!!!
