@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 23.4.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 23.8.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -341,6 +341,7 @@ h6>a.self-link::before {
   "includePermalinks": true,
   "permalinkEdge": true,
   "permalinkHide": false,
+  "noRecTrack": true,
   "tocIntroductory": true,
   "subtitle": "Alternatives to Visual Turing Tests on the Web",
   "specStatus": "ED",
@@ -382,7 +383,7 @@ h6>a.self-link::before {
   ],
   "wg": "Accessible Platform Architectures Working Group",
   "wgURI": "https://www.w3.org/WAI/APA/",
-  "wgPublicList": "public-apa@w3.org",
+  "wgPublicList": "public-apa",
   "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/83907/status",
   "maxTocLevel": 4,
   "localBiblio": {
@@ -435,7 +436,7 @@ h6>a.self-link::before {
       "editors": [],
       "etAl": "false",
       "publisher": "",
-      "href": "http://www.copyright.gov/title17/92chap1.html",
+      "href": "https://www.copyright.gov/title17/92chap1.html",
       "id": "chafee"
     },
     "killbots": {
@@ -450,7 +451,7 @@ h6>a.self-link::before {
       "editors": [],
       "etAl": "false",
       "publisher": "",
-      "href": "http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/",
+      "href": "https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/",
       "id": "killbots"
     },
     "newscom": {
@@ -462,7 +463,7 @@ h6>a.self-link::before {
       "editors": [],
       "etAl": "false",
       "publisher": "News.com",
-      "href": "http://news.com.com/2100-1032-1022814.html",
+      "href": "https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html",
       "id": "newscom"
     },
     "pinguard": {
@@ -724,95 +725,121 @@ h6>a.self-link::before {
       "id": "game-captcha"
     }
   },
-  "publishDate": "2018-10-17",
-  "publishISODate": "2018-10-17T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 17 October 2018"
+  "publishDate": "2018-12-21",
+  "publishISODate": "2018-12-21T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 21 December 2018"
 }</script><meta name="description" content="Various approaches have been employed over many years to distinguish human users of web sites from robots. While the traditional CAPTCHA approach of asking the user to identify obscured text in an image remains common, other mechanisms are gaining in prominence. These approaches generally require users to perform a task believed to be possible for humans and difficult for robots, but the nature of the task inherently excludes many people with disabilities, resulting in an incorrect denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, so it is necessary to consider alternative approaches to block robots, yet ensure these approaches support access for people with disabilities. This document examines a number of potential solutions that allow systems to test for human users, and the extent to which these solutions adequately accommodate people with disabilities."></head>
 	<body class="h-entry toc-inline"><div class="head">
-  <a href="https://www.w3.org/" class="logo">
-      <img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C">
-  </a>
-  <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
-  <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
-  <h2><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-10-17">17 October 2018</time></h2>
-  <dl>
-    <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/turingtest/">https://www.w3.org/TR/turingtest/</a></dd>
-    <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd>
-    
-    
-    
-    
-    
-    
-    <dt>Editors:</dt>
-    <dd class="p-author h-card vcard" data-editor-id="43274"><a class="ed_mailto u-email email p-name" href="mailto:scott@hollier.info">Scott Hollier</a></dd><dd class="p-author h-card vcard" data-editor-id="33688"><a class="ed_mailto u-email email p-name" href="mailto:janina@rednote.net">Janina Sajka</a></dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd>
-    <dt>Former editor:</dt><dd class="p-author h-card vcard" data-editor-id="33323"><span class="p-name fn">Matt May</span> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd>
-    
-    
-  </dl>
-  
-  
-  
-  <p class="copyright">
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©
-        2018
+      <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
+      <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
+      <h2>
+        <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
+        <time class="dt-published" datetime="2018-12-21">21 December 2018</time>
+      </h2>
+      <dl>
+        <dt>This version:</dt><dd>
+                  <a class="u-url" href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a>
+                </dd><dt>Latest published version:</dt><dd>
+                  <a href="https://www.w3.org/TR/turingtest/">https://www.w3.org/TR/turingtest/</a>
+                </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd>
         
-        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
-        (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
-        <a href="https://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>).
         
-        <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
-        <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a>
-        rules apply.
-      </p>
-  <hr title="Separator for header">
-</div>
+        
+        
+        
+        
+        <dt>Editors:</dt>
+        <dd class="p-author h-card vcard" data-editor-id="43274"><a class="ed_mailto u-email email p-name" href="mailto:scott@hollier.info">Scott Hollier</a></dd><dd class="p-author h-card vcard" data-editor-id="33688"><a class="ed_mailto u-email email p-name" href="mailto:janina@rednote.net">Janina Sajka</a></dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a>
+            (<abbr title="World Wide Web Consortium">W3C</abbr>)
+          </dd>
+        <dt>
+                  Former editor:
+                </dt><dd class="p-author h-card vcard" data-editor-id="33323"><span class="p-name fn">Matt May</span>
+            (<abbr title="World Wide Web Consortium">W3C</abbr>)
+          </dd>
+        
+        
+      </dl>
+      
+      
+      
+      <p class="copyright">
+                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+                        ©
+                        2018
+                        
+                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
+                        
+                        <abbr title="World Wide Web Consortium">W3C</abbr>
+                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
+                        and
+                        <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a>
+                        rules apply.
+                      </p>
+      <hr title="Separator for header">
+    </div>
 		<section id="abstract" class="introductory">
 			<!--OddPage--><h2>Abstract</h2>
 			<p>Various approaches have been employed over many years to distinguish human users of web sites from <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">robots</a>. While the traditional <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn">CAPTCHA</a> approach of asking the user to identify obscured text in an image remains common, other mechanisms are gaining in prominence. These approaches generally require users to perform a task believed to be possible for humans and difficult for robots, but the nature of the task inherently excludes many people with disabilities, resulting in an incorrect denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, so it is necessary to consider alternative approaches to block robots, yet ensure these approaches support access for people with disabilities. This document examines a number of potential solutions that allow systems to test for human users, and the extent to which these solutions adequately accommodate people with disabilities.</p>
 		</section>
-		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p>
-        <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
-      </p><p>
-          This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an Editor's Draft.
-          
-          </p><p>
-            
-            Comments regarding this document are welcome.
-              Please send them to
-              <a href="mailto:public-apa@w3.org@w3.org">public-apa@w3.org@w3.org</a>
-              (<a href="https://lists.w3.org/Archives/Public/public-apa@w3.org/">archives</a>).
-            
-            </p><p>
-            Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
-            Membership. This is a draft document and may be updated, replaced or obsoleted by other
-            documents at any time. It is inappropriate to cite this document as other than work in
-            progress.
-          </p><p>
-          
-            This document was produced by
-            a group
-            operating under the
-            <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-          
-          
-          
-              <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent
-              disclosures</a>
-            made in connection with the deliverables of
-            the group; that page also includes
-            instructions for disclosing a patent. An individual who has actual knowledge of a patent
-            which the individual believes contains
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential
-            Claim(s)</a> must disclose the information in accordance with
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section
-            6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-          
-          
-        </p><p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a href="#security-effectiveness" class="tocxref"><span class="secno">2. </span>Security effectiveness</a></li><li class="tocline"><a href="#types-of-captcha-and-access-implications" class="tocxref"><span class="secno">3. </span>Types of CAPTCHA and access implications</a><ol class="toc"><li class="tocline"><a href="#traditional-character-based-captcha" class="tocxref"><span class="secno">3.1 </span>Traditional character-based CAPTCHA</a></li><li class="tocline"><a href="#logic-puzzles" class="tocxref"><span class="secno">3.2 </span>Logic puzzles</a></li><li class="tocline"><a href="#sound-output" class="tocxref"><span class="secno">3.3 </span>Sound output</a></li><li class="tocline"><a href="#limited-use-accounts" class="tocxref"><span class="secno">3.4 </span>Limited-use accounts</a></li><li class="tocline"><a href="#non-interactive-checks" class="tocxref"><span class="secno">3.5 </span>Non-interactive checks</a><ol class="toc"><li class="tocline"><a href="#spam-filtering" class="tocxref"><span class="secno">3.5.1 </span>Spam filtering</a></li><li class="tocline"><a href="#heuristic-checks-and-the-google-recaptcha" class="tocxref"><span class="secno">3.5.2 </span>Heuristic checks and the Google reCAPTCHA</a></li></ol></li><li class="tocline"><a href="#federated-identity-systems" class="tocxref"><span class="secno">3.6 </span>Federated identity systems</a><ol class="toc"><li class="tocline"><a href="#single-sign-on" class="tocxref"><span class="secno">3.6.1 </span>Single sign-on</a></li><li class="tocline"><a href="#public-key-infrastructure-solutions" class="tocxref"><span class="secno">3.6.2 </span>Public-key infrastructure solutions</a></li><li class="tocline"><a href="#biometrics" class="tocxref"><span class="secno">3.6.3 </span>Biometrics</a></li></ol></li><li class="tocline"><a href="#multiple-user-devices" class="tocxref"><span class="secno">3.7 </span>Multiple user devices </a></li><li class="tocline"><a href="#image-and-video" class="tocxref"><span class="secno">3.8 </span>Image and video </a><ol class="toc"><li class="tocline"><a href="#visual-comparison-captchas" class="tocxref"><span class="secno">3.8.1 </span>Visual comparison CAPTCHAs </a></li><li class="tocline"><a href="#x3d-captcha" class="tocxref"><span class="secno">3.8.2 </span>3D CAPTCHA</a></li><li class="tocline"><a href="#video-game-captcha" class="tocxref"><span class="secno">3.8.3 </span>Video Game CAPTCHA</a></li></ol></li></ol></li><li class="tocline"><a href="#conclusion" class="tocxref"><span class="secno">4. </span>Conclusion</a></li><li class="tocline"><a href="#terms" class="tocxref"><span class="secno">A. </span>Terms</a></li><li class="tocline"><a href="#acknowledgments" class="tocxref"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#contributors-to-this-version" class="tocxref"><span class="secno">B.1 </span>Contributors to this version:</a></li><li class="tocline"><a href="#contributors-to-the-previous-version" class="tocxref"><span class="secno">B.2 </span>Contributors to the previous version:</a></li><li class="tocline"><a href="#enabling-funders" class="tocxref"><span class="secno">B.3 </span>Enabling Funders</a></li></ol></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">C. </span>References</a><ol class="toc"><li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">C.1 </span>Normative references</a></li></ol></li></ol></nav>
+		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
+		<p>
+                                              This document was published by
+                                              the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
+                                              Editor's Draft.
+                                              
+                                            </p><p>
+                                                      
+                                                      Comments regarding this document are welcome.
+                                                              Please send them
+                                                              to
+                                                              <a href="mailto:public-apa@w3.org">public-apa@w3.org</a>
+                                                              (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>).
+                                                            
+                                                    </p><p>
+                                              Publication as an
+                                              Editor's Draft does not imply
+                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                                              This is a draft document and may
+                                              be updated, replaced or obsoleted
+                                              by other documents at any time. It
+                                              is inappropriate to cite this
+                                              document as other than work in
+                                              progress.
+                                            </p><p>
+                                      
+                                              This document was produced by
+                                              a group
+                                              operating under the
+                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                                            
+                                      
+                                      
+                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                                                      <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any
+                                                        patent disclosures</a>
+                                              made in connection with the
+                                              deliverables of
+                                              the group; that page also includes
+                                              instructions for disclosing a
+                                              patent. An individual who has
+                                              actual knowledge of a patent which
+                                              the individual believes contains
+                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                                              must disclose the information in
+                                              accordance with
+                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
+                                                Policy</a>.
+                                            
+                                      
+                                    </p><p>
+                                      This document is governed by the
+                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#security-effectiveness"><span class="secno">2. </span>Security effectiveness</a></li><li class="tocline"><a class="tocxref" href="#types-of-captcha-and-access-implications"><span class="secno">3. </span>Types of CAPTCHA and access implications</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#traditional-character-based-captcha"><span class="secno">3.1 </span>Traditional character-based CAPTCHA</a></li><li class="tocline"><a class="tocxref" href="#logic-puzzles"><span class="secno">3.2 </span>Logic puzzles</a></li><li class="tocline"><a class="tocxref" href="#sound-output"><span class="secno">3.3 </span>Sound output</a></li><li class="tocline"><a class="tocxref" href="#limited-use-accounts"><span class="secno">3.4 </span>Limited-use accounts</a></li><li class="tocline"><a class="tocxref" href="#non-interactive-checks"><span class="secno">3.5 </span>Non-interactive checks</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#spam-filtering"><span class="secno">3.5.1 </span>Spam filtering</a></li><li class="tocline"><a class="tocxref" href="#heuristic-checks-and-the-google-recaptcha"><span class="secno">3.5.2 </span>Heuristic checks and the Google reCAPTCHA</a></li></ol></li><li class="tocline"><a class="tocxref" href="#federated-identity-systems"><span class="secno">3.6 </span>Federated identity systems</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#single-sign-on"><span class="secno">3.6.1 </span>Single sign-on</a></li><li class="tocline"><a class="tocxref" href="#public-key-infrastructure-solutions"><span class="secno">3.6.2 </span>Public-key infrastructure solutions</a></li><li class="tocline"><a class="tocxref" href="#biometrics"><span class="secno">3.6.3 </span>Biometrics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#multiple-user-devices"><span class="secno">3.7 </span>Multiple user devices </a></li><li class="tocline"><a class="tocxref" href="#image-and-video"><span class="secno">3.8 </span>Image and video </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visual-comparison-captchas"><span class="secno">3.8.1 </span>Visual comparison CAPTCHAs </a></li><li class="tocline"><a class="tocxref" href="#x3d-captcha"><span class="secno">3.8.2 </span>3D CAPTCHA</a></li><li class="tocline"><a class="tocxref" href="#video-game-captcha"><span class="secno">3.8.3 </span>Video Game CAPTCHA</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#conclusion"><span class="secno">4. </span>Conclusion</a></li><li class="tocline"><a class="tocxref" href="#terms"><span class="secno">A. </span>Terms</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#contributors-to-this-version"><span class="secno">B.1 </span>Contributors to this version:</a></li><li class="tocline"><a class="tocxref" href="#contributors-to-the-previous-version"><span class="secno">B.2 </span>Contributors to the previous version:</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><span class="secno">B.3 </span>Enabling Funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">C. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">C.1 </span>Normative references</a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
 			<p>Web sites with resources that are attractive to aggregators such as sign-up web pages, travel and event ticket sites, web-based email accounts, and social media portals have taken measures to ensure that they can offer their service to individual users without exposing their data and content to <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">web robots</a>.</p>
@@ -845,7 +872,7 @@ h6>a.self-link::before {
 			<section id="sound-output">
 				<h3 id="x3-3-sound-output"><span class="secno">3.3 </span>Sound output<a class="self-link" aria-label="§" href="#sound-output"></a></h3>
 				<p>To re-frame the problem, text is easy to manipulate, which is good for <a href="#dfn-assistive-technologies" class="internalDFN" data-link-type="dfn">assistive technologies</a>, but just as good for <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">robots</a>. One logical solution to this problem is to offer another non-textual method of using the same content. To achieve this, audio is played that contains a series of characters, words, or phrases being read out which the user then needs to enter into a form. As with visual <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn">CAPTCHA</a> however, robots are also capable of recognizing spoken content—as Amazon’s Alexa and Android’s Google Assistant, among other spoken dialog systems, have so ably demonstrated. Consequently, the characters, words, or phrases the user is to uncover and transcribe in the form are also distorted in an audio CAPTCHA and are usually played over a sonic environment of obfuscating sounds.</p>
-				<p>The industry recognized this problem early. CNet reported in <a href="http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a> [<cite><a class="bibref" href="#bib-newscom">newscom</a></cite>] that “Hotmail’s sound output, which is itself distorted to avoid the same programmatic abuse, was unintelligible to all four test subjects, all of whom had good hearing.”</p>
+				<p>The industry recognized this problem early. CNet reported in <a href="https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a> [<cite><a class="bibref" href="#bib-newscom">newscom</a></cite>] that “Hotmail’s sound output, which is itself distorted to avoid the same programmatic abuse, was unintelligible to all four test subjects, all of whom had good hearing.”</p>
 				<p>If the sound output, which is itself distorted to avoid the same programmatic abuse, can render the CAPTCHA difficult to hear; there can also be confusion in understanding whether a number is to be entered as a numerical value or as a word, e.g. ‘7’ or ‘seven’. Often the audio CAPTCHA user will hear sounds which seem to be words or numerical values that should be entered, but turn out to be just background noise.</p>
 
 				<p>Sound is intrinsically temporal, but the import of this unavoidable fact is too often under appreciated—perhaps because the world we live in as seen through the eyes is also temporal. Unlike the real world seen through the eyes however, the traditional CAPTCHA is a still image that can be stared at until comprehension dawns. Sound has no analog to the visual still image.</p>
@@ -881,14 +908,14 @@ part of one audio CAPTCHA prove difficult to understand.</p>
 					<h4 id="x3-5-2-heuristic-checks-and-the-google-recaptcha"><span class="secno">3.5.2 </span>Heuristic checks and the Google reCAPTCHA<a class="self-link" aria-label="§" href="#heuristic-checks-and-the-google-recaptcha"></a></h4>
 					<p><a href="#dfn-heuristics" class="internalDFN" data-link-type="dfn">Heuristics</a> are discoveries in a process that seem to indicate a given result. It may be possible to detect the presence of a robotic user based on the volume of data the user requests, series of common pages visited, IP addresses, data entry methods, or other signature data that can be collected.</p>
 					<p>Again, this requires a careful examination of site data. If pattern-matching algorithms can’t find good heuristics, then this is not a good solution. Also, polymorphism, or the creation of changing footprints, is apt to result, if it hasn’t already, in robots, just as polymorphic (“stealth”) viruses appeared to get around virus checkers looking for known viral footprints.</p>
-					<p>Another heuristic approach identified in <a href="http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"><cite>Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a> [<cite><a class="bibref" href="#bib-killbots">killbots</a></cite>] involves the use of <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn">CAPTCHA</a> images, with a twist: how the user reacts to the test is as important as whether or not it was solved. This system, which was designed to thwart distributed denial of service (DDoS) attacks, bans automated attackers which make repeated attempts to retrieve a certain page, while protecting against marking humans incorrectly as automated traffic. When the server’s load drops below a certain level, the CAPTCHA-based authentication process is removed entirely.</p>
-					<p>An example of a CAPTCHA based on this approach is the <a href="https://www.google.com/recaptcha/"><cite>Google reCAPTCHA</cite></a> which features a check box labelled ‘I am not a robot’ or similar phrasing. The process works by collecting data such as mouse movement and keyboard navigation to determine whether the user is human or robot, while keeping the CAPTCHA process relatively simple.</p>
+					<p>Another heuristic approach identified in <a href="https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/"><cite>Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a> [<cite><a class="bibref" href="#bib-killbots">killbots</a></cite>] involves the use of <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn">CAPTCHA</a> images, with a twist: how the user reacts to the test is as important as whether or not it was solved. This system, which was designed to thwart distributed denial of service (DDoS) attacks, bans automated attackers which make repeated attempts to retrieve a certain page, while protecting against marking humans incorrectly as automated traffic. When the server’s load drops below a certain level, the CAPTCHA-based authentication process is removed entirely.</p>
+					<p>An example of a CAPTCHA based on this approach is the <a href="https://www.google.com/recaptcha"><cite>Google reCAPTCHA</cite></a> which features a check box labelled ‘I am not a robot’ or similar phrasing. The process works by collecting data such as mouse movement and keyboard navigation to determine whether the user is human or robot, while keeping the CAPTCHA process relatively simple.</p>
 					<p>Anecdotal evidence suggests that this CAPTCHA is currently the most accessible CAPTCHA solution and can be completed with a variety of <a href="#dfn-assistive-technologies" class="internalDFN" data-link-type="dfn">assistive technologies</a>. However, there is little formalized research investigating whether this is indeed the case. There is also the additional concern that a user’s failure to interact appropriately with the reCATPCHA challenge or to satisfy the heuristic tests results in the presentation of a traditional inaccessible CAPTCHA as a fall-back mechanism.</p>
 				</section>
 			</section>
 			<section id="federated-identity-systems">
 				<h3 id="x3-6-federated-identity-systems"><span class="secno">3.6 </span>Federated identity systems<a class="self-link" aria-label="§" href="#federated-identity-systems"></a></h3>
-				<p>Many large companies such as Microsoft, Apple, Amazon, Google and the <a href="http://kantarainitiative.org/">Kantara Initiative</a> have created competing “federated network identity” systems, which can allow a user to create an account, set his or her preferences, payment data, etc., and have that data persist across all sites and devices that use the same service. Due to large companies now requiring a federated identity to use cloud-based services on their respective digital ecosystems, the popularity of federated identities has increased significantly. As a result, many web sites and services allow a portable form of authentication and identification across the Web.</p>
+				<p>Many large companies such as Microsoft, Apple, Amazon, Google and the <a href="https://kantarainitiative.org/">Kantara Initiative</a> have created competing “federated network identity” systems, which can allow a user to create an account, set his or her preferences, payment data, etc., and have that data persist across all sites and devices that use the same service. Due to large companies now requiring a federated identity to use cloud-based services on their respective digital ecosystems, the popularity of federated identities has increased significantly. As a result, many web sites and services allow a portable form of authentication and identification across the Web.</p>
 				<section id="single-sign-on">
 					<h4 id="x3-6-1-single-sign-on"><span class="secno">3.6.1 </span>Single sign-on<a class="self-link" aria-label="§" href="#single-sign-on"></a></h4>
 					<p>Single sign-on services will need to be among the most accessible services on the Web in order to offer equal benefits to people with disabilities. Additionally, use of these services will need to be ubiquitous to truly solve the problems addressed here once and for all.</p>
@@ -897,7 +924,7 @@ part of one audio CAPTCHA prove difficult to understand.</p>
 					<h4 id="x3-6-2-public-key-infrastructure-solutions"><span class="secno">3.6.2 </span>Public-key infrastructure solutions<a class="self-link" aria-label="§" href="#public-key-infrastructure-solutions"></a></h4>
 					<p>Another approach is to use certificates for individuals who wish to verify their identity. The certificate can be issued in such a way as to ensure something close to a one-person-one-vote system; e.g. by issuing these certificates in person and enabling users to develop distributed trust networks, or by having these certificates issued from highly trusted authorities such as governments. These types of systems have been implemented for securing web pages, and for authenticating email.</p>
 					<p>The cost of creating fraudulent certificates needs to be high enough to destroy the value of producing them in most cases. Sites would need to use mechanisms which are widely implemented in user agents.</p>
-					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed. However such approaches raise significant privacy and stigmatisation concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. based <a href="http://www.bookshare.org/">Bookshare</a> whose services are only available to persons with documented print disabilities. Bookshare provides its users access to printed materials which are otherwise unavailable in accessible alternative formats such as audio or Braille. An American copyright provision known as the <a href="http://www.copyright.gov/title17/92chap1.html"><cite>Chafee Amendment</cite></a> [<cite><a class="bibref" href="#bib-chafee">chafee</a></cite>] allows copyrighted materials to be reproduced in specialized forms
+					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed. However such approaches raise significant privacy and stigmatisation concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. based <a href="https://www.bookshare.org/">Bookshare</a> whose services are only available to persons with documented print disabilities. Bookshare provides its users access to printed materials which are otherwise unavailable in accessible alternative formats such as audio or Braille. An American copyright provision known as the <a href="https://www.copyright.gov/title17/92chap1.html"><cite>Chafee Amendment</cite></a> [<cite><a class="bibref" href="#bib-chafee">chafee</a></cite>] allows copyrighted materials to be reproduced in specialized forms
 						that are only usable by print disabled users. A <a href="#dfn-public-key-infrastructure" class="internalDFN" data-link-type="dfn">public-key infrastructure</a> system would allow Bookshare’s maintainers to ensure that the site and its users are in compliance with copyright law.</p>
 				</section>
 				<section id="biometrics">
@@ -932,7 +959,7 @@ part of one audio CAPTCHA prove difficult to understand.</p>
 		</section>
 		<section id="conclusion">
 			<!--OddPage--><h2 id="x4-conclusion"><span class="secno">4. </span>Conclusion<a class="self-link" aria-label="§" href="#conclusion"></a></h2>
-			<p>The evolution of <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn">CAPTCHA</a> techniques has demonstrated that traditional solutions such as text-based characters contained in images are not only challenging for people with disabilities, but also insecure. While a majority of CAPTCHAs in use remain challenging for people with disabilities to complete, recent developments, including the <a href="https://www.google.com/recaptcha/">Google reCAPTCHA</a>, multi-device authentication, and the increased prevalence of Federated identity systems currently provide the most accessible and flexible options in separating humans from robots.</p>
+			<p>The evolution of <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn">CAPTCHA</a> techniques has demonstrated that traditional solutions such as text-based characters contained in images are not only challenging for people with disabilities, but also insecure. While a majority of CAPTCHAs in use remain challenging for people with disabilities to complete, recent developments, including the <a href="https://www.google.com/recaptcha">Google reCAPTCHA</a>, multi-device authentication, and the increased prevalence of Federated identity systems currently provide the most accessible and flexible options in separating humans from robots.</p>
 			<p>However, while some CAPTCHA solutions are better than others, there is currently no ideal solution. It is important then to exercise care that any implemented CAPTCHA technology correctly identify people with disabilities as human.</p>
 		</section>
 		<section class="appendix" id="terms">
@@ -1015,5 +1042,5 @@ part of one audio CAPTCHA prove difficult to understand.</p>
     <section id="normative-references">
         <h3 id="c-1-normative-references"><span class="secno">C.1 </span>Normative references<a class="self-link" aria-label="§" href="#normative-references"></a></h3>
       <dl class="bibliography">
-        <dt id="bib-36-cfr-1194">[36-cfr-1194]</dt><dd><a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194"><cite>36 CFR Appendix C to Part 1194, Functional Performance Criteria and Technical Requirements</cite></a>.  Legal Information Institute. URL: <a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194</a></dd><dt id="bib-3d-captcha-security">[3d-captcha-security]</dt><dd><cite>On the security of text-based 3D CAPTCHAs</cite>. Nguyen, V. D.; Chow, Y.-W.; Susilo, W.. Computers &amp; Security, 45. 2014. </dd><dt id="bib-auth-mult">[auth-mult]</dt><dd><cite>Design, Testing and Implementation of a New Authentication Method Using Multiple Devices</cite>. Cetin, C.. J. Ligatti, D. Goldgof, &amp; Y. Liu (Eds.): ProQuest Dissertations Publishing. 2015. </dd><dt id="bib-captcha-ld">[captcha-ld]</dt><dd><cite>The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities</cite>. Gafni, R.; Nagar, I..</dd><dt id="bib-captcha-robustness">[captcha-robustness]</dt><dd><cite>Effects of Text Rotation, String Length, and Letter Format on Text-based CAPTCHA Robustness</cite>. Tangmanee, C.. Journal of Applied Security Research, 11(3). 2016. </dd><dt id="bib-captcha-security">[captcha-security]</dt><dd><cite>CAPTCHA Security: A Case Study</cite>. Yan, J.; El Ahmad, A. S.. Security &amp; Privacy, IEEE, 7(4). 2009. </dd><dt id="bib-captchastar">[captchastar]</dt><dd><cite>CAPTCHaStar! A novel CAPTCHA based on interactive shape discovery</cite>. Conti, M.; Guarisco, C.; Spolaor, R..2015. </dd><dt id="bib-chafee">[chafee]</dt><dd><a href="http://www.copyright.gov/title17/92chap1.html"><cite>17 USC 121, Limitations on exclusive rights: reproduction for blind or other people with disabilities (also known as the Chafee Amendment)</cite></a>. URL: <a href="http://www.copyright.gov/title17/92chap1.html">http://www.copyright.gov/title17/92chap1.html</a></dd><dt id="bib-civil-rights-captcha">[civil-rights-captcha]</dt><dd><cite>Machine learning and empathy: the Civil Rights CAPTCHA</cite>. Hernández-Castro, C. J.; Barrero, D. F.; R-Moreno, M. D.. Concurrency and Computation: Practice and Experience, 28(4). 2016. </dd><dt id="bib-defeat-line-noise">[defeat-line-noise]</dt><dd><cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite>. Nakaguro, Y.; Dailey, M. N.; Marukatat, S.; Makhanov, S. S.. Computers &amp; Security, 37. 2013. </dd><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="http://mandate376.standards.eu/standard"><cite>EN 301 549: Accessibility requirements suitable for public procurement of ICT products and services in Europe</cite></a>.  CEN/CENELEC/ETSI. URL: <a href="http://mandate376.standards.eu/standard">http://mandate376.standards.eu/standard</a></dd><dt id="bib-eval-audio">[eval-audio]</dt><dd><cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite>. Bigham, J. P.; Cavender, A. C.. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. April 2009. </dd><dt id="bib-facecaptcha">[facecaptcha]</dt><dd><cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite>. Kim, J.; Kim, S.; Yang, J.; Ryu, J.-h.; Wohn, K.. An International Journal, 72(2). 2014. </dd><dt id="bib-facial-captcha-attack">[facial-captcha-attack]</dt><dd><cite>A computer vision attack on the ARTiFACIAL CAPTCHA</cite>. Li, Q.. An International Journal, 74(13). 2015. </dd><dt id="bib-game-captcha">[game-captcha]</dt><dd><cite>Game-based image semantic CAPTCHA on handset devices</cite>. Yang, T.-I.; Koong, C.-S.; Tseng, C.-C.. An International Journal, 74(14). 2015. </dd><dt id="bib-iso-8859-1">[iso-8859-1]</dt><dd><a href="https://www.iso.org/standard/28245.html"><cite>Information technology -- 8-bit single-byte coded graphic character sets -- Part 1: Latin alphabet No. 1</cite></a>.  International Organization for Standardization. 1998. URL: <a href="https://www.iso.org/standard/28245.html">https://www.iso.org/standard/28245.html</a></dd><dt id="bib-killbots">[killbots]</dt><dd><a href="http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"><cite>Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a>. Srikanth Kandula; Dina Katabi; Matthias Jacob; Arthur Burger et al.URL: <a href="http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/">http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/</a></dd><dt id="bib-newscom">[newscom]</dt><dd><a href="http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a>. Paul Festa et al. News.com. URL: <a href="http://news.com.com/2100-1032-1022814.html">http://news.com.com/2100-1032-1022814.html</a></dd><dt id="bib-recaptcha-attacks">[recaptcha-attacks]</dt><dd><cite>HMM-based Attacks on Google's ReCAPTCHA with Continuous Visual and Audio Symbols</cite>. Sano, S.; Otsuka, T.; Itoyama, K.; Okuno, H. G.. Journal of Information Processing, 23(6). 2015. </dd><dt id="bib-social-classification">[social-classification]</dt><dd><cite>Social and egocentric image classification for scientific and privacy applications</cite>. Korayem, M.. D. Crandall, J. Bollen, A. Kapadia, &amp; P. Radivojac (Eds.): ProQuest Dissertations Publishing. 2015. </dd><dt id="bib-task-completion">[task-completion]</dt><dd><cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite>. Sauer, G.; Lazar, J.; Hochheiser, H.; Feng, J.. ACM Transactions on Accessible Computing (TACCESS), 2(4). 2010. </dd>
+        <dt id="bib-36-cfr-1194">[36-cfr-1194]</dt><dd><a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194"><cite>36 CFR Appendix C to Part 1194, Functional Performance Criteria and Technical Requirements</cite></a>.  Legal Information Institute. URL: <a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194</a></dd><dt id="bib-3d-captcha-security">[3d-captcha-security]</dt><dd><cite>On the security of text-based 3D CAPTCHAs</cite>. Nguyen, V. D.; Chow, Y.-W.; Susilo, W.. Computers &amp; Security, 45. 2014. </dd><dt id="bib-auth-mult">[auth-mult]</dt><dd><cite>Design, Testing and Implementation of a New Authentication Method Using Multiple Devices</cite>. Cetin, C.. J. Ligatti, D. Goldgof, &amp; Y. Liu (Eds.): ProQuest Dissertations Publishing. 2015. </dd><dt id="bib-captcha-ld">[captcha-ld]</dt><dd><cite>The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities</cite>. Gafni, R.; Nagar, I..</dd><dt id="bib-captcha-robustness">[captcha-robustness]</dt><dd><cite>Effects of Text Rotation, String Length, and Letter Format on Text-based CAPTCHA Robustness</cite>. Tangmanee, C.. Journal of Applied Security Research, 11(3). 2016. </dd><dt id="bib-captcha-security">[captcha-security]</dt><dd><cite>CAPTCHA Security: A Case Study</cite>. Yan, J.; El Ahmad, A. S.. Security &amp; Privacy, IEEE, 7(4). 2009. </dd><dt id="bib-captchastar">[captchastar]</dt><dd><cite>CAPTCHaStar! A novel CAPTCHA based on interactive shape discovery</cite>. Conti, M.; Guarisco, C.; Spolaor, R..2015. </dd><dt id="bib-chafee">[chafee]</dt><dd><a href="https://www.copyright.gov/title17/92chap1.html"><cite>17 USC 121, Limitations on exclusive rights: reproduction for blind or other people with disabilities (also known as the Chafee Amendment)</cite></a>. URL: <a href="https://www.copyright.gov/title17/92chap1.html">https://www.copyright.gov/title17/92chap1.html</a></dd><dt id="bib-civil-rights-captcha">[civil-rights-captcha]</dt><dd><cite>Machine learning and empathy: the Civil Rights CAPTCHA</cite>. Hernández-Castro, C. J.; Barrero, D. F.; R-Moreno, M. D.. Concurrency and Computation: Practice and Experience, 28(4). 2016. </dd><dt id="bib-defeat-line-noise">[defeat-line-noise]</dt><dd><cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite>. Nakaguro, Y.; Dailey, M. N.; Marukatat, S.; Makhanov, S. S.. Computers &amp; Security, 37. 2013. </dd><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="http://mandate376.standards.eu/standard"><cite>EN 301 549: Accessibility requirements suitable for public procurement of ICT products and services in Europe</cite></a>.  CEN/CENELEC/ETSI. URL: <a href="http://mandate376.standards.eu/standard">http://mandate376.standards.eu/standard</a></dd><dt id="bib-eval-audio">[eval-audio]</dt><dd><cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite>. Bigham, J. P.; Cavender, A. C.. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. April 2009. </dd><dt id="bib-facecaptcha">[facecaptcha]</dt><dd><cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite>. Kim, J.; Kim, S.; Yang, J.; Ryu, J.-h.; Wohn, K.. An International Journal, 72(2). 2014. </dd><dt id="bib-facial-captcha-attack">[facial-captcha-attack]</dt><dd><cite>A computer vision attack on the ARTiFACIAL CAPTCHA</cite>. Li, Q.. An International Journal, 74(13). 2015. </dd><dt id="bib-game-captcha">[game-captcha]</dt><dd><cite>Game-based image semantic CAPTCHA on handset devices</cite>. Yang, T.-I.; Koong, C.-S.; Tseng, C.-C.. An International Journal, 74(14). 2015. </dd><dt id="bib-iso-8859-1">[iso-8859-1]</dt><dd><a href="https://www.iso.org/standard/28245.html"><cite>Information technology -- 8-bit single-byte coded graphic character sets -- Part 1: Latin alphabet No. 1</cite></a>.  International Organization for Standardization. 1998. URL: <a href="https://www.iso.org/standard/28245.html">https://www.iso.org/standard/28245.html</a></dd><dt id="bib-killbots">[killbots]</dt><dd><a href="https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/"><cite>Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a>. Srikanth Kandula; Dina Katabi; Matthias Jacob; Arthur Burger et al.URL: <a href="https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/">https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/</a></dd><dt id="bib-newscom">[newscom]</dt><dd><a href="https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a>. Paul Festa et al. News.com. URL: <a href="https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html">https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html</a></dd><dt id="bib-recaptcha-attacks">[recaptcha-attacks]</dt><dd><cite>HMM-based Attacks on Google's ReCAPTCHA with Continuous Visual and Audio Symbols</cite>. Sano, S.; Otsuka, T.; Itoyama, K.; Okuno, H. G.. Journal of Information Processing, 23(6). 2015. </dd><dt id="bib-social-classification">[social-classification]</dt><dd><cite>Social and egocentric image classification for scientific and privacy applications</cite>. Korayem, M.. D. Crandall, J. Bollen, A. Kapadia, &amp; P. Radivojac (Eds.): ProQuest Dissertations Publishing. 2015. </dd><dt id="bib-task-completion">[task-completion]</dt><dd><cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite>. Sauer, G.; Lazar, J.; Hochheiser, H.; Feng, J.. ACM Transactions on Accessible Computing (TACCESS), 2(4). 2010. </dd>
       </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
