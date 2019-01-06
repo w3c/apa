@@ -49,7 +49,7 @@ robots would find it nearly impossible to perform.</p>
 researchers at Carnegie Mellon University</a> and has been
 primarily associated with a technique whereby an individual had to
 identify a distorted set of characters from a bit-mapped image,
-then enter those characters into a web form. This approach is widely familiar to users of the web worldwide, though the term CAPTCHA is generally recognized only by web progressionals.</p>
+then enter those characters into a web form. This approach is widely familiar to users of the web worldwide, though the term CAPTCHA is generally recognized only by web professionals.</p>
 
 <p>In recent times
 the types of CAPTCHA that appear on web sites and mobile apps have
@@ -124,25 +124,20 @@ A recent study at the University of Maryland has demonstrated <a href="https://m
 removed from distinguishinging humans from robots. Google freely claims this
 	ulterior purpose as a social benefit on its <a
 							    href="www.google.com/recaptcha">reCAPTCHA
-							    Home Page" saying:
-							    "Hundreds of
-							    millions of
-							    CAPTCHAs are solved
-							    by people every
-							    day. reCAPTCHA
-							    makes positive use
-							    of this human
-							    effort by
-							    channeling the time
-							    spent solving
-							    CAPTCHAs into
-							    annotating images
-							    and building
-							    machine learning
-							    datasets. This in
-							    turn helps improve
-							    maps and solve hard
-							    AI problems."</p>
+							    Home Page</a> which
+						    proclaims: "Hundreds of
+						    millions of CAPTCHAs are
+						    solved by people every day.
+						    reCAPTCHA makes positive
+						    use of this human effort by
+						    channeling the time spent
+						    solving CAPTCHAs into
+						    annotating images and
+						    building machine learning
+						    datasets. This in turn
+						    helps improve maps and
+						    solve hard AI
+						    problems."</p>
 
 <p>It is therefore highly recommended that the purpose and effectiveness of any
 deployed solution be carefully considered before adoption, and then closely
@@ -169,7 +164,7 @@ discussed, is largely inaccessible and insecure. It focuses on the
 presentation of letters or words presented in an image and designed
 to be difficult for <a>robots</a> to identify. The user is then
 asked to enter the CAPTCHA information into a form.</p>
-<p>The use of a traditional CAPTCHA is particularly problematic for
+<p>The use of a traditional CAPTCHA is obviously problematic for
 people who are blind, as the <a>screen readers</a> they rely on to
 use web content cannot process the image, thus preventing them from
 uncovering the information required by the form. Because the
@@ -254,7 +249,7 @@ provide equivalent access to the user.</p>
 proficient with English in visual CAPTCHA, they should not be
 presumed capable of understanding and transcribing aural English in
 an audio CAPTCHA. Unfortunately, non English audio CAPTCHAs appear
-to be very rare indeed.</p>
+to be very rare indeed. We are aware of only one <a href="https://captcha.com/captcha-localizations.html">multilingual CAPTCHA solution provider</a> with support for a significant number of the world's languages.</p>
 <p>Users who are deaf-blind, don’t have or use a sound card, find
 themselves in noisy environments, or don’t have required sound
 plugins properly configured and functioning, are thus also
@@ -283,8 +278,8 @@ completion strategies</cite> [[task-completion]].</p>
 </section>
 <section>
 <h3>Biometrics</h3>
-<p>Biometric identifiers have become a popular authentication
-method, especially on mobile platforms. Some physical
+<p>Biometric identifiers have become a very popular authentication
+mechanism, especially on mobile platforms which routinely now provide the requisite hardware. Some physical
 characteristic of the user, such as a fingerprint or a facial
 profile, is first acquired and then recognized to verify the
 individual’s identity. This process effectively limits the ability
@@ -292,7 +287,7 @@ of <a>web robots</a> to create a large number of false
 identities.</p>
 <p>However, biometric authentication mechanisms also need to be
 carefully designed to avoid introducing accessibility barriers.
-Individuals who lack the biological characteristics required by the
+Individuals who lack the biological characteristics required by a
 particular authentication method, e.g., fingers, or who are unable
 to perform the enrollment or identification procedures are
 effectively precluded from using it. This can result in denial of
@@ -310,8 +305,8 @@ section 508 of the Rehabilitation Act and <a href=
 <p>Where biometrics are used as an alternative to <a>CAPTCHA</a>,
 systems should be designed to allow users to choose among multiple
 and unrelated biometric identifiers. It should also be noted that
-biometrics can uniquely identify individuals, making this
-alternative unsuitable for applications in which it is necessary to
+biometrics can reliably and uniquely identify individuals making these identifiers highly attractive as login authentication mechanisms. This
+alternative is unsuitable, however, for applications in which it is necessary to
 preserve the user’s anonymity (i.e., the application is required to
 verify solely that the user is human, without obtaining identifying
 information).</p>
@@ -339,7 +334,7 @@ and determine whether clear demarcation exists between them.</p>
 <p>While <a>CAPTCHA</a> and other interactive approaches to
 limiting the activities of <a>web robots</a> are sometimes
 effective, they do make using a site more complex. This is often
-unnecessary, as a large number of non-interactive mechanisms exist
+unnecessary, as non-interactive mechanisms exist
 to check for spam or other invalid content typically introduced by
 robots.</p>
 <p>This category contains two popular non-interactive approaches:
@@ -366,6 +361,59 @@ attacks based on posting frequency, filter content sent using the
 "https://movabletype.org/documentation/trackback/specification.html">
 Trackback protocol</a>, and ban users by IP address range,
 temporarily or permanently.</p>
+</section>
+<section>
+<h4>Heuristic Approaches</h4>
+<p><a>Heuristics</a> are discoveries in a process that seem to
+indicate a given result. It may be possible to detect the presence
+of a robotic user based on the volume of data the user requests,
+series of common pages visited, IP addresses, data entry methods,
+or other signature data that can be collected.</p>
+<p>Again, this requires a careful examination of site data. If
+pattern-matching algorithms can’t find good heuristics, then this
+is not a good solution. Also, polymorphism, or the creation of
+changing footprints, is apt to result, if it hasn’t already, in
+robots, just as polymorphic (“stealth”) viruses appeared to get
+around virus checkers looking for known viral footprints.</p>
+<p>Another heuristic approach identified in <a href=
+"http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"><cite>
+Botz-4-Sale: Surviving DDos Attacks that Mimic Flash
+Crowds</cite></a> [[killbots]] involves the use of <a>CAPTCHA</a>
+images, with a twist: how the user reacts to the test is as
+important as whether or not it was solved. This system, which was
+designed to thwart distributed denial of service (DDoS) attacks,
+bans automated attackers which make repeated attempts to retrieve a
+certain page, while protecting against marking humans incorrectly
+as automated traffic. When the server’s load drops below a certain
+level, the CAPTCHA-based authentication process is removed
+entirely.</p>
+</section>
+<section>
+<h3>Logic puzzles</h3>
+<p>The goal of visual verification is to separate human from
+machine. One reasonable way to do this is to test for logic. Simple
+mathematical or word puzzles, trivia, or similar logic tests may
+raise the bar for <a>robots</a>, at least to the point where using
+them is more attractive elsewhere.</p>
+<p>Problems: Users with cognitive disabilities may still have
+trouble. Answers may need to be handled flexibly, if they require
+free-form text. A system would have to maintain a vast number of
+questions, or shift them around programmatically, in order to keep
+<a>spiders</a> from capturing them all for use by web robots. This
+approach is also more likely subject to defeat by human operators engaged in
+crowd-sourcing activity on behalf of attackers.</p>
+</section>
+<section>
+	<h3>Honeypots</h3>
+
+<p>Providing a form visible to robots but not to humans appears to be
+sufficiently successful to be supported in several content management systems
+such as <a href="https://www.drupal.org/project/honeypot">Drupal Honeypots</a>
+and in several commercial WordPress plugins.  The form is created to attract
+robots and then hidden from the user by markup such as CSS-Hidden. It's an
+approach that is easily implemented even in hand authored markup and should be
+considered.</p>
+
 </section>
 <section>
 <h3>Image and video</h3>
@@ -407,67 +455,47 @@ potentially make such a solution accessible. It would also have the
 benefit of making CAPCHA solving an enjoyable process, reducing the
 frustrations generally associated with traditional CAPTCHAs.</p>
 </section>
-<section>
-<h3>Logic puzzles</h3>
-<p>The goal of visual verification is to separate human from
-machine. One reasonable way to do this is to test for logic. Simple
-mathematical or word puzzles, trivia, or similar logic tests may
-raise the bar for <a>robots</a>, at least to the point where using
-them is more attractive elsewhere.</p>
-<p>Problems: Users with cognitive disabilities may still have
-trouble. Answers may need to be handled flexibly, if they require
-free-form text. A system would have to maintain a vast number of
-questions, or shift them around programmatically, in order to keep
-<a>spiders</a> from capturing them all for use by web robots. This
-approach is also more likely subject to defeat by human operators engaged in
-crowd-sourcing activity on behalf of attackers.</p>
-</section>
-<section>
-<h3>Heuristic Approaches</h3>
-<p><a>Heuristics</a> are discoveries in a process that seem to
-indicate a given result. It may be possible to detect the presence
-of a robotic user based on the volume of data the user requests,
-series of common pages visited, IP addresses, data entry methods,
-or other signature data that can be collected.</p>
-<p>Again, this requires a careful examination of site data. If
-pattern-matching algorithms can’t find good heuristics, then this
-is not a good solution. Also, polymorphism, or the creation of
-changing footprints, is apt to result, if it hasn’t already, in
-robots, just as polymorphic (“stealth”) viruses appeared to get
-around virus checkers looking for known viral footprints.</p>
-<p>Another heuristic approach identified in <a href=
-"http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"><cite>
-Botz-4-Sale: Surviving DDos Attacks that Mimic Flash
-Crowds</cite></a> [[killbots]] involves the use of <a>CAPTCHA</a>
-images, with a twist: how the user reacts to the test is as
-important as whether or not it was solved. This system, which was
-designed to thwart distributed denial of service (DDoS) attacks,
-bans automated attackers which make repeated attempts to retrieve a
-certain page, while protecting against marking humans incorrectly
-as automated traffic. When the server’s load drops below a certain
-level, the CAPTCHA-based authentication process is removed
-entirely.</p>
-</section>
 </section>
 <section>
 <h2>Multi-Party Approaches</h2>
 <h3>The Google reCAPTCHA</h3>
-<p>An widely—used example of a heuristic approach is the <a href=
-"https://www.google.com/reCAPTCHA/"><cite>Google
-reCAPTCHA</cite></a> which features a check box labelled ‘I am not
-a robot’ or similar phrasing. The process works by collecting data
-such as mouse movement and keyboard navigation to determine whether
-the user is human or robot, while keeping the CAPTCHA process
-relatively simple.</p>
-<p>For a time Google's reCAPTCHA V2 was regarded the most
-accessible CAPTCHA solution for this very reason, capable of being
-comfortably completed using a variety of <a>assistive
-technologies</a>. More recently it has been widely observed that
-utilizing keyboard navigation, as many assistive technology users
-do, simply results in the presentation of a traditional
-inaccessible CAPTCHA as a fall-back mechanism becoming but a mere
-extra hurdle in the user's quest for access.</p>
-<p>As of this writing Google has released <a href=
+
+<p>Acquired in 2009 from Carnegie Mellon University, <a
+	href="https://www.google.com/reCAPTCHA/">Google's reCAPTCHA</a> now
+overwhelmingly dominates on the web today. Version 2 of reCAPTCHA continues to provide an API that has been most effectively
+marketed as the "no CAPTCHA re CAPTCHA," and it's checkbox proclaiming: "I'm
+not a robot" has become famous, spawning various cultural offshoots.</p>
+
+<p><p>The checkbox is, of course, not a checkbox in the traditional HTML sense
+at all. The <a
+href="https://termsfeed.com/blog/privacy-policy-recaptcha/">checkbox
+process</a> works by collecting a trove of user data well beyond mouse movement
+and keyboard navigation and including The date, the language the browser is set
+to, All cookies placed by Google over the last 6 months, The CSS information
+for that page, an inventory of mouse clicks you've made on that screen (or
+touches if on a touch device), an inventory of plugins installed on the
+browser, and an itemization of All Javascript objects, all to determine whether
+the user is human or robot. Of course Google also knows much about individual
+users, including their customary IP addresses, as well as their web search and
+their YouTube habits. This is why the simple checkbox can keep the CAPTCHA
+process disarmingly simple, though it also explains while the privacy policy accompanies the "no CAPTCHA reCAPTCHA". to satisfy legal requirements in California and in the E.U.</p>
+
+<p>For a time Google's reCAPTCHA V2 was regarded the most accessible CAPTCHA
+solution for this very reason, it was capable of being comfortably completed
+using a variety of <a>assistive technologies</a>. More recently it has been
+widely observed that utilizing keyboard navigation, as many assistive
+technology users do, simply results in the presentation of a traditional
+inaccessible CAPTCHA as a fall-back mechanism becoming but a mere extra hurdle
+in the user's quest for access. Our tests with various browsers on various
+operating environments have been generally successful with Google's 
+own <a href="http://www.google.com/recaptcha/api2/demo">reCAPTCHA test page</a>. However, browsing in incognito mode, clearing or blocking cookies, and many factors apparently trigger a fallback to traditional CAPTCHA these days for most assistive technology users.</p>
+
+<p>One recent reCAPTCHA V. 2 innovation seems most promissing. Rather than reproduce
+characters, users are asked to type the words they see (or hear).
+It appears unnecessary to spells these correctly, or to enter all the words in
+the form in order to be adjudicated as human.</p>
+
+<p>Late in 2018 Google released <a href=
 "https://webmasters.googleblog.com/2018/10/introducing-reCAPTCHA-v3-new-way-to.html">
 reCAPTCHA V3</a> promissing to eliminate "the need to interrupt
 users with challenges at all." Obviously, this would be idea and we
