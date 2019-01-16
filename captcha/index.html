@@ -90,7 +90,13 @@
 				</section>
 				<section>
 					<h3>Honeypots</h3>
-					<p>Providing a form visible to robots but not to humans appears to be sufficiently successful to be supported in several content management systems such as <a href="https://www.drupal.org/project/honeypot">Drupal Honeypots</a> and in several commercial WordPress plugins. The form is created to attract robots and then hidden from the user by markup such as CSS-Hidden. It's an approach that is easily implemented even in hand authored markup and should be considered.</p>
+					:r t
+					<p>Providing a form visible to robots but not to humans appears to be sufficiently successful to be supported in several content management systems such as <a href="https://www.drupal.org/project/honeypot">Drupal Honeypots</a> and in several commercial WordPress plugins. The form is created to attract robots and then hidden from the user by markup such as CSS-Hidden. It's an approach that is easily implemented even in hand authored markup and should be considered.
+An example of a honeypot CAPTCHA can be seen on the Sign In page for <a
+href="https://www.hiltonhonors.com">Hilton Honors</a>, the Hilton Hotel
+Corporation's loyalty program website where a prominent focusable field is
+labeled: "This field is for robots only. Please leave blank."
+					</p>
 				</section>
 				<section>
 					<h3>Image and video</h3>
@@ -141,8 +147,35 @@
 		</section>
 		<section>
 			<h2>Conclusion</h2>
-			<p>The evolution of <a>CAPTCHA</a> techniques has demonstrated that traditional solutions such as text-based characters contained in images are not only challenging for people with disabilities, but also insecure. While a majority of CAPTCHAs in use remain challenging for people with disabilities to complete, recent developments, including the <a href="https://www.google.com/reCAPTCHA">Google reCAPTCHA</a>, multi-device authentication, and the increased prevalence of Federated identity systems currently provide the most accessible and flexible options in separating humans from robots.</p>
-			<p>However, while some CAPTCHA solutions are better than others, there is currently no ideal solution. It is important to exercise care that any implemented CAPTCHA technology correctly identify people with disabilities as human.</p>
+<p>CAPTCHA has certainly evolved over time and become more sophisticated. This has included the development of
+several alternatives to text-based characters contained in bitmapped
+images, some of which can serve to support access for persons with
+disabilities. However, it has also been demonstrated not only that
+traditional CAPTCHA continues to be challenging for people with
+disabilities, but also increasingly insecure and arguably now ill suited
+to the purpose of distinguishing human individuals from their robotic
+impersonators.</p>
+<p>Yet the need for a solution persists and will continue to persist.  It is
+therefore highly recommended that the purpose and effectiveness of any
+deployed solution be carefully considered before adoption, and then closely
+monitored for effective performance. As with all good software and on line
+content provisioning, analysis should begin with a careful consideration of
+system requirements and a thorough profiling of user requirements.</p>
+<p>Clearly, some solutions such as Google's reCAPTCHA, 
+two-step or multi-device verification can be easily and affordably
+deployed. Yet problems persist even in these systems, especially for non
+English speakers.  Furthermore, it must be acknowledged by anyone who
+deploys such a solution that they are also participating in exposing
+their users to a massive collection of personal data across multiple
+trans-national data profiling systems, quite apart from any societal
+governance.</p>
+<p>It is important, therefore, also to consider available stand-alone solutions such
+as honeypots and heuristics, along with current image and aural CAPTCHA
+libraries that support multiple languages. As always, testing and system monitoring for
+effectiveness should supply the ultimate determination, even as we recognize
+that an effective system today may prove ineffective a few years from now.</p>
+<p>In other words, while some CAPTCHA solutions are better than others, there is currently no ideal solution. It is important to exercise care that any implemented CAPTCHA
+technology correctly identify people with disabilities as human.</p>
 		</section>
 		<section class="appendix">
 			<h2>Terms</h2>
