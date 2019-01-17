@@ -294,5 +294,11 @@ var biblio = {
         "publisher": "An International Journal, 74(14)",
         "pages": "5141-5156",
         "doi": "doi:10.1007/s11042-013-1666-7"
+    },
+    "marrakesh": {
+    	"date": "27 June 2013",
+    	"href": "https://www.wipo.int/treaties/en/ip/marrakesh",
+    	"publisher": "World Intellectual Property Organization",
+    	"title": "Marrakesh Treaty to Facilitate Access to Published Works for Persons Who Are Blind, Visually Impaired or Otherwise Print Disabled"
     }
 }
