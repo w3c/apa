@@ -12,8 +12,7 @@
 			<h2>Abstract</h2>
 			<p>Various approaches have been employed over many years to distinguish human users of web sites from <a>robots</a>. While the traditional <a>CAPTCHA</a> approach of asking the user to identify obscured text in an image remains common, other approaches have also emerged. These approaches generally require users to perform a task believed to be possible for humans and difficult for robots, but the nature of the task inherently excludes many people with disabilities, resulting in an incorrect denial of service to these users. Research findings also have indicated that many popular CAPTCHA techniques are no longer particularly effective or secure challenging providers to deploy alternative approaches to block robots, yet support access for people with disabilities. This document examines a number of solutions that allow systems to test for human users, and the extent to which these solutions adequately accommodate people with disabilities.</p>
 		</section>
-		<section id="sotd">
-		</section>
+		<section id="sotd"> </section>
 		<section>
 			<h2>Introduction</h2>
 			<p>Web sites with resources that are attractive to aggregators such as sign-up web pages, travel and event ticket sites, web-based email accounts, and social media portals have long taken measures to ensure that they can offer their service to individual users without exposing their data and content to <a>web robots</a>.</p>
@@ -59,8 +58,7 @@
 			<section>
 				<h3>Biometrics</h3>
 				<p>Biometric identifiers have become a very popular authentication mechanism, especially on mobile platforms which routinely now provide the requisite hardware. Some physical characteristic of the user, such as a fingerprint or a facial profile, is first acquired and then recognized to verify the individual’s identity. This process effectively limits the ability of <a>web robots</a> to create a large number of false identities.</p>
-				<p>However, biometric authentication mechanisms also need to be carefully designed to avoid introducing accessibility barriers. Individuals who lack the biological characteristics required by a particular authentication method, e.g., fingers, or who are unable to perform the enrollment or identification procedures are effectively precluded from using it. This can result in denial of access to certain users with disabilities on systems relying on biometrics for authentication. Consequently, reliance on a single biometric identifier to identify a user is now insufficient to satisfy public sector procurement standards in the European Union <a href="http://mandate376.standards.eu/standard/technical-requirements/biometrics"> EN 301 549, section 5.3</a> [[en-301-549]] and regulations under section 508 of the Rehabilitation Act and <a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">Section 255 of the Communications Act, 36 CFR 1194, Appendix C</a>,
-					section 403 in the United States [[36-cfr-1194]].</p>
+				<p>However, biometric authentication mechanisms also need to be carefully designed to avoid introducing accessibility barriers. Individuals who lack the biological characteristics required by a particular authentication method, e.g., fingers, or who are unable to perform the enrollment or identification procedures are effectively precluded from using it. This can result in denial of access to certain users with disabilities on systems relying on biometrics for authentication. Consequently, reliance on a single biometric identifier to identify a user is now insufficient to satisfy public sector procurement standards in the European Union <a href="http://mandate376.standards.eu/standard/technical-requirements/biometrics"> EN 301 549, section 5.3</a> [[en-301-549]] and regulations under section 508 of the Rehabilitation Act and <a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">Section 255 of the Communications Act, 36 CFR 1194, Appendix C</a>, section 403 in the United States [[36-cfr-1194]].</p>
 				<p>Where biometrics are used as an alternative to <a>CAPTCHA</a>, systems should be designed to allow users to choose among multiple and unrelated biometric identifiers. It should also be noted that biometrics can reliably and uniquely identify individuals making these identifiers highly attractive as login authentication mechanisms. This alternative is unsuitable, however, for applications in which it is necessary to preserve the user’s anonymity (i.e., the application is required to verify solely that the user is human, without obtaining identifying information).</p>
 			</section>
 			<section>
@@ -90,12 +88,7 @@
 				</section>
 				<section>
 					<h3>Honeypots</h3>
-					<p>Providing a CAPTCHA visible to robots but not to humans appears to be sufficiently successful to be supported in several content management systems such as <a href="https://www.drupal.org/project/honeypot">Drupal Honeypots</a> and in several commercial WordPress plugins. The form is created to attract robots and then hidden from the user by markup such as CSS-Hidden. It's an approach that is easily implemented even in hand authored markup and should be considered.
-An example of a honeypot CAPTCHA can be seen on the Sign In page for <a
-href="https://www.hiltonhonors.com">Hilton Honors</a>, the Hilton Hotel
-Corporation's loyalty program website where a prominent focusable field is
-labeled: "This field is for robots only. Please leave blank."
-					</p>
+					<p>Providing a CAPTCHA visible to robots but not to humans appears to be sufficiently successful to be supported in several content management systems such as <a href="https://www.drupal.org/project/honeypot">Drupal Honeypots</a> and in several commercial WordPress plugins. The form is created to attract robots and then hidden from the user by markup such as CSS-Hidden. It's an approach that is easily implemented even in hand authored markup and should be considered. An example of a honeypot CAPTCHA can be seen on the Sign In page for <a href="https://www.hiltonhonors.com">Hilton Honors</a>, the Hilton Hotel Corporation's loyalty program website where a prominent focusable field is labeled: "This field is for robots only. Please leave blank." </p>
 				</section>
 				<section>
 					<h3>Image and video</h3>
@@ -135,9 +128,7 @@ labeled: "This field is for robots only. Please leave blank."
 					<h4>Public-key (PKI) infrastructure solutions</h4>
 					<p>Another approach is to use certificates for individuals who wish to verify their identity. The certificate can be issued in such a way as to ensure something close to a one-person-one-vote system e.g. by issuing these certificates in person and enabling users to develop distributed trust networks, or by having these certificates issued from highly trusted authorities such as governments as in <a href="https://e-resident.gov.ee/">Estonia's e-Residency Program</a> whose certificates can be trusted not only to validate a human user but also to provide an unimpeachable audit trail should issues arise.</p>
 					<p>The cost of creating fraudulent certificates needs to be high enough to destroy the value of producing them in most cases. Sites would need to use mechanisms which are widely implemented in user agents.</p>
-					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed. Such approaches raise significant privacy and stigmatisation concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. based <a href="http://www.bookshare.org/">Bookshare</a> whose services are only available to persons with documented print disabilities. Bookshare provides its users access to printed materials which are otherwise unavailable in accessible alternative formats such as audio or Braille. An international copyright treaty in the United Nations' World Intellectual Property Organization (WIPO) known as the <a href="http://www.wipo.int/treaties/en/ip/marrakesh"><cite>Marrakesh Treaty</cite></a> [[marrakesh]] allows copyrighted materials to be reproduced in
-					specialized formats that are only usable by print disabled users.
-					</p>
+					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed. Such approaches raise significant privacy and stigmatisation concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. based <a href="http://www.bookshare.org/">Bookshare</a> whose services are only available to persons with documented print disabilities. Bookshare provides its users access to printed materials which are otherwise unavailable in accessible alternative formats such as audio or Braille. An international copyright treaty in the United Nations' World Intellectual Property Organization (WIPO) known as the <a href="http://www.wipo.int/treaties/en/ip/marrakesh"><cite>Marrakesh Treaty</cite></a> [[marrakesh]] allows copyrighted materials to be reproduced in specialized formats that are only usable by print disabled users. </p>
 				</section>
 			</section>
 			<section>
@@ -147,34 +138,11 @@ labeled: "This field is for robots only. Please leave blank."
 		</section>
 		<section>
 			<h2>Conclusion</h2>
-<p>CAPTCHA has certainly evolved over time and become more sophisticated. This has included the development of
-several alternatives to text-based characters contained in bitmapped
-images, some of which can serve to support access for persons with
-disabilities. However, it has also been demonstrated not only that
-traditional CAPTCHA continues to be challenging for people with
-disabilities, but also increasingly insecure and arguably now ill suited
-to the purpose of distinguishing human individuals from their robotic
-impersonators.</p>
-<p>Yet the need for a solution persists and will continue to persist.  It is
-therefore highly recommended that the purpose and effectiveness of any
-deployed solution be carefully considered before adoption, and then closely
-monitored for effective performance. As with all good software and on line
-content provisioning, analysis should begin with a careful consideration of
-system requirements and a thorough profiling of user requirements.</p>
-<p>Clearly, some solutions such as Google's reCAPTCHA, 
-two-step or multi-device verification can be easily and affordably
-deployed. Yet problems persist even in these systems, especially for non
-English speakers.  Furthermore, deployers of such solutions should be aware that they are participating  in exposing
-their users to a massive collection of personal data across multiple
-trans-national data profiling systems, quite apart from any societal
-governancea It is rather ironic that identifying specific individuals and corelating massive data on each individual has become so common while the generic task of distinguishing a human individual from the robotic impresonation remains rather more challenging.</p>
-<p>It is important, therefore, also to consider available stand-alone solutions such
-as honeypots and heuristics, along with current image and aural CAPTCHA
-libraries that support multiple languages. As always, testing and system monitoring for
-effectiveness should supply the ultimate determination, even as we recognize
-that an effective system today may prove ineffective a few years from now.</p>
-<p>In other words, while some CAPTCHA solutions are better than others, there is currently no ideal solution. It is important to exercise care that any implemented CAPTCHA
-technology correctly identify people with disabilities as human.</p>
+			<p>CAPTCHA has certainly evolved over time and become more sophisticated. This has included the development of several alternatives to text-based characters contained in bitmapped images, some of which can serve to support access for persons with disabilities. However, it has also been demonstrated not only that traditional CAPTCHA continues to be challenging for people with disabilities, but also increasingly insecure and arguably now ill suited to the purpose of distinguishing human individuals from their robotic impersonators.</p>
+			<p>Yet the need for a solution persists and will continue to persist. It is therefore highly recommended that the purpose and effectiveness of any deployed solution be carefully considered before adoption, and then closely monitored for effective performance. As with all good software and on line content provisioning, analysis should begin with a careful consideration of system requirements and a thorough profiling of user requirements.</p>
+			<p>Clearly, some solutions such as Google's reCAPTCHA, two-step or multi-device verification can be easily and affordably deployed. Yet problems persist even in these systems, especially for non English speakers. Furthermore, deployers of such solutions should be aware that they are participating in exposing their users to a massive collection of personal data across multiple trans-national data profiling systems, quite apart from any societal governancea It is rather ironic that identifying specific individuals and corelating massive data on each individual has become so common while the generic task of distinguishing a human individual from the robotic impresonation remains rather more challenging.</p>
+			<p>It is important, therefore, also to consider available stand-alone solutions such as honeypots and heuristics, along with current image and aural CAPTCHA libraries that support multiple languages. As always, testing and system monitoring for effectiveness should supply the ultimate determination, even as we recognize that an effective system today may prove ineffective a few years from now.</p>
+			<p>In other words, while some CAPTCHA solutions are better than others, there is currently no ideal solution. It is important to exercise care that any implemented CAPTCHA technology correctly identify people with disabilities as human.</p>
 		</section>
 		<section class="appendix">
 			<h2>Terms</h2>
