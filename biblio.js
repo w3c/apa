@@ -44,7 +44,17 @@ var biblio = {
 		"publisher": "",
 		"href": "https://www.copyright.gov/title17/92chap1.html"
 	},
-	"killbots": {
+    "captcha-ocr": {
+	"title": "CAPTCHA: Attacks and Weaknesses against OCR technology",
+	"publishDate": "2013",
+	"authors": [
+	    "Silky Azad", "Kiran Jain"],
+	"publisher": "Journal of Computer science and Technology",
+	"etAl": false,
+	"editors": [],
+	"href": "https://computerresearch.org/index.php/computer/article/download/368/368"
+    },
+    "killbots": {
 		"title": "Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds",
 		"publishDate": "",
 		"authors": [
