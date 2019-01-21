@@ -20,7 +20,7 @@
 			<p>An early solution was the use of graphical representations of text in registration or comment areas of the web site. The site would attempt to verify that the user was in fact a human by requiring the user to complete a task referred to as a Completely Automated Public <a>Turing Test</a>, or <a>CAPTCHA</a>. The assumption was that humans would find this task easy, while robots would find it nearly impossible to perform.</p>
 			<p>The CAPTCHA was <a href="CAPTCHA.net">initially developed by researchers at Carnegie Mellon University</a> and has been primarily associated with a technique whereby an individual had to identify a distorted set of characters from a bit-mapped image, then enter those characters into a web form. This approach is widely familiar to users of the web worldwide, though the term CAPTCHA is generally recognized only by web professionals.</p>
 			<p>In recent times the types of CAPTCHA that appear on web sites and mobile apps have changed significantly. Since our concern here is the accessibility of systems that seek to distinguish human users from their robotic impersonators, the term “CAPTCHA” is used in this document generically to refer to all approaches which are specifically designed to differentiate a human from a computer. We also include fully noninteractive approaches in our categorization.</p>
-			<p>While online users broadly have reported finding traditional CAPTCHAs frustrating to complete, it is generally assumed that a CAPTCHA can be resolved within a few incorrect attempts. The point of distinction for people with disabilities is that a CAPTCHA not only separates computers from humans, but also often removes people with disabilities from performing the requested procedure. For example, asking users who are blind, visually impaired or dyslexic to identify textual characters in a distorted graphic is asking them to perform a task they are intrinsically least able to accomplish. Similarly, asking users who are deaf or hearing impaired to identify and transcribe in writing the content of an audio CAPTCHA is asking them to perform a task they’re intrinsically least likely to accomplish. Furthermore, traditional CAPTCHAs have generally presumed that all web users can read and transcribe a particular character set or English-based words, thus making the test inaccessible to a large number of web users worldwide.</p>
+			<p>While online users broadly have reported finding traditional CAPTCHAs frustrating to complete, it is generally assumed that a CAPTCHA can be resolved within a few incorrect attempts. The point of distinction for people with disabilities is that a CAPTCHA not only separates computers from humans, but also often prevents people with disabilities from performing the requested procedure. For example, asking users who are blind, visually impaired or dyslexic to identify textual characters in a distorted graphic is asking them to perform a task they are intrinsically least able to accomplish. Similarly, asking users who are deaf or hearing impaired to identify and transcribe in writing the content of an audio CAPTCHA is asking them to perform a task they’re intrinsically least likely to accomplish. Furthermore, traditional CAPTCHAs have generally presumed that all web users can read and transcribe a particular character set or English-based words, thus making the test inaccessible to a large number of web users worldwide.</p>
 			<p>While Accessibility best practices require, and <a>assistive technologies</a> expect, substantive graphical images to be authored with text equivalents, <a>alternative text</a> on CAPTCHA images would clearly be self-defeating and are, consequently, allowed under the W3C's <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html"> Web Content Accessibility Guidelines (WCAG)</a> provided that "text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities."</p>
 			<p>The rationale for this requirement is simple. A CAPTCHA without an accessible and usable alternative makes it impossible for users with certain disabilities to create accounts, write comments, or make purchases on such sites. In essence, such CAPTCHAs fail to properly recognize users with disabilities as human, obstructing their participation in contemporary society. Such issues also extend to situational disabilities whereby a user may not be able to effectively view a traditional CAPTCHA on a mobile device due to the small screen size, or hear an audio-based CAPTCHA in a noisy environment.</p>
 		</section>
@@ -90,9 +90,8 @@
 				<section>
 					<h3>Honeypots</h3>
 					<p>Providing a CAPTCHA visible to robots but not to humans appears to be sufficiently successful to be supported in several content management systems such as <a href="https://www.drupal.org/project/honeypot">Drupal Honeypots</a> and in several commercial WordPress plugins. The form is created to attract robots and then hidden from the user by markup such as CSS-Hidden. It's an approach that is easily implemented even in hand authored markup and should be considered.
-An example of a honeypot CAPTCHA can be seen on the Sign In page for <a
-href="https://www.hiltonhonors.com">Hilton Honors</a>, the Hilton Hotel
-Corporation's loyalty program website where a prominent focusable field is
+The Hilton Hotel Corporation has used a honeypot CAPTCHA on the Sign In page for <a
+href="https://www.hiltonhonors.com">Hilton Honors</a>, its loyalty program website where a prominent focusable field is
 labeled: "This field is for robots only. Please leave blank."
 					</p>
 				</section>
@@ -134,9 +133,10 @@ labeled: "This field is for robots only. Please leave blank."
 					<h4>Public-key (PKI) infrastructure solutions</h4>
 					<p>Another approach is to use certificates for individuals who wish to verify their identity. The certificate can be issued in such a way as to ensure something close to a one-person-one-vote system e.g. by issuing these certificates in person and enabling users to develop distributed trust networks, or by having these certificates issued from highly trusted authorities such as governments as in <a href="https://e-resident.gov.ee/">Estonia's e-Residency Program</a> whose certificates can be trusted not only to validate a human user but also to provide an unimpeachable audit trail should issues arise.</p>
 					<p>The cost of creating fraudulent certificates needs to be high enough to destroy the value of producing them in most cases. Sites would need to use mechanisms which are widely implemented in user agents.</p>
-					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed. Such approaches raise significant privacy and stigmatisation concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. based <a href="http://www.bookshare.org/">Bookshare</a> whose services are only available to persons with documented print disabilities. Bookshare provides its users access to printed materials which are otherwise unavailable in accessible alternative formats such as audio or Braille. An international copyright treaty in the United Nations' World Intellectual Property Organization (WIPO) known as the <a href="http://www.wipo.int/treaties/en/ip/marrakesh"><cite>Marrakesh Treaty</cite></a> [[marrakesh]] allows copyrighted materials to be reproduced in
-					specialized formats that are only usable by print disabled users.
+
+					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed. Such approaches raise significant privacy and stigmatisation concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. based <a href="http://www.bookshare.org/">Bookshare</a> whose services are only available to persons with documented print disabilities. Bookshare provides its users access to printed materials which are otherwise unavailable in accessible alternative formats such as audio or Braille. An international copyright treaty administered by the United Nations' World Intellectual Property Organization (WIPO) known as the <a href="http://www.wipo.int/treaties/en/ip/marrakesh"><cite>Marrakesh Treaty</cite></a> [[marrakesh]] provides for exceptions to national copyright law to allow copyrighted materials to be provided to print disabled users in specialized formats.
 					</p>
+
 				</section>
 			</section>
 			<section>
@@ -154,7 +154,7 @@ traditional CAPTCHA continues to be challenging for people with
 disabilities, but also increasingly insecure and arguably now ill suited
 to the purpose of distinguishing human individuals from their robotic
 impersonators.</p>
-<p>Yet the need for a solution persists and will continue to persist.  It is
+<p>Yet the need for a solution persists.  It is
 therefore highly recommended that the purpose and effectiveness of any
 deployed solution be carefully considered before adoption, and then closely
 monitored for effective performance. As with all good software and on line
@@ -166,14 +166,14 @@ deployed. Yet problems persist even in these systems, especially for non
 English speakers.  Furthermore, deployers of such solutions should be aware that they are participating  in exposing
 their users to a massive collection of personal data across multiple
 trans-national data profiling systems, quite apart from any societal
-governancea It is rather ironic that identifying specific individuals and corelating massive data on each individual has become so common while the generic task of distinguishing a human individual from the robotic impresonation remains rather more challenging.</p>
+governance. It is rather ironic that identifying specific individuals and correlating massive data on each individual has become so common while the generic task of distinguishing a human individual from the robotic impresonation remains rather more challenging.</p>
 <p>It is important, therefore, also to consider available stand-alone solutions such
 as honeypots and heuristics, along with current image and aural CAPTCHA
 libraries that support multiple languages. As always, testing and system monitoring for
 effectiveness should supply the ultimate determination, even as we recognize
 that an effective system today may prove ineffective a few years from now.</p>
 <p>In other words, while some CAPTCHA solutions are better than others, there is currently no ideal solution. It is important to exercise care that any implemented CAPTCHA
-technology correctly identify people with disabilities as human.</p>
+technology correctly allow people with disabilities to identify tehselves as human.</p>
 		</section>
 		<section class="appendix">
 			<h2>Terms</h2>
