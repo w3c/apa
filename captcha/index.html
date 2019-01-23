@@ -81,17 +81,18 @@
 					<p>Another heuristic approach identified in <a href="http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"><cite> Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a> [[killbots]] involves the use of <a>CAPTCHA</a> images, with a twist: how the user reacts to the test is as important as whether or not it was solved. This system, which was designed to thwart distributed denial of service (DDoS) attacks, bans automated attackers which make repeated attempts to retrieve a certain page, while protecting against marking humans incorrectly as automated traffic. When the server’s load drops below a certain level, the CAPTCHA-based authentication process is removed entirely.</p>
 				</section>
 				<section>
+					<h4>Honeypots</h4>
+					<p>Providing a CAPTCHA visible to robots but not to humans appears to be sufficiently successful to be supported in several content management systems such as <a href="https://www.drupal.org/project/honeypot">Drupal Honeypots</a> and in several commercial WordPress plugins. The form is created to attract robots and then hidden from the user by markup such as CSS-Hidden. It's an approach that is easily implemented even in hand authored markup and should be considered.
+						The Hilton Hotel Corporation has used a honeypot CAPTCHA on the Sign In page for <a
+							href="https://www.hiltonhonors.com">Hilton Honors</a>, its loyalty program website where a prominent focusable field is
+						labeled: "This field is for robots only. Please leave blank."
+					</p>
+				</section>
+			</section>
+				<section>
 					<h3>Logic puzzles</h3>
 					<p>The goal of visual verification is to separate human from machine. One reasonable way to do this is to test for logic. Simple mathematical or word puzzles, trivia, or similar logic tests may raise the bar for <a>robots</a>, at least to the point where using them is more attractive elsewhere.</p>
 					<p>Problems: Users with cognitive disabilities may still have trouble. Answers may need to be handled flexibly, if they require free-form text. A system would have to maintain a vast number of questions, or shift them around programmatically, in order to keep <a>spiders</a> from capturing them all for use by web robots. This approach is also more likely subject to defeat by human operators engaged in crowd-sourcing activity on behalf of attackers.</p>
-				</section>
-				<section>
-					<h3>Honeypots</h3>
-					<p>Providing a CAPTCHA visible to robots but not to humans appears to be sufficiently successful to be supported in several content management systems such as <a href="https://www.drupal.org/project/honeypot">Drupal Honeypots</a> and in several commercial WordPress plugins. The form is created to attract robots and then hidden from the user by markup such as CSS-Hidden. It's an approach that is easily implemented even in hand authored markup and should be considered.
-The Hilton Hotel Corporation has used a honeypot CAPTCHA on the Sign In page for <a
-href="https://www.hiltonhonors.com">Hilton Honors</a>, its loyalty program website where a prominent focusable field is
-labeled: "This field is for robots only. Please leave blank."
-					</p>
 				</section>
 				<section>
 					<h3>Image and video</h3>
@@ -110,9 +111,9 @@ labeled: "This field is for robots only. Please leave blank."
 					</section>
 				</section>
 			</section>
-		</section>
 		<section>
 			<h2>Multi-Party Approaches</h2>
+			<section>
 			<h3>The Google reCAPTCHA</h3>
 			<p>Acquired in 2009 from Carnegie Mellon University, <a href="https://www.google.com/reCAPTCHA/">Google's reCAPTCHA</a> overwhelmingly dominates CAPTCHA deployment on the web today. Version 2 of reCAPTCHA continues to provide an API that has been most effectively marketed as the "no CAPTCHA re CAPTCHA," and it's checkbox proclaiming: "I'm not a robot" has become famous, spawning various cultural offshoots in art, theater, and popular music.</p>
 			<p>The checkbox is, of course, no checkbox at all in the traditional HTML sense. The <a href="https://termsfeed.com/blog/privacy-policy-recaptcha/">checkbox process</a> works by collecting a trove of user data well beyond mouse movement and keyboard navigation, including The date, the language the browser is set to, All cookies placed by Google over the last 6 months, CSS information for that page, an inventory of mouse clicks made on that screen (or touches if on a touch device), an inventory of plugins installed on the browser, and an itemization of All Javascript objects, all to determine whether the user is human or robot. Of course Google also generally knows much about individual users, including their customary IP addresses, the telephone numbers and email addresses of their friends and colleagues, where they have been at every moment of every day, as well as their web search and YouTube habits. This is why the simple checkbox can keep the CAPTCHA process disarmingly simple, though it also explains why the privacy policy accompanies the "no CAPTCHA reCAPTCHA". The Privacy Polisy is required to satisfy legal requirements in California and in the E.U.</p>
@@ -120,6 +121,7 @@ labeled: "This field is for robots only. Please leave blank."
 			<p>One recent reCAPTCHA V. 2 innovation seems most promissing. Rather than reproduce characters, users are asked to type the words they see (or hear). It even appears unnecessary to spell these correctly, or to enter all the words presented in order to be adjudicated as human.</p>
 			<p>Late in 2018 Google released <a href="https://webmasters.googleblog.com/2018/10/introducing-reCAPTCHA-v3-new-way-to.html"> reCAPTCHA V3</a> promissing to eliminate "the need to interrupt users with challenges at all." Obviously, this would be idea and we believe Google has adopted several strategies recommended here toward achieving that goal. However, as the failure fallback remains the presentation of a traditional CAPTCHA, it remains imperative to do better by users who require alternative CAPTCHA options as also enumerated here.</p>
 			<p>We would expect Google's V. 3 reCAPTCHA system would score no need to present a CAPTCHA whenever another browser tab is already properly logged in to a Google product such as Calendar. However this ready value in identifying a human user also comes at a high price to the user's privacy in an industry so capable of cross-referencing massive ammounts of data in the absence of meaningful regulations and controls on where and how that data may be used. This is a strong accessibility concern as people with disabilities are generally loathe to disclose any information about their disability except when and only when they expressly authorize it to be revealed.</p>
+			</section>
 			<section>
 				<h3>Federated identity systems</h3>
 				<p>Many large companies such as Microsoft, Apple, Amazon, Google and the <a href="https://kantarainitiative.org/">Kantara Initiative</a> have created competing “federated network identity” systems, which can allow a user to create an account, set his or her preferences, payment data, etc., and have that data persist across all sites and devices that use the same service. Due to large companies now requiring a federated identity to use cloud-based services on their respective digital ecosystems, the popularity of federated identities has increased significantly. As a result, many web sites and services allow a portable form of authentication and identification across the Web.</p>
