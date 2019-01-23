@@ -44,7 +44,17 @@ var biblio = {
 		"publisher": "",
 		"href": "https://www.copyright.gov/title17/92chap1.html"
 	},
-	"killbots": {
+    "captcha-ocr": {
+	"title": "CAPTCHA: Attacks and Weaknesses against OCR technology",
+	"publishDate": "2013",
+	"authors": [
+	    "Silky Azad", "Kiran Jain"],
+	"publisher": "Journal of Computer science and Technology",
+	"etAl": "false",
+	"editors": [],
+	"href": "https://computerresearch.org/index.php/computer/article/download/368/368"
+    },
+    "killbots": {
 		"title": "Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds",
 		"publishDate": "",
 		"authors": [
@@ -57,7 +67,17 @@ var biblio = {
 		"etAl": "false",
 		"publisher": "",
 		"href": "https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/"
-	},
+    },
+    "marrakehs": {
+	"title":
+	"Marrakesh Treaty to Facilitate Access to Published Works for Persons Who Are Blind, Visually Impaired or Otherwise Print Disabled",
+	"authors": [],
+	"editors": [],
+	"etAl": "false",
+	"publisher": "World Intellectual Property Organization",
+	"publishDate": "27 June 2013",
+	"href": "https://www.wipo.int/treaties/en/ip/marrakesh"
+    },
 	"newscom": {
 		"title": "Spam-bot tests flunk the blind",
 		"publishDate": "2 July 2003",
