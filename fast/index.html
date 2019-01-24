@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 23.8.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -14,8 +14,8 @@ div.note, div.issue, div.ednote, div.warning {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
-.issue, .note, .ednote, .warning {
+.warning > p:first-child { margin-top: 0 }
+.warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
@@ -26,7 +26,7 @@ div.issue, div.note , div.ednote,  div.warning {
     position: relative;
     clear: both;
 }
-span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+span.warning { padding: .1em .5em .15em; }
 
 .issue {
     border-color: #e05252;
@@ -34,11 +34,6 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
 }
 .issue.closed span.issue-number {
     text-decoration: line-through;
-}
-
-.note, .ednote {
-    border-color: #52e052;
-    background: #e9fbe9;
 }
 
 .warning {
@@ -350,16 +345,16 @@ h6>a.self-link::before {
   "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/83907/status",
   "tocIntroductory": true,
   "doRDFa": 1.1,
-  "publishDate": "2019-01-01",
-  "publishISODate": "2019-01-01T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 01 January 2019"
+  "publishDate": "2019-01-24",
+  "publishISODate": "2019-01-24T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 24 January 2019"
 }</script><meta name="description" content=""></head>
 	<body class="h-entry toc-inline"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Framework for Accessible Specification of Technologies (FAST)</h1>
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-01-01">01 January 2019</time>
+        <time class="dt-published" datetime="2019-01-24">24 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -386,78 +381,65 @@ h6>a.self-link::before {
       
       
       <p class="copyright">
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-                        ©
-                        2019
-                        
-                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
-                        
-                        <abbr title="World Wide Web Consortium">W3C</abbr>
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
-                        and
-                        <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-                        rules apply.
-                      </p>
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+      ©
+      2019
+      
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+      apply.
+    </p>
       <hr title="Separator for header">
     </div>
-		<section id="abstract" class="introductory"><!--OddPage--><h2>Abstract</h2>Framework for Accessible Specification of Technologies (FAST) advises creators of technical specifications how to ensure their technology meets the needs of user with disabilities. It addresses primarily web content technologies but also relates to any technology that affects web content sent to users, including client-side APIs, transmission protocols, and interchange formats. Specifications that implement these guidelines make it possible for content authors and user agents to render the content in an accessible manner to people with a wide range of abilities.<p> </p></section>
-		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
+		<section id="abstract" class="introductory"><h2>Abstract</h2>Framework for Accessible Specification of Technologies (FAST) advises creators of technical specifications how to ensure their technology meets the needs of user with disabilities. It addresses primarily web content technologies but also relates to any technology that affects web content sent to users, including client-side APIs, transmission protocols, and interchange formats. Specifications that implement these guidelines make it possible for content authors and user agents to render the content in an accessible manner to people with a wide range of abilities.<p> </p></section>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
 		<p>
-                                              This document was published by
-                                              the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
-                                              Editor's Draft.
-                                              
-                                            </p><p>
-                                                      
-                                                      Comments regarding this document are welcome.
-                                                              Please send them
-                                                              to
-                                                              <a href="mailto:public-apa@w3.org">public-apa@w3.org</a>
-                                                              (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>).
-                                                            
-                                                    </p><p>
-                                              Publication as an
-                                              Editor's Draft does not imply
-                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                                              This is a draft document and may
-                                              be updated, replaced or obsoleted
-                                              by other documents at any time. It
-                                              is inappropriate to cite this
-                                              document as other than work in
-                                              progress.
-                                            </p><p>
-                                      
-                                              This document was produced by
-                                              a group
-                                              operating under the
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                                            
-                                      
-                                      
-                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                                                      <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any
-                                                        patent disclosures</a>
-                                              made in connection with the
-                                              deliverables of
-                                              the group; that page also includes
-                                              instructions for disclosing a
-                                              patent. An individual who has
-                                              actual knowledge of a patent which
-                                              the individual believes contains
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                                              must disclose the information in
-                                              accordance with
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
-                                                Policy</a>.
-                                            
-                                      
-                                    </p><p>
-                                      This document is governed by the
-                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#goals"><span class="secno">1.1 </span>Goals</a></li><li class="tocline"><a class="tocxref" href="#audience"><span class="secno">1.2 </span>Audience</a></li><li class="tocline"><a class="tocxref" href="#scope"><span class="secno">1.3 </span>Scope</a></li><li class="tocline"><a class="tocxref" href="#approach"><span class="secno">1.4 </span>Approach</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inventory-user-needs"><span class="secno">1.4.1 </span>Inventory user needs</a></li><li class="tocline"><a class="tocxref" href="#identify-ways-to-meet-needs"><span class="secno">1.4.2 </span>Identify ways to meet needs</a></li><li class="tocline"><a class="tocxref" href="#develop-technology-guidelines"><span class="secno">1.4.3 </span>Develop technology guidelines</a></li></ol></li><li class="tocline"><a class="tocxref" href="#explanation-of-user-needs"><span class="secno">1.5 </span>Explanation of User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#evolution-of-user-needs"><span class="secno">1.5.1 </span>Evolution of user needs</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><span class="secno">1.5.2 </span>Assumptions </a></li><li class="tocline"><a class="tocxref" href="#applicability-of-needs"><span class="secno">1.5.3 </span>Applicability of Needs </a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#collected-user-needs"><span class="secno">2. </span>Collected User Needs</a></li><li class="tocline"><a class="tocxref" href="#meeting-user-needs"><span class="secno">3. </span>Meeting User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ways-to-meet-user-needs"><span class="secno">3.1 </span>Ways to Meet User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#author-implementation"><span class="secno">3.1.1 </span>Author Implementation</a></li><li class="tocline"><a class="tocxref" href="#user-agent-features"><span class="secno">3.1.2 </span>User Agent Features</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibility-support-in-mainstream-user-agents"><span class="secno">3.1.2.1 </span>Accessibility Support in Mainstream User Agents</a></li><li class="tocline"><a class="tocxref" href="#assistive-technology"><span class="secno">3.1.2.2 </span>Assistive Technology</a></li><li class="tocline"><a class="tocxref" href="#accessibility-apis"><span class="secno">3.1.2.3 </span>Accessibility APIs</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#meeting-user-needs-table"><span class="secno">3.2 </span>Meeting User Needs Table</a></li></ol></li><li class="tocline"><a class="tocxref" href="#framework-for-accessible-specification-of-technologies"><span class="secno">4. </span>Framework for Accessible Specification of Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#alternative-content"><span class="secno">4.1 </span>Alternative Content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#text-alternatives"><span class="secno">4.1.1 </span>Text Alternatives</a></li><li class="tocline"><a class="tocxref" href="#rich-alternatives"><span class="secno">4.1.2 </span>Rich Alternatives</a></li></ol></li><li class="tocline"><a class="tocxref" href="#color"><span class="secno">4.2 </span>Color</a></li><li class="tocline"><a class="tocxref" href="#device-independence"><span class="secno">4.3 </span>Device Independence</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#universal-meaning-support"><span class="secno">4.3.1 </span>Universal meaning support</a></li><li class="tocline"><a class="tocxref" href="#compatibility-with-aapis"><span class="secno">4.3.2 </span>Compatibility with AAPIs</a></li><li class="tocline"><a class="tocxref" href="#hardware-interfaces"><span class="secno">4.3.3 </span>Hardware Interfaces</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-customization"><span class="secno">4.4 </span>User Customization</a></li><li class="tocline"><a class="tocxref" href="#user-control"><span class="secno">4.5 </span>User Control</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#blinking-flashing"><span class="secno">4.5.1 </span>Blinking / Flashing</a></li><li class="tocline"><a class="tocxref" href="#automatic-actions"><span class="secno">4.5.2 </span>Automatic actions</a></li><li class="tocline"><a class="tocxref" href="#time-based-content"><span class="secno">4.5.3 </span>Time-based content</a></li></ol></li><li class="tocline"><a class="tocxref" href="#focus"><span class="secno">4.6 </span>Focus</a></li><li class="tocline"><a class="tocxref" href="#audiovisual-content"><span class="secno">4.7 </span>Audiovisual Content</a></li><li class="tocline"><a class="tocxref" href="#extensibility"><span class="secno">4.8 </span>Extensibility</a></li><li class="tocline"><a class="tocxref" href="#alternate-view-modalities"><span class="secno">4.9 </span>Alternate view modalities</a></li><li class="tocline"><a class="tocxref" href="#timing"><span class="secno">4.10 </span>Timing</a></li><li class="tocline"><a class="tocxref" href="#user-input"><span class="secno">4.11 </span>User input</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><span class="secno">A. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">A.1 </span>Participants in the PFWG at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">A.2 </span>Enabling funders</a></li></ol></li></ol></nav>
+                              This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as
+                              an Editor's Draft.
+                              
+                            </p><p>
+      
+      Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-apa@w3.org">public-apa@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>).
+            
+    </p><p>
+                              Publication as an Editor's Draft
+                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                              This is a draft document and may be updated,
+                              replaced or obsoleted by other documents at any
+                              time. It is inappropriate to cite this document as
+                              other than work in progress.
+                            </p><p>
+                      
+                              This document was produced by
+                              a group
+                              operating under the
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                      
+                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                                      <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent
+                                        disclosures</a>
+                              made in connection with the deliverables of
+                              the group; that page also includes
+                              instructions for disclosing a patent. An
+                              individual who has actual knowledge of a patent
+                              which the individual believes contains
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                              must disclose the information in accordance with
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                    </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#goals"><span class="secno">1.1 </span>Goals</a></li><li class="tocline"><a class="tocxref" href="#audience"><span class="secno">1.2 </span>Audience</a></li><li class="tocline"><a class="tocxref" href="#scope"><span class="secno">1.3 </span>Scope</a></li><li class="tocline"><a class="tocxref" href="#approach"><span class="secno">1.4 </span>Approach</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inventory-user-needs"><span class="secno">1.4.1 </span>Inventory user needs</a></li><li class="tocline"><a class="tocxref" href="#identify-ways-to-meet-needs"><span class="secno">1.4.2 </span>Identify ways to meet needs</a></li><li class="tocline"><a class="tocxref" href="#develop-technology-guidelines"><span class="secno">1.4.3 </span>Develop technology guidelines</a></li></ol></li><li class="tocline"><a class="tocxref" href="#explanation-of-user-needs"><span class="secno">1.5 </span>Explanation of User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#evolution-of-user-needs"><span class="secno">1.5.1 </span>Evolution of user needs</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><span class="secno">1.5.2 </span>Assumptions </a></li><li class="tocline"><a class="tocxref" href="#applicability-of-needs"><span class="secno">1.5.3 </span>Applicability of Needs </a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#collected-user-needs"><span class="secno">2. </span>Collected User Needs</a></li><li class="tocline"><a class="tocxref" href="#meeting-user-needs"><span class="secno">3. </span>Meeting User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ways-to-meet-user-needs"><span class="secno">3.1 </span>Ways to Meet User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#author-implementation"><span class="secno">3.1.1 </span>Author Implementation</a></li><li class="tocline"><a class="tocxref" href="#user-agent-features"><span class="secno">3.1.2 </span>User Agent Features</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibility-support-in-mainstream-user-agents"><span class="secno">3.1.2.1 </span>Accessibility Support in Mainstream User Agents</a></li><li class="tocline"><a class="tocxref" href="#assistive-technology"><span class="secno">3.1.2.2 </span>Assistive Technology</a></li><li class="tocline"><a class="tocxref" href="#accessibility-apis"><span class="secno">3.1.2.3 </span>Accessibility APIs</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#meeting-user-needs-table"><span class="secno">3.2 </span>Meeting User Needs Table</a></li></ol></li><li class="tocline"><a class="tocxref" href="#framework-for-accessible-specification-of-technologies"><span class="secno">4. </span>Framework for Accessible Specification of Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#alternative-content"><span class="secno">4.1 </span>Alternative Content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#text-alternatives"><span class="secno">4.1.1 </span>Text Alternatives</a></li><li class="tocline"><a class="tocxref" href="#rich-alternatives"><span class="secno">4.1.2 </span>Rich Alternatives</a></li></ol></li><li class="tocline"><a class="tocxref" href="#color"><span class="secno">4.2 </span>Color</a></li><li class="tocline"><a class="tocxref" href="#device-independence"><span class="secno">4.3 </span>Device Independence</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#universal-meaning-support"><span class="secno">4.3.1 </span>Universal meaning support</a></li><li class="tocline"><a class="tocxref" href="#compatibility-with-aapis"><span class="secno">4.3.2 </span>Compatibility with AAPIs</a></li><li class="tocline"><a class="tocxref" href="#hardware-interfaces"><span class="secno">4.3.3 </span>Hardware Interfaces</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-customization"><span class="secno">4.4 </span>User Customization</a></li><li class="tocline"><a class="tocxref" href="#user-control"><span class="secno">4.5 </span>User Control</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#blinking-flashing"><span class="secno">4.5.1 </span>Blinking / Flashing</a></li><li class="tocline"><a class="tocxref" href="#automatic-actions"><span class="secno">4.5.2 </span>Automatic actions</a></li><li class="tocline"><a class="tocxref" href="#time-based-content"><span class="secno">4.5.3 </span>Time-based content</a></li></ol></li><li class="tocline"><a class="tocxref" href="#focus"><span class="secno">4.6 </span>Focus</a></li><li class="tocline"><a class="tocxref" href="#audiovisual-content"><span class="secno">4.7 </span>Audiovisual Content</a></li><li class="tocline"><a class="tocxref" href="#extensibility"><span class="secno">4.8 </span>Extensibility</a></li><li class="tocline"><a class="tocxref" href="#alternate-view-modalities"><span class="secno">4.9 </span>Alternate view modalities</a></li><li class="tocline"><a class="tocxref" href="#timing"><span class="secno">4.10 </span>Timing</a></li><li class="tocline"><a class="tocxref" href="#user-input"><span class="secno">4.11 </span>User input</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><span class="secno">A. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">A.1 </span>Participants in the PFWG at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">A.2 </span>Enabling funders</a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
 			<section id="goals">

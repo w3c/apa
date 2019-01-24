@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 23.8.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 24.2.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -14,8 +14,8 @@ div.note, div.issue, div.ednote, div.warning {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
-.issue, .note, .ednote, .warning {
+.warning > p:first-child { margin-top: 0 }
+.warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
@@ -26,7 +26,7 @@ div.issue, div.note , div.ednote,  div.warning {
     position: relative;
     clear: both;
 }
-span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+span.warning { padding: .1em .5em .15em; }
 
 .issue {
     border-color: #e05252;
@@ -34,11 +34,6 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
 }
 .issue.closed span.issue-number {
     text-decoration: line-through;
-}
-
-.note, .ednote {
-    border-color: #52e052;
-    background: #e9fbe9;
 }
 
 .warning {
@@ -381,9 +376,9 @@ h6>a.self-link::before {
   "maxTocLevel": 2,
   "tocIntroductory": true,
   "doRDFa": 1.1,
-  "publishDate": "2019-01-01",
-  "publishISODate": "2019-01-01T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 01 January 2019"
+  "publishDate": "2019-01-24",
+  "publishISODate": "2019-01-24T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 24 January 2019"
 }</script><meta name="description" content="This document presents the accessibility requirements users with disabilities have
     with respect to making payments on the web."></head>
 <body class="h-entry toc-inline"><div class="head">
@@ -391,7 +386,7 @@ h6>a.self-link::before {
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-01-01">01 January 2019</time>
+        <time class="dt-published" datetime="2019-01-24">24 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -422,24 +417,20 @@ h6>a.self-link::before {
       
       
       <p class="copyright">
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-                        ©
-                        2016-2019
-                        
-                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
-                        
-                        <abbr title="World Wide Web Consortium">W3C</abbr>
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
-                        and
-                        <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-                        rules apply.
-                      </p>
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+      ©
+      2016-2019
+      
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+      apply.
+    </p>
       <hr title="Separator for header">
     </div>
-<section id="abstract" class="introductory"><!--OddPage--><h2>Abstract</h2>
+<section id="abstract" class="introductory"><h2>Abstract</h2>
     <p>This document presents the accessibility requirements users with disabilities have
     with respect to making payments on the web. </p>
     <p>It first provides an introduction to the needs of users with disabilities
@@ -461,61 +452,52 @@ h6>a.self-link::before {
     needs of users with disabilities to web-based payments. This document is an
     inventory of Payment Accessibility User Requirements. </p>
 </section>
-<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
+<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
     <p>This document is a very early editors draft.</p>
 <p>
-                                              This document was published by
-                                              the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
-                                              Editor's Draft.
-                                              
-                                            </p><p>
-                                                      
-                                                      Comments regarding this document are welcome.
-                                                              Please send them
-                                                              to
-                                                              <a href="mailto:public-APA-comments@w3.org">public-APA-comments@w3.org</a>
-                                                              (<a href="https://lists.w3.org/Archives/Public/public-APA-comments/">archives</a>).
-                                                            
-                                                    </p><p>
-                                              Publication as an
-                                              Editor's Draft does not imply
-                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                                              This is a draft document and may
-                                              be updated, replaced or obsoleted
-                                              by other documents at any time. It
-                                              is inappropriate to cite this
-                                              document as other than work in
-                                              progress.
-                                            </p><p>
-                                      
-                                              This document was produced by
-                                              a group
-                                              operating under the
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                                            
-                                      
-                                      
-                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                                                      <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/32212/status">public list of any
-                                                        patent disclosures</a>
-                                              made in connection with the
-                                              deliverables of
-                                              the group; that page also includes
-                                              instructions for disclosing a
-                                              patent. An individual who has
-                                              actual knowledge of a patent which
-                                              the individual believes contains
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                                              must disclose the information in
-                                              accordance with
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
-                                                Policy</a>.
-                                            
-                                      
-                                    </p><p>
-                                      This document is governed by the
-                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#S_types"><span class="secno">1. </span>Summary of Accessible Payment Requirements by Type of Disability </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visual-blindness"><span class="secno">1.1 </span>Visual: Blindness </a></li><li class="tocline"><a class="tocxref" href="#visual-low-vision"><span class="secno">1.2 </span>Visual: Low vision </a></li><li class="tocline"><a class="tocxref" href="#visual-atypical-color-perception"><span class="secno">1.3 </span>Visual: Atypical color perception </a></li><li class="tocline"><a class="tocxref" href="#auditory-visual-deaf-blind"><span class="secno">1.4 </span>Auditory &amp; Visual: Deaf-blind </a></li><li class="tocline"><a class="tocxref" href="#physical-impairment"><span class="secno">1.5 </span> Physical impairment </a></li><li class="tocline"><a class="tocxref" href="#cognitive-disabilities"><span class="secno">1.6 </span> Cognitive disabilities </a></li></ol></li><li class="tocline"><a class="tocxref" href="#S_alternative_technologies"><span class="secno">2. </span>Alternative Content Technologies </a></li><li class="tocline"><a class="tocxref" href="#S_system_requirements"><span class="secno">3. </span> System Requirements </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#access-to-interactive-controls-menus"><span class="secno">3.1 </span> Access to interactive controls / menus </a></li><li class="tocline"><a class="tocxref" href="#requirements-on-making-properties-available-to-the-accessibility-interface"><span class="secno">3.2 </span> Requirements on making properties available to the accessibility interface </a></li></ol></li><li class="tocline"><a class="tocxref" href="#S_acknowledgements"><span class="secno">A. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">A.1 </span>Participants and Contributors</a></li></ol></li></ol></nav>
+                              This document was published by the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as
+                              an Editor's Draft.
+                              
+                            </p><p>
+      
+      Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-APA-comments@w3.org">public-APA-comments@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-APA-comments/">archives</a>).
+            
+    </p><p>
+                              Publication as an Editor's Draft
+                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                              This is a draft document and may be updated,
+                              replaced or obsoleted by other documents at any
+                              time. It is inappropriate to cite this document as
+                              other than work in progress.
+                            </p><p>
+                      
+                              This document was produced by
+                              a group
+                              operating under the
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                      
+                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                                      <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent
+                                        disclosures</a>
+                              made in connection with the deliverables of
+                              the group; that page also includes
+                              instructions for disclosing a patent. An
+                              individual who has actual knowledge of a patent
+                              which the individual believes contains
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                              must disclose the information in accordance with
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                    </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#S_types"><span class="secno">1. </span>Summary of Accessible Payment Requirements by Type of Disability </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visual-blindness"><span class="secno">1.1 </span>Visual: Blindness </a></li><li class="tocline"><a class="tocxref" href="#visual-low-vision"><span class="secno">1.2 </span>Visual: Low vision </a></li><li class="tocline"><a class="tocxref" href="#visual-atypical-color-perception"><span class="secno">1.3 </span>Visual: Atypical color perception </a></li><li class="tocline"><a class="tocxref" href="#auditory-visual-deaf-blind"><span class="secno">1.4 </span>Auditory &amp; Visual: Deaf-blind </a></li><li class="tocline"><a class="tocxref" href="#physical-impairment"><span class="secno">1.5 </span> Physical impairment </a></li><li class="tocline"><a class="tocxref" href="#cognitive-disabilities"><span class="secno">1.6 </span> Cognitive disabilities </a></li></ol></li><li class="tocline"><a class="tocxref" href="#S_alternative_technologies"><span class="secno">2. </span>Alternative Content Technologies </a></li><li class="tocline"><a class="tocxref" href="#S_system_requirements"><span class="secno">3. </span> System Requirements </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#access-to-interactive-controls-menus"><span class="secno">3.1 </span> Access to interactive controls / menus </a></li><li class="tocline"><a class="tocxref" href="#requirements-on-making-properties-available-to-the-accessibility-interface"><span class="secno">3.2 </span> Requirements on making properties available to the accessibility interface </a></li></ol></li><li class="tocline"><a class="tocxref" href="#S_acknowledgements"><span class="secno">A. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">A.1 </span>Participants and Contributors</a></li></ol></li></ol></nav>
 <section id="S_types">
     <!--OddPage--><h2 id="x1-summary-of-accessible-payment-requirements-by-type-of-disability"><span class="secno">1. </span>Summary of Accessible Payment Requirements by Type of Disability <a class="self-link" aria-label="§" href="#S_types"></a></h2>
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 23.8.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -14,8 +14,8 @@ div.note, div.issue, div.ednote, div.warning {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
-.issue, .note, .ednote, .warning {
+.warning > p:first-child { margin-top: 0 }
+.warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
@@ -26,7 +26,7 @@ div.issue, div.note , div.ednote,  div.warning {
     position: relative;
     clear: both;
 }
-span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+span.warning { padding: .1em .5em .15em; }
 
 .issue {
     border-color: #e05252;
@@ -34,11 +34,6 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
 }
 .issue.closed span.issue-number {
     text-decoration: line-through;
-}
-
-.note, .ednote {
-    border-color: #52e052;
-    background: #e9fbe9;
 }
 
 .warning {
@@ -91,7 +86,6 @@ input.task-list-item-checkbox {
 </style>
 		
 		<title>Inaccessibility of CAPTCHA</title>
-		
 		<style id="respec-mainstyle">/*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
@@ -333,6 +327,7 @@ h6>a.self-link::before {
   }
 }
 </style>
+		
 		
 	<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/turingtest/"><script id="initialUserConfig" type="application/json">{
   "trace": true,
@@ -715,16 +710,16 @@ h6>a.self-link::before {
       "doi": "doi:10.1007/s11042-013-1666-7"
     }
   },
-  "publishDate": "2019-01-01",
-  "publishISODate": "2019-01-01T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 01 January 2019"
+  "publishDate": "2019-01-24",
+  "publishISODate": "2019-01-24T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 24 January 2019"
 }</script><meta name="description" content="Various approaches have been employed over many years to distinguish human users of web sites from robots. While the traditional CAPTCHA approach of asking the user to identify obscured text in an image remains common, other approaches have also emerged. These approaches generally require users to perform a task believed to be possible for humans and difficult for robots, but the nature of the task inherently excludes many people with disabilities, resulting in an incorrect denial of service to these users. Research findings also have indicated that many popular CAPTCHA techniques are no longer particularly effective or secure challenging providers to deploy alternative approaches to block robots, yet support access for people with disabilities. This document examines a number of solutions that allow systems to test for human users, and the extent to which these solutions adequately accommodate people with disabilities."></head>
-	<body class="h-entry toc-inline"><div class="head">
+	<body class="h-entry"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
       <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-01-01">01 January 2019</time>
+        <time class="dt-published" datetime="2019-01-24">24 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -755,81 +750,68 @@ h6>a.self-link::before {
       
       
       <p class="copyright">
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-                        ©
-                        2018-2019
-                        
-                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
-                        
-                        <abbr title="World Wide Web Consortium">W3C</abbr>
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
-                        and
-                        <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a>
-                        rules apply.
-                      </p>
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+      ©
+      2018-2019
+      
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
+      apply.
+    </p>
       <hr title="Separator for header">
     </div>
 		<section id="abstract" class="introductory">
-			<!--OddPage--><h2>Abstract</h2>
+			<h2>Abstract</h2>
 			<p>Various approaches have been employed over many years to distinguish human users of web sites from <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">robots</a>. While the traditional <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn">CAPTCHA</a> approach of asking the user to identify obscured text in an image remains common, other approaches have also emerged. These approaches generally require users to perform a task believed to be possible for humans and difficult for robots, but the nature of the task inherently excludes many people with disabilities, resulting in an incorrect denial of service to these users. Research findings also have indicated that many popular CAPTCHA techniques are no longer particularly effective or secure challenging providers to deploy alternative approaches to block robots, yet support access for people with disabilities. This document examines a number of solutions that allow systems to test for human users, and the extent to which these solutions adequately accommodate people with disabilities.</p>
 		</section>
-		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
 		<p>
-                                              This document was published by
-                                              the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
-                                              Editor's Draft.
-                                              
-                                            </p><p>
-                                                      
-                                                      Comments regarding this document are welcome.
-                                                              Please send them
-                                                              to
-                                                              <a href="mailto:public-apa@w3.org">public-apa@w3.org</a>
-                                                              (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>).
-                                                            
-                                                    </p><p>
-                                              Publication as an
-                                              Editor's Draft does not imply
-                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                                              This is a draft document and may
-                                              be updated, replaced or obsoleted
-                                              by other documents at any time. It
-                                              is inappropriate to cite this
-                                              document as other than work in
-                                              progress.
-                                            </p><p>
-                                      
-                                              This document was produced by
-                                              a group
-                                              operating under the
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                                            
-                                      
-                                      
-                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                                                      <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any
-                                                        patent disclosures</a>
-                                              made in connection with the
-                                              deliverables of
-                                              the group; that page also includes
-                                              instructions for disclosing a
-                                              patent. An individual who has
-                                              actual knowledge of a patent which
-                                              the individual believes contains
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                                              must disclose the information in
-                                              accordance with
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
-                                                Policy</a>.
-                                            
-                                      
-                                    </p><p>
-                                      This document is governed by the
-                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#security-effectiveness"><span class="secno">2. </span>Security effectiveness</a></li><li class="tocline"><a class="tocxref" href="#types-of-captcha-and-access-implications"><span class="secno">3. </span>Types of CAPTCHA and access implications</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#traditional-character-based-captcha"><span class="secno">3.1 </span>Traditional character-based CAPTCHA</a></li><li class="tocline"><a class="tocxref" href="#logic-puzzles"><span class="secno">3.2 </span>Logic puzzles</a></li><li class="tocline"><a class="tocxref" href="#sound-output"><span class="secno">3.3 </span>Sound output</a></li><li class="tocline"><a class="tocxref" href="#limited-use-accounts"><span class="secno">3.4 </span>Limited-use accounts</a></li><li class="tocline"><a class="tocxref" href="#non-interactive-checks"><span class="secno">3.5 </span>Non-interactive checks</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#spam-filtering"><span class="secno">3.5.1 </span>Spam filtering</a></li><li class="tocline"><a class="tocxref" href="#heuristic-checks-and-the-google-recaptcha"><span class="secno">3.5.2 </span>Heuristic checks and the Google reCAPTCHA</a></li></ol></li><li class="tocline"><a class="tocxref" href="#federated-identity-systems"><span class="secno">3.6 </span>Federated identity systems</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#single-sign-on"><span class="secno">3.6.1 </span>Single sign-on</a></li><li class="tocline"><a class="tocxref" href="#public-key-pki-infrastructure-solutions"><span class="secno">3.6.2 </span>Public-key (PKI) infrastructure solutions</a></li><li class="tocline"><a class="tocxref" href="#biometrics"><span class="secno">3.6.3 </span>Biometrics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#multiple-user-devices"><span class="secno">3.7 </span>Multiple user devices </a></li><li class="tocline"><a class="tocxref" href="#image-and-video"><span class="secno">3.8 </span>Image and video </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visual-comparison-captchas"><span class="secno">3.8.1 </span>Visual comparison CAPTCHAs </a></li><li class="tocline"><a class="tocxref" href="#x3d-captcha"><span class="secno">3.8.2 </span>3D CAPTCHA</a></li><li class="tocline"><a class="tocxref" href="#video-game-captcha"><span class="secno">3.8.3 </span>Video Game CAPTCHA</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#conclusion"><span class="secno">4. </span>Conclusion</a></li><li class="tocline"><a class="tocxref" href="#terms"><span class="secno">A. </span>Terms</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#contributors-to-this-version"><span class="secno">B.1 </span>Contributors to this version:</a></li><li class="tocline"><a class="tocxref" href="#contributors-to-the-previous-version"><span class="secno">B.2 </span>Contributors to the previous version:</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><span class="secno">B.3 </span>Enabling Funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">C. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">C.1 </span>Normative references</a></li></ol></li></ol></nav>
+                              This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as
+                              an Editor's Draft.
+                              
+                            </p><p>
+      
+      Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-apa@w3.org">public-apa@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>).
+            
+    </p><p>
+                              Publication as an Editor's Draft
+                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                              This is a draft document and may be updated,
+                              replaced or obsoleted by other documents at any
+                              time. It is inappropriate to cite this document as
+                              other than work in progress.
+                            </p><p>
+                      
+                              This document was produced by
+                              a group
+                              operating under the
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                      
+                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                                      <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent
+                                        disclosures</a>
+                              made in connection with the deliverables of
+                              the group; that page also includes
+                              instructions for disclosing a patent. An
+                              individual who has actual knowledge of a patent
+                              which the individual believes contains
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                              must disclose the information in accordance with
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                    </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#security-effectiveness"><span class="secno">2. </span>Security effectiveness</a></li><li class="tocline"><a class="tocxref" href="#types-of-captcha-and-access-implications"><span class="secno">3. </span>Types of CAPTCHA and access implications</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#traditional-character-based-captcha"><span class="secno">3.1 </span>Traditional character-based CAPTCHA</a></li><li class="tocline"><a class="tocxref" href="#logic-puzzles"><span class="secno">3.2 </span>Logic puzzles</a></li><li class="tocline"><a class="tocxref" href="#sound-output"><span class="secno">3.3 </span>Sound output</a></li><li class="tocline"><a class="tocxref" href="#limited-use-accounts"><span class="secno">3.4 </span>Limited-use accounts</a></li><li class="tocline"><a class="tocxref" href="#non-interactive-checks"><span class="secno">3.5 </span>Non-interactive checks</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#spam-filtering"><span class="secno">3.5.1 </span>Spam filtering</a></li><li class="tocline"><a class="tocxref" href="#heuristic-checks-and-the-google-recaptcha"><span class="secno">3.5.2 </span>Heuristic checks and the Google reCAPTCHA</a></li></ol></li><li class="tocline"><a class="tocxref" href="#federated-identity-systems"><span class="secno">3.6 </span>Federated identity systems</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#single-sign-on"><span class="secno">3.6.1 </span>Single sign-on</a></li><li class="tocline"><a class="tocxref" href="#public-key-pki-infrastructure-solutions"><span class="secno">3.6.2 </span>Public-key (PKI) infrastructure solutions</a></li><li class="tocline"><a class="tocxref" href="#biometrics"><span class="secno">3.6.3 </span>Biometrics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#multiple-user-devices"><span class="secno">3.7 </span>Multiple user devices </a></li><li class="tocline"><a class="tocxref" href="#image-and-video"><span class="secno">3.8 </span>Image and video </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visual-comparison-captchas"><span class="secno">3.8.1 </span>Visual comparison CAPTCHAs </a></li><li class="tocline"><a class="tocxref" href="#x3d-captcha"><span class="secno">3.8.2 </span>3D CAPTCHA</a></li><li class="tocline"><a class="tocxref" href="#video-game-captcha"><span class="secno">3.8.3 </span>Video Game CAPTCHA</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#conclusion"><span class="secno">4. </span>Conclusion</a></li><li class="tocline"><a class="tocxref" href="#terms"><span class="secno">A. </span>Terms</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#contributors-to-this-version"><span class="secno">B.1 </span>Contributors to this version:</a></li><li class="tocline"><a class="tocxref" href="#contributors-to-the-previous-version"><span class="secno">B.2 </span>Contributors to the previous version:</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><span class="secno">B.3 </span>Enabling Funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">C. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">C.1 </span>Normative references</a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
 			<p>Web sites with resources that are attractive to aggregators such as sign-up web pages, travel and event ticket sites, web-based email accounts, and social media portals have long taken measures to ensure that they can offer their service to individual users without exposing their data and content to <a href="#dfn-robots" class="internalDFN" data-link-type="dfn">web robots</a>.</p>
@@ -841,7 +823,7 @@ h6>a.self-link::before {
 		<section id="security-effectiveness">
 			<!--OddPage--><h2 id="x2-security-effectiveness"><span class="secno">2. </span>Security effectiveness<a class="self-link" aria-label="§" href="#security-effectiveness"></a></h2>
 			<p>It is important to acknowledge that using a <a href="#dfn-completely-automated-public-turing-test" class="internalDFN" data-link-type="dfn">CAPTCHA</a> as a security solution is becoming increasingly ineffective. Current CAPTCHA methods that rely primarily on traditional image-based approaches or logic problems can be largely cracked using both complex and simple computer algorithms. Research suggests that approximately 20% of traditional CAPTCHAs can be broken using OCR algorithms, for instance <cite>Machine learning and empathy: the Civil Rights CAPTCHA</cite> [<cite><a class="bibref" href="#bib-civil-rights-captcha">civil-rights-CAPTCHA</a></cite>] and <cite>A computer vision attack on the ARTiFACIAL CAPTCHA</cite> [<cite><a class="bibref" href="#bib-facial-captcha-attack">facial-CAPTCHA-attack</a></cite>].</p>
-			<div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class="">It is unclear from the article titles in those references that they relate to OCR, the subject of the sentence.</p></div>
+			<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class="">It is unclear from the article titles in those references that they relate to OCR, the subject of the sentence.</p></div>
 			<p>In addition, pattern-matching algorithms in some instances can achieve an even higher success rate of cracking CAPTCHAs , as demonstrated in <cite>CAPTCHA Security: A Case Study</cite> [<cite><a class="bibref" href="#bib-captcha-security">CAPTCHA-security</a></cite>] and <cite>HMM-based Attacks on Google’s reCAPTCHA with Continuous Visual and Audio Symbols</cite> [<cite><a class="bibref" href="#bib-recaptcha-attacks">reCAPTCHA-attacks</a></cite>]. While efforts are being made to strengthen traditional CAPTCHA security, more robust security solutions risk reducing the typical user’s ability to understand the CATPCHA that needs to be resolved, e.g., <cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite> [<cite><a class="bibref" href="#bib-defeat-line-noise">defeat-line-noise</a></cite>]. Furthermore, CAPTCHAs have been solved for good and ill through crowd sourcing, with the solutions sometimes stored for reuse.</p>
 			<p>Therefore it is highly recommended that alternative security methods, such as two-step or multi-device verification, are considered in preference to traditional image-based CAPTCHA methods for both security and accessibility reasons.</p>
 		</section>
