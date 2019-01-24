@@ -68,7 +68,7 @@
 			<section>
 				<h3>Non-interactive checks</h3>
 				<p>While <a>CAPTCHA</a> and other interactive approaches to limiting the activities of <a>web robots</a> are sometimes effective, they do make using a site more cumbersome. This is often unnecessary, as non-interactive mechanisms exist to check for spam or other invalid content typically introduced by robots.</p>
-				<p>This category contains three non-interactive approaches: <a>spam filtering</a>, in which an automated tool evaluates the <em>content</em> of a transaction, <a>heuristic</a> checks, which evaluate the <em>behavior</em> of the client, and honeypots which are designs intended to be ignored, or even to be invisible w to users while trapping robotic responses.</p>
+				<p>This category contains three non-interactive approaches: <a>spam filtering</a>, in which an automated tool evaluates the <em>content</em> of a transaction, <a>heuristic</a> checks, which evaluate the <em>behavior</em> of the client, and <a>honeypots</a> which are designs intended to be ignored, or even to be invisible w to users while trapping robotic responses.</p>
 				<section>
 					<h4>Spam filtering</h4>
 					<p>Applications that use <a>continuous authentication</a> and “hot words” to flag spam content, or <a>Bayesian filtering</a> to detect other patterns consistent with spam, are very popular, and quite effective. While such risk analysis systems may experience false negatives from time to time, properly-tuned systems can achieve results comparable to a traditional visual <a>CAPTCHA</a>, while also removing the added cognitive burden on the user and eliminating access barriers.</p>
@@ -189,6 +189,8 @@ technology correctly allow people with disabilities to identify themselves as hu
 				<dd>Mechanism to determine that a user is still the one previously verified without requiring constant re-authentication.</dd>
 				<dt><dfn data-lt="heuristics">heuristic</dfn></dt>
 				<dd>Way to solve a problem with good reliability but not perfection.</dd>
+				<dt><dfn data-lt="honeypot|honeypots">honeypot</dfn></dt>
+				<dd>A decoy service intended to elicit interaction from web robots.</dd>
 				<!--
 				<dt><dfn data-lt="hot words">hot word</dfn></dt>
 				<dd>@@</dd>
