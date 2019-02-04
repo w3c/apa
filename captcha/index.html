@@ -35,14 +35,14 @@
 			<h2>Stand-Alone Approaches</h2>
 			<p>There are many techniques available to web sites to discourage or eliminate fraudulent activities such as inappropriate account creation. Several of them may be as effective as the visual verification technique while being more accessible to people with disabilities. Others may be overlaid as an accommodation for the purposes of accessibility. The following list highlights common <a>CAPTCHA</a> types and their respective accessibility implications.</p>
 			<section>
-				<h3>Traditional character-based CAPTCHA</h3>
+				<h3>Traditional Character-Based CAPTCHA</h3>
 				<p>The traditional character-based <a>CAPTCHA</a>, as previously discussed, is largely inaccessible and insecure. It focuses on the presentation of letters or words presented in an image and designed to be difficult for <a>robots</a> to identify. The user is then asked to enter the CAPTCHA information into a form.</p>
 				<p>The use of a traditional CAPTCHA is obviously problematic for people who are blind, as the <a>screen readers</a> they rely on to use web content cannot process the image, thus preventing them from uncovering the information required by the form. Because the characters embedded in a CAPTCHA are often distorted or have other characters in close proximity to each other in order to foil technological solution by robots, they are also very difficult for users with other visual disabilities. This common CAPTCHA technique is also less reliably solved by users with cognitive and learning disabilities, see <cite>The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities</cite> [[captcha-ld]]. Because they’re intentionally distorted to foil robots, they also foil users who are more easily confused by surrealistic images or who do not possess sufficiently acute vision to “see” beyond the presented distortion and uncover the text the site
 					requires in order to proceed.</p>
 				<p>While some sites have begun providing CAPTCHAs utilizing languages other than English, an assumption that all web users can understand and reproduce English has predominated. Clearly, this is not the case. Native and literate Arabic or Thai speakers, for example, should not be assumed to possess a proficiency with the ISO 8859-1 character set [[iso-8859-1]], let alone ready access to a keyboard to facilitate their ready reproduction in the CAPTCHA's form field—demonstrating an important barrier imposed by CAPTCHAs based on written English and related language character sets; see <cite>Effects of Text Rotation, String Length, and Letter Format on Text-based CAPTCHA Robustness</cite> [[captcha-robustness]].</p>
 			</section>
 			<section>
-				<h3>Sound output</h3>
+				<h3>Sound Output</h3>
 				<p>To re-frame the problem, text is easy to manipulate, which is good for <a>assistive technologies</a>, but just as good for <a>robots</a>. One logical solution to this problem is to offer another non-textual method of using the same content. To achieve this, audio is played that contains a series of characters, words, or phrases being read out which the user then needs to enter into a form. As with visual <a>CAPTCHA</a> however, robots are also capable of recognizing spoken content—as Amazon’s Alexa and Android’s Google Assistant, among other spoken dialog systems, have so ably demonstrated. Consequently, the characters, words, or phrases the user is to uncover and transcribe in the form are also distorted in an audio CAPTCHA and are usually played over a sonic environment of obfuscating sounds.</p>
 				<p>The industry recognized this problem early. CNet reported in <a href="https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a> [[newscom]] that “Hotmail’s sound output, which is itself distorted to avoid the same programmatic abuse, was unintelligible to all four test subjects, all of whom had good hearing.”</p>
 				<p>If the sound output, which is itself distorted to avoid the same programmatic abuse, can render the CAPTCHA difficult to hear; there can also be confusion in understanding whether a number is to be entered as a numerical value or as a word, e.g. ‘7’ or ‘seven’. Often the audio CAPTCHA user will hear sounds which seem to be words or numerical values that should be entered, but turn out to be just background noise.</p>
@@ -61,16 +61,16 @@
 				<p>Where biometrics are used as an alternative to <a>CAPTCHA</a>, systems should be designed to allow users to choose among multiple and unrelated biometric identifiers. It should also be noted that biometrics can reliably and uniquely identify individuals making these identifiers highly attractive as login authentication mechanisms. This alternative is unsuitable, however, for applications in which it is necessary to preserve the user’s anonymity (i.e., the application is required to verify solely that the user is human, without obtaining identifying information).</p>
 			</section>
 			<section>
-				<h3>Limited-use accounts</h3>
+				<h3>Limited-Use Accounts</h3>
 				<p>Users of free accounts very rarely need full and immediate access to a site’s resources. For example, users who are searching for concert tickets may need to conduct only three searches a day, and new email users may only need to send the same notification of their new address to their friends. Sites may create policies that limit the frequency of interaction explicitly (that is, by disabling an account for the rest of the day) or implicitly (by slowing the response times incrementally). Creating limits for new users can be an effective means of making high-value sites unattractive targets to <a>robots</a>.</p>
 				<p>Drawbacks to this approach include the need to perform sufficient testing and data collection to determine useful limits that will serve human users yet frustrate robots. It requires site designers to look at statistics of normal and exceptional users, and determine whether clear demarcation exists between them.</p>
 			</section>
 			<section>
-				<h3>Non-interactive checks</h3>
+				<h3>Non-Interactive Checks</h3>
 				<p>While <a>CAPTCHA</a> and other interactive approaches to limiting the activities of <a>web robots</a> are sometimes effective, they do make using a site more cumbersome. This is often unnecessary, as non-interactive mechanisms exist to check for spam or other invalid content typically introduced by robots.</p>
 				<p>This category contains three non-interactive approaches: <a>spam filtering</a>, in which an automated tool evaluates the <em>content</em> of a transaction, <a>heuristic</a> checks, which evaluate the <em>behavior</em> of the client, and <a>honeypots</a> which are designs intended to be ignored, or even to be invisible to users while trapping robotic responses.</p>
 				<section>
-					<h4>Spam filtering</h4>
+					<h4>Spam Filtering</h4>
 					<p>Applications that use <a>continuous authentication</a> and “hot words” to flag spam content, or <a>Bayesian filtering</a> to detect other patterns consistent with spam, are very popular, and quite effective. While such risk analysis systems may experience false negatives from time to time, properly-tuned systems can achieve results comparable to a traditional visual <a>CAPTCHA</a>, while also removing the added cognitive burden on the user and eliminating access barriers.</p>
 					<p>Most major blogging software contains <a>spam filtering</a> capabilities, or can be fitted with a plug-in for this functionality. Many of these filters can automatically delete messages that reach a certain spam threshold, and mark questionable messages for manual moderation. More advanced systems can control attacks based on posting frequency, filter content sent using the <a href="https://movabletype.org/documentation/trackback/specification.html"> Trackback protocol</a>, and ban users by IP address range, temporarily or permanently.</p>
 				</section>
@@ -90,14 +90,14 @@
 				</section>
 			</section>
 				<section>
-					<h3>Logic puzzles</h3>
+					<h3>Logic Puzzles</h3>
 					<p>The goal of visual verification is to separate human from machine. One reasonable way to do this is to test for logic. Simple mathematical or word puzzles, trivia, or similar logic tests may raise the bar for <a>robots</a>, at least to the point where using them is more attractive elsewhere.</p>
 					<p>It should be noted that users with cognitive disabilities may still have difficulty with logic-puzzle CAPTCHA approaches. Answers may need to be handled flexibly, if they require free-form text. Also, a system would have to maintain a vast number of questions, or shift them around programmatically, in order to keep <a>spiders</a> from capturing them all for use by web robots. This approach is also more likely subject to defeat by human operators engaged in crowd-sourcing activity on behalf of attackers.</p>
 				</section>
 				<section>
-					<h3>Image and video</h3>
+					<h3>Image and Video</h3>
 					<section>
-						<h4>Visual comparison CAPTCHAs</h4>
+						<h4>Visual Comparison CAPTCHAs</h4>
 						<p>There are a number of <a>CAPTCHA</a> techniques based on the identification of still images. This can include requiring the user to identify whether an image is a man or a woman, or whether an image is human-shaped or avatar-shaped among other comparison approaches, such as <cite>CAPTCHAStar! A novel CAPTCHA based on interactive shape discovery</cite>, [[captchastar]], <cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite> [[facecaptcha]], and <cite>Social and egocentric image classification for scientific and privacy applications</cite> [[social-classification]].</p>
 						<p>While alternative audio comparison CAPTCHAs could be provided such as using similar or different sounds for comparison, the reliance on visual comparison alone would make these techniques difficult, if not impossible for people with vision-related disabilities to use.</p>
 					</section>
@@ -125,14 +125,14 @@
 			<p>We would expect Google's V. 3 reCAPTCHA system would score no need to present a CAPTCHA whenever another browser tab is already properly logged in to a Google product such as Calendar on whatever registered user device. However, while this may prevent the third party site from collecting personal data, it does assist Google in acquiring more user data.  This constitutes a significant cost to the user's privacy in an industry so capable of cross-referencing massive ammounts of data in the absence of meaningful regulations and controls on where and how that data may be used. This is a very strong accessibility concern as people with disabilities are generally loath to disclose any information about their disability except when and only when they expressly authorize it to be revealed. Regretably, in recent years the news has widely reported the sobering fact that an authenticated login on some service also does not a human user guarantee.</p>
 			</section>
 			<section>
-				<h3>Federated identity systems</h3>
+				<h3>Federated Identity Systems</h3>
 				<p>Many large companies such as Microsoft, Apple, Amazon, Google and the <a href="https://kantarainitiative.org/">Kantara Initiative</a> have created competing “federated network identity” systems, which can allow a user to create an account, set his or her preferences, payment data, etc., and have that data persist across all sites and devices that use the same service. Due to large companies now requiring a federated identity to use cloud-based services on their respective digital ecosystems, the popularity of federated identities has increased significantly. As a result, many web sites and services allow a portable form of authentication and identification across the Web. Perhaps some of these could also provide cross-site CAPTCHA services.</p>
 				<section>
-					<h4>Single sign-on</h4>
+					<h4>Single Sign-On</h4>
 					<p>Single sign-on services provide multiple disparate services to users, including to third parties through APIs. Because of this wide scope, they need to be among the most accessible services on the Web in order to offer equal benefits to people with disabilities. They also pose two significant risks for users. One is the aforementioned opportunity to collect massive amounts of personal data. The other risk comes into play should user credentials ever be exposed where users can suddenly find themselves exposed on multiple sites.</p>
 				</section>
 				<section>
-					<h4>Public-key (PKI) infrastructure approaches</h4>
+					<h4>Public-Key Infrastructure (PKI) Approaches</h4>
 					<p>Another approach is to use certificates for individuals who wish to verify their identity. The certificate can be issued in such a way as to ensure something close to a one-person-one-vote system e.g. by issuing these certificates in person and enabling users to develop distributed trust networks, or by having these certificates issued from highly trusted authorities such as governments as in <a href="https://e-resident.gov.ee/">Estonia's e-Residency Program</a> whose certificates can be trusted not only to validate a human user but also to provide an unimpeachable audit trail should issues arise.</p>
 					<p>The cost of creating fraudulent certificates needs to be high enough to destroy the value of producing them in most cases. Sites would need to use mechanisms which are widely implemented in user agents.</p>
 
@@ -216,7 +216,7 @@ technology correctly allow people with disabilities to identify themselves as hu
 		<section class="appendix">
 			<h2>Acknowledgments</h2>
 			<section>
-				<h3>Contributors to this version:</h3>
+				<h3>Contributors to This Version:</h3>
 				<ul>
 					<li>Judy Brewer, W3C</li>
 					<li>Michael Cooper, W3C</li>
@@ -228,7 +228,7 @@ technology correctly allow people with disabilities to identify themselves as hu
 				</ul>
 			</section>
 			<section>
-				<h3>Contributors to the previous version:</h3>
+				<h3>Contributors to the Previous Version:</h3>
 				<ul>
 					<li>Kentarou Fukuda</li>
 					<li>Marc-Antoine Garrigue</li>
