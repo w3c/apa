@@ -1,37 +1,16 @@
-<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 24.2.5"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
-div.issue-title, div.note-title , div.ednote-title, div.warning-title {
-    padding-right:  1em;
-    min-width: 7.5em;
-    color: #b9ab2d;
+<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 24.5.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+.issue-label {
+    text-transform: initial;
 }
-div.issue-title { color: #e05252; }
-div.note-title, div.ednote-title { color: #2b2; }
-div.warning-title { color: #f22; }
-div.issue-title span, div.note-title span, div.ednote-title span, div.warning-title span {
-    text-transform: uppercase;
-}
-div.note, div.issue, div.ednote, div.warning {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
+
 .warning > p:first-child { margin-top: 0 }
 .warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
 }
-div.issue, div.note , div.ednote,  div.warning {
-    padding: 1em 1.2em 0.5em;
-    margin: 1em 0;
-    position: relative;
-    clear: both;
-}
 span.warning { padding: .1em .5em .15em; }
 
-.issue {
-    border-color: #e05252;
-    background: #fbe9e9;
-}
 .issue.closed span.issue-number {
     text-decoration: line-through;
 }
@@ -72,6 +51,7 @@ input.task-list-item-checkbox {
   border-radius: 4px;
   position: relative;
   bottom: 2px;
+  border: none;
 }
 
 .issue a.respec-label-dark {
@@ -348,11 +328,11 @@ h6>a.self-link::before {
     display: none;
   }
 }
-</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"><link rel="canonical" href="https://www.w3.org/TR/media-accessibility-reqs/"><script id="initialUserConfig" type="application/json">{
+</style><link rel="canonical" href="https://www.w3.org/TR/media-accessibility-reqs/"><script id="initialUserConfig" type="application/json">{
   "specStatus": "WD",
   "processVersion": "2005",
   "shortName": "media-accessibility-reqs",
-  "publishDate": "2019-02-06",
+  "publishDate": "2019-03-18",
   "copyrightStart": "2012",
   "license": "document",
   "previousPublishDate": "2014-08-14",
@@ -418,23 +398,23 @@ h6>a.self-link::before {
   "maxTocLevel": 2,
   "tocIntroductory": true,
   "doRDFa": 1.1,
-  "publishISODate": "2019-02-06T00:00:00.000Z",
-  "generatedSubtitle": "Working Draft 06 February 2019"
+  "publishISODate": "2019-03-18T00:00:00.000Z",
+  "generatedSubtitle": "Working Draft 18 March 2019"
 }</script><meta name="description" content="This document presents the accessibility requirements users with disabilities have
-            with respect to audio and video on the web."></head>
-	<body class="h-entry toc-inline"><div class="head">
+            with respect to audio and video on the web."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"></head>
+	<body class="h-entry informative toc-inline"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Media Accessibility User Requirements</h1>
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Working Draft
-        <time class="dt-published" datetime="2019-02-06">06 February 2019</time>
+        <time class="dt-published" datetime="2019-03-18">18 March 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
-                  <a class="u-url" href="https://www.w3.org/TR/2019/WD-media-accessibility-reqs-20190206/">https://www.w3.org/TR/2019/WD-media-accessibility-reqs-20190206/</a>
-                </dd><dt>Latest published version:</dt><dd>
-                  <a href="https://www.w3.org/TR/media-accessibility-reqs/">https://www.w3.org/TR/media-accessibility-reqs/</a>
-                </dd>
+                <a class="u-url" href="https://www.w3.org/TR/2019/WD-media-accessibility-reqs-20190318/">https://www.w3.org/TR/2019/WD-media-accessibility-reqs-20190318/</a>
+              </dd><dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/media-accessibility-reqs/">https://www.w3.org/TR/media-accessibility-reqs/</a>
+              </dd>
         <dt>Latest editor's draft:</dt><dd><a href="http://w3c.github.io/pfwg/media-accessibility-reqs/">http://w3c.github.io/pfwg/media-accessibility-reqs/</a></dd>
         
         
@@ -452,8 +432,8 @@ h6>a.self-link::before {
           </dd>
         
         <dt>
-                  Authors:
-                </dt><dd class="p-author h-card vcard"><span class="p-name fn">Judy Brewer</span>
+                Authors:
+              </dt><dd class="p-author h-card vcard"><span class="p-name fn">Judy Brewer</span>
             (<a class="p-org org h-org h-card" href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a>)
           </dd><dd class="p-author h-card vcard"><span class="p-name fn">Eric Carlson</span>
             (<a class="p-org org h-org h-card" href="http://www.apple.com/">Apple, Inc.</a>)
@@ -480,7 +460,7 @@ h6>a.self-link::before {
       
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
       <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
       <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
       apply.
@@ -513,49 +493,47 @@ h6>a.self-link::before {
         <p>This document is reasonably stable, and represents a consensus within the Working Group.  The Working Group is looking for
         feedback prior to publication as a Note.</p>
 		<p>
-                              This document was published by the <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working Group</a> as
-                              a Working Draft.
-                              This document is intended to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
-                            </p><p>
+                        This document was published by the <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working Group</a> as
+                        a Working Draft.
+                        This document is intended to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+                      </p><p>
       
       Comments regarding this document are welcome.
-              Please send them to
-              <a href="mailto:public-PFWG-comments@w3.org">public-PFWG-comments@w3.org</a>
-              (<a href="https://lists.w3.org/Archives/Public/public-PFWG-comments/">archives</a>).
-            
+            Please send them to
+            <a href="mailto:public-PFWG-comments@w3.org">public-PFWG-comments@w3.org</a>
+            (<a href="https://lists.w3.org/Archives/Public/public-PFWG-comments/">archives</a>).
+          
     </p><p>
-                              Publication as a Working Draft
-                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                              This is a draft document and may be updated,
-                              replaced or obsoleted by other documents at any
-                              time. It is inappropriate to cite this document as
-                              other than work in progress.
-                            </p><p>
+                        Publication as a Working Draft does not
+                        imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft
+                        document and may be updated, replaced or obsoleted by
+                        other documents at any time. It is inappropriate to cite
+                        this document as other than work in progress.
+                      </p><p>
+                  
+                        This document was produced by
+                        a group operating
+                        under the
+                        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
                       
-                              This document was produced by
-                              a group
-                              operating under the
-                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                            
+                  
+                  
+                              <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                              <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures</a>
+                        made in connection with the deliverables of
+                        the group; that page also includes
+                        instructions for disclosing a patent. An individual who
+                        has actual knowledge of a patent which the individual
+                        believes contains
+                        <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                        must disclose the information in accordance with
+                        <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
                       
-                      
-                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                                      <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent
-                                        disclosures</a>
-                              made in connection with the deliverables of
-                              the group; that page also includes
-                              instructions for disclosing a patent. An
-                              individual who has actual knowledge of a patent
-                              which the individual believes contains
-                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                              must disclose the information in accordance with
-                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                            
-                      
-                    </p><p>
-                      This document is governed by the
-                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#summary-of-accessible-media-requirements-by-type-of-disability"><span class="secno">1. </span>Summary of Accessible Media Requirements by Type of Disability </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visual-blindness"><span class="secno">1.1 </span>Visual: Blindness </a></li><li class="tocline"><a class="tocxref" href="#visual-low-vision"><span class="secno">1.2 </span>Visual: Low vision </a></li><li class="tocline"><a class="tocxref" href="#visual-atypical-color-perception"><span class="secno">1.3 </span>Visual: Atypical color perception </a></li><li class="tocline"><a class="tocxref" href="#auditory-deafness"><span class="secno">1.4 </span>Auditory: Deafness </a></li><li class="tocline"><a class="tocxref" href="#auditory-hard-of-hearing"><span class="secno">1.5 </span>Auditory: Hard of hearing </a></li><li class="tocline"><a class="tocxref" href="#auditory-visual-deaf-blind"><span class="secno">1.6 </span>Auditory &amp; Visual: Deaf-blind </a></li><li class="tocline"><a class="tocxref" href="#physical-impairment"><span class="secno">1.7 </span> Physical impairment </a></li><li class="tocline"><a class="tocxref" href="#cognitive-disabilities"><span class="secno">1.8 </span> Cognitive disabilities </a></li></ol></li><li class="tocline"><a class="tocxref" href="#alternative-content-technologies"><span class="secno">2. </span> Alternative Content Technologies </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#described-video"><span class="secno">2.1 </span> Described video </a></li><li class="tocline"><a class="tocxref" href="#text-video-description"><span class="secno">2.2 </span> Text video description </a></li><li class="tocline"><a class="tocxref" href="#extended-video-descriptions"><span class="secno">2.3 </span> Extended video descriptions </a></li><li class="tocline"><a class="tocxref" href="#clean-audio"><span class="secno">2.4 </span> Clean audio </a></li><li class="tocline"><a class="tocxref" href="#contentnav"><span class="secno">2.5 </span> Content navigation by content structure </a></li><li class="tocline"><a class="tocxref" href="#captioning"><span class="secno">2.6 </span> Captioning </a></li><li class="tocline"><a class="tocxref" href="#enhanced-captions-subtitles"><span class="secno">2.7 </span> Enhanced captions/subtitles </a></li><li class="tocline"><a class="tocxref" href="#sign-translation"><span class="secno">2.8 </span> Sign translation </a></li><li class="tocline"><a class="tocxref" href="#transcripts"><span class="secno">2.9 </span> Transcripts </a></li></ol></li><li class="tocline"><a class="tocxref" href="#system-requirements"><span class="secno">3. </span> System Requirements </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#access-to-interactive-controls-menus"><span class="secno">3.1 </span> Access to interactive controls / menus </a></li><li class="tocline"><a class="tocxref" href="#granularity-level-control-for-structural-navigation"><span class="secno">3.2 </span> Granularity level control for structural navigation </a></li><li class="tocline"><a class="tocxref" href="#time-scale-modification"><span class="secno">3.3 </span> Time-scale modification </a></li><li class="tocline"><a class="tocxref" href="#production-practice-and-resulting-requirements"><span class="secno">3.4 </span> Production practice and resulting requirements </a></li><li class="tocline"><a class="tocxref" href="#discovery-and-activation-deactivation-of-available-alternative-content-by-the-user"><span class="secno">3.5 </span> Discovery and activation/deactivation of available alternative content
+                  
+                </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#summary-of-accessible-media-requirements-by-type-of-disability"><span class="secno">1. </span>Summary of Accessible Media Requirements by Type of Disability </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visual-blindness"><span class="secno">1.1 </span>Visual: Blindness </a></li><li class="tocline"><a class="tocxref" href="#visual-low-vision"><span class="secno">1.2 </span>Visual: Low vision </a></li><li class="tocline"><a class="tocxref" href="#visual-atypical-color-perception"><span class="secno">1.3 </span>Visual: Atypical color perception </a></li><li class="tocline"><a class="tocxref" href="#auditory-deafness"><span class="secno">1.4 </span>Auditory: Deafness </a></li><li class="tocline"><a class="tocxref" href="#auditory-hard-of-hearing"><span class="secno">1.5 </span>Auditory: Hard of hearing </a></li><li class="tocline"><a class="tocxref" href="#auditory-visual-deaf-blind"><span class="secno">1.6 </span>Auditory &amp; Visual: Deaf-blind </a></li><li class="tocline"><a class="tocxref" href="#physical-impairment"><span class="secno">1.7 </span> Physical impairment </a></li><li class="tocline"><a class="tocxref" href="#cognitive-disabilities"><span class="secno">1.8 </span> Cognitive disabilities </a></li></ol></li><li class="tocline"><a class="tocxref" href="#alternative-content-technologies"><span class="secno">2. </span> Alternative Content Technologies </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#described-video"><span class="secno">2.1 </span> Described video </a></li><li class="tocline"><a class="tocxref" href="#text-video-description"><span class="secno">2.2 </span> Text video description </a></li><li class="tocline"><a class="tocxref" href="#extended-video-descriptions"><span class="secno">2.3 </span> Extended video descriptions </a></li><li class="tocline"><a class="tocxref" href="#clean-audio"><span class="secno">2.4 </span> Clean audio </a></li><li class="tocline"><a class="tocxref" href="#contentnav"><span class="secno">2.5 </span> Content navigation by content structure </a></li><li class="tocline"><a class="tocxref" href="#captioning"><span class="secno">2.6 </span> Captioning </a></li><li class="tocline"><a class="tocxref" href="#enhanced-captions-subtitles"><span class="secno">2.7 </span> Enhanced captions/subtitles </a></li><li class="tocline"><a class="tocxref" href="#sign-translation"><span class="secno">2.8 </span> Sign translation </a></li><li class="tocline"><a class="tocxref" href="#transcripts"><span class="secno">2.9 </span> Transcripts </a></li></ol></li><li class="tocline"><a class="tocxref" href="#system-requirements"><span class="secno">3. </span> System Requirements </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#access-to-interactive-controls-menus"><span class="secno">3.1 </span> Access to interactive controls / menus </a></li><li class="tocline"><a class="tocxref" href="#granularity-level-control-for-structural-navigation"><span class="secno">3.2 </span> Granularity level control for structural navigation </a></li><li class="tocline"><a class="tocxref" href="#time-scale-modification"><span class="secno">3.3 </span> Time-scale modification </a></li><li class="tocline"><a class="tocxref" href="#production-practice-and-resulting-requirements"><span class="secno">3.4 </span> Production practice and resulting requirements </a></li><li class="tocline"><a class="tocxref" href="#discovery-and-activation-deactivation-of-available-alternative-content-by-the-user"><span class="secno">3.5 </span> Discovery and activation/deactivation of available alternative content
       by the user </a></li><li class="tocline"><a class="tocxref" href="#requirements-on-making-properties-available-to-the-accessibility-interface"><span class="secno">3.6 </span> Requirements on making properties available to the accessibility interface </a></li><li class="tocline"><a class="tocxref" href="#requirements-on-the-use-of-the-viewport"><span class="secno">3.7 </span> Requirements on the use of the viewport </a></li><li class="tocline"><a class="tocxref" href="#requirements-on-secondary-screens-and-other-devices"><span class="secno">3.8 </span>Requirements on secondary screens and other devices</a></li></ol></li><li class="tocline"><a class="tocxref" href="#A_checklist"><span class="secno">A. </span>Media Accessibility User Requirements Checklist</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">B.1 </span>Participants and Contributors</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">B.2 </span>Enabling funders</a></li></ol></li></ol></nav>
 		<!-- <section>
 			<h2> Media Accessibility Checklist </h2>
