@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 24.6.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8"><meta name="generator" content="ReSpec 24.18.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -93,6 +93,19 @@ input.task-list-item-checkbox {
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
 
+@keyframes pop {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.25, 1.25);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 /* Override code highlighter background */
 .hljs {
   background: transparent !important;
@@ -129,8 +142,34 @@ a.bibref {
   text-decoration: none;
 }
 
+.respec-offending-element:target {
+  animation: pop 0.25s ease-in-out 0s 1;
+}
+
+/* TODO: Remove once https://github.com/w3c/tr-design/pull/176 is merged. */
+.respec-offending-element a[href] {
+  margin: 0;
+}
+
+.respec-offending-element {
+  display: inline-block;
+  position: relative;
+  /* Red squiggly line */
+  background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
+    bottom repeat-x;
+}
+@supports (text-decoration-style: wavy) {
+  .respec-offending-element {
+    background: none;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+  }
+}
+
 #references :target {
   background: #eaf3ff;
+  animation: pop 0.4s ease-in-out 0s 1;
 }
 
 cite .bibref {
@@ -143,6 +182,15 @@ code {
 
 th code {
   color: inherit;
+}
+
+a[href].orcid {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+a[href].orcid > svg {
+    margin-bottom: -2px;
 }
 
 /* --- TOC --- */
@@ -199,11 +247,11 @@ table.simple {
 
 /* --- DL --- */
 
-.section dd>p:first-child {
+.section dd > p:first-child {
   margin-top: 0;
 }
 
-.section dd>p:last-child {
+.section dd > p:last-child {
   margin-bottom: 0;
 }
 
@@ -216,7 +264,7 @@ table.simple {
   margin-bottom: 0;
 }
 
-#issue-summary>ul,
+#issue-summary > ul,
 .respec-dfn-list {
   column-count: 2;
 }
@@ -232,7 +280,7 @@ details.respec-tests-details {
   vertical-align: top;
 }
 
-details.respec-tests-details>* {
+details.respec-tests-details > * {
   padding-right: 2em;
 }
 
@@ -245,19 +293,19 @@ details.respec-tests-details[open] {
   padding-bottom: 0.5em;
 }
 
-details.respec-tests-details[open]>summary {
+details.respec-tests-details[open] > summary {
   border-bottom: thin solid #cad3e2;
   padding-left: 1em;
   margin-bottom: 1em;
   line-height: 2em;
 }
 
-details.respec-tests-details>ul {
+details.respec-tests-details > ul {
   width: 100%;
   margin-top: -0.3em;
 }
 
-details.respec-tests-details>li {
+details.respec-tests-details > li {
   padding-left: 1em;
 }
 
@@ -279,30 +327,30 @@ aside.example .marker > a.self-link {
   color: inherit;
 }
 
-h2>a.self-link,
-h3>a.self-link,
-h4>a.self-link,
-h5>a.self-link,
-h6>a.self-link {
+h2 > a.self-link,
+h3 > a.self-link,
+h4 > a.self-link,
+h5 > a.self-link,
+h6 > a.self-link {
   border: none;
   color: inherit;
   font-size: 83%;
   height: 2em;
   left: -1.6em;
-  opacity: .5;
+  opacity: 0.5;
   position: absolute;
   text-align: center;
   text-decoration: none;
   top: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
   width: 2em;
 }
 
-h2>a.self-link::before,
-h3>a.self-link::before,
-h4>a.self-link::before,
-h5>a.self-link::before,
-h6>a.self-link::before {
+h2 > a.self-link::before,
+h3 > a.self-link::before,
+h4 > a.self-link::before,
+h5 > a.self-link::before,
+h6 > a.self-link::before {
   content: "§";
   display: block;
 }
@@ -313,11 +361,11 @@ h6>a.self-link::before {
   }
 
   /* Don't position self-link in headings off-screen */
-  h2>a.self-link,
-  h3>a.self-link,
-  h4>a.self-link,
-  h5>a.self-link,
-  h6>a.self-link {
+  h2 > a.self-link,
+  h3 > a.self-link,
+  h4 > a.self-link,
+  h5 > a.self-link,
+  h6 > a.self-link {
     left: auto;
     top: auto;
   }
@@ -328,7 +376,51 @@ h6>a.self-link::before {
     display: none;
   }
 }
-</style><link rel="canonical" href="https://www.w3.org/TR/payment-accessibility-reqs/"><script id="initialUserConfig" type="application/json">{
+</style><link rel="canonical" href="https://www.w3.org/TR/payment-accessibility-reqs/"><style>var {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+var[data-type]::before,
+var[data-type]::after {
+  position: absolute;
+  left: 50%;
+  top: -6px;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+/* the triangle or arrow or caret or whatever */
+var[data-type]::before {
+  content: "";
+  transform: translateX(-50%);
+  border-width: 4px 6px 0 6px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #000;
+}
+
+/* actual text */
+var[data-type]::after {
+  content: attr(data-type);
+  transform: translateX(-50%) translateY(-100%);
+  background: #000;
+  text-align: center;
+  /* additional styling */
+  font-family: "Dank Mono", "Fira Code", monospace;
+  font-style: normal;
+  padding: 6px;
+  border-radius: 3px;
+  color: #daca88;
+}
+
+var[data-type]:hover::after,
+var[data-type]:hover::before {
+  opacity: 1;
+}
+</style><script id="initialUserConfig" type="application/json">{
   "specStatus": "ED",
   "processVersion": "2005",
   "shortName": "payment-accessibility-reqs",
@@ -356,17 +448,17 @@ h6>a.self-link::before {
   "maxTocLevel": 2,
   "tocIntroductory": true,
   "doRDFa": 1.1,
-  "publishDate": "2019-03-26",
-  "publishISODate": "2019-03-26T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 26 March 2019"
+  "publishDate": "2019-04-22",
+  "publishISODate": "2019-04-22T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 22 April 2019"
 }</script><meta name="description" content="This document presents the accessibility requirements users with disabilities have
     with respect to making payments on the web."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 <body class="h-entry informative toc-inline"><div class="head">
-      <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Payment Accessibility User Requirements</h1>
+      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Payment Accessibility User Requirements</h1>
       
       <h2>
-        <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-03-26">26 March 2019</time>
+        W3C Editor's Draft
+        <time class="dt-published" datetime="2019-04-22">22 April 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -404,7 +496,7 @@ h6>a.self-link::before {
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
       <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
       <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
       apply.
     </p>
@@ -446,33 +538,29 @@ h6>a.self-link::before {
             (<a href="https://lists.w3.org/Archives/Public/public-APA-comments/">archives</a>).
           
     </p><p>
-                        Publication as an Editor's Draft does not
-                        imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft
-                        document and may be updated, replaced or obsoleted by
-                        other documents at any time. It is inappropriate to cite
-                        this document as other than work in progress.
-                      </p><p>
-                  
-                        This document was produced by
-                        a group operating
-                        under the
-                        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                      
-                  
-                  
-                              <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                              <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures</a>
-                        made in connection with the deliverables of
-                        the group; that page also includes
-                        instructions for disclosing a patent. An individual who
-                        has actual knowledge of a patent which the individual
-                        believes contains
-                        <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                        must disclose the information in accordance with
-                        <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                      
-                  
-                </p><p>
+      Publication as an Editor's Draft does not imply endorsement by the
+      <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or
+      obsoleted by other documents at any time. It is inappropriate to cite this
+      document as other than work in progress.
+    </p><p>
+      
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+       
+      
+                  <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                  <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures</a>
+            made in connection with the deliverables of
+            the group; that page also includes
+            instructions for disclosing a patent. An individual who has actual
+            knowledge of a patent which the individual believes contains
+            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+            must disclose the information in accordance with
+            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          
+      
+    </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#S_types"><span class="secno">1. </span>Summary of Accessible Payment Requirements by Type of Disability </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visual-blindness"><span class="secno">1.1 </span>Visual: Blindness </a></li><li class="tocline"><a class="tocxref" href="#visual-low-vision"><span class="secno">1.2 </span>Visual: Low vision </a></li><li class="tocline"><a class="tocxref" href="#visual-atypical-color-perception"><span class="secno">1.3 </span>Visual: Atypical color perception </a></li><li class="tocline"><a class="tocxref" href="#auditory-visual-deaf-blind"><span class="secno">1.4 </span>Auditory &amp; Visual: Deaf-blind </a></li><li class="tocline"><a class="tocxref" href="#physical-impairment"><span class="secno">1.5 </span> Physical impairment </a></li><li class="tocline"><a class="tocxref" href="#cognitive-disabilities"><span class="secno">1.6 </span> Cognitive disabilities </a></li></ol></li><li class="tocline"><a class="tocxref" href="#S_alternative_technologies"><span class="secno">2. </span>Alternative Content Technologies </a></li><li class="tocline"><a class="tocxref" href="#S_system_requirements"><span class="secno">3. </span> System Requirements </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#access-to-interactive-controls-menus"><span class="secno">3.1 </span> Access to interactive controls / menus </a></li><li class="tocline"><a class="tocxref" href="#requirements-on-making-properties-available-to-the-accessibility-interface"><span class="secno">3.2 </span> Requirements on making properties available to the accessibility interface </a></li></ol></li><li class="tocline"><a class="tocxref" href="#S_acknowledgements"><span class="secno">A. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">A.1 </span>Participants and Contributors</a></li></ol></li></ol></nav>
