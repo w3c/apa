@@ -31,7 +31,7 @@ their interacting user is a human individual, and not a software robot. Arguably
 			<p>An early (and still widespread) solution relies on the use of graphical representations of text in registration or comment areas of a web site. The site attempts to verify that the user is in fact a human by requiring the user to complete a task referred to as a Completely Automated Public <a>Turing Test</a>, or <a>CAPTCHA</a>. The assumption is that humans find this task relatively easy, while robots find it nearly impossible to perform.</p>
 			<p>The CAPTCHA was <a href="CAPTCHA.net">initially developed by researchers at Carnegie Mellon University</a> and has been primarily associated with a technique whereby an individual identifies a distorted set of characters in a bit-mapped image, then enters those characters into a web form. This approach is widely familiar to users of the web, though the term CAPTCHA is generally recognized only by web professionals.</p>
 			<p>In recent times the types of CAPTCHA that appear on web sites and mobile apps have changed significantly. Since our concern here is the accessibility of systems that seek to distinguish human users from their robotic impersonators, the term “CAPTCHA” is used in this document generically to refer to all approaches which are specifically designed to differentiate a human from a computer, including fully noninteractive approaches.</p>
-			<p>It will surprise noone that we applaud the onset of noninteractive approaches because functional noninteractive approaches pose no accessibility challenge to users. Unfortunately,  current noninteractive approaches come at the price of exposing much data about the individual user to the noninteractive host analysis engine that user might rather prefer to keep confidential. We are further heartened by the even more recent development of tokenized approaches that promise trustable Turing testing requiring only minimal interaction with users.</p>
+			<p>It will surprise noone that we applaud the recent emergence of noninteractive approaches because functional noninteractive approaches pose no accessibility challenge to users. Unfortunately,  current noninteractive approaches come at the price of exposing much data about the individual user to the noninteractive host analysis engine that user might rather prefer to keep confidential. We are further heartened by the even more recent development of tokenized approaches that promise trustable Turing testing requiring only minimal interaction with users.</p>
 		</section>
 			                <section>
 						                        <h3>The Accessibility Challenge</h3>
@@ -139,10 +139,11 @@ their interacting user is a human individual, and not a software robot. Arguably
 			<h2>Multi-Party Approaches</h2>
 			<section>
 			<h3>The Google reCAPTCHA</h3>
+			<section>
+			<h4>Version 2: Are you a robot?</h4>
 			<p>Acquired in 2009 from Carnegie Mellon University, <a href="https://www.google.com/reCAPTCHA/">Google's reCAPTCHA</a> overwhelmingly dominates CAPTCHA deployment on the web today. Version 2 of reCAPTCHA continues to provide an API that has been most effectively marketed as the "no CAPTCHA re CAPTCHA," and it's checkbox proclaiming: "I'm not a robot" has become a cultural icon, spawning various cultural offshoots in art, theater, and popular music.</p>
 			<p>The checkbox is, of course, no checkbox at all in the traditional HTML sense. The <a href="https://termsfeed.com/blog/privacy-policy-recaptcha/">pseudo-checkbox process</a> works by collecting a trove of user data well beyond mouse movement and keyboard navigation, including The date, the language the browser is set to, All cookies placed by Google over the last 6 months, CSS information for that page, an inventory of mouse clicks made on that screen (or touches if on a touch device), an inventory of plugins installed on the browser, and an itemization of All Javascript objects, all to determine whether the user is human or robot. Of course Google also generally knows much about individual users, including their customary IP addresses, the telephone numbers and email addresses of their friends, family and colleagues, where they have been at every moment of every day, as well as their web search and YouTube habits. This is why the simple checkbox can keep the CAPTCHA process disarmingly simple, though it also explains why a link to Google's privacy policy always accompanies the "no CAPTCHA reCAPTCHA". Disclosure and certain provisions of the Privacy Policy are required to satisfy legal requirements in California and in the E.U.</p>
 			<p>Even though specific WCAG failures were often noted, Google's reCAPTCHA V2 was for a time regarded the most accessible CAPTCHA solution for one simple reason, it was capable of being comfortably completed using a variety of <a>assistive technologies</a>. More recently it has been widely observed that utilizing keyboard navigation, as many assistive technology users do, no longer works. Instead, users are presented with a traditional inaccessible CAPTCHA as a fall-back mechanism. Our own tests with various browsers on various operating environments have been generally successful with Google's own <a href="http://www.google.com/recaptcha/api2/demo">reCAPTCHA test page</a>. However, browsing in incognito mode, clearing or blocking cookies, and additional factors can apparently trigger a fallback to traditional CAPTCHA these days for many assistive technology users.</p>
-
 
 <p>One recent reCAPTCHA V. 2 innovation has seemed most
 promising. Rather than reproduce characters, users are
@@ -155,13 +156,41 @@ being provided. Instead users see a message that reads:
 "Your computer or network may be sending automated
 queries. To protect our users, we can't process your
 request right now." </p>
+			</section>
+			<section>
+			<h4>The Noninteractive Version 3</h4>
 
-			<p>Late in 2018 Google released <a href="https://webmasters.googleblog.com/2018/10/introducing-reCAPTCHA-v3-new-way-to.html"> reCAPTCHA V3</a> promissing to eliminate "the need to interrupt users with challenges at all." Obviously, this would be ideal, and we believe Google has adopted several strategies recommended here toward achieving that goal. However, as the failure fallback remains the presentation of a traditional CAPTCHA, it remains imperative to do better by users who require alternative CAPTCHA options as also enumerated here.</p>
-			<p>In this context we note that it has become common for users to access various on line services through multiple devices such as desktop and mobile computers, smart phones, tablets, and wearables such as smart watches. This proliferation provides online services multiple vectors for <cite>simple and effective user authentication, including persons with disabilities</cite> [[auth-mult]]. We note that several major service providers (such as Facebook) now support cross-site user authentication. As of this writing however, it appears only <a href="https://developers.google.com/recaptcha/docs/v3">Google's V. 3 reCAPTCHA API</a> provides cross-site CAPTCHA services, i.e. a service to distinguish human from robot users without actually passing specific identifying data.</p>
-			<p>We would expect Google's V. 3 reCAPTCHA system would score no need to present a CAPTCHA whenever another browser tab is already properly logged in to a Google product such as Calendar on whatever registered user device. However, while this may prevent the third party site from collecting personal data, it does assist Google in acquiring more user data.  This constitutes a significant cost to the user's privacy in an industry so capable of cross-referencing massive ammounts of data in the absence of meaningful regulations and controls on where and how that data may be used. This is a very strong accessibility concern as people with disabilities are generally loath to disclose any information about their disability except when and only when they expressly authorize it to be revealed.</p>
+<p>Late in 2018 Google released <a
+					href="https://webmasters.googleblog.com/2018/10/introducing-reCAPTCHA-v3-new-way-to.html">
+	reCAPTCHA V3</a> promissing to eliminate "the need to interrupt users
+with challenges at all." <a
+	href="https://lists.w3.org/Archives/Public/public-rqtf/2019Mar/0019.html">Google
+	also informed us</a> that their goals with V.3 included increasing "the
+accessibility of the web by removing traditional CAPTCHAs" entirely.
+Obviously, fully noninteractive Turing testing is a most welcome development
+direction for accessibility. When the noninteractive Turing test returns a
+score indicating high confidence that the user is human, or indeed a score
+indicating high confidence that the user is a robot, and experience has
+demonstrated the noninteractive engine is reliable, we can only offer praise
+and gratitude for technological progress that more effectively supports persons
+with disabilities.  </p>
+
+<p>Clearly V. 3 cannot always return unambiguous results. <a
+	href="https://developers.google.com/recaptcha/docs/v3>">In such
+	situation Google advises</a>  that content providers "use a secondary
+challenge that makes sense in the context of their site such as two-factor
+authentication, send the post to moderators, or combine the score with signals
+specific to their site to make a more informed judgement." Google is intent
+that a traditional CAPTCHA not be the fallback mechanism. Indeed Google is adament that they will no longer offer a traditional CAPTCHA as a fallback mechanism in their V.3 reCAPTCHA service as they do in their slightly older, 2017 <a href="https://developers.google.com/recaptcha/docs/invisible> and was">reCAPTCHA V.2 Invisible</a service.</p>
+
+<p>Of course the reality is that what action is taken in response to an ambiguous core returned by V. 3 is in the hands of the content provider. Services like reCAPTCHA gain their market share by offering to relieve the content provider of the hard work inherent of mounting effective and accessible Turing testing. Sadly this leaves the door open to any fallback approach acontent provider might choose. It is imperative that methods for disambiguating an ambiguous noninteractive score be as easily implemented as a content provider's option to return to older CAPTCHA approaches.</p>
+
+			</section>
 			</section>
 			<section>
 				<h3>Federated Identity Systems</h3>
+				n.
+
 				<p>Many large companies such as Microsoft, Apple, Amazon, Google and the <a href="https://kantarainitiative.org/">Kantara Initiative</a> have created competing “federated network identity” systems, which can allow a user to create an account, set his or her preferences, payment data, etc., and have that data persist across all sites and devices that use the same service. Due to large companies now requiring a federated identity to use cloud-based services on their respective digital ecosystems, the popularity of federated identities has increased significantly. As a result, many web sites and services allow a portable form of authentication and identification across the Web. Perhaps some of these could also provide cross-site CAPTCHA services.</p>
 				<section>
 					<h4>Single Sign-On</h4>
