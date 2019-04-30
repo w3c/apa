@@ -129,9 +129,9 @@ their interacting user is a human individual, and not a software robot. Arguably
 						<p>A 3D representation of letters and numbers can make it more difficult for OCR software to identify them, in turn increasing the security of the <a>CAPTCHA</a>, described in <cite>On the security of text-based 3D CAPTCHAs</cite> [[3d-captcha-security]]. However, this solution raises similar accessibility issues to traditional CAPTCHAs.</p>
 					</section>
 					<section>
-						<h4>Video Game CAPTCHA</h4>
-						<p>This process suggests the completion of a basic video game as a <a>CAPTCHA</a>, like <cite>Game-based image semantic CAPTCHA on handset devices</cite> [[game-captcha]]. The benefits include removal of language barriers.</p>
-						<p>Multiple interface methods could potentially make such solutions accessible. It would also afford the benefit of making CAPCHA solving an arguably enjoyable process, reducing the frustrations generally associated with traditional CAPTCHAs.</p>
+						<h4>Movement-Based and Video Game CAPTCHA</h4>
+						<p>This process is based on the movement of interactive elements such as a slidebar or  the completion of a basic video game as a <a>CAPTCHA</a>, like <cite>Game-based image semantic CAPTCHA on handset devices</cite> [[game-captcha]]. The benefits include removal of language barriers, and the removal of CAPTCHA frustration due to the intuitiveness of the associated task and the enjoyment of playing video games. </p>
+						<p>Importantly, the implementation of this CAPTCHA would need to support multiple input interfaces as different devices may lack some input methods such as a keyboard or touchscreen. Another potential issue is that screen reader support for interface elements may unintentionally provide a backdoor for the CAPTCHA to be bypassed by allowing a bot to play the game.</p>
 					</section>
 				</section>
 			</section>
@@ -186,6 +186,11 @@ that a traditional CAPTCHA not be the fallback mechanism. Indeed Google is adame
 <p>The reality is that what action is taken in response to an ambiguous core returned by V. 3 is in the hands of the content provider. Services like reCAPTCHA gain their market share by offering to relieve the content provider of the hard work inherent of mounting effective and accessible Turing testing. Sadly this leaves the door open to any fallback approach acontent provider might choose. It is therefore imperative that methods for disambiguating an ambiguous noninteractive score be well documented and easily implementable in order to better overcome the tendency to simply adopt the old familiar approach.
 </p>
 
+			</section>
+			<section>
+				<h4>Leveraging the Multi-Device Environment</h4>
+			<p>In this context we note that it has become common for users to access various on line services through multiple devices such as desktop and mobile computers, smart phones, tablets, and wearables such as smart watches. This proliferation has led to online services delivering identification solutions that take into account a combination of multi-device and multi-platform vectors for <cite>simple and effective user authentication, including persons with disabilities</cite> [[auth-mult]]. We note that several major service providers (such as Facebook) now support cross-site user authentication. However, in relation to the specific ability to tell a human and bot apart, it appears only <a href="https://developers.google.com/recaptcha/docs/v3">Google's V. 3 reCAPTCHA API</a> provides cross-site CAPTCHA services without actually passing specific identifying data.</p>
+			<p>We would expect Google's V. 3 reCAPTCHA system would score no need to present a CAPTCHA whenever another browser tab is already properly logged in to a Google product such as Calendar on whatever registered user device. However, while this may prevent the third party site from collecting personal data, it does assist Google in acquiring more user data.  This constitutes a significant cost to the user's privacy in an industry so capable of cross-referencing massive ammounts of data in the absence of meaningful regulations and controls on where and how that data may be used. This is a very strong accessibility concern as people with disabilities are generally loath to disclose any information about their disability except when and only when they expressly authorize it to be revealed.</p>
 			</section>
 			</section>
 			<section>
