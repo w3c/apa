@@ -54,6 +54,19 @@ var biblio = {
 	"editors": [],
 	"href": "https://computerresearch.org/index.php/computer/article/download/368/368"
     },
+    "tls-tracking": {
+	"title": "Exploiting TLS Client Authentication for Widespread User Tracking",
+	"publishDate": "2018",
+	"authors": ["Lucas Foppe",
+		    "Jeremy Martin",
+		    "Travis Mayberry",
+		    "Eric C. Rye",
+		    "Lamont Brown"],
+	"publisher": "Proceedings on Privacy Enhancing Technologies",
+	"etAl": "false",
+	"editors": [],
+	"href": "https://www.petsymposium.org/2018/files/papers/issue4/popets-2018-0031.pdf"
+    },
     "killbots": {
 		"title": "Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds",
 		"publishDate": "",
