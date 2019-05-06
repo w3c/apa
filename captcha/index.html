@@ -91,6 +91,30 @@ their interacting user is a human individual, and not a software robot. Arguably
 				<h3>Non-Interactive Checks</h3>
 				<p>While <a>CAPTCHA</a> and other interactive approaches to limiting the activities of <a>web robots</a> are sometimes effective, they do make using a site more cumbersome. This is often unnecessary, as non-interactive mechanisms exist to check for spam or other invalid content typically introduced by robots.</p>
 				<p>This category contains three non-interactive approaches: <a>spam filtering</a>, in which an automated tool evaluates the <em>content</em> of a transaction, <a>heuristic</a> checks, which evaluate the <em>behavior</em> of the client, and <a>honeypots</a> which are designs intended to be ignored, or even to be invisible to users while trapping robotic responses.</p>
+				<p>These techniques can be regarded as
+				an alternative to the implementation
+				of <a>CAPTCHA</a>. Significantly, they
+				can also complement <a>CAPTCHA</a>, or
+				other strategies identified in this
+				document. Since a <a>CAPTCHA</a> can
+				be circumvented by an attacker (e.g.,
+				using crowd-sourcing techniques),
+				cryptographic keys can in some
+				circumstances be misappropriated, and
+				users' interactive sessions can be
+				usurped for malicious purposes,
+				detecting and responding to <a>web
+				robots</a> that have successfully
+				gained access to a web resource is
+				desirable even in the presence of
+				other measures. The advantages for
+				people with disabilities of limiting
+				the imposed sensory and cognitive demands,
+				however, only arise if these
+				non-interactive strategies are used
+				alone, or if they are combined with
+				other <a>CAPTCHA</a>-avoidance
+				approaches.</p>
 				<section>
 					<h4>Spam Filtering</h4>
 					<p>Applications that use <a>continuous authentication</a> and “hot words” to flag spam content, or <a>Bayesian filtering</a> to detect other patterns consistent with spam, are very popular, and quite effective. While such risk analysis systems may experience false negatives from time to time, properly-tuned systems can achieve results comparable to a traditional visual <a>CAPTCHA</a>, while also removing the added cognitive burden on the user and eliminating access barriers.</p>
