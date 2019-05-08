@@ -235,6 +235,26 @@ that a traditional CAPTCHA not be the fallback mechanism. Indeed Google is adame
 
 				</section>
 			</section>
+		<section>
+			<h3>Turing Tokens in the Cloud?</h3>
+<p> While its meaning for most people may be as opaque as its meteorological
+namesake, the "cloud" has become a familiar term of common parlance.  For our
+purposes here it describes the growing concentration of web content and
+software service delivery in content delivery networks (CDN) such as Akamai,
+Cloudflare,  and Amazon Cloudfront. These provide the value add of localized
+last mile cached content delivery and the ability to effectivly deflect various
+malicious activity such as denial of service (DOS) attacks.  As almost
+two-thirds of Internet content is now delivered by CDNs, they are now also
+unintentionally forced to become Turing test arbiters. This in turn has resulted in the development of fresh innovative approaches to CAPTCHA such as <a href="https://privacypass.github.io/">Privacy Pass</a> now available as a browser extension on Cloudflare.</p>
+<p>While Privacy Pass still begins with a CAPTCHA challenge, it does provide
+the user a trove of cryptographically blinded tokens which can satisfy further
+challenges in the background and dramatically reduce interactive CAPTCHA
+challenges. Most refreshingly it offers meaningful privacy protection, even
+anonymity, while reliably validating the user is human. As this approach is
+developed further, we can reasonably hope the onus of the initial challenge can
+be further mitigated, perhaps by reliance on biometrics.</p>
+
+		</section>
 		</section>
 		<section>
 			<h2>Conclusion</h2>
