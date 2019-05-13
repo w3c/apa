@@ -74,6 +74,29 @@ their interacting user is a human individual, and not a software robot. Arguably
 				<p>Although auditory forms of CAPTCHA that present distorted speech create recognition difficulties for <a>screen reader</a> users, the accuracy with which such users can complete the CAPTCHA tasks is increased if the user interface is carefully designed to prevent screen reader audio and CAPTCHA audio from being intermixed. This can be achieved by implementing functions for controlling the audio that do not require the user to move focus away from the text response field; see <cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite> [[eval-audio]].</p>
 				<p>Experiments with a combined auditory and visual CAPTCHA requiring users to identify well known objects by recognizing either images or sounds, suggest that this technique is highly usable by screen reader users. However, its security-related properties remain to be explored, as mentioned in <cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite> [[task-completion]].</p>
 			</section>
+								<section>
+					<h3>Logic Puzzles</h3>
+					<p>The goal of visual verification is to separate human from machine. One reasonable way to do this is to test for logic. Simple mathematical or word puzzles, trivia, spatial tasks, or similar logic tests may raise the bar for <a>robots</a>, at least to the point where using them is more attractive elsewhere.</p>
+					<p> The use of logic puzzles as a CAPTCHA technique, however, introduces substantial barriers to access for people with language, learning or cognitive disabilities. An individual living with dyscalculia will understandably find even simple arithmetic puzzles challenging. A blind individual will be unable to identify the hammer from among graphical depictions of common tools. When puzzles are used, therefore, it is advisable to support a variety of puzzles so that someone unable to solve a given puzzle can obtain a different kind of puzzle when requesting another challenge.</p>
+					<p>Any development of CAPTCHA challenges in this direction should be accompanied by thorough usability research involving people with a variety of language, learning, and cognitive disabilities, as such an approach remains largely unexplored in practice and in the research literature. It should also be noted that answers may need to be handled flexibly, if they require free-form text. Also, a system would have to maintain a vast number of questions, or shift them around programmatically, in order to keep <a>spiders</a> from capturing them all for use by web robots. Puzzle-based CAPTCHA challenges are also readily subject to defeat by human operators engaged in crowd-sourcing activity on behalf of attackers.</p>
+				</section>
+				<section>
+					<h3>Image and Video</h3>
+					<section>
+						<h4>Visual Comparison CAPTCHAs</h4>
+						<p>There are a number of <a>CAPTCHA</a> techniques based on the identification of still images. This can include requiring the user to identify whether an image is a man or a woman, or whether an image is human-shaped or avatar-shaped among other comparison approaches, such as <cite>CAPTCHAStar! A novel CAPTCHA based on interactive shape discovery</cite>, [[captchastar]], <cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite> [[facecaptcha]], and <cite>Social and egocentric image classification for scientific and privacy applications</cite> [[social-classification]].</p>
+						<p>While alternative audio comparison CAPTCHAs could be provided such as using similar or different sounds for comparison, the reliance on visual comparison alone would make these techniques difficult, if not impossible for people with vision-related disabilities.</p>
+					</section>
+					<section>
+						<h4>3D CAPTCHA</h4>
+						<p>A 3D representation of letters and numbers can make it more difficult for OCR software to identify them, in turn increasing the security of the <a>CAPTCHA</a>, described in <cite>On the security of text-based 3D CAPTCHAs</cite> [[3d-captcha-security]]. However, this solution raises similar accessibility issues to traditional CAPTCHAs.</p>
+					</section>
+					<section>
+						<h4>Movement-Based and Video Game CAPTCHA</h4>
+						<p>This process is based on the movement of interactive elements such as a slidebar or  the completion of a basic video game as a <a>CAPTCHA</a>, like <cite>Game-based image semantic CAPTCHA on handset devices</cite> [[game-captcha]]. The benefits include removal of language barriers, and the removal of CAPTCHA frustration due to the intuitiveness of the associated task and the enjoyment of playing video games. </p>
+						<p>Importantly, the implementation of this CAPTCHA would need to support multiple input interfaces as different devices may lack some input methods such as a keyboard or touchscreen. Another potential issue is that screen reader support for interface elements may unintentionally provide a backdoor for the CAPTCHA to be bypassed by allowing a bot to play the game.</p>
+					</section>
+				</section>		
 			<section>
 				<h3>Biometrics</h3>
 				<p>Biometric identifiers have become a very popular authentication mechanism, especially on mobile platforms which routinely now provide the requisite hardware. Some physical characteristic of the user, such as a fingerprint or a facial profile, is first acquired and then recognized to verify the individual’s identity. This process effectively limits the ability of <a>web robots</a> to create a large number of false identities.</p>
@@ -135,29 +158,6 @@ their interacting user is a human individual, and not a software robot. Arguably
 					</p>
 				</section>
 			</section>
-				<section>
-					<h3>Logic Puzzles</h3>
-					<p>The goal of visual verification is to separate human from machine. One reasonable way to do this is to test for logic. Simple mathematical or word puzzles, trivia, spatial tasks, or similar logic tests may raise the bar for <a>robots</a>, at least to the point where using them is more attractive elsewhere.</p>
-					<p> The use of logic puzzles as a CAPTCHA technique, however, introduces substantial barriers to access for people with language, learning or cognitive disabilities. An individual living with dyscalculia will understandably find even simple arithmetic puzzles challenging. A blind individual will be unable to identify the hammer from among graphical depictions of common tools. When puzzles are used, therefore, it is advisable to support a variety of puzzles so that someone unable to solve a given puzzle can obtain a different kind of puzzle when requesting another challenge.</p>
-					<p>Any development of CAPTCHA challenges in this direction should be accompanied by thorough usability research involving people with a variety of language, learning, and cognitive disabilities, as such an approach remains largely unexplored in practice and in the research literature. It should also be noted that answers may need to be handled flexibly, if they require free-form text. Also, a system would have to maintain a vast number of questions, or shift them around programmatically, in order to keep <a>spiders</a> from capturing them all for use by web robots. Puzzle-based CAPTCHA challenges are also readily subject to defeat by human operators engaged in crowd-sourcing activity on behalf of attackers.</p>
-				</section>
-				<section>
-					<h3>Image and Video</h3>
-					<section>
-						<h4>Visual Comparison CAPTCHAs</h4>
-						<p>There are a number of <a>CAPTCHA</a> techniques based on the identification of still images. This can include requiring the user to identify whether an image is a man or a woman, or whether an image is human-shaped or avatar-shaped among other comparison approaches, such as <cite>CAPTCHAStar! A novel CAPTCHA based on interactive shape discovery</cite>, [[captchastar]], <cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite> [[facecaptcha]], and <cite>Social and egocentric image classification for scientific and privacy applications</cite> [[social-classification]].</p>
-						<p>While alternative audio comparison CAPTCHAs could be provided such as using similar or different sounds for comparison, the reliance on visual comparison alone would make these techniques difficult, if not impossible for people with vision-related disabilities.</p>
-					</section>
-					<section>
-						<h4>3D CAPTCHA</h4>
-						<p>A 3D representation of letters and numbers can make it more difficult for OCR software to identify them, in turn increasing the security of the <a>CAPTCHA</a>, described in <cite>On the security of text-based 3D CAPTCHAs</cite> [[3d-captcha-security]]. However, this solution raises similar accessibility issues to traditional CAPTCHAs.</p>
-					</section>
-					<section>
-						<h4>Movement-Based and Video Game CAPTCHA</h4>
-						<p>This process is based on the movement of interactive elements such as a slidebar or  the completion of a basic video game as a <a>CAPTCHA</a>, like <cite>Game-based image semantic CAPTCHA on handset devices</cite> [[game-captcha]]. The benefits include removal of language barriers, and the removal of CAPTCHA frustration due to the intuitiveness of the associated task and the enjoyment of playing video games. </p>
-						<p>Importantly, the implementation of this CAPTCHA would need to support multiple input interfaces as different devices may lack some input methods such as a keyboard or touchscreen. Another potential issue is that screen reader support for interface elements may unintentionally provide a backdoor for the CAPTCHA to be bypassed by allowing a bot to play the game.</p>
-					</section>
-				</section>
 			</section>
 		<section>
 			<h2>Multi-Party Approaches</h2>
