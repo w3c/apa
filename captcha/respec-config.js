@@ -52,6 +52,12 @@ var respecConfig = {
 			w3cid: 33688
 		},
 		{
+			name: "Jason White",
+			url: "http://www.ets.org/",
+			mailto: "jjwhite@ets.org",
+			w3cid: 74028
+		},
+		{
 			name: "Michael Cooper",
 			url: 'https://www.w3.org',
 			mailto: "cooper@w3.org",
