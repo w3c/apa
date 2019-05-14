@@ -245,43 +245,47 @@ that a traditional CAPTCHA not be the fallback mechanism. Indeed Google is adame
 
 				</section>
 			</section>
-		<section>
-			<h3>Turing Tokens in the Cloud?</h3>
-<p> While its meaning for most people may be as opaque as its meteorological
-namesake, the "cloud" has become a familiar term of common parlance.  For our
-purposes here it describes the growing concentration of web content and
+		<section id="privpass">
+			<h3>Turing Tokens from the Cloud?</h3>
+
+<p>The "cloud" has become a well-known term among computer users.  It describes the growing concentration of web content and
 software service delivery in content delivery networks (CDN) such as Akamai,
-Cloudflare,  and Amazon Cloudfront. These provide the value add of localized
+Cloudflare,  and Amazon Cloudfront. These CDNs provide the value add of localized
 last mile cached content delivery and the ability to effectivly deflect various
 malicious activity such as denial of service (DOS) attacks.  As almost
 two-thirds of Internet content is now delivered by CDNs, they are now also
-unintentionally forced to become Turing test arbiters. This in turn has resulted in the development of fresh innovative approaches to CAPTCHA such as <a href="https://privacypass.github.io/">Privacy Pass</a> now available as a browser extension on Cloudflare.</p>
+unintentionally forced to become <a>Turing test</a> arbiters. This in turn has resulted in the development of fresh innovative approaches to CAPTCHA such as <a href="https://privacypass.github.io/">Privacy Pass</a> now available as a browser extension on Cloudflare.</p>
+
 <p>While Privacy Pass still begins with a CAPTCHA challenge, it does provide
 the user a trove of cryptographically blinded tokens which can satisfy further
 challenges in the background and dramatically reduce interactive CAPTCHA
 challenges. Most refreshingly it offers meaningful privacy protection, even
 anonymity, while reliably validating the user is human. As this approach is
 developed further, we can reasonably hope the onus of the initial challenge can
-be further mitigated, perhaps by reliance on biometrics.</p>
+be further mitigated with robust support for web accessibility, perhaps by reliance on biometrics.</p>
 
 		</section>
 		</section>
 		<section>
 			<h2>Conclusion</h2>
-<p>CAPTCHA has certainly evolved over time and become more sophisticated. This has included the development of
+<p>CAPTCHA development has certainly become more sophisticated over time. This has included the development of
 several alternatives to text-based characters contained in bitmapped
-images, some of which can serve to support access for persons with
-disabilities. However, it has also been demonstrated not only that
+images, some of which have served to support access for persons with
+disabilities. However, it has also become clear not only that
 traditional CAPTCHA continues to be challenging for people with
 disabilities, but also that it is increasingly insecure and arguably now ill suited
 to the purpose of distinguishing human individuals from their robotic
 impersonators.</p>
-<p>Yet the need for a solution persists.  It is
-therefore highly recommended that the purpose and effectiveness of any
-deployed solution be carefully considered before adoption, and then closely
-monitored for effective performance. As with all good software and on line
-content provisioning, analysis should begin with a careful consideration of
-system requirements and a thorough profiling of user requirements.</p>
+
+<p>Yet the need for reliable and accessible solutions persists.  In fact the need has arguably become more urgent as the limits of authenticated login alone have become more and more evident in misuse of major services around the globe.</p>
+
+It is therefore highly recommended that the purpose and effectiveness of any
+deployed CAPTCHA solution be carefully considered before adoption, and then
+closely monitored for effective performance. As with all good software and on
+line content provisioning, analysis should begin with a careful consideration
+of system requirements and a thorough understanding of user needs, including
+the needs of persons with disabilities.</p>
+
 <p>Clearly, some approaches such as Google's reCAPTCHA, 
 two-step or multi-device verification can be easily and affordably
 deployed. Yet problems persist even in these systems, especially for non
@@ -289,13 +293,47 @@ English speakers.  Furthermore, deployers of such approaches should be aware tha
 their users to a massive collection of personal data across multiple
 trans-national data profiling systems, quite apart from any societal
 governance.</p>
+
 <p>It is important, therefore, also to consider available stand-alone approaches such
 as honeypots and heuristics, along with current image and aural CAPTCHA
 libraries that support multiple languages. As always, testing and system monitoring for
 effectiveness should supply the ultimate determination, even as we recognize
 that an effective system today may prove ineffective a few years from now.</p>
-<p>In other words, while some CAPTCHA approaches are better than others, there is currently no ideal solution. It is important to exercise care that any implemented CAPTCHA
-technology correctly allow people with disabilities to identify themselves as human.</p>
+
+<p>We summarize our conclusions as follows:</p>
+
+<ul>
+
+<li>Risk analyses of attempts to access a resource are generally desirable.
+Some on line resources are simply greater targets than others.</li>
+
+<li>All else being equal, we prefer non-interactive approaches because these
+pose no accessibility challenges. However, they may expose the user to the
+collection of personal data.</li>
+
+<li>When an interactive 
+CAPTCHA is to be implemented in order to obviate security and privacy
+considerations, approaches which significantly limit the number of CAPTCHA challenges to
+which a user is subject are highly desirable, e.g. we're encouraged by the
+development of approaches such as <a href="#privpass">Privacy Pass</a>.</li>
+
+<li>Whenever an interactive CAPTCHA is implemented, a variety of alternative challenges must be
+offered that engage different sensory or cognitive capabilities of the user.
+We humans possess a variety of intellectual strengths and weaknesses. To fail
+to offer a variety of challenges is to ignore this simple truth.</li>
+
+<li>Third parties may be engaged to verify the authenticity of an access attempt.
+However, such solutions may give rise to privacy trade-offs.</li>
+
+
+</ul>
+
+<p>In other words, while some CAPTCHA approaches are better than others, and
+while more recent approaches offer clear advantage over older approaches, there
+is still no single, ideal solution. It is important to exercise care that any
+implemented CAPTCHA technology correctly allow people with disabilities to
+identify themselves as human.</p>
+
 		</section>
 		<section class="appendix">
 			<h2>Terms</h2>
