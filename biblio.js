@@ -109,7 +109,21 @@ var biblio = {
 		"publisher": "ING Direct site",
 		"href": "https://secure1.ingdirect.com/tpw/popup_whatIsThis.html"
 	},
-	"pwntcha": {
+    "privacy-pass": {
+	"title": "Privacy Pass: Bypassing Internet Challenges Anonymously",
+	"publishDate": "2018",
+	"authors": [
+	    "Alex Davidson",
+	    "Ian Goldberg",
+	    "Nick Sullivan",
+	    "George Tankersley",
+	    "Filippo Valsorda"],
+	"editors": [],
+	"etAl": "false",
+	"publisher": "Proceedings on Privacy Enhancing technologies; 2018 (3):164-180",
+	"href": "https://www.petsymposium.org/2018/files/papers/issue3/popets-2018-0026.pdf"
+    },
+    "pwntcha": {
 		"title": "PWNtcha - CAPTCHA decoder",
 		"publishDate": "",
 		"authors": ["Sam Hocevar"],
