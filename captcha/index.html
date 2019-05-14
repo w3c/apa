@@ -885,10 +885,10 @@ experience has demonstrated that even authenticated login provides
 inadequate protection from malicious actors. Such sites still need to know
 their interacting user is a human individual, and not a software robot. Arguably the industry's need for reliable <a class="respec-offending-element" title="Linking error: not matching <dfn>" id="respec-offender-linking-error-not-matching-dfn">Turing testing</a> is only growing more critical.</p>
 
-			<p>An early (and still widespread) solution relies on the use of graphical representations of text in registration or comment areas of a web site. The site attempts to verify that the user is in fact a human by requiring the user to complete a task referred to as a Completely Automated Public Turing Test, or <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a>. The assumption is that humans find this task relatively easy, while robots find it nearly impossible to perform.</p>
+<p>An early (and still widespread) solution relies on the use of graphical representations of text in registration or comment areas of a web site. The site attempts to verify that the user is in fact a human by requiring the user to complete a task referred to as a Completely Automated Public <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing Test</a>, or <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a>. The assumption is that humans find this task relatively easy, while robots find it nearly impossible to perform.</p>
 			<p>The CAPTCHA was <a href="CAPTCHA.net">initially developed by researchers at Carnegie Mellon University</a> and has been primarily associated with a technique whereby an individual identifies a distorted set of characters in a bit-mapped image, then enters those characters into a web form. This approach is widely familiar to users of the web, though the term CAPTCHA is generally recognized only by web professionals.</p>
 			<p>In recent times the types of CAPTCHA that appear on web sites and mobile apps have changed significantly. Since our concern here is the accessibility of systems that seek to distinguish human users from their robotic impersonators, the term “CAPTCHA” is used in this document generically to refer to all approaches which are specifically designed to differentiate a human from a computer, including fully noninteractive approaches.</p>
-			<p>It will surprise noone that we applaud the recent emergence of noninteractive approaches because functional noninteractive approaches pose no accessibility challenge to users. Unfortunately,  some current noninteractive approaches come at the price of exposing much data about the individual user to the noninteractive host analysis engine that user might rather prefer to keep confidential. We are further heartened by the even more recent development of tokenized approaches that promise trustable Turing testing requiring only minimal interaction with users.</p>
+			<p>It will surprise noone that we applaud the recent emergence of noninteractive approaches because functional noninteractive approaches pose no accessibility challenge to users. Unfortunately,  some current noninteractive approaches come at the price of exposing much data about the individual user to the noninteractive host analysis engine that user might rather prefer to keep confidential. We are further heartened by the even more recent development of tokenized approaches that promise trustable <a class="respec-offending-element" title="Linking error: not matching <dfn>" id="respec-offender-linking-error-not-matching-dfn-0">Turing testing</a> requiring only minimal interaction with users.</p>
 		</section>
 			                <section id="the-accessibility-challenge">
 						                        <h3 id="x1-2-the-accessibility-challenge"><bdi class="secno">1.2 </bdi>The Accessibility Challenge<a class="self-link" aria-label="§" href="#the-accessibility-challenge"></a></h3>
@@ -917,7 +917,7 @@ inappropriate account creation. Several of them may be
 as effective as the visual verification technique while
 being more accessible to people with disabilities.
 Others may be overlaid as an accommodation for the
-purposes of accessibility. We group our review by <a href="#interact">interacative</a> and <a h43f="noninteract" class="respec-offending-element" title="Linking error: not matching <dfn>" id="respec-offender-linking-error-not-matching-dfn-0">non-interactive</a> categories</p>
+purposes of accessibility. We group our review by <a href="#interact">interacative</a> and <a h43f="noninteract" class="respec-offending-element" title="Linking error: not matching <dfn>" id="respec-offender-linking-error-not-matching-dfn-1">non-interactive</a> categories</p>
 
 			<section id="interact">
 				<h3 id="x2-1-interactive-stand-alone-approaches"><bdi class="secno">2.1 </bdi>Interactive Stand-Alone Approaches<a class="self-link" aria-label="§" href="#interact"></a></h3>
@@ -980,7 +980,7 @@ purposes of accessibility. We group our review by <a href="#interact">interacati
 			</section>
 			<section id="noninteract">
 				<h3 id="x2-2-non-interactive-stand-alone-approaches"><bdi class="secno">2.2 </bdi>Non-Interactive Stand-Alone Approaches<a class="self-link" aria-label="§" href="#noninteract"></a></h3>
-				<p>While <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> and other interactive approaches to limiting the activities of <a href="#dfn-robot" class="internalDFN" data-link-type="dfn">web robots</a> are sometimes effective, they do make using a site more cumbersome. This is often unnecessary, as non-interactive mechanisms exist to check for spam or other invalid content typically introduced by robots.</p>
+				<p>While traditional <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> and other interactive approaches to limiting the activities of <a href="#dfn-robot" class="internalDFN" data-link-type="dfn">web robots</a> are sometimes effective, they do make using a site more cumbersome. This is often unnecessary, as non-interactive mechanisms exist to check for spam or other invalid content typically introduced by robots.</p>
 				<p>This category contains three non-interactive approaches: <a href="#dfn-spam-filter" class="internalDFN" data-link-type="dfn">spam filtering</a>, in which an automated tool evaluates the <em>content</em> of a transaction, <a href="#dfn-heuristic" class="internalDFN" data-link-type="dfn">heuristic</a> checks, which evaluate the <em>behavior</em> of the client, and <a href="#dfn-honeypot" class="internalDFN" data-link-type="dfn">honeypots</a> which are designs intended to be ignored, or even to be invisible to users while trapping robotic responses.</p>
 				<p>These techniques can be regarded as
 				an alternative to the implementation
@@ -1056,8 +1056,8 @@ request right now." </p>
 with challenges at all." <a href="https://lists.w3.org/Archives/Public/public-rqtf/2019Mar/0019.html">Google
 	also informed us</a> that their goals with V.3 included increasing "the
 accessibility of the web by removing traditional CAPTCHAs" entirely.
-Obviously, fully noninteractive Turing testing is a most welcome development
-direction for accessibility. When the noninteractive Turing test returns a
+Obviously, fully noninteractive <a class="respec-offending-element" title="Linking error: not matching <dfn>" id="respec-offender-linking-error-not-matching-dfn-2">Turing testing</a> is a most welcome development
+direction for accessibility. When the noninteractive <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing test</a> returns a
 score indicating high confidence that the user is human, or indeed a score
 indicating high confidence that the user is a robot, and experience has
 demonstrated the noninteractive engine is reliable, we can only offer praise
@@ -1071,7 +1071,7 @@ authentication, send the post to moderators, or combine the score with signals
 specific to their site to make a more informed judgement." Google is intent
 that a traditional CAPTCHA not be the fallback mechanism. Indeed Google is adament that they will no longer offer a traditional CAPTCHA as a fallback mechanism in their V.3 reCAPTCHA service as they do in their slightly older, 2017 <a href="https://developers.google.com/recaptcha/docs/invisible> and was">reCAPTCHA V.2 Invisible</a>
 
-</p><p>The reality is that what action is taken in response to an ambiguous core returned by V. 3 is in the hands of the content provider. Services like reCAPTCHA gain their market share by offering to relieve the content provider of the hard work inherent of mounting effective and accessible Turing testing. Sadly this leaves the door open to any fallback approach acontent provider might choose. It is therefore imperative that methods for disambiguating an ambiguous noninteractive score be well documented and easily implementable in order to better overcome the tendency to simply adopt the old familiar approach.
+</p><p>The reality is that what action is taken in response to an ambiguous core returned by V. 3 is in the hands of the content provider. Services like reCAPTCHA gain their market share by offering to relieve the content provider of the hard work inherent of mounting effective and accessible <a class="respec-offending-element" title="Linking error: not matching <dfn>" id="respec-offender-linking-error-not-matching-dfn-3">Turing testing</a>. Sadly this leaves the door open to any fallback approach acontent provider might choose. It is therefore imperative that methods for disambiguating an ambiguous noninteractive score be well documented and easily implementable in order to better overcome the tendency to simply adopt the old familiar approach.
 </p>
 
 			</section>
