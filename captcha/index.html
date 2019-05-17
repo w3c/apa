@@ -242,8 +242,42 @@ that traditional CAPTCHA no longer be used as a  fallback mechanism and has drop
 			</section>
 			<section>
 				<h4>Leveraging the Multi-Device Environment</h4>
-			<p>In this context we note that it has become common for users to access various on line services through multiple devices such as desktop and mobile computers, smart phones, tablets, and wearables such as smart watches. This proliferation has led to online services delivering identification solutions that take into account a combination of multi-device and multi-platform vectors for <cite>simple and effective user authentication, including persons with disabilities</cite> [[auth-mult]]. We note that several major service providers (such as Facebook) now support cross-site user authentication. However, in relation to the specific ability to tell a human and bot apart, it appears only <a href="https://developers.google.com/recaptcha/docs/v3">Google's V. 3 reCAPTCHA API</a> provides cross-site CAPTCHA services without actually passing specific identifying data.</p>
-			<p>We would expect Google's V. 3 reCAPTCHA system would score no need to present a CAPTCHA whenever another browser tab is already properly logged in to a Google product such as Calendar on whatever registered user device. However, while this may prevent the third party site from collecting personal data, it does assist Google in acquiring more user data.  This constitutes a significant cost to the user's privacy in an industry so capable of cross-referencing massive amounts of data in the absence of meaningful regulations and controls on where and how that data may be used. This is a very strong accessibility concern as people with disabilities are generally loath to disclose any information about their disability except when and only when they expressly authorize it to be revealed.</p>
+
+<p>It has become common for many, though by no means all users to access
+various on line services through multiple devices such as desktop and mobile
+computers, smart phones, tablets, and wearables such as smart watches. This
+proliferation has led to online services delivering identification solutions
+that take into account a combination of multi-device and multi-platform vectors
+for <cite>simple and effective user authentication, including persons with
+disabilities</cite> [[auth-mult]]. We note that several major service providers
+(such as Facebook) now support cross-site user authentication. However, in
+relation to the specific ability to tell a human and bot apart, it appears only
+<a href="https://developers.google.com/recaptcha/docs/v3">Google's V. 3
+reCAPTCHA API</a> provides cross-site CAPTCHA services without actually passing
+specific identifying data.</p>
+
+<p>We would expect Google's V. 3 reCAPTCHA system would score no need to
+present a CAPTCHA whenever another browser tab is already properly logged in to
+a Google product such as Calendar on whatever registered user device. However,
+while this may prevent the third party site from collecting personal data, it
+does assist Google in acquiring more user data.  This constitutes a significant
+cost to the user's privacy in an industry so capable of cross-referencing
+massive amounts of data in the absence of meaningful regulations and controls
+on where and how that data may be used. This is a very strong accessibility
+concern as people with disabilities are generally reluctant to disclose any
+information about their disability on the web except when and only when they expressly
+shoose to reveal that information themselves for their own particular reasons.</p>
+
+<p>The multi-device environment is widely used to authenticate a human user by requiring some action on a registered second device, most often a smart cellular telephone.. 
+None of the three largest email service providers, Gmail, Yahoo, or Outlook
+will accept outbound mail until the user authenticates their humanity through
+a telephone number they must provide. Should Twitter spot activity it consider
+suspicious, it will hold tweets until the user revalidates through a telephone
+call. Yet increasingly, as telemarketing calls
+proliferate, web users are reluctant to provide data aggregators their
+personal telephone numbers. Clearly, a voice only authentication approach
+cannot serve deaf and hard of hearing users properly.</p>
+ 
 			</section>
 			</section>
 			<section>
@@ -278,7 +312,7 @@ unintentionally forced to become <a>Turing test</a> arbiters. This in turn has r
 the user a trove of cryptographically blinded tokens which can satisfy further
 challenges in the background and dramatically reduce interactive CAPTCHA
 challenges. Most refreshingly it offers meaningful privacy protection, even
-anonymity, while reliably validating the user is human. As this approach is
+anonymity, while reliably validating the user is human. Essentially, the CDN is function as a trust broker on the user's behalf. When a user "spends" a token, they're saying to the site they're accessing: "You don't trust me, but you do trust the entity that issued this token, and they're vouching for me." As this approach is
 developed further, we can reasonably hope the onus of the initial challenge can
 be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g.,adding  support for biometrics.</p>
 
