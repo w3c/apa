@@ -268,16 +268,41 @@ concern as people with disabilities are generally reluctant to disclose any
 information about their disability on the web except when and only when they expressly
 shoose to reveal that information themselves for their own particular reasons.</p>
 
-<p>The multi-device environment is widely used to authenticate a human user by requiring some action on a registered second device, most often a smart cellular telephone.. 
-None of the three largest email service providers, Gmail, Yahoo, or Outlook
-will accept outbound mail until the user authenticates their humanity through
-a telephone number they must provide. Should Twitter spot activity it consider
-suspicious, it will hold tweets until the user revalidates through a telephone
-call. Yet increasingly, as telemarketing calls
-proliferate, web users are reluctant to provide data aggregators their
-personal telephone numbers. Clearly, a voice only authentication approach
-cannot serve deaf and hard of hearing users properly.</p>
+<p>The multi-device environment is widely used to authenticate a human user by
+requiring some action on a registered second device, most often a smart
+cellular telephone.  Known as "dual factor authentication," this process is
+mandatary at each of the three largest email service providers, Gmail, Yahoo,
+and Outlook which accept outbound mail only after the user has authenticated
+through a telephone number they are required to provide. Similarly, should
+Twitter spot activity it consider suspicious, it will hold tweets until the
+user revalidates through both a reCAPTCHA challenge and a telephone call. Yet
+increasingly, as telemarketing calls proliferate, web users are reluctant to
+provide data aggregators their personal telephone numbers. Clearly, a voice
+only authentication approach also cannot serve deaf and hard of hearing users
+properly.</p>
  
+<p>Access a Google account service through a new browser or laptop and Google
+will hold off granting access until the user responds to a pop-up "toast"
+message on the registered telephone device showing the user's photo and asking:
+"Was that you?" The user must verify that it was indeed they before access can
+continue.  A variant previously common at Google and still in use elsewhere
+places a voice call or sends a text message with a short code the user is
+required to input into a form field to continue.</p>
+
+<p>Another variant of this approach, one employed by Cisco's Webex
+teleconference service,  asks the user to press any DTMF key on their telephone
+to continue. This is easy enough on a desk phone, but it becomes problematic
+for the TTS dependent screen reader user who must now hear the screen reader's
+speech in order to get the dialpad to pop up, and then find a DTMF key all at
+the same time as the service voice is also speaking, repeating something like:
+"Press 1 to continue, press 1 to continue ..."</p>
+
+<p>Providing the user the option of contact via voice and/or text is good, but
+some services offer only text. This disadvantages the user without an
+accessible text capable device, and there are many such situations. As ever,
+the rule must be to provide options for the user to choose among, including
+fallback options.</p>
+
 			</section>
 			</section>
 			<section>
