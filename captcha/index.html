@@ -192,21 +192,23 @@ United States [[36-cfr-1194]].</p>
 			<h3>The Google reCAPTCHA</h3>
 			<section>
 			<h4>Version 2: Are you a robot?</h4>
-			<p>Acquired in 2009 from Carnegie Mellon University, <a href="https://www.google.com/reCAPTCHA/">Google's reCAPTCHA</a> overwhelmingly dominates CAPTCHA deployment on the web today. Version 2 of reCAPTCHA continues to provide an API that has been most effectively marketed as the "no CAPTCHA re CAPTCHA," and its checkbox proclaiming: "I'm not a robot" has become a cultural icon, spawning various cultural offshoots in art, theater, and popular music.</p>
-			<p>The checkbox is, of course, no checkbox at all in the traditional HTML sense. The <a href="https://termsfeed.com/blog/privacy-policy-recaptcha/">pseudo-checkbox process</a> works by collecting a trove of user data well beyond mouse movement and keyboard navigation, including The date, the language the browser is set to, All cookies placed by Google over the last 6 months, CSS information for that page, an inventory of mouse clicks made on that screen (or touches if on a touch device), an inventory of plugins installed on the browser, and an itemization of All Javascript objects, all to determine whether the user is human or robot. Of course Google also generally knows much about individual users, including their customary IP addresses, the telephone numbers and email addresses of their friends, family and colleagues, where they have been at every moment of every day, as well as their web search and YouTube habits. This is why the simple checkbox can keep the CAPTCHA process disarmingly simple, though it also explains why a link to Google's privacy policy always accompanies the "no CAPTCHA reCAPTCHA". Disclosure and certain provisions of the Privacy Policy are required to satisfy legal requirements in California and in the E.U.</p>
+			<p>Acquired in 2009 from Carnegie Mellon University, <a href="https://www.google.com/reCAPTCHA/">Google's reCAPTCHA</a> overwhelmingly dominates CAPTCHA deployment on the web today. Version 2 provided an API that was most effectively marketed as the "no CAPTCHA re CAPTCHA," and its checkbox proclaiming: "I'm not a robot" became a cultural icon, spawning various cultural offshoots in art, theater, and popular music.</p>
+			<p>The checkbox was, of course, never a checkbox in the traditional HTML sense. The <a href="https://termsfeed.com/blog/privacy-policy-recaptcha/">pseudo-checkbox process</a> became a prodigious collector of user data well beyond mouse movement and keyboard navigation, including The date, the language the browser is set to, All cookies placed by Google over the last 6 months, CSS information for that page, an inventory of mouse clicks made on that screen (or touches if on a touch device), an inventory of plugins installed on the browser, and an itemization of All Javascript objects, all to determine whether the user is human or robot. Of course Google also generally knows much about individual users, including their customary IP addresses, the telephone numbers and email addresses of their friends, family and colleagues, where they have been at every moment of every day, as well as their web search and YouTube habits. This is why the simple checkbox could keep the CAPTCHA process disarmingly simple, though it also explains why a link to Google's privacy policy has always accompanied the "no CAPTCHA reCAPTCHA". Disclosure and certain provisions of the Privacy Policy are required to satisfy legal requirements in California and in the E.U.</p>
 			<p>Even though specific WCAG failures were often noted, Google's reCAPTCHA V2 was for a time regarded the most accessible CAPTCHA solution for one simple reason, it was capable of being comfortably completed using a variety of <a>assistive technologies</a>. More recently it has been widely observed that utilizing keyboard navigation, as many assistive technology users do, no longer works. Instead, users are presented with a traditional inaccessible CAPTCHA as a fall-back mechanism. Our own tests with various browsers on various operating environments have been generally successful with Google's own <a href="http://www.google.com/recaptcha/api2/demo">reCAPTCHA test page</a>. However, browsing in incognito mode, clearing or blocking cookies, and additional factors can apparently trigger a fallback to traditional CAPTCHA these days for many assistive technology users.</p>
 
-<p>One recent reCAPTCHA V. 2 innovation has seemed most
-promising. Rather than reproduce characters, users are
-asked to type the words they see (or hear). It even
-appears unnecessary to spell these correctly or to
+<p>One reCAPTCHA V. 2 innovation seemed most
+promising. Rather than reproduce characters, users were
+asked to type the words they saw (or heard). It even
+appeared unnecessary to spell these correctly or to
 enter all the words presented in order to be adjudged
-human.  Unfortunately, as of this writing it appears
-that audio CAPTCHAs previously available are now no longer
+human.</p>
+
+<p>on the other hand it now appears
+that audio CAPTCHAs previously available with V. 2 implementations are now no longer
 being provided. Instead users see a message that reads:
 "Your computer or network may be sending automated
 queries. To protect our users, we can't process your
-request right now." </p>
+request right now." Users who have depended on audio CAPTCHA, who were previously able to function with reCAPTCHA v.2., were thus suddenly and completely locked out and denied service on sites still using V.2.</p>
 			</section>
 			<section>
 			<h4>The Noninteractive Version 3</h4>
@@ -231,8 +233,8 @@ with disabilities.  </p>
 	situations Google advises</a>  that content providers "use a secondary
 challenge that makes sense in the context of their site such as two-factor
 authentication, send the post to moderators, or combine the score with signals
-specific to their site to make a more informed judgement." Google is intent
-that a traditional CAPTCHA not be the fallback mechanism. Indeed Google is adament that they will no longer offer a traditional CAPTCHA as a fallback mechanism in their V.3 reCAPTCHA service as they do in their slightly older, 2017 <a href="https://developers.google.com/recaptcha/docs/invisible> and was">reCAPTCHA V.2 Invisible</a service.</p>
+specific to their site to make a more informed judgement." Google intends
+that traditional CAPTCHA no longer be used as a  fallback mechanism and has dropped  it from V.3 reCAPTCHA, though it remains in their slightly older, 2017 <a href="https://developers.google.com/recaptcha/docs/invisible">reCAPTCHA V.2 Invisible</a> service.</p>
 
 <p>The reality is that what action is taken in response to an ambiguous core returned by V. 3 is in the hands of the content provider. Services like reCAPTCHA gain their market share by offering to relieve the content provider of the hard work inherent of mounting effective and accessible <a>Turing testing</a>. Sadly this leaves the door open to any fallback approach acontent provider might choose. It is therefore imperative that methods for disambiguating an ambiguous noninteractive score be well documented and easily implementable in order to better overcome the tendency to simply adopt the old familiar approach.
 </p>
