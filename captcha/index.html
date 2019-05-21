@@ -791,16 +791,16 @@ var[data-type]:hover::before {
       "id": "marrakesh"
     }
   },
-  "publishDate": "2019-05-17",
-  "publishISODate": "2019-05-17T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 17 May 2019"
+  "publishDate": "2019-05-21",
+  "publishISODate": "2019-05-21T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 21 May 2019"
 }</script><meta name="description" content="Various approaches have been employed over many years to distinguish human users of web sites from robots. The traditional CAPTCHA approach asking users to identify obscured text in an image remains common, but other approaches have emerged. All interactive approaches require users to perform a task believed to be relatively easy for humans but difficult for robots. Unfortunately the very nature of the interactive task inherently excludes many people with disabilities, resulting in a denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, further complicating the challenge of providing services secured from robotic intrusion yet accessible to people with disabilities. This document examines a number of approaches that allow systems to test for human users and the extent to which these approaches adequately accommodate people with disabilities, including recent noninteractive and tokenized approaches. We have grouped these approaches by two category classifications: Stand-Alone Approaches that can be deployed on a web host without engaging the services of unrelated third parties and Multi-Party Approaches that engage the services of an unrelated third party."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
       <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-05-17">17 May 2019</time>
+        <time class="dt-published" datetime="2019-05-21">21 May 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -904,7 +904,7 @@ their interacting user is a human individual, and not a software robot. Arguably
 <p>An early (and still widespread) solution relies on the use of graphical representations of text in registration or comment areas of a web site. The site attempts to verify that the user is in fact a human by requiring the user to complete a task referred to as a "Completely Automated Public <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing Test</a>, to Tell Computers and Humans Apart," or <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a>. The assumption is that humans find this task relatively easy, while robots find it nearly impossible to perform.</p>
 			<p>The CAPTCHA was <a href="CAPTCHA.net">initially developed by researchers at Carnegie Mellon University</a> and has been primarily associated with a technique whereby an individual identifies a distorted set of characters in a bit-mapped image, then enters those characters into a web form. This approach is widely familiar to users of the web, though the term CAPTCHA is generally recognized only by web professionals.</p>
 			<p>In recent times the types of CAPTCHA that appear on web sites and mobile apps have changed significantly. Since our concern here is the accessibility of systems that seek to distinguish human users from their robotic impersonators, the term “CAPTCHA” is used in this document generically to refer to all approaches which are specifically designed to differentiate a human from a computer, including fully noninteractive approaches.</p>
-			<p>It will surprise noone that we applaud the recent emergence of noninteractive approaches because functional noninteractive approaches pose no accessibility challenge to users. Unfortunately,  some current noninteractive approaches come at the price of exposing much data about the individual user to the noninteractive host analysis engine that user might rather prefer to keep confidential. We are further heartened by the even more recent development of tokenized approaches that promise trustable <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing testing</a> requiring only minimal interaction with users.</p>
+			<p>It will surprise no one that we applaud the recent emergence of noninteractive approaches because functional noninteractive approaches pose no accessibility challenge to users. Unfortunately,  some current noninteractive approaches come at the price of exposing much data about the individual user to the noninteractive host analysis engine that user might rather prefer to keep confidential. We are further heartened by the even more recent development of tokenized approaches that promise trustable <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing testing</a> requiring only minimal interaction with users.</p>
 		</section>
 			                <section id="the-accessibility-challenge">
 						                        <h3 id="x1-2-the-accessibility-challenge"><bdi class="secno">1.2 </bdi>The Accessibility Challenge<a class="self-link" aria-label="§" href="#the-accessibility-challenge"></a></h3>
@@ -1133,7 +1133,7 @@ massive amounts of data in the absence of meaningful regulations and controls
 on where and how that data may be used. This is a very strong accessibility
 concern as people with disabilities are generally reluctant to disclose any
 information about their disability on the web except when and only when they expressly
-shoose to reveal that information themselves for their own particular reasons.</p>
+choose to reveal that information themselves for their own particular reasons.</p>
 
 <p>The multi-device environment is widely used to authenticate a human user by
 requiring some action on a registered second device, most often a smart
