@@ -131,40 +131,27 @@ United States [[36-cfr-1194]].</p>
 
 
 			</section>
-			<section>
-				<h4>Limited-Use Accounts</h4>
-				<p>Users of free accounts very rarely need full and immediate access to a site’s resources. For example, users who are searching for concert tickets may need to conduct only three searches a day, and new email users may only need to send the same notification of their new address to their friends. Sites may create policies that limit the frequency of interaction explicitly (that is, by disabling an account for the rest of the day) or implicitly (by slowing the response times incrementally). Creating limits for new users can be an effective means of making high-value sites unattractive targets to <a>robots</a>.</p>
-				<p>Drawbacks to this approach include the need to perform sufficient testing and data collection to determine useful limits that will serve human users yet frustrate robots. It requires site designers to look at statistics of normal and exceptional users, and determine whether clear demarcation exists between them.</p>
-			</section>
 			</section>
 			<section id="noninteract">
 				<h3>Non-Interactive Stand-Alone Approaches</h3>
-				<p>While traditional <a>CAPTCHA</a> and other interactive approaches to limiting the activities of <a>web robots</a> are sometimes effective, they do make using a site more cumbersome. This is often unnecessary, as non-interactive mechanisms exist to check for spam or other invalid content typically introduced by robots.</p>
-				<p>This category contains three non-interactive approaches: <a>spam filtering</a>, in which an automated tool evaluates the <em>content</em> of a transaction, <a>heuristic</a> checks, which evaluate the <em>behavior</em> of the client, and <a>honeypots</a> which are designs intended to be ignored, or even to be invisible to users while trapping robotic responses.</p>
-				<p>These techniques can be regarded as
-				an alternative to the implementation
-				of <a>CAPTCHA</a>. Significantly, they
-				can also complement <a>CAPTCHA</a>, or
-				other strategies identified in this
-				document. Since a <a>CAPTCHA</a> can
-				be circumvented by an attacker (e.g.,
-				using crowd-sourcing techniques),
-				cryptographic keys can in some
-				circumstances be misappropriated, and
-				users' interactive sessions can be
-				usurped for malicious purposes,
-				detecting and responding to <a>web
-				robots</a> that have successfully
-				gained access to a web resource is
-				desirable even in the presence of
-				other measures. The advantages for
-				people with disabilities of limiting
-				the imposed sensory and cognitive demands,
-				however, only arise if these
-				non-interactive strategies are used
-				alone, or if they are combined with
-				other <a>CAPTCHA</a>-avoidance
-				approaches.</p>
+
+<p>While traditional <a>CAPTCHA</a> and other interactive approaches to
+limiting the activities of <a>web robots</a> are sometimes effective, they do
+make using a site more cumbersome. This is often unnecessary, as
+non-interactive mechanisms exist to check for spam or other invalid content
+typically introduced by robots.</p> <p>The four approaches described in this
+section can be regarded as alternatives or complimentary approaches to
+traditional <a>CAPTCHA</a>.</p>
+
+<p>Since a <a>CAPTCHA</a> can sometimes be circumvented by an attacker (e.g.,
+by using crowd-sourcing techniques), cryptographic keys can in some
+circumstances be hijacked. Detecting and responding to <a>web robots</a> that
+have successfully and unexpectedly gained access to a web resource is thus
+desirable even in the presence of other measures. The advantage of limiting
+sensory and cognitive demands on people with disabilities only acrues when these
+non-interactive strategies are used alone, or when they are combined with other
+traditional <a>CAPTCHA</a>-avoidance approaches.</p>
+
 				<section>
 					<h4>Spam Filtering</h4>
 					<p>Applications that use <a>continuous authentication</a> and “hot words” to flag spam content, or <a>Bayesian filtering</a> to detect other patterns consistent with spam, are very popular, and quite effective. While such risk analysis systems may experience false negatives from time to time, properly-tuned systems can achieve results comparable to a traditional visual <a>CAPTCHA</a>, while also removing the added cognitive burden on the user and eliminating access barriers.</p>
@@ -184,6 +171,12 @@ United States [[36-cfr-1194]].</p>
 						labeled: "This field is for robots only. Please leave blank."
 					</p>
 				</section>
+
+			<section id="uselimited">
+				<h4>Limited-Use Accounts</h4>
+				<p>Users of free accounts very rarely need full and immediate access to a site’s resources. For example, users who are searching for concert tickets may need to conduct only three searches a day, and new email users may only need to send the same notification of their new address to their friends. Sites may create policies that limit the frequency of interaction explicitly (that is, by disabling an account for the rest of the day) or implicitly (by slowing the response times incrementally). Creating limits for new users can be an effective means of making high-value sites unattractive targets to <a>robots</a>.</p>
+				<p>Drawbacks to this approach include the need to perform sufficient testing and data collection to determine useful limits that will serve human users yet frustrate robots. It requires site designers to look at statistics of normal and exceptional users, and determine whether clear demarcation exists between them.</p>
+			</section> 
 			</section>
 			</section>
 		<section>
