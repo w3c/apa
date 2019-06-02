@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.21.7"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.22.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<title>Inaccessibility of CAPTCHA</title>
 		<style id="respec-mainstyle">/*****************************************************************
@@ -295,7 +295,6 @@ h6 > a.self-link::before {
 	<link rel="canonical" href="https://www.w3.org/TR/turingtest/"><style>var {
   position: relative;
   cursor: pointer;
-  display: inline-block;
 }
 
 var[data-type]::before,
@@ -330,6 +329,8 @@ var[data-type]::after {
   padding: 6px;
   border-radius: 3px;
   color: #daca88;
+  text-indent: 0;
+  font-weight: normal;
 }
 
 var[data-type]:hover::after,
@@ -791,16 +792,16 @@ var[data-type]:hover::before {
       "id": "marrakesh"
     }
   },
-  "publishDate": "2019-05-24",
-  "publishISODate": "2019-05-24T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 24 May 2019"
+  "publishDate": "2019-06-02",
+  "publishISODate": "2019-06-02T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 02 June 2019"
 }</script><meta name="description" content="Various approaches have been employed over many years to distinguish human users of web sites from robots. The traditional CAPTCHA approach asking users to identify obscured text in an image remains common, but other approaches have emerged. All interactive approaches require users to perform a task believed to be relatively easy for humans but difficult for robots. Unfortunately the very nature of the interactive task inherently excludes many people with disabilities, resulting in a denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, further complicating the challenge of providing services secured from robotic intrusion yet accessible to people with disabilities. This document examines a number of approaches that allow systems to test for human users and the extent to which these approaches adequately accommodate people with disabilities, including recent noninteractive and tokenized approaches. We have grouped these approaches by two category classifications: Stand-Alone Approaches that can be deployed on a web host without engaging the services of unrelated third parties and Multi-Party Approaches that engage the services of an unrelated third party."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
       <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-05-24">24 May 2019</time>
+        <time class="dt-published" datetime="2019-06-02">02 June 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -909,7 +910,7 @@ their interacting user is a human individual, and not a software robot. Arguably
 			                <section id="the-accessibility-challenge">
 						                        <h3 id="x1-2-the-accessibility-challenge"><bdi class="secno">1.2 </bdi>The Accessibility Challenge<a class="self-link" aria-label="§" href="#the-accessibility-challenge"></a></h3>
 									 
-			<p>While online users continue broadly to report finding traditional CAPTCHAs frustrating to complete, it is generally assumed that an interactive CAPTCHA can be resolved within a few incorrect attempts. The point of distinction for people with disabilities is that a CAPTCHA not only separates computers from humans, but also often prevents people with disabilities from performing the requested procedure. For example, asking users who are blind, visually impaired or dyslexic to identify textual characters in a distorted graphic is asking them to perform a task they are intrinsically least able to accomplish. Similarly, asking users who are deaf or hard of hearing to identify and transcribe in writing the content of an audio CAPTCHA is asking them to perform a task they’re intrinsically least likely to accomplish. Furthermore, traditional CAPTCHAs have generally presumed that all web users can read and transcribe English-based words and characters, thus making the test inaccessible to a large number of non-English speaking web users worldwide.</p>
+			<p>While online users continue broadly to report finding traditional CAPTCHAs frustrating to complete, it is generally assumed that an interactive CAPTCHA can be resolved within a few incorrect attempts. The point of distinction for people with disabilities is that a CAPTCHA not only separates computers from humans, but also often prevents people with disabilities from performing the requested procedure. For example, asking users who are blind, visually impaired or dyslexic to identify textual characters in a distorted graphic is asking them to perform a task they are intrinsically least able to accomplish. Similarly, asking users who are deaf, hard of hearing, or living with Auditory Processing Disorder to identify and transcribe in writing the content of an audio CAPTCHA is asking them to perform a task they’re intrinsically least likely to accomplish. Furthermore, traditional CAPTCHAs have generally presumed that all web users can read and transcribe English-based words and characters, thus making the test inaccessible to a large number of non-English speaking web users worldwide.</p>
 			<p>While Accessibility best practices require, and <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a> expect, substantive graphical images to be authored with text equivalents, <a href="#dfn-alternative-text" class="internalDFN" data-link-type="dfn">alternative text</a> in CAPTCHA images would clearly be self-defeating. CAPTCHAs are, consequently, allowed under the <abbr title="World Wide Web Consortium">W3C</abbr>'s <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html"> Web Content Accessibility Guidelines (WCAG)</a> provided that "text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities."</p>
 
 			<p>It is important to understand the limitation of the WCAG CAPTCHA exemption. It applies only to the content of the CAPTCHA. WCAG still requires that alternative text identify the graphical object as a CAPTCHA. Conformance with all other WCAG guidelines also remains critical for web accessibility.</p>
@@ -1197,7 +1198,7 @@ unintentionally forced to become <a href="#dfn-turing-test" class="internalDFN" 
 the user a trove of cryptographically blinded tokens which can satisfy further
 challenges in the background and dramatically reduce interactive CAPTCHA
 challenges. Most refreshingly it offers meaningful privacy protection, even
-anonymity, while reliably validating the user is human. Essentially, the CDN is function as a trust broker on the user's behalf. When a user "spends" a token, they're saying to the site they're accessing: "You don't trust me, but you do trust the entity that issued this token, and they're vouching for me." As this approach is
+anonymity, while reliably validating the user is human. Essentially, the CDN is functioning as a trust broker on the user's behalf. When a user "spends" a token, they're saying to the site they're accessing: "You don't trust me, but you do trust the entity that issued this token, and they're vouching for me." As this approach is
 developed further, we can reasonably hope the onus of the initial challenge can
 be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g.,adding  support for biometrics.</p>
 
