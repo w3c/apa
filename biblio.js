@@ -54,6 +54,18 @@ var biblio = {
 	"editors": [],
 	"href": "https://computerresearch.org/index.php/computer/article/download/368/368"
     },
+    "kaPoW-plugins": {
+	"title": "kaPoW plugins: protecting web applications using reputation-based proof-of-work",
+	"publishDate": "2012",
+	"authors": [
+	    "Tien Le",
+	    "Akshay Dua",
+	    "Wu-chang Feng"],
+	"editors": [],
+	"etAl": false,
+	"publisher": "Proceedings of the 2nd Joint WICOW/AIRWeb Workshop on Web Quality",
+	"pages": "60-63"
+    },
     "killbots": {
 		"title": "Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds",
 		"publishDate": "",
