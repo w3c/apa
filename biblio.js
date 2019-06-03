@@ -4,7 +4,7 @@ var biblio = {
 		"publishDate": "",
 		"authors": ["Casey Chesnut"],
 		"editors": [],
-		"etAl": "false",
+		"etAl": false,
 		"publisher": "",
 		"href": "http://www.brains-n-brawn.com/default.aspx?vDir=aicaptcha"
 	},
@@ -13,7 +13,7 @@ var biblio = {
 		"publishDate": "July, 2005",
 		"authors": [],
 		"editors": [],
-		"etAl": "false",
+		"etAl": false,
 		"publisher": "Anti-Phishing Working Group",
 		"href": "http://antiphishing.org/APWG_Phishing_Activity_Report_Jul_05.pdf"
 	},
@@ -22,7 +22,7 @@ var biblio = {
 		"publishDate": "",
 		"authors": ["Howard Yeend"],
 		"editors": [],
-		"etAl": "false",
+		"etAl": false,
 		"publisher": "",
 		"href": "http://www.cs.berkeley.edu/%7Emori/gimpy/gimpy.html"
 	},
@@ -31,7 +31,7 @@ var biblio = {
 		"publishDate": "",
 		"authors": ["Howard Yeend"],
 		"editors": [],
-		"etAl": "false",
+		"etAl": false,
 		"publisher": "",
 		"href": "http://www.puremango.co.uk/cm_breaking_captcha_115.php"
 	},
@@ -40,7 +40,7 @@ var biblio = {
 		"publishDate": "",
 		"authors": [],
 		"editors": [],
-		"etAl": "false",
+		"etAl": false,
 		"publisher": "",
 		"href": "https://www.copyright.gov/title17/92chap1.html"
 	},
@@ -50,7 +50,7 @@ var biblio = {
 	"authors": [
 	    "Silky Azad", "Kiran Jain"],
 	"publisher": "Journal of Computer science and Technology",
-	"etAl": "false",
+	"etAl": false,
 	"editors": [],
 	"href": "https://computerresearch.org/index.php/computer/article/download/368/368"
     },
@@ -76,7 +76,7 @@ var biblio = {
 			"Arthur Burger"
 		],
 		"editors": [],
-		"etAl": "false",
+		"etAl": false,
 		"publisher": "",
 		"href": "https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/"
     },
@@ -85,7 +85,7 @@ var biblio = {
 	"Marrakesh Treaty to Facilitate Access to Published Works for Persons Who Are Blind, Visually Impaired or Otherwise Print Disabled",
 	"authors": [],
 	"editors": [],
-	"etAl": "false",
+	"etAl": false,
 	"publisher": "World Intellectual Property Organization",
 	"publishDate": "27 June 2013",
 	"href": "https://www.wipo.int/treaties/en/ip/marrakesh"
@@ -95,7 +95,7 @@ var biblio = {
 		"publishDate": "2 July 2003",
 		"authors": ["Paul Festa"],
 		"editors": [],
-		"etAl": "false",
+		"etAl": false,
 		"publisher": "News.com",
 		"href": "https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html"
 	},
@@ -104,7 +104,7 @@ var biblio = {
 		"publishDate": "",
 		"authors": [],
 		"editors": [],
-		"etAl": "false",
+		"etAl": false,
 		"publisher": "ING Direct site",
 		"href": "https://secure1.ingdirect.com/tpw/popup_whatIsThis.html"
 	},
@@ -118,7 +118,7 @@ var biblio = {
 	    "George Tankersley",
 	    "Filippo Valsorda"],
 	"editors": [],
-	"etAl": "false",
+	"etAl": false,
 	"publisher": "Proceedings on Privacy Enhancing technologies; 2018 (3):164-180",
 	"href": "https://www.petsymposium.org/2018/files/papers/issue3/popets-2018-0026.pdf"
     },
@@ -127,7 +127,7 @@ var biblio = {
 		"publishDate": "",
 		"authors": ["Sam Hocevar"],
 		"editors": [],
-		"etAl": "false",
+		"etAl": false,
 		"publisher": "",
 		"href": "http://sam.zoy.org/pwntcha/"
     },
@@ -140,7 +140,7 @@ var biblio = {
 		    "Eric C. Rye",
 		    "Lamont Brown"],
 	"publisher": "Proceedings on Privacy Enhancing Technologies",
-	"etAl": "false",
+	"etAl": false,
 	"editors": [],
 	"href": "https://www.petsymposium.org/2018/files/papers/issue4/popets-2018-0031.pdf"
     },
@@ -149,7 +149,7 @@ var biblio = {
 		"publishDate": "2002",
 		"authors": [],
 		"editors": [],
-		"etAl": "false",
+		"etAl": false,
 		"publisher": "he Alan Turing Internet Scrapbook",
 		"href": "http://www.turing.org.uk/turing/scrapbook/test.html"
 	},
