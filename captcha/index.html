@@ -805,16 +805,16 @@ var[data-type]:hover::before {
       "id": "marrakesh"
     }
   },
-  "publishDate": "2019-06-12",
-  "publishISODate": "2019-06-12T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 12 June 2019"
+  "publishDate": "2019-06-13",
+  "publishISODate": "2019-06-13T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 13 June 2019"
 }</script><meta name="description" content="Various approaches have been employed over many years to distinguish human users of web sites from robots. The traditional CAPTCHA approach asking users to identify obscured text in an image remains common, but other approaches have emerged. All interactive approaches require users to perform a task believed to be relatively easy for humans but difficult for robots. Unfortunately the very nature of the interactive task inherently excludes many people with disabilities, resulting in a denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, further complicating the challenge of providing services secured from robotic intrusion yet accessible to people with disabilities. This document examines a number of approaches that allow systems to test for human users and the extent to which these approaches adequately accommodate people with disabilities, including recent noninteractive and tokenized approaches. We have grouped these approaches by two category classifications: Stand-Alone Approaches that can be deployed on a web host without engaging the services of unrelated third parties and Multi-Party Approaches that engage the services of an unrelated third party."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
       <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-06-12">12 June 2019</time>
+        <time class="dt-published" datetime="2019-06-13">13 June 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -1185,16 +1185,16 @@ places a voice call or sends a text message with a short code the user is
 required to input into a form field to continue.</p>
 
 <p>Another variant of this approach, one employed by Cisco's Webex
-teleconference service,  asks the user to press any DTMF key on their telephone
+teleconference service,  asks the user to press a particular key on their telephone
 to continue. This is easy enough on a desk phone, but it becomes problematic
-for the text to speech (TTS) dependent smart phone user who must now hear the screen reader's
-speech in order to get the dialpad to pop up, and then find the appropriate touch tone key all at
-the same time as the service voice is also speaking, repeating something like:
-"Press 1 to continue, press 1 to continue ..." It is important to recognize that both of these voices are routed through the same physical device speaker, even on units provided with dual speakers for playing music in stereo.</p>
+for the text to speech (TTS) dependent smart phone user who must now hear the phone's TTS voice
+in order to get the dialpad to pop up, and then find the appropriate touch tone key all at
+the same time as the Webex service voice is also speaking, repeating:
+"Welcome to Webex. Press 1 to be connected to your meeting. ...  Welcome to Webex. Press 1 to be connected to your meeting. ..." It is important to recognize that both of these voices are routed through the same physical device speaker, even on units equipped with dual speakers for playing music in stereo.</p>
 
 <p>Providing the user the option of contact via voice and/or text is good, but
 some services offer only text. This disadvantages the user without an
-accessible text capable device, and there are many such users. As ever,
+accessible text capable device, and there are many such users. Similarly, services offering only a voice call option disadvantage deaf and hearing impaired users. As ever,
 the rule must be to provide options for the user to choose among, including
 fallback options.</p>
 
@@ -1234,7 +1234,7 @@ challenges in the background and dramatically reduce interactive CAPTCHA
 challenges. Most refreshingly it offers meaningful privacy protection, even
 anonymity, while reliably validating the user is human. Essentially, the CDN is functioning as a trust broker on the user's behalf. When a user "spends" a token, they're saying to the site they're accessing: "You don't trust me, but you do trust the entity that issued this token, and they're vouching for me." As this approach is
 developed further, we can reasonably hope the onus of the initial challenge can
-be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g.,adding  support for biometrics.</p>
+be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g.,adding  support for biometrics. Even more interesting would be the service that leveraged this new protocol and its trustworthy status in the industry to offer individual users VPN service, perhaps for a monthly fee. The service could validate and broker all the user's registered devices across the Internet anonymizing even financial transactions and shippingdata as a full-serviceon line trust broker. Letters of credit had a similar beginning in international finance, so why not on line Turing Tokens and privacy protection?</p>
 
 		</section>
 		
