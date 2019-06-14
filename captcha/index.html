@@ -202,7 +202,7 @@ traditional <a>CAPTCHA</a>-avoidance approaches.</p>
 			<h2>Multi-Party Approaches</h2>
 			<section>
 			<h3>The Google reCAPTCHA</h3>
-			<p>Acquired in 2009 from Carnegie Mellon University, <a href="https://www.google.com/recaptcha/">Google's reCAPTCHA</a> overwhelmingly dominates CAPTCHA deployment on the web today. <a href="https://developers.google.cn/recaptcha/old/docs/asp">reCAPTCHA Version 1</a> is no longer supported.</p>
+			<p>Acquired in 2009 from Carnegie Mellon University, <a href="https://www.google.com/recaptcha/">Google's reCAPTCHA</a> overwhelmingly dominates CAPTCHA deployment on the web today. However, <a href="https://developers.google.cn/recaptcha/old/docs/asp">reCAPTCHA Version 1</a> is no longer supported.</p>
 			</section>
 			<section>
 			<h4>Version 2: Are you a robot?</h4>
@@ -210,19 +210,19 @@ traditional <a>CAPTCHA</a>-avoidance approaches.</p>
 			<p>The checkbox was, of course, never a checkbox in the traditional HTML sense. The <a href="https://termsfeed.com/blog/privacy-policy-recaptcha/">pseudo-checkbox process</a> became a prodigious collector of user data well beyond mouse movement and keyboard navigation, including the date, the language the browser is set to, all cookies placed by Google over the last 6 months, CSS information for that page, an inventory of mouse clicks made on that screen (or touches if on a touch device), an inventory of plugins installed on the browser, and an itemization of all javascript objects, all to determine whether the user is human or robot. Of course Google also generally knows much about individual users, including their customary IP addresses, the telephone numbers and email addresses of their friends, family and colleagues, where they have been at every moment of every day, as well as their web search and YouTube habits. This is why the simple checkbox could keep the CAPTCHA process disarmingly simple, though it also explains why a link to Google's privacy policy has always accompanied the "no CAPTCHA reCAPTCHA". Disclosure and certain provisions of the Privacy Policy are required to satisfy legal requirements in California and in the E.U.</p>
 			<p>Even though specific WCAG failures were often noted, Google's reCAPTCHA V2 was for a time regarded the most accessible CAPTCHA solution for one simple reason, it was capable of being comfortably completed using a variety of <a>assistive technologies</a>. More recently it has been widely observed that utilizing keyboard navigation, as many assistive technology users do, no longer works. Instead, users are presented with a traditional inaccessible CAPTCHA as a fall-back mechanism. Our own tests with various browsers on various operating environments have been generally successful with Google's own <a href="http://www.google.com/recaptcha/api2/demo">reCAPTCHA test page</a>. However, browsing in incognito mode, clearing or blocking cookies, and additional factors can apparently trigger a fallback to traditional CAPTCHA these days for many assistive technology users.</p>
 
-<p>One reCAPTCHA V. 2 innovation seemed most
-promising. Rather than reproduce characters, users were
-asked to type the words they saw (or heard). It even
-appeared unnecessary to spell these correctly or to
+<p>One reCAPTCHA V. 2 innovation seems most
+promising. Rather than reproduce characters, users are
+asked to type the words they see (or hear). It even
+appears unnecessary to spell these correctly or to
 enter all the words presented in order to be adjudged
 human.</p>
 
 <p>Most disappointingly, it now appears
-that audio CAPTCHAs previously available with V. 2 implementations are now no longer
+that audio CAPTCHAs previously available with V. 2 implementations are now sometimes no longer
 being provided. Instead users see a message that reads:
 "Your computer or network may be sending automated
 queries. To protect our users, we can't process your
-request right now." Users who have depended on audio CAPTCHA, who were previously able to function with reCAPTCHA v.2., were thus suddenly and completely locked out and denied service on sites still using V.2.</p>
+request right now." Users who have depended on audio CAPTCHA alternatives, who have previously been able to function with reCAPTCHA v.2., are thus suddenly and seemingly capriciously locked out and denied service on sites still using V.2.</p>
 			</section>
 			<section>
 			<h4>The Noninteractive Version 3</h4>
@@ -353,7 +353,7 @@ challenges in the background and dramatically reduce interactive CAPTCHA
 challenges. Most refreshingly it offers meaningful privacy protection, even
 anonymity, while reliably validating the user is human. Essentially, the CDN is functioning as a trust broker on the user's behalf. When a user "spends" a token, they're saying to the site they're accessing: "You don't trust me, but you do trust the entity that issued this token, and they're vouching for me." As this approach is
 developed further, we can reasonably hope the onus of the initial challenge can
-be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g.,adding  support for biometrics. Even more interesting would be the service that leveraged this new protocol and its trustworthy status in the industry to offer individual users VPN service, perhaps for a monthly fee. The service could validate and broker all the user's registered devices across the Internet anonymizing even financial transactions and shippingdata as a full-serviceon line trust broker. Letters of credit had a similar beginning in international finance, so why not on line Turing Tokens and privacy protection?</p>
+be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g.,adding  support for biometrics. Even more interesting would be the service that leveraged this new protocol and its trustworthy status across the industry to offer individual users a new kind of quality <a>VPN</a> service, perhaps for a monthly fee. The service could validate and broker all the user's registered devices across the Internet anonymizing even financial transactions and shippingdata as a full service on line trust broker. Letters of credit had a similar beginning in international finance some centuries hence, so why not on line Turing Tokens and privacy protection today?</p>
 
 		</section>
 		</section>
@@ -462,6 +462,8 @@ identify themselves as human.</p>
 				<dd>A test to determine whether responses provided by a software application are distinguishable from the responses of human individuals.</dd>
 				<dt><dfn>user agent</dfn></dt>
 				<dd>Any software that retrieves, renders and facilitates end user interaction with web content.</dd>
+				<dt><dfn>VPN</dfn></dt>
+				<dd>Virtual Private Network</dd>
 			</dl>
 		</section>
 		<section class="appendix">
