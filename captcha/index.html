@@ -250,7 +250,7 @@ authentication, send the post to moderators, or combine the score with signals
 specific to their site to make a more informed judgment." Google intends
 that traditional CAPTCHA no longer be used as a  fallback mechanism and has dropped  it from V.3 reCAPTCHA, though it remains in their slightly older, 2017 <a href="https://developers.google.com/recaptcha/docs/invisible">reCAPTCHA V.2 Invisible</a> service.</p>
 
-<p>The reality is that what action is taken in response to an ambiguous core returned by V. 3 is in the hands of the content provider. Services like reCAPTCHA gain their market share by offering to relieve the content provider of the hard work inherent of mounting effective and accessible <a>Turing testing</a>. Sadly this leaves the door open to any fallback approach a content provider might choose. Meanwhile, Google's reCAPTCHA FAQ  declares that <a href="https://developers.google.cn/recaptcha/docs/faq">reCAPTCHA Version 2 is not going away</a>. It is therefore imperative that methods for disambiguating an ambiguous noninteractive score be well documented and easily implementable in order to better overcome the tendency to simply adopt the old familiar approach.
+<p>The reality is that what action is taken in response to an ambiguous core returned by V. 3 is in the hands of the content provider. Services like reCAPTCHA gain their market share by offering to relieve the content provider of the hard work inherent in mounting effective and accessible <a>Turing testing</a>. Sadly this leaves the door open to any fallback approach a content provider might choose. Meanwhile, Google's reCAPTCHA FAQ  declares that <a href="https://developers.google.cn/recaptcha/docs/faq">reCAPTCHA Version 2 is not going away</a>. It is therefore imperative that methods for disambiguating an ambiguous noninteractive score be well documented and easily implementable in order to better overcome the tendency to simply adopt the old familiar approach.
 </p>
 
 			</section>
@@ -392,8 +392,8 @@ effectiveness should supply the ultimate determination, even as we recognize
 that an effective system today may prove ineffective a few years from now.</p>
 
 <p>We summarize our conclusions in the following points:</p>
-
-<ul>
+<br>
+<ol>
 
 <li>Risk analyses of attempts to access a resource are generally desirable.
 Some on line resources are simply greater targets than others.</li>
@@ -404,8 +404,7 @@ collection of personal data.</li>
 
 <li>When an interactive 
 CAPTCHA is to be implemented in order to obviate security and privacy
-considerations, approaches which significantly limit the number of CAPTCHA challenges to
-which a user is subject are highly desirable, e.g.,we're encouraged by the
+considerations, approaches which significantly limit how often users are subjected to interactive CAPTCHA challenges are highly desirable, e.g.,we're encouraged by the
 development of approaches such as <a href="#privpass">Privacy Pass</a>.</li>
 
 <li>Whenever an interactive CAPTCHA is implemented, a variety of alternative challenges must be
@@ -417,7 +416,7 @@ to offer a variety of challenges is to ignore this simple truth.</li>
 However, such solutions may give rise to privacy trade-offs.</li>
 
 
-</ul>
+</ol>
 
 <p>In other words, while some CAPTCHA approaches are better than others, and
 while more recent approaches offer clear advantage over older approaches, there
