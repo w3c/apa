@@ -200,10 +200,17 @@ traditional <a>CAPTCHA</a>-avoidance approaches.</p>
 			</section>
 		<section>
 			<h2>Multi-Party Approaches</h2>
+				<section>
+					<h3>Public-Key Infrastructure (PKI) Approaches</h3>
+					<p>Another approach is to use certificates for individuals who wish to verify their identity. A party relying on a certificate offered by a user attempting to access online services can assess the trustworthiness of the certificate's issuer, and the likelihood that the private key has been compromised, in evaluating the risk that the offerer is actually a web robot rather than a human agent. Highly trusted certification authorities such as governments, as in <a href="https://e-resident.gov.ee/">Estonia's e-Residency Program</a> require evidence of an individual's identity as a basis for issuing a certificate. Provided that the private key is not compromised and cannot be misused by an attacker, there is a high degree of assurance that messages cryptographically signed by it which could serve to establish the user's identity to web-based services have genuinely been authorized by the certificate holder.</p>
+					<p>The use of certificates as an indicator that an access attempt has been authorized by a human discloses the user's identity to the web service provider, and thus should not be deployed in circumstances in which anonymity is necessary. In addition, Transport Layer Security (TLS) client certificate authentication, as defined in TLS 1.2 and earlier versions of the protocol, gives rise to privacy concerns [[tls-tracking]].</p>
+
+					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed. Such approaches raise significant privacy and stigmatization concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. based <a href="http://www.bookshare.org/">Bookshare</a> whose services are only available to persons with documented print disabilities under the terms of an international copyright treaty administered by the United Nations' World Intellectual Property Organization (WIPO) and known as the <a href="http://www.wipo.int/treaties/en/ip/marrakesh"><cite>Marrakesh Treaty</cite></a>. [[marrakesh]]</p>
+
+			</section>
 			<section>
 			<h3>The Google reCAPTCHA</h3>
 			<p>Acquired in 2009 from Carnegie Mellon University, <a href="https://www.google.com/recaptcha/">Google's reCAPTCHA</a> overwhelmingly dominates CAPTCHA deployment on the web today. However, <a href="https://developers.google.cn/recaptcha/old/docs/asp">reCAPTCHA Version 1</a> is no longer supported.</p>
-			</section>
 			<section>
 			<h4>Version 2: Are you a robot?</h4>
 			<p>reCAPTCHA Version 2 provided an API that was most effectively marketed as the "no CAPTCHA re CAPTCHA," and its checkbox proclaiming: "I'm not a robot" became a cultural icon, spawning various cultural offshoots in art, theater, and popular music.</p>
@@ -255,7 +262,7 @@ that traditional CAPTCHA no longer be used as a  fallback mechanism and has drop
 
 			</section>
 			<section>
-				<h4>Leveraging the Multi-Device Environment</h4>
+				<h3>Leveraging the Multi-Device Environment</h3>
 
 <p>It has become common for many, though by no means all users to access
 various on line services through multiple devices such as desktop and mobile
@@ -318,24 +325,15 @@ the rule must be to provide options for the user to choose among, including
 fallback options.</p>
 
 			</section>
-			</section>
 			<section>
 				<h3>Federated Identity Systems</h3>
 
 				<p>Many large companies such as Microsoft, Apple, Amazon, Google and the <a href="https://kantarainitiative.org/">Kantara Initiative</a> have created competing “federated network identity” systems, which can allow a user to create an account, set his or her preferences, payment data, etc., and have that data persist across all sites and devices that use the same service. Due to large companies now requiring a federated identity to use cloud-based services on their respective digital ecosystems, the popularity of federated identities has increased significantly. As a result, many web sites and services allow a portable form of authentication and identification across the Web. Perhaps some of these could also provide cross-site CAPTCHA services.</p>
+			</section>
 				<section>
-					<h4>Single Sign-On</h4>
+					<h3>Single Sign-On</h3>
 					<p>Single sign-on services provide multiple disparate services to users, including to third parties through APIs. Because of this wide scope, they need to be among the most accessible services on the Web in order to offer equal benefits to people with disabilities. They also pose two significant risks for users. One is the aforementioned opportunity to collect massive amounts of personal data. The other risk comes into play should user credentials ever be exposed where users can suddenly find themselves exposed on multiple sites.</p>
 				</section>
-				<section>
-					<h4>Public-Key Infrastructure (PKI) Approaches</h4>
-					<p>Another approach is to use certificates for individuals who wish to verify their identity. A party relying on a certificate offered by a user attempting to access online services can assess the trustworthiness of the certificate's issuer, and the likelihood that the private key has been compromised, in evaluating the risk that the offerer is actually a web robot rather than a human agent. Highly trusted certification authorities such as governments, as in <a href="https://e-resident.gov.ee/">Estonia's e-Residency Program</a> require evidence of an individual's identity as a basis for issuing a certificate. Provided that the private key is not compromised and cannot be misused by an attacker, there is a high degree of assurance that messages cryptographically signed by it which could serve to establish the user's identity to web-based services have genuinely been authorized by the certificate holder.</p>
-					<p>The use of certificates as an indicator that an access attempt has been authorized by a human discloses the user's identity to the web service provider, and thus should not be deployed in circumstances in which anonymity is necessary. In addition, Transport Layer Security (TLS) client certificate authentication, as defined in TLS 1.2 and earlier versions of the protocol, gives rise to privacy concerns [[tls-tracking]].</p>
-
-					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed. Such approaches raise significant privacy and stigmatization concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. based <a href="http://www.bookshare.org/">Bookshare</a> whose services are only available to persons with documented print disabilities under the terms of an international copyright treaty administered by the United Nations' World Intellectual Property Organization (WIPO) and known as the <a href="http://www.wipo.int/treaties/en/ip/marrakesh"><cite>Marrakesh Treaty</cite></a>. [[marrakesh]]</p>
-
-				</section>
-			</section>
 		<section id="privpass">
 			<h3>Turing Tokens from the Cloud?</h3>
 
@@ -353,8 +351,11 @@ challenges in the background and dramatically reduce interactive CAPTCHA
 challenges. Most refreshingly it offers meaningful privacy protection, even
 anonymity, while reliably validating the user is human. Essentially, the CDN is functioning as a trust broker on the user's behalf. When a user "spends" a token, they're saying to the site they're accessing: "You don't trust me, but you do trust the entity that issued this token, and they're vouching for me." As this approach is
 developed further, we can reasonably hope the onus of the initial challenge can
-be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g.,adding  support for biometrics. Even more interesting would be the service that leveraged this new protocol and its trustworthy status across the industry to offer individual users a new kind of quality <a>VPN</a> service, perhaps for a monthly fee. The service could validate and broker all the user's registered devices across the Internet anonymizing even financial transactions and shippingdata as a full service on line trust broker. Letters of credit had a similar beginning in international finance some centuries hence, so why not on line Turing Tokens and privacy protection today?</p>
-
+be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g.,adding  support for biometrics.</p>
+		</section>
+		<section>
+			<h3>Why not Federated Turing Tokens?</h3>
+			<p>Even more valuable than federated identity or CDN's Turing Tokens  would be the service that leveraged both user authentication and trusted anonymity. The more useful service is the service that can deliver content with minimal user interruption, but also allow the user to interact across the Internet with reliable trust credentials. this new protocol and its trustworthy status across the industry to offer individual users an enhanced quality <a>VPN</a> service providing not just cross-site login, but cross-site Turing authentication, perhaps for a monthly fee. Such a service could conceivably even validate and broker all the user's registered devices across the Internet anonymizing even financial transactions and shippingdata as a full service on line trust broker. Letters of credit had a similar beginning in international finance some centuries hence, so why not on line Turing Tokens and privacy protection today?</p>
 		</section>
 		</section>
 		<section>
