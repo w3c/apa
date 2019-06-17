@@ -93,6 +93,18 @@ CAPTCHA Robustness</cite> [[captcha-robustness]].</p>
 				<p>Some audio CAPTCHA tacitly admit this failure by offering a link allowing the user to Download the audio CAPTCHA, typically as a mp3 file. The implicit assumption is that the user will use a favorite audio player—which does provide for independent volume control and pause, play, rewind, and fast forward capabilities—to play the audio CAPTCHA MP3 file again and again until comprehension dawns, perhaps pausing and rewinding the playback and perhaps writing down on the side the text destined for the web form. Clearly this is very inconvenient and subject to web site time outs. It also illustrates why simply providing an audio CAPTCHA alternative to the traditional visual CAPTCHA does not provide equivalent access to the user.</p>
 				<p>Furthermore, just as not all web users should be presumed proficient with English in visual CAPTCHA, they should not be presumed capable of understanding and transcribing aural English in an audio CAPTCHA. Unfortunately, non English audio CAPTCHAs appear to be very rare indeed. We are aware of only one <a href="https://captcha.com/captcha-localizations.html">multilingual CAPTCHA solution provider</a> with support for a significant number of the world's languages.</p>
 				<p>Users who are deaf-blind, don’t have or use a sound card, find themselves in noisy environments, or don’t have required sound plugins properly configured and functioning, are thus also prevented from proceeding. Furthermore, relatively few audio CAPTCHAs properly support all the various browsers and operating systems in use today. Similarly, users of browsers which do not support easy direction of sound output to a particular audio device, or to all available audio devices on the system, are also hampered.</p>
+
+<p>Users who live some form of cognitive disability may also find audio
+CAPTCHAs even more difficult to solve than character-based visual CAPTCHAs.
+Audio CAPTCHAs are known to impose a cognitive overload to all human users in
+comparison to the cognitive load necessary to understand normal human speech
+[information-security]. Further, studies of CAPTCHAs requiring human
+recognition of distorted or obscured speech have shown that they are more
+difficult for all users to solve and more demanding in terms of time and
+efforts compared to text or image-based CAPTCHAs. [solving-captchas]. These
+facts make audio CAPTCHAs a poor choice for users with cognitive
+disabilities.</p>
+
 				<p>Although auditory forms of CAPTCHA that present distorted speech create recognition difficulties for <a>screen reader</a> users, the accuracy with which such users can complete the CAPTCHA tasks is increased if the user interface is carefully designed to prevent screen reader audio and CAPTCHA audio from being intermixed. This can be achieved by implementing functions for controlling the audio that do not require the user to move focus away from the text response field; see <cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite> [[eval-audio]].</p>
 				<p>Experiments with a combined auditory and visual CAPTCHA requiring users to identify well known objects by recognizing either images or sounds, suggest that this technique is highly usable by screen reader users. However, its security-related properties remain to be explored, as mentioned in <cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite> [[task-completion]].</p>
 			</section>
@@ -326,15 +338,6 @@ the rule must be to provide options for the user to choose among, including
 fallback options.</p>
 
 			</section>
-			<section>
-				<h3>Federated Identity Systems</h3>
-
-				<p>Many large companies such as Microsoft, Apple, Amazon, Google and the <a href="https://kantarainitiative.org/">Kantara Initiative</a> have created competing “federated network identity” systems, which can allow a user to create an account, set his or her preferences, payment data, etc., and have that data persist across all sites and devices that use the same service. Due to large companies now requiring a federated identity to use cloud-based services on their respective digital ecosystems, the popularity of federated identities has increased significantly. As a result, many web sites and services allow a portable form of authentication and identification across the Web. Perhaps some of these could also provide cross-site CAPTCHA services.</p>
-			</section>
-				<section>
-					<h3>Single Sign-On</h3>
-					<p>Single sign-on services provide multiple disparate services to users, including to third parties through APIs. Because of this wide scope, they need to be among the most accessible services on the Web in order to offer equal benefits to people with disabilities. They also pose two significant risks for users. One is the aforementioned opportunity to collect massive amounts of personal data. The other risk comes into play should user credentials ever be exposed where users can suddenly find themselves exposed on multiple sites.</p>
-				</section>
 		<section id="privpass">
 			<h3>Turing Tokens from the Cloud?</h3>
 
@@ -354,8 +357,9 @@ anonymity, while reliably validating the user is human. Essentially, the CDN is 
 developed further, we can reasonably hope the onus of the initial challenge can
 be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g.,adding  support for biometrics.</p>
 		</section>
-		<section>
+		<section id="fedtoken">
 			<h3>Why not Federated Turing Tokens?</h3>
+
 			<p>Even more valuable than federated identity or CDN's Turing Tokens  would be the service that leveraged both user authentication and trusted anonymity. The more useful service is the service that can deliver content with minimal user interruption, but also allow the user to interact across the Internet with reliable trust credentials. this new protocol and its trustworthy status across the industry to offer individual users an enhanced quality <a>VPN</a> service providing not just cross-site login, but cross-site Turing authentication, perhaps for a monthly fee. Such a service could conceivably even validate and broker all the user's registered devices across the Internet anonymizing even financial transactions and shippingdata as a full service on line trust broker. Letters of credit had a similar beginning in international finance some centuries hence, so why not on line Turing Tokens and privacy protection today?</p>
 		</section>
 		</section>
@@ -475,6 +479,7 @@ identify themselves as human.</p>
 					<li>Michael Cooper, W3C</li>
 					<li>John Foliot, Deque Systems Inc.</li>
 					<li>Scott Hollier, Invited Expert</li>
+					<li>Stephen Noble, Pearson Plc</li>
 					<li>Janina Sajka, Invited Expert</li>
 					<li>David Sloan, The Paciello Group, LLC</li>
 					<li>Jason White, Educational Testing Service</li>
