@@ -54,6 +54,15 @@ var biblio = {
 	"editors": [],
 	"href": "https://computerresearch.org/index.php/computer/article/download/368/368"
     },
+    "information-security": {
+	"title": "Handbook of Information and Communication Security",
+	"editors": [
+	    "Peter Stavroulakis",
+	    "Mark Stamp"],
+	"authors": [],
+	"publisher": "Springer Science &amp; Business Media",
+	"publishDate": "2010"
+    },
     "kaPoW-plugins": {
 	"title": "kaPoW plugins: protecting web applications using reputation-based proof-of-work",
 	"publishDate": "2012",
@@ -130,6 +139,14 @@ var biblio = {
 		"etAl": false,
 		"publisher": "",
 		"href": "http://sam.zoy.org/pwntcha/"
+    },
+    "solving-captchas": {
+	"authors": ["Elie Bursztein"],
+	"etAl": true,
+	"editors": [],
+	"title": "How good are humans at solving CAPTCHAs? A large scale evaluation",
+	"publisher": "2010 IEEE symposium on security and privacy",
+	"publishDate": "2010"
     },
         "tls-tracking": {
 	"title": "Exploiting TLS Client Authentication for Widespread User Tracking",
