@@ -244,7 +244,7 @@ being provided. Instead users see a message that reads:
 queries. To protect our users, we can't process your
 request right now." Users who have depended on audio CAPTCHA alternatives, who have previously been able to function with reCAPTCHA v.2., are thus suddenly and seemingly capriciously locked out and denied service on sites still using V.2.</p>
 			</section>
-			<section>
+			<section id="recap3">
 			<h4>The Noninteractive Version 3</h4>
 
 <p>Late in 2018 Google released <a
@@ -361,15 +361,15 @@ be further mitigated with robust support for web accessibility, perhaps by expan
 		<section id="fedtoken">
 			<h3>Why not Federated Turing Tokens?</h3>
 
-<p>A host of varied identity management systems with varying features are in use on the web today. Some, like <a href="http://lastpass.com">Last Pass</a>,  offer to securely store authentication credentials and frequently used form data that individual users and variously defined groups can invoke across a range of personal devices.
+<p>A host of varied identity management systems with varying features and varying levels of accessibility are in use on the web today. Some, like <a href="http://lastpass.com">Last Pass</a>,  offer to securely store authentication credentials and frequently used form data that individual users and variously defined groups can invoke across a range of personal devices.
 Services like
 Amazon's <a href="https://aws.amazon.com/cognito">Cognito,</a> allow service providers to support a range of users existing authentications to facilitate accessing a range of cross platform services, in essence contracting out the task of login authentication and access control.
 Others, like
  <a href="https://developers.facebook.com/products/account-creation">Facebook's
 Account Kit</a>, 
 seeks to leverage login authentication on a highly popular web service to grow the ecosystem developed using user data collected on that platform.
-It has been unclear to us which, if any, of these services care to restrict account services to human users only. It is, however, clear that virtually none provides their authenticated users, about whom they know a great deal, support in noninteractively authenticating their humanity with third parties. The only exceptions of which we're aware are Google's reCAPTCHA and Cloud Flare's Privacy Pass.</p>
-			<p>We believe adding third party CAPTCHA to identity management services is needed. Any service offering to say to a third party: "You don't know this user so you don't trust them, but you know and trust me, therefore trust this user" could only exist after earning trust across the industry. Such a service would indeed need to be careful to sign up only human users. The service that leveraged both user authentication and trusted anonymity would, we believe quickly prove a more useful service. Users need not only simplified authentication but also the ability to interact across the web using widely accepted trust credentials and minimal interruption. Such an enhanced quality <a>VPN</a> service providing not just cross-site login but also Turing authentication, perhaps for a monthly fee, Such a service could conceivably even validate and broker all the user's registered devices across the Internet anonymizing even financial transactions and shippingdata as a full service on line trust broker. Letters of credit had a similar beginning in international finance some centuries hence, so why not on line Turing Tokens and privacy protection today?</p>
+It has been unclear to us at first blush which, if any, of these services prioritize  restricting account services to human users only. It is, however, clear that virtually none provides their authenticated users, about whom they know a great deal, support for noninteractively authenticating their humanity with third parties. The only exceptions of which we're aware are <a href="#recap3">reCAPTCHA Version 3</a and  <a href="#privpass">Privacy Pass</a.</p>
+			<p>We believe adding third party CAPTCHA support to identity management services is needed. Any service offering to say to a third party: "You don't know this user so you don't trust them, but you know and trust me, therefore you can trust this user" could only exist after earning trust across the industry. Such a service would indeed need to be careful to sign up only human users. The service that leveraged both user authentication and trusted anonymity would, we believe quickly prove viability. All users, but most certainly persons with disabilities need not only simplified authentication but also the ability to interact across the web using widely accepted trust credentials with minimal interruption for validating their humanity. Such an accessible enhanced quality <a>VPN</a> service providing not just cross-site login but also Turing authentication, perhaps for a monthly fee&mdash;such a service could conceivably even validate and broker all the user's registered devices across the Internet anonymizing even financial transactions and shippingdata as a full service on line trust broker. Letters of credit had a similar beginning in international finance some centuries hence, so why not on line Turing Tokens and privacy protection today?</p>
 		</section>
 		</section>
 		<section>
@@ -407,7 +407,6 @@ effectiveness should supply the ultimate determination, even as we recognize
 that an effective system today may prove ineffective a few years from now.</p>
 
 <p>We summarize our conclusions in the following points:</p>
-<br>
 <ol>
 
 <li>Risk analyses of attempts to access a resource are generally desirable.
@@ -415,7 +414,7 @@ Some on line resources are simply greater targets than others. It is critical th
 
 <li>Whenever an interactive 
 CAPTCHA is to be implemented in order to obviate security and privacy
-considerations, it is important to minimize how often users are subjected to interactive CAPTCHA challenges. With CAPTCHA less interaction is clearly more accessibility. As noted above, we're encouraged by the
+considerations, it is important to minimize how often users are subjected to interactive CAPTCHA challenges. With CAPTCHA less interactivity is clearly more accessibility. As noted above, we're encouraged by the
 development of approaches such as <a href="#privpass">Privacy Pass</a>.</li>
 
 <li>Whenever an interactive CAPTCHA is implemented, a variety of alternative challenges must be
