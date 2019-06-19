@@ -1,7 +1,7 @@
 var biblio = {
 	"aicaptcha": {
 		"title": "aiCaptcha: Using AI to beat CAPTCHA and post comment spam",
-		"publishDate": "",
+		"date": "",
 		"authors": ["Casey Chesnut"],
 		"editors": [],
 		"etAl": false,
@@ -10,7 +10,7 @@ var biblio = {
 	},
 	"antiphishing": {
 		"title": "Phishing Activity Trends Report",
-		"publishDate": "July, 2005",
+		"date": "July, 2005",
 		"authors": [],
 		"editors": [],
 		"etAl": false,
@@ -19,7 +19,7 @@ var biblio = {
 	},
 	"breaking": {
 		"title": "Breaking CAPTCHAs Without Using OCR",
-		"publishDate": "",
+		"date": "",
 		"authors": ["Howard Yeend"],
 		"editors": [],
 		"etAl": false,
@@ -28,7 +28,7 @@ var biblio = {
 	},
 	"breakingocr": {
 		"title": "Breaking CAPTCHAs Without Using OCR",
-		"publishDate": "",
+		"date": "",
 		"authors": ["Howard Yeend"],
 		"editors": [],
 		"etAl": false,
@@ -37,7 +37,7 @@ var biblio = {
 	},
 	"chafee": {
 		"title": "17 USC 121, Limitations on exclusive rights: reproduction for blind or other people with disabilities (also known as the Chafee Amendment)",
-		"publishDate": "",
+		"date": "",
 		"authors": [],
 		"editors": [],
 		"etAl": false,
@@ -46,7 +46,7 @@ var biblio = {
 	},
     "captcha-ocr": {
 	"title": "CAPTCHA: Attacks and Weaknesses against OCR technology",
-	"publishDate": "2013",
+	"date": "2013",
 	"authors": [
 	    "Silky Azad", "Kiran Jain"],
 	"publisher": "Journal of Computer science and Technology",
@@ -56,16 +56,15 @@ var biblio = {
     },
     "information-security": {
 	"title": "Handbook of Information and Communication Security",
-	"editors": [
+	"authors": [
 	    "Peter Stavroulakis",
 	    "Mark Stamp"],
-	"authors": [],
 	"publisher": "Springer Science &amp; Business Media",
-	"publishDate": "2010"
+	"date": "2010"
     },
     "kaPoW-plugins": {
 	"title": "kaPoW plugins: protecting web applications using reputation-based proof-of-work",
-	"publishDate": "2012",
+	"date": "2012",
 	"authors": [
 	    "Tien Le",
 	    "Akshay Dua",
@@ -77,7 +76,7 @@ var biblio = {
     },
     "killbots": {
 		"title": "Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds",
-		"publishDate": "",
+		"date": "",
 		"authors": [
 			"Srikanth Kandula", 
 			"Dina Katabi", 
@@ -96,12 +95,12 @@ var biblio = {
 	"editors": [],
 	"etAl": false,
 	"publisher": "World Intellectual Property Organization",
-	"publishDate": "27 June 2013",
+	"date": "27 June 2013",
 	"href": "https://www.wipo.int/treaties/en/ip/marrakesh"
     },
 	"newscom": {
 		"title": "Spam-bot tests flunk the blind",
-		"publishDate": "2 July 2003",
+		"date": "2 July 2003",
 		"authors": ["Paul Festa"],
 		"editors": [],
 		"etAl": false,
@@ -110,7 +109,7 @@ var biblio = {
 	},
 	"pinguard": {
 		"title": "PIN Guard",
-		"publishDate": "",
+		"date": "",
 		"authors": [],
 		"editors": [],
 		"etAl": false,
@@ -119,7 +118,7 @@ var biblio = {
 	},
     "privacy-pass": {
 	"title": "Privacy Pass: Bypassing Internet Challenges Anonymously",
-	"publishDate": "2018",
+	"date": "2018",
 	"authors": [
 	    "Alex Davidson",
 	    "Ian Goldberg",
@@ -133,7 +132,7 @@ var biblio = {
     },
     "pwntcha": {
 		"title": "PWNtcha - CAPTCHA decoder",
-		"publishDate": "",
+		"date": "",
 		"authors": ["Sam Hocevar"],
 		"editors": [],
 		"etAl": false,
@@ -146,11 +145,11 @@ var biblio = {
 	"editors": [],
 	"title": "How good are humans at solving CAPTCHAs? A large scale evaluation",
 	"publisher": "2010 IEEE symposium on security and privacy",
-	"publishDate": "2010"
+	"date": "2010"
     },
         "tls-tracking": {
 	"title": "Exploiting TLS Client Authentication for Widespread User Tracking",
-	"publishDate": "2018",
+	"date": "2018",
 	"authors": ["Lucas Foppe",
 		    "Jeremy Martin",
 		    "Travis Mayberry",
@@ -163,7 +162,7 @@ var biblio = {
     },
 	"turing": {
 		"title": "The Turing Test",
-		"publishDate": "2002",
+		"date": "2002",
 		"authors": [],
 		"editors": [],
 		"etAl": false,
