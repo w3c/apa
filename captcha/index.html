@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.23.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.23.4"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<title>Inaccessibility of CAPTCHA</title>
 		<style id="respec-mainstyle">/*****************************************************************
@@ -826,16 +826,16 @@ var[data-type]:hover::before {
       "id": "marrakesh"
     }
   },
-  "publishDate": "2019-06-25",
-  "publishISODate": "2019-06-25T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 25 June 2019"
+  "publishDate": "2019-06-26",
+  "publishISODate": "2019-06-26T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 26 June 2019"
 }</script><meta name="description" content="Various approaches have been employed over many years to distinguish human users of web sites from robots. The traditional CAPTCHA approach asking users to identify obscured text in an image remains common, but other approaches have emerged. All interactive approaches require users to perform a task believed to be relatively easy for humans but difficult for robots. Unfortunately the very nature of the interactive task inherently excludes many people with disabilities, resulting in a denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, further complicating the challenge of providing services secured from robotic intrusion yet accessible to people with disabilities. This document examines a number of approaches that allow systems to test for human users and the extent to which these approaches adequately accommodate people with disabilities, including recent noninteractive and tokenized approaches. We have grouped these approaches by two category classifications: Stand-Alone Approaches that can be deployed on a web host without engaging the services of unrelated third parties and Multi-Party Approaches that engage the services of an unrelated third party."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
       <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-06-25">25 June 2019</time>
+        <time class="dt-published" datetime="2019-06-26">26 June 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -980,15 +980,15 @@ purposes of accessibility. We group our review by <a href="#interact">interactiv
 
 <p>While some sites have begun providing CAPTCHAs utilizing languages other
 than English, an assumption that all web users can understand and reproduce
-English predominates. Clearly, this is not the case. Users of Arabic or
-Thai+character sets, for example, may not be familiar with the English alphabet
-or may not have enough knowledge to identify a distorted version of such
-characters.  Furthermore, the default keyboard is likely to be localized,
-+potentially making it difficult to enter an alternative character set unless
-specifically set up to do so.  Research has demonstrated how CAPTCHAs based on
-written English impose a significant barrier to many on the web; see
-<cite>Effects of Text Rotation, String Length, and Letter Format on Text-based
-CAPTCHA Robustness</cite> [<cite><a class="bibref" href="#bib-captcha-robustness" title="Effects of Text Rotation, String Length, and Letter Format on Text-based CAPTCHA Robustness" data-link-type="biblio">captcha-robustness</a></cite>].</p>
+English predominates. Clearly, this is not the case.  Research has demonstrated
+how CAPTCHAs based on written English impose a significant barrier to many on
+the web; see <cite>Effects of Text Rotation, String Length, and Letter Format
+on Text-based CAPTCHA Robustness</cite> [<cite><a class="bibref" href="#bib-captcha-robustness" title="Effects of Text Rotation, String Length, and Letter Format on Text-based CAPTCHA Robustness" data-link-type="biblio">captcha-robustness</a></cite>].  This problem
+is likely to increase when using  Latin-script characters beyond the ASCII
+range, with accents and diacritics, or shapes not included in the set used for
+English. For +example, speakers of Arabic or Thai may not have enough knowledge
+to identify a distorted version of such characters. Furthermore, users may not
+have the necessary keys available on their local keyboard.  </p>
 
 			</section>
 			<section id="sound-output">
