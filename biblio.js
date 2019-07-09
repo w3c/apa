@@ -342,9 +342,10 @@ var biblio = {
     	"publisher": "Legal Information Institute"
     },
     "en-301-549": {
-    	"title": "EN 301 549: Accessibility requirements suitable for public procurement of ICT products and services in Europe",
+    	"title": "EN 301 549 V2.1.2: Accessibility requirements suitable for public procurement of ICT products and services in Europe",
     	"publisher": "CEN/CENELEC/ETSI",
-    	"href": "http://mandate376.standards.eu/standard"
+	"date": "August 2018",
+    	"href": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"
     },
     "mobile-auth": {
         "authors": [
