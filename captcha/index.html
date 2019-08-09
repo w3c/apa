@@ -46,7 +46,7 @@ their interacting user is a human individual, and not a software robot. Arguably
 			<h3>CAPTCHA Effectiveness</h3>
 			<p>Malicious activity on the web has only grown over the years to comprise an <a href="http://nymag.com/intelligencer/2018/12/how-much-of-the-internet-is-fake.html">alarmingly high percentage of all Internet traffic</a>. While we would certainly not suggest the web's woes arise from sloppy or ill-considered CAPTCHA implementations, we do suggest current conditions only reinforce the importance of well considered and closely monitored security and privacy strategies consistent with appropriate user support that includes people with disabilities. Getting CAPTCHA right needs to be part of the solution.</p>
 			<p>It is important to acknowledge that using a <a>CAPTCHA</a> as a security solution is becoming increasingly ineffective. Current CAPTCHA methods that rely primarily on traditional image-based approaches, logic problems, or audio CAPTCHA alternatives can be largely cracked using both complex and simple computer algorithms. Research suggests that as character-based CAPTCHAs become increasingly vulnerable to defeat by advancing optical character recognition technologies, more severe distortion of the characters is introduced to resist these attacks. However, such enhanced distortion techniques also make it progressively less feasible even for humans who are well endowed with sensory and cognitive capacity to solve CAPTCHA challenges reliably, ultimately making character-based CAPTCHAs impractical [[captcha-ocr]].</p>
-			<p>Pattern-matching algorithms can achieve an even higher success rate of cracking CAPTCHAs in some instances, as demonstrated in <cite>CAPTCHA Security: A Case Study</cite> [[captcha-security]] and <cite>HMM-based Attacks on Google’s reCAPTCHA with Continuous Visual and Audio Symbols</cite> [[recaptcha-attacks]]. While efforts are being made to strengthen traditional CAPTCHA security, more robust security solutions risk reducing the typical user’s ability to understand the CAPTCHA that needs to be resolved, e.g., <cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite> [[defeat-line-noise]]. A recent study at the University of Maryland has demonstrated <a href="https://motherboard.vice.com/en_us/article/pa55z8/researchers-fool-recaptcha-with-googles-own-speech-to-text-service?utm_source=reddit.com">90% success rate cracking Google's audio reCAPTCHA</a> using Google's own speech recognition service. Indeed, as noted below, Google's V. 2 reCAPTCHA service has recently begun declining to actually provide the audio CAPTCHA alternative clearly proffered onscreen.</p>
+			<p>Pattern-matching algorithms can achieve an even higher success rate of cracking CAPTCHAs in some instances, as demonstrated in <cite>CAPTCHA Security: A Case Study</cite> [[captcha-security]] and <cite>HMM-based Attacks on Google’s reCAPTCHA with Continuous Visual and Audio Symbols</cite> [[recaptcha-attacks]]. While efforts are being made to strengthen traditional CAPTCHA security, more robust security solutions risk reducing the typical user’s ability to understand the CAPTCHA that needs to be resolved, e.g., <cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite> [[defeat-line-noise]]. A recent study at the University of Maryland has demonstrated <a href="https://motherboard.vice.com/en_us/article/pa55z8/researchers-fool-recaptcha-with-googles-own-speech-to-text-service?utm_source=reddit.com">90% success rate cracking Google's audio reCAPTCHA</a> using Google's own speech recognition service. Indeed, as noted below, Google's v2 reCAPTCHA service has recently begun declining to actually provide the audio CAPTCHA alternative clearly proffered onscreen.</p>
 			<p>In fact it is arguable that online services which offer the content developer a ready solution for distinguishing human users from robots may well be helping defeat that very function. For example <a href="https://www.google.com/recaptcha">Google's reCAPTCHA proclaims </a> : "Hundreds of millions of CAPTCHAs are solved by people every day. reCAPTCHA makes positive use of this human effort by channeling the time spent solving CAPTCHAs into annotating images and building machine learning datasets. This in turn helps improve maps and solve hard <a>AI</a> problems." It is legitimate to consider whether it also describes a classic vicious cycle which is helping defeat the effectiveness of visual and auditory CAPTCHA deployments.</p>
 			<p>It is therefore highly recommended that the purpose and effectiveness of any deployed solution be carefully considered and evaluated across multiple browser and operating system environments before adoption, and then closely monitored for effective performance. Alternative security methods, such as two-step or multi-device verification, along with emerging protocols for identifying human users with high reliability should also be carefully considered in preference to traditional image-based CAPTCHA methods for both security and accessibility reasons.</p>
 		</section>
@@ -78,7 +78,7 @@ the web; see <cite>Effects of Text Rotation, String Length, and Letter Format
 on Text-based CAPTCHA Robustness</cite> [[captcha-robustness]].  This problem
 is likely to increase when using  Latin-script characters beyond the ASCII
 range, with accents and diacritics, or shapes not included in the set used for
-English. For +example, speakers of Arabic or Thai may not have enough knowledge
+English. For example, speakers of Arabic or Thai may not have enough knowledge
 to identify a distorted version of such characters. Furthermore, users may not
 have the necessary keys available on their local keyboard.  </p>
 
@@ -226,11 +226,11 @@ traditional <a>CAPTCHA</a>-avoidance approaches.</p>
 			<p>Acquired in 2009 from Carnegie Mellon University, <a href="https://www.google.com/recaptcha/">Google's reCAPTCHA</a> overwhelmingly dominates CAPTCHA deployment on the web today. However, <a href="https://developers.google.cn/recaptcha/old/docs/asp">reCAPTCHA Version 1</a> is no longer supported.</p>
 			<section>
 			<h4>Version 2: Are you a robot?</h4>
-			<p>reCAPTCHA Version 2 provided an API that was most effectively marketed as the "no CAPTCHA re CAPTCHA," and its checkbox proclaiming: "I'm not a robot" became a cultural icon, spawning various cultural offshoots in art, theater, and popular music.</p>
+			<p>reCAPTCHA v2 provided an API that was most effectively marketed as the "no CAPTCHA re CAPTCHA," and its checkbox proclaiming: "I'm not a robot" became a cultural icon, spawning various cultural offshoots in art, theater, and popular music.</p>
 			<p>The checkbox was, of course, never a checkbox in the traditional HTML sense. The <a href="https://termsfeed.com/blog/privacy-policy-recaptcha/">pseudo-checkbox process</a> became a prodigious collector of user data well beyond mouse movement and keyboard navigation, including the date, the language the browser is set to, all cookies placed by Google over the last 6 months, CSS information for that page, an inventory of mouse clicks made on that screen (or touches if on a touch device), an inventory of plugins installed on the browser, and an itemization of all javascript objects, all to determine whether the user is human or robot. Of course Google also generally knows much about individual users, including their customary IP addresses, the telephone numbers and email addresses of their friends, family and colleagues, where they have been at every moment of every day, as well as their web search and YouTube habits. This is why the simple checkbox could keep the CAPTCHA process disarmingly simple, though it also explains why a link to Google's privacy policy has always accompanied the "no CAPTCHA reCAPTCHA". Disclosure and certain provisions of the Privacy Policy are required to satisfy legal requirements in California and in the E.U.</p>
-			<p>Even though specific WCAG failures were often noted, Google's reCAPTCHA V2 was for a time regarded the most accessible CAPTCHA solution for one simple reason, it was capable of being comfortably completed using a variety of <a>assistive technologies</a>. More recently it has been widely observed that utilizing keyboard navigation, as many assistive technology users do, no longer works. Instead, users are presented with a traditional inaccessible CAPTCHA as a fall-back mechanism. Our own tests with various browsers on various operating environments have been generally successful with Google's own <a href="http://www.google.com/recaptcha/api2/demo">reCAPTCHA test page</a>. However, browsing in incognito mode, clearing or blocking cookies, and additional factors can apparently trigger a fallback to traditional CAPTCHA these days for many assistive technology users.</p>
+			<p>Even though specific WCAG failures were often noted, Google's reCAPTCHA v2 was for a time regarded the most accessible CAPTCHA solution for one simple reason, it was capable of being comfortably completed using a variety of <a>assistive technologies</a>. More recently it has been widely observed that utilizing keyboard navigation, as many assistive technology users do, no longer works. Instead, users are presented with a traditional inaccessible CAPTCHA as a fall-back mechanism. Our own tests with various browsers on various operating environments have been generally successful with Google's own <a href="http://www.google.com/recaptcha/api2/demo">reCAPTCHA test page</a>. However, browsing in incognito mode, clearing or blocking cookies, and additional factors can apparently trigger a fallback to traditional CAPTCHA these days for many assistive technology users.</p>
 
-<p>One reCAPTCHA V. 2 innovation seems most
+<p>One reCAPTCHA v2 innovation seems most
 promising. Rather than reproduce characters, users are
 asked to type the words they see (or hear). It even
 appears unnecessary to spell these correctly or to
@@ -238,21 +238,21 @@ enter all the words presented in order to be adjudged
 human.</p>
 
 <p>Most disappointingly, it now appears
-that audio CAPTCHAs previously available with V. 2 implementations are now sometimes no longer
+that audio CAPTCHAs previously available with v2 implementations are now sometimes no longer
 being provided. Instead users see a message that reads:
 "Your computer or network may be sending automated
 queries. To protect our users, we can't process your
-request right now." Users who have depended on audio CAPTCHA alternatives, who have previously been able to function with reCAPTCHA v.2., are thus suddenly and seemingly capriciously locked out and denied service on sites still using V.2.</p>
+request right now." Users who have depended on audio CAPTCHA alternatives, who have previously been able to function with reCAPTCHA v2, are thus suddenly and seemingly capriciously locked out and denied service on sites still using V2.</p>
 			</section>
 			<section id="recap3">
 			<h4>The Noninteractive Version 3</h4>
 
 <p>Late in 2018 Google released <a
 					href="https://webmasters.googleblog.com/2018/10/introducing-recaptcha-v3-new-way-to.html">
-	reCAPTCHA V3</a> promising to eliminate "the need to interrupt users
+	reCAPTCHA v3</a> promising to eliminate "the need to interrupt users
 with challenges at all." <a
 	href="https://lists.w3.org/Archives/Public/public-rqtf/2019Mar/0019.html">Google
-	also informed us</a> that their goals with V.3 included increasing "the
+	also informed us</a> that their goals with v included increasing "the
 accessibility of the web by removing traditional CAPTCHAs" entirely.
 Obviously, fully noninteractive <a>Turing testing</a> is a most welcome development
 direction for accessibility. When the noninteractive <a>Turing test</a> returns a
@@ -268,9 +268,9 @@ with disabilities.  </p>
 challenge that makes sense in the context of their site such as two-factor
 authentication, send the post to moderators, or combine the score with signals
 specific to their site to make a more informed judgment." Google intends
-that traditional CAPTCHA no longer be used as a  fallback mechanism and has dropped  it from V.3 reCAPTCHA, though it remains in their slightly older, 2017 <a href="https://developers.google.com/recaptcha/docs/invisible">reCAPTCHA V.2 Invisible</a> service.</p>
+that traditional CAPTCHA no longer be used as a  fallback mechanism and has dropped  it from v reCAPTCHA, though it remains in their slightly older, 2017 <a href="https://developers.google.com/recaptcha/docs/invisible">reCAPTCHA v2 Invisible</a> service.</p>
 
-<p>The reality is that what action is taken in response to an ambiguous core returned by V. 3 is in the hands of the content provider. Services like reCAPTCHA gain their market share by offering to relieve the content provider of the hard work inherent in mounting effective and accessible <a>Turing testing</a>. Sadly this leaves the door open to any fallback approach a content provider might choose. Meanwhile, Google's reCAPTCHA FAQ  declares that <a href="https://developers.google.cn/recaptcha/docs/faq">reCAPTCHA Version 2 is not going away</a>. It is therefore imperative that methods for disambiguating an ambiguous noninteractive score be well documented and easily implementable in order to better overcome the tendency to simply adopt the old familiar approach.
+<p>The reality is that what action is taken in response to an ambiguous core returned by v3 is in the hands of the content provider. Services like reCAPTCHA gain their market share by offering to relieve the content provider of the hard work inherent in mounting effective and accessible <a>Turing testing</a>. Sadly this leaves the door open to any fallback approach a content provider might choose. Meanwhile, Google's reCAPTCHA FAQ  declares that <a href="https://developers.google.cn/recaptcha/docs/faq">reCAPTCHA Version 2 is not going away</a>. It is therefore imperative that methods for disambiguating an ambiguous noninteractive score be well documented and easily implementable in order to better overcome the tendency to simply adopt the old familiar approach.
 </p>
 
 			</section>
@@ -287,11 +287,11 @@ for <cite>simple and effective user authentication, including persons with
 disabilities</cite> [[auth-mult]]. We note that several major service providers
 (such as Facebook) now support cross-site user authentication. However, in
 relation to the specific ability to tell a human and bot apart, it appears only
-<a href="https://developers.google.com/recaptcha/docs/v3">Google's V. 3
+<a href="https://developers.google.com/recaptcha/docs/v3">Google's v3
 reCAPTCHA API</a> provides cross-site CAPTCHA services without actually passing
 specific identifying data.</p>
 
-<p>We would expect Google's V. 3 reCAPTCHA system would score no need to
+<p>We would expect Google's v3 reCAPTCHA service would score no need to
 present a CAPTCHA whenever another browser tab is already properly logged in to
 a Google product such as Calendar on whatever registered user device. However,
 while this may prevent the third party site from collecting personal data, it
@@ -356,7 +356,7 @@ challenges in the background and dramatically reduce interactive CAPTCHA
 challenges. Most refreshingly it offers meaningful privacy protection, even
 anonymity, while reliably validating the user is human. Essentially, the CDN is functioning as a trust broker on the user's behalf. When a user "spends" a token, they're saying to the site they're accessing: "You don't trust me, but you do trust the entity that issued this token, and they're vouching for me." As this approach is
 developed further, we can reasonably hope the onus of the initial challenge can
-be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g.,adding  support for biometrics.</p>
+be further mitigated with robust support for web accessibility, perhaps by expanding available initial CAPTCHA validation approaches, e.g., adding  support for biometrics.</p>
 		</section>
 		<section id="fedtoken">
 			<h3>Why not Federated Turing Tokens?</h3>
@@ -368,7 +368,7 @@ Others, like
  <a href="https://developers.facebook.com/products/account-creation">Facebook's
 Account Kit</a>, 
 seeks to leverage login authentication on a highly popular web service to grow the ecosystem developed using user data collected on that platform.
-It has been unclear to us at first blush which, if any, of these services prioritize  restricting account services to human users only. It is, however, clear that virtually none provides their authenticated users, about whom they know a great deal, support for noninteractively authenticating their humanity with third parties. The only exceptions of which we're aware are <a href="#recap3">reCAPTCHA Version 3</a and  <a href="#privpass">Privacy Pass</a.</p>
+It has been unclear to us at first blush which, if any, of these services prioritize  restricting account services to human users only. It is, however, clear that virtually none provides their authenticated users, about whom they know a great deal, support for noninteractively authenticating their humanity with third parties. The only exceptions of which we're aware are <a href="#recap3">reCAPTCHA v3</a and <a href="#privpass">Privacy Pass</a.</p>
 			<p>We believe adding third party CAPTCHA support to identity management services is needed. Any service offering to say to a third party: "You don't know this user so you don't trust them, but you know and trust me, therefore you can trust this user" could only exist after earning trust across the industry. Such a service would indeed need to be careful to sign up only human users. The service that leveraged both user authentication and trusted anonymity would, we believe quickly prove viability. All users, but most certainly persons with disabilities need not only simplified authentication but also the ability to interact across the web using widely accepted trust credentials with minimal interruption for validating their humanity. Such an accessible enhanced quality <a>VPN</a> service providing not just cross-site login but also Turing authentication, perhaps for a monthly fee&mdash;such a service could conceivably even validate and broker all the user's registered devices across the Internet anonymizing even financial transactions and shipping data as a full service on line trust broker. Letters of credit had a similar beginning in international finance some centuries hence, so why not on line Turing Tokens and privacy protection today?</p>
 		</section>
 		</section>
@@ -410,12 +410,13 @@ that an effective system today may prove ineffective a few years from now.</p>
 <ol>
 
 <li>Risk analyses of attempts to access a resource are generally desirable.
-Some on line resources are simply greater targets than others. It is critical that analyses include an evidence based determination of how challenging a CAPTCHA needs to be. Users should not be forced beyond what is strictly necessary to keep a site secure, e.g. if a honeypot suffices, use a honeypot until evidence of robotic attacks dictates something else.</li>
+Some on line resources are simply greater targets than others. It is critical that analyses include an evidence based determination of how challenging a CAPTCHA needs to be. Users should not be forced beyond what is strictly necessary to keep a site secure, e.g.,/
+if a honeypot suffices, use a honeypot until evidence of robotic attacks dictates something else.</li>
 
 <li>Whenever an interactive 
 CAPTCHA is deemed important for security reasons,
 it is very beneficial to limit and minimize how often users are subjected to interactive CAPTCHA challenges. With CAPTCHA less interactivity is clearly more accessibility. As noted above, we're encouraged by the
-development of approaches such as <a href="#privpass">Privacy Pass</a> which, even though it still requires an interactive CAPTCHA challenge at times, it does so much less often.</li>
+development of approaches such as <a href="#privpass">Privacy Pass</a> which, even though it still sometimes requires an interactive CAPTCHA challenge, it does so much less often.</li>
 
 <li>Whenever an interactive CAPTCHA is implemented, a variety of alternative challenges must be
 made available to engage different sensory and cognitive capabilities of the user in order that the user can choose an approach that best fits their abilities.
