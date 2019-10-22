@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.30.5"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.34.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<title>Inaccessibility of CAPTCHA</title>
 		<style id="respec-mainstyle">/*****************************************************************
@@ -132,6 +132,12 @@ table.simple {
 
 .simple th {
   background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th a {
   color: #fff;
   padding: 3px 5px;
   text-align: left;
@@ -820,9 +826,9 @@ var[data-type]:hover::before {
       "id": "marrakesh"
     }
   },
-  "publishDate": "2019-08-23",
-  "publishISODate": "2019-08-23T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 23 August 2019"
+  "publishDate": "2019-10-22",
+  "publishISODate": "2019-10-22T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 22 October 2019"
 }</script><meta name="description" content="Various approaches have been employed over many years to distinguish human users of web sites from robots. The traditional CAPTCHA approach asking users to identify obscured text in an image remains common, but other approaches have emerged. All interactive approaches require users to perform a task believed to be relatively easy for humans but difficult for robots. Unfortunately the very nature of the interactive task inherently excludes many people with disabilities, resulting in a denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, further complicating the challenge of providing services secured from robotic intrusion yet accessible to people with disabilities. This document examines a number of approaches that allow systems to test for human users and the extent to which these approaches adequately accommodate people with disabilities, including recent
 				non-interactive and tokenized approaches. We have grouped these approaches by two category classifications: Stand-Alone Approaches that can be deployed on a web host without engaging the services of unrelated third parties and Multi-Party Approaches that engage the services of an unrelated third party."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
@@ -830,7 +836,7 @@ var[data-type]:hover::before {
       <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-08-23">23 August 2019</time>
+        <time class="dt-published" datetime="2019-10-22">22 October 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -1329,9 +1335,9 @@ identify themselves as human.</p>
 				<dd>Text that is associated with, and provides a brief description or label of, non-text content.</dd>
 				<dt><dfn data-lt="assistive technology|assistive technologies" data-dfn-type="dfn" id="dfn-assistive-technology">assistive technology</dfn></dt>
 				<dd>Hardware and / or software that acts as a stand-alone <a href="#dfn-user-agent" class="internalDFN" data-link-type="dfn">user agent</a>, or alongside a mainstream user agent to meet the functional requirements of users with disabilities that go beyond those provided by mainstream user agents alone.</dd>
-				<dt><dfn data-lt="bayesian filter|bayesian filtering" data-dfn-type="dfn" id="dfn-bayesian-filter">Bayesian filter</dfn></dt>
+				<dt><dfn data-lt="Bayesian filter|Bayesian filtering" data-dfn-type="dfn" id="dfn-bayesian-filter">Bayesian filter</dfn></dt>
 				<dd>Recursive probabilistic <a href="#dfn-heuristic" class="internalDFN" data-link-type="dfn">heuristic</a> to categorize content, typically used in <a href="#dfn-spam-filter" class="internalDFN" data-link-type="dfn">spam filtering</a>.</dd>
-				<dt><dfn data-lt="captcha|completely automated public turing test to tell computers and humans apart" data-dfn-type="dfn" id="dfn-captcha">CAPTCHA</dfn></dt>
+				<dt><dfn data-lt="CAPTCHA|Completely Automated Public Turing Test to Tell Computers and Humans Apart" data-dfn-type="dfn" id="dfn-captcha">CAPTCHA</dfn></dt>
 				<dd>“Completely Automated Public <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing Test</a> to distinguish between Computers and Humans” relying on a challenge believed to be difficult for machines to satisfy correctly but relatively easy for humans.</dd>
 				<dt><dfn data-dfn-type="dfn" id="dfn-continuous-authentication">continuous authentication</dfn></dt>
 				<dd>Mechanism to determine that a user is still the one previously verified without requiring interactive re-authentication.</dd>
@@ -1351,7 +1357,7 @@ identify themselves as human.</p>
 				<dd>Software that processes email messages to separate undesired, usually automated, messages from desired messages.</dd>
 				<dt><dfn data-lt="spider|spiders" data-dfn-type="dfn" id="dfn-spider">spider</dfn></dt>
 				<dd><a href="#dfn-robot" class="internalDFN" data-link-type="dfn">Robot</a> that processes web content and recursively follows links to process the content at the link target.</dd>
-				<dt><dfn data-lt="turing test|turing testing" data-dfn-type="dfn" id="dfn-turing-test">Turing test</dfn></dt>
+				<dt><dfn data-lt="turing test|turing testing|Turing test" data-dfn-type="dfn" id="dfn-turing-test">Turing test</dfn></dt>
 				<dd>A test to determine whether responses provided by a software application are distinguishable from the responses of human individuals.</dd>
 				<dt><dfn data-dfn-type="dfn" id="dfn-user-agent">user agent</dfn></dt>
 				<dd>Any software that retrieves, renders and facilitates end user interaction with web content.</dd>

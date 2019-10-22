@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.30.5"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html lang="en-US" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.34.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -24,12 +24,10 @@ span.warning { padding: .1em .5em .15em; }
 
 .warning-title:before{
     content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 3em;
+    font-size: 1.3em;
     float: left;
-    height: 100%;
     padding-right: .3em;
-    vertical-align: top;
-    margin-top: -0.5em;
+    margin-top: -0.3em;
 }
 
 li.task-list-item {
@@ -198,6 +196,12 @@ table.simple {
 
 .simple th {
   background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th a {
   color: #fff;
   padding: 3px 5px;
   text-align: left;
@@ -412,16 +416,16 @@ var[data-type]:hover::before {
   "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/83907/status",
   "tocIntroductory": true,
   "doRDFa": 1.1,
-  "publishDate": "2019-08-23",
-  "publishISODate": "2019-08-23T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 23 August 2019"
-}</script><meta name="description" content=""><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
+  "publishDate": "2019-10-22",
+  "publishISODate": "2019-10-22T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 22 October 2019"
+}</script><meta name="description" content="Framework for Accessible Specification of Technologies (FAST) advises creators of technical specifications how to ensure their technology meets the needs of user with disabilities. It addresses primarily web content technologies but also relates to any technology that affects web content sent to users, including client-side APIs, transmission protocols, and interchange formats. Specifications that implement these guidelines make it possible for content authors and user agents to render the content in an accessible manner to people with a wide range of abilities."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Framework for Accessible Specification of Technologies (FAST)</h1>
       
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-08-23">23 August 2019</time>
+        <time class="dt-published" datetime="2019-10-22">22 October 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -461,7 +465,13 @@ var[data-type]:hover::before {
     </p>
       <hr title="Separator for header">
     </div>
-		<section id="abstract" class="introductory"><h2>Abstract</h2>Framework for Accessible Specification of Technologies (FAST) advises creators of technical specifications how to ensure their technology meets the needs of user with disabilities. It addresses primarily web content technologies but also relates to any technology that affects web content sent to users, including client-side APIs, transmission protocols, and interchange formats. Specifications that implement these guidelines make it possible for content authors and user agents to render the content in an accessible manner to people with a wide range of abilities.<p> </p></section>
+		<section id="abstract" class="introductory"><h2>Abstract</h2>
+			<p>Framework for Accessible Specification of Technologies (FAST) advises creators of technical specifications how to ensure their technology meets the needs of user with disabilities. It addresses primarily web content technologies but also relates to any technology that affects web content sent to users, including client-side APIs, transmission protocols, and interchange formats. Specifications that implement these guidelines make it possible for content authors and user agents to render the content in an accessible manner to people with a wide range of abilities.</p>
+			<p>This document is accompanied by a <a href="checklist.html">checklist</a> which is more complete and usable for groups evaluating technologies at this time.</p>
+		</section>
+		<section class="respec-offending-element" title="Linter (no-headingless-sections): All sections must start with a `h2-6` element. Add a `h2-6` to the offending section or use a `<div>`. See developer console. Occured" id="respec-offender-linter-no-headingless-sections-all-sections-must-start-with-a-h2-6-element-add-a-h2-6-to-the-offending-section-or-use-a-div-see-developer-console-occured">
+			<p> </p>
+		</section>
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
 		<p>
       This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
@@ -500,27 +510,31 @@ var[data-type]:hover::before {
     </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">1.1 </bdi>Goals</a></li><li class="tocline"><a class="tocxref" href="#audience"><bdi class="secno">1.2 </bdi>Audience</a></li><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.3 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#approach"><bdi class="secno">1.4 </bdi>Approach</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inventory-user-needs"><bdi class="secno">1.4.1 </bdi>Inventory user needs</a></li><li class="tocline"><a class="tocxref" href="#identify-ways-to-meet-needs"><bdi class="secno">1.4.2 </bdi>Identify ways to meet needs</a></li><li class="tocline"><a class="tocxref" href="#develop-technology-guidelines"><bdi class="secno">1.4.3 </bdi>Develop technology guidelines</a></li></ol></li><li class="tocline"><a class="tocxref" href="#explanation-of-user-needs"><bdi class="secno">1.5 </bdi>Explanation of User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#evolution-of-user-needs"><bdi class="secno">1.5.1 </bdi>Evolution of user needs</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><bdi class="secno">1.5.2 </bdi>Assumptions </a></li><li class="tocline"><a class="tocxref" href="#applicability-of-needs"><bdi class="secno">1.5.3 </bdi>Applicability of Needs </a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#collected-user-needs"><bdi class="secno">2. </bdi>Collected User Needs</a></li><li class="tocline"><a class="tocxref" href="#meeting-user-needs"><bdi class="secno">3. </bdi>Meeting User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ways-to-meet-user-needs"><bdi class="secno">3.1 </bdi>Ways to Meet User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#author-implementation"><bdi class="secno">3.1.1 </bdi>Author Implementation</a></li><li class="tocline"><a class="tocxref" href="#user-agent-features"><bdi class="secno">3.1.2 </bdi>User Agent Features</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibility-support-in-mainstream-user-agents"><bdi class="secno">3.1.2.1 </bdi>Accessibility Support in Mainstream User Agents</a></li><li class="tocline"><a class="tocxref" href="#assistive-technology"><bdi class="secno">3.1.2.2 </bdi>Assistive Technology</a></li><li class="tocline"><a class="tocxref" href="#accessibility-apis"><bdi class="secno">3.1.2.3 </bdi>Accessibility APIs</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#meeting-user-needs-table"><bdi class="secno">3.2 </bdi>Meeting User Needs Table</a></li></ol></li><li class="tocline"><a class="tocxref" href="#framework-for-accessible-specification-of-technologies"><bdi class="secno">4. </bdi>Framework for Accessible Specification of Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#alternative-content"><bdi class="secno">4.1 </bdi>Alternative Content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#text-alternatives"><bdi class="secno">4.1.1 </bdi>Text Alternatives</a></li><li class="tocline"><a class="tocxref" href="#rich-alternatives"><bdi class="secno">4.1.2 </bdi>Rich Alternatives</a></li></ol></li><li class="tocline"><a class="tocxref" href="#color"><bdi class="secno">4.2 </bdi>Color</a></li><li class="tocline"><a class="tocxref" href="#device-independence"><bdi class="secno">4.3 </bdi>Device Independence</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#universal-meaning-support"><bdi class="secno">4.3.1 </bdi>Universal meaning support</a></li><li class="tocline"><a class="tocxref" href="#compatibility-with-aapis"><bdi class="secno">4.3.2 </bdi>Compatibility with AAPIs</a></li><li class="tocline"><a class="tocxref" href="#hardware-interfaces"><bdi class="secno">4.3.3 </bdi>Hardware Interfaces</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-customization"><bdi class="secno">4.4 </bdi>User Customization</a></li><li class="tocline"><a class="tocxref" href="#user-control"><bdi class="secno">4.5 </bdi>User Control</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#blinking-flashing"><bdi class="secno">4.5.1 </bdi>Blinking / Flashing</a></li><li class="tocline"><a class="tocxref" href="#automatic-actions"><bdi class="secno">4.5.2 </bdi>Automatic actions</a></li><li class="tocline"><a class="tocxref" href="#time-based-content"><bdi class="secno">4.5.3 </bdi>Time-based content</a></li></ol></li><li class="tocline"><a class="tocxref" href="#focus"><bdi class="secno">4.6 </bdi>Focus</a></li><li class="tocline"><a class="tocxref" href="#audiovisual-content"><bdi class="secno">4.7 </bdi>Audiovisual Content</a></li><li class="tocline"><a class="tocxref" href="#extensibility"><bdi class="secno">4.8 </bdi>Extensibility</a></li><li class="tocline"><a class="tocxref" href="#alternate-view-modalities"><bdi class="secno">4.9 </bdi>Alternate view modalities</a></li><li class="tocline"><a class="tocxref" href="#timing"><bdi class="secno">4.10 </bdi>Timing</a></li><li class="tocline"><a class="tocxref" href="#user-input"><bdi class="secno">4.11 </bdi>User input</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">A. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><bdi class="secno">A.1 </bdi>Participants in the PFWG at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">A.2 </bdi>Enabling funders</a></li></ol></li></ol></nav>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#checklist"><bdi class="secno">1.1 </bdi>Checklist</a></li><li class="tocline"><a class="tocxref" href="#goals"><bdi class="secno">1.2 </bdi>Goals</a></li><li class="tocline"><a class="tocxref" href="#audience"><bdi class="secno">1.3 </bdi>Audience</a></li><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.4 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#approach"><bdi class="secno">1.5 </bdi>Approach</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inventory-user-needs"><bdi class="secno">1.5.1 </bdi>Inventory user needs</a></li><li class="tocline"><a class="tocxref" href="#identify-ways-to-meet-needs"><bdi class="secno">1.5.2 </bdi>Identify ways to meet needs</a></li><li class="tocline"><a class="tocxref" href="#develop-technology-guidelines"><bdi class="secno">1.5.3 </bdi>Develop technology guidelines</a></li></ol></li><li class="tocline"><a class="tocxref" href="#explanation-of-user-needs"><bdi class="secno">1.6 </bdi>Explanation of User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#evolution-of-user-needs"><bdi class="secno">1.6.1 </bdi>Evolution of user needs</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><bdi class="secno">1.6.2 </bdi>Assumptions </a></li><li class="tocline"><a class="tocxref" href="#applicability-of-needs"><bdi class="secno">1.6.3 </bdi>Applicability of Needs </a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#collected-user-needs"><bdi class="secno">2. </bdi>Collected User Needs</a></li><li class="tocline"><a class="tocxref" href="#meeting-user-needs"><bdi class="secno">3. </bdi>Meeting User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ways-to-meet-user-needs"><bdi class="secno">3.1 </bdi>Ways to Meet User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#author-implementation"><bdi class="secno">3.1.1 </bdi>Author Implementation</a></li><li class="tocline"><a class="tocxref" href="#user-agent-features"><bdi class="secno">3.1.2 </bdi>User Agent Features</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibility-support-in-mainstream-user-agents"><bdi class="secno">3.1.2.1 </bdi>Accessibility Support in Mainstream User Agents</a></li><li class="tocline"><a class="tocxref" href="#assistive-technology"><bdi class="secno">3.1.2.2 </bdi>Assistive Technology</a></li><li class="tocline"><a class="tocxref" href="#accessibility-apis"><bdi class="secno">3.1.2.3 </bdi>Accessibility APIs</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#meeting-user-needs-table"><bdi class="secno">3.2 </bdi>Meeting User Needs Table</a></li></ol></li><li class="tocline"><a class="tocxref" href="#framework-for-accessible-specification-of-technologies"><bdi class="secno">4. </bdi>Framework for Accessible Specification of Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#alternative-content"><bdi class="secno">4.1 </bdi>Alternative Content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#text-alternatives"><bdi class="secno">4.1.1 </bdi>Text Alternatives</a></li><li class="tocline"><a class="tocxref" href="#rich-alternatives"><bdi class="secno">4.1.2 </bdi>Rich Alternatives</a></li></ol></li><li class="tocline"><a class="tocxref" href="#color"><bdi class="secno">4.2 </bdi>Color</a></li><li class="tocline"><a class="tocxref" href="#device-independence"><bdi class="secno">4.3 </bdi>Device Independence</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#universal-meaning-support"><bdi class="secno">4.3.1 </bdi>Universal meaning support</a></li><li class="tocline"><a class="tocxref" href="#compatibility-with-aapis"><bdi class="secno">4.3.2 </bdi>Compatibility with AAPIs</a></li><li class="tocline"><a class="tocxref" href="#hardware-interfaces"><bdi class="secno">4.3.3 </bdi>Hardware Interfaces</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-customization"><bdi class="secno">4.4 </bdi>User Customization</a></li><li class="tocline"><a class="tocxref" href="#user-control"><bdi class="secno">4.5 </bdi>User Control</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#blinking-flashing"><bdi class="secno">4.5.1 </bdi>Blinking / Flashing</a></li><li class="tocline"><a class="tocxref" href="#automatic-actions"><bdi class="secno">4.5.2 </bdi>Automatic actions</a></li><li class="tocline"><a class="tocxref" href="#time-based-content"><bdi class="secno">4.5.3 </bdi>Time-based content</a></li></ol></li><li class="tocline"><a class="tocxref" href="#focus"><bdi class="secno">4.6 </bdi>Focus</a></li><li class="tocline"><a class="tocxref" href="#audiovisual-content"><bdi class="secno">4.7 </bdi>Audiovisual Content</a></li><li class="tocline"><a class="tocxref" href="#extensibility"><bdi class="secno">4.8 </bdi>Extensibility</a></li><li class="tocline"><a class="tocxref" href="#alternate-view-modalities"><bdi class="secno">4.9 </bdi>Alternate view modalities</a></li><li class="tocline"><a class="tocxref" href="#timing"><bdi class="secno">4.10 </bdi>Timing</a></li><li class="tocline"><a class="tocxref" href="#user-input"><bdi class="secno">4.11 </bdi>User input</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">A. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><bdi class="secno">A.1 </bdi>Participants in the PFWG at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">A.2 </bdi>Enabling funders</a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
+			<section id="checklist">
+				<h3 id="x1-1-checklist"><bdi class="secno">1.1 </bdi>Checklist<a class="self-link" aria-label="§" href="#checklist"></a></h3>
+				<p>This document is accompanied by a <a href="checklist.html">checklist</a> which is more complete and usable for groups evaluating technologies at this time.</p>
+			</section>
 			<section id="goals">
-				<h3 id="x1-1-goals"><bdi class="secno">1.1 </bdi>Goals<a class="self-link" aria-label="§" href="#goals"></a></h3>
+				<h3 id="x1-2-goals"><bdi class="secno">1.2 </bdi>Goals<a class="self-link" aria-label="§" href="#goals"></a></h3>
                 <p>Numerous guidelines exist for creating and supporting content that is accessible to people with disabilities, on and off the Web. When these guidelines are supported in the entire web ecosystem, content creators can author accessible content, and expect the accessibility features to be made available by user agents, including assistive technologies when needed. Authoring tools support creation of accessible content, and accessibility features survive transmission to different systems or conversion of content to different formats.</p>
                 <p>Nearly all of these accessibility features depend on support in some form from the technology in which content is encoded, transmitted, and sometimes transformed. But there is not yet a set of well-documented guidance for such technologies. Instead, requirements are inferred from authoring and user agent guidelines. This makes it complicated for technology creators to ensure they have met the full set of needs. Review from accessibility specialists is limited by bandwidth and expertise, so does not fully address that problem. As a result, varying technologies provide various levels of support with varying levels of compatibility with other technologies. These issues at the core layers of Web technology impact the progress that can be made from support of higher-level guidelines.</p>
                 <p>Framework for Accessible Specification of Technologies aims to fill this gap. It is intended to be a single, well-considered set of guidelines addressing specifically the features technologies need to provide to support accessible. These guidelines relate to the requirements of other guidelines but should not be confused with them. The goal of FAST is to provide a single source of guidelines for Web technology accessibility. They relate to other guidelines and documentation to provide additional information and rationale for the requirement, but are intended to be a self-sufficient set of guidelines that technology creators can follow.</p>
 			</section>
 			<section id="audience">
-				<h3 id="x1-2-audience"><bdi class="secno">1.2 </bdi>Audience<a class="self-link" aria-label="§" href="#audience"></a></h3>
+				<h3 id="x1-3-audience"><bdi class="secno">1.3 </bdi>Audience<a class="self-link" aria-label="§" href="#audience"></a></h3>
                 <p>The primary audience of FAST is creators of Web technologies. Most of the guidelines relate to content and presentation technologies like HTML, CSS, SVG, PDF, audio/video formats, etc. Some guidelines also address data formats, interchange formats, transmission protocols, etc., usually aimed at ensuring these technologies preserve the accessibility features of content impacted by these technologies. Because of this broad set of relevant technologies, all Web technology creators are considered part of the audience for FAST.</p>
                 <p>Secondary audience include creators of higher level accessibility guidelines and other advocates for web accessibility features. Because FAST has a strong grounding in user needs, researchers and advocates who identify the accessibility requirements of web users with disabilities are also an important audience.</p>
 			</section>
 				<section id="scope">
-					<h3 id="x1-3-scope"><bdi class="secno">1.3 </bdi>Scope<a class="self-link" aria-label="§" href="#scope"></a></h3>
+					<h3 id="x1-4-scope"><bdi class="secno">1.4 </bdi>Scope<a class="self-link" aria-label="§" href="#scope"></a></h3>
 					<p>Framework for Accessible Specification of Technologies is a product of the World Wide Web Consortium and as such targets only the accessibility requirements of web technologies. Many of the user needs are the same for web use and non-web use, so FAST will necessarily overlap and hopefully be compatible with similar guidelines addressing non-web space. Nonetheless, FAST is not designed to be used for non-web technologies and there could be key differences. Furthermore, there are user needs that exist outside the web that do not impact the web, and those needs are completely unaddressed by FAST.</p>
                     <p>In spite of these caveats about the scope of FAST, this scope will evolve as the Web does. More and more technologies are becoming part of the Web, and bringing user needs to the Web along with them. For instance, strictly hardware accessibility issues may be non-web requirements, but the Web of Things brings many of these issues closer to the Web than in the past. FAST will need to reflect this evolution, and future versions may be required to address user needs that are new to the Web.</p>
 				</section>
 			<section id="approach">
-				<h3 id="x1-4-approach"><bdi class="secno">1.4 </bdi>Approach<a class="self-link" aria-label="§" href="#approach"></a></h3>
+				<h3 id="x1-5-approach"><bdi class="secno">1.5 </bdi>Approach<a class="self-link" aria-label="§" href="#approach"></a></h3>
                 <p>The goal of FAST is to help ensure that web technologies meet the needs of users with disabilities. To do this, the work involves three stages:</p>
                 <ul>
                     <li>Inventory user needs;</li>
@@ -528,7 +542,7 @@ var[data-type]:hover::before {
                     <li>Develop technology guidelines.</li>
                 </ul>
                 <section id="inventory-user-needs">
-                    <h4 id="x1-4-1-inventory-user-needs"><bdi class="secno">1.4.1 </bdi>Inventory user needs<a class="self-link" aria-label="§" href="#inventory-user-needs"></a></h4>
+                    <h4 id="x1-5-1-inventory-user-needs"><bdi class="secno">1.5.1 </bdi>Inventory user needs<a class="self-link" aria-label="§" href="#inventory-user-needs"></a></h4>
                     <p>The first step in the development of these guidelines is to inventory known user needs. Many user needs affecting web content accessibility are well known and documented in multiple places. These needs are collected and related to each other in order to arrive at a single set of known needs. Sources examined in the development of these guidelines include:</p>
                     <ul>
                         <li><a href="http://www.jtc1access.org/documents/swga_339_DTR_29138-1_User_Needs_Summary.zip">JTC 1 User Needs</a>;
@@ -545,7 +559,7 @@ var[data-type]:hover::before {
                     <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="5"><span>Note</span></div><p class="">Note the goal of this exercise is not to supplant other good work in this field. The aim is to assemble disparate sources if knowledge about user needs in one place, to facilitate analysis. This work is likely to spin off from the core work of developing FAST. If another organization creates a sufficiently rich collection of documented user needs it will be possible to use that resource rather than reinvent the work in <abbr title="World Wide Web Consortium">W3C</abbr>.</p></div>
                 </section>
                 <section id="identify-ways-to-meet-needs">
-                    <h4 id="x1-4-2-identify-ways-to-meet-needs"><bdi class="secno">1.4.2 </bdi>Identify ways to meet needs<a class="self-link" aria-label="§" href="#identify-ways-to-meet-needs"></a></h4>
+                    <h4 id="x1-5-2-identify-ways-to-meet-needs"><bdi class="secno">1.5.2 </bdi>Identify ways to meet needs<a class="self-link" aria-label="§" href="#identify-ways-to-meet-needs"></a></h4>
                     <p>The second stage in development of the guidelines is to identify ways these needs can be met. There are three high-level ways user needs can be met:</p>
                     <ul>
                         <li>technology features;</li>
@@ -557,7 +571,7 @@ var[data-type]:hover::before {
                     <p>All of these ways of meeting user needs are identfied, along with their relationships to each other. Once these approaches are identified, the result is separate lists of requirements for content technologies, authors, and user agents. The relationship among the routes may play a role in prioritization of guidelines, since needs that can only be met by one route may be more important to meet by that route, than needs that could be met by other means as well.</p>
                 </section>
                 <section id="develop-technology-guidelines">
-                    <h4 id="x1-4-3-develop-technology-guidelines"><bdi class="secno">1.4.3 </bdi>Develop technology guidelines<a class="self-link" aria-label="§" href="#develop-technology-guidelines"></a></h4>
+                    <h4 id="x1-5-3-develop-technology-guidelines"><bdi class="secno">1.5.3 </bdi>Develop technology guidelines<a class="self-link" aria-label="§" href="#develop-technology-guidelines"></a></h4>
 				    <p>From the above analyses, it should also be easy to see where content technology features are required to make it possible to meet user needs. For example: </p><ul>
 						<li> If the author must implement something, the technology must provide a feature for the author to implement. </li>
 						<li> If the user need is met by design, the technology must provide suitably rich design capabilities. </li>
@@ -569,22 +583,22 @@ var[data-type]:hover::before {
                 </section>
 			</section>
 			<section id="explanation-of-user-needs">
-				<h3 id="x1-5-explanation-of-user-needs"><bdi class="secno">1.5 </bdi>Explanation of User Needs<a class="self-link" aria-label="§" href="#explanation-of-user-needs"></a></h3>
+				<h3 id="x1-6-explanation-of-user-needs"><bdi class="secno">1.6 </bdi>Explanation of User Needs<a class="self-link" aria-label="§" href="#explanation-of-user-needs"></a></h3>
 				
 				<p>Identify user needs that we plan to provide guidance on meeting. These should describe the needs of humans as they currently exist (i.e., without significant evolution or cyborgization from early 21st century norms), and therefore is as era-independent as possible with current knowledge. The focus is on the needs of people with disabilities, but because that is sometimes a relative / contextual condition, a significant proportion of mainstream needs will also be identified. </p>
 				<p>At least two levels of needs may be identified. The first is truly generic needs, requirements users have to access and use content such as perceive and understand it, and should be stable over time. The second layer is needs specific to technologies of the day, such as ability to understand and operate controls. This layer may be understood as an implementation of the generic needs, so may not be classed as user needs in the end. Regardless of its classification, it will be an important component of understanding the space. This level of needs evolves as technology and design patterns do, so needs to be maintainable separately from the generic needs. </p>
                 <section id="evolution-of-user-needs">
-                    <h4 id="x1-5-1-evolution-of-user-needs"><bdi class="secno">1.5.1 </bdi>Evolution of user needs<a class="self-link" aria-label="§" href="#evolution-of-user-needs"></a></h4>
+                    <h4 id="x1-6-1-evolution-of-user-needs"><bdi class="secno">1.6.1 </bdi>Evolution of user needs<a class="self-link" aria-label="§" href="#evolution-of-user-needs"></a></h4>
                     <p>Where user needs are suspected but known, related work may expand the inventory through research when feasible. Therefore the set of documented user needs will evolve over time. A given set of guidelines including FAST, however, can only address needs that were known at the time of development of the guidelines.</p>
                 </section>
 				<section id="assumptions">
-					<h4 id="x1-5-2-assumptions"><bdi class="secno">1.5.2 </bdi>Assumptions <a class="self-link" aria-label="§" href="#assumptions"></a></h4>
+					<h4 id="x1-6-2-assumptions"><bdi class="secno">1.6.2 </bdi>Assumptions <a class="self-link" aria-label="§" href="#assumptions"></a></h4>
 					<ul>
 						<li> User is accessing Web content on hardware / OS / AT combination that supports their needs. This may not always be true for shared device / public kiosk situations, but that issue is out of scope. </li>
 					</ul>
 				</section>
 				<section id="applicability-of-needs">
-					<h4 id="x1-5-3-applicability-of-needs"><bdi class="secno">1.5.3 </bdi>Applicability of Needs <a class="self-link" aria-label="§" href="#applicability-of-needs"></a></h4>
+					<h4 id="x1-6-3-applicability-of-needs"><bdi class="secno">1.6.3 </bdi>Applicability of Needs <a class="self-link" aria-label="§" href="#applicability-of-needs"></a></h4>
 					<ul>
 						<li> Content </li>
 						<li> Controls (buttons, fields, etc.) </li>
