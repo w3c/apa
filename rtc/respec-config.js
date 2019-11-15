@@ -41,9 +41,9 @@ var respecConfig = {
 	// only "name" is required
 	editors: [
 		{
-			name: "Scott Hollier",
-			mailto: "scott@hollier.info",
-			w3cid: 43274
+			name: "Joshue O Connor",
+			mailto: "joconnor@w3.org",
+			w3cid: 666
 		},
 		{
 			name: "Janina Sajka",
@@ -64,14 +64,6 @@ var respecConfig = {
 			company: "W3C",
 			companyURI: "https://www.w3.org",
 			w3cid: 34017
-		}
-	],
-	formerEditors: [
-		{
-			name: "Matt May",
-			company: "W3C",
-			companyURI: "https://www.w3.org",
-			w3cid: 33323
 		}
 	],
 	
