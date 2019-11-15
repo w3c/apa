@@ -9,14 +9,14 @@ var respecConfig = {
 	noRecTrack: true,
 	tocIntroductory: true,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-	subtitle: "Alternatives to Visual Turing Tests on the Web",
+	// subtitle: "Alternatives to Visual Turing Tests on the Web",
 	specStatus:           "ED",
 	//crEnd:                "",
 	//perEnd:               "",
 	diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName:            "turingtest",
+	shortName:            "accessiblertc",
 	
 	
 	// if you wish the publication date to be other than today, set this
@@ -32,7 +32,7 @@ var respecConfig = {
 	//previousDiffURI: "",
 	
 	// if there a publicly available Editors Draft, this is the link
-	edDraftURI: "https://w3c.github.io/apa/captcha/",
+	edDraftURI: "https://w3c.github.io/apa/rtc/",
 	
 	// if this is a LCWD, uncomment and set the end of its review period
 	// lcEnd: "2012-02-21",
