@@ -20,9 +20,9 @@
 			                <section>
 
 <h3> What is Real Time Communication(RTC)? </h3>
-<p>The traditional data exchange model is client to server. Real Time Communication(RTC)is game-changing. It is enabled in part, by specifications like WebRTC as this provides real-time peer to peer Audio, Video and Data exchange directly between supported web browsers without the need for browser plugins, as well as fast applications for video/audio calls, text chat, file exchange, screen sharing and gaming. However, WebRTC is not the sole specification with responsibility to enable accessible RTC. [1] </p>
+<p>The traditional data exchange model is client to server. Real Time Communication(RTC) is game-changing. It is enabled in part, by specifications like WebRTC as this provides real-time peer to peer Audio, Video and Data exchange directly between supported web browsers without the need for browser plugins, as well as fast applications for video/audio calls, text chat, file exchange, screen sharing and gaming. However, WebRTC is not the sole specification with responsibility to enable accessible real-time communications, as use cases and requirements are broad - as outlined in the <a href="https://tools.ietf.org/html/rfc7478">IETF RFC 7478 'Web Real-Time Communication Use Cases and Requirements'</a> </p>
 
-<p>Accessible RTC is enabled by a combination of technologies and specifications such as those from the Media Working Group, Web and Networks IG, Second Screen, and Web Audio Working group as well as AGWG and ARIA. APA hopes this work will inform how these groups meet various responsibilities for enabling RTC, as as well updating use cases in various groups. For example, current work on WebRTC Next Version Use Cases can be reviewed here. [2]</p>
+<p>Accessible RTC is enabled by a combination of technologies and specifications such as those from the Media Working Group, Web and Networks IG, Second Screen, and Web Audio Working group as well as AGWG and ARIA. APA hopes this work will inform how these groups meet various responsibilities for enabling RTC, as as well updating use cases in various groups. For example, you can view current work on <a href="https://www.w3.org/TR/webrtc-nv-use-cases/">WebRTC Next Version Use Cases First Public Working Draft.</a></p>
 </section>
 
 <section>
@@ -77,7 +77,7 @@
 <p>RQTF notes that this may be moved into user agent/browser or application level by XR requirements.</p>
 
 
-<p><strong>NOTE:</strong> Components needs to be individually controlled. Multichannel may be squarely in the Web Audio group. <a href="https://www.w3.org/TR/audio-output/">Audio Output Devices API</a> may fulfil some of the capabilities aspect of the use case: However, another area that needs to be explored is <a href="https://github.com/w3c/mediacapture-output/issues/2"> authorisation of access to these additional output devices</a>. Also the <a href="https://github.com/WebAudio/web-audio-cg/blob/master/audio-device-client/explainer.md">Audio Device Client Proposal</a> may help to provide this kind of bespoke audio routing directly in the browser. See <a href="https://vimeo.com/350904743">Audio Device Client Explainer video Vimeo</a></p>
+<p><strong>NOTE:</strong> Components needs to be individually controlled. Multichannel may be squarely in the Web Audio group. <a href="https://www.w3.org/TR/audio-output/">Audio Output Devices API</a> may fulfil some of the capabilities aspect of the use case: However, another area that needs to be explored is <a href="https://github.com/w3c/mediacapture-output/issues/2"> authorisation of access to these additional output devices</a>. Also the <a href="https://github.com/WebAudio/web-audio-cg/blob/master/audio-device-client/explainer.md">Audio Device Client Proposal</a> may help to provide this kind of bespoke audio routing directly in the browser. See <a href="https://vimeo.com/350904743">Audio Device Client Explainer video on Vimeo</a></p>
 </section>
 
 <section>
@@ -105,9 +105,9 @@
 <section>
 
 <h3>Support for Real Time Text (RTT) </h3>
-<p><strong>Scenario: </strong> A deaf, speech impaired, hard of hearing or deaf blind user wishes to make an emergency call, send and receive instantly related text messages and or sign via a video stream in an emergency situation. This text aspect, and text relay services could be enabled via RTT in WebRTC. [4] [5]</p>
+<p><strong>Scenario: </strong> A deaf, speech impaired, hard of hearing or deaf blind user wishes to make an emergency call, send and receive instantly related text messages and or sign via a video stream in an emergency situation. This text aspect, and text relay services could be enabled via RTT in WebRTC. More details can be found at <a href="https://www.fcc.gov/consumers/guides/real-time-text-improving-accessible-telecommunications"> RTT Improving Accessible Telecommunications</a> as well as a <a href="http://realtimetext.org/rtt_in_detail/standards/ietf"> list of Related RTT documents from IETF relating to Accessibility</a>.</p>
 
-<p>Regarding RTT, the Federal Communications Commission (FCC) support the usage of RTT and in 2016, adopted rules to move from text telephony (TTY) to real-time text (RTT) technology. The FCC state that RTT should be a pre-installed feature of wireless devices that is enabled by default. [3]</p>
+<p>Regarding RTT, the Federal Communications Commission (FCC) support the usage of RTT and in 2016, adopted rules to move from text telephony (TTY) to real-time text (RTT) technology. The <a href="https://www.fcc.gov/real-time-text">FCC state that RTT should be a pre-installed feature of wireless devices</a> that is enabled by default.</p>
 
 <p><strong>NOTE: </strong> The FCC is the U.S. federal agency responsible for implementing and enforcing America’s communications law and regulations. We don&#39;t know if WebRTC-based systems offer emergency-call integration today -  research needed on WebRTC requirements that go beyond accessibility; some requirements of the existing specs were derived from scenarios such as &#39;disabling voice-activity-detection&#39;). Does WebRTC support transmitting characters direct like RTT? </p>
 
@@ -118,7 +118,7 @@
 
 <h3> Support for Video Relay Services and (VRS) and Remote Interpretation (VRI)</h3>
 
-<p><strong> Scenario: </strong> A deaf, speech impaired, hard of hearing wishes to communicate on a call using a remote video interpretation service to access sign language and interpreter services. The VRI has two parties, the deaf/hard of hearing person who is using the VRI, and the interpreter who is on the screen. The interpreter can be on a videophone, web camera, or computer screen. The interpreter will use the audio, while someone speaks and the person will interpret to the deaf person by sign language, and then if the deaf/hard of hearing wants to say something they will sign to the interpreter and the interpreter will use his/her voice to relay that message. [6]</p>
+<p><strong> Scenario: </strong> A deaf, speech impaired, hard of hearing wishes to communicate on a call using a remote video interpretation service to access sign language and interpreter services. The VRI has two parties, the deaf/hard of hearing person who is using the VRI, and the interpreter who is on the screen. The interpreter can be on a videophone, web camera, or computer screen. The interpreter will use the audio, while someone speaks and the person will interpret to the deaf person by sign language, and then if the deaf/hard of hearing wants to say something they will sign to the interpreter and the interpreter will use his/her voice to relay that message. More detail can be found on <a href="https://www.fcc.gov/consumers/guides/video-relay-services">FCC Video Relay Services Overview</a>, <a href="https://en.wikipedia.org/wiki/Video_remote_interpreting">Video Remote Interpreting</a>, and <a href="https://en.wikipedia.org/wiki/Assistive_Technology_for_Deaf_and_Hard_of_Hearing#Video_Relay_Services"> Video Relaying Services</a>.</p>
 
 <p>The following is From FCC overview of VRS:</p>
 <ul>
@@ -128,7 +128,7 @@
 <li>A VRS call flows back and forth just like a telephone conversation between two hearing persons. For example, the parties can interrupt each other, which they cannot do with a TRS call using a TTY (where the parties have to take turns communicating with the CA).</li>
 <li>Because the conversation flows more naturally back and forth between the parties, the conversation can take place much more quickly than with text-based TRS. As a result, the same conversation is much shorter through VRS than it would be through other forms of text-based TRS.</li>
 <li>VRS calls may be made between ASL users and hearing persons speaking either English or Spanish. [10]</li>
-<p><strong>NOTE:</strong>  May relate to interoperability with third-party services;  IETF has looked at <a href="https://tools.ietf.org/html/draft-rosen-rue-00"> standardising a way to use SIP with VRS services</a>: There is a question about impact of these services on end-to-end security (since these services are *by design* equivalent to man-in-the-middle attacks).</p>
+<p><strong>NOTE:</strong>  May relate to interoperability with third-party services;  IETF has looked at <a href="https://tools.ietf.org/html/draft-rosen-rue-00"> standardising a way to use SIP with VRS services</a>: There is a question about impact of these services on end-to-end security (since these services are <strong>by design</strong> equivalent to man-in-the-middle attacks).</p>
 
 </section>
 
@@ -165,7 +165,7 @@
 
 <p><strong>Scenario:</strong> A hard of hearing user needs better stereo sound so they can have a quality experience in watching HD video or having HD meeting with friends or family. Transmission aspects, such as frames per minute for video quality needs to be of high quality.</p>
 
-<p><strong>NOTE:</strong> EN 301 549 Section 6,  recommends for WebRTC enabled conferencing and communication the application shall be able to encode and decode communication with a frequency range with an upper limit of at least 7 000 Hz. [7]</p>
+<p><strong>NOTE:</strong> EN 301 549 Section 6,  recommends for WebRTC enabled conferencing and communication the application shall be able to encode and decode communication with a frequency range with an upper limit of at least 7KHz. More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p>
 
 <p><strong>NOTE:</strong> WebRTC lets applications prioritise bandwidth dedicated to audio / video / data streams; there is also some <a href="https://w3c.github.io/webrtc-dscp-exp/">experimental work in signalling these needs to the network layer</a> as well as support for prioritising frame rate over resolution in case of congestion.</p>
 
@@ -175,7 +175,7 @@
 
 <p><strong>Scenario:</strong> A deaf user is watching a signed broadcast and needs a high quality frame rate to maintain legibility and clarity in order to understand what is being signed. </p>
 
-<p><strong>NOTE:</strong> EN 301 549 Section 6,  recommends  WebRTC applications should support a frame rate of at least 20 frames per second (FPS). [7]</p>
+<p><strong>NOTE:</strong> EN 301 549 Section 6,  recommends  WebRTC applications should support a frame rate of at least 20 frames per second (FPS). More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p>
 
 </section>
 
@@ -362,7 +362,7 @@ Relates to RFC 5149 - Transport Requirements/ToIP and Relay Services. [To what d
 </tr>
 <tr>
 <th scope="row">Identify Caller</th>
-<td> WCAG/AGWG, ARIA. This may a candidate for removal, as identity may be handled by the browser via Identity for WebRTC 1.0. We may need to co-ordinate with another group that manages identity mechanisms in the browser, if doing so supports our overall use case.</td>
+<td> WCAG/AGWG, ARIA. This may a candidate for removal, as identity may be handled by the browser via <a href="https://w3c.github.io/webrtc-identity/identity.html">Identity for WebRTC 1.0</a>. We may need to co-ordinate with another group that manages identity mechanisms in the browser, if doing so supports our overall use case.</td>
 <td>
 Similar to R27 in RFC 5194 5.2.4. Presentation and User Requirements</td>
 <td>Maps to <a href="http://mandate376.standards.eu/standard/technical-requirements/caller-id">6.3 Caller ID</a></td>
@@ -378,7 +378,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 </table>
 </section>
 
-<section>
+<!-- <section>
 <h2> References </h2>
 
 <ul>
@@ -387,13 +387,16 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 <li> <a href="https://www.fcc.gov/real-time-text"></a> Real-Time Text (Federal Communications Commission)] </a>[3]</li>
 <li> <a href="https://www.fcc.gov/consumers/guides/real-time-text-improving-accessible-telecommunications"> RTT Improving Accessible Telecommunications] </a>[4] </li>
 <li> <a href="http://realtimetext.org/rtt_in_detail/standards/ietf"> List of Related RTT documents from IETF relating to Accessibility] </a>[5] </li>
-<li> <a href="https://www.fcc.gov/consumers/guides/video-relay-services"> Video Relay Services Overview] </a> [6] </li>
+<li> <a href="https://www.fcc.gov/consumers/guides/video-relay-services"> Video Relay Services Overview </a> [6] </li>
 <li> <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a>[7] </li>
-<li> <a href="https://en.wikipedia.org/wiki/Video_remote_interpreting"> Video Remote Interpreting] </a>[8] </li>
-<li> <a href="https://en.wikipedia.org/wiki/Assistive_Technology_for_Deaf_and_Hard_of_Hearing#Video_Relay_Services"> Video Relaying Services] </a>[9] </li>
+<li> <a href="https://en.wikipedia.org/wiki/Video_remote_interpreting"> Video Remote Interpreting </a>[8] </li>
+<li> <a href="https://en.wikipedia.org/wiki/Assistive_Technology_for_Deaf_and_Hard_of_Hearing#Video_Relay_Services"> Video Relaying Services </a>[9] </li>
 <li> <a href="https://www.fcc.gov/consumers/guides/video-relay-services"></a> FCC and VRS</a> [10] </li>
 <li> <a href="https://w3c.github.io/webrtc-identity/identity.html"> Identity for WebRTC 1.0</a> </li>
 </ul>
+</section> -->
+
+<section>
 
 <h2> Acknowledgements </h2>
 <p>This work is supported by the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">EC-funded WAI-Guide Project</a>. Many thanks for their very useful input/feedback Janina Sajka, Jason White, Dominique Hazael-Massieux, Steve Lee, Estella Oncins Noguer.</p>
