@@ -10,7 +10,7 @@
 	<body>
 		<section id="abstract">
 			<h2>Abstract</h2>
-<p>This document outlines various accessibility related 'user requirements/needs', 'scenarios' and 'use cases' for Real Time Communication. These 'user needs' should drive accessibility requirements in various related specifications and the overall architecture that enables it.  These user needs, scenarios, and use cases - come from people with disabilities who use Assistive Technology (AT) and wish to see the features described available within RTC enabled applications.</p>
+<p>This document outlines various accessibility related &#39;user requirements/needs&#39;, &#39;scenarios&#39; and &#39;use cases&#39; for Real Time Communication. These &#39;user needs&#39; should drive accessibility requirements in various related specifications and the overall architecture that enables it.  These user needs, scenarios, and use cases - come from people with disabilities who use Assistive Technology (AT) and wish to see the features described available within RTC enabled applications.</p>
 </section>
 
 	<section id="sotd"> </section>
@@ -33,9 +33,9 @@
 
 <section>
 <h3>User needs/Scenarios, Use Case definition and review process</h3>
-<p>This document outlines various accessibility related 'user needs' for Accessible RTC. These 'user needs' should drive accessibility requirements for Accessible RTC and its related architecture. These  come from people with disabilities who use Assistive Technology (AT) and wish to see the features described available within Accessible RTC enabled applications.</p>
+<p>This document outlines various accessibility related &#39;user needs&#39; for Accessible RTC. These &#39;user needs&#39; should drive accessibility requirements for Accessible RTC and its related architecture. These  come from people with disabilities who use Assistive Technology (AT) and wish to see the features described available within Accessible RTC enabled applications.</p>
 
-<p>User needs are framed in a range of 'Scenarios' (which can be thought of as similar to 'User Stories'). User needs and requirements are being actively reviewing by RQTF/APA in the context of the broader scope and application of this document.</p>
+<p>User needs are framed in a range of &#39;Scenarios&#39; (which can be thought of as similar to &#39;User Stories&#39;). User needs and requirements are being actively reviewing by RQTF/APA in the context of the broader scope and application of this document.</p>
 <ul>
 
 <li>The groups aims to ensure we have user scenarios that embrace all of the requirements (our own as well as those found elsewhere).
@@ -46,7 +46,7 @@
 
 <section>
 <h3>User Needs and Scenarios</h3>
-<p>The following outlines a range user needs in various scenarios. The use cases below have also been compared to existing use case for Real-Time Text (RTT) such as the IETF Framework for Real-Time Text over IP Using the Session Initiation Protocol RFC 5194 and the [http://mandate376.standards.eu/standard European Procurement Standard EN 301 549].</p>
+<p>The following outlines a range user needs in various scenarios. The use cases below have also been compared to existing use case for Real-Time Text (RTT) such as the IETF Framework for Real-Time Text over IP Using the Session Initiation Protocol RFC 5194 and the <a href="http://mandate376.standards.eu/standard"> European Procurement Standard EN 301 549</a>.</p>
 
 </section>
 
@@ -56,7 +56,7 @@
 
 <p>E.g A user may wish to route the call notifications to a separate device such as Brailler and the call to regular bluetooth headphone once they have accepted it.</p> 
 
-<p><strong>NOTE:</strong> There is an open question around whether WebRTC has an API for notifications? Or should they use standard (browser level) notifications? What about ARIA notifications? Can these outputs be routed via a user preference?</p>
+<p><strong>NOTE:</strong> There is an open question around whether WebRTC has an API for notifications. Or should they use standard (browser level) notifications? What is the role of ARIA notifications? Can these outputs be routed to alternate devices via a user preference?</p>
 </section>
 
 <section>
@@ -64,20 +64,20 @@
 
 <p><strong>Scenario: </strong> A screen-reader user may have many audio output devices to manage. For example several displays, multiple sound cards to manage sound output (or input). Having a range of browser level outputs and routing options would remove the need for an analogue mixer or other sound cards and hardware. </p>
 
-<p>Similar to the new [https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html WCAG 2.1 SC 'Status Messages'] - a blind user may choose to route updates, alerts and so on to a specific output device of their choosing without them getting explicit focus. The user may wish to have 'mixed' type conversations. These [https://tools.ietf.org/html/rfc5194#section-5.1 mixed use case requirements are also mentioned in RFC 5194].</p>
+<p>Similar to the new <a href="https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html">WCAG 2.1 SC &#39;Status Messages&#39;</a> - a blind user may choose to route updates, alerts and so on to a specific output device of their choosing without them getting explicit focus. The user may wish to have &#39;mixed&#39; type conversations. These <a href="https://tools.ietf.org/html/rfc5194#section-5.1"> mixed use case requirements are also mentioned in RFC 5194</a>.</p>
 
-<p><strong>Scenario: </strong> A blind screen reader user wishes to monitor a chat stream in a video conference and may wish to direct system output, such as alerts or other output to a different device other than the screen reader, such as a Braille output device or other hardware. This controls means they can track the Braille output, separately from  screen reader output , while continuing to monitor, watch or listening to a third audio source. Being able to direct the stream to the user's device of choice would give them this ability. This may also be useful for any user who wishes more control over where and how their communication streams are rendered.</p>
+<p><strong>Scenario: </strong> A blind screen reader user wishes to monitor a chat stream in a video conference and may wish to direct system output, such as alerts or other output to a different device other than the screen reader, such as a Braille output device or other hardware. This controls means they can track the Braille output, separately from  screen reader output , while continuing to monitor, watch or listening to a third audio source. Being able to direct the stream to the user&#39;s device of choice would give them this ability. This may also be useful for any user who wishes more control over where and how their communication streams are rendered.</p>
 
 <p><strong>Scenario: </strong> A deaf user may wish to move parts of a live teleconference session (as separate streams) to one or more devices for greater control. They may do this to configure aspects of the user experience in a WebRTC enabled application. For example by sending the video stream of a sign language interpreter to a high resolution display and like being able to manage this video stream separately, as the user may not wish to have it as a part of the video they are watching. The user needs to be able to control how and where alternate content such as subtitles or captions are displayed.</p>
 
-<p><strong>Scenario: </strong> Users with some form of cognitive disability or blind users may have relative volume levels set as preferences which could be related to importance/urgency/meaning.  Positioning relative levels of audio can be used to arrange the 'importance' of various audio output to any given task.  When a blind user is multitasking and getting status messages or monitoring different sound sources, the ability to be set panning would help the user have a broader sonic 'field' within which to place elements. This is a common technique in sound engineering and would allow a broader, richer sonic landscape.</p>
+<p><strong>Scenario: </strong> Users with some form of cognitive disability or blind users may have relative volume levels set as preferences which could be related to importance/urgency/meaning.  Positioning relative levels of audio can be used to arrange the &#39;importance&#39; of various audio output to any given task.  When a blind user is multitasking and getting status messages or monitoring different sound sources, the ability to be set panning would help the user have a broader sonic &#39;field&#39; within which to place elements. This is a common technique in sound engineering and would allow a broader, richer sonic landscape.</p>
 
-<p><strong>NOTE:</strong> This issue is also highlighted in the APA Working Group Note [https://www.w3.org/TR/turingtest/#sound-output Inaccessibility of CAPTCHA Alternatives to Visual Turing Tests on the Web] as a problem a la telephone verification when a blind user is searching for key input and listening for audio cues. Control of volume and panning  may be squarely in the Web Audio group.</p>
+<p><strong>NOTE:</strong> This issue is also highlighted in the APA Working Group Note <a href="https://www.w3.org/TR/turingtest/#sound-output"> Inaccessibility of CAPTCHA Alternatives to Visual Turing Tests on the Web</a> as a problem a la telephone verification when a blind user is searching for key input and listening for audio cues. Control of volume and panning  may be squarely in the Web Audio group.</p>
 
 <p>RQTF notes that this may be moved into user agent/browser or application level by XR requirements.</p>
 
 
-<p><strong>NOTE:</strong> Components needs to be individually controlled. Multichannel may be squarely in the Web Audio group. [https://www.w3.org/TR/audio-output/ Audio Output Devices API] may fulfil some of the capabilities aspect of the use case: However, another area that needs to be explored is [https://github.com/w3c/mediacapture-output/issues/2 authorisation of access to these additional output devices]  Also the [https://github.com/WebAudio/web-audio-cg/blob/master/audio-device-client/explainer.md Audio Device Client Proposal] may help to provide this kind of bespoke audio routing directly in the browser. [https://vimeo.com/350904743 Audio Device Client Explainer video Vimeo]</p>
+<p><strong>NOTE:</strong> Components needs to be individually controlled. Multichannel may be squarely in the Web Audio group. <a href="https://www.w3.org/TR/audio-output/">Audio Output Devices API</a> may fulfil some of the capabilities aspect of the use case: However, another area that needs to be explored is <a href="https://github.com/w3c/mediacapture-output/issues/2"> authorisation of access to these additional output devices</a>. Also the <a href="https://github.com/WebAudio/web-audio-cg/blob/master/audio-device-client/explainer.md">Audio Device Client Proposal</a> may help to provide this kind of bespoke audio routing directly in the browser. See <a href="https://vimeo.com/350904743">Audio Device Client Explainer video Vimeo</a></p>
 </section>
 
 <section>
@@ -92,7 +92,7 @@
 
 <p><strong>Scenario: </strong> Any user watching the captioning or audio description needs to be confident that they are synchronised and accurate, that any outages/loss will be repaired while preserving context and meaning. For people with disabilities this may need special repair of broken streams in alternate tracks.</p>
 
-<p><strong>NOTE:</strong> There is currently no dedicated mechanism to transmit captions or audio descriptions in sync with WebRTC audio and video streams; There have been [https://lists.w3.org/Archives/Public/public-webrtc/2018Jun/0140.html discussions on enabling a firmer way for synchronization based on the RTT standard from IETF (RFC 4103)] - APA should look at if the current situation is good enough or if dedicated mechanism in WebRTC for transmission of synced captions etc is needed.</p>
+<p><strong>NOTE:</strong> There is currently no dedicated mechanism to transmit captions or audio descriptions in sync with WebRTC audio and video streams; There have been <a href="https://lists.w3.org/Archives/Public/public-webrtc/2018Jun/0140.html ">discussions on enabling a firmer way for synchronization based on the RTT standard from IETF (RFC 4103)</a> - APA should look at if the current situation is good enough or if dedicated mechanism in WebRTC for transmission of synced captions etc is needed.</p>
 
 </section>
 
@@ -109,9 +109,9 @@
 
 <p>Regarding RTT, the Federal Communications Commission (FCC) support the usage of RTT and in 2016, adopted rules to move from text telephony (TTY) to real-time text (RTT) technology. The FCC state that RTT should be a pre-installed feature of wireless devices that is enabled by default. [3]</p>
 
-<p><strong>NOTE: </strong> The FCC is the U.S. federal agency responsible for implementing and enforcing America’s communications law and regulations. We don't know if WebRTC-based systems offer emergency-call integration today -  research needed on WebRTC requirements that go beyond accessibility; some requirements of the existing specs were derived from scenarios such as 'disabling voice-activity-detection'). Does WebRTC support transmitting characters direct like RTT? </p>
+<p><strong>NOTE: </strong> The FCC is the U.S. federal agency responsible for implementing and enforcing America’s communications law and regulations. We don&#39;t know if WebRTC-based systems offer emergency-call integration today -  research needed on WebRTC requirements that go beyond accessibility; some requirements of the existing specs were derived from scenarios such as &#39;disabling voice-activity-detection&#39;). Does WebRTC support transmitting characters direct like RTT? </p>
 
-<p><strong>NOTE:</strong> The group has discussed RTT at meetings and on list and it looks like many [https://tools.ietf.org/html/rfc5194#section-5.1 RTT requirements for dear and hard of hearing users are covered very well in IETF RFC 5194] and there is also the [https://tools.ietf.org/id/draft-holmberg-mmusic-t140-usage-data-channel-00.html IETF draft on real-time text in WebRTC 'T.140 Text Conversation over WebRTC Data Channels'].</p>
+<p><strong>NOTE:</strong> The group has discussed RTT at meetings and on list and it looks like many <a href="https://tools.ietf.org/html/rfc5194#section-5.1"> RTT requirements for dear and hard of hearing users are covered very well in IETF RFC 5194</a> and there is also the <a href="https://tools.ietf.org/id/draft-holmberg-mmusic-t140-usage-data-channel-00.html ">IETF draft on real-time text in WebRTC &#39;T.140 Text Conversation over WebRTC Data Channels&#39;</a>.</p>
 </section>
 
 <section>
@@ -128,7 +128,7 @@
 <li>A VRS call flows back and forth just like a telephone conversation between two hearing persons. For example, the parties can interrupt each other, which they cannot do with a TRS call using a TTY (where the parties have to take turns communicating with the CA).</li>
 <li>Because the conversation flows more naturally back and forth between the parties, the conversation can take place much more quickly than with text-based TRS. As a result, the same conversation is much shorter through VRS than it would be through other forms of text-based TRS.</li>
 <li>VRS calls may be made between ASL users and hearing persons speaking either English or Spanish. [10]</li>
-<p><strong>NOTE:</strong>  May relate to interoperability with third-party services;  IETF has looked at [https://tools.ietf.org/html/draft-rosen-rue-00 standardising a way to use SIP with VRS services]: There is a question about impact of these services on end-to-end security (since these services are *by design* equivalent to man-in-the-middle attacks).</p>
+<p><strong>NOTE:</strong>  May relate to interoperability with third-party services;  IETF has looked at <a href="https://tools.ietf.org/html/draft-rosen-rue-00"> standardising a way to use SIP with VRS services</a>: There is a question about impact of these services on end-to-end security (since these services are *by design* equivalent to man-in-the-middle attacks).</p>
 
 </section>
 
@@ -143,7 +143,7 @@
 
 <section>
 <h3>Call status data </h3> 
-<p><strong>Scenario:</strong> In a teleconference with many participants a screen-reader user will need  to know what participants are on the call, as well as their status. This status information is very important for people with disabilities as it helps to orientate them while communicating online. This critical information includes knowledge of  - who is muted, or actively talking, who has their video or camera stream enabled and who doesn't. The user would benefit from being able to query who is active on a video call or muted.  Status polling is where the blind user is able to get a snapshot overview of all of this status information in a WebRTC application.</p>
+<p><strong>Scenario:</strong> In a teleconference with many participants a screen-reader user will need  to know what participants are on the call, as well as their status. This status information is very important for people with disabilities as it helps to orientate them while communicating online. This critical information includes knowledge of  - who is muted, or actively talking, who has their video or camera stream enabled and who doesn&#39;t. The user would benefit from being able to query who is active on a video call or muted.  Status polling is where the blind user is able to get a snapshot overview of all of this status information in a WebRTC application.</p>
 
 <p><strong>NOTE:</strong> This is not WebRTC specific and may be just an accessible UI issue.</p>
 </section>
@@ -167,7 +167,7 @@
 
 <p><strong>NOTE:</strong> EN 301 549 Section 6,  recommends for WebRTC enabled conferencing and communication the application shall be able to encode and decode communication with a frequency range with an upper limit of at least 7 000 Hz. [7]</p>
 
-<p><strong>NOTE:</strong> WebRTC lets applications prioritise bandwidth dedicated to audio / video / data streams; there is also some [https://w3c.github.io/webrtc-dscp-exp/ experimental work in signalling these needs to the network layer] as well as support for prioritising frame rate over resolution in case of congestion.</p>
+<p><strong>NOTE:</strong> WebRTC lets applications prioritise bandwidth dedicated to audio / video / data streams; there is also some <a href="https://w3c.github.io/webrtc-dscp-exp/">experimental work in signalling these needs to the network layer</a> as well as support for prioritising frame rate over resolution in case of congestion.</p>
 
 </section>
 <section>
@@ -184,7 +184,7 @@
 <h3>Live Transcription and Captioning [Review]</h3>
 <p><strong>Scenario: </strong> A deaf user or user with some form of cognitive disability needs to access a channel containing live transcription or captioning during a conference call or broadcast and have this presented to them in accordance with their preferences whether it is signed or a related symbol set.</p>
 
-<p><strong>NOTE:</strong> Browser APIs needed to implement this are available; but needs better integration with third-party services (e.g. for sign language translation).  Possibly covered by [https://tools.ietf.org/html/rfc5194#section-5.1 general requirements for ToIP contained in RFC 5194].</p>
+<p><strong>NOTE:</strong> Browser APIs needed to implement this are available; but needs better integration with third-party services (e.g. for sign language translation).  Possibly covered by <a href="https://tools.ietf.org/html/rfc5194#section-5."> general requirements for ToIP contained in RFC 5194</a>.</p>
 
 </section>
 <section>
@@ -236,16 +236,16 @@ specifies. The latter functions like a classic IRC session. Both need to be supp
 
 <p>Here are links that further describe the functionality of these two classic Unix utilities:</p>
 
-<p>[https://www.mankier.com/1p/talk talk utility] is a two-way, screen-oriented communication program.</p>
+<p><a href="https://www.mankier.com/1p/talk">talk utility</a> is a two-way, screen-oriented communication program.</p>
 
-<p>[https://www.mankier.com/1p/write write utility] will read lines from the standard input and write them to the terminal of the specified user.</p>
+<p><a href="https://www.mankier.com/1p/write">write utility</a> will read lines from the standard input and write them to the terminal of the specified user.</p>
 </section>
 
 <section>
 
 <h3>Data table mapping User Needs with related specifications</h3>
 
-<p>The following table maps these user needs with any related specifications such as requirements defined in RFC 5194 - Framework for Real-Time Text over IP Using SIP and [http://mandate376.standards.eu/standard EN 301 549 - the EU Procurement Standard].</p>
+<p>The following table maps these user needs with any related specifications such as requirements defined in RFC 5194 - Framework for Real-Time Text over IP Using SIP and <a href="http://mandate376.standards.eu/standard">EN 301 549 - the EU Procurement Standard</a>.</p>
 
 <table>
 <caption>Overview of what specifications may address some of the use cases outlined above</caption>
@@ -259,13 +259,13 @@ specifies. The latter functions like a classic IRC session. Both need to be supp
 <th  scope="row">Incoming calls</th>
 <td>WCAG/AGWG, ARIA.</td>
 <td>Similar to 6.2.4.2 Alerting - RFC 5194/ pre-session set up with RTT 6.2.1</td>
-<td>Maps to [http://mandate376.standards.eu/standard/technical-requirements/programmatically-determinable-send-and-receive-direction 6.2.2.2: Programmatically determinable send and receive direction]</td>
+<td>Maps to <a href="http://mandate376.standards.eu/standard/technical-requirements/programmatically-determinable-send-and-receive-direction"> 6.2.2.2: Programmatically determinable send and receive direction</a></td>
 </tr>
 
 <tr>
 <th scope="row">Accessible call setup</th>
 <td>WCAG/AGWG, ARIA.</td>
-<td>Under 'General Requirements for ToIP'</td>
+<td>Under &#39;General Requirements for ToIP&#39;</td>
 <td>x</td>
 </tr>
 <tr>
@@ -294,13 +294,13 @@ Media Working Group, Web and Networks IG, Second Screen.</td>
 <td>
 Media Working Group, Web and Networks IG. Second Screen API may fulfil this user need. Needs confirmation. HTML5 supports this, the streams need to be separable. Looks like an application implementation and not just a WebRTC issue. Could be managed via something like a status bar.</td>
 <td>Similar to R26 in 5.2.4. Presentation and User Requirements.</td>
-<td>Maps to [http://mandate376.standards.eu/standard/technical-requirements/concurrent-voice-and-text 6.2.1.2: Concurrent voice and text]</td>
+<td>Maps to <a href="http://mandate376.standards.eu/standard/technical-requirements/concurrent-voice-and-text"> 6.2.1.2: Concurrent voice and text</a></td>
 </tr>
 <tr>
 <th scope="row">Text communication data channel</th>
 <td>
 Media Working Group</td>
-	<td> Similar to R26 in RFC 5194 5.2.4. Presentation and User Requirements. NOTE: Very similar user requirement to 'Audio Routing and Communication channel control'</td>
+	<td> Similar to R26 in RFC 5194 5.2.4. Presentation and User Requirements. NOTE: Very similar user requirement to &#39;Audio Routing and Communication channel control&#39;</td>
 	<td>x</td>
 </tr>
 <tr>
@@ -308,14 +308,14 @@ Media Working Group</td>
 <td>
 Web Audio Working Group. Multichannel may be mostly covered in the Web Audio group space with some WebRTC requirements, and also by the Audio Device Proposal.</td>
 <td>x</td>
-<td>Maps to [http://mandate376.standards.eu/standard/technical-requirements/concurrent-voice-and-text 6.2.1.2: Concurrent voice and text] NOTE: Very similar user requirement to 'Audio Routing and Communication channel controlt'</td>
+<td>Maps to <a href="http://mandate376.standards.eu/standard/technical-requirements/concurrent-voice-and-text">6.2.1.2: Concurrent voice and text</a>  NOTE: Very similar user requirement to &#39;Audio Routing and Communication channel controlt&#39;</td>
 
 </tr>
 <tr>
 <th scope="row">Support for Real Time Text </th>
 <td>
 WebRTC</td>
-<td>Similar to R26 in RFC 5194 5.2.4. Presentation and User Requirements. NOTE: Very similar user requirement to 'Audio Routing and Communication channel control'</td>
+<td>Similar to R26 in RFC 5194 5.2.4. Presentation and User Requirements. NOTE: Very similar user requirement to &#39;Audio Routing and Communication channel control&#39;</td>
 <td>x</td>
 </tr>
 <tr>
@@ -337,7 +337,7 @@ Relates to RFC 5194 - under R21-R23</td>
 <td>May relate to interoperability with third-party services. This is not WebRTC specific and may be just an accessible UI issue.</td>
 <td>
 Relates to RFC 5194 - under R16 - but this does NOT fully address our use case requirement.</td>
-<td>Maps to [http://mandate376.standards.eu/standard/technical-requirements/visually-distinguishable-display 6.2.2.1: Visually distinguishable display]</td>
+<td>Maps to <a href="http://mandate376.standards.eu/standard/technical-requirements/visually-distinguishable-display"> 6.2.2.1: Visually distinguishable display</a></td>
 </tr>
 <tr>
 <th scope="row">Warning and recovery of lost data</th>
@@ -365,7 +365,7 @@ Relates to RFC 5149 - Transport Requirements/ToIP and Relay Services. [To what d
 <td> WCAG/AGWG, ARIA. This may a candidate for removal, as identity may be handled by the browser via Identity for WebRTC 1.0. We may need to co-ordinate with another group that manages identity mechanisms in the browser, if doing so supports our overall use case.</td>
 <td>
 Similar to R27 in RFC 5194 5.2.4. Presentation and User Requirements</td>
-<td>Maps to [http://mandate376.standards.eu/standard/technical-requirements/caller-id 6.3 Caller ID]</td>
+<td>Maps to <a href="http://mandate376.standards.eu/standard/technical-requirements/caller-id">6.3 Caller ID</a></td>
 </tr>
 <tr>
 <th scope="row">Live Transcription and Captioning</th>
@@ -382,21 +382,21 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 <h2> References </h2>
 
 <ul>
-<li> [https://tools.ietf.org/html/rfc7478 Web Real-Time Communication Use Cases and Requirements] [1]</li>
-<li> [https://www.w3.org/TR/webrtc-nv-use-cases/ WebRTC Next Version Use Cases FPWD] [2]</li>
-<li> [https://www.fcc.gov/real-time-text Real-Time Text (Federal Communications Commission)] [3]</li>
-<li> [https://www.fcc.gov/consumers/guides/real-time-text-improving-accessible-telecommunications RTT Improving Accessible Telecommunications] [4] </li>
-<li> [http://realtimetext.org/rtt_in_detail/standards/ietf List of Related RTT documents from IETF relating to Accessibility] [5] </li>
-<li> [https://www.fcc.gov/consumers/guides/video-relay-services  Video Relay Services Overview] [6] </li>
-<li> [https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf Accessible Procurement standard for ICT products and services EN 301 549 (PDF)] [7] </li>
-<li> [https://en.wikipedia.org/wiki/Video_remote_interpreting Video Remote Interpreting] [8] </li>
-<li> [https://en.wikipedia.org/wiki/Assistive_Technology_for_Deaf_and_Hard_of_Hearing#Video_Relay_Services Video Relaying Services] [9] </li>
-<li> [https://www.fcc.gov/consumers/guides/video-relay-services FCC and VRS] [10] </li>
-<li> [https://w3c.github.io/webrtc-identity/identity.html Identity for WebRTC 1.0] </li>
+<li> <a href="https://tools.ietf.org/html/rfc7478"> Web Real-Time Communication Use Cases and Requirements] </a>[1]</li>
+<li> <a href="https://www.w3.org/TR/webrtc-nv-use-cases/ ">WebRTC Next Version Use Cases FPWD </a>[2]</li>
+<li> <a href="https://www.fcc.gov/real-time-text"></a> Real-Time Text (Federal Communications Commission)] </a>[3]</li>
+<li> <a href="https://www.fcc.gov/consumers/guides/real-time-text-improving-accessible-telecommunications"> RTT Improving Accessible Telecommunications] </a>[4] </li>
+<li> <a href="http://realtimetext.org/rtt_in_detail/standards/ietf"> List of Related RTT documents from IETF relating to Accessibility] </a>[5] </li>
+<li> <a href="https://www.fcc.gov/consumers/guides/video-relay-services"> Video Relay Services Overview] </a> [6] </li>
+<li> <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a>[7] </li>
+<li> <a href="https://en.wikipedia.org/wiki/Video_remote_interpreting"> Video Remote Interpreting] </a>[8] </li>
+<li> <a href="https://en.wikipedia.org/wiki/Assistive_Technology_for_Deaf_and_Hard_of_Hearing#Video_Relay_Services"> Video Relaying Services] </a>[9] </li>
+<li> <a href="https://www.fcc.gov/consumers/guides/video-relay-services"></a> FCC and VRS</a> [10] </li>
+<li> <a href="https://w3c.github.io/webrtc-identity/identity.html"> Identity for WebRTC 1.0</a> </li>
 </ul>
 
 <h2> Acknowledgements </h2>
-<p>This work is supported by the EC-funded [https://www.w3.org/WAI/about/projects/wai-guide/ WAI-Guide Project]. Many thanks for their very useful input/feedback Janina Sajka, Jason White, Dominique Hazael-Massieux, Steve Lee, Estella Oncins Noguer.</p>
+<p>This work is supported by the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">EC-funded WAI-Guide Project</a>. Many thanks for their very useful input/feedback Janina Sajka, Jason White, Dominique Hazael-Massieux, Steve Lee, Estella Oncins Noguer.</p>
 
 </section>
 </body>
