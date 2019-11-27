@@ -46,7 +46,7 @@ var respecConfig = {
 			url: 'https://www.w3.org',
 			company: "W3C",
 			companyURI: "https://www.w3.org",
-			w3cid: 666
+			w3cid: 41218
 		},
 		{
 			name: "Janina Sajka",
