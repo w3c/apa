@@ -16,7 +16,7 @@ var respecConfig = {
 	diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName:            "accessiblertc",
+	shortName:            "xaur",
 	
 	
 	// if you wish the publication date to be other than today, set this
@@ -32,7 +32,7 @@ var respecConfig = {
 	//previousDiffURI: "",
 	
 	// if there a publicly available Editors Draft, this is the link
-	edDraftURI: "https://w3c.github.io/apa/rtc/",
+	edDraftURI: "https://w3c.github.io/apa/xaur/",
 	
 	// if this is a LCWD, uncomment and set the end of its review period
 	// lcEnd: "2012-02-21",
@@ -46,7 +46,7 @@ var respecConfig = {
 			url: 'https://www.w3.org',
 			company: "W3C",
 			companyURI: "https://www.w3.org",
-			w3cid: 666
+			w3cid: 41218
 		},
 		{
 			name: "Janina Sajka",
