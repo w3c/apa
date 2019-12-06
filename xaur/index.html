@@ -112,107 +112,287 @@
 <p>User needs are framed in a range of 'Scenarios' (which can be thought of as similar to 'User Stories').</p>
 </section>
 
+
 <section>
-<h3>Use case definition</h3>
-<p>Use case's in the context of this document refers to aspects that technically support accessibility user needs. References to 'use cases' - will mean technical application level interactions that may directly or indirectly facilitate any given user need.</p>
+<h4>Immersive Environment challenges</h4>
+
+<p>Some of the many challenges with immersive environments accessibility (and also gaming) include the use of extremely complex input devices, control schemes that require a high degree of precision, timing and simultaneous action; ability to distinguish subtle differences in busy visual and audio information, having to juggle multiple complex goals and objectives <sup>7</sup>.
+
+	<p>There are also currently very useful accessibility guidelines available that are specific to gaming <sup>8</sup>.</p>
 </section>
 
 <section>
-<h3>XR User Needs</h3>
-<p>XR user needs are dependent on context and domain. These domains are as varied as education, gaming, health, multimedia, communications, travel. </p>
+<h3>XR User Needs and Requirements</h3>
+<p>User needs and requirements are often dependent on context of use. The following outline some accessibility user needs and requirements that may be applicable in immersive environments, augmented reality and 360<sup>0</sup> applications.</p>
 
-<p>The following are examples of user needs/scenarios that need to be considered in XR in some of these domains. The idea is not that these are exhaustive but are presented in order to help orientate the reader to some baseline user needs. </p>
-
+<p>These following are neither exhaustive, nor definitive but are presented in order to help orientate the reader towards understanding some broad user needs and how to meet them. </p>
 </section>
 
 <section>
-<h4>Immersive Environments</h4>
 
-<p>Some of the many challenges with immersive environments (and also gaming) include the use of extremely complex input devices, control schemes that require a high degree of precision, timing and simultaneous action; ability to distinguish subtle differences in busy visual and audio information, having to juggle multiple complex goals and objectives [[web-adapt]].There are also currently very useful accessibility guidelines available that are specific to gaming [[game-a11y]].</p>
-
-<p>The following outline some accessibility user needs in immersive environments:</p>
-
+<h3>Immersive Semantics and customisation</h3>
 <ul>
 
-<li><strong>A blind user wants to navigate, identify locations and objects within an immersive environment</strong>.</li>
-<li><strong>A mobility impaired user wants to interact with items in an immersive environment</strong> in a way that doesn't require particular bodily movement to perform any given action. E.g They should have a way of standing up in the environment, without having to do so physically.</li>
-<li><strong>A user with a cognitive disability needs to use symbol sets for personalising the immersive experience</strong> or training to help people on the autism spectrum.</li>
-<li><strong>A user with limited mobility needs to be able to hit a particular 'Target size' </strong>for a button or other controls in XR: A user should not need very fine motor control to be able to activate a hit target.</li>
-<li><strong>A user with limited mobility wants to be able to use Voice Commands within the immersive environment</strong>, to navigate, interact and communicate with others in XR environments.</li>
-<li><strong>A user who has colour blindness can have their immersive environment skinned</strong> to suit their particular luminosity and colour contrast requirements.</li>
-<li><strong>A screen magnification user who needs to be able to check the context of their view</strong> in immersive environments, and track where their focus is.</li>
-<li><strong>A screen magnification user will need to be made aware of critical messaging and alerts</strong> in immersive environments. They may need to route those messages to second screens.</li>
-<li><strong>The user needs be able to reset and calibrate orientation/view</strong> in a device independent way.</li>
-<li><strong>The user needs be able to set a time limit for any immersive session</strong>. Some users may easily loose track of time, or too much time in any XR experience may effect their mental health adversely.</li>
-<li><strong>Visual reflow of on-screen content needs to be context dependent and customisable</strong> depending on context of presentation in immersive environments.</li>
+<li><strong>#UN 1:</strong> A user of Assistive Technology wants to navigate, identify locations, objects and interact within an immersive environment.</li>
+
+<li>REQ 1a: Navigation mechanisms must be semantically accurate,intuitive, locations, objects and affordances must be identified in a way that is understood by assistive technology. </li>
+
+
+<li>REQ 1: Controls need to support alternative mapping, rearranging of position, resizing and sensitivity.</li>
+
 </ul>
 
 </section>
 
 <section>
-<h4>Education &#45; Use Cases</h4>
 
-<p>The following are some specific use cases that may be found in different immersive areas, that aim to outline how XR may be used by people with disabilities and therefore indicate user requirements. These can be abstracted education environments created and customised based on user needs and preferences.</p>
-
+	<h3>Motion agnostic interactions</h3>
 <ul>
 
-<li><strong>Teaching Deaf people in an immersive environment</strong> where text and motion are the primary forms of interaction. Sign language will need to be supported in XR as this may be the primary language of a deaf person.</li>
-<li><strong>Help a Deaf user access audio information equivalents, such as signing during real-time communication.</strong>. </li>
-<li><strong>Encourage people with cognitive disabilities to engage </strong> in activities designed to learn and stimulate their cognitive function. </li>
+<li><strong>#UN 2:</strong> A mobility impaired user may want to interact with items in an immersive environment in a way that doesn't require particular bodily movement to perform any given action.</li>
+
+<li>REQ 2a: Allow the user performing an action in the environment, in a device independent way, without having to do so physically.</li>
+
+<li>REQ 2b: Ensure that all areas of the user interface can be accessed using the same input method.</li>
+<li>REQ 2c: Allow multiple input methods to be used at the same time.</li>
+
 </ul>
 
 </section>
 
 <section>
-<h4>Health &#45; Use Cases</h4>
+
+<h3>Immersive Personalisation</h3>
 
 <ul>
-<li><strong>Disability simulation for learning</strong> about disability within a virtual environment.  Someone who wants to understand more about the needs of people with disabilities could use XR for simulation of vision impairments, low-vision, blindness, low physical movement or ability.</li>
-<li> <strong>Post-injury patients in rehabilitation</strong> want to build mobility and improving co-ordination as well as simulating tasks that they are yet to perform in the real world but will need to. For example, balance re-training for a user recovering from an operation or a stroke,  or training for new prostheses.</li>
-<li><strong>User of new Assistive Technology</strong> wants to prepare to interact with a new environment. For example, with a new cane for a blind user.</li>
+
+<li><strong>#UN 3:</strong> Users with cognitive and learning disabilities may need to personalise the immersive experience in various ways.</li>
+
+<li>REQ 3a: Support Symbol sets so they can be used to communicate and layered over objects and items to convey affordances or other needed information in way that can be understood according to user preference.</li>
+
+
+<li>REQ 3b:  Allow the user to turn off of 'mute' non-critical environmental content such as animations, visual or audio content, or non-critical messaging.</li>
+
 </ul>
 
 </section>
 
 <section>
-<h4>Multimedia &#45; Use Cases </h4>
+
+<h3>Interaction and Target customisation</h3>
+
 <ul>
-<li><strong>Subtitling, audio Description, captioning, signing of audio content</strong> for blind users or for deaf and hard of hearing users. This could be in gaming, education and so on.</li>
-<li><strong>Customisation of subtitling Audio Description and captioning of audio content</strong> for low vision users who need to modify the size, colour contrast or positioning.</li>
+
+<li><strong>#UN 4:</strong> A user with limited mobility may need to be able to hit a larger 'Target size' for a button or other controls in immersive environments.</li>
+
+<li>REQ 4a: Ensure fine motion control is not needed to activate an input.</li>
+<li>REQ 4b: Ensure hit targets are large enough with suitable spacing around them.</li>
+<li>REQ 4c: Ensure multiple actions or gestures are not required at the same time to perform any action.</li>
+
 </ul>
 
 </section>
 
 <section>
-<h4>Communications &#45; Use Cases </h4> 
-<ul>
-<li><strong>Deaf-blind user communicating via a RTC application in XR </strong>In these interactions a deaf-blind user may need to route information to a braille or other device, or they may choose to have certain types of output routed in particular ways, say descriptions of items to a braille display - conversations using RTT, or have a bespoke system they need supported.</li>
-</ul>
 
-</section>
-<section>
-<h4>Transport and Travel &#45; Use Cases</h4>
+<h3>Voice Commands</h3>
 
 <ul>
-<li><strong>Navigating real-world environment or tourist landmark</strong>. A blind user may be able to explore a building they have never been in before by taking a tour before hand. A blind user will need to understand the direction they are moving, objects they come across, and be able to orientate themselves via various landmarks or notable places of use or interest within that environment.</li>
+<li><strong>#UN 5:</strong> A user with limited mobility may want to be able to use Voice Commands within the immersive environment, to navigate, interact and communicate with others in XR environments.</li>
 
-<li><strong>Provide a safe place </strong>for someone whose cognitive disability means they can be overwhelmed when travelling some new, even in an XR environment. This could be accessed via some quick key or shortcut.</li>
+<li>REQ 5a: Ensure Navigation and interaction can be controlled by Voice Activation.</li>
 
-<li><strong>Use of Helper Avatars</strong> Users with cognitive disabilities may benefit from having 'helper avatars' that they can bring with them in AR, as they navigate new environments. This may help a person who may be overwhelmed by their environment.</li>
-
-<li><strong>A blind user will need to interact with objects and services in a simulated travel environment</strong>.
-Hearing Impaired user may need to have that description visually presented to them or signed by an avatar.>/li>
 </ul>
 
 </section>
 
 <section>
-<h4>Shopping Online &#45; Use Cases</h4>
+
+<h3>Colour changes</h3>
+
 <ul>
-<li><strong>A vision impaired user puts on gloves, and a headset complete with video and audio</strong> so they can interact with a virtual menu system, and enable a self voicing option and have each shopping category, or item description spoken to them, as they gesture to trigger both movement and interaction. The user may get more detail about items that are closer to them, if navigating a virtual store and allow them to virtually “select” an item.</li>
+<li><strong>#UN 6:</strong> Colour blind users may need to be able to customise the colours used in the immersive environment. This will help with understand affordances on various controls or where colour is used to signify danger or permission.</li>
+
+<li>REQ 6a: Provide customised high contrast skins for the environment to suit their particular luminosity and colour contrast requirements.</li>
+
 </ul>
 
 </section>
+
+<section>
+
+<h3>Magnification Context and resetting</h3>
+
+<ul>
+<li><strong>#UN 7:</strong> Screen magnification users may need to be able to check the context of their view in immersive environment.</li>
+
+<li>REQ 7a: Allow the screen magnification user to check the context of their view and track/reset focus as needed.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Critical Messaging and Alerts</h3>
+
+<ul>
+
+<li><strong>#UN 8:</strong> Screen magnification users may need to be made aware of critical messaging and alerts in immersive environments often without losing focus. They may also need to route these messages to 'second screens' (see REQ 1).</li>
+
+<li>REQ 8a: Ensure that critical messaging, or alerts have priority roles that can be understood and flagged to AT, without moving focus.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Gestural interfaces and interactions</h3>
+
+<ul>
+<li><strong>#UN 9:</strong> A blind user may wish to interact with a gestural interface, such as a virtual menu system, using gloves and a head set.</li>
+
+<li>REQ 9a: Using a virtual menu system -  enable a self&#45;voicing option and have each category, or item description spoken to them as they receive focus via a gesture or other input. As the blind user gestures to trigger both movement and interaction. The user may get more detail about items that are closer to them, if navigating a virtual store the user must be allowed to query and interrogate items and make selections.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Text description transformation</h3>
+
+<ul>
+
+<li><strong>#UN 10:</strong> A deaf or hard of hearing person, for whom English or any other written language, may not be their first language and may have a preference for signing of text alternatives or equivalents.</li>
+
+<li>REQ 10a: Allow object or item text descriptions to be presented to the user via a signing avatar.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Safe harbour controls</h3>
+
+<ul>
+<li><strong>#UN 11:</strong> People with Cognitive Impairments may be easily overwhelmed in Immersive Environments.</li>
+
+<li>REQ 11a: Allow the user to set a 'safe place' - quick key, shortcut or macro.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Immsersive Time limits</h3>
+
+<ul>
+
+<li><strong>#UN 12:</strong> Users with cognitive impairments may be adversely affected by spending too much time in any immersive environment or experience, or may loose track of time. </li>
+
+<li>REQ 12a: Allow the user to set a time limit for any immersive session. </li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Reset Focus and orientation</h3>
+
+<ul>
+
+<li><strong>#UN 13:</strong> A screen maginification user or user with a cognitive disability or learning impairment may easily loose focus and be disorientated in immersive environments. </li>
+
+<li>REQ 13a: Ensure the user an reset and calibrate their orientation/view in a device independent way.</li>
+
+<li>REQ 13b: Ensure field of view in Immersive environments, are appropriate, and can be personalised - so users are not disorientated.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Routing to Second Screens</h3>
+
+<ul>
+
+<li><strong>#UN 14:</strong> A deaf-blind user communicating via a RTC application in XR may have sophisticated 'routing' requirements for various inputs and outputs. </li>
+
+<li>REQ 14: Allow the user to route text output, alerts, environment sounds and audio to a braille or other devices.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Interaction Speed</h3>
+
+<ul>
+<li><strong>#UN 15:</strong> Users with physical disabilities or cognitive and learning disabilities may find some interactions too fast to keep up with or maintain.</li>
+
+<li>REQ 15a: Allow user to change speed at which they travel through an immersive environment, or can perform interactions.</li>
+
+<li>REQ 15b: Allow timings for interactions or critical inputs to be modified or extended.</li>
+
+<li>REQ 15c: Provide an XR angel or helper for the user with a cognitive or learning disability.</li>
+
+<li>REQ 15d: Provide clear start and stop mechanisms.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Avoiding sickness triggers</h3>
+
+<ul>
+<li><strong>#UN 16:</strong> Users with vestibular disorders, Epilepsy, and photo sensitivity may find some interactions trigger motion sickness and other affects.</li>
+
+<li>REQ 16a: Avoid interactions that trigger epilepsy or motion sickness and provide alternatives.</li>
+<li>REQ 16b: Ensure flickering images are at a minimum, will not trigger seizures (more than 3 times a second), or can be turned off or reduced.</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h3>Binaural Audio track alternatives</h3>
+
+<ul>
+<li><strong>#UN 17:</strong> [Deaf and hard of hearing users may need binaural recordings of audio content in order to percieve it.</li>
+
+<li><strong>REQ 17a:</strong> Provide alternative binaural audio recording tracks to emulate 3 dimensional sound forms in immersive environments.</li>
+
+</ul>
+
+</section>
+
+<section>
+<h3>Subtitling customisation</h3>
+
+<ul>
+
+<li><strong>#UN 18:</strong> Users with vision impairments may need to customise subtitles and other text in immersive environments.</li>
+
+<li><strong>REQ 18a:</strong> Allow customisable context sensitive reflow of text and subtitled content in XR spaces. The suitable subtitling area may be smaller than what is required currently for television <sup>^</sup></li>.
+
+</ul>
+
+</section>
+
+<p><sup>^</sup> Subtitling in 360<sup>o</sup> - IRT Research presented at Inclusive XR Workshop in Seattle 2019.</p>
+</ul>
+
+<section>
 
 <section>
 <h3>XR and Supporting Multimodality</h3>
