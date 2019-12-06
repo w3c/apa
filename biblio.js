@@ -400,20 +400,15 @@ var biblio = {
         "href": "https://www.w3.org/2018/12/games-workshop/papers/web-games-adaptive-accessibility.html",
         "publisher": "W3C",
     },
-
-    "game-a11y": {
+     "inclusive-seattle": {
         "authors": [
-            "Matthew Tylee Atkinson",
-            "Ian Hamilton",
-            "Joe Humbert",
-            "Kit Wessendorf"
+            "W3C"
         ],
-        "date": "Dec 2018",
-        "title": "W3C Workshop on Web Games Position Paper: Adaptive Accessibility",
-        "href": "http://gameaccessibilityguidelines.com",
-        
+        "date": "Nov 2019",
+        "title": "W3C Workshop on Inclusive XR Seattle",
+        "href": "https://www.w3.org/2019/08/inclusive-xr-workshop/",
+        "publisher": "W3C",
     },
-
         "game-a11y": {
         "authors": [
             "Barrie Ellis",
