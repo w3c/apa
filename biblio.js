@@ -402,7 +402,8 @@ var biblio = {
     },
      "inclusive-seattle": {
         "authors": [
-            "W3C"
+            "W3C",
+            "Pluto VR"
         ],
         "date": "Nov 2019",
         "title": "W3C Workshop on Inclusive XR Seattle",
