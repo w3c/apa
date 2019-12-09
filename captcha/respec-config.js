@@ -10,7 +10,7 @@ var respecConfig = {
 	tocIntroductory: true,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
 	subtitle: "Alternatives to Visual Turing Tests on the Web",
-	specStatus:           "ED",
+	specStatus:           "WG-NOTE",
 	//crEnd:                "",
 	//perEnd:               "",
 	diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
@@ -26,9 +26,9 @@ var respecConfig = {
 	
 	// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
 	// and its maturity status
-	previousPublishDate:  "2005-11-23",
-	previousMaturity:  "NOTE",
-	//prevRecURI: "",
+	previousPublishDate:  "2019-06-26",
+	previousMaturity:  "WD",
+	//prevRecURI: "https://www.w3.org/TR/2005/NOTE-turingtest-20051123/",
 	//previousDiffURI: "",
 	
 	// if there a publicly available Editors Draft, this is the link
