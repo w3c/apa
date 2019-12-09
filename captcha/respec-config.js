@@ -20,14 +20,14 @@ var respecConfig = {
 	
 	
 	// if you wish the publication date to be other than today, set this
-	//publishDate:  "2014-12-11",
+	publishDate:  "2019-12-09",
 	copyrightStart:  "2018",
 	license: "w3c-software-doc",
 	
 	// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
 	// and its maturity status
-	previousPublishDate:  "2019-06-26",
-	previousMaturity:  "WD",
+	previousPublishDate:  "2019-08-23",
+	previousMaturity:  "NOTE",
 	//prevRecURI: "https://www.w3.org/TR/2005/NOTE-turingtest-20051123/",
 	//previousDiffURI: "",
 	
