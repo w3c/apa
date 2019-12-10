@@ -1,4 +1,4 @@
-var biblio = {
+respecConfig.localBiblio = {
 	"aicaptcha": {
 		"title": "aiCaptcha: Using AI to beat CAPTCHA and post comment spam",
 		"date": "",
