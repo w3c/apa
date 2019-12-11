@@ -425,5 +425,16 @@ respecConfig.localBiblio = {
         "title": "Game Accessibility Guidelines",
         "href": "http://gameaccessibilityguidelines.com",
         
+    },
+
+     "maidenbaum-amendi": {
+        "authors": [
+            "Maidenbaum, S.",
+            "Amedi, A",
+        ],
+        "date": "2015",
+        "title": "Non-visual virtual interaction: Can Sensory Substitution generically increase the accessibility of Graphical virtual reality to the blind?",
+        "publisher": "In Virtual and Augmented Assistive Technology (VAAT), 2015 3rd IEEE VR International Workshop on (pp. 15-17). IEEE",
+        
     }
 }
