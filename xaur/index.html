@@ -47,7 +47,7 @@
 <h3>Definitions of Augmented Reality</h3>
 
 <p>Augmented Reality definitions vary but converge on the notion of computer mediated interactions involving overlays on the real world.  These may be informational, or interactive depending on the application.</p>
-</section>	
+	</section>	
 
 </section>
 
@@ -56,10 +56,13 @@
 <h3>What is XR used for?</h3>
 
 <p>XR has an exhaustive range of purposes from education, gaming, multimedia, immersive communication and many others. It is currently evolving at a very fast rate and is not yet mainstream. This will change as computing power increases, hardware improves as well as the quality of user experience, XR will be more commonly be used for the performance of everyday practical tasks, for therapeutic uses, education and for entertainment.</p>
-</section>
-</section>
+		</section>
 
-<section>
+
+
+	<section>
+		
+		
 <h2>Understanding XR and accessibility challenges</h2>
 
 <p>Understanding XR, Mixed Reality and so on presents various challenges that are very technical. They include issues with hardware, software, interaction design, design principles, semantics and more. So these are the 'basic' technical complexities that are substantial. To add to this, for many designers and authors they may neither know or have access to people with disabilities or a way of understanding user needs that they can build a solid set of requirements from. In short, they just may not understand what user needs they are trying to meet when making XR accessible.</p>
@@ -102,13 +105,101 @@
 </ul>
 
 
-
 	<section>
 <h3>Immersive Environment challenges</h3>
 
 <p>Some of the many challenges with immersive environments accessibility (and also gaming) include the use of extremely complex input devices, control schemes that require a high degree of precision, timing and simultaneous action; ability to distinguish subtle differences in busy visual and audio information, having to juggle multiple complex goals and objectives [[web-adapt]].
 
 	<p>There are also currently very useful accessibility guidelines available that are specific to gaming [[game-a11y]].</p>
+</section>
+
+	<section>
+<h2>XR and Supporting Multimodality</h2>
+<p>Modality relates to modes of sense perception such as sight, hearing, touch and so on. Accessibility can be thought of as supporting multi-modal requirements and the transformation of content or aspects of a user interface from one mode to another that will support various user needs.</p> 
+
+<p>Considering various modality requirements in the foundation of XR means these platforms will be better able to support accessibility related user needs. There will be many modality aspects for the developer and/or content author to consider:</p>
+
+<p><strong>NOTE:</strong> XR authors and content designers will also need access to tools that support the multimodal requirements listed below. </p>
+
+<p>The following Inputs and Outputs can be considered modalities that should be supported in XR environments.</p>
+
+</section>
+
+<section>
+<h3>Various Input Modalities </h3> 
+
+<p>The following are example of some of the diverse input methods used by people with disabilities. <strong>NOTE:</strong> In many real world applications these input methods may be combined.</p>
+
+<ul>
+<li><strong>Speech</strong> - this is where a users voice is the main input. Using a range of voice commands a user should be able to navigate in an XR environment, interact with the objects in that environment using their voice alone.</li>
+<li><strong>Keyboard </strong> - this is where the keyboard alone is the users main input. A user should be able to navigate in an XR environment, interact with the objects in that environment using the keyboard alone.</li>
+<li><strong>Switch </strong> this is where a since button Switch alone is the users main input. A user should be able to navigate in an XR environment, interact with the objects in that environment using a Switch alone. This switch may be used in conjunction with an Assistive Technology scanning application within the XR environment that allows them to select directions for navigation, macros for communication and interaction.</li>
+<li><strong>Gesture </strong> - this is where gesture based controllers are the main input and can be used to navigate in an XR environment, interact with the objects in that environment make selections using their voice alone.</li>
+<li><strong>Eye Tracking</strong> - this is where eye tracking applications is the main input. Using a range of voice commands a user should be able to navigate in an XR environment, interact with the objects in that environment using these eye tracking applications.</li>
+</ul>
+
+</section>
+
+<section>
+<h3>Various Output Modalities </h3>
+
+<p>The following are a list of outputs that can be available to a user to help them understand, interact with and 'sense' feedback from an XR application. Some of these are in common use on the Web and other exploratory (such as Olfactory and Gustatory.)</p>
+
+<ul>
+
+<li>Tactile &#45; this is using the sense of touch, or commonly referred to as haptics.</li>
+<li>Visual &#45; this is using the sense of sight, such as 2D and 3D graphics.</li>
+<li>Auditory &#45; this is using the sense of sound, such as rich spatial audio, surround sound.</li>
+<li>Olfactory &#45; this is the sense of smell.</li>
+<li>Gustatory  &#45; this is the sense of taste.</li>
+</ul>
+
+
+</section>
+
+<section>
+<h2>XR controller challenges</h2>
+
+<p>As mentioned there are a range of input devices that may be used. Supporting these controllers requires an understanding of what they are and how they work.
+There are a variety of alternative gaming controls that may be very useful in XR environments and applications. For example the <a href="https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller ">XBOX Adaptive Controller</a>.</p>
+
+<p>While XR is the experience, the controller is king, and plays a critical part in overcoming some complexity as well as mediating issues that may relate to other challenges around usability and helping the user understand sensory substitution devices. </p>
+
+<p>Controllers such as the XBOX Adaptive Controller and other switch type inputs allow the issuer to remapping keyboard inputs to control virtual environments. The powerful customisations may allow the user to "do that thing that is difficult" for them with ease.  In conjunction with this controller, for example, users with limited mobility they can also simulate actions in the XR environment that they would not be able to physically perform.  <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a> is a good example of this where motion range, position and orientation can be set to the users ability.</p>
+
+</section>
+
+	<section>
+<h3>Customisation of control inputs</h3>
+<p>Giving the user the ability to modify their input preference or use a variety of input devices. The remapping of keys used to control movement or interaction in virtual environments is not currently required by WCAG. It is nevertheless noted in the literature as desirable.</p>
+
+</section>
+
+	<section>
+<h3> Using multiple diverse inputs simultaneously </h3>
+<p>A user with a disability may have several input devices. A user may switch 'mode' of interaction or the tools used and should be able to do so without degrading into a poor user experience where they lose focus on a task and cannot return to it, or make unforced errors, accidental input and so on.</p>
+
+</section>
+
+	<section>
+<h3>Consistent tracking with multiple inputs </h3>
+<p>There may be tracking issues when switching input devices. A tracking issue is where the user may lose their focus or it can be modified in unpredictable or unwanted ways, this can cause loss of focus and potentially push the user to make unwanted inputs or choices.</p>
+
+<p>Outputs sent to multiple devices will need to be synchronised.</p>
+
+	</section>
+
+
+<section>
+<h2>Usability and affordances in XR</h2>
+<p>An XR application should have a high level of usability for someone with a disability who is using AT. Some challenges in translating interaction models may be:</p>
+
+<ul>
+
+<li>How can a user understand the affordance models used in XR interactions? Or can this be mediated by their own interaction preferences and controllers?</li>
+<li>What interactions are allowed or not allowed? </li>
+<li>How can an accessibility abstracted XR experience focussed on supporting a different modality, successfully interact with another?</li>
+</ul>
 	</section>
 </section>
 
@@ -387,91 +478,7 @@
 	</section>
 </section>
 
-<section>
-<h2>XR and Supporting Multimodality</h2>
-<p>Modality relates to modes of sense perception such as sight, hearing, touch and so on. Accessibility can be thought of as supporting multi-modal requirements and the transformation of content or aspects of a user interface from one mode to another that will support various user needs.</p> 
 
-<p>Considering various modality requirements in the foundation of XR means these platforms will be better able to support accessibility related user needs. There will be many modality aspects for the developer and/or content author to consider:</p>
-
-<p><strong>NOTE:</strong> XR authors and content designers will also need access to tools that support the multimodal requirements listed below. </p>
-
-<p>The following Inputs and Outputs can be considered modalities that should be supported in XR environments.</p>
-
-
-<section>
-<h3>Various Input Modalities </h3> 
-
-<p>The following are example of some of the diverse input methods used by people with disabilities. <strong>NOTE:</strong> In many real world applications these input methods may be combined.</p>
-
-<ul>
-<li><strong>Speech</strong> - this is where a users voice is the main input. Using a range of voice commands a user should be able to navigate in an XR environment, interact with the objects in that environment using their voice alone.</li>
-<li><strong>Keyboard </strong> - this is where the keyboard alone is the users main input. A user should be able to navigate in an XR environment, interact with the objects in that environment using the keyboard alone.</li>
-<li><strong>Switch </strong> this is where a since button Switch alone is the users main input. A user should be able to navigate in an XR environment, interact with the objects in that environment using a Switch alone. This switch may be used in conjunction with an Assistive Technology scanning application within the XR environment that allows them to select directions for navigation, macros for communication and interaction.</li>
-<li><strong>Gesture </strong> - this is where gesture based controllers are the main input and can be used to navigate in an XR environment, interact with the objects in that environment make selections using their voice alone.</li>
-<li><strong>Eye Tracking</strong> - this is where eye tracking applications is the main input. Using a range of voice commands a user should be able to navigate in an XR environment, interact with the objects in that environment using these eye tracking applications.</li>
-</ul>
-</section>
-
-<section>
-<h3>Various Output Modalities </h3>
-
-<p>The following are a list of outputs that can be available to a user to help them understand, interact with and 'sense' feedback from an XR application. Some of these are in common use on the Web and other exploratory (such as Olfactory and Gustatory.)</p>
-
-<ul>
-
-<li>Tactile &#45; this is using the sense of touch, or commonly referred to as haptics.</li>
-<li>Visual &#45; this is using the sense of sight, such as 2D and 3D graphics.</li>
-<li>Auditory &#45; this is using the sense of sound, such as rich spatial audio, surround sound.</li>
-<li>Olfactory &#45; this is the sense of smell.</li>
-<li>Gustatory  &#45; this is the sense of taste.</li>
-</ul>
-
-	</section>
-</section>
-
-<section>
-<h2>XR controller challenges</h2>
-
-<p>As mentioned there are a range of input devices that may be used. Supporting these controllers requires an understanding of what they are and how they work.
-There are a variety of alternative gaming controls that may be very useful in XR environments and applications. For example the <a href="https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller ">XBOX Adaptive Controller</a>.</p>
-
-<p>While XR is the experience, the controller is king, and plays a critical part in overcoming some complexity as well as mediating issues that may relate to other challenges around usability and helping the user understand sensory substitution devices. </p>
-
-<p>Controllers such as the XBOX Adaptive Controller and other switch type inputs allow the issuer to remapping keyboard inputs to control virtual environments. The powerful customisations may allow the user to "do that thing that is difficult" for them with ease.  In conjunction with this controller, for example, users with limited mobility they can also simulate actions in the XR environment that they would not be able to physically perform.  <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a> is a good example of this where motion range, position and orientation can be set to the users ability.</p>
-
-
-	<section>
-<h3>Customisation of control inputs</h3>
-<p>Giving the user the ability to modify their input preference or use a variety of input devices. The remapping of keys used to control movement or interaction in virtual environments is not currently required by WCAG. It is nevertheless noted in the literature as desirable.</p>
-
-</section>
-
-	<section>
-<h3> Using multiple diverse inputs simultaneously </h3>
-<p>A user with a disability may have several input devices. A user may switch 'mode' of interaction or the tools used and should be able to do so without degrading into a poor user experience where they lose focus on a task and cannot return to it, or make unforced errors, accidental input and so on.</p>
-</section>
-
-	<section>
-<h3>Consistent tracking with multiple inputs </h3>
-<p>There may be tracking issues when switching input devices. A tracking issue is where the user may lose their focus or it can be modified in unpredictable or unwanted ways, this can cause loss of focus and potentially push the user to make unwanted inputs or choices.</p>
-
-<p>Outputs sent to multiple devices will need to be synchronised.</p>
-
-	</section>
-	</section>
-</section>
-
-<section>
-<h2>Usability and affordances in XR</h2>
-<p>An XR application should have a high level of usability for someone with a disability who is using AT. Some challenges in translating interaction models may be:</p>
-
-<ul>
-
-<li>How can a user understand the affordance models used in XR interactions? Or can this be mediated by their own interaction preferences and controllers?</li>
-<li>What interactions are allowed or not allowed? </li>
-<li>How can an accessibility abstracted XR experience focussed on supporting a different modality, successfully interact with another?</li>
-</ul>
-</section>
 
 
 <section>
