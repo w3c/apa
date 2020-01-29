@@ -9,7 +9,7 @@ respecConfig.localBiblio = {
 		"href": "http://www.brains-n-brawn.com/default.aspx?vDir=aicaptcha"
 	},
 
-    "able-game": {
+    "able-gamers": {
         "title": "Thought On Accessibility and VR",
         "date": "March, 2017",
         "authors": ["AJ Ryan"],
