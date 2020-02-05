@@ -1,11 +1,75 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.37.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.1.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* dfn popup panel that list all local references to a dfn */
+dfn {
+  cursor: pointer;
+}
+
+.dfn-panel {
+  position: absolute;
+  left: var(--left); /* set via JS */
+  top: var(--top); /* set via JS */
+  z-index: 35;
+  height: auto;
+  width: max-content;
+  max-width: 300px;
+  max-height: 500px;
+  overflow: auto;
+  padding: 0.5em 0.75em;
+  font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
+  background: #dddddd;
+  color: black;
+  border: outset 0.2em;
+}
+
+.dfn-panel * {
+  margin: 0;
+}
+
+.dfn-panel > b {
+  display: block;
+}
+
+.dfn-panel ul a[href] {
+  color: black;
+}
+
+.dfn-panel a:not(:hover) {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+.dfn-panel a[href]:hover {
+  border-bottom-width: 1px;
+}
+
+.dfn-panel > b + b {
+  margin-top: 0.25em;
+}
+
+.dfn-panel ul {
+  padding: 0;
+}
+
+.dfn-panel li {
+  list-style: inside;
+}
+
+.dfn-panel.docked {
+  display: inline-block;
+  position: fixed;
+  left: 0.5em;
+  top: unset;
+  bottom: 2em;
+  margin: 0 auto;
+  /* 0.75em from padding (x2), 0.5em from left position, 0.2em border (x2) */
+  max-width: calc(100vw - 0.75em * 2 - 0.5em - 0.2em * 2);
+  max-height: 30vh;
+}
+</style>
 		
 		<title>Inaccessibility of CAPTCHA</title>
 		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec 3 CSS
- * Robin Berjon - http://berjon.com/
+ * ReSpec specific CSS
  *****************************************************************/
-
 @keyframes pop {
   0% {
     transform: scale(1, 1);
@@ -397,16 +461,16 @@ var[data-type]:hover::before {
   "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/83907/status",
   "maxTocLevel": 4,
   "localBiblio": {},
-  "publishDate": "2019-12-11",
-  "publishISODate": "2019-12-11T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 11 December 2019"
+  "publishDate": "2020-02-05",
+  "publishISODate": "2020-02-05T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 05 February 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
       <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-12-11">11 December 2019</time>
+        <time class="dt-published" datetime="2020-02-05">05 February 2020</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -415,7 +479,6 @@ var[data-type]:hover::before {
                 <a href="https://www.w3.org/TR/turingtest/">https://www.w3.org/TR/turingtest/</a>
               </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd>
-        
         
         
         
@@ -439,7 +502,7 @@ var[data-type]:hover::before {
       <p class="copyright">
       <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
       ©
-      2018-2019
+      2018-2020
       
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
@@ -525,8 +588,8 @@ their interacting user is a human individual, and not a software robot. Arguably
 		<section id="captcha-effectiveness">
 			<h3 id="x1-3-captcha-effectiveness"><bdi class="secno">1.3 </bdi>CAPTCHA Effectiveness<a class="self-link" aria-label="§" href="#captcha-effectiveness"></a></h3>
 			<p>Malicious activity on the web has only grown over the years to comprise an <a href="http://nymag.com/intelligencer/2018/12/how-much-of-the-internet-is-fake.html">alarmingly high percentage of all Internet traffic</a>. While we would certainly not suggest the web's woes arise from sloppy or ill-considered CAPTCHA implementations, we do suggest current conditions only reinforce the importance of well considered and closely monitored security and privacy strategies consistent with appropriate user support that includes people with disabilities. Getting CAPTCHA right needs to be part of the solution.</p>
-			<p>It is important to acknowledge that using a <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> as a security solution is becoming increasingly ineffective. Current CAPTCHA methods that rely primarily on traditional image-based approaches, logic problems, or audio CAPTCHA alternatives can be largely cracked using both complex and simple computer algorithms. Research suggests that as character-based CAPTCHAs become increasingly vulnerable to defeat by advancing optical character recognition technologies, more severe distortion of the characters is introduced to resist these attacks. However, such enhanced distortion techniques also make it progressively less feasible even for humans who are well endowed with sensory and cognitive capacity to solve CAPTCHA challenges reliably, ultimately making character-based CAPTCHAs impractical [<cite><a class="bibref" href="#bib-captcha-ocr">captcha-ocr</a></cite>].</p>
-			<p>Pattern-matching algorithms can achieve an even higher success rate of cracking CAPTCHAs in some instances, as demonstrated in <cite>CAPTCHA Security: A Case Study</cite> [<cite><a class="bibref" href="#bib-captcha-security">captcha-security</a></cite>] and <cite>HMM-based Attacks on Google’s reCAPTCHA with Continuous Visual and Audio Symbols</cite> [<cite><a class="bibref" href="#bib-recaptcha-attacks">recaptcha-attacks</a></cite>]. While efforts are being made to strengthen traditional CAPTCHA security, more robust security solutions risk reducing the typical user’s ability to understand the CAPTCHA that needs to be resolved, e.g., <cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite> [<cite><a class="bibref" href="#bib-defeat-line-noise">defeat-line-noise</a></cite>]. A recent study at the University of Maryland has demonstrated <a href="https://motherboard.vice.com/en_us/article/pa55z8/researchers-fool-recaptcha-with-googles-own-speech-to-text-service?utm_source=reddit.com">90% success rate cracking Google's audio reCAPTCHA</a> using Google's own speech recognition service. Indeed, as noted below, Google's v2 reCAPTCHA service has recently begun declining to actually provide the audio CAPTCHA alternative clearly proffered onscreen.</p>
+			<p>It is important to acknowledge that using a <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> as a security solution is becoming increasingly ineffective. Current CAPTCHA methods that rely primarily on traditional image-based approaches, logic problems, or audio CAPTCHA alternatives can be largely cracked using both complex and simple computer algorithms. Research suggests that as character-based CAPTCHAs become increasingly vulnerable to defeat by advancing optical character recognition technologies, more severe distortion of the characters is introduced to resist these attacks. However, such enhanced distortion techniques also make it progressively less feasible even for humans who are well endowed with sensory and cognitive capacity to solve CAPTCHA challenges reliably, ultimately making character-based CAPTCHAs impractical [<cite><a class="bibref" data-link-type="biblio" href="#bib-captcha-ocr">captcha-ocr</a></cite>].</p>
+			<p>Pattern-matching algorithms can achieve an even higher success rate of cracking CAPTCHAs in some instances, as demonstrated in <cite>CAPTCHA Security: A Case Study</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-captcha-security">captcha-security</a></cite>] and <cite>HMM-based Attacks on Google’s reCAPTCHA with Continuous Visual and Audio Symbols</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-recaptcha-attacks">recaptcha-attacks</a></cite>]. While efforts are being made to strengthen traditional CAPTCHA security, more robust security solutions risk reducing the typical user’s ability to understand the CAPTCHA that needs to be resolved, e.g., <cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-defeat-line-noise">defeat-line-noise</a></cite>]. A recent study at the University of Maryland has demonstrated <a href="https://motherboard.vice.com/en_us/article/pa55z8/researchers-fool-recaptcha-with-googles-own-speech-to-text-service?utm_source=reddit.com">90% success rate cracking Google's audio reCAPTCHA</a> using Google's own speech recognition service. Indeed, as noted below, Google's v2 reCAPTCHA service has recently begun declining to actually provide the audio CAPTCHA alternative clearly proffered onscreen.</p>
 			<p>In fact it is arguable that online services which offer the content developer a ready solution for distinguishing human users from robots may well be helping defeat that very function. For example <a href="https://www.google.com/recaptcha">Google's reCAPTCHA proclaims </a> : "Hundreds of millions of CAPTCHAs are solved by people every day. reCAPTCHA makes positive use of this human effort by channeling the time spent solving CAPTCHAs into annotating images and building machine learning datasets. This in turn helps improve maps and solve hard <a href="#dfn-ai" class="internalDFN" data-link-type="dfn">AI</a> problems." It is legitimate to consider whether it also describes a classic vicious cycle which is helping defeat the effectiveness of visual and auditory CAPTCHA deployments.</p>
 			<p>It is therefore highly recommended that the purpose and effectiveness of any deployed solution be carefully considered and evaluated across multiple browser and operating system environments before adoption, and then closely monitored for effective performance. Alternative security methods, such as two-step or multi-device verification, along with emerging protocols for identifying human users with high reliability should also be carefully considered in preference to traditional image-based CAPTCHA methods for both security and accessibility reasons.</p>
 		</section>
@@ -547,7 +610,7 @@ purposes of accessibility. We group our review by <a href="#interact">interactiv
 			<section id="traditional-character-based-captcha">
 				<h4 id="x2-1-1-traditional-character-based-captcha"><bdi class="secno">2.1.1 </bdi>Traditional Character-Based CAPTCHA<a class="self-link" aria-label="§" href="#traditional-character-based-captcha"></a></h4>
 				<p>The traditional character-based <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a>, as previously discussed, is largely inaccessible and insecure. It focuses on the presentation of letters or words presented in an image and designed to be difficult for <a href="#dfn-robot" class="internalDFN" data-link-type="dfn">robots</a> to identify. The user is then asked to enter the CAPTCHA information into a form.</p>
-				<p>The use of a traditional CAPTCHA is obviously problematic for people who are blind, as the <a href="#dfn-screen-reader" class="internalDFN" data-link-type="dfn">screen readers</a> they rely on to use web content cannot process the image, thus preventing them from uncovering the information required by the form. Because the characters embedded in a CAPTCHA are often distorted or have other characters in close proximity to each other in order to foil technological solution by robots, they are also very difficult for users with other visual disabilities. This common CAPTCHA technique is also less reliably solved by users with cognitive and learning disabilities, see <cite>The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities</cite> [<cite><a class="bibref" href="#bib-captcha-ld">captcha-ld</a></cite>]. Because they’re intentionally distorted to foil robots, they also foil users who are more easily confused by surrealistic images or who do not possess sufficiently acute vision to “see” beyond the presented distortion and uncover the text the site
+				<p>The use of a traditional CAPTCHA is obviously problematic for people who are blind, as the <a href="#dfn-screen-reader" class="internalDFN" data-link-type="dfn">screen readers</a> they rely on to use web content cannot process the image, thus preventing them from uncovering the information required by the form. Because the characters embedded in a CAPTCHA are often distorted or have other characters in close proximity to each other in order to foil technological solution by robots, they are also very difficult for users with other visual disabilities. This common CAPTCHA technique is also less reliably solved by users with cognitive and learning disabilities, see <cite>The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-captcha-ld">captcha-ld</a></cite>]. Because they’re intentionally distorted to foil robots, they also foil users who are more easily confused by surrealistic images or who do not possess sufficiently acute vision to “see” beyond the presented distortion and uncover the text the site
 					requires in order to proceed.</p>
 
 <p>While some sites have begun providing CAPTCHAs utilizing languages other
@@ -555,7 +618,7 @@ than English, an assumption that all web users can understand and reproduce
 English predominates. Clearly, this is not the case.  Research has demonstrated
 how CAPTCHAs based on written English impose a significant barrier to many on
 the web; see <cite>Effects of Text Rotation, String Length, and Letter Format
-on Text-based CAPTCHA Robustness</cite> [<cite><a class="bibref" href="#bib-captcha-robustness">captcha-robustness</a></cite>].  This problem
+on Text-based CAPTCHA Robustness</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-captcha-robustness">captcha-robustness</a></cite>].  This problem
 is likely to increase when using  Latin-script characters beyond the ASCII
 range, with accents and diacritics, or shapes not included in the set used for
 English. For example, speakers of Arabic or Thai may not have enough knowledge
@@ -566,7 +629,7 @@ have the necessary keys available on their local keyboard.  </p>
 			<section id="sound-output">
 				<h4 id="x2-1-2-sound-output"><bdi class="secno">2.1.2 </bdi>Sound Output<a class="self-link" aria-label="§" href="#sound-output"></a></h4>
 				<p>To re-frame the problem, text is easy to manipulate, which is good for <a href="#dfn-assistive-technology" class="internalDFN" data-link-type="dfn">assistive technologies</a>, but just as good for <a href="#dfn-robot" class="internalDFN" data-link-type="dfn">robots</a>. One logical solution to this problem is to offer another non-textual method of using the same content. To achieve this, audio is played that contains a series of characters, words, or phrases being read out which the user then needs to enter into a form. As with visual <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> however, robots are also capable of recognizing spoken content—as Amazon’s Alexa and Android’s Google Assistant, among other spoken dialog systems, have so ably demonstrated. Consequently, the characters, words, or phrases the user is to uncover and transcribe in the form are also distorted in an audio CAPTCHA and are usually played over a sonic environment of obfuscating sounds.</p>
-				<p>The industry recognized this problem early. CNet reported in <a href="https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a> [<cite><a class="bibref" href="#bib-newscom">newscom</a></cite>] that “Hotmail’s sound output, which is itself distorted to avoid the same programmatic abuse, was unintelligible to all four test subjects, all of whom had good hearing.”</p>
+				<p>The industry recognized this problem early. CNet reported in <a href="https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-newscom">newscom</a></cite>] that “Hotmail’s sound output, which is itself distorted to avoid the same programmatic abuse, was unintelligible to all four test subjects, all of whom had good hearing.”</p>
 				<p>If the sound output, which is itself distorted to avoid the same programmatic abuse, can render the CAPTCHA difficult to hear; there can also be confusion in understanding whether a number is to be entered as a numerical value or as a word, e.g.,‘7’ or ‘seven’. Often the audio CAPTCHA user will hear sounds which seem to be words or numerical values that should be entered, but turn out to be just background noise.</p>
 				<p>Sound is also intrinsically temporal, but the import of this unavoidable fact is too often under appreciated—perhaps because the world we live in as seen through the eyes is also temporal. Unlike the real world seen through the eyes however, the traditional CAPTCHA is a still image that can be stared at until comprehension dawns. Sound has no analog to the visual still image.</p>
 				<p>Whenever any portion of an audio CAPTCHA is not understood; at least some part of the CAPTCHA must be replayed, usually several times. Currently, few audio CAPTCHAs provide an easily invoked and reliable replay feature, let alone an independent volume control or a pause, rewind, and fast-forward feature. Consequently, an entirely new audio CAPTCHA is often played should any part of one audio CAPTCHA prove difficult to understand.</p>
@@ -578,15 +641,15 @@ have the necessary keys available on their local keyboard.  </p>
 CAPTCHAs even more difficult to solve than character-based visual CAPTCHAs.
 Audio CAPTCHAs are known to impose a cognitive overload to all human users in
 comparison to the cognitive load necessary to understand normal human speech
-[<cite><a class="bibref" href="#bib-information-security">information-security</a></cite>]. Further, studies of CAPTCHAs requiring human
+[<cite><a class="bibref" data-link-type="biblio" href="#bib-information-security">information-security</a></cite>]. Further, studies of CAPTCHAs requiring human
 recognition of distorted or obscured speech have shown that they are more
 difficult for all users to solve and more demanding in terms of time and
-efforts compared to text or image-based CAPTCHAs. [<cite><a class="bibref" href="#bib-solving-captchas">solving-captchas</a></cite>]. These
+efforts compared to text or image-based CAPTCHAs. [<cite><a class="bibref" data-link-type="biblio" href="#bib-solving-captchas">solving-captchas</a></cite>]. These
 facts make audio CAPTCHAs a poor choice for users with cognitive
 disabilities.</p>
 
-				<p>Although auditory forms of CAPTCHA that present distorted speech create recognition difficulties for <a href="#dfn-screen-reader" class="internalDFN" data-link-type="dfn">screen reader</a> users, the accuracy with which such users can complete the CAPTCHA tasks is increased if the user interface is carefully designed to prevent screen reader audio and CAPTCHA audio from being intermixed. This can be achieved by implementing functions for controlling the audio that do not require the user to move focus away from the text response field; see <cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite> [<cite><a class="bibref" href="#bib-eval-audio">eval-audio</a></cite>].</p>
-				<p>Experiments with a combined auditory and visual CAPTCHA requiring users to identify well known objects by recognizing either images or sounds, suggest that this technique is highly usable by screen reader users. However, its security-related properties remain to be explored, as mentioned in <cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite> [<cite><a class="bibref" href="#bib-task-completion">task-completion</a></cite>].</p>
+				<p>Although auditory forms of CAPTCHA that present distorted speech create recognition difficulties for <a href="#dfn-screen-reader" class="internalDFN" data-link-type="dfn">screen reader</a> users, the accuracy with which such users can complete the CAPTCHA tasks is increased if the user interface is carefully designed to prevent screen reader audio and CAPTCHA audio from being intermixed. This can be achieved by implementing functions for controlling the audio that do not require the user to move focus away from the text response field; see <cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-eval-audio">eval-audio</a></cite>].</p>
+				<p>Experiments with a combined auditory and visual CAPTCHA requiring users to identify well known objects by recognizing either images or sounds, suggest that this technique is highly usable by screen reader users. However, its security-related properties remain to be explored, as mentioned in <cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-task-completion">task-completion</a></cite>].</p>
 			</section>
 								<section id="logic-puzzles">
 					<h4 id="x2-1-3-logic-puzzles"><bdi class="secno">2.1.3 </bdi>Logic Puzzles<a class="self-link" aria-label="§" href="#logic-puzzles"></a></h4>
@@ -598,17 +661,17 @@ disabilities.</p>
 					<h4 id="x2-1-4-image-and-video"><bdi class="secno">2.1.4 </bdi>Image and Video<a class="self-link" aria-label="§" href="#image-and-video"></a></h4>
 					<section id="visual-comparison-captchas">
 						<h5 id="x2-1-4-1-visual-comparison-captchas"><bdi class="secno">2.1.4.1 </bdi>Visual Comparison CAPTCHAs<a class="self-link" aria-label="§" href="#visual-comparison-captchas"></a></h5>
-						<p>There are a number of <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> techniques based on the identification of still images. This can include requiring the user to identify whether an image is a man or a woman, or whether an image is human-shaped or avatar-shaped among other comparison approaches, such as <cite>CAPTCHAStar! A novel CAPTCHA based on interactive shape discovery</cite>, [<cite><a class="bibref" href="#bib-captchastar">captchastar</a></cite>], <cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite> [<cite><a class="bibref" href="#bib-facecaptcha">facecaptcha</a></cite>], and <cite>Social and egocentric image classification for scientific and privacy applications</cite> [<cite><a class="bibref" href="#bib-social-classification">social-classification</a></cite>].</p>
+						<p>There are a number of <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> techniques based on the identification of still images. This can include requiring the user to identify whether an image is a man or a woman, or whether an image is human-shaped or avatar-shaped among other comparison approaches, such as <cite>CAPTCHAStar! A novel CAPTCHA based on interactive shape discovery</cite>, [<cite><a class="bibref" data-link-type="biblio" href="#bib-captchastar">captchastar</a></cite>], <cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-facecaptcha">facecaptcha</a></cite>], and <cite>Social and egocentric image classification for scientific and privacy applications</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-social-classification">social-classification</a></cite>].</p>
 						<p>While alternative audio comparison CAPTCHAs might be explored such as using similar or different sounds for comparison, the reliance on visual comparison alone makes these approaches difficult, if not impossible for people with vision-related disabilities. They're also  very difficult for people
 						living with visual processing disorders, among other cognitive and learning disabilities.</p>
 					</section>
 					<section id="x3d-captcha">
 						<h5 id="x2-1-4-2-3d-captcha"><bdi class="secno">2.1.4.2 </bdi>3D CAPTCHA<a class="self-link" aria-label="§" href="#x3d-captcha"></a></h5>
-						<p>A 3D representation of letters and numbers can make it more difficult for OCR software to identify them, in turn increasing the security of the <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a>, described in <cite>On the security of text-based 3D CAPTCHAs</cite> [<cite><a class="bibref" href="#bib-3d-captcha-security">3d-captcha-security</a></cite>]. However, this solution raises similar accessibility issues to traditional CAPTCHAs.</p>
+						<p>A 3D representation of letters and numbers can make it more difficult for OCR software to identify them, in turn increasing the security of the <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a>, described in <cite>On the security of text-based 3D CAPTCHAs</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-3d-captcha-security">3d-captcha-security</a></cite>]. However, this solution raises similar accessibility issues to traditional CAPTCHAs.</p>
 					</section>
 					<section id="movement-based-and-video-game-captcha">
 						<h5 id="x2-1-4-3-movement-based-and-video-game-captcha"><bdi class="secno">2.1.4.3 </bdi>Movement-Based and Video Game CAPTCHA<a class="self-link" aria-label="§" href="#movement-based-and-video-game-captcha"></a></h5>
-						<p>This process is based on the movement of interactive elements such as a slider or  the completion of a basic video game as a <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a>, like <cite>Game-based image semantic CAPTCHA on handset devices</cite> [<cite><a class="bibref" href="#bib-game-captcha">game-captcha</a></cite>]. The benefits include removal of language barriers, and the removal of CAPTCHA frustration due to the presumed intuitiveness of the associated task and the enjoyment of playing video games. </p>
+						<p>This process is based on the movement of interactive elements such as a slider or  the completion of a basic video game as a <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a>, like <cite>Game-based image semantic CAPTCHA on handset devices</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-game-captcha">game-captcha</a></cite>]. The benefits include removal of language barriers, and the removal of CAPTCHA frustration due to the presumed intuitiveness of the associated task and the enjoyment of playing video games. </p>
 						<p>Importantly, the implementation of this CAPTCHA would need to support multiple input interfaces as different devices may lack some input methods such as a keyboard or touchscreen. Another potential issue is that screen reader support for interface elements may unintentionally provide a backdoor for the CAPTCHA to be bypassed by allowing a bot to play the game.</p>
 					</section>
 				</section>		
@@ -625,10 +688,10 @@ procedures, e.g.,senior citizens whose fingerprints can no longer be reliably se
 are effectively precluded from using a fingerprint biometric. This can result in denial
 of access to certain users with disabilities and explains why reliance on a single biometric identifier is insufficient to satisfy public sector procurement
 standards in the European Union <a href="http://mandate376.standards.eu/standard/technical-requirements/biometrics">
-EN 301 549, section 5.3</a> [<cite><a class="bibref" href="#bib-en-301-549">en-301-549</a></cite>] and regulations under section 508 of
+EN 301 549, section 5.3</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-en-301-549">en-301-549</a></cite>] and regulations under section 508 of
 the Rehabilitation Act and <a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">Section
 255 of the Communications Act, 36 CFR 1194, Appendix C</a>, section 403 in the
-United States [<cite><a class="bibref" href="#bib-36-cfr-1194">36-cfr-1194</a></cite>].</p>
+United States [<cite><a class="bibref" data-link-type="biblio" href="#bib-36-cfr-1194">36-cfr-1194</a></cite>].</p>
 
 <p>For this reason, biometric identification systems should be designed to allow users to choose among multiple and unrelated biometric identifiers. With that sole caveat, properly designed biometric identification systems are particularly attractive in situations where it is necessary to identify a particular human user. Their reliability is high, the cognitive load placed on the user low, and they are particularly difficult to foil. They have not yet been rendered suitable, however, in circumstances when it is necessary to preserve the user’s anonymity (i.e., the task is verifying that the user is human, without providing identifying information).</p>
 
@@ -663,7 +726,7 @@ traditional <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPT
 				<section id="proof-of-work">
 				  <h4 id="x2-2-2-proof-of-work"><bdi class="secno">2.2.2 </bdi>Proof-Of-Work<a class="self-link" aria-label="§" href="#proof-of-work"></a></h4>
 				  <p>One strategy for thwarting misuse of web resources is to load suspicious clients with significant computational workloads, thus 
-				  slowing down the interaction and hopefully deterring malicious parties by reducing their ability to engage in undesirable activities such as disseminating spam. This approach has been explored in the development of proof-of-work challenges. [<cite><a class="bibref" href="#bib-kapow-plugins">kaPoW-plugins</a></cite>] These can be made arbitrarily expensive computationally based on an associated reputation score for each client that attempts to access a resource. Clients that are adjudged more likely to be malicious are required to solve more computationally expensive problems. Less resource-consumptive problems are provided to clients that are adjudged more likely to be web browsers operated by human users.</p>
+				  slowing down the interaction and hopefully deterring malicious parties by reducing their ability to engage in undesirable activities such as disseminating spam. This approach has been explored in the development of proof-of-work challenges. [<cite><a class="bibref" data-link-type="biblio" href="#bib-kapow-plugins">kaPoW-plugins</a></cite>] These can be made arbitrarily expensive computationally based on an associated reputation score for each client that attempts to access a resource. Clients that are adjudged more likely to be malicious are required to solve more computationally expensive problems. Less resource-consumptive problems are provided to clients that are adjudged more likely to be web browsers operated by human users.</p>
 					<p>The proof of work approach should have a negligible effect on the human user's interactive experience, provided that the reputation scoring is relatively accurate. However, it is designed to impose substantial cost on the operators of web robots—perhaps even greater than the cost of hiring human workers as <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> solvers.</p>
 				  <p>Implementing this approach is straightforward. It requires the client to execute JavaScript code to solve the computational problem, and the solution is then verified by a server to establish that the work has been performed. It  poses no direct accessibility problems, though it may slow performance for users of older hardware.</p>
 				</section>
@@ -671,7 +734,7 @@ traditional <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPT
 					<h4 id="x2-2-3-heuristics"><bdi class="secno">2.2.3 </bdi>Heuristics<a class="self-link" aria-label="§" href="#heuristics"></a></h4>
 					<p><a href="#dfn-heuristic" class="internalDFN" data-link-type="dfn">Heuristics</a> are discoveries in a process that seem to indicate a given result. It may be possible to detect the presence of a robotic user based on the volume of data the user requests, series of common pages visited, IP addresses, data entry methods, or other signature data that can be collected.</p>
 					<p>Again, this requires a careful examination of site data. If pattern-matching algorithms can’t find good heuristics, then this is not a good solution. Also, polymorphism, or the creation of changing footprints, is apt to result, if it hasn’t already, in robots, just as polymorphic (“stealth”) viruses appeared to get around virus checkers looking for known viral footprints.</p>
-					<p>Another heuristic approach identified in <a href="http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"><cite> Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a> [<cite><a class="bibref" href="#bib-killbots">killbots</a></cite>] involves the use of <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> images, with a twist: how the user reacts to the test is as important as whether or not it was solved. This system, which was designed to thwart distributed denial of service (DDoS) attacks, bans automated attackers which make repeated attempts to retrieve a certain page, while protecting against marking humans incorrectly as automated traffic. When the server’s load drops below a certain level, the CAPTCHA-based authentication process is removed entirely.</p>
+					<p>Another heuristic approach identified in <a href="http://www.usenix.org/events/nsdi05/tech/kandula/kandula_html/"><cite> Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-killbots">killbots</a></cite>] involves the use of <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> images, with a twist: how the user reacts to the test is as important as whether or not it was solved. This system, which was designed to thwart distributed denial of service (DDoS) attacks, bans automated attackers which make repeated attempts to retrieve a certain page, while protecting against marking humans incorrectly as automated traffic. When the server’s load drops below a certain level, the CAPTCHA-based authentication process is removed entirely.</p>
 				</section>
 				<section id="honeypots">
 					<h4 id="x2-2-4-honeypots"><bdi class="secno">2.2.4 </bdi>Honeypots<a class="self-link" aria-label="§" href="#honeypots"></a></h4>
@@ -693,9 +756,9 @@ traditional <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPT
 				<section id="public-key-infrastructure-pki">
 					<h3 id="x3-1-public-key-infrastructure-pki"><bdi class="secno">3.1 </bdi>Public-Key Infrastructure (PKI)<a class="self-link" aria-label="§" href="#public-key-infrastructure-pki"></a></h3>
 					<p>Another approach is to use certificates for individuals who wish to verify their identity. A party relying on a certificate offered by a user attempting to access online services can assess the trustworthiness of the certificate's issuer, and the likelihood that the private key has been compromised, in evaluating the risk that the offerer is actually a web robot rather than a human agent. Highly trusted certification authorities such as governments, as in <a href="https://e-resident.gov.ee/">Estonia's e-Residency Program</a> require evidence of an individual's identity as a basis for issuing a certificate. Provided that the private key is not compromised and cannot be misused by an attacker, there is a high degree of assurance that messages cryptographically signed by it which could serve to establish the user's identity to web-based services have genuinely been authorized by the certificate holder.</p>
-					<p>The use of certificates as an indicator that an access attempt has been authorized by a human discloses the user's identity to the web service provider, and thus should not be deployed in circumstances in which anonymity is necessary. In addition, Transport Layer Security (TLS) client certificate authentication, as defined in TLS 1.2 and earlier versions of the protocol, gives rise to privacy concerns [<cite><a class="bibref" href="#bib-tls-tracking">tls-tracking</a></cite>].</p>
+					<p>The use of certificates as an indicator that an access attempt has been authorized by a human discloses the user's identity to the web service provider, and thus should not be deployed in circumstances in which anonymity is necessary. In addition, Transport Layer Security (TLS) client certificate authentication, as defined in TLS 1.2 and earlier versions of the protocol, gives rise to privacy concerns [<cite><a class="bibref" data-link-type="biblio" href="#bib-tls-tracking">tls-tracking</a></cite>].</p>
 
-					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed. Such approaches raise significant privacy and stigmatization concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. based <a href="http://www.bookshare.org/">Bookshare</a> whose services are only available to persons with documented print disabilities under the terms of an international copyright treaty administered by the United Nations' World Intellectual Property Organization (WIPO) and known as the <a href="http://www.wipo.int/treaties/en/ip/marrakesh"><cite>Marrakesh Treaty</cite></a>. [<cite><a class="bibref" href="#bib-marrakesh">marrakesh</a></cite>]</p>
+					<p>A variant of this concept, in which only people with disabilities who are affected by other verification systems would register, is sometimes proposed. Such approaches raise significant privacy and stigmatization concerns and are usually opposed strongly by people with disabilities themselves and by organizations that serve them. Such approaches should not be confused with situations where people voluntarily self-identify as individuals with disabilities. An example is the U.S. based <a href="http://www.bookshare.org/">Bookshare</a> whose services are only available to persons with documented print disabilities under the terms of an international copyright treaty administered by the United Nations' World Intellectual Property Organization (WIPO) and known as the <a href="http://www.wipo.int/treaties/en/ip/marrakesh"><cite>Marrakesh Treaty</cite></a>. [<cite><a class="bibref" data-link-type="biblio" href="#bib-marrakesh">marrakesh</a></cite>]</p>
 
 			</section>
 			<section id="the-google-recaptcha">
@@ -746,7 +809,7 @@ computers, smart phones, tablets, and wearables such as smart watches. This
 proliferation has led to online services delivering identification solutions
 that take into account a combination of multi-device and multi-platform vectors
 for <cite>simple and effective user authentication, including persons with
-disabilities</cite> [<cite><a class="bibref" href="#bib-auth-mult">auth-mult</a></cite>]. We note that several major service providers
+disabilities</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-auth-mult">auth-mult</a></cite>]. We note that several major service providers
 (such as Facebook) now support cross-site user authentication. However, in
 relation to the specific ability to tell a human and bot apart, it appears only
 <a href="https://developers.google.com/recaptcha/docs/v3">Google's v3
@@ -810,7 +873,7 @@ Cloudflare,  and Amazon Cloudfront. These CDNs provide the value add of localize
 last mile cached content delivery and the ability to effectively deflect various
 malicious activity such as denial of service (DOS) attacks.  As almost
 two-thirds of Internet content is now delivered by CDNs, they are now also
-unintentionally forced to become <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing test</a> arbiters. This in turn has resulted in the development of fresh innovative approaches to CAPTCHA such as Privacy Pass [<cite><a class="bibref" href="#bib-privacy-pass">privacy-pass</a></cite>], now available as a browser extension on Cloudflare.</p>
+unintentionally forced to become <a href="#dfn-turing-test" class="internalDFN" data-link-type="dfn">Turing test</a> arbiters. This in turn has resulted in the development of fresh innovative approaches to CAPTCHA such as Privacy Pass [<cite><a class="bibref" data-link-type="biblio" href="#bib-privacy-pass">privacy-pass</a></cite>], now available as a browser extension on Cloudflare.</p>
 
 <p>While Privacy Pass still begins with a CAPTCHA challenge, it does provide
 the user a trove of cryptographically blinded tokens which can satisfy further
@@ -970,10 +1033,7 @@ identify themselves as human.</p>
 		</section>
 	
 
-<section id="references" class="appendix">
-      <h2 id="c-references"><bdi class="secno">C. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2>
-      
-    <section id="informative-references">
+<section id="references" class="appendix"><h2 id="c-references"><bdi class="secno">C. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
         <h3 id="c-1-informative-references"><bdi class="secno">C.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-36-cfr-1194">[36-cfr-1194]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-3d-captcha-security">[3d-captcha-security]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-auth-mult">[auth-mult]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-captcha-ld">[captcha-ld]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-captcha-ocr">[captcha-ocr]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-captcha-robustness">[captcha-robustness]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-captcha-security">[captcha-security]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-captchastar">[captchastar]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-defeat-line-noise">[defeat-line-noise]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-en-301-549">[en-301-549]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-eval-audio">[eval-audio]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-facecaptcha">[facecaptcha]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-game-captcha">[game-captcha]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-information-security">[information-security]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-kapow-plugins">[kaPoW-plugins]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-killbots">[killbots]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-marrakesh">[marrakesh]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-newscom">[newscom]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-privacy-pass">[privacy-pass]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-recaptcha-attacks">[recaptcha-attacks]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-social-classification">[social-classification]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-solving-captchas">[solving-captchas]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-task-completion">[task-completion]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-tls-tracking">[tls-tracking]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd>
