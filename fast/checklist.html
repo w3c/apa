@@ -11,6 +11,26 @@
 					symbols: ☐;
 					suffix: " ";
 				}*/
+
+				#fast_update 
+			{
+		    margin: 20px;
+		    padding: 20px;
+		    border: 10px;
+		    background-color: #666666;
+		    color: white;
+			}
+
+			.button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
 			
 			.checklist
 			{
@@ -62,6 +82,20 @@
 		<p>This is a draft checklist to support <a href="/">Framework for Accessibility in the Specification of Technologies (FAST)</a> prepared by the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>. The goal of <abbr title="Framework for Accessibility in the Specification of Technologies">FAST</abbr> is to describe the features that web technologies should provide to ensure it is possible to create content that is accessible to users with disabilities. The full framework references an analysis of user requirements, describes how technologies, content authoring, and user agents work together to meet these needs, and provides comprehensive guidance to technology developers. This checklist extracts that information at a high level to aid in self-review of technologies. Specification developers can use this to help ensure the technology will address features likely to be raised during horizontal review from accessibility proponents.</p>
 		<p>Web technologies address a variety of needs, and play a variety of roles in web accessibility. Content languages describe primary content, styling languages impact presentation, APIs enable manipulation and data interchange, and protocols tie it all together. Each of these types of technologies can impact accessibility. </p>
 		<p>This checklist is organized by types of features that a technology may provide. If the technology provides such a feature, the checklist items under the heading are applicable and should be examined. If the technology does not provide such a feature, the checklist items under the heading are not applicable and can be passed over.</p>
+
+		<div id="fast_update">
+
+
+		</div>
+
+		<div id="generate">
+		<input type="button" class="button" value="Generate Checklist" onclick="fastHolderUpdate();"/>
+	</div>
+
+<!-- 	<div id="copy">
+		<input type="button" class="button" value="Copy Checklist"  onclick="fastHolderCopy()"/>
+	</div> -->
+
 		<table>
 			<caption></caption>
 			<thead>
@@ -419,17 +453,17 @@
 </tr>
 -->
 				<tr>
-					<td><input type="checkbox" id="ojects_1"> There is a mechanism to create short text alternatives that label the object. </td>
+					<td><input type="checkbox" id="objects_1"> There is a mechanism to create short text alternatives that label the object. </td>
 					<td>Some non-text objects can be represented as text, such as form controls, user interface objects, etc. Authors have no inherent text version that can be meaningfully exposed to the user. In this case, technologies should allow authors to provide a short label for the object.</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox" id="ojects_2"> There is a mechanism to create extended text alternatives for fallback content.</td>
+					<td><input type="checkbox" id="objects_2"> There is a mechanism to create extended text alternatives for fallback content.</td>
 					<td>In addition to labels, authors should be able to provide extended text alternatives to better describe non-text objects. Technologies should provide a feature for this extended description that is distinct from the short label, and that can be associated with the object.</td>
 					<td></td>
 				</tr>
 				<tr>
-					<td><input type="checkbox" id="ojects_3"> Text alternatives can be semantically "rich" e.g., with page structure, text style, hyperlinks, etc. </td>
+					<td><input type="checkbox" id="objects_3"> Text alternatives can be semantically "rich" e.g., with page structure, text style, hyperlinks, etc. </td>
 					<td>Extended text alternatives should allow authors to use, and users to benefit from, full text semantics rather than reduce them to plain text.</td>
 					<td></td>
 				</tr>
@@ -554,5 +588,48 @@
 				</tr>
 			</tbody>
 		</table>
+
+		<script type="text/javascript">
+
+// function will loop through all input checkboxes and create
+// url string from checked checkboxes
+function fastHolderUpdate() {
+    var counter = 0, // counter for checked checkboxes
+        i = 0,       // loop variable
+        fastHolder = [],    // fastHolder Array
+        // get a collection of input objects 
+        fast_obj = document.getElementsByTagName('input');
+    // loop through collected objects
+    for (i = 0; i < fast_obj.length; i++) {
+        // checks if check is a checkbox and if checkbox selected etc
+        if (fast_obj[i].type === 'checkbox' && fast_obj[i].checked === true) {
+            // ... increase counter and concatenate id value to the fastHolder string
+            counter++;
+            fastHolder = fastHolder + ' Selected checkpoint for review: ' + fast_obj[i].id;
+        }
+    }
+    // display fastHolder string or message if there is no checked checkboxes
+    if (counter > 0) {
+        // // remove first "&" from the generated fastHolder string
+        // fastHolder = fastHolder.substr(1);
+        // // display final fastHolder string
+        var output = document.getElementById("fast_update");
+        output.innerHTML = (fastHolder);
+        // console.log(fastHolder);
+        // or you can send checkbox values
+        // window.location.href = 'my_page.php?' + fastHolder; 
+    }
+    else {
+        alert('There are no FAST checkpoints selected');
+    }
+}
+
+
+function fastHolderCopy(){
+ document.getElementById("fast_update").select();
+ document.execCommand('copy');
+}
+
+</script>
 	</body>
 </html>
