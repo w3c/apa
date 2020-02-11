@@ -111,6 +111,4 @@ var respecConfig = {
 	wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/83907/status",
 	maxTocLevel: 4,
 	
-	localBiblio: biblio
-	
 };
