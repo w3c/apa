@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Accessible RTC User Needs and Requirements</title>
+		<title>RTC Accessibility User Requirements</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
 		<script src="../biblio.js" class="remove"></script>
 		<script src="respec-config.js" class="remove"></script>
@@ -10,7 +10,9 @@
 	<body>
 		<section id="abstract">
 			<h2>Abstract</h2>
-<p>This document outlines various accessibility related &#39;user needs and requirements&#39;, &#39;scenarios&#39; and &#39;use cases&#39; for Real Time Communication. These &#39;user needs&#39; should drive accessibility requirements in various related specifications and the overall architecture that enables it.  These user needs, scenarios, and use cases - come from people with disabilities who use Assistive Technology (AT) and wish to see the features described available within <abbr title="Real Time Communication">RTC</abbr> enabled applications.</p>
+<p>This document outlines various accessibility related user needs, requirements and scenarios for Real Time Communication (RTC). These user needs should drive accessibility requirements in various related specifications and the overall architecture that enables it.  These user needs, scenarios, and use cases - come from people with disabilities who use Assistive Technology (AT) and wish to see the features described available within <abbr title="Real Time Communication">RTC</abbr> enabled applications. It first introduces a definition of RTC as used throghout the document, and outlines how RTC accessibility can support the needs of people with disabilities. It then defines the term user needs as used throughout the document, and then goes on to list a range of user needs and their related requirments. Following that a range of quality related scenarios are outlined, followed by a data table that maps the user needs contained in this document to related use cases requirement found in other technical specifications.</p>
+
+<p>This document is most explicitly not a collection of baseline requirements. It is also important to note that some of the requirements may be implemented at a system or platform level, and some may be authoring requirements.</p>
 </section>
 
 	<section id="sotd"> </section>
@@ -20,7 +22,7 @@
 			                
 
 		<h3> What is Real Time Communication (<abbr title="Real Time Communication">RTC</abbr>)? </h3>
-<p>The traditional data exchange model is client to server. Real Time Communication (<abbr title="Real Time Communication">RTC</abbr>) is game-changing. It is enabled in part, by specifications like <abbr title="Web Real Time Communication">WebRTC</abbr> as this provides real-time peer to peer Audio, Video and Data exchange directly between supported web browsers without the need for browser plugins, as well as fast applications for video/audio calls, text chat, file exchange, screen sharing and gaming. However, <abbr title="Web Real Time Communication">WebRTC</abbr> is not the sole specification with responsibility to enable accessible real-time communications, as use cases and requirements are broad - as outlined in the <a href="https://tools.ietf.org/html/rfc7478"><abbr title="Internet Engineering Task Force">IETF</abbr> RFC 7478 'Web Real-Time Communication Use Cases and Requirements'</a> </p>
+<p>The traditional data exchange model is client to server. Real Time Communication (<abbr title="Real Time Communication">RTC</abbr>) is game-changing. It is enabled in part, by specifications like <abbr title="Web Real Time Communication">WebRTC</abbr> as this provides real-time peer to peer Audio, Video and Data exchange directly between supported web browsers without the need for browser plugins, as well as fast applications for video/audio calls, text chat, file exchange, screen sharing and gaming. However, <abbr title="Web Real Time Communication">WebRTC</abbr> is not the sole specification with responsibility to enable accessible real-time communications, as use cases and requirements are broad - as outlined in the <a href="https://tools.ietf.org/html/rfc7478"><abbr title="Internet Engineering Task Force">IETF</abbr> RFC 7478 'Web Real-Time Communication Use Cases and Requirements'</a> document.</p>
 
 <p>Accessible <abbr title="Real Time Communication">RTC</abbr> is enabled by a combination of technologies and specifications such as those from the Media Working Group, Web and Networks IG, Second Screen, and Web Audio Working group as well as <abbr title="Accessibility Guidelines Working Group">AGWG</abbr> and <abbr title="Accessible Rich Internet Applications">ARIA</abbr>. <abbr title="Accessible Platforms Architecure Working Group">APA</abbr> hopes this work will inform how these groups meet various responsibilities for enabling <abbr title="Real Time Communication">RTC</abbr>, as well updating use cases in various groups. For example, you can view current work on <a href="https://www.w3.org/TR/webrtc</abbr>-nv-use-cases/"><abbr title="Web Real Time Communication">WebRTC</abbr> Next Version Use Cases First Public Working Draft.</a></p>
 
@@ -33,185 +35,196 @@
 
 
 		<section>
-<h3>User Needs, Scenarios, Use Case definitions Overview</h3>
-<p>This document outlines various accessibility related &#39;user needs&#39; for Accessible <abbr title="Real Time Communication">RTC</abbr>. These &#39;user needs&#39; should drive accessibility requirements for Accessible <abbr title="Real Time Communication">RTC</abbr> and its related architecture. These  come from people with disabilities who use Assistive Technology (AT) and wish to see the features described available within Accessible <abbr title="Real Time Communication">RTC</abbr> enabled applications.</p>
+<h3>User needs definition</h3>
+<p>This document outlines various accessibility related user needs for Accessible <abbr title="Real Time Communication">RTC</abbr>. These user needs should drive accessibility requirements for Accessible <abbr title="Real Time Communication">RTC</abbr> and its related architecture. These  come from people with disabilities who use Assistive Technology (AT) and wish to see the features described available within Accessible <abbr title="Real Time Communication">RTC</abbr> enabled applications.</p>
 
-<p>User needs are framed in a range of &#39;Scenarios&#39; (which can be thought of as similar to &#39;User Stories&#39;). User needs and requirements are being actively reviewing by <abbr title="Research Questions Task Force">RQTF</abbr>/<abbr title="Accessible Platforms Architecure Working Group">APA</abbr> in the context of the broader scope and application of the contents of this document.</p>
+<p>User needs are presented with related requirements and also some in a range of scenarios; (which can be thought of as similar to User stories). User needs and requirements are being actively reviewing by <abbr title="Research Questions Task Force">RQTF</abbr>/<abbr title="Accessible Platforms Architecure Working Group">APA</abbr> in the context of the broader scope and application of the contents of this document.</p>
 		</section>
 
 </section>
 
 
 <section>
-<h2>User Needs and Scenarios</h2>
-<p>The following outlines a range user needs in various scenarios. The use cases below have also been compared to existing use case for Real&#45;Time Text (<abbr title="Real Time Text">RTT</abbr>) such as the <abbr title="Internet Engineering Task Force">IETF</abbr> Framework for Real&#45;Time Text over IP Using the <a href="https://tools.ietf.org/html/rfc5194"><abbr title="Internet Engineering Task Force">IETF</abbr> Session Initiation Protocol RFC 5194</a> and the <a href="http://mandate376.standards.eu/standard"> European Procurement Standard EN 301 549</a>.</p>
+<h2>User Needs and Requirements</h2>
+<p>The following outlines a range of user needs and requirements. The user needs below have also been compared to existing use cases for Real&#45;Time Text (<abbr title="Real Time Text">RTT</abbr>) such as the <abbr title="Internet Engineering Task Force">IETF</abbr> Framework for Real&#45;Time Text over IP Using the <a href="https://tools.ietf.org/html/rfc5194"><abbr title="Internet Engineering Task Force">IETF</abbr> Session Initiation Protocol RFC 5194</a> and the <a href="http://mandate376.standards.eu/standard"> European Procurement Standard EN 301 549</a>.</p>
 
 
 		<section>
 <h3>Incoming calls and Caller ID</h3>
-<p><strong>Scenario:</strong> A screen&#45;reader user or user with a cognitive impairment needs to know a call is incoming and needs to recognise the ID of a caller in an unobtrusive way e.g. a symbol set or other browser notification to indicate incoming calls or by alerting assistive technologies via relevant APIs e.g. A user may wish to route notifications to a separate Braille device while continuing the call on a regular Bluetooth headphone once they have accepted it.</p> 
+<ul>
+<li><strong>User Need 1:</strong> A screen&#45;reader user or user with a cognitive impairment needs to know a call is incoming and needs to recognise the ID of a caller. </li>
 
-<p><strong>NOTE:</strong> There is an open question around whether <abbr title="Web Real Time Communication">WebRTC</abbr> has an API for notifications. Or should they use standard (browser level) notifications? What is the role of <abbr title="Accessible Rich Internet Applications">ARIA</abbr> notifications? Can these outputs be routed to alternate devices via a user preference?</p>
-		</section>
+<li><strong>REQ 1a:</strong> Provide in an unobtrusive way e.g. a symbol set or other browser notification to indicate incoming calls.</li> 
+<li><strong>REQ 1b:</strong> Alert assistive technologies via relevant APIs.</li>
+
+</ul> 
+</section>
 
 <section>
 		<h3>Routing and Communication channel control</h3>
+<ul>
+<li><strong>User Need 2:</strong> A blind user of both screen reader and Braille output devices may need to manage audio and text output differently e.g. A user may wish to route notifications to a separate Braille device while continuing the call on a regular Bluetooth headphone once they have accepted it.</li>
+<li><strong>REQ 2a:</strong> Provide or support range of browser level audio output and routing options.</li> 
+<li><strong>REQ 2b:</strong> Allow direct system output, such as alerts or other output to a different device other than the screen reader, such as a Braille output device or other hardware.</li>
+</ul>
 
-<p><strong>Scenario: </strong> A screen&#45;reader user may have many audio output devices to manage. For example, there may be several displays or multiple sound cards to manage sound output (or input). Having a range of browser level outputs and routing options would remove the need for an analogue mixer or other sound cards and hardware. </p>
+<ul>
+<li><strong>User Need 3:</strong> A deaf user needs to move parts of a live teleconference session (as separate streams) to one or more devices for greater control.</li>
 
-<p>Similar to the new <a href="https://www.w3.org/WAI/WCAG21/Understanding/status&#45;messages.html"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.1 SC &#39;Status Messages&#39;</a> &#45; a blind user may choose to route updates, alerts and so on to a specific output device of their choosing without them getting explicit focus. The user may wish to have &#39;mixed&#39; type conversations. These <a href="https://tools.ietf.org/html/rfc5194#section&#45;5.1"> mixed use case requirements are also mentioned in RFC 5194</a>.</p>
+<li><strong>REQ 3a:</strong> Allow the seperate routing of video streams, such as a sign language interpreter to a seperate high resolution display.</li>
 
-<p><strong>Scenario: </strong> A blind screen reader user wishes to monitor a chat stream in a video conference and may wish to direct system output, such as alerts or other output to a different device other than the screen reader, such as a Braille output device or other hardware. This controls means they can track the Braille output separately from  screen reader output, while continuing to monitor, watch or listening to a third audio source. Being able to direct the stream to the user&#39;s device of choice would give them this ability. This may also be useful for any user who wishes more control over where and how their communication streams are rendered.</p>
-
-<p><strong>Scenario: </strong> A deaf user may wish to move parts of a live teleconference session (as separate streams) to one or more devices for greater control. They may do this to configure aspects of the user experience in a <abbr title="Web Real Time Communication">WebRTC</abbr> enabled application. For example, by sending the video stream of a sign language interpreter to a high resolution display and like being able to manage this video stream separately, as the user may not wish to have it as a part of the video they are watching. The user needs to be able to control how and where alternate content such as subtitles or captions are displayed.</p>
-
-<p><strong>Scenario: </strong> Users with some form of cognitive disability or blind users may have relative volume levels set as preferences which could be related to importance/urgency/meaning.  Positioning relative levels of audio can be used to arrange the &#39;importance&#39; of various audio output to any given task.  When a blind user is multitasking and getting status messages or monitoring different sound sources, the ability to be set panning would help the user have a broader sonic &#39;field&#39; within which to place elements. This is a common technique in sound engineering and would allow a broader, richer sonic landscape.</p>
-
-<p><strong>NOTE:</strong> This issue is also highlighted in the <abbr title="Accessible Platforms Architecure Working Group">APA</abbr> Working Group Note <a href="https://www.w3.org/TR/turingtest/#sound&#45;output"> Inaccessibility of <abbr title="Completely Automatic Public Turing Test to Tell Computers and Humans Apart">CAPTCHA</abbr> Alternatives to Visual Turing Tests on the Web</a> as a problem a la telephone verification when a blind user is searching for key input and listening for audio cues. Control of volume and panning  may be squarely in the Web Audio group.</p>
-
-<p><abbr title="Research Questions Task Force">RQTF</abbr> notes that this may be moved into user agent/browser or application level by XR requirements.</p>
+</ul>
 
 
-<p><strong>NOTE:</strong> Components needs to be individually controlled. Multichannel may be squarely in the Web Audio group. <a href="https://www.w3.org/TR/audio&#45;output/">Audio Output Devices API</a> may fulfil some of the capabilities aspect of the use case: However, another area that needs to be explored is <a href="https://github.com/w3c/mediacapture&#45;output/issues/2"> authorisation of access to these additional output devices</a>. Also the <a href="https://github.com/WebAudio/web&#45;audio&#45;cg/blob/master/audio&#45;device&#45;client/explainer.md">Audio Device Client Proposal</a> may help to provide this kind of bespoke audio routing directly in the browser. See <a href="https://vimeo.com/350904743">Audio Device Client Explainer video on Vimeo</a></p>
+<ul>
+<li><strong>User Need 4:</strong> Users with cognitive disabilities or blind users may have relative volume levels set as preferences which relate to importance, urgency or meaning.</li>
+
+<li><strong>REQ 4a:</strong> Allow the panning, or setting of relative levels of audio outputs. </li>
+<li><strong>REQ 4b:</strong> Support multichannel audio in the browser. </li>
+</ul>
+
 </section>
 
 		<section>
 <h3>Dynamic Audio description values in Live Conferencing</h3> 
 
-<p><strong>Scenario: </strong>  A user may struggle to hear audio description depending on its volume level in a live teleconferencing situation. AD recommended sound values should be dynamic.</p>
+<ul>
+<li><strong>User Need 5:</strong> A user may struggle to hear audio description in a live teleconferencing situation.</li>
+ <li><strong>REQ 5a:</strong> Ensure Audio Description (AD) recommended sound values are dynamic.</li>
+</ul>
 		</section>
 
 		<section>
 
 <h3>Quality Synchronisation and playback</h3>
 
-<p><strong>Scenario: </strong> Any user watching the captioning or audio description needs to be confident that they are synchronised and accurate, that any outages/loss will be repaired while preserving context and meaning. For people with disabilities this may need special repair of broken streams in alternate tracks.</p>
+<ul>
+<li><strong>User Need 6:</strong> Any deaf or hard of hearing user watching captioning or audio description needs to be confident they are synchronised and accurate. 
 
-<p><strong>NOTE:</strong> There is currently no dedicated mechanism to transmit captions or audio descriptions in sync with <abbr title="Web Real Time Communication">WebRTC</abbr> audio and video streams; There have been <a href="https://lists.w3.org/Archives/Public/public&#45;webrtc/2018Jun/0140.html ">discussions on enabling a firmer way for synchronization based on the <abbr title="Real Time Text">RTT</abbr> standard from <abbr title="Internet Engineering Task Force">IETF</abbr> (RFC 4103)</a> &#45; <abbr title="Accessible Platforms Architecure Working Group">APA</abbr> should look at if the current situation is good enough or if dedicated mechanism in <abbr title="Web Real Time Communication">WebRTC</abbr> for transmission of synced captions etc is needed.</p>
-
+<li><strong>REQ 6a:</strong> Ensure that any outages or loss to captions or audio description will be repaired while preserving context and meaning. </li>
+<li><strong>REQ 6b:</strong> Ensure that the integrity of related alternate supporting tracks or streams - such as transcription, are also in sync with any repairs.</li>
+</ul>
 		</section>
 
 		<section>
 <h3>Simultaneous Voice, Text &amp; Signing</h3>
-<strong>Scenario: </strong> A deaf user wishes to both talk on a call, send and receive instant messages via a text interface and watch and/or communicate via sign language using a video stream. This could be partially enabled via <abbr title="Real Time Text">RTT</abbr> in <abbr title="Web Real Time Communication">WebRTC</abbr>.
 
-		</section>
-
-		<section>
-
-<h3>Support for Real Time Text (<abbr title="Real Time Text">RTT</abbr>) </h3>
-<p><strong>Scenario: </strong> A deaf, speech impaired, hard of hearing or deaf blind user wishes to make an emergency call, send and receive instantly related text messages and or sign via a video stream in an emergency situation. This text aspect, and text relay services could be enabled via <abbr title="Real Time Text">RTT</abbr> in <abbr title="Web Real Time Communication">WebRTC</abbr>. More details can be found at <a href="https://www.fcc.gov/consumers/guides/real&#45;time&#45;text&#45;improving&#45;accessible&#45;telecommunications"> <abbr title="Real Time Text">RTT</abbr> Improving Accessible Telecommunications</a> as well as a <a href="http://realtimetext.org/rtt_in_detail/standards/ietf"> list of Related <abbr title="Real Time Text">RTT</abbr> documents from <abbr title="Internet Engineering Task Force">IETF</abbr> relating to Accessibility</a>.</p>
-
-<p>The <abbr title="Federal Communications Commission">FCC</abbr> is the U.S. federal agency responsible for implementing and enforcing America’s communications law and regulations. The Federal Communications Commission (<abbr title="Federal Communications Commission">FCC</abbr>) support the usage of <abbr title="Real Time Text">RTT</abbr> and in 2016, adopted rules to move from text telephony (TTY) to real&#45;time text (<abbr title="Real Time Text">RTT</abbr>) technology. The <a href="https://www.fcc.gov/real&#45;time&#45;text"><abbr title="Federal Communications Commission">FCC</abbr> state that <abbr title="Real Time Text">RTT</abbr> should be a pre&#45;installed feature of wireless devices</a> that is enabled by default.</p>
-
-<p><strong>NOTE:</strong>Many <a href="https://tools.ietf.org/html/rfc5194#section&#45;5.1"> <abbr title="Real Time Text">RTT</abbr> requirements for deaf and hard of hearing users are covered in <abbr title="Internet Engineering Task Force">IETF</abbr> RFC 5194</a> and the <a href="https://tools.ietf.org/id/draft&#45;holmberg&#45;mmusic&#45;t140&#45;usage&#45;data&#45;channel&#45;00.html "><abbr title="Internet Engineering Task Force">IETF</abbr> draft on real&#45;time text in <abbr title="Web Real Time Communication">WebRTC</abbr> &#39;T.140 Text Conversation over <abbr title="Web Real Time Communication">WebRTC</abbr> Data Channels&#39;</a>.</p>
-		</section>
-
-		<section>
-
-<h3> Support for Video Relay Services and (<abbr title="Video Relay Services">VRS</abbr>) and Remote Interpretation (<abbr title="Remote Interpretation">VRI</abbr>)</h3>
-
-<p><strong> Scenario: </strong> A deaf, speech impaired, hard of hearing wishes to communicate on a call using a remote video interpretation service to access sign language and interpreter services. The <abbr title="Remote Interpretation">VRI</abbr> has two parties, the deaf/hard of hearing person who is using the <abbr title="Remote Interpretation">VRI</abbr>, and the interpreter who is on the screen. The interpreter can be on a videophone, web camera, or computer screen. The interpreter will use the audio, while someone speaks and the person will interpret to the deaf person by sign language, and then if the deaf/hard of hearing wants to say something they will sign to the interpreter and the interpreter will use his/her voice to relay that message. More detail can be found on <a href="https://www.fcc.gov/consumers/guides/video&#45;relay&#45;services"><abbr title="Federal Communications Commission">FCC</abbr> Video Relay Services Overview</a>, <a href="https://en.wikipedia.org/wiki/Video_remote_interpreting">Video Remote Interpreting</a>, and <a href="https://en.wikipedia.org/wiki/Assistive_Technology_for_Deaf_and_Hard_of_Hearing#Video_Relay_Services"> Video Relaying Services</a>.</p>
-
-<p>The following is From <abbr title="Federal Communications Commission">FCC</abbr> overview of <abbr title="Video Relay Services">VRS</abbr>:</p>
 <ul>
+<li><strong>User Need 7:</strong> A deaf user needs to both talk on a call, send and receive instant messages via a text interface and watch sign language using a video stream.</li>
 
-<li><abbr title="Video Relay Services">VRS</abbr> allows those persons whose primary language is sign language and to communicate in sign language, instead of having to type what they want to say.</li>
-<li>Because consumers using <abbr title="Video Relay Services">VRS</abbr> communicate in sign language, they are able to more fully express themselves through facial expressions and body language, which cannot be expressed in text.</li>
-<li>A <abbr title="Video Relay Services">VRS</abbr> call flows back and forth just like a telephone conversation between two hearing persons. For example, the parties can interrupt each other, which they cannot do with a TRS call using a TTY (where the parties have to take turns communicating with the CA).</li>
-<li>Because the conversation flows more naturally back and forth between the parties, the conversation can take place much more quickly than with text based TRS. As a result, the same conversation is much shorter through <abbr title="Video Relay Services">VRS</abbr> than it would be through other forms of text based TRS.</li>
-<li><abbr title="Video Relay Services">VRS</abbr> calls may be made between ASL users and hearing persons speaking either English or divish.</li>
-<p><strong>NOTE:</strong>  May relate to interoperability with third&#45;party services;  <abbr title="Internet Engineering Task Force">IETF</abbr> has looked at <a href="https://tools.ietf.org/html/draft&#45;rosen&#45;rue&#45;00"> standardising a way to use SIP with VRS services</a>: There is a question about impact of these services on end&#45;to&#45;end security (since these services are <strong>by design</strong> equivalent to man&#45;in&#45;the&#45;middle attacks).</p>
+<li><strong>REQ 7a:</strong> Ensure support for multiple simultaneous streams. </li>
 
-		</section>
+</ul>
 
-		<section>
-
-<h3>Distinguishing Sent and Received Text</h3>
-<p><strong>Scenario: </strong> A deaf or deaf blind user needs to be to tell the difference between incoming text and outgoing text when used with <abbr title="Real Time Text">RTT</abbr> functionality, <abbr title="Web Real Time Communication">WebRTC</abbr> could handle the routing of this information to a format or output of choice.</p>
-
-<p><strong>NOTE:</strong> This is not <abbr title="Web Real Time Communication">WebRTC</abbr> specific and may be just an accessible UI issue.</p>
-
-		</section>
-
-		<section>
-<h3>Call status data </h3> 
-<p><strong>Scenario:</strong> In a teleconference with many participants a screen&#45;reader user will need  to know what participants are on the call, as well as their status. This status information is very important for people with disabilities as it helps to orientate them while communicating online. This critical information includes knowledge of  &#45; who is muted, or actively talking, who has their video or camera stream enabled and who doesn&#39;t. The user would benefit from being able to query who is active on a video call or muted.  Status polling is where the blind user is able to get a snapshot overview of all of this status information in a <abbr title="Web Real Time Communication">WebRTC</abbr> application.</p>
-
-<p><strong>NOTE:</strong> This is not <abbr title="Web Real Time Communication">WebRTC</abbr> specific and may be just an accessible UI issue.</p>
-		</section>
-
-		<section>
-
-<h3>Live Transcription and Captioning</h3>
-<p><strong>Scenario: </strong> A deaf user or user with some form of cognitive disability needs to access a channel containing live transcription or captioning during a conference call or broadcast and have this presented to them in accordance with their preferences whether it is signed or a related symbol set.</p>
-
-<p><strong>NOTE:</strong> Browser APIs needed to implement this are available; but needs better integration with third&#45;party services (e.g. for sign language translation).  Possibly covered by <a href="https://tools.ietf.org/html/rfc5194#section&#45;5."> general requirements for ToIP contained in RFC 5194</a>.</p>
-
-		</section>
-		<section>
-
-<h3>Assistance for Older Users or users with Cognitive disabilities</h3>
-<p><strong> Scenario:</strong> Users with some form of cognitive disabilities may require assistance when using audio or video communication. A <abbr title="Web Real Time Communication">WebRTC</abbr> video call could have a technical or user support channel, providing support that is customised to the needs of the user via a personalised UI, a remote health care system, or as part of a conferencing application.</p>
+<strong>NOTE:</strong> This could be partially enabled via <abbr title="Real Time Text">RTT</abbr> in <abbr title="Web Real Time Communication">WebRTC</abbr>.
 
 		</section>
 
 		<section>
 
-<h3>Personalised Symbol sets for users with Cognitive disabilities</h3>
+<h3>Emergency Calls: Support for Real Time Text (<abbr title="Real Time Text">RTT</abbr>) </h3>
 
-<p><strong>Scenario:</strong> Users with some form of cognitive disabilities may prefer to use symbol sets for identifying functions available in a <abbr title="Web Real Time Communication">WebRTC</abbr> enabled client whether for Voice, File or Data transfer.</p>
+<ul>
+<li><strong>User Need 8:</strong> A deaf, speech impaired, hard of hearing or deaf blind user needs to make an emergency call, send and receive instantly related text messages and or sign via a video stream in an emergency situation.</li>
 
-<p><strong>NOTE:</strong> <abbr title="Web Real Time Communication">WebRTC</abbr> does not standardise any of the UI, so this may be an accessible UI issue.</p>
+<li><strong>REQ 8a:</strong> Provide or ensure support for <abbr title="Real Time Text">RTT</abbr> in <abbr title="Web Real Time Communication">WebRTC</abbr>. 
+
+		</section>
+
+		<section>
+
+<h3>Video Relay Services and (<abbr title="Video Relay Services">VRS</abbr>) and Remote Interpretation (<abbr title="Remote Interpretation">VRI</abbr>)</h3>
+
+<ul>
+<li><strong>User Need 9:</strong> A deaf, speech impaired, or hard of hearing user needs to communicate on a call using a remote video interpretation service to access sign language and interpreter services.</li>
+
+<li><strong>REQ 9a:</strong> Provide or ensure support for <abbr title="Video Relay Services">VRS</abbr>) and Remote Interpretation (<abbr title="Remote Interpretation">VRI</abbr>. For example, this user need may relate to interoperability with third&#45;party services;  <abbr title="Internet Engineering Task Force">IETF</abbr> has looked at <a href="https://tools.ietf.org/html/draft&#45;rosen&#45;rue&#45;00"> standardising a way to use SIP with VRS services</a>. <abbr title="Video Relay Services">VRS</abbr> calls may be made between ASL users and hearing persons speaking either English or Spanish.</li>
+</ul>
+</section>
+
+		<section>
+
+<h3>Distinguishing Sent and Received Text with <abbr title="Real Time Text">RTT</abbr></h3>
+<ul>
+<li><strong>User Need 10:</strong> A deaf or deaf blind user needs to be to tell the difference between incoming text and outgoing text.
+<li><strong>REQ 10a:</strong> Ensure when used with <abbr title="Real Time Text">RTT</abbr> functionality, <abbr title="Web Real Time Communication">WebRTC</abbr> handles the routing of this information to a format or output of the users choosing.</p>
+		</section>
+	
+		<section>
+<h3>Call Participants and Status</h3> 
+<ul>
+<li><strong>User Need 11: </strong> In a teleconference a blind screen&#45;reader user needs to know what participants are on the call, as well as their status (Muted, Talking etc).</li>
+<li><strong>REQ 11a:</strong> Ensure participant details such as name and status - whether they are muted, talking, left the meeting etc is accessible to users of Assistive Technologies.</li>
+</ul>
+		</section>
+
+		<section>
+
+<h3>Live Transcription and Captioning Support</h3>
+<ul>
+<li><strong>User Need 12:</strong> A deaf user or user with a cognitive disability needs to access a channel containing live transcriptions or captioning during a conference call or broadcast.</li>
+ <li><strong>REQ 12a:</strong> Provide support for and honor user preferences of Live Transcription and Captioning such as signed or a related symbol set.</li>
+
+		</section>
+
+		<section>
+
+<h3>Assistance for users with Cognitive disabilities</h3>
+<ul>
+<li><strong>User Need 13: </strong> Users with cognitive disabilities may need assistance when using audio or video communication. </li>
+ <li><strong>REQ 13a:</strong> Ensure a <abbr title="Web Real Time Communication">WebRTC</abbr> video call could host a technical or user support channel.</li>
+  <li><strong>REQ 13b:</strong> Provide support that is customised to the needs of the user.</li>
+</ul>
+
+		</section>
+
+		<section>
+
+<h3>Personalized Symbol sets for users with Cognitive Disabilities</h3>
+
+<ul>
+<li><strong>User Need 14: </strong> Users with cognitive disabilities may need to use symbol sets for identifying functions available in a <abbr title="Web Real Time Communication">WebRTC</abbr> enabled client whether for Voice, File or Data transfer.</p>
+
+  <li><strong>REQ 14a:</strong> Providing personalization support ensuring that symbols sets are supported as replacements for existing user interface rendering of current functions or controls.</li>
+</ul>
+
+
+</section>
+
+<section>
+
+	<h3>Internet Relay Chat (<abbr title="Internet Relay Chat">IRC</abbr>) Style Interfaces required by Blind Users</h3>
+		
+
+<ul>
+<li><strong>User Need 15: </strong> A blind screen reader user depending on text to speech (<abbr title="Text to Speech">TTS</abbr>) to interact with their computers and smart devices, requires the traditional Internet Relay Chat (IRC) style interface for <abbr title="Text to Speech">TTS</abbr> to translate text interactions into comprehensible speech.</li>
+
+	  <li><strong>REQ 15a:</strong> Preserve <abbr title="Internet Relay Chat">IRC</abbr> as a configuration option in agents that implement <abbr title="Web Real Time Communication">WebRTC</abbr> as opposed to having only the Real Time Text (<abbr title="Real Time Text">RTT</abbr>) type interface favoured by users who are deaf or hearing impaired.  For screen reader users, <abbr title="Text to Speech">TTS</abbr> cannot reasonably translate text into comprehensible speech unless the characters to be pronounced are transmitted in close timing to one another. Typical gaps will result in stuttering and highly unintelligible utterances from the <abbr title="Text to Speech">TTS</abbr> engine.</p>
+
+
+
+<h4>Braille Users and <abbr title="Real Time Text">RTT</abbr></h4>
+
+<p>Some braille users will also prefer the <abbr title="Real Time Text">RTT</abbr> model. However, braille users desiring text displayed with standard contracted braille might better be served in the manner users relying on Text to Speech (<abbr title="Text to Speech">TTS</abbr>) engines are served, by buffering the data to be transmitted until an end of line character is reached.</p>
+
+		</section>
+
+		<section>
+<h3>Deaf users: Video resolution and Frame rates</h3>
+
+<ul>
+<li><strong>User Need 15: </strong> A deaf user watching a signed broadcast needs a high quality frame rate to maintain legibility and clarity in order to understand what is being signed.</strong>
+
+<p><strong>NOTE:</strong> EN 301 549 Section 6,  recommends  <abbr title="Web Real Time Communication">WebRTC</abbr> applications should support a frame rate of at least 20 frames per second (FPS). More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p>
 
 		</section>
 
 </section>
 
-<section>
-		
-<h3>Challenges with <abbr title="Text to Speech">TTS</abbr> timing and Screen readers</h3>
-<p>For screen reader users, <abbr title="Text to Speech">TTS</abbr> cannot reasonably translate text into comprehensible speech unless the characters to be pronounced are transmitted in close timing to one another. Typical gaps will result in stuttering and highly unintelligible utterances from the <abbr title="Text to Speech">TTS</abbr> engine.</p>
-
-<p><strong>NOTE:</strong> People familiar with Unix, and now Linux command line interfaces will understand the distinction described here as that between the two  applications "talk" and "write". The former functions like <abbr title="Real Time Text">RTT</abbr> specifies. The latter functions like a classic IRC session. Both need to be supported by <abbr title="Web Real Time Communication">WebRTC</abbr> user agents.</p>
-
-<p>Here are links that further describe the functionality of these two classic Unix utilities:</p>
-
-<p><a href="https://www.mankier.com/1p/talk">talk utility</a> is a two&#45;way, screen&#45;oriented communication program.</p>
-
-<p><a href="https://www.mankier.com/1p/write">write utility</a> will read lines from the standard input and write them to the terminal of the specified user.</p>
-
-
-		<section>		
-
-<h3>Internet Relay Chat (<abbr title="Internet Relay Chat">IRC</abbr>) Style Interfaces required by Blind Users</h3>
-
-<p>Blind users who depend on text to speech (<abbr title="Text to Speech">TTS</abbr>) to interact with their computers and smart devices require the traditional Internet Relay Chat (IRC) style interface. This must be preserved as a configuration option in agents that implement <abbr title="Web Real Time Communication">WebRTC</abbr> as opposed to having only the Real Time Text (<abbr title="Real Time Text">RTT</abbr>) type interface favoured by users who are deaf or hearing impaired. </p>
-
-<p>This is because <abbr title="Text to Speech">TTS</abbr> cannot reasonably translate text into comprehensible speech unless the characters to be pronounced are scheduled and transmitted in close timing to one another. </p>
-
-<p>This use case for <abbr title="Real Time Text">RTT</abbr> is very important and should certainly be supported by <abbr title="Web Real Time Communication">WebRTC</abbr>. It <strong>does not compete</strong> with the user need for deaf or hard of hearing users and <abbr title="Real Time Text">RTT</abbr>. Both should be supportable in the text stream provided by <abbr title="Web Real Time Communication">WebRTC</abbr> applications.</p> 
-
-<p> Users who can comprehend characters in real time should be supported in seeing those characters with very minimal latency, as they are typed by a remote correspondent in a telecommunications session. </p>
-
-		</section>
-
-
-		<section>
-
-<h3>Braille Users and <abbr title="Real Time Text">RTT</abbr></h3>
-
-<p>Arguably, some braille users will also prefer the <abbr title="Real Time Text">RTT</abbr> model. However, braille users desiring text displayed with standard contracted braille might better be served in the manner users relying on Text to Speech (<abbr title="Text to Speech">TTS</abbr>) engines are
-served, by buffering the data to be transmitted until an end of line character is reached.</p>
-
-		</section>
-
-</section>
-
 		
 <section>
 
-	<h2>Quality of service User Needs</h2>
+	<h2>Quality of Service Scenarios</h2>
 
 
 
@@ -234,14 +247,7 @@ served, by buffering the data to be transmitted until an end of line character i
 
 </section>
 
-<section>
-<h3>Video resolution and Frame rate</h3>
 
-<p><strong>Scenario:</strong> A deaf user is watching a signed broadcast and needs a high quality frame rate to maintain legibility and clarity in order to understand what is being signed. </p>
-
-<p><strong>NOTE:</strong> EN 301 549 Section 6,  recommends  <abbr title="Web Real Time Communication">WebRTC</abbr> applications should support a frame rate of at least 20 frames per second (FPS). More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p>
-
-		</section>
 
 </section>
 
@@ -249,7 +255,7 @@ served, by buffering the data to be transmitted until an end of line character i
 
 <h3>Data table mapping User Needs with related specifications</h3>
 
-<p>The following table maps these user needs with any related specifications such as requirements defined in RFC 5194 &#45; Framework for Real&#45;Time Text over IP Using SIP and <a href="http://mandate376.standards.eu/standard">EN 301 549 &#45; the EU Procurement Standard</a>.</p>
+<p>The following table maps the user needs and requirements presented in this document with other related specifications such as those defined in RFC 5194 &#45; Framework for Real&#45;Time Text over IP Using SIP and <a href="http://mandate376.standards.eu/standard">EN 301 549 &#45; the EU Procurement Standard</a>.</p>
 
 <table>
 <caption>Overview of what specifications may address some of the use cases outlined above</caption>
