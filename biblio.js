@@ -16,7 +16,7 @@ respecConfig.localBiblio = {
         "editors": [],
         "etAl": false,
         "publisher": "",
-        "href": "https://ablegamers.org/thoughts-on-accessibility-and-vr"
+        "href": "https://ablegamers.org/thoughts-on-accessibility-and-vr/"
     },
 
 	"antiphishing": {
