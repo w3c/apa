@@ -20,7 +20,7 @@ var respecConfig = {
 	
 	
 	// if you wish the publication date to be other than today, set this
-	//publishDate:  "2014-12-11",
+	publishDate:  "2020-02-13",
 	copyrightStart:  "2020",
 	license: "w3c-software-doc",
 	
