@@ -375,5 +375,35 @@ var biblio = {
     	"href": "https://www.wipo.int/treaties/en/ip/marrakesh",
     	"publisher": "World Intellectual Property Organization",
     	"title": "Marrakesh Treaty to Facilitate Access to Published Works for Persons Who Are Blind, Visually Impaired or Otherwise Print Disabled"
+    },
+    "ietf-rtc": {
+            "date": "March 2015",
+            "href": "https://tools.ietf.org/html/rfc7478",
+            "publisher": "IETF",
+            "title": "Web Real-Time Communication Use Cases and Requirements"
+    },
+    "webrtc-use-cases": {
+        "date": "11 December 2018",
+        "href": "https://www.w3.org/TR/webrtc-nv-use-cases/",
+        "publisher": "W3C",
+        "title": "WebRTC Next Version Use Cases"
+    },
+    "rtt-sip": {
+        "date": "June 2008",
+        "href": "https://tools.ietf.org/html/rfc5194",
+        "publisher": "IETF, Network Working Group",
+        "title": "Framework for Real-Time Text over IP Using the Session Initiation Protocol (SIP)"
+    },
+    "EN501-549": {
+        "date": "August 2018",
+        "href": "http://mandate376.standards.eu/standard",
+        "publisher": "CEN/CENELEC/ETSI",
+        "title": "Accessibility requirements suitable for public procurement of ICT products and services in Europe"
+    },
+    "webrtc-priority": {
+        "date": "12 February 2020",
+        "href": "https://w3c.github.io/webrtc-priority/",
+        "publisher": "W3C",
+        "title": "WebRTC DSCP Control API"
     }
 }
