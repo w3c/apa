@@ -1,4 +1,4 @@
-var biblio = {
+respecConfig.localBiblio = {
 	"aicaptcha": {
 		"title": "aiCaptcha: Using AI to beat CAPTCHA and post comment spam",
 		"date": "",
@@ -8,6 +8,17 @@ var biblio = {
 		"publisher": "",
 		"href": "http://www.brains-n-brawn.com/default.aspx?vDir=aicaptcha"
 	},
+
+    "able-gamers": {
+        "title": "Thought On Accessibility and VR",
+        "date": "March, 2017",
+        "authors": ["AJ Ryan"],
+        "editors": [],
+        "etAl": false,
+        "publisher": "",
+        "href": "https://ablegamers.org/thoughts-on-accessibility-and-vr/"
+    },
+
 	"antiphishing": {
 		"title": "Phishing Activity Trends Report",
 		"date": "July, 2005",
@@ -375,6 +386,56 @@ var biblio = {
     	"href": "https://www.wipo.int/treaties/en/ip/marrakesh",
     	"publisher": "World Intellectual Property Organization",
     	"title": "Marrakesh Treaty to Facilitate Access to Published Works for Persons Who Are Blind, Visually Impaired or Otherwise Print Disabled"
+    },
+
+    "web-adapt": {
+        "authors": [
+            "Matthew Tylee Atkinson",
+            "Ian Hamilton",
+            "Joe Humbert",
+            "Kit Wessendorf"
+        ],
+        "date": "Dec 2018",
+        "title": "W3C Workshop on Web Games Position Paper: Adaptive Accessibility",
+        "href": "https://www.w3.org/2018/12/games-workshop/papers/web-games-adaptive-accessibility.html",
+        "publisher": "W3C"
+    },
+     "inclusive-seattle": {
+        "authors": [
+            "W3C",
+            "Pluto VR"
+        ],
+        "date": "Nov 2019",
+        "title": "W3C Workshop on Inclusive XR Seattle",
+        "href": "https://www.w3.org/2019/08/inclusive-xr-workshop/",
+        "publisher": "W3C"
+    },
+        "game-a11y": {
+        "authors": [
+            "Barrie Ellis",
+            "Ian Hamilton",
+            "Gareth Ford-Williams",
+            "Lynsey Graham",
+            "Dimitris Grammenos",
+            "Ed Lee",
+            "Jake Manion",
+            "Thomas Westin"
+        ],
+        "date": "2019",
+        "title": "Game Accessibility Guidelines",
+        "href": "http://gameaccessibilityguidelines.com"
+        
+    },
+
+     "maidenbaum-amendi": {
+        "authors": [
+            "Maidenbaum, S.",
+            "Amedi, A"
+        ],
+        "date": "2015",
+        "title": "Non-visual virtual interaction: Can Sensory Substitution generically increase the accessibility of Graphical virtual reality to the blind?",
+        "publisher": "In Virtual and Augmented Assistive Technology (VAAT), 2015 3rd IEEE VR International Workshop on (pp. 15-17). IEEE"
+        
     },
     "ietf-rtc": {
             "date": "March 2015",
