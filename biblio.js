@@ -418,11 +418,7 @@ respecConfig.localBiblio = {
         "title": "WebRTC DSCP Control API"
     },
 
-     "ietf-relay": {
-        "date": "August 5, 2019",
-        "href": "https://tools.ietf.org/html/draft-rosen-rue-00/",
-        "publisher": "IETF",
-        "title": "Interoperability Profile for Relay User EquipmentPI"
+
     }
                           
 }
