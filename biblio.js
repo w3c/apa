@@ -416,8 +416,6 @@ respecConfig.localBiblio = {
         "href": "https://w3c.github.io/webrtc-priority/",
         "publisher": "W3C",
         "title": "WebRTC DSCP Control API"
-    },
-
 
     }
                           
