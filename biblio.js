@@ -393,6 +393,13 @@ respecConfig.localBiblio = {
             "publisher": "IETF",
             "title": "Web Real-Time Communication Use Cases and Requirements"
     },
+
+      "ietf-relay": {
+            "date": "August 2020",
+            "href": "https://tools.ietf.org/html/draft-ietf-rum-rue-02.html",
+            "publisher": "IETF",
+            "title": "Interoperability Profile for Relay User Equipment"
+    },
     "webrtc-use-cases": {
         "date": "11 December 2018",
         "href": "https://www.w3.org/TR/webrtc-nv-use-cases/",
