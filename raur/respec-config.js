@@ -10,7 +10,7 @@ var respecConfig = {
 	tocIntroductory: true,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
 	// subtitle: "Alternatives to Visual Turing Tests on the Web",
-	specStatus:           "ED",
+	specStatus:           "FPWD",
 	//crEnd:                "",
 	//perEnd:               "",
 	diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
@@ -20,7 +20,7 @@ var respecConfig = {
 	
 	
 	// if you wish the publication date to be other than today, set this
-	//publishDate:  "2014-12-11",
+	publishDate:  "2020-03-19",
 	copyrightStart:  "2020",
 	license: "w3c-software-doc",
 	
