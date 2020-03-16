@@ -387,54 +387,43 @@ respecConfig.localBiblio = {
     	"publisher": "World Intellectual Property Organization",
     	"title": "Marrakesh Treaty to Facilitate Access to Published Works for Persons Who Are Blind, Visually Impaired or Otherwise Print Disabled"
     },
-
-    "web-adapt": {
-        "authors": [
-            "Matthew Tylee Atkinson",
-            "Ian Hamilton",
-            "Joe Humbert",
-            "Kit Wessendorf"
-        ],
-        "date": "Dec 2018",
-        "title": "W3C Workshop on Web Games Position Paper: Adaptive Accessibility",
-        "href": "https://www.w3.org/2018/12/games-workshop/papers/web-games-adaptive-accessibility.html",
-        "publisher": "W3C",
-    },
-     "inclusive-seattle": {
-        "authors": [
-            "W3C",
-            "Pluto VR"
-        ],
-        "date": "Nov 2019",
-        "title": "W3C Workshop on Inclusive XR Seattle",
-        "href": "https://www.w3.org/2019/08/inclusive-xr-workshop/",
-        "publisher": "W3C",
-    },
-        "game-a11y": {
-        "authors": [
-            "Barrie Ellis",
-            "Ian Hamilton",
-            "Gareth Ford-Williams",
-            "Lynsey Graham",
-            "Dimitris Grammenos",
-            "Ed Lee",
-            "Jake Manion",
-            "Thomas Westin"
-        ],
-        "date": "2019",
-        "title": "Game Accessibility Guidelines",
-        "href": "http://gameaccessibilityguidelines.com",
-        
+    "ietf-rtc": {
+            "date": "March 2015",
+            "href": "https://tools.ietf.org/html/rfc7478",
+            "publisher": "IETF",
+            "title": "Web Real-Time Communication Use Cases and Requirements"
     },
 
-     "maidenbaum-amendi": {
-        "authors": [
-            "Maidenbaum, S.",
-            "Amedi, A",
-        ],
-        "date": "2015",
-        "title": "Non-visual virtual interaction: Can Sensory Substitution generically increase the accessibility of Graphical virtual reality to the blind?",
-        "publisher": "In Virtual and Augmented Assistive Technology (VAAT), 2015 3rd IEEE VR International Workshop on (pp. 15-17). IEEE",
-        
+      "ietf-relay": {
+            "date": "August 2020",
+            "href": "https://tools.ietf.org/html/draft-ietf-rum-rue-02.html",
+            "publisher": "IETF",
+            "title": "Interoperability Profile for Relay User Equipment"
+    },
+    "webrtc-use-cases": {
+        "date": "11 December 2018",
+        "href": "https://www.w3.org/TR/webrtc-nv-use-cases/",
+        "publisher": "W3C",
+        "title": "WebRTC Next Version Use Cases"
+    },
+    "rtt-sip": {
+        "date": "June 2008",
+        "href": "https://tools.ietf.org/html/rfc5194",
+        "publisher": "IETF, Network Working Group",
+        "title": "Framework for Real-Time Text over IP Using the Session Initiation Protocol (SIP)"
+    },
+    "EN301-549": {
+        "date": "August 2018",
+        "href": "http://mandate376.standards.eu/standard",
+        "publisher": "CEN/CENELEC/ETSI",
+        "title": "Accessibility requirements suitable for public procurement of ICT products and services in Europe"
+    },
+    "webrtc-priority": {
+        "date": "12 February 2020",
+        "href": "https://w3c.github.io/webrtc-priority/",
+        "publisher": "W3C",
+        "title": "WebRTC DSCP Control API"
+
     }
+                          
 }
