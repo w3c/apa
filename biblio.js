@@ -10,7 +10,7 @@ respecConfig.localBiblio = {
 	},
 
     "able-gamers": {
-        "title": "Thought On Accessibility and VR",
+        "title": "Thoughts On Accessibility and VR",
         "date": "March, 2017",
         "authors": ["AJ Ryan"],
         "editors": [],
