@@ -436,5 +436,14 @@ respecConfig.localBiblio = {
         "title": "Non-visual virtual interaction: Can Sensory Substitution generically increase the accessibility of Graphical virtual reality to the blind?",
         "publisher": "In Virtual and Augmented Assistive Technology (VAAT), 2015 3rd IEEE VR International Workshop on (pp. 15-17). IEEE",
         
+    },
+         "mono-ios": {
+        "authors": [
+            "Apple"
+        ],
+        "date": "2020",
+        "title": "iPhone User Guide",
+        "href": "https://support.apple.com/en-gb/guide/iphone/iph3e2e2cdc/ios",
+        
     }
 }
