@@ -445,5 +445,41 @@ respecConfig.localBiblio = {
         "title": "iPhone User Guide",
         "href": "https://support.apple.com/en-gb/guide/iphone/iph3e2e2cdc/ios",
         
+    },
+      "personalization-semantics":{
+        "authors": [
+            "Lisa Seeman",
+        "Charles LaPierre",
+        "Michael Cooper",
+        "Roy Ran,"
+        "Richard Schwerdtfeger"],
+        "date": "2020",
+        "title": "Personalization Semantics Explainer 1.0",
+        "href": "https://www.w3.org/TR/personalization-semantics-1.0/",
+        "publisher": "W3C"
+    },
+       "personalization-content":{
+        "authors": [
+            "Lisa Seeman",
+        "Charles LaPierre",
+        "Michael Cooper",
+        "Roy Ran,"
+        "Richard Schwerdtfeger"],
+        "date": "2020",
+        "title": "Personalization Semantics Content Module 1.0",
+        "href": "Personalization Semantics Content Module 1.0",
+        "publisher": "W3C"
+    },
+       "personalization-requirements":{
+        "authors": [
+            "Lisa Seeman",
+        "Charles LaPierre",
+        "Michael Cooper",
+        "Roy Ran,"],
+        "date": "2020",
+        "title": "Requirements for Personalization Semantics",
+        "href": "https://www.w3.org/TR/personalization-semantics-requirements-1.0/",
+        "publisher": "W3C"
     }
+
 }
