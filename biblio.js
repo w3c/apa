@@ -398,7 +398,7 @@ respecConfig.localBiblio = {
         "date": "Dec 2018",
         "title": "W3C Workshop on Web Games Position Paper: Adaptive Accessibility",
         "href": "https://www.w3.org/2018/12/games-workshop/papers/web-games-adaptive-accessibility.html",
-        "publisher": "W3C",
+        "publisher": "W3C"
     },
      "inclusive-seattle": {
         "authors": [
@@ -408,7 +408,7 @@ respecConfig.localBiblio = {
         "date": "Nov 2019",
         "title": "W3C Workshop on Inclusive XR Seattle",
         "href": "https://www.w3.org/2019/08/inclusive-xr-workshop/",
-        "publisher": "W3C",
+        "publisher": "W3C"
     },
         "game-a11y": {
         "authors": [
@@ -423,7 +423,7 @@ respecConfig.localBiblio = {
         ],
         "date": "2019",
         "title": "Game Accessibility Guidelines",
-        "href": "http://gameaccessibilityguidelines.com",
+        "href": "http://gameaccessibilityguidelines.com"
         
     },
 
@@ -434,48 +434,54 @@ respecConfig.localBiblio = {
         ],
         "date": "2015",
         "title": "Non-visual virtual interaction: Can Sensory Substitution generically increase the accessibility of Graphical virtual reality to the blind?",
-        "publisher": "In Virtual and Augmented Assistive Technology (VAAT), 2015 3rd IEEE VR International Workshop on (pp. 15-17). IEEE",
+        "publisher": "In Virtual and Augmented Assistive Technology (VAAT), 2015 3rd IEEE VR International Workshop on (pp. 15-17). IEEE"
         
     },
+
          "mono-ios": {
         "authors": [
             "Apple"
         ],
         "date": "2020",
         "title": "iPhone User Guide",
-        "href": "https://support.apple.com/en-gb/guide/iphone/iph3e2e2cdc/ios",
+        "href": "https://support.apple.com/en-gb/guide/iphone/iph3e2e2cdc/ios"
         
     },
-      "personalization-semantics":{
+
+      "personalization-semantics": {
         "authors": [
             "Lisa Seeman",
         "Charles LaPierre",
         "Michael Cooper",
-        "Roy Ran,"
-        "Richard Schwerdtfeger"],
+        "Roy Ran",
+        "Richard Schwerdtfeger"
+         ],
         "date": "2020",
         "title": "Personalization Semantics Explainer 1.0",
         "href": "https://www.w3.org/TR/personalization-semantics-1.0/",
         "publisher": "W3C"
     },
-       "personalization-content":{
+
+       "personalization-content": {
         "authors": [
             "Lisa Seeman",
         "Charles LaPierre",
         "Michael Cooper",
-        "Roy Ran,"
+        "Roy Ran",
         "Richard Schwerdtfeger"],
         "date": "2020",
         "title": "Personalization Semantics Content Module 1.0",
         "href": "Personalization Semantics Content Module 1.0",
         "publisher": "W3C"
     },
-       "personalization-requirements":{
+
+       "personalization-requirements": {
         "authors": [
             "Lisa Seeman",
         "Charles LaPierre",
         "Michael Cooper",
-        "Roy Ran,"],
+        "Roy Ran",
+        ],
         "date": "2020",
         "title": "Requirements for Personalization Semantics",
         "href": "https://www.w3.org/TR/personalization-semantics-requirements-1.0/",
