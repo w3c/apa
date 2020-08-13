@@ -480,7 +480,7 @@ respecConfig.localBiblio = {
             "Lisa Seeman",
         "Charles LaPierre",
         "Michael Cooper",
-        "Roy Ran",
+        "Roy Ran"
         ],
         "date": "2020",
         "title": "Requirements for Personalization Semantics",
@@ -490,7 +490,7 @@ respecConfig.localBiblio = {
 
        "supple-project": {
         "authors": [
-            "Krzysztof Gajos et al",
+            "Krzysztof Gajos et al"
         ],
         "date": "2010",
         "title": "SUPPLE: Automatically Generating Personalized User Interfaces",
@@ -502,7 +502,7 @@ respecConfig.localBiblio = {
         "authors": [
             "Blum J.R.", 
             "Bouchard M.", 
-            "Cooperstock J.R. ",
+            "Cooperstock J.R. "
         ],
         "date": "2012",
         "title": "What’s around Me? Spatialized Audio Augmented Reality for Blind Users with a Smartphone",
