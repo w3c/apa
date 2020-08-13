@@ -74,8 +74,9 @@
 <p>Some of the issues in XR, for example in gaming, for people with disabilities including:</p>
 
 <ul>
-<li><strong>Over emphasis on motion controls</strong>. There are many motion controllers that emphasise using your body to control the experience. Some games with XR components may lock out traditional control methods when a VR headset is being used, and the user should always be able to use a range of input mechanisms.</li>
-<li><strong>VR Headsets need the user to be a physical position to play</strong>. The user should not have to be in a particular physical position to play a game or perform some action. Or there should be ability to remap these 'physical positions' to other controls (such as using <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a>).</li>
+<li><strong>Over emphasis on motion controls</strong>. There are many motion controllers that emphasise using your body to control the experience. Some games with XR components may lock out traditional control methods when a VR headset is being used, and the user should always be able to use a range of input mechanisms. <strong>NOTE:</strong> <acronym title="Three Degrees of Freedom">3DOF</acronym> and <acronym title="Six Degrees of Freedom">6DOF</acronym> may have their own specific mobility issues.
+</li>
+<li><strong>VR Headsets need the user to be a physical position to play</strong>. The user should not have to be in a particular physical position such as standing or sitting to play a game or perform some action. Or there should be ability to remap these 'physical positions' to other controls (such as using <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a>).</li>
 <li><strong>Games and hardware being locked to certain manufacturers</strong> Consoles should allow full button remapping on standard game controllers - to different types of assistive technologies such as switches. These remapping preference should be mobile, and transportable across a range of hardware devices and software.</li>
 <li><strong>Gamification of VR forces game dynamics on the user</strong>. Some users may wish to just explore an immersive environment without the 'game', or any particular challenge.</li>
 <li><strong>Audio design lacks spatial accuracy</strong> sound design needs particular attention and can be critical for a good user experience for people with disabilities. In deed the auditory experience of a game or other immersive environment may 'be' the experience [[able-gamers]].</li>
@@ -165,7 +166,7 @@
 <p>As mentioned there are a range of input devices that may be used. Supporting these controllers requires an understanding of what they are and how they work.
 There are a variety of alternative gaming controls that may be very useful in XR environments and applications. For example the <a href="https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller ">Xbox Adaptive Controller</a>.</p>
 
-<p>While XR is the experience, the controller is king, and plays a critical part in overcoming some complexity as well as mediating issues that may relate to other challenges around usability and helping the user understand sensory substitution devices. </p>
+<p>While XR is the experience, the controller plays a critical part in overcoming some complexity as well as mediating issues that may relate to other challenges around usability and helping the user understand sensory substitution devices. </p>
 
 <p>Controllers such as the Xbox Adaptive Controller and other switch type inputs allow the issuer to remapping keyboard inputs to control virtual environments. The powerful customizations may allow the user to "do that thing that is difficult" for them with ease.  In conjunction with this controller, for example, users with limited mobility they can also simulate actions in the XR environment that they would not be able to physically perform.  <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a> is a good example of this where motion range, position and orientation can be set to the user&#39;s ability.</p>
 
@@ -201,6 +202,7 @@ There are a variety of alternative gaming controls that may be very useful in XR
 <li>How can a user understand the affordance models used in XR interactions? Or can this be mediated by their own interaction preferences and controllers?</li>
 <li>What interactions are allowed or not allowed? </li>
 <li>How can an accessibility abstracted XR experience focussed on supporting a different modality, successfully interact with another?</li>
+<li>How can we ensure what happens in one modality, is update in another so various abstractions are not out of sync? e.g. synchronization of captions between real time text transcriptions and other alternatives such as symbols or AAC?</li>
 </ul>
 	</section>
 </section>
@@ -208,14 +210,12 @@ There are a variety of alternative gaming controls that may be very useful in XR
 <section>
 <h2>XR User Needs and Requirements</h2>
 
-<section>
-<h3>User needs definition</h3>
 <p>This document outlines various accessibility related user needs for XR. These user needs should drive accessibility requirements for XR and its related architecture. These come from people with disabilities who use assistive technologies and wish to see the features described available within XR enabled applications.</p>
 
 <p>User needs and requirements are often dependent on context of use. The following outline some accessibility user needs and requirements that may be applicable in immersive environments, augmented reality and 360&#176; applications.</p>
 
 <p>These following are neither exhaustive, nor definitive but are presented in order to help orientate the reader towards understanding some broad user needs and how to meet them. </p>
-</section>
+
 
 	<section>
 
@@ -232,6 +232,7 @@ There are a variety of alternative gaming controls that may be very useful in XR
 <li><strong>REQ 1d:</strong> Allow filtering  and the ability to query items and their content for more details.</li>
 
 
+<p><strong>NOTE:</strong> In an spatialized augmented reality environment a blind user may find a combination of text to speech and sonic symbols helpful.  By using a combination of text to speech and sonic symbolism a blind user can do a self-guided tour of a given area using their smartphone. [[spatialized-navigation]]</p>
 
 </ul>
 
@@ -263,7 +264,7 @@ There are a variety of alternative gaming controls that may be very useful in XR
 <li><strong>REQ 3a:</strong> Support Symbol sets so they can be used to communicate and layered over objects and items to convey affordances or other needed information in way that can be understood according to user preference.</li>
 
 
-<li><strong>REQ 3b:</strong>  Allow the user to turn off of 'mute' non-critical environmental content such as animations, visual or audio content, or non-critical messaging.</li>
+<li><strong>REQ 3b:</strong> Allow the user to turn off of 'mute' non-critical environmental content such as animations, visual or audio content, or non-critical messaging.</li>
 
 </ul>
 
@@ -330,9 +331,12 @@ There are a variety of alternative gaming controls that may be very useful in XR
 <h4>Magnification context and resetting</h4>
 
 <ul>
-<li><strong>User Need 7:</strong> Screen magnification users may need to be able to check the context of their view in immersive environment.</li>
+<li><strong>User Need 7:</strong> Screen magnification users may need to be able to check the context of their view in immersive environments.</li>
 
 <li><strong>REQ 7a:</strong> Allow the screen magnification user to check the context of their view and track/reset focus as needed.</li>
+<li><strong>REQ 7b:</strong> Where it makes sense (such as in menus) interface elements can be enlarged and the menu reflowed to enhance the usability of the interface up to a certain magnification requirement.</li>
+
+<p><strong>NOTE:</strong> There are customisation approaches such as the automatic generation of user interfaces as demonstrated in the SUPPLE project, which adapt to the different challenges the user may face, such as vision, motor control and other user preferences and abilities. A generated UI can make multiple adaptations for different user needs at the same time. This is achieved by generating a UI, or several - after testing a persons ability using an algorithm to learn their preferences. [[supple-project]]</p>
 
 </ul>
 
@@ -357,9 +361,14 @@ There are a variety of alternative gaming controls that may be very useful in XR
 <h4>Gestural interfaces and interactions</h4>
 
 <ul>
-<li><strong>User Need 9:</strong> A blind user may wish to interact with a gestural interface, such as a virtual menu system, using gloves and a head set.</li>
+<li><strong>User Need 9:</strong> A blind user may wish to interact with a gestural interface, such as a virtual menu system.</li>
 
-<li><strong>REQ 9a:</strong> Using a virtual menu system -  enable a self&#45;voicing option and have each category, or item description spoken to them as they receive focus via a gesture or other input. As the blind user gestures to trigger both movement and interaction. The user may get more detail about items that are closer to them, if navigating a virtual store the user must be allowed to query and interrogate items and make selections.</li>
+<li><strong>REQ 9a:</strong> Support touch screen accessibility gestures (e.g. swipes, flicks and single, double or triple taps with 1, 2 or 3 fingers) on a second screen device to navigate menus and interact.</li>
+
+<li><strong>REQ 9b:</strong> Using a virtual menu system -  enable a self&#45;voicing option and have each category, or item description, spoken as they receive focus via a gesture or other input. As the blind user gestures to trigger both movement and interaction they may get more detail about items that are closer to them. The user must be allowed to query and interrogate these items and make selections.</li>
+
+<li><strong>REQ 9c:</strong> Allow for the re-mapping of gestures to associate different actions with different input types or gestures. This may be a virtual switch that can map to new macros on the fly. This will allow the user to change defaults and employ gestures to carry out new actions offered by the immersive environment as required.</li>
+
 
 </ul>
 
@@ -430,7 +439,7 @@ There are a variety of alternative gaming controls that may be very useful in XR
 
 <li><strong>User Need 14:</strong> A deaf-blind user communicating via a RTC application in XR may have sophisticated 'routing' requirements for various inputs and outputs. </li>
 
-<li><strong>REQ 14a</strong>: Allow the user to route text output, alerts, environment sounds and audio to a braille or other devices.</li>
+<li><strong>REQ 14a</strong>: Allow the user to route text output, alerts, environment sounds and audio to a braille or other second screen devices.</li>
 
 </ul>
 
@@ -460,7 +469,7 @@ There are a variety of alternative gaming controls that may be very useful in XR
 <h4>Avoiding sickness triggers</h4>
 
 <ul>
-<li><strong>User Need 16:</strong> Users with vestibular disorders, Epilepsy, and photo sensitivity may find some interactions trigger motion sickness and other affects.</li>
+<li><strong>User Need 16:</strong> Users with vestibular disorders, Epilepsy, and photo sensitivity may find some interactions trigger motion sickness and other affects. This may be triggered when doing teleportation or other movements in XR.</li>
 
 <li><strong>REQ 16a:</strong> Avoid interactions that trigger epilepsy or motion sickness and provide alternatives.</li>
 <li><strong>REQ 16b:</strong> Ensure flickering images are at a minimum, will not trigger seizures (more than 3 times a second), or can be turned off or reduced.</li>
@@ -471,12 +480,12 @@ There are a variety of alternative gaming controls that may be very useful in XR
 
 <section>
 
-<h4>Binaural audio track alternatives</h4>
+<h4>Spatial audio tracks and alternatives</h4>
 
 <ul>
-<li><strong>User Need 17:</strong> Deaf and hard of hearing users may need binaural recordings of audio content in order to perceive it.</li>
+<li><strong>User Need 17:</strong> Deaf and hard of hearing users may need spatialized audio content with audio description in order to perceive it.</li>
 
-<li><strong>REQ 17a:</strong> Provide alternative binaural audio recording tracks to emulate 3 dimensional sound forms in immersive environments.</li>
+<li><strong>REQ 17a:</strong> Provide spatialized audio content and audio descriptions to emulate three dimensional sound forms in immersive environments.</li>
 
 </ul>
 

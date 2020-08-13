@@ -486,6 +486,28 @@ respecConfig.localBiblio = {
         "title": "Requirements for Personalization Semantics",
         "href": "https://www.w3.org/TR/personalization-semantics-requirements-1.0/",
         "publisher": "W3C"
+    },
+
+       "supple-project": {
+        "authors": [
+            "Krzysztof Gajos et al",
+        ],
+        "date": "2010",
+        "title": "SUPPLE: Automatically Generating Personalized User Interfaces",
+        "href": "http://www.eecs.harvard.edu/~kgajos/research/supple/",
+        "publisher": "Harvard"
+    },
+
+      "spatialized-navigation": {
+        "authors": [
+            "Blum J.R.", 
+            "Bouchard M.", 
+            "Cooperstock J.R. ",
+        ],
+        "date": "2012",
+        "title": "What’s around Me? Spatialized Audio Augmented Reality for Blind Users with a Smartphone",
+        "href": "https://link.springer.com/chapter/10.1007/978-3-642-30973-1_5",
+        "publisher": "Springer"
     }
 
 }
