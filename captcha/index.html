@@ -1,408 +1,11 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* dfn popup panel that list all local references to a dfn */
-dfn {
-  cursor: pointer;
-}
-
-.dfn-panel {
-  position: absolute;
-  left: var(--left); /* set via JS */
-  top: var(--top); /* set via JS */
-  z-index: 35;
-  height: auto;
-  width: max-content;
-  max-width: 300px;
-  max-height: 500px;
-  overflow: auto;
-  padding: 0.5em 0.75em;
-  font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
-  background: #dddddd;
-  color: black;
-  border: outset 0.2em;
-}
-
-.dfn-panel * {
-  margin: 0;
-}
-
-.dfn-panel > b {
-  display: block;
-}
-
-.dfn-panel ul a[href] {
-  color: black;
-}
-
-.dfn-panel a:not(:hover) {
-  text-decoration: none !important;
-  border-bottom: none !important;
-}
-
-.dfn-panel a[href]:hover {
-  border-bottom-width: 1px;
-}
-
-.dfn-panel > b + b {
-  margin-top: 0.25em;
-}
-
-.dfn-panel ul {
-  padding: 0;
-}
-
-.dfn-panel li {
-  list-style: inside;
-}
-
-.dfn-panel.docked {
-  display: inline-block;
-  position: fixed;
-  left: 0.5em;
-  top: unset;
-  bottom: 2em;
-  margin: 0 auto;
-  /* 0.75em from padding (x2), 0.5em from left position, 0.2em border (x2) */
-  max-width: calc(100vw - 0.75em * 2 - 0.5em - 0.2em * 2);
-  max-height: 30vh;
-}
-</style>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<title>Inaccessibility of CAPTCHA</title>
-		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec specific CSS
- *****************************************************************/
-@keyframes pop {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1.25, 1.25);
-    opacity: 0.75;
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-/* Override code highlighter background */
-.hljs {
-  background: transparent !important;
-}
-
-/* --- INLINES --- */
-h1 abbr,
-h2 abbr,
-h3 abbr,
-h4 abbr,
-h5 abbr,
-h6 abbr,
-a abbr {
-  border: none;
-}
-
-dfn {
-  font-weight: bold;
-}
-
-a.internalDFN {
-  color: inherit;
-  border-bottom: 1px solid #99c;
-  text-decoration: none;
-}
-
-a.externalDFN {
-  color: inherit;
-  border-bottom: 1px dotted #ccc;
-  text-decoration: none;
-}
-
-a.bibref {
-  text-decoration: none;
-}
-
-.respec-offending-element:target {
-  animation: pop 0.25s ease-in-out 0s 1;
-}
-
-.respec-offending-element,
-a[href].respec-offending-element {
-  text-decoration: red wavy underline;
-}
-@supports not (text-decoration: red wavy underline) {
-  .respec-offending-element:not(pre) {
-    display: inline-block;
-  }
-  .respec-offending-element {
-    /* Red squiggly line */
-    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-      bottom repeat-x;
-  }
-}
-
-#references :target {
-  background: #eaf3ff;
-  animation: pop 0.4s ease-in-out 0s 1;
-}
-
-cite .bibref {
-  font-style: normal;
-}
-
-code {
-  color: #c83500;
-}
-
-th code {
-  color: inherit;
-}
-
-a[href].orcid {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-a[href].orcid > svg {
-    margin-bottom: -2px;
-}
-
-/* --- TOC --- */
-
-.toc a,
-.tof a {
-  text-decoration: none;
-}
-
-a .secno,
-a .figno {
-  color: #000;
-}
-
-ul.tof,
-ol.tof {
-  list-style: none outside none;
-}
-
-.caption {
-  margin-top: 0.5em;
-  font-style: italic;
-}
-
-/* --- TABLE --- */
-
-table.simple {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-bottom: 3px solid #005a9c;
-}
-
-.simple th {
-  background: #005a9c;
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th a {
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th[scope="row"] {
-  background: inherit;
-  color: inherit;
-  border-top: 1px solid #ddd;
-}
-
-.simple td {
-  padding: 3px 10px;
-  border-top: 1px solid #ddd;
-}
-
-.simple tr:nth-child(even) {
-  background: #f0f6ff;
-}
-
-/* --- DL --- */
-
-.section dd > p:first-child {
-  margin-top: 0;
-}
-
-.section dd > p:last-child {
-  margin-bottom: 0;
-}
-
-.section dd {
-  margin-bottom: 1em;
-}
-
-.section dl.attrs dd,
-.section dl.eldef dd {
-  margin-bottom: 0;
-}
-
-#issue-summary > ul,
-.respec-dfn-list {
-  column-count: 2;
-}
-
-#issue-summary li,
-.respec-dfn-list li {
-  list-style: none;
-}
-
-details.respec-tests-details {
-  margin-left: 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-details.respec-tests-details > * {
-  padding-right: 2em;
-}
-
-details.respec-tests-details[open] {
-  z-index: 999999;
-  position: absolute;
-  border: thin solid #cad3e2;
-  border-radius: 0.3em;
-  background-color: white;
-  padding-bottom: 0.5em;
-}
-
-details.respec-tests-details[open] > summary {
-  border-bottom: thin solid #cad3e2;
-  padding-left: 1em;
-  margin-bottom: 1em;
-  line-height: 2em;
-}
-
-details.respec-tests-details > ul {
-  width: 100%;
-  margin-top: -0.3em;
-}
-
-details.respec-tests-details > li {
-  padding-left: 1em;
-}
-
-a[href].self-link:hover {
-  opacity: 1;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  position: relative;
-}
-
-aside.example .marker > a.self-link {
-  color: inherit;
-}
-
-h2 > a.self-link,
-h3 > a.self-link,
-h4 > a.self-link,
-h5 > a.self-link,
-h6 > a.self-link {
-  border: none;
-  color: inherit;
-  font-size: 83%;
-  height: 2em;
-  left: -1.6em;
-  opacity: 0.5;
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  transition: opacity 0.2s;
-  width: 2em;
-}
-
-h2 > a.self-link::before,
-h3 > a.self-link::before,
-h4 > a.self-link::before,
-h5 > a.self-link::before,
-h6 > a.self-link::before {
-  content: "§";
-  display: block;
-}
-
-@media (max-width: 767px) {
-  dd {
-    margin-left: 0;
-  }
-
-  /* Don't position self-link in headings off-screen */
-  h2 > a.self-link,
-  h3 > a.self-link,
-  h4 > a.self-link,
-  h5 > a.self-link,
-  h6 > a.self-link {
-    left: auto;
-    top: auto;
-  }
-}
-
-@media print {
-  .removeOnSave {
-    display: none;
-  }
-}
-</style>
+		<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style>
 		
 		
 	<meta name="description" content="Various approaches have been employed over many years to distinguish human users of web sites from robots. The traditional CAPTCHA approach asking users to identify obscured text in an image remains common, but other approaches have emerged. All interactive approaches require users to perform a task believed to be relatively easy for humans but difficult for robots. Unfortunately the very nature of the interactive task inherently excludes many people with disabilities, resulting in a denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, further complicating the challenge of providing services secured from robotic intrusion yet accessible to people with disabilities. This document examines a number of approaches that allow systems to test for human users and the extent to which these approaches adequately accommodate people with disabilities, including recent
-				non-interactive and tokenized approaches. We have grouped these approaches by two category classifications: Stand-Alone Approaches that can be deployed on a web host without engaging the services of unrelated third parties and Multi-Party Approaches that engage the services of an unrelated third party."><link rel="canonical" href="https://www.w3.org/TR/turingtest/"><style>var {
-  position: relative;
-  cursor: pointer;
-}
-
-var[data-type]::before,
-var[data-type]::after {
-  position: absolute;
-  left: 50%;
-  top: -6px;
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-
-/* the triangle or arrow or caret or whatever */
-var[data-type]::before {
-  content: "";
-  transform: translateX(-50%);
-  border-width: 4px 6px 0 6px;
-  border-style: solid;
-  border-color: transparent;
-  border-top-color: #000;
-}
-
-/* actual text */
-var[data-type]::after {
-  content: attr(data-type);
-  transform: translateX(-50%) translateY(-100%);
-  background: #000;
-  text-align: center;
-  /* additional styling */
-  font-family: "Dank Mono", "Fira Code", monospace;
-  font-style: normal;
-  padding: 6px;
-  border-radius: 3px;
-  color: #daca88;
-  text-indent: 0;
-  font-weight: normal;
-}
-
-var[data-type]:hover::after,
-var[data-type]:hover::before {
-  opacity: 1;
-}
-</style><script id="initialUserConfig" type="application/json">{
+				non-interactive and tokenized approaches. We have grouped these approaches by two category classifications: Stand-Alone Approaches that can be deployed on a web host without engaging the services of unrelated third parties and Multi-Party Approaches that engage the services of an unrelated third party."><link rel="canonical" href="https://www.w3.org/TR/turingtest/"><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "trace": true,
   "useExperimentalStyles": true,
   "doRDFa": "1.1",
@@ -901,148 +504,141 @@ var[data-type]:hover::before {
       "title": "Marrakesh Treaty to Facilitate Access to Published Works for Persons Who Are Blind, Visually Impaired or Otherwise Print Disabled",
       "id": "marrakesh"
     },
-    "web-adapt": {
-      "authors": [
-        "Matthew Tylee Atkinson",
-        "Ian Hamilton",
-        "Joe Humbert",
-        "Kit Wessendorf"
-      ],
-      "date": "Dec 2018",
-      "title": "W3C Workshop on Web Games Position Paper: Adaptive Accessibility",
-      "href": "https://www.w3.org/2018/12/games-workshop/papers/web-games-adaptive-accessibility.html",
-      "publisher": "W3C"
+    "ietf-rtc": {
+      "date": "March 2015",
+      "href": "https://tools.ietf.org/html/rfc7478",
+      "publisher": "IETF",
+      "title": "Web Real-Time Communication Use Cases and Requirements"
     },
-    "inclusive-seattle": {
-      "authors": [
-        "W3C",
-        "Pluto VR"
-      ],
-      "date": "Nov 2019",
-      "title": "W3C Workshop on Inclusive XR Seattle",
-      "href": "https://www.w3.org/2019/08/inclusive-xr-workshop/",
-      "publisher": "W3C"
+    "ietf-relay": {
+      "date": "August 2020",
+      "href": "https://tools.ietf.org/html/draft-ietf-rum-rue-02.html",
+      "publisher": "IETF",
+      "title": "Interoperability Profile for Relay User Equipment"
     },
-    "game-a11y": {
-      "authors": [
-        "Barrie Ellis",
-        "Ian Hamilton",
-        "Gareth Ford-Williams",
-        "Lynsey Graham",
-        "Dimitris Grammenos",
-        "Ed Lee",
-        "Jake Manion",
-        "Thomas Westin"
-      ],
-      "date": "2019",
-      "title": "Game Accessibility Guidelines",
-      "href": "http://gameaccessibilityguidelines.com"
+    "webrtc-use-cases": {
+      "date": "11 December 2018",
+      "href": "https://www.w3.org/TR/webrtc-nv-use-cases/",
+      "publisher": "W3C",
+      "title": "WebRTC Next Version Use Cases"
     },
-    "maidenbaum-amendi": {
-      "authors": [
-        "Maidenbaum, S.",
-        "Amedi, A"
-      ],
-      "date": "2015",
-      "title": "Non-visual virtual interaction: Can Sensory Substitution generically increase the accessibility of Graphical virtual reality to the blind?",
-      "publisher": "In Virtual and Augmented Assistive Technology (VAAT), 2015 3rd IEEE VR International Workshop on (pp. 15-17). IEEE"
+    "rtt-sip": {
+      "date": "June 2008",
+      "href": "https://tools.ietf.org/html/rfc5194",
+      "publisher": "IETF, Network Working Group",
+      "title": "Framework for Real-Time Text over IP Using the Session Initiation Protocol (SIP)"
+    },
+    "EN301-549": {
+      "date": "August 2018",
+      "href": "http://mandate376.standards.eu/standard",
+      "publisher": "CEN/CENELEC/ETSI",
+      "title": "Accessibility requirements suitable for public procurement of ICT products and services in Europe"
+    },
+    "webrtc-priority": {
+      "date": "12 February 2020",
+      "href": "https://w3c.github.io/webrtc-priority/",
+      "publisher": "W3C",
+      "title": "WebRTC DSCP Control API"
     }
   },
-  "publishDate": "2020-02-17",
-  "publishISODate": "2020-02-17T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 17 February 2020"
+  "publishDate": "2020-09-01",
+  "publishISODate": "2020-09-01T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 01 September 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
-      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Inaccessibility of CAPTCHA</h1>
-      <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
-      <h2>
-        W3C Editor's Draft
-        <time class="dt-published" datetime="2020-02-17">17 February 2020</time>
-      </h2>
-      <dl>
-        <dt>This version:</dt><dd>
-                <a class="u-url" href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a>
-              </dd><dt>Latest published version:</dt><dd>
-                <a href="https://www.w3.org/TR/turingtest/">https://www.w3.org/TR/turingtest/</a>
-              </dd>
-        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd>
-        
-        
-        
-        
-        
-        <dt>Editors:</dt>
-        <dd class="p-author h-card vcard" data-editor-id="43274"><a class="ed_mailto u-email email p-name" href="mailto:scott@hollier.info">Scott Hollier</a></dd><dd class="p-author h-card vcard" data-editor-id="33688"><a class="ed_mailto u-email email p-name" href="mailto:janina@rednote.net">Janina Sajka</a></dd><dd class="p-author h-card vcard" data-editor-id="74028"><a class="ed_mailto u-email email p-name" href="mailto:jjwhite@ets.org">Jason White</a></dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a>
-            (W3C)
-          </dd>
-        <dt>
-                Former editor:
-              </dt><dd class="p-author h-card vcard" data-editor-id="33323"><span class="p-name fn">Matt May</span>
-            (W3C)
-          </dd>
-        
-        
-      </dl>
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Inaccessibility of CAPTCHA</h1>
+    <h2 id="subtitle" class="subtitle">Alternatives to Visual Turing Tests on the Web</h2>
+    <h2>
+      W3C Editor's Draft
+      <time class="dt-published" datetime="2020-09-01">01 September 2020</time>
+    </h2>
+    <dl>
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/turingtest/">https://www.w3.org/TR/turingtest/</a>
+            </dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/captcha/">https://w3c.github.io/apa/captcha/</a></dd>
       
       
       
-      <p class="copyright">
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-      ©
-      2018-2020
       
-      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-      <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-      W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
-      apply.
-    </p>
-      <hr title="Separator for header">
-    </div>
+      
+      <dt>Editors:</dt>
+      <dd class="p-author h-card vcard" data-editor-id="43274"><a class="ed_mailto u-email email p-name" href="mailto:scott@hollier.info">Scott Hollier</a></dd><dd class="p-author h-card vcard" data-editor-id="33688"><a class="ed_mailto u-email email p-name" href="mailto:janina@rednote.net">Janina Sajka</a></dd><dd class="p-author h-card vcard" data-editor-id="74028"><a class="ed_mailto u-email email p-name" href="mailto:jjwhite@ets.org">Jason White</a></dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (W3C) </dd>
+      <dt>
+              Former editor:
+            </dt><dd class="p-author h-card vcard" data-editor-id="33323"><span class="p-name fn">Matt May</span> (W3C) </dd>
+      
+      
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2018-2020
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
 		<section id="abstract" class="introductory">
 			<h2>Abstract</h2>
 			<p>Various approaches have been employed over many years to distinguish human users of web sites from <a href="#dfn-robot" class="internalDFN" data-link-type="dfn">robots</a>. The traditional <a href="#dfn-captcha" class="internalDFN" data-link-type="dfn">CAPTCHA</a> approach asking users to identify obscured text in an image remains common, but other approaches have emerged. All interactive approaches require users to perform a task believed to be relatively easy for humans but difficult for robots. Unfortunately the very nature of the interactive task inherently excludes many people with disabilities, resulting in a denial of service to these users. Research findings also indicate that many popular CAPTCHA techniques are no longer particularly effective or secure, further complicating the challenge of providing services secured from robotic intrusion yet accessible to people with disabilities. This document examines a number of approaches that allow systems to test for human users and the extent to which these approaches adequately accommodate people with disabilities, including recent
 				non-interactive and tokenized approaches. We have grouped these approaches by two category classifications: <a href="#stand-alone-approaches">Stand-Alone Approaches</a> that can be deployed on a web host without engaging the services of unrelated third parties and <a href="#multi-party-approaches">Multi-Party Approaches</a> that engage the services of an unrelated third party.</p>
 		</section>
-		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p> <p>
-      This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
-      Editor's Draft.
-      
-    </p><p>
-      
-      Comments regarding this document are welcome.
-            Please send them to
-            <a href="mailto:public-apa@w3.org">public-apa@w3.org</a>
-            (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>).
-          
-    </p><p>
-      Publication as an Editor's Draft does not imply endorsement by the
-      <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or
-      obsoleted by other documents at any time. It is inappropriate to cite this
-      document as other than work in progress.
-    </p><p>
-      
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p> <p>
+    This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
+    Editor's Draft.
+    
+  </p><p>
+    
+    Comments regarding this document are welcome.
+          Please send them to
+          <a href="mailto:public-apa@w3.org">public-apa@w3.org</a>
+          (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>).
+        
+  </p><p>
+    Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
+    Membership. This is a draft document and may be updated, replaced or
+    obsoleted by other documents at any time. It is inappropriate to cite this
+    document as other than work in progress.
+  </p><p>
+    
         This document was produced by a group
         operating under the
         <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
        The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
-      
-                  <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-                  <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures</a>
-            made in connection with the deliverables of
-            the group; that page also includes
-            instructions for disclosing a patent. An individual who has actual
-            knowledge of a patent which the individual believes contains
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-            must disclose the information in accordance with
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-          
-      
-    </p><p>
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#the-captcha-context"><bdi class="secno">1.1 </bdi>The CAPTCHA Context</a></li><li class="tocline"><a class="tocxref" href="#the-accessibility-challenge"><bdi class="secno">1.2 </bdi>The Accessibility Challenge</a></li><li class="tocline"><a class="tocxref" href="#captcha-effectiveness"><bdi class="secno">1.3 </bdi>CAPTCHA Effectiveness</a></li></ol></li><li class="tocline"><a class="tocxref" href="#stand-alone-approaches"><bdi class="secno">2. </bdi>Stand-Alone Approaches</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#interact"><bdi class="secno">2.1 </bdi>Interactive Stand-Alone Approaches</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#traditional-character-based-captcha"><bdi class="secno">2.1.1 </bdi>Traditional Character-Based CAPTCHA</a></li><li class="tocline"><a class="tocxref" href="#sound-output"><bdi class="secno">2.1.2 </bdi>Sound Output</a></li><li class="tocline"><a class="tocxref" href="#logic-puzzles"><bdi class="secno">2.1.3 </bdi>Logic Puzzles</a></li><li class="tocline"><a class="tocxref" href="#image-and-video"><bdi class="secno">2.1.4 </bdi>Image and Video</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visual-comparison-captchas"><bdi class="secno">2.1.4.1 </bdi>Visual Comparison CAPTCHAs</a></li><li class="tocline"><a class="tocxref" href="#x3d-captcha"><bdi class="secno">2.1.4.2 </bdi>3D CAPTCHA</a></li><li class="tocline"><a class="tocxref" href="#movement-based-and-video-game-captcha"><bdi class="secno">2.1.4.3 </bdi>Movement-Based and Video Game CAPTCHA</a></li></ol></li><li class="tocline"><a class="tocxref" href="#biometrics"><bdi class="secno">2.1.5 </bdi>Biometrics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#noninteract"><bdi class="secno">2.2 </bdi>Non-Interactive Stand-Alone Approaches</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#spam-filtering"><bdi class="secno">2.2.1 </bdi>Spam Filtering</a></li><li class="tocline"><a class="tocxref" href="#proof-of-work"><bdi class="secno">2.2.2 </bdi>Proof-Of-Work</a></li><li class="tocline"><a class="tocxref" href="#heuristics"><bdi class="secno">2.2.3 </bdi>Heuristics</a></li><li class="tocline"><a class="tocxref" href="#honeypots"><bdi class="secno">2.2.4 </bdi>Honeypots</a></li><li class="tocline"><a class="tocxref" href="#uselimited"><bdi class="secno">2.2.5 </bdi>Limited-Use Accounts</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#multi-party-approaches"><bdi class="secno">3. </bdi>Multi-Party Approaches</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#public-key-infrastructure-pki"><bdi class="secno">3.1 </bdi>Public-Key Infrastructure (PKI)</a></li><li class="tocline"><a class="tocxref" href="#the-google-recaptcha"><bdi class="secno">3.2 </bdi>The Google reCAPTCHA</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#version-2-are-you-a-robot"><bdi class="secno">3.2.1 </bdi>Version 2: Are you a robot?</a></li><li class="tocline"><a class="tocxref" href="#recap3"><bdi class="secno">3.2.2 </bdi>The Non-interactive Version 3</a></li></ol></li><li class="tocline"><a class="tocxref" href="#leveraging-the-multi-device-environment"><bdi class="secno">3.3 </bdi>Leveraging the Multi-Device Environment</a></li><li class="tocline"><a class="tocxref" href="#privpass"><bdi class="secno">3.4 </bdi>Turing Tokens from the Cloud?</a></li><li class="tocline"><a class="tocxref" href="#fedtoken"><bdi class="secno">3.5 </bdi>Why not Federated Turing Tokens?</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conclusion"><bdi class="secno">4. </bdi>Conclusion</a></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">A. </bdi>Terms</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#contributors-to-this-version"><bdi class="secno">B.1 </bdi>Contributors to This Version:</a></li><li class="tocline"><a class="tocxref" href="#contributors-to-the-previous-version"><bdi class="secno">B.2 </bdi>Contributors to the Previous Version:</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">B.3 </bdi>Enabling Funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#the-captcha-context"><bdi class="secno">1.1 </bdi>The CAPTCHA Context</a></li><li class="tocline"><a class="tocxref" href="#the-accessibility-challenge"><bdi class="secno">1.2 </bdi>The Accessibility Challenge</a></li><li class="tocline"><a class="tocxref" href="#captcha-effectiveness"><bdi class="secno">1.3 </bdi>CAPTCHA Effectiveness</a></li></ol></li><li class="tocline"><a class="tocxref" href="#stand-alone-approaches"><bdi class="secno">2. </bdi>Stand-Alone Approaches</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#interact"><bdi class="secno">2.1 </bdi>Interactive Stand-Alone Approaches</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#traditional-character-based-captcha"><bdi class="secno">2.1.1 </bdi>Traditional Character-Based CAPTCHA</a></li><li class="tocline"><a class="tocxref" href="#sound-output"><bdi class="secno">2.1.2 </bdi>Sound Output</a></li><li class="tocline"><a class="tocxref" href="#logic-puzzles"><bdi class="secno">2.1.3 </bdi>Logic Puzzles</a></li><li class="tocline"><a class="tocxref" href="#image-and-video"><bdi class="secno">2.1.4 </bdi>Image and Video</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#visual-comparison-captchas"><bdi class="secno">2.1.4.1 </bdi>Visual Comparison CAPTCHAs</a></li><li class="tocline"><a class="tocxref" href="#x3d-captcha"><bdi class="secno">2.1.4.2 </bdi>3D CAPTCHA</a></li><li class="tocline"><a class="tocxref" href="#movement-based-and-video-game-captcha"><bdi class="secno">2.1.4.3 </bdi>Movement-Based and Video Game CAPTCHA</a></li></ol></li><li class="tocline"><a class="tocxref" href="#biometrics"><bdi class="secno">2.1.5 </bdi>Biometrics</a></li></ol></li><li class="tocline"><a class="tocxref" href="#noninteract"><bdi class="secno">2.2 </bdi>Non-Interactive Stand-Alone Approaches</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#spam-filtering"><bdi class="secno">2.2.1 </bdi>Spam Filtering</a></li><li class="tocline"><a class="tocxref" href="#proof-of-work"><bdi class="secno">2.2.2 </bdi>Proof-Of-Work</a></li><li class="tocline"><a class="tocxref" href="#heuristics"><bdi class="secno">2.2.3 </bdi>Heuristics</a></li><li class="tocline"><a class="tocxref" href="#honeypots"><bdi class="secno">2.2.4 </bdi>Honeypots</a></li><li class="tocline"><a class="tocxref" href="#uselimited"><bdi class="secno">2.2.5 </bdi>Limited-Use Accounts</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#multi-party-approaches"><bdi class="secno">3. </bdi>Multi-Party Approaches</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#public-key-infrastructure-pki"><bdi class="secno">3.1 </bdi>Public-Key Infrastructure (PKI)</a></li><li class="tocline"><a class="tocxref" href="#the-google-recaptcha"><bdi class="secno">3.2 </bdi>The Google reCAPTCHA</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#version-2-are-you-a-robot"><bdi class="secno">3.2.1 </bdi>Version 2: Are you a robot?</a></li><li class="tocline"><a class="tocxref" href="#recap3"><bdi class="secno">3.2.2 </bdi>The Non-interactive Version 3</a></li></ol></li><li class="tocline"><a class="tocxref" href="#leveraging-the-multi-device-environment"><bdi class="secno">3.3 </bdi>Leveraging the Multi-Device Environment</a></li><li class="tocline"><a class="tocxref" href="#privpass"><bdi class="secno">3.4 </bdi>Turing Tokens from the Cloud?</a></li><li class="tocline"><a class="tocxref" href="#fedtoken"><bdi class="secno">3.5 </bdi>Why not Federated Turing Tokens?</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conclusion"><bdi class="secno">4. </bdi>Conclusion</a></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">A. </bdi>Terms</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#contributors-to-this-version"><bdi class="secno">B.1 </bdi>Contributors to This Version:</a></li><li class="tocline"><a class="tocxref" href="#contributors-to-the-previous-version"><bdi class="secno">B.2 </bdi>Contributors to the Previous Version:</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">B.3 </bdi>Enabling Funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.1 </bdi>
+        Informative references
+      </a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
 
@@ -1521,7 +1117,11 @@ identify themselves as human.</p>
 	
 
 <section id="references" class="appendix"><h2 id="c-references"><bdi class="secno">C. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
-        <h3 id="c-1-informative-references"><bdi class="secno">C.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-      <dl class="bibliography">
-        <dt id="bib-36-cfr-1194">[36-cfr-1194]</dt><dd><a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194"><cite>36 CFR Appendix C to Part 1194, Functional Performance Criteria and Technical Requirements</cite></a>.  Legal Information Institute. URL: <a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194</a></dd><dt id="bib-3d-captcha-security">[3d-captcha-security]</dt><dd><cite>On the security of text-based 3D CAPTCHAs</cite>. Nguyen, V. D.; Chow, Y.-W.; Susilo, W..  Computers &amp; Security, 45. 2014. </dd><dt id="bib-auth-mult">[auth-mult]</dt><dd><cite>Design, Testing and Implementation of a New Authentication Method Using Multiple Devices</cite>. Cetin, C..  J. Ligatti, D. Goldgof, &amp; Y. Liu (Eds.): ProQuest Dissertations Publishing. 2015. </dd><dt id="bib-captcha-ld">[captcha-ld]</dt><dd><cite>The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities</cite>. Gafni, R.; Nagar, I.. </dd><dt id="bib-captcha-ocr">[captcha-ocr]</dt><dd><a href="https://computerresearch.org/index.php/computer/article/download/368/368"><cite>CAPTCHA: Attacks and Weaknesses against OCR technology</cite></a>. Silky Azad; Kiran Jain.  Journal of Computer science and Technology. 2013. URL: <a href="https://computerresearch.org/index.php/computer/article/download/368/368">https://computerresearch.org/index.php/computer/article/download/368/368</a></dd><dt id="bib-captcha-robustness">[captcha-robustness]</dt><dd><cite>Effects of Text Rotation, String Length, and Letter Format on Text-based CAPTCHA Robustness</cite>. Tangmanee, C..  Journal of Applied Security Research, 11(3). 2016. </dd><dt id="bib-captcha-security">[captcha-security]</dt><dd><cite>CAPTCHA Security: A Case Study</cite>. Yan, J.; El Ahmad, A. S..  Security &amp; Privacy, IEEE, 7(4). 2009. </dd><dt id="bib-captchastar">[captchastar]</dt><dd><cite>CAPTCHaStar! A novel CAPTCHA based on interactive shape discovery</cite>. Conti, M.; Guarisco, C.; Spolaor, R.. 2015. </dd><dt id="bib-defeat-line-noise">[defeat-line-noise]</dt><dd><cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite>. Nakaguro, Y.; Dailey, M. N.; Marukatat, S.; Makhanov, S. S..  Computers &amp; Security, 37. 2013. </dd><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="http://mandate376.standards.eu/standard"><cite>EN 301 549: Accessibility requirements suitable for public procurement of ICT products and services in Europe</cite></a>.  CEN/CENELEC/ETSI. URL: <a href="http://mandate376.standards.eu/standard">http://mandate376.standards.eu/standard</a></dd><dt id="bib-eval-audio">[eval-audio]</dt><dd><cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite>. Bigham, J. P.; Cavender, A. C..  In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. April 2009. </dd><dt id="bib-facecaptcha">[facecaptcha]</dt><dd><cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite>. Kim, J.; Kim, S.; Yang, J.; Ryu, J.-h.; Wohn, K..  An International Journal, 72(2). 2014. </dd><dt id="bib-game-captcha">[game-captcha]</dt><dd><cite>Game-based image semantic CAPTCHA on handset devices</cite>. Yang, T.-I.; Koong, C.-S.; Tseng, C.-C..  An International Journal, 74(14). 2015. </dd><dt id="bib-information-security">[information-security]</dt><dd><cite>Handbook of Information and Communication Security</cite>. Peter Stavroulakis; Mark Stamp.  Springer Science &amp; Business Media. 2010. </dd><dt id="bib-kapow-plugins">[kaPoW-plugins]</dt><dd><cite>kaPoW plugins: protecting web applications using reputation-based proof-of-work</cite>. Tien Le; Akshay Dua; Wu-chang Feng.  Proceedings of the 2nd Joint WICOW/AIRWeb Workshop on Web Quality. 2012. </dd><dt id="bib-killbots">[killbots]</dt><dd><a href="https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/"><cite>Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a>. Srikanth Kandula; Dina Katabi; Matthias Jacob; Arthur Burger. URL: <a href="https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/">https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/</a></dd><dt id="bib-marrakesh">[marrakesh]</dt><dd><a href="https://www.wipo.int/treaties/en/ip/marrakesh"><cite>Marrakesh Treaty to Facilitate Access to Published Works for Persons Who Are Blind, Visually Impaired or Otherwise Print Disabled</cite></a>.  World Intellectual Property Organization. 27 June 2013. URL: <a href="https://www.wipo.int/treaties/en/ip/marrakesh">https://www.wipo.int/treaties/en/ip/marrakesh</a></dd><dt id="bib-newscom">[newscom]</dt><dd><a href="https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a>. Paul Festa.  News.com. 2 July 2003. URL: <a href="https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html">https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html</a></dd><dt id="bib-privacy-pass">[privacy-pass]</dt><dd><a href="https://www.petsymposium.org/2018/files/papers/issue3/popets-2018-0026.pdf"><cite>Privacy Pass: Bypassing Internet Challenges Anonymously</cite></a>. Alex Davidson; Ian Goldberg; Nick Sullivan; George Tankersley; Filippo Valsorda.  Proceedings on Privacy Enhancing technologies; 2018 (3):164-180. 2018. URL: <a href="https://www.petsymposium.org/2018/files/papers/issue3/popets-2018-0026.pdf">https://www.petsymposium.org/2018/files/papers/issue3/popets-2018-0026.pdf</a></dd><dt id="bib-recaptcha-attacks">[recaptcha-attacks]</dt><dd><cite>HMM-based Attacks on Google's ReCAPTCHA with Continuous Visual and Audio Symbols</cite>. Sano, S.; Otsuka, T.; Itoyama, K.; Okuno, H. G..  Journal of Information Processing, 23(6). 2015. </dd><dt id="bib-social-classification">[social-classification]</dt><dd><cite>Social and egocentric image classification for scientific and privacy applications</cite>. Korayem, M..  D. Crandall, J. Bollen, A. Kapadia, &amp; P. Radivojac (Eds.): ProQuest Dissertations Publishing. 2015. </dd><dt id="bib-solving-captchas">[solving-captchas]</dt><dd><cite>How good are humans at solving CAPTCHAs? A large scale evaluation</cite>. Elie Bursztein et al.  2010 IEEE symposium on security and privacy. 2010. </dd><dt id="bib-task-completion">[task-completion]</dt><dd><cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite>. Sauer, G.; Lazar, J.; Hochheiser, H.; Feng, J..  ACM Transactions on Accessible Computing (TACCESS), 2(4). 2010. </dd><dt id="bib-tls-tracking">[tls-tracking]</dt><dd><a href="https://www.petsymposium.org/2018/files/papers/issue4/popets-2018-0031.pdf"><cite>Exploiting TLS Client Authentication for Widespread User Tracking</cite></a>. Lucas Foppe; Jeremy Martin; Travis Mayberry; Eric C. Rye; Lamont Brown.  Proceedings on Privacy Enhancing Technologies. 2018. URL: <a href="https://www.petsymposium.org/2018/files/papers/issue4/popets-2018-0031.pdf">https://www.petsymposium.org/2018/files/papers/issue4/popets-2018-0031.pdf</a></dd>
-      </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+      <h3 id="c-1-informative-references"><bdi class="secno">C.1 </bdi>
+        Informative references
+      <a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+    <dl class="bibliography">
+      <dt id="bib-36-cfr-1194">[36-cfr-1194]</dt><dd><a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194"><cite>36 CFR Appendix C to Part 1194, Functional Performance Criteria and Technical Requirements</cite></a>.  Legal Information Institute. URL: <a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194</a></dd><dt id="bib-3d-captcha-security">[3d-captcha-security]</dt><dd><cite>On the security of text-based 3D CAPTCHAs</cite>. Nguyen, V. D.; Chow, Y.-W.; Susilo, W..  Computers &amp; Security, 45. 2014. </dd><dt id="bib-auth-mult">[auth-mult]</dt><dd><cite>Design, Testing and Implementation of a New Authentication Method Using Multiple Devices</cite>. Cetin, C..  J. Ligatti, D. Goldgof, &amp; Y. Liu (Eds.): ProQuest Dissertations Publishing. 2015. </dd><dt id="bib-captcha-ld">[captcha-ld]</dt><dd><cite>The Effect of CAPTCHA on User Experience among Users with and without Learning Disabilities</cite>. Gafni, R.; Nagar, I.. </dd><dt id="bib-captcha-ocr">[captcha-ocr]</dt><dd><a href="https://computerresearch.org/index.php/computer/article/download/368/368"><cite>CAPTCHA: Attacks and Weaknesses against OCR technology</cite></a>. Silky Azad; Kiran Jain.  Journal of Computer science and Technology. 2013. URL: <a href="https://computerresearch.org/index.php/computer/article/download/368/368">https://computerresearch.org/index.php/computer/article/download/368/368</a></dd><dt id="bib-captcha-robustness">[captcha-robustness]</dt><dd><cite>Effects of Text Rotation, String Length, and Letter Format on Text-based CAPTCHA Robustness</cite>. Tangmanee, C..  Journal of Applied Security Research, 11(3). 2016. </dd><dt id="bib-captcha-security">[captcha-security]</dt><dd><cite>CAPTCHA Security: A Case Study</cite>. Yan, J.; El Ahmad, A. S..  Security &amp; Privacy, IEEE, 7(4). 2009. </dd><dt id="bib-captchastar">[captchastar]</dt><dd><cite>CAPTCHaStar! A novel CAPTCHA based on interactive shape discovery</cite>. Conti, M.; Guarisco, C.; Spolaor, R.. 2015. </dd><dt id="bib-defeat-line-noise">[defeat-line-noise]</dt><dd><cite>Defeating line-noise CAPTCHAs with multiple quadratic snakes</cite>. Nakaguro, Y.; Dailey, M. N.; Marukatat, S.; Makhanov, S. S..  Computers &amp; Security, 37. 2013. </dd><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="http://mandate376.standards.eu/standard"><cite>EN 301 549: Accessibility requirements suitable for public procurement of ICT products and services in Europe</cite></a>.  CEN/CENELEC/ETSI. URL: <a href="http://mandate376.standards.eu/standard">http://mandate376.standards.eu/standard</a></dd><dt id="bib-eval-audio">[eval-audio]</dt><dd><cite>Evaluating existing audio CAPTCHAs and an interface optimized for non-visual use</cite>. Bigham, J. P.; Cavender, A. C..  In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems. April 2009. </dd><dt id="bib-facecaptcha">[facecaptcha]</dt><dd><cite>FaceCAPTCHA: a CAPTCHA that identifies the gender of face images unrecognized by existing gender classifiers</cite>. Kim, J.; Kim, S.; Yang, J.; Ryu, J.-h.; Wohn, K..  An International Journal, 72(2). 2014. </dd><dt id="bib-game-captcha">[game-captcha]</dt><dd><cite>Game-based image semantic CAPTCHA on handset devices</cite>. Yang, T.-I.; Koong, C.-S.; Tseng, C.-C..  An International Journal, 74(14). 2015. </dd><dt id="bib-information-security">[information-security]</dt><dd><cite>Handbook of Information and Communication Security</cite>. Peter Stavroulakis; Mark Stamp.  Springer Science &amp; Business Media. 2010. </dd><dt id="bib-kapow-plugins">[kaPoW-plugins]</dt><dd><cite>kaPoW plugins: protecting web applications using reputation-based proof-of-work</cite>. Tien Le; Akshay Dua; Wu-chang Feng.  Proceedings of the 2nd Joint WICOW/AIRWeb Workshop on Web Quality. 2012. </dd><dt id="bib-killbots">[killbots]</dt><dd><a href="https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/"><cite>Botz-4-Sale: Surviving DDos Attacks that Mimic Flash Crowds</cite></a>. Srikanth Kandula; Dina Katabi; Matthias Jacob; Arthur Burger. URL: <a href="https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/">https://www.usenix.org/legacy/events/nsdi05/tech/kandula/kandula_html/</a></dd><dt id="bib-marrakesh">[marrakesh]</dt><dd><a href="https://www.wipo.int/treaties/en/ip/marrakesh"><cite>Marrakesh Treaty to Facilitate Access to Published Works for Persons Who Are Blind, Visually Impaired or Otherwise Print Disabled</cite></a>.  World Intellectual Property Organization. 27 June 2013. URL: <a href="https://www.wipo.int/treaties/en/ip/marrakesh">https://www.wipo.int/treaties/en/ip/marrakesh</a></dd><dt id="bib-newscom">[newscom]</dt><dd><a href="https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html"><cite>Spam-bot tests flunk the blind</cite></a>. Paul Festa.  News.com. 2 July 2003. URL: <a href="https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html">https://web.archive.org/web/20030707210529/http://news.com.com/2100-1032-1022814.html</a></dd><dt id="bib-privacy-pass">[privacy-pass]</dt><dd><a href="https://www.petsymposium.org/2018/files/papers/issue3/popets-2018-0026.pdf"><cite>Privacy Pass: Bypassing Internet Challenges Anonymously</cite></a>. Alex Davidson; Ian Goldberg; Nick Sullivan; George Tankersley; Filippo Valsorda.  Proceedings on Privacy Enhancing technologies; 2018 (3):164-180. 2018. URL: <a href="https://www.petsymposium.org/2018/files/papers/issue3/popets-2018-0026.pdf">https://www.petsymposium.org/2018/files/papers/issue3/popets-2018-0026.pdf</a></dd><dt id="bib-recaptcha-attacks">[recaptcha-attacks]</dt><dd><cite>HMM-based Attacks on Google's ReCAPTCHA with Continuous Visual and Audio Symbols</cite>. Sano, S.; Otsuka, T.; Itoyama, K.; Okuno, H. G..  Journal of Information Processing, 23(6). 2015. </dd><dt id="bib-social-classification">[social-classification]</dt><dd><cite>Social and egocentric image classification for scientific and privacy applications</cite>. Korayem, M..  D. Crandall, J. Bollen, A. Kapadia, &amp; P. Radivojac (Eds.): ProQuest Dissertations Publishing. 2015. </dd><dt id="bib-solving-captchas">[solving-captchas]</dt><dd><cite>How good are humans at solving CAPTCHAs? A large scale evaluation</cite>. Elie Bursztein et al.  2010 IEEE symposium on security and privacy. 2010. </dd><dt id="bib-task-completion">[task-completion]</dt><dd><cite>Towards a universally usable human interaction proof: evaluation of task completion strategies</cite>. Sauer, G.; Lazar, J.; Hochheiser, H.; Feng, J..  ACM Transactions on Accessible Computing (TACCESS), 2(4). 2010. </dd><dt id="bib-tls-tracking">[tls-tracking]</dt><dd><a href="https://www.petsymposium.org/2018/files/papers/issue4/popets-2018-0031.pdf"><cite>Exploiting TLS Client Authentication for Widespread User Tracking</cite></a>. Lucas Foppe; Jeremy Martin; Travis Mayberry; Eric C. Rye; Lamont Brown.  Proceedings on Privacy Enhancing Technologies. 2018. URL: <a href="https://www.petsymposium.org/2018/files/papers/issue4/popets-2018-0031.pdf">https://www.petsymposium.org/2018/files/papers/issue4/popets-2018-0031.pdf</a></dd>
+    </dl></section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
