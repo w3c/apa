@@ -41,6 +41,11 @@
       "w3cid": 74028
     },
     {
+      "name": "Scott Hollier",
+      "url": "http://www.hollier.info/",
+      "mailto": "scott@hollier.info"
+    },
+    {
       "name": "Michael Cooper",
       "url": "https://www.w3.org",
       "mailto": "cooper@w3.org",
@@ -509,16 +514,16 @@
       "title": "WebRTC DSCP Control API"
     }
   },
-  "publishDate": "2020-09-03",
-  "publishISODate": "2020-09-03T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 03 September 2020"
+  "publishDate": "2020-09-04",
+  "publishISODate": "2020-09-04T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 04 September 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">XR Accessibility User Requirements</h1>
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2020-09-03">03 September 2020</time>
+      <time class="dt-published" datetime="2020-09-04">04 September 2020</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -533,7 +538,7 @@
       
       
       <dt>Editors:</dt>
-      <dd class="p-author h-card vcard" data-editor-id="41218"><a class="ed_mailto u-email email p-name" href="mailto:joconnor@w3.org">Joshue O Connor</a> (W3C) </dd><dd class="p-author h-card vcard" data-editor-id="33688"><a class="ed_mailto u-email email p-name" href="mailto:janina@rednote.net">Janina Sajka</a></dd><dd class="p-author h-card vcard" data-editor-id="74028"><a class="ed_mailto u-email email p-name" href="mailto:jjwhite@ets.org">Jason White</a></dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (W3C) </dd>
+      <dd class="p-author h-card vcard" data-editor-id="41218"><a class="ed_mailto u-email email p-name" href="mailto:joconnor@w3.org">Joshue O Connor</a> (W3C) </dd><dd class="p-author h-card vcard" data-editor-id="33688"><a class="ed_mailto u-email email p-name" href="mailto:janina@rednote.net">Janina Sajka</a></dd><dd class="p-author h-card vcard" data-editor-id="74028"><a class="ed_mailto u-email email p-name" href="mailto:jjwhite@ets.org">Jason White</a></dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:scott@hollier.info">Scott Hollier</a></dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (W3C) </dd>
       
       
       
@@ -568,7 +573,8 @@
       of this technical report can be found in the
       <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
       https://www.w3.org/TR/.</em></p>
-			<p>To comment, <a href="https://github.com/w3c/apa/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> APA GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-apa@w3.org">public-apa@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>). Comments are requested by <strong>7 April 2020</strong>. In-progress updates to the document may be viewed in the <a href="https://w3c.github.io/apa/xaur/">publicly visible editors' draft</a>.</p>
+
+			<p>To comment on this draft <a href="https://github.com/w3c/apa/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> APA GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-apa@w3.org">public-apa@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>). In-progress updates to the document may be viewed in the <a href="https://w3c.github.io/apa/xaur/">publicly visible editors' draft</a>.</p>
 		<p>
     This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
     Editor's Draft.
@@ -606,13 +612,13 @@
   </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#what-does-the-term-xr-mean"><bdi class="secno">1.1 </bdi>What does the term '<abbr title="Virtual and Augmented Reality">XR</abbr>' mean?</a></li><li class="tocline"><a class="tocxref" href="#definitions-of-virtual-reality-and-immersive-environments"><bdi class="secno">1.2 </bdi>Definitions of virtual reality and immersive environments</a></li><li class="tocline"><a class="tocxref" href="#definitions-of-augmented-and-mixed-reality"><bdi class="secno">1.3 </bdi>Definitions of augmented and mixed reality</a></li></ol></li><li class="tocline"><a class="tocxref" href="#what-is-xr-used-for"><bdi class="secno">2. </bdi>What is <abbr title="Virtual and Augmented Reality">XR</abbr> used for?</a></li><li class="tocline"><a class="tocxref" href="#understanding-xr-and-accessibility-challenges"><bdi class="secno">3. </bdi>Understanding <abbr title="Virtual and Augmented Reality">XR</abbr> and Accessibility Challenges</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#immersive-environment-challenges"><bdi class="secno">3.1 </bdi>Immersive Environment challenges</a></li><li class="tocline"><a class="tocxref" href="#xr-and-supporting-multimodality"><bdi class="secno">3.2 </bdi><abbr title="Virtual and Augmented Reality">XR</abbr> and supporting multimodality</a></li><li class="tocline"><a class="tocxref" href="#various-input-modalities"><bdi class="secno">3.3 </bdi>Various input modalities </a></li><li class="tocline"><a class="tocxref" href="#various-output-modalities"><bdi class="secno">3.4 </bdi>Various output modalities </a></li><li class="tocline"><a class="tocxref" href="#xr-controller-challenges"><bdi class="secno">3.5 </bdi><abbr title="Virtual and Augmented Reality">XR</abbr> controller challenges</a></li><li class="tocline"><a class="tocxref" href="#customization-of-control-inputs"><bdi class="secno">3.6 </bdi>Customization of control inputs</a></li><li class="tocline"><a class="tocxref" href="#using-multiple-diverse-inputs-simultaneously"><bdi class="secno">3.7 </bdi> Using multiple diverse inputs simultaneously </a></li><li class="tocline"><a class="tocxref" href="#consistent-tracking-with-multiple-inputs"><bdi class="secno">3.8 </bdi>Consistent tracking with multiple inputs </a></li><li class="tocline"><a class="tocxref" href="#usability-and-affordances-in-xr"><bdi class="secno">3.9 </bdi>Usability and affordances in <abbr title="Virtual and Augmented Reality">XR</abbr></a></li></ol></li><li class="tocline"><a class="tocxref" href="#xr-user-needs-and-requirements"><bdi class="secno">4. </bdi><abbr title="Virtual and Augmented Reality">XR</abbr> User Needs and Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#user-needs-definition"><bdi class="secno">4.1 </bdi>User needs definition</a></li><li class="tocline"><a class="tocxref" href="#immersive-semantics-and-customization"><bdi class="secno">4.2 </bdi>Immersive semantics and customization</a></li><li class="tocline"><a class="tocxref" href="#motion-agnostic-interactions"><bdi class="secno">4.3 </bdi>Motion agnostic interactions</a></li><li class="tocline"><a class="tocxref" href="#immersive-personalisation"><bdi class="secno">4.4 </bdi>Immersive personalisation</a></li><li class="tocline"><a class="tocxref" href="#interaction-and-target-customization"><bdi class="secno">4.5 </bdi>Interaction and target customization</a></li><li class="tocline"><a class="tocxref" href="#voice-commands"><bdi class="secno">4.6 </bdi>Voice commands</a></li><li class="tocline"><a class="tocxref" href="#color-changes"><bdi class="secno">4.7 </bdi>Color changes</a></li><li class="tocline"><a class="tocxref" href="#magnification-context-and-resetting"><bdi class="secno">4.8 </bdi>Magnification context and resetting</a></li><li class="tocline"><a class="tocxref" href="#critical-messaging-and-alerts"><bdi class="secno">4.9 </bdi>Critical messaging and alerts</a></li><li class="tocline"><a class="tocxref" href="#gestural-interfaces-and-interactions"><bdi class="secno">4.10 </bdi>Gestural interfaces and interactions</a></li><li class="tocline"><a class="tocxref" href="#text-description-transformation"><bdi class="secno">4.11 </bdi>Text description transformation</a></li><li class="tocline"><a class="tocxref" href="#safe-harbour-controls"><bdi class="secno">4.12 </bdi>Safe harbour controls</a></li><li class="tocline"><a class="tocxref" href="#immersive-time-limits"><bdi class="secno">4.13 </bdi>Immersive time limits</a></li><li class="tocline"><a class="tocxref" href="#reset-focus-and-orientation"><bdi class="secno">4.14 </bdi>Reset focus and orientation</a></li><li class="tocline"><a class="tocxref" href="#routing-to-second-screens"><bdi class="secno">4.15 </bdi>Routing to second screens</a></li><li class="tocline"><a class="tocxref" href="#interaction-speed"><bdi class="secno">4.16 </bdi>Interaction speed</a></li><li class="tocline"><a class="tocxref" href="#avoiding-sickness-triggers"><bdi class="secno">4.17 </bdi>Avoiding sickness triggers</a></li><li class="tocline"><a class="tocxref" href="#binaural-audio-track-alternatives"><bdi class="secno">4.18 </bdi>Binaural audio track alternatives</a></li><li class="tocline"><a class="tocxref" href="#subtitling-customization"><bdi class="secno">4.19 </bdi>Subtitling customization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#related-documents"><bdi class="secno">5. </bdi>Related Documents</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-apa-working-group-active-in-the-development-of-this-document"><bdi class="secno">A.1 </bdi>Participants of the APA Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#previously-active-participants-commenters-and-other-contributors"><bdi class="secno">A.2 </bdi>Previously Active Participants, Commenters, and Other Contributors</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">A.3 </bdi>Enabling Funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#what-does-the-term-xr-mean"><bdi class="secno">1.1 </bdi>What does the term '<abbr title="Virtual and Augmented Reality">XR</abbr>' mean?</a></li><li class="tocline"><a class="tocxref" href="#definitions-of-virtual-reality-and-immersive-environments"><bdi class="secno">1.2 </bdi>Definitions of virtual reality and immersive environments</a></li><li class="tocline"><a class="tocxref" href="#definitions-of-augmented-and-mixed-reality"><bdi class="secno">1.3 </bdi>Definitions of augmented and mixed reality</a></li></ol></li><li class="tocline"><a class="tocxref" href="#what-is-xr-used-for"><bdi class="secno">2. </bdi>What is <abbr title="Virtual and Augmented Reality">XR</abbr> used for?</a></li><li class="tocline"><a class="tocxref" href="#understanding-xr-and-accessibility-challenges"><bdi class="secno">3. </bdi>Understanding <abbr title="Virtual and Augmented Reality">XR</abbr> and Accessibility Challenges</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#immersive-environment-challenges"><bdi class="secno">3.1 </bdi>Immersive Environment challenges</a></li><li class="tocline"><a class="tocxref" href="#xr-and-supporting-multimodality"><bdi class="secno">3.2 </bdi><abbr title="Virtual and Augmented Reality">XR</abbr> and supporting multimodality</a></li><li class="tocline"><a class="tocxref" href="#various-input-modalities"><bdi class="secno">3.3 </bdi>Various input modalities </a></li><li class="tocline"><a class="tocxref" href="#various-output-modalities"><bdi class="secno">3.4 </bdi>Various output modalities </a></li><li class="tocline"><a class="tocxref" href="#xr-controller-challenges"><bdi class="secno">3.5 </bdi><abbr title="Virtual and Augmented Reality">XR</abbr> controller challenges</a></li><li class="tocline"><a class="tocxref" href="#customization-of-control-inputs"><bdi class="secno">3.6 </bdi>Customization of control inputs</a></li><li class="tocline"><a class="tocxref" href="#using-multiple-diverse-inputs-simultaneously"><bdi class="secno">3.7 </bdi> Using multiple diverse inputs simultaneously </a></li><li class="tocline"><a class="tocxref" href="#consistent-tracking-with-multiple-inputs"><bdi class="secno">3.8 </bdi>Consistent tracking with multiple inputs </a></li><li class="tocline"><a class="tocxref" href="#usability-and-affordances-in-xr"><bdi class="secno">3.9 </bdi>Usability and affordances in <abbr title="Virtual and Augmented Reality">XR</abbr></a></li></ol></li><li class="tocline"><a class="tocxref" href="#xr-user-needs-and-requirements"><bdi class="secno">4. </bdi><abbr title="Virtual and Augmented Reality">XR</abbr> User Needs and Requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#immersive-semantics-and-customization"><bdi class="secno">4.1 </bdi>Immersive semantics and customization</a></li><li class="tocline"><a class="tocxref" href="#motion-agnostic-interactions"><bdi class="secno">4.2 </bdi>Motion agnostic interactions</a></li><li class="tocline"><a class="tocxref" href="#immersive-personalisation"><bdi class="secno">4.3 </bdi>Immersive personalisation</a></li><li class="tocline"><a class="tocxref" href="#interaction-and-target-customization"><bdi class="secno">4.4 </bdi>Interaction and target customization</a></li><li class="tocline"><a class="tocxref" href="#voice-commands"><bdi class="secno">4.5 </bdi>Voice commands</a></li><li class="tocline"><a class="tocxref" href="#color-changes"><bdi class="secno">4.6 </bdi>Color changes</a></li><li class="tocline"><a class="tocxref" href="#magnification-context-and-resetting"><bdi class="secno">4.7 </bdi>Magnification context and resetting</a></li><li class="tocline"><a class="tocxref" href="#critical-messaging-and-alerts"><bdi class="secno">4.8 </bdi>Critical messaging and alerts</a></li><li class="tocline"><a class="tocxref" href="#gestural-interfaces-and-interactions"><bdi class="secno">4.9 </bdi>Gestural interfaces and interactions</a></li><li class="tocline"><a class="tocxref" href="#text-description-transformation"><bdi class="secno">4.10 </bdi>Text description transformation</a></li><li class="tocline"><a class="tocxref" href="#safe-harbour-controls"><bdi class="secno">4.11 </bdi>Safe harbour controls</a></li><li class="tocline"><a class="tocxref" href="#immersive-time-limits"><bdi class="secno">4.12 </bdi>Immersive time limits</a></li><li class="tocline"><a class="tocxref" href="#reset-focus-and-orientation"><bdi class="secno">4.13 </bdi>Reset focus and orientation</a></li><li class="tocline"><a class="tocxref" href="#second-screen"><bdi class="secno">4.14 </bdi>Second screen</a></li><li class="tocline"><a class="tocxref" href="#interaction-speed"><bdi class="secno">4.15 </bdi>Interaction speed</a></li><li class="tocline"><a class="tocxref" href="#avoiding-sickness-triggers"><bdi class="secno">4.16 </bdi>Avoiding sickness triggers</a></li><li class="tocline"><a class="tocxref" href="#spatial-audio-tracks-and-alternatives"><bdi class="secno">4.17 </bdi>Spatial audio tracks and alternatives</a></li><li class="tocline"><a class="tocxref" href="#captioning-subtitling-and-text-support-and-customization"><bdi class="secno">4.18 </bdi>Captioning, Subtitling and Text: Support and customization</a></li><li class="tocline"><a class="tocxref" href="#mono-audio-option"><bdi class="secno">4.19 </bdi>Mono audio option</a></li></ol></li><li class="tocline"><a class="tocxref" href="#related-documents"><bdi class="secno">5. </bdi>Related Documents</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-apa-working-group-active-in-the-development-of-this-document"><bdi class="secno">A.1 </bdi>Participants of the APA Working Group Active in the Development of This Document</a></li><li class="tocline"><a class="tocxref" href="#previously-active-participants-commenters-and-other-contributors"><bdi class="secno">A.2 </bdi>Previously Active Participants, Commenters, and Other Contributors</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">A.3 </bdi>Enabling Funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>
         Informative references
       </a></li></ol></li></ol></nav>
 		<section id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
 
-<p><abbr title="Virtual and Augmented Reality">XR</abbr> is an acronym used to refer to the spectrum of hardware, applications, and techniques used for virtual reality or immersive environments, augmented or mixed reality and other related technologies. This document is developed as part of a discovery into accessibility related user needs and requirements for <abbr title="Virtual and Augmented Reality">XR</abbr>. This document does not represent a formal working group position, nor does it currently represent a set of technical requirements that a developer or designer need strictly follow. It aims to outline for the reader some of the diversity of current accessibility related user needs in <abbr title="Virtual and Augmented Reality">XR</abbr> and what potential requirements to meet those needs may be.</p>
+<p><abbr title="Virtual and Augmented Reality">XR</abbr> is an acronym used to refer to the spectrum of hardware, applications, and techniques used for virtual reality or immersive environments, augmented or mixed reality and other related technologies. This document is developed as part of a discovery into accessibility related user needs and requirements for <abbr title="Virtual and Augmented Reality">XR</abbr>. This document does not represent a formal working group position, nor does it currently represent a set of technical requirements that a developer or designer need strictly follow. It aims to outline the diversity of some current accessibility related user needs in <abbr title="Virtual and Augmented Reality">XR</abbr> and what potential requirements to meet those needs may be.</p>
 
 
 <section id="what-does-the-term-xr-mean">
@@ -650,7 +656,7 @@
 <section id="what-is-xr-used-for">
 <h2 id="x2-what-is-xr-used-for"><bdi class="secno">2. </bdi>What is <abbr title="Virtual and Augmented Reality">XR</abbr> used for?<a class="self-link" aria-label="§" href="#what-is-xr-used-for"></a></h2>
 
-<p><abbr title="Virtual and Augmented Reality">XR</abbr> has an exhaustive range of purposes from education, gaming, multimedia, immersive communication and many others. It is currently evolving at a very fast rate and is not yet mainstream. This will change as computing power increases, hardware improves as well as the quality of user experience, <abbr title="Virtual and Augmented Reality">XR</abbr> will be more commonly be used for the performance of everyday practical tasks, for therapeutic uses, education and for entertainment.</p>
+<p><abbr title="Virtual and Augmented Reality">XR</abbr> has a range of purposes from education, gaming, multimedia, immersive communication and many others. It is currently evolving at a very fast rate and is not yet mainstream. This will change as computing power increases, hardware improves as well as the quality of user experience, <abbr title="Virtual and Augmented Reality">XR</abbr> will be more commonly be used for the performance of everyday practical tasks, for therapeutic uses, education and for entertainment.</p>
 		</section>
 
 
@@ -665,8 +671,11 @@
 <p>Some of the issues in <abbr title="Virtual and Augmented Reality">XR</abbr>, for example in gaming, for people with disabilities including:</p>
 
 <ul>
-<li><strong>Over emphasis on motion controls</strong>. The are many motion controllers that emphasise using your body to control the experience. Some games with <abbr title="Virtual and Augmented Reality">XR</abbr> components may lock out traditional control methods when a VR headset is being used, and the user should always be able to use a range of input mechanisms.</li>
-<li><strong>VR Headsets need the user to be a physical position to play</strong>. The user should not have to be in a particular physical position to play a game or perform some action. Or there should be ability to remap these 'physical positions' to other controls (such as using <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a>).</li>
+<li><strong>Over emphasis on motion controls</strong>. There are many motion controllers that emphasise using your body to control the experience. Some games with <abbr title="Virtual and Augmented Reality">XR</abbr> components may lock out traditional control methods when a VR headset is being used, and the user should always be able to use a range of input mechanisms. <strong><p></p>
+
+</strong><p><strong>NOTE:</strong> <acronym title="Three Degrees of Freedom">3DOF</acronym> and <acronym title="Six Degrees of Freedom">6DOF</acronym> may have their own specific mobility issues, for example <acronym title="Three Degrees of Freedom">3DOF</acronym> may have implications for people who have motor impairments that affect the use of one or both arms.  <acronym title="Six Degrees of Freedom">6DOF</acronym> may have implications for people who are quadripalegic and for people that use a wheelchair or mobility aid for navigation where there is a need to move directionally in physical space or a higher emphasis on the lower extremity for movement.
+</p></li>
+<li><strong>VR Headsets need the user to be a physical position to play</strong>. The user should not have to be in a particular physical position such as standing or sitting to play a game or perform some action. Or there should be ability to remap these 'physical positions' to other controls (such as using <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a>).</li>
 <li><strong>Games and hardware being locked to certain manufacturers</strong> Consoles should allow full button remapping on standard game controllers - to different types of assistive technologies such as switches. These remapping preference should be mobile, and transportable across a range of hardware devices and software.</li>
 <li><strong>Gamification of VR forces game dynamics on the user</strong>. Some users may wish to just explore an immersive environment without the 'game', or any particular challenge.</li>
 <li><strong>Audio design lacks spatial accuracy</strong> sound design needs particular attention and can be critical for a good user experience for people with disabilities. In deed the auditory experience of a game or other immersive environment may 'be' the experience [<cite><a class="bibref" data-link-type="biblio" href="#bib-able-gamers" title="Thought On Accessibility and VR">able-gamers</a></cite>].</li>
@@ -756,7 +765,7 @@
 <p>As mentioned there are a range of input devices that may be used. Supporting these controllers requires an understanding of what they are and how they work.
 There are a variety of alternative gaming controls that may be very useful in <abbr title="Virtual and Augmented Reality">XR</abbr> environments and applications. For example the <a href="https://www.xbox.com/en-US/xbox-one/accessories/controllers/xbox-adaptive-controller ">Xbox Adaptive Controller</a>.</p>
 
-<p>While <abbr title="Virtual and Augmented Reality">XR</abbr> is the experience, the controller is king, and plays a critical part in overcoming some complexity as well as mediating issues that may relate to other challenges around usability and helping the user understand sensory substitution devices. </p>
+<p>While <abbr title="Virtual and Augmented Reality">XR</abbr> is the experience, the controller plays a critical part in overcoming some complexity as well as mediating issues that may relate to other challenges around usability and helping the user understand sensory substitution devices. </p>
 
 <p>Controllers such as the Xbox Adaptive Controller and other switch type inputs allow the issuer to remapping keyboard inputs to control virtual environments. The powerful customizations may allow the user to "do that thing that is difficult" for them with ease.  In conjunction with this controller, for example, users with limited mobility they can also simulate actions in the <abbr title="Virtual and Augmented Reality">XR</abbr> environment that they would not be able to physically perform.  <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a> is a good example of this where motion range, position and orientation can be set to the user's ability.</p>
 
@@ -770,7 +779,11 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 	<section id="using-multiple-diverse-inputs-simultaneously">
 <h3 id="x3-7-using-multiple-diverse-inputs-simultaneously"><bdi class="secno">3.7 </bdi> Using multiple diverse inputs simultaneously <a class="self-link" aria-label="§" href="#using-multiple-diverse-inputs-simultaneously"></a></h3>
-<p>A user with a disability may have several input devices. A user may switch 'mode' of interaction or the tools used and should be able to do so without degrading into a poor user experience where they lose focus on a task and cannot return to it, or make unforced errors, accidental input and so on.</p>
+<p>A user with a disability may have several input devices or different assistive technologies. A user may switch 'mode' of interaction or the tools used and should be able to do so without degrading into a poor user experience where they lose focus on a task and cannot return to it, or make unforced errors, accidental input and so on.</p>
+
+<p>Complexity needs to be managed and co-ordinated between different kinds of assistive technology in immersive environments. There is a platform level requirement to support multiple assistive technology in a cohesive manner. This would allow combinations to be used in a co-ordinated way e.g where the users day-to-day AT, can be used with other AT that may be embedded in the environment already for example.</p>
+
+<p><strong>NOTE:</strong> The REQ 5b: Voice activation also indicates potential issues with pairing multiple devices via bluetooth.</p>
 
 </section>
 
@@ -792,6 +805,7 @@ There are a variety of alternative gaming controls that may be very useful in <a
 <li>How can a user understand the affordance models used in <abbr title="Virtual and Augmented Reality">XR</abbr> interactions? Or can this be mediated by their own interaction preferences and controllers?</li>
 <li>What interactions are allowed or not allowed? </li>
 <li>How can an accessibility abstracted <abbr title="Virtual and Augmented Reality">XR</abbr> experience focussed on supporting a different modality, successfully interact with another?</li>
+<li>How can we ensure what happens in one modality, is update in another so various abstractions are not out of sync? e.g. synchronization of captions between real time text transcriptions and other alternatives such as symbols or AAC?</li>
 </ul>
 	</section>
 </section>
@@ -799,33 +813,36 @@ There are a variety of alternative gaming controls that may be very useful in <a
 <section id="xr-user-needs-and-requirements">
 <h2 id="x4-xr-user-needs-and-requirements"><bdi class="secno">4. </bdi><abbr title="Virtual and Augmented Reality">XR</abbr> User Needs and Requirements<a class="self-link" aria-label="§" href="#xr-user-needs-and-requirements"></a></h2>
 
-<section id="user-needs-definition">
-<h3 id="x4-1-user-needs-definition"><bdi class="secno">4.1 </bdi>User needs definition<a class="self-link" aria-label="§" href="#user-needs-definition"></a></h3>
 <p>This document outlines various accessibility related user needs for <abbr title="Virtual and Augmented Reality">XR</abbr>. These user needs should drive accessibility requirements for <abbr title="Virtual and Augmented Reality">XR</abbr> and its related architecture. These come from people with disabilities who use assistive technologies and wish to see the features described available within <abbr title="Virtual and Augmented Reality">XR</abbr> enabled applications.</p>
 
 <p>User needs and requirements are often dependent on context of use. The following outline some accessibility user needs and requirements that may be applicable in immersive environments, augmented reality and 360° applications.</p>
 
 <p>These following are neither exhaustive, nor definitive but are presented in order to help orientate the reader towards understanding some broad user needs and how to meet them. </p>
-</section>
+
 
 	<section id="immersive-semantics-and-customization">
 
-<h3 id="x4-2-immersive-semantics-and-customization"><bdi class="secno">4.2 </bdi>Immersive semantics and customization<a class="self-link" aria-label="§" href="#immersive-semantics-and-customization"></a></h3>
+<h3 id="x4-1-immersive-semantics-and-customization"><bdi class="secno">4.1 </bdi>Immersive semantics and customization<a class="self-link" aria-label="§" href="#immersive-semantics-and-customization"></a></h3>
 <ul>
 
 <li><strong>User Need 1:</strong> A user of assistive technology wants to navigate, identify locations, objects and interact within an immersive environment.</li>
 
-<li><strong>REQ 1a:</strong> Navigation mechanisms must be intuitive with robust affordances. Navigation, location and object descriptions must be semantically accurate and identified in a way that is understood by assistive technology. </li>
+<li><strong>REQ 1a:</strong> Navigation mechanisms must be intuitive with robust affordances. Navigation, location and object descriptions must be accurate and identified in a way that is understood by assistive technology. </li>
 
 
 <li><strong>REQ 1b:</strong> Controls need to support alternative mapping, rearranging of position, resizing and sensitivity.</li>
+<li><strong>REQ 1c:</strong> Objects that are important within any given context of time and place can be identified in a suitable modality.</li>
+<li><strong>REQ 1d:</strong> Allow filtering  and the ability to query items and their content for more details.</li>
+
+
+<p><strong>NOTE:</strong> In an spatialized augmented reality environment a blind user may find a combination of text to speech and sonic symbols helpful.  By using a combination of text to speech and sonic symbolism a blind user can do a self-guided tour of a given area using their smartphone. [<cite><a class="bibref" data-link-type="biblio" href="#bib-spatialized-navigation">spatialized-navigation</a></cite>]</p>
 
 </ul>
 
 	</section>
 	<section id="motion-agnostic-interactions">
 
-	<h3 id="x4-3-motion-agnostic-interactions"><bdi class="secno">4.3 </bdi>Motion agnostic interactions<a class="self-link" aria-label="§" href="#motion-agnostic-interactions"></a></h3>
+	<h3 id="x4-2-motion-agnostic-interactions"><bdi class="secno">4.2 </bdi>Motion agnostic interactions<a class="self-link" aria-label="§" href="#motion-agnostic-interactions"></a></h3>
 <ul>
 
 <li><strong>User Need 2:</strong> A person with a physical disability may want to interact with items in an immersive environment&nbsp;in a way that doesn't require particular bodily movement to perform any given action.</li>
@@ -841,7 +858,7 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="immersive-personalisation">
 
-<h3 id="x4-4-immersive-personalisation"><bdi class="secno">4.4 </bdi>Immersive personalisation<a class="self-link" aria-label="§" href="#immersive-personalisation"></a></h3>
+<h3 id="x4-3-immersive-personalisation"><bdi class="secno">4.3 </bdi>Immersive personalisation<a class="self-link" aria-label="§" href="#immersive-personalisation"></a></h3>
 
 <ul>
 
@@ -850,23 +867,34 @@ There are a variety of alternative gaming controls that may be very useful in <a
 <li><strong>REQ 3a:</strong> Support Symbol sets so they can be used to communicate and layered over objects and items to convey affordances or other needed information in way that can be understood according to user preference.</li>
 
 
-<li><strong>REQ 3b:</strong>  Allow the user to turn off of 'mute' non-critical environmental content such as animations, visual or audio content, or non-critical messaging.</li>
+<li><strong>REQ 3b:</strong> Allow the user to turn off of 'mute' non-critical environmental content such as animations, visual or audio content, or non-critical messaging.</li>
 
 </ul>
+
+<p><strong>NOTE:</strong> Personalization involves tailoring aspects of the user experience to meet the needs and preferences of the individual user. <abbr title="World Wide Web Consortium">W3C</abbr> are working on various modules for web content that aim to support personalization and are exploring areas such as:  [<cite><a class="bibref" data-link-type="biblio" href="#bib-personalization-semantics">personalization-semantics</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-personalization-content">personalization-content</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-personalization-requirements">personalization-requirements</a></cite>]
+
+</p><ul>
+<li>Expanding the accessibility information that may be supplied by the author.</li>
+<li>Facilitate preference driven individual personalization.</li>
+<li>Enable the author to specify key semantics needed to support users with cognitive impairments.</li>
+</ul>
+
+
 
 </section>
 
 <section id="interaction-and-target-customization">
 
-<h3 id="x4-5-interaction-and-target-customization"><bdi class="secno">4.5 </bdi>Interaction and target customization<a class="self-link" aria-label="§" href="#interaction-and-target-customization"></a></h3>
+<h3 id="x4-4-interaction-and-target-customization"><bdi class="secno">4.4 </bdi>Interaction and target customization<a class="self-link" aria-label="§" href="#interaction-and-target-customization"></a></h3>
 
 <ul>
 
-<li><strong>User Need 4:</strong> A user with limited mobility may need to be able to hit a larger 'Target size'&nbsp;for a button or other controls in immersive environments.</li>
+<li><strong>User Need 4:</strong> A user with limited mobility, or users with tunnel or peripheral vision may need a larger 'Target size'&nbsp;for a button or other controls.</li>
 
 <li><strong>REQ 4a:</strong> Ensure fine motion control is not needed to activate an input.</li>
 <li><strong>REQ 4b:</strong> Ensure hit targets are large enough with suitable spacing around them.</li>
 <li><strong>REQ 4c:</strong> Ensure multiple actions or gestures are not required at the same time to perform any action.</li>
+<li><strong>REQ 4d:</strong> Support 'Sticky Keys' requirements such as serialization for various inputs when the user needs to press multiple buttons.</li>
 
 </ul>
 
@@ -874,12 +902,13 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="voice-commands">
 
-<h3 id="x4-6-voice-commands"><bdi class="secno">4.6 </bdi>Voice commands<a class="self-link" aria-label="§" href="#voice-commands"></a></h3>
+<h3 id="x4-5-voice-commands"><bdi class="secno">4.5 </bdi>Voice commands<a class="self-link" aria-label="§" href="#voice-commands"></a></h3>
 
 <ul>
-<li><strong>User Need 5:</strong> A user with limited mobility may want to be able to use Voice Commands within the immersive environment, to navigate, interact and communicate with others in <abbr title="Virtual and Augmented Reality">XR</abbr> environments.</li>
+<li><strong>User Need 5:</strong> A user with limited mobility may want to be able to use Voice Commands within the immersive environment, to navigate, interact and communicate with others.</li>
 
 <li><strong>REQ 5a:</strong> Ensure Navigation and interaction can be controlled by Voice Activation.</li>
+<li><strong>REQ 5b:</strong> Voice activation should preferably use native screen readers or voice assistants rather than external devices to eliminate the additional step needed to pair devices.</li>
 
 </ul>
 
@@ -887,10 +916,10 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="color-changes">
 
-<h3 id="x4-7-color-changes"><bdi class="secno">4.7 </bdi>Color changes<a class="self-link" aria-label="§" href="#color-changes"></a></h3>
+<h3 id="x4-6-color-changes"><bdi class="secno">4.6 </bdi>Color changes<a class="self-link" aria-label="§" href="#color-changes"></a></h3>
 
 <ul>
-<li><strong>User Need 6:</strong> Color blind users may need to be able to customise the colors used in the immersive environment. This will help with understand affordances on various controls or where color is used to signify danger or permission.</li>
+<li><strong>User Need 6:</strong> Color blind users may need to be able to customise the colors used in the immersive environment. This will help with understanding affordances of various controls or where color is used to signify danger or permission.</li>
 
 <li><strong>REQ 6a:</strong> Provide customised high contrast skins for the environment&nbsp;to suit their particular luminosity and color contrast requirements.</li>
 
@@ -900,12 +929,15 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="magnification-context-and-resetting">
 
-<h3 id="x4-8-magnification-context-and-resetting"><bdi class="secno">4.8 </bdi>Magnification context and resetting<a class="self-link" aria-label="§" href="#magnification-context-and-resetting"></a></h3>
+<h3 id="x4-7-magnification-context-and-resetting"><bdi class="secno">4.7 </bdi>Magnification context and resetting<a class="self-link" aria-label="§" href="#magnification-context-and-resetting"></a></h3>
 
 <ul>
-<li><strong>User Need 7:</strong> Screen magnification users may need to be able to check the context of their view&nbsp;in immersive environment.</li>
+<li><strong>User Need 7:</strong> Screen magnification users may need to be able to check the context of their view&nbsp;in immersive environments.</li>
 
 <li><strong>REQ 7a:</strong> Allow the screen magnification user to check the context of their view and track/reset focus as needed.</li>
+<li><strong>REQ 7b:</strong> Where it makes sense (such as in menus) interface elements can be enlarged and the menu reflowed to enhance the usability of the interface up to a certain magnification requirement.</li>
+
+<p><strong>NOTE:</strong> There are customisation approaches such as the automatic generation of user interfaces as demonstrated in the SUPPLE project, which adapt to the different challenges the user may face, such as vision, motor control and other user preferences and abilities. A generated UI can make multiple adaptations for different user needs at the same time. This is achieved by generating a UI, or several - after testing a persons ability using an algorithm to learn their preferences. [<cite><a class="bibref" data-link-type="biblio" href="#bib-supple-project">supple-project</a></cite>]</p>
 
 </ul>
 
@@ -913,11 +945,11 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="critical-messaging-and-alerts">
 
-<h3 id="x4-9-critical-messaging-and-alerts"><bdi class="secno">4.9 </bdi>Critical messaging and alerts<a class="self-link" aria-label="§" href="#critical-messaging-and-alerts"></a></h3>
+<h3 id="x4-8-critical-messaging-and-alerts"><bdi class="secno">4.8 </bdi>Critical messaging and alerts<a class="self-link" aria-label="§" href="#critical-messaging-and-alerts"></a></h3>
 
 <ul>
 
-<li><strong>User Need 8:</strong> Screen magnification users may need to be made aware of critical messaging and alerts&nbsp;in immersive environments often without losing focus. They may also need to route these messages to 'second screens' (see <strong>REQ 1</strong>).</li>
+<li><strong>User Need 8:</strong> Screen magnification users may need to be made aware of critical messaging and alerts&nbsp;in immersive environments often without losing focus. They may also need to route these messages to a 'second screen' (see <strong>REQ 14</strong> Second Screen).</li>
 
 <li><strong>REQ 8a:</strong> Ensure that critical messaging, or alerts have priority roles that can be understood and flagged to AT, without moving focus.</li>
 
@@ -927,12 +959,17 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="gestural-interfaces-and-interactions">
 
-<h3 id="x4-10-gestural-interfaces-and-interactions"><bdi class="secno">4.10 </bdi>Gestural interfaces and interactions<a class="self-link" aria-label="§" href="#gestural-interfaces-and-interactions"></a></h3>
+<h3 id="x4-9-gestural-interfaces-and-interactions"><bdi class="secno">4.9 </bdi>Gestural interfaces and interactions<a class="self-link" aria-label="§" href="#gestural-interfaces-and-interactions"></a></h3>
 
 <ul>
-<li><strong>User Need 9:</strong> A blind user may wish to interact with a gestural interface, such as a virtual menu system, using gloves and a head set.</li>
+<li><strong>User Need 9:</strong> A blind user may wish to interact with a gestural interface, such as a virtual menu system.</li>
 
-<li><strong>REQ 9a:</strong> Using a virtual menu system -  enable a self-voicing option and have each category, or item description spoken to them as they receive focus via a gesture or other input. As the blind user gestures to trigger both movement and interaction. The user may get more detail about items that are closer to them, if navigating a virtual store the user must be allowed to query and interrogate items and make selections.</li>
+<li><strong>REQ 9a:</strong> Support touch screen accessibility gestures (e.g. swipes, flicks and single, double or triple taps with 1, 2 or 3 fingers) NOTE: See <strong>REQ 14</strong> Second Screen.</li>
+
+<li><strong>REQ 9b:</strong> Using a virtual menu system -  enable a self-voicing option and have each category, or item description, spoken as they receive focus via a gesture or other input. As the blind user gestures to trigger both movement and interaction they may get more detail about items that are closer to them. The user must be allowed to query and interrogate these items and make selections.</li>
+
+<li><strong>REQ 9c:</strong> Allow for the re-mapping of gestures to associate different actions with different input types or gestures. This may be a virtual switch that can map to new macros on the fly. This will allow the user to change defaults and employ gestures to carry out new actions offered by the immersive environment as required.</li>
+
 
 </ul>
 
@@ -940,7 +977,7 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="text-description-transformation">
 
-<h3 id="x4-11-text-description-transformation"><bdi class="secno">4.11 </bdi>Text description transformation<a class="self-link" aria-label="§" href="#text-description-transformation"></a></h3>
+<h3 id="x4-10-text-description-transformation"><bdi class="secno">4.10 </bdi>Text description transformation<a class="self-link" aria-label="§" href="#text-description-transformation"></a></h3>
 
 <ul>
 
@@ -954,7 +991,7 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="safe-harbour-controls">
 
-<h3 id="x4-12-safe-harbour-controls"><bdi class="secno">4.12 </bdi>Safe harbour controls<a class="self-link" aria-label="§" href="#safe-harbour-controls"></a></h3>
+<h3 id="x4-11-safe-harbour-controls"><bdi class="secno">4.11 </bdi>Safe harbour controls<a class="self-link" aria-label="§" href="#safe-harbour-controls"></a></h3>
 
 <ul>
 <li><strong>User Need 11:</strong> People with Cognitive Impairments may be easily overwhelmed in Immersive Environments.</li>
@@ -967,7 +1004,7 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="immersive-time-limits">
 
-<h3 id="x4-13-immersive-time-limits"><bdi class="secno">4.13 </bdi>Immersive time limits<a class="self-link" aria-label="§" href="#immersive-time-limits"></a></h3>
+<h3 id="x4-12-immersive-time-limits"><bdi class="secno">4.12 </bdi>Immersive time limits<a class="self-link" aria-label="§" href="#immersive-time-limits"></a></h3>
 
 <ul>
 
@@ -981,7 +1018,7 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="reset-focus-and-orientation">
 
-<h3 id="x4-14-reset-focus-and-orientation"><bdi class="secno">4.14 </bdi>Reset focus and orientation<a class="self-link" aria-label="§" href="#reset-focus-and-orientation"></a></h3>
+<h3 id="x4-13-reset-focus-and-orientation"><bdi class="secno">4.13 </bdi>Reset focus and orientation<a class="self-link" aria-label="§" href="#reset-focus-and-orientation"></a></h3>
 
 <ul>
 
@@ -995,15 +1032,17 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 </section>
 
-<section id="routing-to-second-screens">
+<section id="second-screen">
 
-<h3 id="x4-15-routing-to-second-screens"><bdi class="secno">4.15 </bdi>Routing to second screens<a class="self-link" aria-label="§" href="#routing-to-second-screens"></a></h3>
+<h3 id="x4-14-second-screen"><bdi class="secno">4.14 </bdi>Second screen<a class="self-link" aria-label="§" href="#second-screen"></a></h3>
 
 <ul>
 
-<li><strong>User Need 14:</strong> A deaf-blind user communicating via a RTC application in <abbr title="Virtual and Augmented Reality">XR</abbr> may have sophisticated 'routing' requirements for various inputs and outputs.&nbsp;</li>
+<li><strong>User Need 14:</strong> A deaf-blind user communicating via a RTC application in <abbr title="Virtual and Augmented Reality">XR</abbr> may have sophisticated 'routing' requirements for various inputs and outputs and the need to manage same.&nbsp;</li>
 
-<li><strong>REQ 14a</strong>: Allow the user to route text output, alerts, environment sounds and audio to a braille or other devices.</li>
+<li><strong>REQ 14a:</strong> Allow the user to route text output, alerts, environment sounds or audio to a braille or other second screen device.</li>
+<li><strong>REQ 14b:</strong> Ensure that the user can manage the flow of critical messaging, or content to display on a second screen.</li>
+<li><strong>REQ 14c:</strong> Support touch screen accessibility gestures (e.g. swipes, flicks and single, double or triple taps with 1, 2 or 3 fingers) on a second screen device to allow the user to navigate menus and interact.</li>
 
 </ul>
 
@@ -1011,7 +1050,7 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="interaction-speed">
 
-<h3 id="x4-16-interaction-speed"><bdi class="secno">4.16 </bdi>Interaction speed<a class="self-link" aria-label="§" href="#interaction-speed"></a></h3>
+<h3 id="x4-15-interaction-speed"><bdi class="secno">4.15 </bdi>Interaction speed<a class="self-link" aria-label="§" href="#interaction-speed"></a></h3>
 
 <ul>
 <li><strong>User Need 15:</strong> Users with physical disabilities or cognitive and learning disabilities may find some interactions too fast to keep up with or maintain.</li>
@@ -1030,10 +1069,10 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 <section id="avoiding-sickness-triggers">
 
-<h3 id="x4-17-avoiding-sickness-triggers"><bdi class="secno">4.17 </bdi>Avoiding sickness triggers<a class="self-link" aria-label="§" href="#avoiding-sickness-triggers"></a></h3>
+<h3 id="x4-16-avoiding-sickness-triggers"><bdi class="secno">4.16 </bdi>Avoiding sickness triggers<a class="self-link" aria-label="§" href="#avoiding-sickness-triggers"></a></h3>
 
 <ul>
-<li><strong>User Need 16:</strong> Users with vestibular disorders, Epilepsy, and photo sensitivity may find some interactions trigger motion sickness and other affects.</li>
+<li><strong>User Need 16:</strong> Users with vestibular disorders, Epilepsy, and photo sensitivity may find some interactions trigger motion sickness and other affects. This may be triggered when doing teleportation or other movements in <abbr title="Virtual and Augmented Reality">XR</abbr>.</li>
 
 <li><strong>REQ 16a:</strong> Avoid interactions that trigger epilepsy or motion sickness and provide alternatives.</li>
 <li><strong>REQ 16b:</strong> Ensure flickering images are at a minimum, will not trigger seizures (more than 3 times a second), or can be turned off or reduced.</li>
@@ -1042,27 +1081,42 @@ There are a variety of alternative gaming controls that may be very useful in <a
 
 </section>
 
-<section id="binaural-audio-track-alternatives">
+<section id="spatial-audio-tracks-and-alternatives">
 
-<h3 id="x4-18-binaural-audio-track-alternatives"><bdi class="secno">4.18 </bdi>Binaural audio track alternatives<a class="self-link" aria-label="§" href="#binaural-audio-track-alternatives"></a></h3>
+<h3 id="x4-17-spatial-audio-tracks-and-alternatives"><bdi class="secno">4.17 </bdi>Spatial audio tracks and alternatives<a class="self-link" aria-label="§" href="#spatial-audio-tracks-and-alternatives"></a></h3>
 
 <ul>
-<li><strong>User Need 17:</strong> Deaf and hard of hearing users may need binaural recordings of audio content in order to perceive it.</li>
+<li><strong>User Need 17:</strong> Deaf and hard of hearing users may need spatialized audio content with audio description in order to perceive it.</li>
 
-<li><strong>REQ 17a:</strong> Provide alternative binaural audio recording tracks to emulate 3 dimensional sound forms in immersive environments.</li>
+<li><strong>REQ 17a:</strong> Provide spatialized audio content and audio descriptions to emulate three dimensional sound forms in immersive environments.</li>
 
 </ul>
 
 </section>
 
-<section id="subtitling-customization">
-<h3 id="x4-19-subtitling-customization"><bdi class="secno">4.19 </bdi>Subtitling customization<a class="self-link" aria-label="§" href="#subtitling-customization"></a></h3>
+<section id="captioning-subtitling-and-text-support-and-customization">
+<h3 id="x4-18-captioning-subtitling-and-text-support-and-customization"><bdi class="secno">4.18 </bdi>Captioning, Subtitling and Text: Support and customization<a class="self-link" aria-label="§" href="#captioning-subtitling-and-text-support-and-customization"></a></h3>
 
 <ul>
 
-<li><strong>User Need 18:</strong> Users with vision impairments may need to customise subtitles and other text in immersive environments.</li>
+<li><strong>User Need 18:</strong> Users with vision impairments may need to customise captions, subtitles and other text in <abbr title="Virtual and Augmented Reality">XR</abbr> environments.</li>
 
-<li><strong>REQ 18a:</strong> Allow customisable context sensitive reflow of text and subtitled content in <abbr title="Virtual and Augmented Reality">XR</abbr> spaces. The suitable subtitling area may be smaller than what is required currently for television [<cite><a class="bibref" data-link-type="biblio" href="#bib-inclusive-seattle">inclusive-seattle</a></cite>].</li>
+
+<li><strong>REQ 18a:</strong> Provide support for captioning and subtitling of multimedia content.</li>
+
+<li><strong>REQ 18b:</strong> Allow customisable context sensitive reflow of captions, subtitles and text content in <abbr title="Virtual and Augmented Reality">XR</abbr> environments. The suitable subtitling area may be smaller than what is required currently for television [<cite><a class="bibref" data-link-type="biblio" href="#bib-inclusive-seattle">inclusive-seattle</a></cite>].</li>
+
+</ul>
+
+	</section>
+	<section id="mono-audio-option">
+<h3 id="x4-19-mono-audio-option"><bdi class="secno">4.19 </bdi>Mono audio option<a class="self-link" aria-label="§" href="#mono-audio-option"></a></h3>
+
+<ul>
+
+<li><strong>User Need 19:</strong> Users with hearing loss in just one ear may miss information in a stereo or binaural soundscape.</li>
+
+<li><strong>REQ 19a:</strong> Allow mono audio sound to be sent to both headphones so that the user can perceive the whole soundscape through either ear. [<cite><a class="bibref" data-link-type="biblio" href="#bib-mono-ios">mono-ios</a></cite>].</li>
 
 </ul>
 
@@ -1100,11 +1154,19 @@ There are a variety of alternative gaming controls that may be very useful in <a
 		<li>Janina Sajka, Invited Expert</li>
 		<li>Léonie Watson, TetraLogical</li>
 		<li>Jason White, Educational Testing Service</li>
+		<li>Sonali Rai, Royal National Institute of the Blind</li>
+		<li>Nicoló Carpignoli, Chialab </li>
 	</ul>
 	</section>
 	<section id="previously-active-participants-commenters-and-other-contributors">
 		<h3 id="a-2-previously-active-participants-commenters-and-other-contributors"><bdi class="secno">A.2 </bdi>Previously Active Participants, Commenters, and Other Contributors<a class="self-link" aria-label="§" href="#previously-active-participants-commenters-and-other-contributors"></a></h3>
-		<p>Ian Hamilton</p>
+		<ul>
+		<li>Ian Hamilton</li>
+		<li>Thomas Logan, Equal Entry</li>
+		<li>Christopher Patnoe, Google</li>
+		<li>Devon Persing, Shopify</li>
+		<li>Ajay Sharma, HCL Technologies</li>
+	</ul>
 	</section>
 	<section id="enabling-funders">
 <h3 id="a-3-enabling-funders"><bdi class="secno">A.3 </bdi>Enabling Funders<a class="self-link" aria-label="§" href="#enabling-funders"></a></h3>
@@ -1120,7 +1182,7 @@ There are a variety of alternative gaming controls that may be very useful in <a
         Informative references
       <a class="self-link" aria-label="§" href="#informative-references"></a></h3>
     <dl class="bibliography">
-      <dt id="bib-able-gamers">[able-gamers]</dt><dd><a href="https://ablegamers.org/thoughts-on-accessibility-and-vr/"><cite>Thought On Accessibility and VR</cite></a>. AJ Ryan. March, 2017. URL: <a href="https://ablegamers.org/thoughts-on-accessibility-and-vr/">https://ablegamers.org/thoughts-on-accessibility-and-vr/</a></dd><dt id="bib-game-a11y">[game-a11y]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-inclusive-seattle">[inclusive-seattle]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-maidenbaum-amendi">[maidenbaum-amendi]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-web-adapt">[web-adapt]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd>
+      <dt id="bib-able-gamers">[able-gamers]</dt><dd><a href="https://ablegamers.org/thoughts-on-accessibility-and-vr/"><cite>Thought On Accessibility and VR</cite></a>. AJ Ryan. March, 2017. URL: <a href="https://ablegamers.org/thoughts-on-accessibility-and-vr/">https://ablegamers.org/thoughts-on-accessibility-and-vr/</a></dd><dt id="bib-game-a11y">[game-a11y]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-inclusive-seattle">[inclusive-seattle]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-maidenbaum-amendi">[maidenbaum-amendi]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-mono-ios">[mono-ios]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-personalization-content">[personalization-content]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-personalization-requirements">[personalization-requirements]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-personalization-semantics">[personalization-semantics]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-spatialized-navigation">[spatialized-navigation]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-supple-project">[supple-project]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-web-adapt">[web-adapt]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd>
     </dl></section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
