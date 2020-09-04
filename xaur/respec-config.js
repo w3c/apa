@@ -60,6 +60,12 @@ var respecConfig = {
 			mailto: "jjwhite@ets.org",
 			w3cid: 74028
 		},
+			{
+			name: "Scott Hollier",
+			url: "http://www.hollier.info/",
+			mailto: "scott@hollier.info",
+			
+		},
 		{
 			name: "Michael Cooper",
 			url: 'https://www.w3.org',

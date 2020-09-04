@@ -425,5 +425,129 @@ respecConfig.localBiblio = {
         "title": "WebRTC DSCP Control API"
 
     }
+
+    "web-adapt": {
+        "authors": [
+            "Matthew Tylee Atkinson",
+            "Ian Hamilton",
+            "Joe Humbert",
+            "Kit Wessendorf"
+        ],
+        "date": "Dec 2018",
+        "title": "W3C Workshop on Web Games Position Paper: Adaptive Accessibility",
+        "href": "https://www.w3.org/2018/12/games-workshop/papers/web-games-adaptive-accessibility.html",
+        "publisher": "W3C"
+    },
+     "inclusive-seattle": {
+        "authors": [
+            "W3C",
+            "Pluto VR"
+        ],
+        "date": "Nov 2019",
+        "title": "W3C Workshop on Inclusive XR Seattle",
+        "href": "https://www.w3.org/2019/08/inclusive-xr-workshop/",
+        "publisher": "W3C"
+    },
+        "game-a11y": {
+        "authors": [
+            "Barrie Ellis",
+            "Ian Hamilton",
+            "Gareth Ford-Williams",
+            "Lynsey Graham",
+            "Dimitris Grammenos",
+            "Ed Lee",
+            "Jake Manion",
+            "Thomas Westin"
+        ],
+        "date": "2019",
+        "title": "Game Accessibility Guidelines",
+        "href": "http://gameaccessibilityguidelines.com"
+        
+    },
+
+     "maidenbaum-amendi": {
+        "authors": [
+            "Maidenbaum, S.",
+            "Amedi, A",
+        ],
+        "date": "2015",
+        "title": "Non-visual virtual interaction: Can Sensory Substitution generically increase the accessibility of Graphical virtual reality to the blind?",
+        "publisher": "In Virtual and Augmented Assistive Technology (VAAT), 2015 3rd IEEE VR International Workshop on (pp. 15-17). IEEE"
+        
+    },
+
+         "mono-ios": {
+        "authors": [
+            "Apple"
+        ],
+        "date": "2020",
+        "title": "iPhone User Guide",
+        "href": "https://support.apple.com/en-gb/guide/iphone/iph3e2e2cdc/ios"
+        
+    },
+
+      "personalization-semantics": {
+        "authors": [
+            "Lisa Seeman",
+        "Charles LaPierre",
+        "Michael Cooper",
+        "Roy Ran",
+        "Richard Schwerdtfeger"
+         ],
+        "date": "2020",
+        "title": "Personalization Semantics Explainer 1.0",
+        "href": "https://www.w3.org/TR/personalization-semantics-1.0/",
+        "publisher": "W3C"
+    },
+
+       "personalization-content": {
+        "authors": [
+            "Lisa Seeman",
+        "Charles LaPierre",
+        "Michael Cooper",
+        "Roy Ran",
+        "Richard Schwerdtfeger"],
+        "date": "2020",
+        "title": "Personalization Semantics Content Module 1.0",
+        "href": "Personalization Semantics Content Module 1.0",
+        "publisher": "W3C"
+    },
+
+       "personalization-requirements": {
+        "authors": [
+            "Lisa Seeman",
+        "Charles LaPierre",
+        "Michael Cooper",
+        "Roy Ran"
+        ],
+        "date": "2020",
+        "title": "Requirements for Personalization Semantics",
+        "href": "https://www.w3.org/TR/personalization-semantics-requirements-1.0/",
+        "publisher": "W3C"
+    },
+
+       "supple-project": {
+        "authors": [
+            "Krzysztof Gajos et al"
+        ],
+        "date": "2010",
+        "title": "SUPPLE: Automatically Generating Personalized User Interfaces",
+        "href": "http://www.eecs.harvard.edu/~kgajos/research/supple/",
+        "publisher": "Harvard"
+    },
+
+      "spatialized-navigation": {
+        "authors": [
+            "Blum J.R.", 
+            "Bouchard M.", 
+            "Cooperstock J.R. "
+        ],
+        "date": "2012",
+        "title": "What’s around Me? Spatialized Audio Augmented Reality for Blind Users with a Smartphone",
+        "href": "https://link.springer.com/chapter/10.1007/978-3-642-30973-1_5",
+        "publisher": "Springer"
+    }
                           
 }
+
+
