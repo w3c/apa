@@ -424,7 +424,7 @@ respecConfig.localBiblio = {
         "publisher": "W3C",
         "title": "WebRTC DSCP Control API"
 
-    }
+    },
 
     "web-adapt": {
         "authors": [
@@ -468,7 +468,7 @@ respecConfig.localBiblio = {
      "maidenbaum-amendi": {
         "authors": [
             "Maidenbaum, S.",
-            "Amedi, A",
+            "Amedi, A"
         ],
         "date": "2015",
         "title": "Non-visual virtual interaction: Can Sensory Substitution generically increase the accessibility of Graphical virtual reality to the blind?",
