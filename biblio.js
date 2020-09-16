@@ -509,7 +509,7 @@ respecConfig.localBiblio = {
         "Richard Schwerdtfeger"],
         "date": "2020",
         "title": "Personalization Semantics Content Module 1.0",
-        "href": "Personalization Semantics Content Module 1.0",
+        "href": "https://www.w3.org/TR/personalization-semantics-content-1.0/",
         "publisher": "W3C"
     },
 
