@@ -438,6 +438,13 @@ respecConfig.localBiblio = {
         "publisher": "W3C",
         "title": "Media Queries Level 5"
 
+    },
+     "xaur": {
+        "date": "16 Sept 2020",
+        "href": "https://www.w3.org/TR/xaur/",
+        "publisher": "W3C",
+        "title": "XR Accessibility User Requirements"
+
     }
                           
 }
