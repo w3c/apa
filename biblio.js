@@ -431,6 +431,13 @@ respecConfig.localBiblio = {
         "publisher": "W3C",
         "title": "Personalization Semantics Content Module 1.0"
 
+    },
+        "media-queries": {
+        "date": "31 July 2020",
+        "href": "https://www.w3.org/TR/mediaqueries-5/",
+        "publisher": "W3C",
+        "title": "Media Queries Level 5"
+
     }
                           
 }
