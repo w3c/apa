@@ -424,6 +424,13 @@ respecConfig.localBiblio = {
         "publisher": "W3C",
         "title": "WebRTC DSCP Control API"
 
+    },
+      "personalization": {
+        "date": "27 January 2020",
+        "href": "https://www.w3.org/TR/personalization-semantics-content-1.0/",
+        "publisher": "W3C",
+        "title": "Personalization Semantics Content Module 1.0"
+
     }
                           
 }
