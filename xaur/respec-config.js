@@ -33,6 +33,7 @@ var respecConfig = {
 	
 	// if there a publicly available Editors Draft, this is the link
 	edDraftURI: "https://w3c.github.io/apa/xaur/",
+	github: "w3c/apa",
 	
 	// if this is a LCWD, uncomment and set the end of its review period
 	// lcEnd: "2012-02-21",
@@ -59,6 +60,12 @@ var respecConfig = {
 			url: "http://www.ets.org/",
 			mailto: "jjwhite@ets.org",
 			w3cid: 74028
+		},
+			{
+			name: "Scott Hollier",
+			url: "http://www.hollier.info/",
+			mailto: "scott@hollier.info",
+			
 		},
 		{
 			name: "Michael Cooper",
@@ -90,20 +97,8 @@ var respecConfig = {
 	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
 	
 	// name of the WG
-	wg:           "Accessible Platform Architectures Working Group",
+	group:           "wai-apa",
 	
-	// URI of the public WG page
-	wgURI:        "https://www.w3.org/WAI/APA/",
-	
-	// name (with the @w3c.org) of the public mailing to which comments are due
-	wgPublicList: "public-apa",
-	
-	// URI of the patent status for this WG, for Rec-track documents
-	// !!!! IMPORTANT !!!!
-	// This is important for Rec-track documents, do not copy a patent URI from a random
-	// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
-	// Team Contact.
-	wgPatentURI:  "https://www.w3.org/2004/01/pp-impl/83907/status",
 	maxTocLevel: 4
 	
 };
