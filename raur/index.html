@@ -16,7 +16,10 @@
 </section>
 
 	<section id="sotd">
-			<p>To comment, <a href="https://github.com/w3c/apa/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> APA GitHub repository</a> adding the RAUR label. If this is not feasible, send email to <a href="mailto:public-apa@w3.org">public-apa@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>). Comments are requested by <strong>21 April 2020</strong>. In-progress updates to the document may be viewed in the <a href="https://w3c.github.io/apa/xaur/">publicly visible editors' draft</a>.</p>
+
+		<p>This draft updates the First Public Working Draft of the <abbr title="World Wide Web Consortium">W3C</abbr> Working Group Note <a href="https://www.w3.org/TR/raur/"><abbr title="Real Time Communications">RTC</abbr> Accessibility User Requirements (RAUR)</a> by the Accessible Platform Architectures (APA) Working Group which was first published in March 2020.</p>
+
+			<p>To comment, <a href="https://github.com/w3c/apa/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> APA GitHub repository</a> adding the RAUR label. If this is not feasible, send email to <a href="mailto:public-apa@w3.org">public-apa@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>). In-progress updates to the document may be viewed in the <a href="https://w3c.github.io/apa/raur/">publicly visible editors' draft</a>.</p>
 		</section>
 		<section>
 			<h2>Introduction</h2>
@@ -65,11 +68,11 @@
 
 <section>
 
-<h3>Pause capture of on record captioning in RTC</h3>
+<h3>Pause capture of 'on record' captioning in RTC</h3>
 <ul>
 <li><strong>User Need 2:</strong> A deaf or hard of hearing user may need captioning of content in a meeting or presentation to be private.</li>
-<li><strong>REQ 2a:</strong>  Ensure there is a host operable toggle in the captioning service (whether human or automated) that facilitates going on and off record for the preserved transcript, but continues to provide captions meanwhile fpr 'off record' conversations.</li>
-<li><strong>REQ 2b:</strong> Ensure the toggle between saving recordings also applies to the saving of captions. There shoule be a mechanism that both audio and captions can be paused or stopped, and both can be simultaneously restored for recording. </li>
+<li><strong>REQ 2a:</strong>  Ensure there is a host operable toggle in the captioning service (whether human or automated) that facilitates going on and off record for the preserved transcript, but continues to provide captions meanwhile for 'off record' conversations.</li>
+<li><strong>REQ 2b:</strong> Ensure the toggle between saving recordings also applies to the saving of captions. There should be a mechanism that both audio and captions can be paused or stopped, and both can be simultaneously restored for recording. </li>
 </ul>
 </section>
 
@@ -88,7 +91,7 @@
 <ul>
 <li><strong>User Need 4:</strong> A screen&#45;reader user or user with a cognitive impairment needs to know a call is incoming and needs to recognise the ID of the caller. </li>
 
-<li><strong>REQ 4a:</strong> Provide indicatation of incoming calls in an unobtrusive way via a symbol set or other browser notification.</li> 
+<li><strong>REQ 4a:</strong> Provide indication of incoming calls in an unobtrusive way via a symbol set or other browser notification.</li> 
 <li><strong>REQ 4b:</strong> Alert assistive technologies via relevant APIs.</li>
 
 </ul> 
@@ -162,6 +165,7 @@
 <li><strong>User Need 11:</strong> In an emergency situation a deaf, speech impaired, hard of hearing or deaf blind user needs to make an emergency call, instantly send and receive related text messages and/or sign via a video stream.</li>
 
 <li><strong>REQ 11a:</strong> Provide or ensure support for <abbr title="Real&#45;time text">RTT</abbr> in <abbr title="Web Real&#45;time communication">WebRTC</abbr>. 
+	<li><strong>REQ 11b:</strong> Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging platforms. 
 
 		</section>
 
@@ -237,7 +241,7 @@
 <ul>
 <li><strong>User Need 18: </strong> To translate text to speech interactions into comprehensible speech; a blind screen reader user depending on <abbr title="Text to Speech">TTS</abbr> to interact with their computers and smart devices needs a traditional Internet Relay Chat (IRC) style interface.</li>
 
-	  <li><strong>REQ 18a:</strong> Preserve <abbr title="Internet Relay Chat">IRC</abbr> as a configuration option in agents that implement <abbr title="Web Real&#45;time communication">WebRTC</abbr> as opposed to having only the Real&#45;time text (<abbr title="Real&#45;time text">RTT</abbr>) type interface. While (<abbr title="Real&#45;time text">RTT</abbr>) is very imporant it is favoured by users who are deaf or hearing impaired.  For screen reader users, <abbr title="Text to Speech">TTS</abbr> cannot reasonably translate text into comprehensible speech unless the characters to be pronounced are transmitted in very close timing to one another. Typical gaps will result in stuttering and highly unintelligible output from the <abbr title="Text to Speech">TTS</abbr> engine.</p>
+	  <li><strong>REQ 18a:</strong> Preserve <abbr title="Internet Relay Chat">IRC</abbr> as a configuration option in user agents that implement <abbr title="Web Real&#45;time communication">WebRTC</abbr> as opposed to having only the Real&#45;time text (<abbr title="Real&#45;time text">RTT</abbr>) type interface. (<abbr title="Real&#45;time text">RTT</abbr>) is favoured by users who are deaf or hearing impaired.  For screen reader users, <abbr title="Text to Speech">TTS</abbr> cannot reasonably translate text into comprehensible speech unless characters are transmitted in very close timing to one another. Typical gaps will result in stuttering and highly unintelligible speech output from the <abbr title="Text to Speech">TTS</abbr> engine.</p>
 </li>
 </ul>
 
