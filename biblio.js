@@ -508,6 +508,16 @@ respecConfig.localBiblio = {
         
     },
 
+           "total-conversation": {
+        "authors": [
+            "International Telecommunication Union (ITU)"
+        ],
+        "date": "2020",
+        "title": "ITU-T SG 16 Work on Accessibility - Total Conversation",
+        "href": "https://www.itu.int/en/ITU-T/studygroups/com16/accessibility/Pages/conversation.aspx"
+        
+    },
+
       "personalization-semantics": {
         "authors": [
             "Lisa Seeman",
