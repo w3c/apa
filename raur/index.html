@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>RTC Accessibility User Requirements</title>
-		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove" defer="defer"></script>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer="defer"></script>
 		<script src="respec-config.js" class="remove"></script>
 		<script src="../biblio.js" class="remove" defer="defer"></script>
 	</head>
@@ -153,9 +153,9 @@
 
 </ul>
 
-<div class="note" role="note" id="issue-container-generatedID">
-<div role="heading" class="note-title marker" id="h-note" aria-level="3"><!---0.722394%--></div>
+<p class="note">
 This user need may also indicate necessary support for 'Total conversation' services as defined by <abbr title="International Telecommunication Union">ITU</abbr> in <abbr title="Web Real&#45;time communication">WebRTC</abbr> applications. These are combinations of voice, video, and real-time text (RTT) in the same real-time session. [[total-conversation]]
+</p>
 
 		</section>
 
@@ -167,7 +167,8 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <li><strong>User Need 11:</strong> In an emergency situation a deaf, speech impaired, hard of hearing or deaf blind user needs to make an emergency call, instantly send and receive related text messages and/or sign via a video stream.</li>
 
 <li><strong>REQ 11a:</strong> Provide or ensure support for <abbr title="Real&#45;time text">RTT</abbr> in <abbr title="Web Real&#45;time communication">WebRTC</abbr>. 
-	<li><strong>REQ 11b:</strong> Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging platforms. 
+	<li><strong>REQ 11b:</strong> Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging platforms. </li>
+</ul>
 
 		</section>
 
@@ -188,7 +189,8 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <h3>Distinguishing sent and received text with <abbr title="Real&#45;time text">RTT</abbr></h3>
 <ul>
 <li><strong>User Need 13:</strong> A deaf or deaf blind user needs to tell the difference between incoming text and outgoing text.
-<li><strong>REQ 13a:</strong> Ensure when used with <abbr title="Real&#45;time text">RTT</abbr> functionality, <abbr title="Web Real&#45;time communication">WebRTC</abbr> handles the routing of this information to a format or output of the users choosing.</p>
+<li><strong>REQ 13a:</strong> Ensure when used with <abbr title="Real&#45;time text">RTT</abbr> functionality, <abbr title="Web Real&#45;time communication">WebRTC</abbr> handles the routing of this information to a format or output of the users choosing.</li>
+</ul>
 		</section>
 	
 		<section>
@@ -205,7 +207,7 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <ul>
 <li><strong>User Need 15:</strong> A deaf user or user with a cognitive disability needs to access a channel containing live transcriptions or captioning during a conference call or broadcast.</li>
  <li><strong>REQ 15a:</strong> Honor user preferences relating to live transcription and captioning e.g. provide support for signing or a related symbol set.</li>
-
+</ul>
 		</section>
 
 		<section>
@@ -224,14 +226,12 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <h3>Personalized symbol sets for users with cognitive disabilities</h3>
 
 <ul>
-<li><strong>User Need 17: </strong> Users with cognitive disabilities may need to use symbol sets for identifying functions available in a <abbr title="Web Real&#45;time communication">WebRTC</abbr> enabled client for voice, file or data transfer.</p>
+<li><strong>User Need 17: </strong> Users with cognitive disabilities may need to use symbol sets for identifying functions available in a <abbr title="Web Real&#45;time communication">WebRTC</abbr> enabled client for voice, file or data transfer.</li>
 
   <li><strong>REQ 17a:</strong> Provide personalization support for symbols set replacements of existing user interface rendering of current functions or controls.</li>
 </ul>
 
-<div class="note" role="note" id="issue-container-generatedID">
-<div role="heading" class="note-title marker" id="h-note" aria-level="3"><!---0.722394%--></div>This relates to cognitive accessibility requirements. For related work at W3C see the 'Personalization Semantics Content Module 1.0' and 'Media Queries Level 5'. [[personalization]] [[media-queries]]</div>
-</p>
+<p class="note">This relates to cognitive accessibility requirements. For related work at W3C see the 'Personalization Semantics Content Module 1.0' and 'Media Queries Level 5'. [[personalization]] [[media-queries]]</p>
 
 </section>
 
@@ -243,17 +243,10 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <ul>
 <li><strong>User Need 18: </strong> To translate text to speech interactions into comprehensible speech; a blind screen reader user depending on <abbr title="Text to Speech">TTS</abbr> to interact with their computers and smart devices needs a traditional Internet Relay Chat (IRC) style interface.</li>
 
-	  <li><strong>REQ 18a:</strong> Preserve <abbr title="Internet Relay Chat">IRC</abbr> as a configuration option in user agents that implement <abbr title="Web Real&#45;time communication">WebRTC</abbr> as opposed to having only the Real&#45;time text (<abbr title="Real&#45;time text">RTT</abbr>) type interface. (<abbr title="Real&#45;time text">RTT</abbr>) is favoured by users who are deaf or hearing impaired.  For screen reader users, <abbr title="Text to Speech">TTS</abbr> cannot reasonably translate text into comprehensible speech unless characters are transmitted in very close timing to one another. Typical gaps will result in stuttering and highly unintelligible speech output from the <abbr title="Text to Speech">TTS</abbr> engine.</p>
-</li>
+	  <li><strong>REQ 18a:</strong> Preserve <abbr title="Internet Relay Chat">IRC</abbr> as a configuration option in user agents that implement <abbr title="Web Real&#45;time communication">WebRTC</abbr> as opposed to having only the Real&#45;time text (<abbr title="Real&#45;time text">RTT</abbr>) type interface. (<abbr title="Real&#45;time text">RTT</abbr>) is favoured by users who are deaf or hearing impaired.  For screen reader users, <abbr title="Text to Speech">TTS</abbr> cannot reasonably translate text into comprehensible speech unless characters are transmitted in very close timing to one another. Typical gaps will result in stuttering and highly unintelligible speech output from the <abbr title="Text to Speech">TTS</abbr> engine.</li>
 </ul>
 
-<div class="note" role="note" id="issue-container-generatedID">
-<div role="heading" class="note-title marker" id="h-note" aria-level="3"><!---0.722394%--></div>
-
-
-<div>Some braille users will also prefer the <abbr title="Real&#45;time text">RTT</abbr> model. However, braille users desiring text displayed with standard contracted braille might better be served in the manner users relying on text to speech (<abbr title="Text to Speech">TTS</abbr>) engines are served, by buffering the data to be transmitted until an end of line character is reached.</div>
-</div>
-
+<p class="note"> Some braille users will also prefer the <abbr title="Real&#45;time text">RTT</abbr> model. However, braille users desiring text displayed with standard contracted braille might better be served in the manner users relying on text to speech (<abbr title="Text to Speech">TTS</abbr>) engines are served, by buffering the data to be transmitted until an end of line character is reached.</p>
 		</section>
 
 		
@@ -278,8 +271,7 @@ This user need may also indicate necessary support for 'Total conversation' serv
 
 <p><strong>Scenario:</strong> A deaf user watching a signed broadcast needs a high&#45;quality frame rate to maintain legibility and clarity in order to understand what is being signed.</p>
 
-<div class="note" role="note" id="issue-container-generatedID">
-<div role="heading" class="note-title marker" id="h-note" aria-level="3"><!---0.722394%--></div>EN 301 549 Section 6,  recommends  <abbr title="Web Real&#45;time communication">WebRTC</abbr> applications should support a frame rate of at least 20 frames per second (FPS). More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></div>
+<p class="note">EN 301 549 Section 6,  recommends  <abbr title="Web Real&#45;time communication">WebRTC</abbr> applications should support a frame rate of at least 20 frames per second (FPS). More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p>
 
 		</section>
 
@@ -296,15 +288,10 @@ This user need may also indicate necessary support for 'Total conversation' serv
 
 <p><strong>Scenario:</strong> A hard of hearing user needs better stereo sound so they can have a quality experience in watching HD video or having a HD meeting with friends or family. Transmission aspects, such as frames per minute for video quality needs to be of high&#45;quality.</p>
 
-<div class="note" role="note" id="issue-container-generatedID">
-<div role="heading" class="note-title marker" id="h-note" aria-level="3"><!---0.722394%--></div>
+<p class="note">EN 301 549 Section 6,  recommends for <abbr title="Web Real&#45;time communication">WebRTC</abbr> enabled conferencing and communication the application shall be able to encode and decode communication with a frequency range with an upper limit of at least 7KHz. More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p>
 
-<div> EN 301 549 Section 6,  recommends for <abbr title="Web Real&#45;time communication">WebRTC</abbr> enabled conferencing and communication the application shall be able to encode and decode communication with a frequency range with an upper limit of at least 7KHz. More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></div>
-</div>
+<p class="note"><abbr title="Web Real&#45;time communication">WebRTC</abbr> lets applications prioritise bandwidth dedicated to audio / video / data streams; there is also some experimental work in signalling these needs to the network layer as well as support for prioritising frame rate over resolution in case of congestion. [[webrtc-priority]]</p>
 
-<div class="note" role="note" id="issue-container-generatedID">
-<div role="heading" class="note-title marker" id="h-note" aria-level="3"><!---0.722394%--></div><div><abbr title="Web Real&#45;time communication">WebRTC</abbr> lets applications prioritise bandwidth dedicated to audio / video / data streams; there is also some experimental work in signalling these needs to the network layer as well as support for prioritising frame rate over resolution in case of congestion. [[webrtc-priority]]</div>
-</div>
 
 </section>
 
@@ -432,7 +419,7 @@ Relates to RFC 5149 &#45; Transport Requirements/Text over IP (ToIP) and Relay S
 </tr>
 <tr>
 <th scope="row">Identify caller</th>
-<td> <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>/<abbr title="Accessibility Guidelines Working Group">AGWG</abbr>, <abbr title="Accessible Rich Internet Applications">ARIA</abbr>. Needs further clarification/review may be an accessible user interface issue. Identity may be handled by the browser via <a href="https://w3c.github.io/webrtc</abbr>&#45;identity/identity.html">Identity for <abbr title="Web Real&#45;time communication">WebRTC</abbr> 1.0</a>.</td>
+<td> <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>/<abbr title="Accessibility Guidelines Working Group">AGWG</abbr>, <abbr title="Accessible Rich Internet Applications">ARIA</abbr>. Needs further clarification/review may be an accessible user interface issue. Identity may be handled by the browser via <a href="https://w3c.github.io/webrtc&#45;identity/identity.html">Identity for <abbr title="Web Real&#45;time communication">WebRTC</abbr> 1.0</a>.</td>
 <td>
 Similar to R27 in RFC 5194 5.2.4. Presentation and User Requirements</td>
 <td>Maps to <a href="http://mandate376.standards.eu/standard/technical&#45;requirements/caller&#45;id">6.3 Caller ID</a></td>
