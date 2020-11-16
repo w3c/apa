@@ -426,6 +426,28 @@ respecConfig.localBiblio = {
 
     },
 
+      "personalization": {
+        "date": "27 January 2020",
+        "href": "https://www.w3.org/TR/personalization-semantics-content-1.0/",
+        "publisher": "W3C",
+        "title": "Personalization Semantics Content Module 1.0"
+
+    },
+        "media-queries": {
+        "date": "31 July 2020",
+        "href": "https://www.w3.org/TR/mediaqueries-5/",
+        "publisher": "W3C",
+        "title": "Media Queries Level 5"
+
+    },
+     "xaur": {
+        "date": "16 Sept 2020",
+        "href": "https://www.w3.org/TR/xaur/",
+        "publisher": "W3C",
+        "title": "XR Accessibility User Requirements"
+
+},
+
     "web-adapt": {
         "authors": [
             "Matthew Tylee Atkinson",
@@ -483,6 +505,16 @@ respecConfig.localBiblio = {
         "date": "2020",
         "title": "iPhone User Guide",
         "href": "https://support.apple.com/en-gb/guide/iphone/iph3e2e2cdc/ios"
+        
+    },
+
+           "total-conversation": {
+        "authors": [
+            "International Telecommunication Union (ITU)"
+        ],
+        "date": "2020",
+        "title": "ITU-T SG 16 Work on Accessibility - Total Conversation",
+        "href": "https://www.itu.int/en/ITU-T/studygroups/com16/accessibility/Pages/conversation.aspx"
         
     },
 
