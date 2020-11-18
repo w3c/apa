@@ -15,11 +15,37 @@
 <p>This document is most explicitly not a collection of baseline requirements. It is also important to note that some of the requirements may be implemented at a system or platform level, and some may be authoring requirements.</p>
 </section>
 
-	<section id="sotd">
-<!--
-		<p>This draft updates the First Public Working Draft of the <abbr title="World Wide Web Consortium">W3C</abbr> Working Group Note <a href="https://www.w3.org/TR/raur/"><abbr title="Real Time Communications">RTC</abbr> Accessibility User Requirements (RAUR)</a> by the Accessible Platform Architectures (APA) Working Group which was first published in March 2020.</p>
-		-->
-		</section>
+<section id="sotd" class="introductory">
+
+			<p>This is a <a href="https://www.w3.org/2019/Process-20190301/#WGNote">Working Group Note</a> of RTC Accessibility User Requirements by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures (APA) Working Group</a> with support from the <a href="https://www.w3.org/WAI/APA/task-forces/research-questions/">Research Questions Task Force</a>. This version includes updates based on public feedback to the <a href="https://www.w3.org/TR/raur/">2First Public Working Draft 19 March 2020</a>.</p>
+			<p>At time of publication, the APA Working Group does not have specific plans to publish further updates to this document, but input received and further evolution of technology may trigger additional updates. To comment, <a href="https://github.com/w3c/apa/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> apa GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-apa@w3.org?subject=Comment%20on%20RTC%20Accessibility%20User%20Requirements">public-apa@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-apa/">comment archive</a>). In-progress updates to the document may be viewed in the <a href="https://w3c.github.io/apa/raur/">publicly visible editors' draft</a>.</p>
+		<p>
+      This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as a
+      Working Group Note.
+      
+    </p><p>
+      
+      Comments regarding this document are welcome.
+            Please send them to
+            <a href="mailto:public-apa@w3.org">public-apa@w3.org</a>
+            (<a href="https://lists.w3.org/Archives/Public/public-apa/">archives</a>).
+          
+    </p><p>
+      Publication as a Working Group Note does not imply endorsement by the
+      <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or
+      obsoleted by other documents at any time. It is inappropriate to cite this
+      document as other than work in progress.
+    </p><p data-deliverer="83907">
+      
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+      
+      
+    </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section>
 		<section>
 			<h2>Introduction</h2>
 
@@ -67,9 +93,9 @@
 
 <section>
 
-<h3>Pause capture of 'on record' captioning in RTC</h3>
+<h3>Pause 'on record' captioning in RTC</h3>
 <ul>
-<li><strong>User Need 2:</strong> A deaf or hard of hearing user may need captioning of content in a meeting or presentation to be private.</li>
+<li><strong>User Need 2:</strong> A deaf or hard of hearing user may need captioning of content to be private in a meeting or presentation.</li>
 <li><strong>REQ 2a:</strong>  Ensure there is a host operable toggle in the captioning service (whether human or automated) that facilitates going on and off record for the preserved transcript, but continues to provide captions meanwhile for 'off record' conversations.</li>
 <li><strong>REQ 2b:</strong> Ensure the toggle between saving recordings also applies to the saving of captions. There should be a mechanism that both audio and captions can be paused or stopped, and both can be simultaneously restored for recording. </li>
 </ul>
@@ -166,7 +192,7 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <li><strong>User Need 11:</strong> In an emergency situation a deaf, speech impaired, hard of hearing or deaf blind user needs to make an emergency call, instantly send and receive related text messages and/or sign via a video stream.</li>
 
 <li><strong>REQ 11a:</strong> Provide or ensure support for <abbr title="Real&#45;time text">RTT</abbr> in <abbr title="Web Real&#45;time communication">WebRTC</abbr>. </li>
-	<li><strong>REQ 11b:</strong> Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging platforms. </li>
+	<li><strong>REQ 11b:</strong> Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging methods or platforms. </li>
 </ul>
 
 		</section>
@@ -179,7 +205,7 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <li><strong>User Need 12:</strong> A deaf, speech impaired, or hard of hearing user, needs to communicate on a call using a remote video interpretation service to access sign language and interpreter services.</li>
 
 <li><strong>REQ 12a:</strong> Provide or ensure support for video relay and remote interpretation services. This user need may relate to interoperability with third&#45;party services;  <abbr title="Internet Engineering Task Force">IETF</abbr> has looked at standardizing a way to use Session Initiation Protocol (SIP) with VRS services. [[ietf-relay]] </li>
-<li><strong>REQ 12b:</strong> Provide support for other languages and translations. For example, VRS calls may be made between ASL (American Sign Language) users and hearing persons speaking either English or Spanish, or variations in signing itself such as Irish Sign Language (ISL, more closely related to French sign language) and British Sign Language (BSL) and a user may need to stream both or pin.</li>
+<li><strong>REQ 12b:</strong> Provide support for other languages and translations. For example, VRS calls may be made between ASL (American Sign Language) users and hearing persons speaking either English or Spanish, or variations in signing itself such as Irish Sign Language (ISL which is related to French sign language) and British Sign Language (BSL). A user may need to stream or pin both.</li>
 </ul>
 </section>
 
@@ -434,6 +460,57 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 </table>
 </section>
 
+<section class="appendix" id="change-log">
+			<h2 id="c-change-log">Change Log<a class="self-link" aria-label="§" href="#change-log"></a></h2>
+
+<p>The following is a list of new user needs in this document:</p>
+
+<ul>
+	<li><strong>Window anchoring and pinning:</strong> A deaf or hard of hearing user needs to anchor or pin certain windows in an RTC application so both a sign language interpreter and the person speaking (whose speech is being interpreted) are simultaneously visible.</li>
+<li><strong>REQ 1a:</strong> Provide the ability to anchor or pin specific windows so the user can associate the sign language interpreter with the correct speaker.</li>
+<li><strong>REQ 1b:</strong> Allow the use of flexible pinning of captions or other related content alternatives. This may be to second screen devices.</li>
+<li><strong>REQ 1c:</strong> Ensure the source of any captions, transcriptions or other alternatives is clear to the user, even when second screen devices are used.</li>
+</ul>
+
+
+<ul>
+	<li><strong>Pause 'on record' captioning in RTC:</strong> A deaf or hard of hearing user may need captioning of content to be private in a meeting or presentation.</li>
+<li><strong>REQ 2a:</strong> Ensure there is a host operable toggle in the captioning service (whether human or automated) that facilitates going on and off record for the preserved transcript, but continues to provide captions meanwhile for 'off record' conversations.</li>
+<li><strong>REQ 2b:</strong> Ensure the toggle between saving recordings also applies to the saving of captions. There should be a mechanism that both audio and captions can be paused or stopped, and both can be simultaneously restored for recording.</li>
+
+</ul>
+
+<ul>
+	<li><strong>Accessibility user preferences and profiles:</strong> A user may need to change device or environment and have their accessibility user preferences preserved.</li>
+<li><strong>REQ 3a:</strong> Ensure user profiles and accessibility preferences in RTC applications are mobile and can move with the user as they change device or environment.</li>
+</ul>
+
+
+<p>The following is a list of updated requirements to existing user needs:</p>
+
+
+<ul>
+	<li><strong>Emergency calls and RTT - REQ 11b:</strong>  Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging methods or platforms. </li>
+
+<li><strong>Video relay services (VRS) and remote interpretation (VRI) - REQ 12b:</strong> Provide support for other languages and translations. For example, VRS calls may be made between ASL (American Sign Language) users and hearing persons speaking either English or Spanish, or variations in signing itself such as Irish Sign Language (ISL which is related to French sign language) and British Sign Language (BSL). A user may need to stream or pin both.</li>
+</ul>
+
+
+
+<p>The following are other changes in this document:</p>
+
+<ul>
+	<li>New note on the relationship between RTC and <a href="https://www.w3.org/TR/xaur/">XR Accessibility User Requirements</a>.</li>
+<li>New note on personalization semantics and CSS media queries.</li>
+<li>Moved 'User Need 19:  A deaf user watching a signed broadcast needs a high&#45;quality frame rate to maintain legibility and clarity in order to understand what is being signed' to the 'Quality of service issues' section.</li>
+<li>Added note on ITU definition of Total Conversation services that relates to 'REQ 10a: Ensure support for multiple simultaneous streams'.</li>
+</ul> 
+
+<p class="note">This user need may also indicate necessary support for 'Total conversation' services as defined by ITU in WebRTC applications. These are combinations of voice, video, and real-time text (RTT) in the same real-time session. [total-conversation]</p>
+
+	
+<p>This document has been updated based on document feedback, discussion and Research Questions Task Force consensus.</p>
+</section>
 
 	<section class="appendix">
 			<h2>Acknowledgments</h2>
