@@ -85,10 +85,14 @@
 
 <h3>Incoming calls and caller ID</h3>
 <ul>
-<li><strong>User Need 4:</strong> A screen&#45;reader user or user with a cognitive impairment needs to know a call is incoming and needs to recognise the ID of the caller. </li>
+<li><strong>User Need 4:</strong> A screen&#45;reader user or user with a cognitive impairment needs to know a call is incoming and needs to recognise the ID of the caller. A deaf or hard of hearing user may also need to identify an incoming relay call.</li>
 
 <li><strong>REQ 4a:</strong> Provide indication of incoming calls in an unobtrusive way via a symbol set or other browser notification.</li> 
 <li><strong>REQ 4b:</strong> Alert assistive technologies via relevant APIs.</li>
+<li><strong>REQ 4c:</strong> Support the presentation and display of call prefix information for relay calls.</li>
+
+<p class="note">
+To successfully receive a relay call, using a mobile app, the deaf user needs to toggle between the app and the handset. If the incoming call is a relay call, the user will immediately activate an app, otherwise the call may be lost. In the UK, the party calling the deaf user provides a prefix to connect to the relay center. If the calling party does not use a prefix for the relay call, then the call with not have text relay assistance. In the US for example, with captioned phones the situation is different as users have access to captioning on the go as the calling party does not need to use a prefix.</p>
 
 </ul> 
 </section>
@@ -119,11 +123,13 @@
 </section>
 
 		<section>
-<h3>Dynamic audio description values in live conferencing</h3> 
+<h3>Audio description in live conferencing</h3> 
 
 <ul>
 <li><strong>User Need 8:</strong> A user may struggle to hear audio description in a live teleconferencing situation.</li>
- <li><strong>REQ 8a:</strong> Ensure Audio Description (AD) recommended sound values are dynamic.</li>
+ <li><strong>REQ 8a:</strong> Ensure Audio Description (AD) recommended sound values are dynamic and have independent volume, EQ adjustment and routing capability.</li>
+ <li><strong>REQ 8b:</strong> Support a users custom EQ profile.</li>
+ <li><strong>REQ 8c:</strong> If not transmitted in a live screen share - ensure the platform doesn't strip captions or descriptions that may have been part of the original video.</li>
 </ul>
 		</section>
 
@@ -132,7 +138,7 @@
 <h3>Quality synchronisation and playback</h3>
 
 <ul>
-<li><strong>User Need 9:</strong> Any deaf or hard of hearing user watching captioning or audio description needs to be confident it is synchronised and accurate.</li>
+<li><strong>User Need 9:</strong> Any user watching captioning or audio description needs to be confident it is synchronised and accurate.</li>
 
 <li><strong>REQ 9a:</strong> Ensure that any outages or loss to captioning or audio description will be repaired while preserving context and meaning. </li>
 <li><strong>REQ 9b:</strong> Ensure that the integrity of related alternate supporting tracks or streams such as transcriptions, are in sync with any repairs.</li>
@@ -177,6 +183,11 @@ This user need may also indicate necessary support for 'Total conversation' serv
 
 <li><strong>REQ 12a:</strong> Provide or ensure support for video relay and remote interpretation services. This user need may relate to interoperability with third&#45;party services;  <abbr title="Internet Engineering Task Force">IETF</abbr> has looked at standardizing a way to use Session Initiation Protocol (SIP) with VRS services. [[ietf-relay]] </li>
 <li><strong>REQ 12b:</strong> Provide support for other languages and translations. For example, VRS calls may be made between ASL (American Sign Language) users and hearing persons speaking either English or Spanish, or variations in signing itself such as Irish Sign Language (ISL which is related to French sign language) and British Sign Language (BSL). A user may need to stream or pin both.</li>
+<li><strong>REQ 12c:</strong> Ensure that privacy and security options are maintained when using relay services. </li> 
+
+
+<p class="note">Regardless of the media involved, encryption support should be available for all main and alternate communication channels.</p>
+
 </ul>
 </section>
 
@@ -199,10 +210,10 @@ This user need may also indicate necessary support for 'Total conversation' serv
 
 		<section>
 
-<h3>Live transcription and captioning support</h3>
+<h3>Captioning support</h3>
 <ul>
-<li><strong>User Need 15:</strong> A deaf user or user with a cognitive disability needs to access a channel containing live transcriptions or captioning during a conference call or broadcast.</li>
- <li><strong>REQ 15a:</strong> Honor user preferences relating to live transcription and captioning e.g. provide support for signing or a related symbol set.</li>
+<li><strong>User Need 15:</strong> A deaf user or user with a cognitive disability needs to access a channel containing live transcriptions during a conference call or broadcast.</li>
+ <li><strong>REQ 15a:</strong> Honor user preferences relating to captioned content also provide support for signing or use of symbol sets e.g. AAC.</li>
 </ul>
 		</section>
 
@@ -441,6 +452,16 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 <li><strong>REQ 1a:</strong> Provide the ability to anchor or pin specific windows so the user can associate the sign language interpreter with the correct speaker.</li>
 <li><strong>REQ 1b:</strong> Allow the use of flexible pinning of captions or other related content alternatives. This may be to second screen devices.</li>
 <li><strong>REQ 1c:</strong> Ensure the source of any captions, transcriptions or other alternatives is clear to the user, even when second screen devices are used.</li>
+<li><strong>REQ 1d:</strong> Atomic pieces of data such as information regarding the person currently speaking, activities such as the people entering or leaving a meeting, or the last message posted in the chat channel, can be pinned to a user interface.</li>
+<li><strong>REQ 1e:</strong>  For pinned content, there is a need to handle and support the metadata that allows the client engine to re-aggregate or re-route any pinned content.
+<p class="note">
+Not all atomic items necessarily are pinned next to other atomic elements but some may be dependent, related or updated synchronously. For example, if there are multiple atomic data points destined for an 80 charachter braille display that has been sectioned to display 4 atomic items in up to 19 spaces each (leaving at least one blank cell for spacing).
+</p>
+
+<p class="note">
+Here the term atomic relates to small pieces of data. For the purposes of accessibility conformance testing, the definitions and use of the terms 'atomic' and 'atomic rules' may also be useful.[[applicability-atomic]] [[rule-types]]
+</p>
+</section>
 </ul>
 
 

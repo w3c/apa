@@ -578,6 +578,33 @@ respecConfig.localBiblio = {
         "title": "What’s around Me? Spatialized Audio Augmented Reality for Blind Users with a Smartphone",
         "href": "https://link.springer.com/chapter/10.1007/978-3-642-30973-1_5",
         "publisher": "Springer"
+    },
+         "applicability-atomic": {
+        "authors": [
+            "Wilco Fiers", 
+            "Maureen Kraft", 
+            "Mary Jo Mueller ",
+            "Shadi Abou-Zahra"
+
+        ],
+        "date": "2019",
+        "title": "Accessibility Conformance Testing (ACT) Rules Format 1.0 - W3C Recommendation, 31 October 2019",
+        "href": "https://www.w3.org/TR/act-rules-format/#applicability-atomic",
+        "publisher": "W3C"
+    },
+
+            "rule-types": {
+        "authors": [
+            "Wilco Fiers", 
+            "Maureen Kraft", 
+            "Mary Jo Mueller ",
+            "Shadi Abou-Zahra"
+
+        ],
+        "date": "2019",
+        "title": "Accessibility Conformance Testing (ACT) Rules Format 1.0 - W3C Recommendation, 31 October 2019",
+        "href": "https://www.w3.org/TR/act-rules-format/#rule-types",
+        "publisher": "W3C"
     }
                           
 }
