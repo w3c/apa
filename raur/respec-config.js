@@ -41,7 +41,7 @@ var respecConfig = {
 	// only "name" is required
 	editors: [
 		{
-			name: "Joshue O Connor",
+			name: "Joshue O'Connor",
 			mailto: "joconnor@w3.org",
 			url: 'https://www.w3.org',
 			company: "W3C",

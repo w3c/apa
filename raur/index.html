@@ -59,6 +59,15 @@
 <li><strong>REQ 1a:</strong> Provide the ability to anchor or pin specific windows so the user can associate the sign language interpreter with the correct speaker.</li>
 <li><strong>REQ 1b:</strong> Allow the use of flexible pinning of captions or other related content alternatives. This may be to second screen devices.</li>
 <li><strong>REQ 1c:</strong> Ensure the source of any captions, transcriptions or other alternatives is clear to the user, even when second screen devices are used.</li>
+<li><strong>REQ 1d:</strong> Atomic pieces of data such as information regarding the person currently speaking, activities such as the people entering or leaving a meeting, or the last message posted in the chat channel, can be pinned to a user interface.</li>
+<li><strong>REQ 1e:</strong> For pinned content, there is a need to handle and support the metadata that allows the client engine to re-aggregate or re-route any pinned content.</li>
+<p class="note">
+Not all atomic items necessarily are pinned next to other atomic elements but some may be dependent, related or updated synchronously. For example, if there are multiple atomic data points destined for an 80 charachter braille display that has been sectioned to display 4 atomic items in up to 19 spaces each (leaving at least one blank cell for spacing).
+</p>
+
+<p class="note">
+Here the term atomic relates to small pieces of data. For the purposes of accessibility conformance testing, the definitions and use of the terms 'atomic' and 'atomic rules' may also be useful. [[applicability-atomic]] [[rule-types]]
+</p>
 </ul>
 </section>
 
@@ -131,6 +140,9 @@ To successfully receive a relay call, using a mobile app, the deaf user needs to
  <li><strong>REQ 8b:</strong> Support a users custom EQ profile.</li>
  <li><strong>REQ 8c:</strong> If not transmitted in a live screen share - ensure the platform doesn't strip captions or descriptions that may have been part of the original video.</li>
 </ul>
+<p class="note">
+ Moving beyond mono in this context is also important, as the stereo spread allows audio descriptions to be soundstaged. Applications should also inheret customization settings from the users operating system.
+</p>
 		</section>
 
 		<section>
@@ -182,7 +194,7 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <li><strong>User Need 12:</strong> A deaf, speech impaired, or hard of hearing user, needs to communicate on a call using a remote video interpretation service to access sign language and interpreter services.</li>
 
 <li><strong>REQ 12a:</strong> Provide or ensure support for video relay and remote interpretation services. This user need may relate to interoperability with third&#45;party services;  <abbr title="Internet Engineering Task Force">IETF</abbr> has looked at standardizing a way to use Session Initiation Protocol (SIP) with VRS services. [[ietf-relay]] </li>
-<li><strong>REQ 12b:</strong> Provide support for other languages and translations. For example, VRS calls may be made between ASL (American Sign Language) users and hearing persons speaking either English or Spanish, or variations in signing itself such as Irish Sign Language (ISL which is related to French sign language) and British Sign Language (BSL). A user may need to stream or pin both.</li>
+<li><strong>REQ 12b:</strong> Provide support for other sign languages and translations. For example, VRS calls may be made between a sign language user and a person speaking another language. There are variations in signing itself such as Irish Sign Language (ISL which is related to French sign language) and British Sign Language (BSL). A user may need to stream or pin both.</li>
 <li><strong>REQ 12c:</strong> Ensure that privacy and security options are maintained when using relay services. </li> 
 
 
@@ -213,7 +225,7 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <h3>Captioning support</h3>
 <ul>
 <li><strong>User Need 15:</strong> A deaf user or user with a cognitive disability needs to access a channel containing live transcriptions during a conference call or broadcast.</li>
- <li><strong>REQ 15a:</strong> Honor user preferences relating to captioned content also provide support for signing or use of symbol sets e.g. AAC.</li>
+ <li><strong>REQ 15a:</strong> Honor user preferences relating to captioned content.  Provide support for signing or use of symbol sets e.g. AAC.</li>
 </ul>
 		</section>
 
@@ -445,7 +457,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 <section class="appendix" id="change-log">
 			<h2 id="c-change-log">Change Log<a class="self-link" aria-label="§" href="#change-log"></a></h2>
 
-<p>The following is a list of new user needs in this document:</p>
+<p>The following is a list of new user needs and requirements in this document:</p>
 
 <ul>
 	<li><strong>Window anchoring and pinning:</strong> A deaf or hard of hearing user needs to anchor or pin certain windows in an RTC application so both a sign language interpreter and the person speaking (whose speech is being interpreted) are simultaneously visible.</li>
@@ -453,14 +465,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 <li><strong>REQ 1b:</strong> Allow the use of flexible pinning of captions or other related content alternatives. This may be to second screen devices.</li>
 <li><strong>REQ 1c:</strong> Ensure the source of any captions, transcriptions or other alternatives is clear to the user, even when second screen devices are used.</li>
 <li><strong>REQ 1d:</strong> Atomic pieces of data such as information regarding the person currently speaking, activities such as the people entering or leaving a meeting, or the last message posted in the chat channel, can be pinned to a user interface.</li>
-<li><strong>REQ 1e:</strong>  For pinned content, there is a need to handle and support the metadata that allows the client engine to re-aggregate or re-route any pinned content.
-<p class="note">
-Not all atomic items necessarily are pinned next to other atomic elements but some may be dependent, related or updated synchronously. For example, if there are multiple atomic data points destined for an 80 charachter braille display that has been sectioned to display 4 atomic items in up to 19 spaces each (leaving at least one blank cell for spacing).
-</p>
-
-<p class="note">
-Here the term atomic relates to small pieces of data. For the purposes of accessibility conformance testing, the definitions and use of the terms 'atomic' and 'atomic rules' may also be useful.[[applicability-atomic]] [[rule-types]]
-</p>
+<li><strong>REQ 1e:</strong> For pinned content, there is a need to handle and support the metadata that allows the client engine to re-aggregate or re-route any pinned content.</li>
 </section>
 </ul>
 
@@ -475,6 +480,7 @@ Here the term atomic relates to small pieces of data. For the purposes of access
 <ul>
 	<li><strong>Accessibility user preferences and profiles:</strong> A user may need to change device or environment and have their accessibility user preferences preserved.</li>
 <li><strong>REQ 3a:</strong> Ensure user profiles and accessibility preferences in RTC applications are mobile and can move with the user as they change device or environment.</li>
+
 </ul>
 
 
@@ -482,9 +488,15 @@ Here the term atomic relates to small pieces of data. For the purposes of access
 
 
 <ul>
+
+ <li><strong>Incoming calls and caller ID - REQ 4c:</strong> Support the presentation and display of call prefix information for relay calls.</li>
+ <li><strong>Audio description in live conferencing - REQ 8b:</strong> Support a users custom EQ profile.</li>
+ <li><strong>Audio description in live conferencing - REQ 8c:</strong> If not transmitted in a live screen share - ensure the platform doesn't strip captions or descriptions that may have been part of the original video.</li>
+
 	<li><strong>Emergency calls and RTT - REQ 11b:</strong>  Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging methods or platforms. </li>
 
-<li><strong>Video relay services (VRS) and remote interpretation (VRI) - REQ 12b:</strong> Provide support for other languages and translations. For example, VRS calls may be made between ASL (American Sign Language) users and hearing persons speaking either English or Spanish, or variations in signing itself such as Irish Sign Language (ISL which is related to French sign language) and British Sign Language (BSL). A user may need to stream or pin both.</li>
+<li><strong>Video relay services (VRS) and remote interpretation (VRI) - REQ 12b:</strong> Provide support for other sign languages and translations. For example, VRS calls may be made between a sign language user and a person speaking another language. There are variations in signing itself such as Irish Sign Language (ISL which is related to French sign language) and British Sign Language (BSL). A user may need to stream or pin both.</li>
+<li><strong>Video relay services (VRS) and remote interpretation (VRI) - REQ 12c:</strong> Ensure that privacy and security options are maintained when using relay services. </li> 
 </ul>
 
 
@@ -492,6 +504,7 @@ Here the term atomic relates to small pieces of data. For the purposes of access
 <p>The following are other changes in this document:</p>
 
 <ul>
+	<li>Changed the title of 'Dynamic audio description values in live conferencing' to 'Audio description in live conferencing'.</li>
 	<li>New note on the relationship between RTC and <a href="https://www.w3.org/TR/xaur/">XR Accessibility User Requirements</a>.</li>
 <li>New note on personalization semantics and CSS media queries.</li>
 <li>Moved 'User Need 19:  A deaf user watching a signed broadcast needs a high&#45;quality frame rate to maintain legibility and clarity in order to understand what is being signed' to the 'Quality of service issues' section.</li>
@@ -516,9 +529,11 @@ Here the term atomic relates to small pieces of data. For the purposes of access
 					<li>Steve Lee, W3C</li>
 					<li>Stephen Noble, Pearson Plc</li>
 					<li>Estella Oncins Noguer, TransMedia UAB</li>
-					<li>Joshue O Connor, W3C</li>
+					<li>Joshue O'Connor, W3C</li>
+					<li>John Paton, Royal National Institute of Blind People</li>
 					<li>Janina Sajka, Invited Expert</li>
 					<li>Jason White, Educational Testing Service</li>
+
 				</ul>
 
 </section>
