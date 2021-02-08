@@ -191,243 +191,41 @@ var respecConfig = {
 			<p>In the list below, there may be overlap between user needs, and known ways to meet user needs. These will need to be teased out over the course of the project.</p>
 			<p class="ednote">Structure: Top level is user need, 2nd level refines to user groups, 3rd level is ways to meet the need, below that is details.</p>
 			<ul>
-				<li>Users can perceive content</li>
-				<li>Users can customize presentation</li>
-				<li>Users can understand content</li>
-				<li>Content does not confuse users</li>
-				<li>Users can find help information about how to use the content</li>
-				<li>Users can identify their position in content</li>
-				<li>User can navigate within content</li>
-				<li>User input is device independent</li>
-				<li>Content does not require specific user characteristics to operate</li>
-				<li>Content output is device independent</li>
-				<li>Content does not distract or interrupt users</li>
-				<li>Content does not harm users</li>
-				<li>Important alerts can reach user quickly</li>
-				<li>Users can complete time-sensitive tasks</li>
-				<li>Users can recover from input errors</li>
-				<li>Users’ preferences are not overridden</li>
-			</ul>
-			<ul>
-				<li> Content perceivable in form other than produced by author <ul>
-						<li> Alternate content can be provided <ul>
-								<li> Text alternatives </li>
-								<li> Visual alternative</li>
-								<li> Auditory alternative</li>
-								<li> Tactile alternative</li>
-							</ul>
-						</li>
-						<li> Content encoded in manner that permits machine transformation </li>
-						<li> Different alternate content for different signals</li>
-						<li> Alternate content findable <ul>
-								<li> In same time and location as control </li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li> Enable direct perception of output for people with wide range of perception disabilities <ul>
-						<li> Visual presentation perceivable across a range of vision impairments<ul>
-								<li> Luminosity contrast sufficient </li>
-								<li> Hue contrast sufficient for certain color perception disorders  </li>
-								<li> Pointers and cursors can be perceived  <ul>
-										<li> Resize </li>
-										<li> Recolor </li>
-										<li> Reshape </li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li> On-request location indicator <ul>
-						<li> Auditory content perceivable  for audio cues., 5.8 Sufficient quality (e.g. volume, direction, clarity, frequency) for audio feedback.) <ul>
-								<li> Volume </li>
-								<li> Direction </li>
-								<li> Clarity </li>
-								<li> Frequency  </li>
-							</ul>
-						</li>
-						<li> Tactile indications perceivable (not web? But probably will be) <ul>
-								<li> Distinct enough to accommodate reduced sensitivity </li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li> Adjustability of output <ul>
-						<li> Visual presentation can be adjusted to meet needs of user  <ul>
-								<li> Text can be resized <ul>
-										<li> Content format allows resize </li>
-										<li> Author provides resize feature </li>
-									</ul>
-								</li>
-								<li> Resize of text does not break presentation <ul>
-										<li> Layout resizes with text (zoom) </li>
-										<li> Layout self-adjusts to text resizes (reflow) (not fixed units) </li>
-									</ul>
-								</li>
-								<li> Color scheme can be changed  <ul>
-										<li> Content format defines color style scheme that user or user agent can override </li>
-										<li> Author provides color switch options </li>
-									</ul>
-								</li>
-								<li> Luminosity contrast can be changed <ul>
-										<li> User agent exaggerates luminosity differences </li>
-										<li> Author provides color switch options </li>
-									</ul>
-								</li>
-								<li> Typeface, font weight, font style can be changed </li>
-								<li> Line / word / letter spacing can be changed </li>
-								<li> Margins can be changed </li>
-								<li> Line length can be changed </li>
-								<li> Justification can be changed </li>
-							</ul>
-						</li>
-						<li> Auditory content can be adjusted to meet needs of user <ul>
-								<li> User can adjust volume level  </li>
-								<li> Contrast between foreground and background audio is sufficient </li>
-								<li> Unnecessary background audio can be muted separately from the foreground audio </li>
-							</ul>
-						</li>
-						<li> User can control time-based media <ul>
-								<li> User can pause, stop, replay media  </li>
-							</ul>
-						</li>
-						<li> Send output to alternate device, for better accessibility or to manage security / privacy in public space to manage overhearing / looking over shoulder of large print  </li>
-					</ul>
-				</li>
-				<li> User can navigate content effectively <ul>
-						<li> Useful navigation order  [also relates to efficient usage] </li>
-						<li> Structured audio  </li>
-						<li> Navigation supports different thinking styles  </li>
-					</ul>
-				</li>
-				<li> Meaning conveyed by style perceivable to users  that is presented through color to be also presented in another way that does not rely on color.) <ul>
-						<li> Author provides multiple redundant style cues </li>
-						<li> Meaning supported by programmatically determined semantics </li>
-					</ul>
-				</li>
-				<li> Input is device independent <ul>
-						<li> Input does not require pointing device  </li>
-						<li> Support keyboard input  with only visual feedback.) </li>
-						<li> Allow speech input  </li>
-						<li> Input does not require speech input  </li>
-					</ul>
-				</li>
-				<li> Enable input for users with wide range of abilities <ul>
-						<li> Do not require simultaneous actions  </li>
-						<li> Do not require precision in movement  </li>
-						<li> Allow input with different parameters for speed, acceleration, etc.  </li>
-					</ul>
-				</li>
-				<li> User can manage distractions <ul>
-						<li> Autoplay of any moving content can be prevented </li>
-						<li> Blinking or movement can be easily stopped </li>
-						<li> Layout helps user find important content </li>
-						<li> Cursor blinking can be turned off </li>
-					</ul>
-				</li>
-				<li> User can avoid personal risk <ul>
-						<li> Photosensitive seizures <ul>
-								<li> Flash can be prevented  </li>
-								<li> Content with flash can be reliably warned in advance and avoided </li>
-								<li> Unexpected flash can be immediately stopped </li>
-							</ul>
-						</li>
-						<li> Audiosensitive seizures <ul>
-								<li> @@ triggering condition can be prevented  </li>
-								<li> Content with @@ triggering condition can be reliably warned in advance and avoided </li>
-								<li> Unexpected @@ triggering condition can be immediately stopped </li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li> Important alerts can reach the user quickly <ul>
-						<li> Multi-frequency audio  </li>
-						<li> Vibration ) </li>
-					</ul>
-				</li>
-				<li> Users can discover content on the page  <ul>
-						<li> Headings identify regions of content </li>
-						<li> Regions of content are programmatically determined </li>
-						<li> User can skip to main content </li>
-						<li> Controls and their functions are programmatically determined </li>
-						<li> Controls have contrast with their surroundings  </li>
-						<li> Location of controls is predictable  </li>
-					</ul>
-				</li>
-				<li> Support users with instructions (@@overlaps with understand, avoid confusion) <ul>
-						<li> Instructions for accessible interaction  </li>
-					</ul>
-				</li>
-				<li> Users can understand content, navigation, and available interactions <ul>
-						<li> Description of layout available  (WCAG @@ Table Summary) <ul>
-								<li> Description does not depend on specific sensory characteristics  </li>
-							</ul>
-						</li>
-						<li> Simple wording in instructions  </li>
-						<li> Use standard icon / design / description conventions .) </li>
-						<li> Don’t require hierarchical thinking  </li>
-						<li> Clear instructions for interaction  </li>
-					</ul>
-				</li>
-				<li> Users are not confused <ul>
-						<li> Style does not imply perceived affordance of non-actionable features </li>
-						<li> Not confused with non-indicating tactile objects </li>
-						<li> Predictability / consistency of design <ul>
-								<li> Objects don’t change their function  </li>
-							</ul>
-						</li>
-						<li> Minimize reliance on user short-term memory  </li>
-						<li> Provide guidance for multi-step processes  </li>
-						<li> Simplified interface available </li>
-					</ul>
-				</li>
-				<li> Do not require specific physical characteristics (non-web? Handedness, having hands, etc.) <ul>
-						<li> Alternative biometric identification  </li>
-					</ul>
-				</li>
-				<li> Avoid errors <ul>
-						<li> Avoid accidental activation of controls <ul>
-								<li> Due to tremors etc.  </li>
-								<li>Due to overly small and proximate controls</li>
-								<li>Due to design confusion</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li> Recover from errors <ul>
-						<li> Notification when error detected  </li>
-						<li> Instructions on error recovery  </li>
-						<li> Ability to correct error </li>
-						<li> Ability to redo task </li>
-					</ul>
-				</li>
-				<li> Complete time-sensitive tasks <ul>
-						<li> Ability to complete task in allotted time <ul>
-								<li> Support ability to plan task execution strategy  </li>
-								<li> Avoid distractions (see separate topic)  </li>
-							</ul>
-						</li>
-						<li> Ability to extend time <ul>
-								<li> More time to read  </li>
-								<li> More time to complete task  </li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li> Support efficient usage <ul>
-						<li> Change characteristics (speed, voice, pitch, accent) of audio alternatives </li>
-						<li> Provide accessibility preferences that take effect immediately  </li>
-						<li> Persistent preferences across sessions  </li>
-						<li> Clear accessibility feature settings  </li>
-					</ul>
-				</li>
-				<li> Don’t override accessibility features  <ul>
-						<li> Preferences, e.g., typeface, color, size, layout, volume, contrast…)  </li>
-						<li> Preferences return to default state when switching users  [not web?] </li>
-					</ul>
-				</li>
-			</ul>
+                    <li>Users can perceive content</li>
+    <li>Users can customize presentation</li>
+    <li>Users can understand content</li>
+    <li>User should not be confused by content</li>
+    <li>Users can find help information about how to use the content</li>
+    <li>Users can identify their position in content</li>
+    <li>User can navigate within content</li>
+    <li>User input is device independent</li>
+    <li>Users are not distracted or interrupted by content </li>
+    <li>Users are not harmed by content </li>
+    <li>Users are made aware of alerts</li>
+    <li>Users can complete time-sensitive tasks</li>
+    <li>Users can recover from input errors</li>
+    <li>Users’ preferences are not overridden</li>
+    <li>User can perceivable content in a form other than produced by author</li>
+    <li>Users can orientate themselves as to their location</li>
+    <li>Users can adjust how content is presented/outputed</li>
+    <li>Users can control time-based media, including dynamic values, EQ, volume</li>
+    <li>User can navigate content effectively</li>
+    <li>Users can percieve meaning in a way that they need</li>
+    <li>Users can interaction and provide input in a device independent way</li>
+    <li>User can manage distractions</li>
+    <li>User can avoid personal risk</li>
+    <li>User privacy should be preserved</li>
+    <li>Users can discover content </li>
+    <li>User are supported with instructions and can percieve object labels</li>
+    <li>Users can avoid and recover from error</li>
+    <li>User do not need specific physical characteristics to interact </li>
+    <li>Users accessibility preferences are privaleged</li>
+    <li>User personalization preferences are supported</li>
+
+    <li>Users can route and control their communication channels and related content</li>
+    <li>Users are percieve a control or objects role, system state and other properties as needed </li>
+    <li>Users need to know current state/reflected is accurate</li>
+				</ul>
 		</section>
 		<section>
 			<h2>Meeting User Needs</h2>
