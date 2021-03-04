@@ -21,7 +21,7 @@
 	      <p>A <dfn>natural language interface</dfn> is a user interface in which the user and the system communicate via a natural (human) language. The user provides input as natural language sentences, and the system generates responses in the form of natural language sentences. (Other forms of output may also be created. For example, the system may display a map or a Web page, or it may perform an action such as turning on a light in the user's environment, as in a home automation application.)</p>
 	      <p>Typical examples of natural language interfaces include
 	      <ul>
-		<li>Voice agents designed primarily to communicate via speech. These agents may run on a computing device such as a mobile phone, tablet, laptop or desktop computer. They may also be embedded in specialized hardware such as consumer appliances, or the automation system of a motor vehicle.</li>
+		<li>Voice agents designed primarily to communicate via speech. These agents may run on a computing device such as a mobile phone, tablet, laptop or desktop computer. They may also be embedded in specialized hardware such as consumer appliances, or the automation system of a vehicle.</li>
 		<li>Chat bots included in Web applications that process natural language requests from the user. For example, a customer service application available on an organization's web site could offer a natural language user interface to handle customers' inquiries.</li>
 		<li><dfn>Interactive Voice Response</dfn> (<abbr title="Interactive Voice Response">IVR</abbr>) systems that interact with the user via a telephone call, accepting speech or key pad input and generating speech output.</li>
 	      </ul></p>
@@ -45,7 +45,7 @@
 	    <section>
 	      <h3>User need definition</h3>
 	      <p><dfn>User needs</dfn> relate to what a user needs from a particular application or platform to complete a task or to achieve a particular goal. User needs are dependent on the context in which an application is used, including the user's capabilities and the environmental conditions in which interaction with the interface takes place. For example, a spoken interaction would be inaccessible to a person who is deaf, or to a hearing person situated in a noisy environment. Although disability-related needs are the focus of this document, the user needs described here are not limited to people with specific types of disability. The capabilities of users vary greatly. They include a variety of physical, sensory, learning and cognitive abilities that should be taken into account in the design of platforms and applications.</p>
-	      <p>User needs are presented here together with their associated system requirements. By satisfying system requirements, developers of platforms and applications offering natural language interfaces can meet the corresponding user needs. No stance is taken in this document regarding which needs are best satisfied at the platform level, by an assistive technology, or in the development of applications. These architectural considerations are left to be decided by system designers. Often, they also depend on the services provided by the underlying operating system.</p>
+	      <p>User needs are presented here together with their associated system requirements. By satisfying system requirements, developers of platforms and applications offering natural language interfaces can meet the corresponding user needs. No stance is taken in this document regarding which needs are best satisfied at the platform level, by an assistive technology, or in the development of applications. These architectural considerations are left to be decided by system designers. Often, they also depend on the services provided by the underlying operating system or by the web platform.</p>
 	      <p>The user needs and associated requirements are actively being reviewed by the Research Questions Task Force (<abbr title="Research Questions Task Force">RQTF</abbr>) and by the Accessible Platform Architectures (<abbr title="Accessible Platform Architectures">APA</abbr>) Working Group.</p>
 	    </section>
 	  </section>
@@ -78,7 +78,37 @@
 		  <p>A smart agent is embedded in a public kiosk, located for example at an airport. A user can choose face recognition or voice recognition as the means of biometric authentication.</p>
 		</aside>
 	    </section>
-	  </section>
+	    <section>
+	      <h3>Means of Input and Output</h3>
+	      <ul>
+		<li><strong>User Need 3:</strong> Different users have a need for different input devices or mechanisms. For example, a person with a physical disability may need speech input, or single switch input, or eye tracking input. A person who is deaf or who has a speech disability may need to use keyboard input.</li>
+		<li><strong>REQ 3:</strong>Support multiple input devices and methods.</li>
+	      </ul>
+	      <p class="note">
+		This requirement can often be met by supporting the input methods available from the underlying platform, including assistive technologies.
+	      </p>
+	      <p class="note">
+	      If software that incorporates a natural language interface supports multiple input mechanisms, support for these mechanisms may be available only on particular hardware devices or in particular environments. For example, a smart speaker may support only speech input, whereas the same smart agent running on a mobile system such as a phone or tablet may support text input via a keyboard or any device capable of emulating a keyboard.</p>
+	      <p class="ednote">
+		Consider adding a cross-reference to WCAG 2.x, success criterion 2.1.1.
+	      </p>
+
+	      <ul>
+		<li><strong>User Need 4:</strong> Different users have a need for different output devices or mechanisms. For example, a user who is blind may require speech output. A user who is deaf or who has a speech disability may require visually displayed text output. A user who is deaf-blind may require braille output.</li>
+		<li><strong>REQ 4</strong> Support multiple output devices and methods.</li>
+	      </ul>
+		<p class="note">
+		This requirement can often be met by supporting the output methods available from the underlying platform, including assistive technologies.</p>
+		<p class="note">
+		If software that incorporates a natural language interface supports multiple output mechanisms, support for these mechanisms may be available only on particular hardware devices or in particular environments. For example, a smart speaker supports only speech output, whereas the same smart agent running on a mobile system such as a phone or tablet may support a visual display as well, and may be compatible with braille devices.</p>
+		<p class="ednote">
+		Should we subdivide user needs 3 and 4? If so, how? Should we subdivide requirements 3 and 4? If so, what should the individual requirements be?</p>
+
+		<ul>
+		  <li><strong>User Need 5:</strong> A user who is deaf or hard of hearing needs to provide speech input to an application, while having the output displayed visually as text.</li>
+		  <li><strong>REQ 5:</strong>Support a mode of operation in which the user can speak to the system, and the system's natural language output is directed to a screen.</li>
+	    </section>
+			  </section>
 	 	</body>
       </html>
       
