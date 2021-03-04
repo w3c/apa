@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+	  <meta charset="utf-8" />
+	  <title>Natural Language Interface Accessibility User Requirements</title>
+	  		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer="defer"></script>
+		<script src="respec-config.js" class="remove"></script>
+		<script src="../biblio.js" class="remove" defer="defer"></script>
+	</head>
+	<body>
+	  <section id="abstract">
+	    <p>This document outlines various accessibility-related user needs, requirements and scenarios for natural language interfaces. These user needs should influence accessibility requirements in various related specifications, as well as the design of applications that include natural language interfaces. The concept of a natural language interface is first clarified. User needs and their associated requirements are then described.</p>
+	    <p>This document is most explicitly not a collection of baseline requirements. It is also important to note that some of the requirements may be implemented at a system or platform level, and some may be authoring requirements for development of applications.</p>
+	  </section>
+	  <section id="sotd">
+	  </section>
+	  <section class="introductory">
+	    <h2>Introduction</h2>
+	    <section>
+	      <h3>What is a Natural Language Interface?</h3>
+	      <p>A <dfn>natural language interface</dfn> is a user interface in which the user and the system communicate via a natural (human) language. The user provides input as natural language sentences, and the system generates responses in the form of natural language sentences. (Other forms of output may also be created. For example, the system may display a map or a Web page, or it may perform an action such as turning on a light in the user's environment, as in a home automation application.)</p>
+	      <p>Typical examples of natural language interfaces include
+	      <ul>
+		<li>Voice agents designed primarily to communicate via speech. These agents may run on a computing device such as a mobile phone, tablet, laptop or desktop computer. They may also be embedded in specialized hardware such as consumer appliances, or the automation system of a motor vehicle.</li>
+		<li>Chat bots included in Web applications that process natural language requests from the user. For example, a customer service application available on an organization's web site could offer a natural language user interface to handle customers' inquiries.</li>
+		<li><dfn>Interactive Voice Response</dfn> (<abbr title="Interactive Voice Response">IVR</abbr>) systems that interact with the user via a telephone call, accepting speech or key pad input and generating speech output.</li>
+	      </ul></p>
+	      <p>These examples are indicative of applications that use natural language interfaces. They are not definitive. Variations of the examples and applications that do not fit these patterns at all are possible.</p>
+	    </section>
+	    <section>
+	      <h3>Natural Language Interfaces and Accessibility</h3>
+	      <p>The accessibility of natural language interfaces to users with disabilities can be supported by a variety of features at the platform and application levels, including assistive technologies. Multiple modes of input and output should be provided to enable interaction with the system by users who have a variety of physical and sensory capabilities. For example, whereas speech input may be needed by some users with physical disabilities, keyboard input, switch input, or an eye tracking system may be needed by other users. Similarly, natural language output may for example be spoken, or it may be provided as visually displayed text. These and other requirements are elaborated further below. In some cases, they may best be satisfied by an assistive technology. For example, a chat bot that does not provide a spoken interface directly may nevertheless satisfy a user's need for speech input via a dictation function provided as part of the user's browser or operating system.</p>
+	      <p>The design of the application should support the cognitive needs of users, including those who have learning or cognitive disabilities. Discoverability and simplicity, for example, are important considerations in the design of the natural language interaction.</p>
+	    </section>
+	    <section>
+	      <h3>Scope</h3>
+	      <p>Natural language interfaces frequently occur as components of larger user interfaces and systems. For example, a chat bot may be included in a web application. A natural language interface may be an essential part of a multimodal application that uses a combination of natural language and gestural inputs. An example would be an interactive navigation tool that allows the user to issue spoken commands and to interact with a graphical map with a pointing device.</p>
+	      <p>The scope of this document is limited to the accessibility of the natural language aspect of the over-all user interface. It is concerned with the accessibility of natural language interactions to users with disabilities. If natural language interaction is provided as part of a system that also offers other styles of interaction, this document should be read in combination with guidance provided elsewhere which is relevant to the other interface aspects. Notably,
+	      <ul>
+		<li><a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (<abbr title="Web content Accessibility Guidelines">WCAG</abbr>) 2.1</a> establishes normative requirements for the accessibility of web-based applications.</li>
+		<li><a href="https://www.w3.org/TR/raur/"><abbr title="Real-Time Communication">RTC</abbr> Accessibility User Requirements (<abbr>RAUR</abbr>)</a> identifies user needs and corresponding requirements for the accessibility of real-time communication applications, such as video conference tools and web-based telephony systems.</li>
+		<li><a href="https://www.w3.org/TR/xaur/">XR Accessibility User Requirements (<abbr>XAUR</abbr>)</a> identifies user needs and corresponding requirements for the accessibility of virtual reality and augmented reality.</li>
+	      </ul></p>
+	    </section>
+	    <section>
+	      <h3>User need definition</h3>
+	      <p><dfn>User needs</dfn> relate to what a user needs from a particular application or platform to complete a task or to achieve a particular goal. User needs are dependent on the context in which an application is used, including the user's capabilities and the environmental conditions in which interaction with the interface takes place. For example, a spoken interaction would be inaccessible to a person who is deaf, or to a hearing person situated in a noisy environment. Although disability-related needs are the focus of this document, the user needs described here are not limited to people with specific types of disability. The capabilities of users vary greatly. They include a variety of physical, sensory, learning and cognitive abilities that should be taken into account in the design of platforms and applications.</p>
+	      <p>User needs are presented here together with their associated system requirements. By satisfying system requirements, developers of platforms and applications offering natural language interfaces can meet the corresponding user needs. No stance is taken in this document regarding which needs are best satisfied at the platform level, by an assistive technology, or in the development of applications. These architectural considerations are left to be decided by system designers. Often, they also depend on the services provided by the underlying operating system.</p>
+	      <p>The user needs and associated requirements are actively being reviewed by the Research Questions Task Force (<abbr title="Research Questions Task Force">RQTF</abbr>) and by the Accessible Platform Architectures (<abbr title="Accessible Platform Architectures">APA</abbr>) Working Group.</p>
+	    </section>
+	  </section>
+	  <section>
+	    <h2>User needs and requirements</h2>
+	    <p>This section outlines a variety of user needs and system requirements that can satisfy them.</p>
+	    <section>
+	      <h3>User Identification and Authentication</h3>
+	      <ul>
+		<li><strong>User Need 1:</strong> A user with a physical disability needs to use speech as the only means of communicating with a system that is shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
+		<li><strong>REQ 1:</strong> Support voice identification as a means of biometric authentication.</li>
+	      </ul>
+	      <p class="note">
+		To achieve adequate security, voice identification may need to be combined with other factors of authentication.</p>
+		<p class="ednote">
+		Can we elaborate further? What should be done in the case of high security applications, for which voice identification alone may not be sufficient to meet security requirements?</p>
+
+		<ul>
+		  <li><strong>User Need 2:</strong> A user who is deaf or who has a speech disability needs to interact with a system that is shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
+		  <li><strong>REQ 2a:</strong>Support a means of biometric authentication other than voice recognition.</li>
+		  <li><strong>REQ 2b</strong>In addition or alternatively, support a non-biometric means of authentication, such as a physical security token.</li>
+		</ul>
+		<p class="note">
+		In some cases, this requirement can be met simply by using authentication mechanisms provided by the underlying operating system or browser environment.</p>
+
+		<aside class="example">
+		  <p>A smart agent is designed to run under several operating systems used by mobile devices. It can use authentication methods provided by each of these platforms to identify the user reliably. These mechanisms include face recognition and fingerprint recognition.</p>
+		</aside>
+		<aside class="example">
+		  <p>A smart agent is embedded in a public kiosk, located for example at an airport. A user can choose face recognition or voice recognition as the means of biometric authentication.</p>
+		</aside>
+	    </section>
+	  </section>
+	 	</body>
+      </html>
+      
