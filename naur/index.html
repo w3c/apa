@@ -63,7 +63,7 @@
 	    <section>
 	      <h3>User Identification and Authentication</h3>
 	      <ul>
-		<li><strong>User Need 1:</strong> A user with a physical disability needs to use speech as the only means of communicating with a system that is shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
+		<li><strong>User Need 1:</strong> A user with a physical disability needs to use speech as the only means of communicating with a system that can be shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
 		<li><strong>REQ 1:</strong> Support voice identification as a means of biometric authentication.</li>
 	      </ul>
 	      <p class="note">
@@ -72,9 +72,9 @@
 		Can we elaborate further? What should be done in the case of high security applications, for which voice identification alone may not be sufficient to meet security requirements?</p>
 
 		<ul>
-		  <li><strong>User Need 2:</strong> A user who is deaf or who has a speech disability needs to interact with a system that is shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
+		  <li><strong>User Need 2:</strong> A user who is deaf or who has a speech disability needs to interact with a system that can be shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
 		  <li><strong>REQ 2a:</strong>Support a means of biometric authentication other than voice recognition.</li>
-		  <li><strong>REQ 2b</strong>In addition or alternatively, support a non-biometric means of authentication, such as a physical security token.</li>
+		  <li><strong>REQ 2b</strong>In addition or alternatively, support a non-biometric means of authentication, such as a hardware security token.</li>
 		</ul>
 		<p class="note">
 		In some cases, this requirement can be met simply by using authentication mechanisms provided by the underlying operating system or browser environment.</p>
@@ -96,27 +96,86 @@
 		This requirement can often be met by supporting the input methods available from the underlying platform, including assistive technologies.
 	      </p>
 	      <p class="note">
-	      If software that incorporates a natural language interface supports multiple input mechanisms, support for these mechanisms may be available only on particular hardware devices or in particular environments. For example, a smart speaker may support only speech input, whereas the same smart agent running on a mobile system such as a phone or tablet may support text input via a keyboard or any device capable of emulating a keyboard.</p>
+	      If software that incorporates a natural language interface supports multiple input mechanisms, support for any specific mechanism may be available only on particular hardware devices or in particular environments. For example, a smart speaker may support only speech input, whereas the same smart agent running on a mobile system such as a phone or tablet may support text input via a keyboard or any device capable of emulating a keyboard.</p>
 	      <p class="ednote">
 		Consider adding a cross-reference to WCAG 2.x, success criterion 2.1.1.
 	      </p>
 
 	      <ul>
 		<li><strong>User Need 4:</strong> Different users have a need for different output devices or mechanisms. For example, a user who is blind may require speech output. A user who is deaf or who has a speech disability may require visually displayed text output. A user who is deaf-blind may require braille output.</li>
-		<li><strong>REQ 4</strong> Support multiple output devices and methods.</li>
+		<li><strong>REQ 4:</strong> Support multiple output devices and methods.</li>
 	      </ul>
 		<p class="note">
 		This requirement can often be met by supporting the output methods available from the underlying platform, including assistive technologies.</p>
 		<p class="note">
-		If software that incorporates a natural language interface supports multiple output mechanisms, support for these mechanisms may be available only on particular hardware devices or in particular environments. For example, a smart speaker supports only speech output, whereas the same smart agent running on a mobile system such as a phone or tablet may support a visual display as well, and may be compatible with braille devices.</p>
+		If software that incorporates a natural language interface supports multiple output mechanisms, support for any specific mechanism may be available only on particular hardware devices or in particular environments. For example, a smart speaker supports only speech output, whereas the same smart agent running on a mobile system such as a phone or tablet may support a visual display as well, and may be compatible with braille devices.</p>
 		<p class="ednote">
 		Should we subdivide user needs 3 and 4? If so, how? Should we subdivide requirements 3 and 4? If so, what should the individual requirements be?</p>
 
 		<ul>
-		  <li><strong>User Need 5:</strong> A user who is deaf or hard of hearing needs to provide speech input to an application, while having the output displayed visually as text.</li>
-		  <li><strong>REQ 5:</strong>Support a mode of operation in which the user can speak to the system, and the system's natural language output is directed to a screen.</li>
-	    </section>
-			  </section>
-	 	</body>
+		  <li><strong>User Need 5:</strong> A user who is deaf or hard of hearing needs to provide speech input to an application, while having the output displayed visually as text (with or without spoken output).</li>
+		  <li><strong>REQ 5a:</strong>Support a mode of operation in which the user can speak to the system, and the system's natural language output is directed to a screen.</li>
+		  <li><strong>REQ 5b:</strong> Support a mode of operation in which the user can speak to the system, and the system's natural language output is both spoken and directed to a screen.</li>
+		</ul>
+		<p class="ednote">
+		  Do we need two requirements here, or is the second (with both speech and on-screen text) enough?</p>
+
+		  <ul>
+		  <li><strong>User Need 6:</strong> A user with a speech disability needs to provide textual input to the system, and to receive spoken output.</li>
+		  <li><strong>REQ 6:</strong> Provide a mode of operation in which keyboard or other forms of textual input can be given, in combination with speech output.</li>
+		</ul>
+		<p class="ednote">
+		Are there strong use cases for this requirement? Can it largely be satisfied by using read-aloud functionality typically available from the operating system? Is there also a need for keyboard input combined with both speech and text output?</p>
+
+		<ul>
+		  <li><strong>User Need 7:</strong> A user who is deaf-blind needs to communicate with the system via a refreshable braille device.</li>
+		  <li><strong>REQ 7:</strong> Support a mode of operation in which input and output are both provided as text.</li>
+		</ul>
+		<p class="note">
+		  Support for braille displays is assumed to be provided by a screen reader running under the device's operating system. Therefore, support for keyboard input and textual output is the stated requirement for the natural language interface itself, leaving interaction with the braille hardware to the operating system on which the user interface is run.</p>
+		</section>
+		<section>
+		  <h3>Communicating in a Language that the User Needs</h3>
+		  <ul>
+		    <li><strong>User Need 8:</strong> A user who is deaf or hard of hearing needs to communicate with the system in a sign language.</li>
+		    <li><strong>REQ 8a:</strong> Provide a mode of operation in which sign language presented by the user is recognized and processed by the system.</li>
+		    <li><strong>REQ 8b:</strong> Provide a mode of operation in which the system's output is presented visually in a sign language.</li>
+		    <li><strong>REQ 8c:</strong> As an alternative to requirements 8a and 8b, provide a mode of operation in which a human sign language interpreter relays communication between the user and the system.</li>
+		  </ul>
+		  <p class="note">
+		  Sign languages vary by country and region. Therefore, multiple sign languages may need to be supported, depending on the intended audience of the system.</p>
+		  <p class="ednote">
+		  Requirements 8a and 8b are difficult research problems. Should they be included, or omitted with a note that refers to the technical challenges involved? Requirement 8c is feasible, especially for telephony applications. A cross-reference to XAUR would be appropriate.</p>
+
+		  <ul>
+		    <li><strong>User Need 9:</strong> A user with a learning or cognitive disability needs to communicate with the system in a symbol set supported by a particular augmentative and alternative communication (<abbr title="augmentative and alternative communication">AAC</abbr>) assistive technology.</li>
+		  </ul>
+		  <p class="ednote">
+		    What is the system requirement here? Is it an unsolved research question? Can we refer to related W3C work in this area?</p>
+		</section>
+		<section>
+		  <h3>Speech Recognition and Speech Production</h3>
+		  <ul>
+		    <li><strong>User Need 10:</strong> A user with atypical speech characteristics needs to provide spoken input to the system.</li>
+		    <li><strong>REQ 10a:</strong> Ensure that the system can recognize atypical varieties of speech with adequate accuracy to enable the application to be successfully used.</li>
+		    <li><strong>REQ 10b:</strong> Provide a mode of operation in which the system is trained to recognize a particular user's speech more accurately than it can without training.</li>
+		  </ul>
+
+		  <ul>
+		    <li><strong>User Need 11:</strong> A user with atypical speech characteristics needs opportunities to correct the system's speech recognition errors.</li>
+		    <li><strong>REQ 11a:</strong> Enable the system to estimate the probability that a user's utterance has been recognized correctly.</li>
+		    <li><strong>REQ 11b:</strong> If the system's confidence in its recognition of the user's utterance is below a reasonable threshhold, prompt the user to repeat or confirm the request made or the information spoken.</li>
+		    <li><strong>REQ 11c:</strong> Allow the user to decide at any time to interact with the system via means of input other than speech, even if a spoken dialogue is already in progress.</li>
+		  </ul>
+		    
+		  <ul>
+		    <li><strong>User Need 12:</strong> A user needs to adjust the speaking rate, volume or pitch of speech generated by the system in order to understand it well.</li>
+		    <li><strong>REQ 12:</strong> Provide an accessible user interface with which the speaking rate, pitch and volume of speech generated by the system can be configured.</li>
+		  </ul>
+		  <p class="note">
+		  To ensure this user interface is accessible, it should satisfy relevant accessibility requirements drawn from this document or elsewhere. For example, a system could provide spoken commands and a settings dialogue in a graphical user interface as alternative mechanisms for configuring speech properties.</p>
+		</section>
+	  </section>
+	</body>
       </html>
       
