@@ -14,11 +14,11 @@
 	  </section>
 	  <section id="sotd">
 	  </section>
-	  <section class="introductory">
+	  <section>
 	    <h2>Introduction</h2>
 	    <section>
 	      <h3>What is a Natural Language Interface?</h3>
-	      <p>A <dfn>natural language interface</dfn> is a user interface in which the user and the system communicate via a natural (human) language. The user provides input as natural language sentences, and the system generates responses in the form of natural language sentences. (Other forms of output may also be created. For example, the system may display a map or a Web page, or it may perform an action such as turning on a light in the user's environment, as in a home automation application.)</p>
+	      <p>A <dfn>natural language interface</dfn> is a user interface in which the user and the system communicate via a natural (human) language. The user provides input as natural language sentences, and the system generates responses in the form of natural language sentences. (Other types of output may also be created. For example, the system may display a map or a Web page, or it may perform an action such as turning on a light in the user's environment, as in a home automation application.)</p>
 	      <p>Typical examples of natural language interfaces include
 	      <ul>
 		<li>Voice agents designed primarily to communicate via speech. These agents may run on a computing device such as a mobile phone, tablet, laptop or desktop computer. They may also be embedded in specialized hardware such as consumer appliances, or the automation system of a vehicle.</li>
@@ -35,12 +35,20 @@
 	    <section>
 	      <h3>Scope</h3>
 	      <p>Natural language interfaces frequently occur as components of larger user interfaces and systems. For example, a chat bot may be included in a web application. A natural language interface may be an essential part of a multimodal application that uses a combination of natural language and gestural inputs. An example would be an interactive navigation tool that allows the user to issue spoken commands and to interact with a graphical map with a pointing device.</p>
-	      <p>The scope of this document is limited to the accessibility of the natural language aspect of the over-all user interface. It is concerned with the accessibility of natural language interactions to users with disabilities. If natural language interaction is provided as part of a system that also offers other styles of interaction, this document should be read in combination with guidance provided elsewhere which is relevant to the other interface aspects. Notably,
+	      <p>The scope of this document is limited to the accessibility of the natural language aspect of the over-all user interface. It is concerned with the accessibility of natural language interactions to users with disabilities.</p>
+	      <p class="ednote">
+	      The scope of this work is currently under discussion. Should gestures and graphical interactions that are closely connected with the natural language aspect be addressed? For example, if a user points to a location on a map and says <q>here</q> to make a request to a smart agent, the pointing gesture and the utterance are both central to the interaction. It seems artificial to regard the utterance processing as in scope but the gesture as outside the scope of this discussion. Similarly, visual, auditory and haptic cues and alerts are not strictly part of the natural language aspect, but they are closely connected with it.</p>
+	      <p>If natural language interaction is provided as part of a system that also offers other styles of interaction, this document should be read in combination with guidance provided elsewhere which is relevant to the other interface aspects. Notably,
 	      <ul>
 		<li><a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (<abbr title="Web content Accessibility Guidelines">WCAG</abbr>) 2.1</a> establishes normative requirements for the accessibility of web-based applications.</li>
 		<li><a href="https://www.w3.org/TR/raur/"><abbr title="Real-Time Communication">RTC</abbr> Accessibility User Requirements (<abbr>RAUR</abbr>)</a> identifies user needs and corresponding requirements for the accessibility of real-time communication applications, such as video conference tools and web-based telephony systems.</li>
 		<li><a href="https://www.w3.org/TR/xaur/">XR Accessibility User Requirements (<abbr>XAUR</abbr>)</a> identifies user needs and corresponding requirements for the accessibility of virtual reality and augmented reality.</li>
 	      </ul></p>
+	      <p class="ednote">
+		These links should be converted to bibliographical references.</p>
+		<p>As a general principle, the entire interface of a system or application needs to be accessible to users with disabilities. If only the natural language interaction component is accessible, some users will be unable to complete tasks successfully. For example, a smart agent that answers a user's questions by searching the web for information and then displaying it on screen is only accessible as a whole if both the natural language interaction and the presentation of the information satisfy the user's access needs. If the on-screen information is not accessible, then the user cannot complete the task of acquiring and understanding the information requested.</p>
+		<p class="ednote">
+		  If all of the functionality provided by a natural language interface is available via an alternative interface to the same application, does the natural language component need to satisfy accessibility requirements discussed here if the alternative interface is broadly cross-disability accessible? For example, the entire functionality could be available in a graphical user interface provided by the application. Is this a policy question that is outside the scope of the present project? Should we take a stance on the matter for purposes of this work? See recent mailing list discussions for different points of view.</p>
 	    </section>
 	    <section>
 	      <h3>User need definition</h3>
