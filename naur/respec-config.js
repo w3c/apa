@@ -51,7 +51,9 @@ var respecConfig = {
 		{
 			name: "Jason White",
 			url: "http://www.ets.org/",
-			mailto: "jjwhite@ets.org",
+		    mailto: "jjwhite@ets.org",
+		    company: "Educational Testing Service",
+		    companyURI: "http://www.ets.org/",
 			w3cid: 74028
 		}
 	],
