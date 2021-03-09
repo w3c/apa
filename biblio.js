@@ -426,6 +426,28 @@ respecConfig.localBiblio = {
 
     },
 
+      "personalization": {
+        "date": "27 January 2020",
+        "href": "https://www.w3.org/TR/personalization-semantics-content-1.0/",
+        "publisher": "W3C",
+        "title": "Personalization Semantics Content Module 1.0"
+
+    },
+        "media-queries": {
+        "date": "31 July 2020",
+        "href": "https://www.w3.org/TR/mediaqueries-5/",
+        "publisher": "W3C",
+        "title": "Media Queries Level 5"
+
+    },
+     "xaur": {
+        "date": "16 Sept 2020",
+        "href": "https://www.w3.org/TR/xaur/",
+        "publisher": "W3C",
+        "title": "XR Accessibility User Requirements"
+
+},
+
     "web-adapt": {
         "authors": [
             "Matthew Tylee Atkinson",
@@ -483,6 +505,16 @@ respecConfig.localBiblio = {
         "date": "2020",
         "title": "iPhone User Guide",
         "href": "https://support.apple.com/en-gb/guide/iphone/iph3e2e2cdc/ios"
+        
+    },
+
+           "total-conversation": {
+        "authors": [
+            "International Telecommunication Union (ITU)"
+        ],
+        "date": "2020",
+        "title": "ITU-T SG 16 Work on Accessibility - Total Conversation",
+        "href": "https://www.itu.int/en/ITU-T/studygroups/com16/accessibility/Pages/conversation.aspx"
         
     },
 
@@ -546,6 +578,33 @@ respecConfig.localBiblio = {
         "title": "What’s around Me? Spatialized Audio Augmented Reality for Blind Users with a Smartphone",
         "href": "https://link.springer.com/chapter/10.1007/978-3-642-30973-1_5",
         "publisher": "Springer"
+    },
+         "applicability-atomic": {
+        "authors": [
+            "Wilco Fiers", 
+            "Maureen Kraft", 
+            "Mary Jo Mueller ",
+            "Shadi Abou-Zahra"
+
+        ],
+        "date": "2019",
+        "title": "Accessibility Conformance Testing (ACT) Rules Format 1.0 - W3C Recommendation, 31 October 2019",
+        "href": "https://www.w3.org/TR/act-rules-format/#applicability-atomic",
+        "publisher": "W3C"
+    },
+
+            "rule-types": {
+        "authors": [
+            "Wilco Fiers", 
+            "Maureen Kraft", 
+            "Mary Jo Mueller ",
+            "Shadi Abou-Zahra"
+
+        ],
+        "date": "2019",
+        "title": "Accessibility Conformance Testing (ACT) Rules Format 1.0 - W3C Recommendation, 31 October 2019",
+        "href": "https://www.w3.org/TR/act-rules-format/#rule-types",
+        "publisher": "W3C"
     }
                           
 }
