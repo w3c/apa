@@ -54,11 +54,12 @@ var respecConfig = {
 			mailto: "janina@rednote.net",
 			w3cid: 33688
 		},
-		{
+	{
 			name: "Jason White",
 			url: "http://www.ets.org/",
-			company: "ETS",
+			company: "Educational Testing Service",
 			mailto: "jjwhite@ets.org",
+			companyURI: "http://www.ets.org/",
 			w3cid: 74028
 		},
 		{
