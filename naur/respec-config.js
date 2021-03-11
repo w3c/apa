@@ -40,22 +40,36 @@ var respecConfig = {
 	// editors, add as many as you like
 	// only "name" is required
 	editors: [
-		{
-			name: "Joshue O'Connor",
-			mailto: "joconnor@w3.org",
-			url: 'https://www.w3.org',
-			company: "W3C",
-			companyURI: "https://www.w3.org",
-			w3cid: 41218
-		},
-		{
-			name: "Jason White",
-			url: "http://www.ets.org/",
-		    mailto: "jjwhite@ets.org",
-		    company: "Educational Testing Service",
-		    companyURI: "http://www.ets.org/",
-			w3cid: 74028
-		}
+	    {
+		name: "Joshue O'Connor",
+		mailto: "joconnor@w3.org",
+		url: 'https://www.w3.org',
+		company: "W3C",
+		companyURI: "https://www.w3.org",
+		w3cid: 41218
+	    },
+	    {
+		name: "Janina Sajka",
+		url: "http://rednote.net/",
+		mailto: "janina@rednote.net",
+		w3cid: 33688
+	    },
+	    {
+		name: "Jason White",
+		url: "http://www.ets.org/",
+		mailto: "jjwhite@ets.org",
+		company: "Educational Testing Service",
+		companyURI: "http://www.ets.org/",
+		w3cid: 74028
+	    },
+	    {
+		name: "Michael Cooper",
+		url: 'https://www.w3.org',
+		mailto: "cooper@w3.org",
+		company: "W3C",
+		companyURI: "https://www.w3.org",
+		w3cid: 34017
+	    }
 	],
 	
 	// authors, add as many as you like.
