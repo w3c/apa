@@ -605,7 +605,15 @@ respecConfig.localBiblio = {
         "title": "Accessibility Conformance Testing (ACT) Rules Format 1.0 - W3C Recommendation, 31 October 2019",
         "href": "https://www.w3.org/TR/act-rules-format/#rule-types",
         "publisher": "W3C"
-    }
+    },
+
+     "uaag": {
+        "date": "15 December 2015",
+        "href": "https://www.w3.org/TR/UAAG20/",
+        "publisher": "W3C",
+        "title": "User Agent Accessibility Guidelines (UAAG) 2.0"
+
+},
                           
 }
 
