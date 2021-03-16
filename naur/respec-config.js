@@ -32,7 +32,7 @@ var respecConfig = {
 	//previousDiffURI: "",
 	
 	// if there a publicly available Editors Draft, this is the link
-	 edDraftURI: "https://w3c.github.io/apa/naur/",
+	 // edDraftURI: "https://w3c.github.io/apa/naur/",
 	
 	// if this is a LCWD, uncomment and set the end of its review period
 	// lcEnd: "2012-02-21",
@@ -49,12 +49,6 @@ var respecConfig = {
 		w3cid: 41218
 	    },
 	    {
-		name: "Janina Sajka",
-		url: "http://rednote.net/",
-		mailto: "janina@rednote.net",
-		w3cid: 33688
-	    },
-	    {
 		name: "Jason White",
 		url: "http://www.ets.org/",
 		mailto: "jjwhite@ets.org",
@@ -62,14 +56,6 @@ var respecConfig = {
 		companyURI: "http://www.ets.org/",
 		w3cid: 74028
 	    },
-	    {
-		name: "Michael Cooper",
-		url: 'https://www.w3.org',
-		mailto: "cooper@w3.org",
-		company: "W3C",
-		companyURI: "https://www.w3.org",
-		w3cid: 34017
-	    }
 	],
 	
 	// authors, add as many as you like.
