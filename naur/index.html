@@ -22,10 +22,10 @@
 
 	  
 	      <p>Often, systems that provide natural language interfaces support spoken interaction. In this scenario, speech recognition is used to process the user's input, and speech synthesis is used to generate the system's spoken responses. However, the use of speech is not essential to a natural language interface.</p>
-	      <p>Typical examples of natural language interfaces include</p>
+	      <p>Typical examples of natural language interfaces include:</p>
 	      <ul>
-		<li>Voice agents designed primarily to communicate via speech. These agents may run on a computing device such as a mobile phone, tablet, laptop or desktop computer. They may also be embedded in specialized hardware such as consumer appliances, or the automation system of a vehicle.</li>
-		<li>Chat bots included in Web applications that process natural language requests from the user. For example, a customer service application available on an organization's web site could offer a natural language user interface to handle customers' inquiries.</li>
+		<li><strong>Voice agents designed primarily to communicate via speech</strong>. These agents may run on a computing device such as a mobile phone, tablet, laptop or desktop computer. They may also be embedded in specialized hardware such as consumer appliances, or the automation system of a vehicle.</li>
+		<li><strong>Chat bots included in Web applications</strong> that process natural language requests from the user. For example, a customer service application available on an organization's web site could offer a natural language user interface to handle customers' inquiries.</li>
 		<li><dfn>Interactive Voice Response</dfn> (<abbr title="Interactive Voice Response">IVR</abbr>) systems that interact with the user via a telephone call, accepting speech or key pad input and generating speech output.</li>
 	      </ul>
 	      <p>These examples are indicative of applications that use natural language interfaces. They are not definitive. Variations of the examples and applications that do not fit these patterns at all are possible.</p>
@@ -35,17 +35,18 @@
 
 	    <section>
 	      <h3>Natural Language Interfaces and Accessibility</h3>
-	      <p>The accessibility of natural language interfaces to users with disabilities can be supported by a variety of features at the platform and application levels, including assistive technologies. Multiple modes of input and output should be provided to enable interaction with the system by users who have a variety of physical and sensory capabilities. For example, whereas speech input may be needed by some users with physical disabilities, keyboard input, switch input, or an eye tracking system may be needed by other users. Similarly, natural language output may for example be spoken, or it may be provided as visually displayed text. These and other requirements are elaborated further below. In some cases, they may best be satisfied by an assistive technology. For example, a chat bot that does not provide a spoken interface directly may nevertheless satisfy a user's need for speech input via a dictation function provided as part of the user's browser or operating system.</p>
-	      <p>The design of the application should support the cognitive needs of users, including those who have learning or cognitive disabilities. Discoverability and simplicity, for example, are important considerations in the design of the natural language interaction.</p>
+	      <p>The accessibility of natural language interfaces to users with disabilities can be supported by a variety of features at the platform and application levels, including assistive technologies. Multiple modes of input and output should be provided to enable interaction with the system by users who have a variety of physical and sensory capabilities. For example, whereas speech input may be needed by some users with physical disabilities, keyboard input, switch input, or an eye tracking system may be needed by other users. </p>
+	      <p>Similarly, natural language output may be spoken, or it may be provided as visually displayed text. These and other requirements are elaborated further below. In some cases, these requirements may best be satisfied by an assistive technology. For example, a chat bot that does not provide a spoken interface directly may nevertheless satisfy a user's need for speech input via a dictation function provided as part of the user's browser or operating system. There may also be other 'service' aspects that are specifically needed to better support accessibility that operate at a different layer to any modality input or output considerations. </p>
+	      <p>The design of the application should support the cognitive needs of users, including those who have learning or cognitive disabilities. Discoverability, simplicity, and affordances for example, are important considerations in the design of the natural language interaction.</p>
 	    </section>
 
 	        <section>
 	    	<h3>Voice User Interfaces</h3>
-	    	<p>Voice user inferfaces (VUI) such as those found on a range of commercially available devices for home and mobile use represent a part of the stack that make up natural language interfaces. This document aims to identify accessibility related user needs and requirements for VUIs and indicate further areas of work and research in terms of how they relate to new standards like WCAG 3 and other emerging technologies.</p>
+	    	<p>Voice user interfaces (VUI) using speech such as those found on a range of commercially available devices for home and mobile use represent a part of the stack that make up natural language interfaces. This document aims to identify accessibility related user needs and requirements for VUIs and indicate further areas of work and research in terms of how they relate to new standards like WCAG 3 and other emerging technologies.</p>
 	    </section>
 	    <section>
 	      <h3>Scope</h3>
-	      <p>Natural language interfaces frequently occur as components of larger user interfaces and systems. For example, a chat bot may be included in a web application. A natural language interface may be an essential part of a multimodal application that uses a combination of language and gestural inputs. An example would be an interactive navigation tool that allows the user to issue spoken commands and to interact with a graphical map with a pointing device.</p>
+	      <p>Natural language interfaces frequently occur as components of larger user interfaces and systems. For example, a chat bot may be included in a web application. A natural language interface may be an essential part of a multi-modal application that uses a combinations of language and gestural inputs. An example would be an interactive navigation tool that allows the user to issue spoken commands and to interact with a graphical map with a pointing device.</p>
 	      <p>The scope of this document is largely confined to the accessibility of the natural language aspect of the over-all user interface. It is concerned with the accessibility of natural language interactions to users with disabilities.</p>
 
 
@@ -55,8 +56,8 @@
 	      <section>
 
 	       <h3>Services and Agents</h3>
-	       <p>Behind these interfaces there are services that provide processing and content. This document aims to look at these services and determine to what degree they can and should support the needs of people with disabilities what system requirements are, or where further research is needed. </p>
-	             <p>Ideally by satisfying system requirements, developers of platforms and applications offering natural language interfaces can meet the corresponding user needs. Currently, no stance is taken in this document regarding which needs are best satisfied at the platform level, by an assistive technology, or in the development of applications, but this will change as the document developrs. These architectural considerations are left to be decided by system designers, and therefore there may be requirements in accessible system design that they need to be aware of. Often, they also depend on the services provided by the underlying operating system or by the web platform.</p>
+	       <p>Behind these interfaces there are services that provide core processing, evaluation and content. This document aims to look at these services and determine to what degree they can and should support the needs of people with disabilities; what system requirements are, or where further research is needed. </p>
+	             <p>Ideally by satisfying system requirements, developers of platforms and applications offering natural language interfaces can meet corresponding user needs. Currently, no stance is taken in this document regarding which needs are best satisfied at the platform level, by an assistive technology, or in the development of applications, but this will change as the document develops. These architectural considerations are left to be decided by system designers, and therefore there may be requirements in accessible system design that they need to be aware of. Often, they also depend on the services provided by the underlying operating system or by the web platform.</p>
 
 	      <p>If natural language interaction is provided as part of a system that also offers other styles of interaction, this document should be read in combination with guidance provided elsewhere which is relevant to the other interface and service aspects. Notably,</p>
 	      <ul>
