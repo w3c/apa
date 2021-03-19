@@ -166,7 +166,7 @@
 		  <ul>
 		    <li><strong>User Need 10:</strong> A user with a learning or cognitive disability needs to communicate with the system in a symbol set supported by a particular augmentative and alternative communication (<abbr title="augmentative and alternative communication">AAC</abbr>) assistive technology.</li>
 		  </ul>
-	
+		</section>
 		<section>
 		  <h3>Speech Recognition and Speech Production</h3>
 		  <ul>
@@ -200,7 +200,82 @@
 		  <p class="note">
 		  See the text spacing requirement specified in WCAG 2.1 [[WCAG21]], success criterion 1.4.12.</p>
 		</section>
-	  </section>
+	      <section>
+		<h3>Designing for Understanding and Effective Use</h3>
+		<section>
+		  <h4>Understanding How to Interact with the Interface</h4>
+		  <ul>
+		    <li><strong>User Need 15:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know what the system can do and how to ask the system to do it.</li>
+		    <li><strong>REQ 15a</strong> Provide commands with which the user can request help or instructions that give an overview of what the system can do and what requests or commands can be used to achieve it.</li>
+		    <li><strong>REQ 15b:</strong> Provide documentation in a form that satisfies accessibility guidelines which explains and gives examples of how to use the system.</li>
+		  </ul>
+		  <p class="note">
+		    This need is particularly applicable to systems which can serve a wide range of requests, such as personal assistants. Although all users need to know how to interact with a system to start using it, those with learning or cognitive disabilities are likely to be differentially and adversely affected by designs that do not make it obvious what the system can achieve and how to set about achieving it.</p>
+
+		    <ul>
+		    <li><strong>User Need 16:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know how to interact with it to achieve a particular goal.</li>
+		    <li><strong>REQ 16a:</strong> Provide prompts or menus of options that inform the user of what choices are available and what information is requested at each step of a dialogue with the system.</li>
+		    <li><strong>REQ 16b:</strong> Provide commands or menu options for requesting explanations and instructions that help the user to complete tasks successfully.</li>
+		  </ul>
+
+		  <ul>
+		    <li><strong>User Need 17:</strong> A user who is unfamiliar with the system or who has a learning or cognitive dsability needs to use it without having to learn specific commands, requests, phrases or vocabulary.</li>
+		    <li><strong>REQ 17a:</strong>Design the system to respond appropriately to a variety of alternative words, phrases and sentences that may be used to ask the same question, to give the same command, or to supply the same information.</li>
+		    <li><strong>REQ 17b:</strong>If the user's input is ambiguous or cannot be processed, prompt for clarification or additional information, or present a menu of relevant choices.</li>
+		  </ul>
+		  <p class="note">
+		  Ensuring this need is met typically involves including people with disabilities in data collection and testing procedures that enable software developers to improve the variety of linguistic inputs to which the system can appropriately respond.</p>
+
+		  <ul>
+		    <li><strong>User Need 18:</strong> A user with a learning or cognitive disability needs to review information, prompts or questions before deciding how to respond.</li>
+		    <li><strong>REQ 18a:</strong>Design the system to comply with a user's requests for its natural language output (e.g., spoken utterances) to be repeated.</li>
+		    <li><strong>REQ 18b:</strong> Summarize or present information that has been supplied by the user, then ask the user for confirmation, before performing irreversible actions such as financial transactions.</li>
+		    <li><strong>REQ 18c:</strong> If the text of the dialogue between the user and the system is presented in writing (e.g., on screen or via a braille device), ensure that the user can review the entire history of the conversation (scrolling the display, if necessary).</li>
+		  </ul>
+		</section>
+		<section>
+		  <h4>Giving Users Enough Time to Interact</h4>
+		  <ul>
+		    <li><strong>User Need 19:</strong> A user with a learning or cognitive disability needs ample time to decide how to respond during a dialogue with the system.</li>
+		    <li><strong>REQ 19a</strong> Unless there are compelling reasons to the contrary, do not limit the amount of time available for the user to respond.</li>
+		    <li><strong>REQ 19b:</strong> If a time limit is unavoidable, allow the length of the time limit to be adjusted, or for the time limit to be eliminated, or prompt for the user to extend it before it expires.</li>
+		    <li><strong>REQ 19c:</strong> Warn users of time limits before any period of time that is subject to a limit begins.</li>
+		    <li><strong>REQ 19d:</strong> Provide a mode of operation in which the system reminds the user periodically that it is waiting for input, and of any time limit that has been imposed.</li>
+		  </ul>
+		  <p class="note">
+		  The mode of operation described in requirement 19d may be distracting or anxiety-provoking for some users. Therefore, it should be optional.</p>
+		  <p class="note">
+		  See WCAG 2.1 [[WCAG21]], success criteria 2.2.1, 2.2.3, and 2.2.6.</p>
+		</section>
+		<section>
+		  <h4>Communicating in Language that is Clear, Simple, and Appropriate to the Audience</h4>
+		  <ul>
+		    <li><strong>User Need 20:</strong> Users, especially those who have learning or cognitive disabilities, need the system to use language that is clear and comprehensible to them.</li>
+		    <li><strong>REQ 20a</strong> Use language (including vocabulary and syntax) that is no more complex than is necessary for clear communication.</li>
+		    <li><strong>REQ 20b:</strong>Use vocabulary (including terminology) that is reasonably predicted to be familiar to the intended users of the system, including users who may have learning or cognitive disabilities.</li>
+		    <li><strong>REQ 20c:</strong> Provide a mode of operation in which simpler language than the default can be requested.</li>
+		    <li><strong>REQ 20d:</strong> Provide definitions or explanations of terms that are likely to be unfamiliar to intended users of the system, including users who may have learning or cognitive disabilities.</li>
+		  </ul>
+		  <p class="note">
+		    See WCAG 2.1 [[WCAG21]], success criteria 3.1.3, 3.1.4, and 3.1.5.</p>
+
+		    <ul>
+		    <li><strong>User Need 21:</strong> Users, especially those who have learning or cognitive disabilities, need the system to use language that is appropriate to their social and cultural context in order to be clear and understandable.</li>
+		    <li><strong>REQ 21a:</strong> Provide a mode of operation in which the use of language, including terminology, currency, units of measure, and date and time formats, is localized according to the user's preferences.</li>
+		    <li><strong>REQ 21b:</strong> By default, localize the use of language, including terminology, currency, units of measure, and date and time formats, to the user's country and region.</li>
+		  </ul>
+		</section>
+		<section>
+		  <h4>Pronunciation</h4>
+		  <ul>
+		    <li><strong>User Need 22:</strong> Users, especially those who have learning or cognitive disabilities, need spoken language to be pronounced correctly in order to be understood.</li>
+		    <li><strong>REQ 22a:</strong>Provide a mode of operation in which the pronunciation (e.g., accent) of spoken language is localized according to the user's preferences.</li>
+		    <li><strong>REQ 22b:</strong> By default, localize the pronunciation of spoken language according to the user's country and region.</li>
+		    <li><strong>REQ 22c:</strong> Ensure that spoken text is pronounced correctly, including names, rarely occurring words, and words that have different pronunciations depending on context.</li>
+		  </ul>
+		</section>
+	      </section>
+	      </section>
 	</body>
       </html>
       
