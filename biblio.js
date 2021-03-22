@@ -357,6 +357,11 @@ respecConfig.localBiblio = {
     	"publisher": "CEN/CENELEC/ETSI",
     	"href": "http://mandate376.standards.eu/standard"
     },
+    "ETSI-ES-202-076": {
+	"title": "ETSI ES 202 076 V2.1.1: Human Factors (HF); User Interfaces; Generic spoken command vocabulary for ICT devices and services",
+	"publisher": "ETSI",
+	"href": "https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf"
+    },
     "mobile-auth": {
         "authors": [
             "Yeh, H. T.",
