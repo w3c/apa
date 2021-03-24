@@ -10,7 +10,7 @@
 	<body>
 		<section id="abstract">
 			<h2>Abstract</h2>
-			<p>This document lists user needs and requirements for people with disabilities when using virtual reality or immersive environments, augmented or mixed reality and other related technologies (XR). It first introduces a definition of <abbr title="Virtual and Augmented Reality">XR</abbr> as used throughout the document, then briefly outlines some uses of XR. It outlines the complexity of understanding XR, introduces some accessibility challenges such as the need for accessibility multimodal support for a range of input and output devices and the importance of customization. Based on this information, it outlines accessibility user needs for XR and their related requirements. This is followed by information about related work that may be helpful to understand the complex technical architecture and processes behind how XR environments are built and what may form the basis of a robust accessibility architecture.</p>
+			<p>This document lists user needs and requirements for people with disabilities when using virtual reality or immersive environments, augmented or mixed reality and other related technologies (XR). It first introduces a definition of <abbr title="Virtual and Augmented Reality">XR</abbr> as used throughout the document, then briefly outlines some uses of XR. It outlines the complexity of understanding XR, introduces some technical accessibility challenges such as the need for multi-modal support, synchronization of input and output devices and customization.  It then outlines accessibility related user needs for XR and suggests subsequent requirements. This is followed by related work that may be helpful in understanding the complex technical architecture and processes behind how XR environments are built and what may form the basis of a robust accessibility architecture.</p>
 			
 			<p>This document is most explicitly not a collection of baseline requirements. It is also important to note that some of the requirements may be implemented at a system or platform level, and some may be authoring requirements.</p>
 		</section>
@@ -60,7 +60,7 @@
 <section>
 <h3>What is XR used for?</h3>
 
-<p>XR has a range of purposes from education, gaming, multimedia, immersive communication and many others. It is currently evolving at a very fast rate and is not yet mainstream. This will change as computing power increases, hardware improves as well as the quality of user experience, XR will be more commonly be used for the performance of everyday practical tasks, for therapeutic uses, education and for entertainment.</p>
+<p>XR has a range of purposes from work, education, gaming, multimedia and communication. It is evolving at a fast rate and while not yet mainstream, this will change as computing power increases, hardware becomes cheaper and the quality of the user experience improves. XR will be more commonly used for the performance of work tasks, for therapeutic uses, education and for entertainment.</p>
 		</section>
 
 
@@ -70,23 +70,23 @@
 		
 <h2>Understanding XR and Accessibility Challenges</h2>
 
-<p>Understanding XR itself presents various challenges that are very technical. They include technical issues with a range of hardware, software, authoring tools as well as a need to understand interaction design principles, accessibility semantics and more. These all represent 'basic' technical complexities that are in themselves substantial. To add to this, for many designers and authors they may neither know or have access to people with disabilities for user testing. Neither may they have a practical way of understanding user needs that they can build a solid set of requirements from. In short, they just may not understand what user needs they are trying to meet when making XR accessible.</p>
+<p>Understanding XR itself presents various challenges that are technical. They include issues with a range of hardware, software and authoring tools. To make accessible XR experiences there is a need to understand interaction design principles, accessibility semantics and assistive technologies. However, these all represent 'basic' complexities that are in themselves substantial. To add to this, for many designers and authors they may neither know or have access to people with disabilities for usability testing. Neither may they have a practical way of understanding accessibility related user needs that they can build a solid set of requirements from. In short, they just may not understand what user needs they are trying to meet.</p>
 
-<p>Some of the issues in XR, for example in gaming, for people with disabilities including:</p>
+<p>Some of the issues in XR, for example in gaming, for people with disabilities include:</p>
 
 <ul>
 <li><strong>Over emphasis on motion controls</strong>. There are many motion controllers that emphasise using your body to control the experience. Some games with XR components may lock out traditional control methods when a VR headset is being used, and the user should always be able to use a range of input mechanisms. <br />
 
-<div class="note"><abbr title="Three Degrees of Freedom">3DOF</abbr> and <abbr title="Six Degrees of Freedom">6DOF</abbr> may have their own specific mobility issues, for example <abbr title="Three Degrees of Freedom">3DOF</abbr> may have implications for people who have motor impairments that affect the use of one or both arms.  <abbr title="Six Degrees of Freedom">6DOF</abbr> may have implications for people who are quadripalegic and for people that use a wheelchair or mobility aid for navigation where there is a need to move directionally in physical space or a higher emphasis on the lower extremity for movement.</div>
+<div class="note"><abbr title="Three Degrees of Freedom">3DOF</abbr> and <abbr title="Six Degrees of Freedom">6DOF</abbr> may have their own specific mobility issues, for example <abbr title="Three Degrees of Freedom">3DOF</abbr> may have implications for people who have motor impairments that affect the use of one or both arms.  <abbr title="Six Degrees of Freedom">6DOF</abbr> may have implications for people who are quadriplegic and for people that use a wheelchair or mobility aid for navigation where there is a need to move directionally in physical space or a higher emphasis on the lower extremity for movement.</div>
 </li>
 <li><strong>VR Headsets need the user to be a physical position to play</strong>. The user should not have to be in a particular physical position such as standing or sitting to play a game or perform some action. Or there should be ability to remap these 'physical positions' to other controls (such as using <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a>).</li>
-<li><strong>Games and hardware being locked to certain manufacturers</strong> Consoles should allow full button remapping on standard game controllers - to different types of assistive technologies such as switches. These remapping preference should be mobile, and transportable across a range of hardware devices and software.</li>
+<li><strong>Games and hardware being locked to certain manufacturers</strong>. Consoles should allow full button remapping on standard game controllers - to different types of assistive technologies such as switches. These remapping preferences should be mobile, and transportable across a range of hardware devices and software.</li>
 <li><strong>Gamification of VR forces game dynamics on the user</strong>. Some users may wish to just explore an immersive environment without the 'game', or any particular challenge.</li>
-<li><strong>Audio design lacks spatial accuracy</strong> sound design needs particular attention and can be critical for a good user experience for people with disabilities. In deed the auditory experience of a game or other immersive environment may 'be' the experience [[able-gamers]].</li>
+<li><strong>Audio design lacks spatial accuracy</strong>. Sound design needs particular attention and can be critical for a good user experience for people with disabilities. The auditory experience of a game or other immersive environment may 'be' the experience [[able-gamers]].</li>
 
 </ul>
 
-<p>There are also a range of other disabilities that will need to be considered in making XR accessible. It is beyond the scope of this document to describe them all in detail. General categories or types of disabilities are:</p>
+<p>There are a range of disabilities that will need to be considered in making XR accessible. It is beyond the scope of this document to describe them all in detail. General categories or types of disabilities are:</p>
 
 <ul>
 <li>Auditory disabilities</li>
@@ -98,17 +98,17 @@
 </ul>
 
 
-<p>A person may have one of these disabilities or a combination of several. Each of these 'types' will be presented as a user need that should be met and understanding these needs are crucial in rising to the range of  interesting challenges XR designers and authors will have when supporting accessibility and multimodality in XR environments.</p> 
+<p>A person may have one of these disabilities or a combination of several. User needs are presented here that may relate to several of these disabilities with a range of requirements that should be met by the author or the platform. For XR designers and authors understanding these needs is crucial when making XR environments accessible.</p> 
 
-<p>These may be:</p>
+<p>Some things designers and authors need to be aware of:</p>
 
 <ul>
 <li>Understanding specific diverse user needs and how they relate to XR.</li>
 <li>Successfully identifying modality needs that are not obvious - but still need to be supported.</li>
-<li>Having suitable authoring tools for designers that support accessibility requirements in XR.</li>
+<li>Suitable authoring tools that support accessibility requirements in XR.</li>
 <li>Using languages, platforms and engines that support accessibility semantics.</li>
-<li>Successfully abstracting XR applications by providing accessible alternatives for content and interaction.</li>
-<li>The provision of specific commands within the VR environment (e.g., to go directly to a specified location or to follow another user) which assist with non-visual navigation.</li>
+<li>Providing accessible alternatives for content and interaction.</li>
+<li>The provision of specific commands within the VR environment (e.g., to go directly to a specified location or to follow another user) which assist with navigation to support different modalities.</li>
 <li>The use of virtual assistive technologies (e.g., white cane via a haptic device) to provide non-visual feedback. The research identified that if the same audio cues associated with a real-world infrared white cane were used in immersive environment, users were able to effectively centre themselves in the middle of pathways and walk successfully through virtual doorways based on the same audio feedback as used in the equivalent real-world device [[maidenbaum-amendi]]</li>
 </ul>
 
@@ -116,7 +116,7 @@
 	<section>
 <h3>Immersive Environment challenges</h3>
 
-<p>Some of the many challenges with immersive environments accessibility (and also gaming) include the use of extremely complex input devices, control schemes that require a high degree of precision, timing and simultaneous action; ability to distinguish subtle differences in busy visual and audio information, having to juggle multiple complex goals and objectives [[web-adapt]].</p>
+<p>Some of the challenges within immersive environments (and gaming) accessibility include the use of extremely complex input devices, control schemes that require a high degree of precision, timing and simultaneous action; ability to distinguish subtle differences in busy visual and audio information, having to juggle multiple complex goals and objectives [[web-adapt]].</p>
 
 	<p>There are also currently very useful accessibility guidelines available that are specific to gaming [[game-a11y]].</p>
 </section>
@@ -125,7 +125,7 @@
 <h2>XR and supporting multimodality</h2>
 <p>Modality relates to modes of sense perception such as sight, hearing, touch and so on. Accessibility can be thought of as supporting multi-modal requirements and the transformation of content or aspects of a user interface from one mode to another that will support various user needs.</p> 
 
-<p>Considering various modality requirements in the foundation of XR means these platforms will be better able to support accessibility related user needs. There will be many modality aspects for the developer and/or content author to consider. XR authors and content designers will also need access to tools that support the multimodal requirements listed below. </p>
+<p>Considering various modality requirements in the foundation of XR means these platforms will be better able to support accessibility related user needs. There will be many modality aspects for the developer and/or content author to consider. XR authors and content designers will also need access to tools that support the multi-modal requirements listed below. </p>
 
 <p>The following Inputs and Outputs can be considered modalities that should be supported in XR environments.</p>
 
@@ -137,7 +137,7 @@
 <p>The following are example of some of the diverse input methods used by people with disabilities. In many real world applications these input methods may be combined.</p>
 
 <ul>
-<li><strong>Speech</strong> - this is where a user&#39;s voice is the main input. Using a range of voice commands a user should be able to navigate in an XR environment, interact with the objects in that environment using their voice alone.</li>
+<li><strong>Speech</strong> - this is where a user&#39;s voice is the main input. Using a range of speech commands a user should be able to navigate in an XR environment, interact with the objects in that environment using their voice alone.</li>
 <li><strong>Keyboard </strong> - this is where the keyboard alone is the user&#39;s main input. A user should be able to navigate in an XR environment, interact with the objects in that environment using the keyboard alone.</li>
 <li><strong>Switch </strong> this is where a since button Switch alone is the user&#39;s main input. A user should be able to navigate in an XR environment, interact with the objects in that environment using a Switch alone. This switch may be used in conjunction with an assistive technology scanning application within the XR environment that allows them to select directions for navigation, macros for communication and interaction.</li>
 <li><strong>Gesture </strong> - this is where gesture based controllers are the main input and can be used to navigate in an XR environment, interact with the objects in that environment make selections using their voice alone.</li>
@@ -171,7 +171,7 @@ There are a variety of alternative gaming controls that may be very useful in XR
 
 <p>While XR is the experience, the controller plays a critical part in overcoming some complexity as well as mediating issues that may relate to other challenges around usability and helping the user understand sensory substitution devices. </p>
 
-<p>Controllers such as the Xbox Adaptive Controller and other switch type inputs allow the issuer to remapping keyboard inputs to control virtual environments. The powerful customizations may allow the user to "do that thing that is difficult" for them with ease.  In conjunction with this controller, for example, users with limited mobility they can also simulate actions in the XR environment that they would not be able to physically perform.  <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a> is a good example of this where motion range, position and orientation can be set to the user&#39;s ability.</p>
+<p>Controllers such as the Xbox Adaptive Controller and other switch type inputs allow the user to remap keyboard inputs to control or interact with virtual environments. These powerful customizations allow the user to "do that thing that is difficult" for them with ease.  In conjunction with this controller, for example, users with limited mobility they can also simulate actions in the XR environment that they would not be able to physically perform.  <a href="https://www.walkinvrdriver.com">WalkinVRDriver</a> is a good example of this where motion range, position and orientation can be set to the user&#39;s ability.</p>
 
 </section>
 
@@ -183,9 +183,9 @@ There are a variety of alternative gaming controls that may be very useful in XR
 
 	<section>
 <h3> Using multiple diverse inputs simultaneously </h3>
-<p>A user with a disability may have several input devices or different assistive technologies. A user may switch 'mode' of interaction or the tools used and should be able to do so without degrading into a poor user experience where they lose focus on a task and cannot return to it, or make unforced errors, accidental input and so on.</p>
+<p>A user with a disability may have several input devices or different assistive technologies. A user may switch 'mode' of interaction or the tools used without degrading the user experience where they lose focus on a task and cannot return to it, or make unwanted input.</p>
 
-<p>Complexity needs to be managed and co-ordinated between different kinds of assistive technology in immersive environments. There is a platform level requirement to support multiple assistive technology in a cohesive manner. This would allow combinations to be used in a co-ordinated way e.g where the users day-to-day AT, can be used with other AT that may be embedded in the environment already for example.</p>
+<p>Complexity needs to be managed and co-ordinated between different kinds of assistive technology in immersive environments. There is a platform level requirement to support multiple assistive technologies in a cohesive manner. This would allow combinations to be used in a co-ordinated way e.g where the users day-to-day AT, can be used with other AT that may be embedded in the environment already for example.</p>
 
 <p class="note">The REQ 5b: Voice activation also indicates potential issues with pairing multiple devices via bluetooth.</p>
 
@@ -206,7 +206,7 @@ There are a variety of alternative gaming controls that may be very useful in XR
 
 <ul>
 
-<li>How can a user understand the affordance models used in XR interactions? Or can this be mediated by their own interaction preferences and controllers?</li>
+<li>How can a user understand the affordance models used in XR interactions? Can they be mediated by their own interaction preferences and models?</li>
 <li>What interactions are allowed or not allowed? </li>
 <li>How can an accessibility abstracted XR experience focussed on supporting a different modality, successfully interact with another?</li>
 <li>How can we ensure what happens in one modality, is update in another so various abstractions are not out of sync? e.g. synchronization of captions between real time text transcriptions and other alternatives such as symbols or AAC?</li>
