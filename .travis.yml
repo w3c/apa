@@ -8,7 +8,7 @@ git:
   
 branches:
   only:
-    master
+    main
 
 before_script:
   - git config --global user.email "cooper@w3.org"
@@ -20,12 +20,12 @@ script:
   - cd gh-pages
   - git clone --depth=1 --branch=gh-pages https://github.com/w3c/apa.git
   - cd apa
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/master/fast/index.html -o fast/index.html -f  --retry 3
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/master/captcha/index.html -o captcha/index.html -f  --retry 3
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/master/media-accessibility-reqs/index.html -o media-accessibility-reqs/index.html -f  --retry 3
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/master/payment-accessibility-reqs/index.html -o payment-accessibility-reqs/index.html -f  --retry 3
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/master/xaur/index.html -o xaur/index.html -f  --retry 3
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/master/raur/index.html -o raur/index.html -f  --retry 3
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/fast/index.html -o fast/index.html -f  --retry 3
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/captcha/index.html -o captcha/index.html -f  --retry 3
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/media-accessibility-reqs/index.html -o media-accessibility-reqs/index.html -f  --retry 3
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/payment-accessibility-reqs/index.html -o payment-accessibility-reqs/index.html -f  --retry 3
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/xaur/index.html -o xaur/index.html -f  --retry 3
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/raur/index.html -o raur/index.html -f  --retry 3
   - cp ../../w3c/apa/fast/checklist.html fast/checklist.html
 
 after_success:

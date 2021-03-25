@@ -16,12 +16,12 @@ var respecConfig = {
 	diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName:            "xaur",
+	shortName:            "naur",
 	
 	
 	// if you wish the publication date to be other than today, set this
 	//publishDate:  "2014-12-11",
-	copyrightStart:  "2020",
+	copyrightStart:  "2021",
 	license: "w3c-software-doc",
 	
 	// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
@@ -32,8 +32,7 @@ var respecConfig = {
 	//previousDiffURI: "",
 	
 	// if there a publicly available Editors Draft, this is the link
-	edDraftURI: "https://w3c.github.io/apa/xaur/",
-	github: "w3c/apa",
+	// edDraftURI: "https://w3c.github.io/apa/naur/",
 	
 	// if this is a LCWD, uncomment and set the end of its review period
 	// lcEnd: "2012-02-21",
@@ -50,32 +49,12 @@ var respecConfig = {
 			w3cid: 41218
 		},
 		{
-			name: "Janina Sajka",
-			url: "http://rednote.net/",
-			mailto: "janina@rednote.net",
-			w3cid: 33688
-		},
-		{
 			name: "Jason White",
 			url: "http://www.ets.org/",
-			company: "Educational Testing Service",
-			mailto: "jjwhite@ets.org",
-			companyURI: "http://www.ets.org/",
+		    mailto: "jjwhite@ets.org",
+		    company: "Educational Testing Service",
+		    companyURI: "http://www.ets.org/",
 			w3cid: 74028
-		},
-			{
-			name: "Scott Hollier",
-			url: "http://www.hollier.info/",
-			mailto: "scott@hollier.info",
-			
-		},
-		{
-			name: "Michael Cooper",
-			url: 'https://www.w3.org',
-			mailto: "cooper@w3.org",
-			company: "W3C",
-			companyURI: "https://www.w3.org",
-			w3cid: 34017
 		}
 	],
 	
@@ -98,9 +77,10 @@ var respecConfig = {
 	
 	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
 	
-	// name of the WG
-	group:           "wai-apa",
-	
+	group: "apa",
+	github: "w3c/apa",
 	maxTocLevel: 4
 	
 };
+
+
