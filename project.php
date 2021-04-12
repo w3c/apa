@@ -11,6 +11,7 @@
 		<section>
 			<h2>Updated Milestones</h2>
 			<p>The <a href="/2015/10/apa-charter.html#milestones">Working Group charter</a> proposed initial milestones for Recommendation-track deliverables. Updates to those milestones are provided here. Deliverables with an asterisk at the beginning are considered critical to the success of the Working Group.</p>
+			<p><strong>This content is being migrated</strong> to <a href="https://www.w3.org/WAI/APA/wiki/Project">https://www.w3.org/WAI/APA/wiki/Project</a>.</p>
 			<table>
 				<caption>Milestones </caption>
 				<thead>
