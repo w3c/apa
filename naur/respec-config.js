@@ -32,7 +32,7 @@ var respecConfig = {
 	//previousDiffURI: "",
 	
 	// if there a publicly available Editors Draft, this is the link
-	// edDraftURI: "https://w3c.github.io/apa/naur/",
+	 // edDraftURI: "https://w3c.github.io/apa/naur/",
 	
 	// if this is a LCWD, uncomment and set the end of its review period
 	// lcEnd: "2012-02-21",
@@ -40,22 +40,22 @@ var respecConfig = {
 	// editors, add as many as you like
 	// only "name" is required
 	editors: [
-		{
-			name: "Joshue O'Connor",
-			mailto: "joconnor@w3.org",
-			url: 'https://www.w3.org',
-			company: "W3C",
-			companyURI: "https://www.w3.org",
-			w3cid: 41218
-		},
-		{
-			name: "Jason White",
-			url: "http://www.ets.org/",
-		    mailto: "jjwhite@ets.org",
-		    company: "Educational Testing Service",
-		    companyURI: "http://www.ets.org/",
-			w3cid: 74028
-		}
+	    {
+		name: "Joshue O'Connor",
+		mailto: "joconnor@w3.org",
+		url: 'https://www.w3.org',
+		company: "W3C",
+		companyURI: "https://www.w3.org",
+		w3cid: 41218
+	    },
+	    {
+		name: "Jason White",
+		url: "http://www.ets.org/",
+		mailto: "jjwhite@ets.org",
+		company: "Educational Testing Service",
+		companyURI: "http://www.ets.org/",
+		w3cid: 74028
+	    },
 	],
 	
 	// authors, add as many as you like.

@@ -357,6 +357,11 @@ respecConfig.localBiblio = {
     	"publisher": "CEN/CENELEC/ETSI",
     	"href": "http://mandate376.standards.eu/standard"
     },
+    "ETSI-ES-202-076": {
+	"title": "ETSI ES 202 076 V2.1.1: Human Factors (HF); User Interfaces; Generic spoken command vocabulary for ICT devices and services",
+	"publisher": "ETSI",
+	"href": "https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf"
+    },
     "mobile-auth": {
         "authors": [
             "Yeh, H. T.",
@@ -605,7 +610,15 @@ respecConfig.localBiblio = {
         "title": "Accessibility Conformance Testing (ACT) Rules Format 1.0 - W3C Recommendation, 31 October 2019",
         "href": "https://www.w3.org/TR/act-rules-format/#rule-types",
         "publisher": "W3C"
-    }
+    },
+
+     "uaag": {
+        "date": "15 December 2015",
+        "href": "https://www.w3.org/TR/UAAG20/",
+        "publisher": "W3C",
+        "title": "User Agent Accessibility Guidelines (UAAG) 2.0"
+
+},
                           
 }
 
