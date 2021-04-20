@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.5.0">
+<meta name="generator" content="ReSpec 26.5.2">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -159,9 +159,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "group": "apa",
   "github": "w3c/apa",
   "maxTocLevel": 4,
-  "publishDate": "2021-04-14",
-  "publishISODate": "2021-04-14T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 14 April 2021"
+  "publishDate": "2021-04-20",
+  "publishISODate": "2021-04-20T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 20 April 2021"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
@@ -169,7 +169,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <h2>
       W3C Editor's Draft
-      <time class="dt-published" datetime="2021-04-14">14 April 2021</time>
+      <time class="dt-published" datetime="2021-04-20">20 April 2021</time>
     </h2>
     <dl>
       <dt>This version:</dt><dd>
@@ -264,19 +264,20 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction">Introduction</a></li><li class="tocline"><a class="tocxref" href="#real-time-communication-and-accessibility"><bdi class="secno">1. </bdi>Real-time communication and accessibility </a></li><li class="tocline"><a class="tocxref" href="#user-needs-definition"><bdi class="secno">2. </bdi>User needs definition</a></li><li class="tocline"><a class="tocxref" href="#user-needs-and-requirements"><bdi class="secno">3. </bdi>User needs and requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#window-anchoring-and-pinning"><bdi class="secno">3.1 </bdi>Window anchoring and pinning </a></li><li class="tocline"><a class="tocxref" href="#pause-on-record-captioning-in-rtc"><bdi class="secno">3.2 </bdi>Pause 'on record' captioning in <abbr title="Real-time communication">RTC</abbr></a></li><li class="tocline"><a class="tocxref" href="#accessibility-user-preferences-and-profiles"><bdi class="secno">3.3 </bdi>Accessibility user preferences and profiles</a></li><li class="tocline"><a class="tocxref" href="#incoming-calls-and-caller-id"><bdi class="secno">3.4 </bdi>Incoming calls and caller ID</a></li><li class="tocline"><a class="tocxref" href="#routing-and-communication-channel-control"><bdi class="secno">3.5 </bdi>Routing and communication channel control</a></li><li class="tocline"><a class="tocxref" href="#audio-description-in-live-conferencing"><bdi class="secno">3.6 </bdi>Audio description in live conferencing</a></li><li class="tocline"><a class="tocxref" href="#quality-synchronisation-and-playback"><bdi class="secno">3.7 </bdi>Quality synchronisation and playback</a></li><li class="tocline"><a class="tocxref" href="#simultaneous-voice-text-signing"><bdi class="secno">3.8 </bdi>Simultaneous voice, text &amp; signing</a></li><li class="tocline"><a class="tocxref" href="#emergency-calls-support-for-real-time-text-rtt"><bdi class="secno">3.9 </bdi>Emergency calls: Support for Real-time text (<abbr title="Real-time text">RTT</abbr>) </a></li><li class="tocline"><a class="tocxref" href="#video-relay-services-vrs-and-remote-interpretation-vri"><bdi class="secno">3.10 </bdi>Video relay services (<abbr title="Video Relay Services">VRS</abbr>) and remote interpretation (<abbr title="Remote Interpretation">VRI</abbr>)</a></li><li class="tocline"><a class="tocxref" href="#distinguishing-sent-and-received-text-with-rtt"><bdi class="secno">3.11 </bdi>Distinguishing sent and received text with <abbr title="Real-time text">RTT</abbr></a></li><li class="tocline"><a class="tocxref" href="#call-participants-and-status"><bdi class="secno">3.12 </bdi>Call participants and status</a></li><li class="tocline"><a class="tocxref" href="#captioning-support"><bdi class="secno">3.13 </bdi>Captioning support</a></li><li class="tocline"><a class="tocxref" href="#assistance-for-users-with-cognitive-disabilities"><bdi class="secno">3.14 </bdi>Assistance for users with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#personalized-symbol-sets-for-users-with-cognitive-disabilities"><bdi class="secno">3.15 </bdi>Personalized symbol sets for users with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#internet-relay-chat-irc-style-interfaces-required-by-blind-users"><bdi class="secno">3.16 </bdi>Internet relay chat (<abbr title="Internet Relay Chat">IRC</abbr>) style interfaces required by blind users</a></li></ol></li><li class="tocline"><a class="tocxref" href="#relationship-between-rtc-and-xr-accessibility"><bdi class="secno">4. </bdi>Relationship between <abbr title="Real-time communication">RTC</abbr> and XR Accessibility</a></li><li class="tocline"><a class="tocxref" href="#quality-of-service-scenarios"><bdi class="secno">5. </bdi>Quality of service scenarios</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#deaf-users-video-resolution-and-frame-rates"><bdi class="secno">5.1 </bdi>Deaf users: Video resolution and frame rates</a></li><li class="tocline"><a class="tocxref" href="#bandwidth-for-audio"><bdi class="secno">5.2 </bdi>Bandwidth for audio</a></li><li class="tocline"><a class="tocxref" href="#bandwidth-for-video"><bdi class="secno">5.3 </bdi>Bandwidth for video </a></li></ol></li><li class="tocline"><a class="tocxref" href="#data-table-mapping-user-needs-with-related-specifications"><bdi class="secno">6. </bdi>Data table mapping user needs with related specifications</a></li><li class="tocline"><a class="tocxref" href="#c-change-log"><bdi class="secno">A. </bdi>Change Log<span class="formerLink" aria-label="§"></span></a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-apa-working-group-active-in-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants of the <abbr title="Accessible Platforms Architecure Working Group">APA</abbr> working group active in the development of this document:</a></li><li class="tocline"><a class="tocxref" href="#previously-active-participants-commenters-and-other-contributors"><bdi class="secno">B.2 </bdi>Previously Active Participants, Commenters, and Other Contributors</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">B.3 </bdi>Enabling funders<span class="formerLink" aria-label="§"></span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction">Introduction</a></li><li class="tocline"><a class="tocxref" href="#real-time-communication-and-accessibility"><bdi class="secno">1. </bdi>Real-time communication and accessibility </a></li><li class="tocline"><a class="tocxref" href="#user-needs-definition"><bdi class="secno">2. </bdi>User needs definition</a></li><li class="tocline"><a class="tocxref" href="#user-needs-and-requirements"><bdi class="secno">3. </bdi>User needs and requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#window-anchoring-and-pinning"><bdi class="secno">3.1 </bdi>Window anchoring and pinning </a></li><li class="tocline"><a class="tocxref" href="#pause-on-record-captioning-in-rtc"><bdi class="secno">3.2 </bdi>Pause 'on record' captioning in <abbr title="Real-time communication">RTC</abbr></a></li><li class="tocline"><a class="tocxref" href="#accessibility-user-preferences-and-profiles"><bdi class="secno">3.3 </bdi>Accessibility user preferences and profiles</a></li><li class="tocline"><a class="tocxref" href="#incoming-calls-and-caller-id"><bdi class="secno">3.4 </bdi>Incoming calls and caller ID</a></li><li class="tocline"><a class="tocxref" href="#routing-and-communication-channel-control"><bdi class="secno">3.5 </bdi>Routing and communication channel control</a></li><li class="tocline"><a class="tocxref" href="#audio-description-in-live-conferencing"><bdi class="secno">3.6 </bdi>Audio description in live conferencing</a></li><li class="tocline"><a class="tocxref" href="#quality-synchronisation-and-playback"><bdi class="secno">3.7 </bdi>Quality synchronisation and playback</a></li><li class="tocline"><a class="tocxref" href="#simultaneous-voice-text-signing"><bdi class="secno">3.8 </bdi>Simultaneous voice, text &amp; signing</a></li><li class="tocline"><a class="tocxref" href="#emergency-calls-support-for-real-time-text-rtt"><bdi class="secno">3.9 </bdi>Emergency calls: Support for Real-time text (<abbr title="Real-time text">RTT</abbr>) </a></li><li class="tocline"><a class="tocxref" href="#video-relay-services-vrs-and-remote-interpretation-vri"><bdi class="secno">3.10 </bdi>Video relay services (<abbr title="Video Relay Services">VRS</abbr>) and remote interpretation (<abbr title="Remote Interpretation">VRI</abbr>)</a></li><li class="tocline"><a class="tocxref" href="#distinguishing-sent-and-received-text-with-rtt"><bdi class="secno">3.11 </bdi>Distinguishing sent and received text with <abbr title="Real-time text">RTT</abbr></a></li><li class="tocline"><a class="tocxref" href="#call-participants-and-status"><bdi class="secno">3.12 </bdi>Call participants and status</a></li><li class="tocline"><a class="tocxref" href="#captioning-support"><bdi class="secno">3.13 </bdi>Captioning support</a></li><li class="tocline"><a class="tocxref" href="#assistance-for-users-with-cognitive-disabilities"><bdi class="secno">3.14 </bdi>Assistance for users with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#personalized-symbol-sets-for-users-with-cognitive-disabilities"><bdi class="secno">3.15 </bdi>Personalized symbol sets for users with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#internet-relay-chat-irc-style-interfaces-required-by-blind-users"><bdi class="secno">3.16 </bdi>Internet relay chat (<abbr title="Internet Relay Chat">IRC</abbr>) style interfaces required by blind users</a></li></ol></li><li class="tocline"><a class="tocxref" href="#relationship-between-rtc-and-xr-accessibility"><bdi class="secno">4. </bdi>Relationship between <abbr title="Real-time communication">RTC</abbr> and XR Accessibility</a></li><li class="tocline"><a class="tocxref" href="#quality-of-service-scenarios"><bdi class="secno">5. </bdi>Quality of service scenarios</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#deaf-users-video-resolution-and-frame-rates"><bdi class="secno">5.1 </bdi>Deaf users: Video resolution and frame rates</a></li><li class="tocline"><a class="tocxref" href="#audio-frequency-bandwidth"><bdi class="secno">5.2 </bdi>Audio frequency bandwidth</a></li><li class="tocline"><a class="tocxref" href="#quality-requirements-for-video"><bdi class="secno">5.3 </bdi>Quality requirements for video </a></li></ol></li><li class="tocline"><a class="tocxref" href="#data-table-mapping-user-needs-with-related-specifications"><bdi class="secno">6. </bdi>Data table mapping user needs with related specifications</a></li><li class="tocline"><a class="tocxref" href="#c-change-log"><bdi class="secno">A. </bdi>Change Log<span class="formerLink" aria-label="§"></span></a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-apa-working-group-active-in-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants of the <abbr title="Accessible Platforms Architecure Working Group">APA</abbr> working group active in the development of this document:</a></li><li class="tocline"><a class="tocxref" href="#previously-active-participants-commenters-and-other-contributors"><bdi class="secno">B.2 </bdi>Previously Active Participants, Commenters, and Other Contributors</a></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">B.3 </bdi>Enabling funders<span class="formerLink" aria-label="§"></span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 		<section class="introductory" id="introduction">
 			<h2>Introduction</h2>
 
 			                
 
 		<h3 id="what-is-real-time-communication-rtc"> What is real-time communication (<abbr title="real-time communication">RTC</abbr>)? <a class="self-link" aria-label="§" href="#introduction"></a></h3>
-<p>Real-time communication (<abbr title="real-time communication">RTC</abbr>) is an evolution beyond the traditional data exchange model of client to server resulting in real-time peer to peer audio, video and data exchange directly between supported user agents. This allows instantaneous applications for video and audio calls, text chat, file exchange, screen sharing and gaming, all without the need for browser plug-ins. While real-time communication (<abbr title="Real-time communication">RTC</abbr>) applications are enabled in the main by specifications like <abbr title="Web Real-time communication">WebRTC</abbr>, <abbr title="Web Real-time communication">WebRTC</abbr> is not the sole specification with responsibility to enable accessible real-time communication applications. The use cases and requirements are broad - for example as outlined in the <abbr title="Internet Engineering Task Force">IETF</abbr> RFC 7478 'Web Real-Time Communication Use Cases and Requirements' document. [<cite><a class="bibref" data-link-type="biblio" href="#bib-ietf-rtc" title="Web Real-Time Communication Use Cases and Requirements">ietf-rtc</a></cite>]</p>
+<p>Real-time communication (<abbr title="real-time communication">RTC</abbr>) is an evolution beyond the traditional data exchange model of client to server resulting in real-time peer to peer audio, video and data exchange directly between supported user agents. This allows instantaneous applications for video, text and audio calls, text chat, file exchange, screen sharing and gaming, all without the need for browser plug-ins. While real-time communication (<abbr title="Real-time communication">RTC</abbr>) applications are enabled in the main by specifications like <abbr title="Web Real-time communication">WebRTC</abbr>, <abbr title="Web Real-time communication">WebRTC</abbr> is not the sole specification with responsibility to enable accessible real-time communication applications. The use cases and requirements are broad - for example as outlined in the <abbr title="Internet Engineering Task Force">IETF</abbr> RFC 7478 'Web Real-Time Communication Use Cases and Requirements' document. [<cite><a class="bibref" data-link-type="biblio" href="#bib-ietf-rtc" title="Web Real-Time Communication Use Cases and Requirements">ietf-rtc</a></cite>]</p>
 </section>
 
 <section id="real-time-communication-and-accessibility">
 
 <h2 id="x1-real-time-communication-and-accessibility"><bdi class="secno">1. </bdi>Real-time communication and accessibility <a class="self-link" aria-label="§" href="#real-time-communication-and-accessibility"></a></h2>
+<p><abbr title="Real-time communication">RTC</abbr> has the potential to allow improved accessibility features that will support a broad range of user needs for people with a wide range of disabilities. These needs can be met through improved audio and video quality, audio routing, real-time text (<abbr title="Real-time text">RTT</abbr>), captioning, improved live transcription, transfer of alternate formats such as sign-language, text-messaging, chat, real time user support and status polling.</p>
 <p><abbr title="Real-time communication">RTC</abbr> has the potential to allow improved accessibility features that will support a broad range of user needs for people with a wide range of disabilities. These needs can be met through improved audio and video quality, audio routing, captioning, improved live transcription, transfer of alternate formats such as sign-language, text-messaging and chat, real time user support and status polling.</p>
 
 <p>Accessible <abbr title="Real-time communication">RTC</abbr> is enabled by a combination of technologies and specifications such as those from the Media Working Group, Web and Networks IG, Second Screen, and Web Audio Working group as well as <abbr title="Accessibility Guidelines Working Group">AGWG</abbr> and <abbr title="Accessible Rich Internet Applications">ARIA</abbr>. <abbr title="Accessible Platforms Architecure Working Group">APA</abbr> hopes this document will inform how these groups meet various responsibilities for enabling accessible <abbr title="Real-time communication">RTC</abbr>, as well updating related use cases in various groups. For examples, view the current work on <abbr title="Web Real-time communication">WebRTC</abbr> Next Version Use Cases First Public Working Draft. [<cite><a class="bibref" data-link-type="biblio" href="#bib-webrtc-use-cases" title="WebRTC Next Version Use Cases">webrtc-use-cases</a></cite>]</p>
@@ -352,7 +353,7 @@ Here the term atomic relates to small pieces of data. For the purposes of access
 </ul> 
 
 <div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="4"><span>Note</span></div><p class="">
-To successfully receive a relay call, using a mobile app, the deaf user needs to toggle between the app and the handset. If the incoming call is a relay call, the user will immediately activate an app, otherwise the call may be lost. In the UK, the party calling the deaf user provides a prefix to connect to the relay center. If the calling party does not use a prefix for the relay call, then the call with not have text relay assistance. In the US for example, with captioned phones the situation is different as users have access to captioning on the go as the calling party does not need to use a prefix.</p></div>
+Successful design of operations required for acting on incoming calls, getting informed about who the caller is and connecting relay services should not require complicated sequences of user actions. </p></div>
 
 
 </section>
@@ -360,7 +361,7 @@ To successfully receive a relay call, using a mobile app, the deaf user needs to
 <section id="routing-and-communication-channel-control">
 		<h3 id="x3-5-routing-and-communication-channel-control"><bdi class="secno">3.5 </bdi>Routing and communication channel control<a class="self-link" aria-label="§" href="#routing-and-communication-channel-control"></a></h3>
 <ul>
-<li><strong>User Need 5:</strong> A blind user of both screen reader and braille output devices simultaneously may need to manage audio and text output differently.</li>
+<li><strong>User Need 5:</strong> A blind user may need to use both screen reader and braille output devices simultaneously and will then need to manage audio and text output separately.</li>
 <li><strong>REQ 5a:</strong> Provide or support a range of browser level audio output options.</li> 
 <li><strong>REQ 5b:</strong> Allow controlled routing of alerts and other browser output to a braille device or other hardware.</li>
 </ul>
@@ -412,7 +413,7 @@ To successfully receive a relay call, using a mobile app, the deaf user needs to
 <h3 id="x3-8-simultaneous-voice-text-signing"><bdi class="secno">3.8 </bdi>Simultaneous voice, text &amp; signing<a class="self-link" aria-label="§" href="#simultaneous-voice-text-signing"></a></h3>
 
 <ul>
-<li><strong>User Need 10:</strong> A deaf user needs to simultaneously talk on a call, send and receive instant messages via a text interface and watch sign language using a video stream.</li>
+<li><strong>User Need 10:</strong> A deaf user needs to simultaneously talk on a call, send and receive real-time text and/or instant messages via a text interface and watch sign language using a video stream.</li>
 
 <li><strong>REQ 10a:</strong> Ensure support for multiple simultaneous streams. </li>
 
@@ -445,11 +446,13 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <li><strong>User Need 12:</strong> A deaf, speech impaired, or hard of hearing user, needs to communicate on a call using a remote video interpretation service to access sign language and interpreter services.</li>
 
 <li><strong>REQ 12a:</strong> Provide or ensure support for video relay and remote interpretation services. This user need may relate to interoperability with third-party services;  <abbr title="Internet Engineering Task Force">IETF</abbr> has looked at standardizing a way to use Session Initiation Protocol (SIP) with <abbr title="Video Relay Services">VRS</abbr> services. [<cite><a class="bibref" data-link-type="biblio" href="#bib-ietf-relay" title="Interoperability Profile for Relay User Equipment">ietf-relay</a></cite>] </li>
-<li><strong>REQ 12b:</strong> Provide support for other sign languages and translations. For example, <abbr title="Video Relay Services">VRS</abbr> calls may be made between a sign language user and a person speaking another language. There are variations in signing itself such as Irish Sign Language (ISL which is related to French sign language) and British Sign Language (BSL). A user may need to stream or pin both.</li>
-<li><strong>REQ 12c:</strong> Ensure that privacy and security options are maintained when using relay services. </li> 
-
+<li><strong>REQ 12b:</strong> Provide <abbr title="Video Relay Services">VRS</abbr> and <abbr title="Remote Interpretation">VRI</abbr> support for different specified sign languages and various spoken language translations. A user may also need to stream or pin both.</li>
+<li><strong>REQ 12c:</strong> Ensure that privacy and security options are maintained when using relay services. Ideally encryption support should be available for all main and alternate communication channels. </li> 
+<li><strong>REQ 12d:</strong> Ensure <abbr title="Web Real-time communication">WebRTC</abbr> supports integration of traditional mobile telephony and relay services.</li>
 </ul>
-<div class="note" role="note" id="issue-container-generatedID-4"><div role="heading" class="note-title marker" id="h-note-4" aria-level="4"><span>Note</span></div><p class="">Regardless of the media involved, encryption support should be available for all main and alternate communication channels.</p></div>
+
+
+<div class="note" role="note" id="issue-container-generatedID-4"><div role="heading" class="note-title marker" id="h-note-4" aria-level="4"><span>Note</span></div><p class=""> Regarding REQ 12d - as mentioned previously, getting informed about who the caller is and connecting relay services should not require complicated sequences of user actions. Currently, in the UK to successfully receive a relay call using a mobile app, a deaf user needs to toggle between the relay app and the built-in telephony app. If the incoming call is a relay call, the user must immediately activate an app, otherwise the call may be lost. The party calling the deaf user provides a prefix to connect to the relay center. If the calling party does not use a prefix for the relay call, then the call with not have text relay assistance. This is different in the US for example, where with captioned phones users have access to add captioning on the go to incoming and outgoing calls, and the other party just handles a regular call without requiring a prefix.</p></div>
 
 
 </section>
@@ -542,26 +545,30 @@ This user need may also indicate necessary support for 'Total conversation' serv
 
 <p><strong>Scenario:</strong> A deaf user watching a signed broadcast needs a high-quality frame rate to maintain legibility and clarity in order to understand what is being signed.</p>
 
-<div class="note" role="note" id="issue-container-generatedID-7"><div role="heading" class="note-title marker" id="h-note-7" aria-level="4"><span>Note</span></div><p class="">EN 301 549 Section 6,  recommends  <abbr title="Web Real-time communication">WebRTC</abbr> applications should support a frame rate of at least 20 frames per second (FPS). More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p></div>
+<div class="note" role="note" id="issue-container-generatedID-7"><div role="heading" class="note-title marker" id="h-note-7" aria-level="4"><span>Note</span></div><p class="">EN 301 549 Section 6,  recommends  <abbr title="Web Real-time communication">WebRTC</abbr> applications should support a frame rate of at least 20 frames per second (FPS). More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a> and <abbr title="International Telecommunication Union">ITU</abbr>-T Series H Supplement 1 "<a href="https://www.itu.int/ITU-T/recommendations/rec.aspx?rec=4834&amp;lang=en">Sign language and lip-reading real-time conversation using low bit-rate video communication</a>".</p></div>
+
 
 		</section>
 
-<section id="bandwidth-for-audio">
-	<h3 id="x5-2-bandwidth-for-audio"><bdi class="secno">5.2 </bdi>Bandwidth for audio<a class="self-link" aria-label="§" href="#bandwidth-for-audio"></a></h3>
+<section id="audio-frequency-bandwidth">
+	<h3 id="x5-2-audio-frequency-bandwidth"><bdi class="secno">5.2 </bdi>Audio frequency bandwidth<a class="self-link" aria-label="§" href="#audio-frequency-bandwidth"></a></h3>
 
 <p><strong>Scenario:</strong> A hard of hearing user needs better stereo sound to have a quality experience in work calls or meetings with friends or family. Transmission aspects, such as decibel range for audio needs to be of high-quality. For calls, industry allows higher audio resolution but still mostly in mono only. </p>
 
+<div class="note" role="note" id="issue-container-generatedID-8"><div role="heading" class="note-title marker" id="h-note-8" aria-level="4"><span>Note</span></div><p class="">EN 301 549 Section 6, recommends for <abbr title="Web Real-time communication">WebRTC</abbr> enabled conferencing and communication the application shall be able to encode and decode communication with a frequency range with an upper limit of at least 7KHz. More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p></div>
 </section>
 
-<section id="bandwidth-for-video">
+<section id="quality-requirements-for-video">
 
-<h3 id="x5-3-bandwidth-for-video"><bdi class="secno">5.3 </bdi>Bandwidth for video <a class="self-link" aria-label="§" href="#bandwidth-for-video"></a></h3>
+<h3 id="x5-3-quality-requirements-for-video"><bdi class="secno">5.3 </bdi>Quality requirements for video <a class="self-link" aria-label="§" href="#quality-requirements-for-video"></a></h3>
 
-<p><strong>Scenario:</strong> A hard of hearing user needs better stereo sound so they can have a quality experience in watching HD video or having a HD meeting with friends or family. Transmission aspects, such as frames per minute for video quality needs to be of high-quality.</p>
+<p><strong>Scenario:</strong> A hard of hearing user needs better stereo sound so they can have a quality experience in watching HD video or having a HD meeting with friends or family. Similarly for video quality, transmission aspects such as frames per second needs to be of high-quality.</p>
 
-<div class="note" role="note" id="issue-container-generatedID-8"><div role="heading" class="note-title marker" id="h-note-8" aria-level="4"><span>Note</span></div><p class="">EN 301 549 Section 6,  recommends for <abbr title="Web Real-time communication">WebRTC</abbr> enabled conferencing and communication the application shall be able to encode and decode communication with a frequency range with an upper limit of at least 7KHz. More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p></div>
+<div class="note" role="note" id="issue-container-generatedID-9"><div role="heading" class="note-title marker" id="h-note-9" aria-level="4"><span>Note</span></div><p class="">A hard of hearing user often combines their perception of speech from audio with their perception of lip movement and other visual clues to create an overall understanding of speech. For the visual parts, the requirements on video are the same as expressed in '5.1 Deaf users: Video resolution and frame rates' about perception of sign language because lip movements are also part of sign language, equally rapid and as detailed as the other parts of sign language.</p></div>
 
-<div class="note" role="note" id="issue-container-generatedID-9"><div role="heading" class="note-title marker" id="h-note-9" aria-level="4"><span>Note</span></div><p class=""><abbr title="Web Real-time communication">WebRTC</abbr> lets applications prioritise bandwidth dedicated to audio / video / data streams; there is also some experimental work in signalling these needs to the network layer as well as support for prioritising frame rate over resolution in case of congestion. [<cite><a class="bibref" data-link-type="biblio" href="#bib-webrtc-priority" title="WebRTC DSCP Control API">webrtc-priority</a></cite>]</p></div>
+<div class="note" role="note" id="issue-container-generatedID-10"><div role="heading" class="note-title marker" id="h-note-10" aria-level="4"><span>Note</span></div><p class="">EN 301 549 Section 6,  recommends for <abbr title="Web Real-time communication">WebRTC</abbr> enabled conferencing and communication the application shall be able to encode and decode communication with a frequency range with an upper limit of at least 7KHz. More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p></div>
+
+<div class="note" role="note" id="issue-container-generatedID-11"><div role="heading" class="note-title marker" id="h-note-11" aria-level="4"><span>Note</span></div><p class=""><abbr title="Web Real-time communication">WebRTC</abbr> lets applications prioritise bandwidth dedicated to audio / video / data streams; there is also some experimental work in signalling these needs to the network layer as well as support for prioritising frame rate over resolution in case of congestion. [<cite><a class="bibref" data-link-type="biblio" href="#bib-webrtc-priority" title="WebRTC DSCP Control API">webrtc-priority</a></cite>]</p></div>
 
 
 </section>
@@ -628,9 +635,9 @@ Media Working Group, Web and Networks IG. Second Screen API may fulfil this user
 <tr>
 <th scope="row">Text communication data channel</th>
 <td>
-Media Working Group</td>
+Media Working Group, <abbr title="Internet Engineering Task Force">IETF</abbr> RFC 8865</td>
 	<td> Similar to R26 in RFC 5194 5.2.4. Presentation and User Requirements. NOTE: Very similar user requirement to 'Audio Routing and Communication channel control'</td>
-	<td>No Mapping</td>
+	<td>Section 6.2</td>
 </tr>
 <tr>
 <th scope="row">Control relative volume and panning position for multiple audio</th>
@@ -643,23 +650,23 @@ Web Audio Working Group. Multichannel may be covered by the Web Audio group spac
 <tr>
 <th scope="row">Support for Real-time text </th>
 <td>
-<abbr title="Web Real-time communication">WebRTC</abbr></td>
+<abbr title="Web Real-time communication">WebRTC</abbr>, <abbr title="Internet Engineering Task Force">IETF</abbr> RFC 8865</td>
 <td>Similar to R26 in RFC 5194 5.2.4. Presentation and User Requirements. NOTE: Very similar user requirement to 'Audio Routing and Communication channel control'</td>
-<td>No Mapping</td>
+<td>Section 6.2</td>
 </tr>
 <tr>
 <th scope="row">Simultaneous voice, text &amp; signing</th>
 <td>Could be partially enabled via <abbr title="Real-time text">RTT</abbr> in <abbr title="Web Real-time communication">WebRTC</abbr>.</td>
 <td>
 Relates to RFC 5194 - under R2-R8</td>
-<td>No Mapping</td>
+<td>6.5.1 and 6.2.1.2</td>
 </tr>
 <tr>
 <th scope="row">Support for video relay services (<abbr title="Video Relay Services">VRS</abbr>) and remote interpretation (<abbr title="Remote Interpretation">VRI</abbr>)</th>
 <td>May relate to interoperability with third-party services.</td>
 <td>
 Relates to RFC 5194 - under R21-R23</td>
-<td>No Mapping</td>
+<td>Maps to Chapter 13: Emergency and Relay Services</td>
 </tr>
 <tr>
 <th scope="row">Distinguishing sent and received text</th>
@@ -670,10 +677,10 @@ Relates to RFC 5194 - under R16 - but this does NOT fully address our use case r
 </tr>
 <tr>
 <th scope="row">Warning and recovery of lost data</th>
-<td>This is not <abbr title="Web Real-time communication">WebRTC</abbr> specific and may be a user interface accessibility issue.</td>
+<td>RFC 8865</td>
 <td>
 Relates to RFC 5194 - under R14-R15</td>
-<td>No Mapping</td>
+<td>Maps to 6.2.3 c)</td>
 </tr>
 <tr>
 <th scope="row">Quality of video resolution and frame rate</th>
@@ -700,7 +707,7 @@ Similar to R27 in RFC 5194 5.2.4. Presentation and User Requirements</td>
 <td>Browser APIs needed to implement this are available; needs better integration with third-party services (e.g. for sign language translation). Possibly covered by general requirements for Text over IP (ToIP) contained in RFC 5194.</td>
 <td>
 Covered under 5.2.3 (transcoding service requirements). Referring to relay services that provide conversion from speech to text, or text to speech, to enable communication.</td>
-<td>No Mapping</td>
+<td>Maps to Chapter 13: Emergency and Relay Services</td>
 </tr>
 
 </tbody></table>
@@ -709,7 +716,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 <section class="appendix" id="change-log">
 			<h2 id="c-change-log"><bdi class="secno">A. </bdi>Change Log<a class="self-link" aria-label="§" href="#change-log"></a><a class="self-link" aria-label="§" href="#c-change-log"></a></h2>
 
-<p>The following is a list of new user needs and requirements in this document:</p>
+<p>The following is a list of new user needs and requirements since the publication of the <a href="https://www.w3.org/TR/2020/WD-raur-20200319/">previous working draft</a>:</p>
 
 <ul>
 	<li><strong>Window anchoring and pinning:</strong> A deaf or hard of hearing user needs to anchor or pin certain windows in an <abbr title="Real-time communication">RTC</abbr> application so both a sign language interpreter and the person speaking (whose speech is being interpreted) are simultaneously visible.</li>
@@ -756,7 +763,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 <li>Added note on <abbr title="International Telecommunication Union">ITU</abbr> definition of Total Conversation services that relates to 'REQ 10a: Ensure support for multiple simultaneous streams'.</li>
 </ul> 
 
-<div class="note" role="note" id="issue-container-generatedID-10"><div role="heading" class="note-title marker" id="h-note-10" aria-level="3"><span>Note</span></div><p class="">This user need may also indicate necessary support for 'Total conversation' services as defined by <abbr title="International Telecommunication Union">ITU</abbr> in <abbr title="Web Real-time communication">WebRTC</abbr> applications. These are combinations of voice, video, and real-time text (<abbr title="Real-time text">RTT</abbr>) in the same real-time session. [total-conversation]</p></div>
+<div class="note" role="note" id="issue-container-generatedID-12"><div role="heading" class="note-title marker" id="h-note-12" aria-level="3"><span>Note</span></div><p class="">This user need may also indicate necessary support for 'Total conversation' services as defined by <abbr title="International Telecommunication Union">ITU</abbr> in <abbr title="Web Real-time communication">WebRTC</abbr> applications. These are combinations of voice, video, and real-time text (<abbr title="Real-time text">RTT</abbr>) in the same real-time session. [total-conversation]</p></div>
 
 	
 <p>This document has been updated based on document feedback, discussion and Research Questions Task Force consensus.</p>
@@ -784,6 +791,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 				<ul>
 					<li>Lidia Best, <abbr title="International Telecommunication Union">ITU</abbr>-T</li>
 					<li>Dominique Hazael-Massieux, <abbr title="World Wide Web Consortium">W3C</abbr></li>
+					<li>Gunnar Hellström, Omnitor</li>
 					<li>Masahito Kawamori, <abbr title="International Telecommunication Union">ITU</abbr>-T</li>
 					<li>Steve Lee, <abbr title="World Wide Web Consortium">W3C</abbr></li>
 					<li>Estella Oncins Noguer, TransMedia UAB</li>		
@@ -809,28 +817,39 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
   </p><script id="respec-dfn-panel">(() => {
 // @ts-check
 if (document.respec) {
-  document.respec.ready.then(dfnPanel);
+  document.respec.ready.then(setupPanel);
 } else {
-  dfnPanel();
+  setupPanel();
 }
 
-function dfnPanel() {
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
   /** @type {HTMLElement} */
-  let panel;
-  document.body.addEventListener("click", event => {
-    if (!(event.target instanceof HTMLElement)) return;
+  let panel = null;
+  return event => {
+    const { target, type } = event;
 
-    /** @type {HTMLElement} */
-    const el = event.target;
+    if (!(target instanceof HTMLElement)) return;
 
-    const action = deriveAction(el);
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
     switch (action) {
       case "show": {
-        if (panel) hidePanel(panel);
+        hidePanel(panel);
         /** @type {HTMLElement} */
-        const dfn = el.closest("dfn, .index-term");
+        const dfn = target.closest("dfn, .index-term");
         panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
-        displayPanel(dfn, panel, { x: event.clientX, y: event.clientY });
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
         break;
       }
       case "dock": {
@@ -841,30 +860,59 @@ function dfnPanel() {
       }
       case "hide": {
         hidePanel(panel);
+        panel = null;
         break;
       }
     }
-  });
+  };
 }
 
-/** @param {HTMLElement} clickTarget */
-function deriveAction(clickTarget) {
-  const hitALink = !!clickTarget.closest("a");
-  if (clickTarget.closest("dfn, .index-term")) {
-    return hitALink ? null : "show";
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
   }
-  if (clickTarget.closest(".dfn-panel")) {
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn, .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
     if (hitALink) {
-      const clickedSelfLink = clickTarget.classList.contains("self-link");
-      return clickedSelfLink ? "hide" : "dock";
+      return target.classList.contains("self-link") ? "hide" : "dock";
     }
-    const panel = clickTarget.closest(".dfn-panel");
-    return panel.classList.contains("docked") ? "hide" : null;
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
   }
   if (document.querySelector(".dfn-panel:not([hidden])")) {
     return "hide";
   }
-  return null;
+  return "none";
 }
 
 /**
@@ -906,10 +954,85 @@ function displayPanel(dfn, panel, { x, y }) {
     const caret = panel.querySelector(".caret");
     caret.style.left = `${newCaretOffset}px`;
   }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
 }
 
 /** @param {HTMLElement} panel */
 function hidePanel(panel) {
+  if (!panel) return;
   panel.hidden = true;
   panel.classList.remove("docked");
 }
