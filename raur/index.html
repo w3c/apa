@@ -6,6 +6,42 @@
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer="defer"></script>
 		<script src="respec-config.js" class="remove"></script>
 		<script src="../biblio.js" class="remove" defer="defer"></script>
+		<style type="text/CSS">
+			table{
+	border:solid 2px #999;
+	border-width:1px 0 0 1px;
+	margin:0.1em 0 1em;
+	padding:0;
+	border-spacing:0;
+	border-collapse:collapse;
+}
+th, td{
+	border:solid 2px #999;
+	border-width:0 1px 1px 0;
+	padding:0.15em 0.3em 0.1em;
+	vertical-align:top;
+	text-align:left;
+}
+th{
+	background-color:#eee;
+}
+caption{
+	text-align:left;
+	color:#555;
+	font-style:normal;
+	margin:1em 0 0.1em;
+	padding:0 0 0 0.3em;
+}
+table.role-features th, table.role-features td, table.state-features th, table.state-features td, table.property-features th, table.property-features td, table.value-descriptions th, table.value-descriptions td {
+	min-width:20em;
+}
+table.role-features tbody th, table.state-features tbody th, table.property-features tbody th, table.value-descriptions tbody th {
+    text-align: left !important;
+}
+th+th, td+td{
+	width:auto;
+}
+</style>
 	</head>
 	<body>
 		<section id="abstract">
@@ -336,9 +372,9 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <p>The following table maps some of the user needs and requirements presented in this document with other related specifications such as those defined in RFC 5194 &#45; Framework for Real&#45;time text over IP Using SIP and EN 301 549 &#45; the EU Procurement Standard. [[rtt-sip]] [[EN301-549]]</p>
 
 <table>
-<caption>Overview of what specifications may address some of the use cases outlined above</caption>
+<caption>Overview of what specifications may address some of the user needs outlined above</caption>
 <tr>
-<td></td>
+<th scope="col">User Need</th>
 <th scope="col">Related specs or groups</th>
 <th scope="col">Mapping to RFC 5194 &#45; Framework for Real&#45;time text over IP Using SIP:</th>
 <th scope="col">Mapping to EN 301 549 &#45; EU procurement standard</th>
