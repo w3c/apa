@@ -619,6 +619,14 @@ respecConfig.localBiblio = {
         "title": "User Agent Accessibility Guidelines (UAAG) 2.0"
 
 },
+
+     "webrtc": {
+        "date": "26 January 2021",
+        "href": "https://www.w3.org/TR/webrtc/",
+        "publisher": "W3C",
+        "title": "WebRTC 1.0: Real-Time Communication Between Browsers"
+
+},
                           
 }
 
