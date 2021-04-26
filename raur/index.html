@@ -83,7 +83,7 @@ th+th, td+td{
 
 <section>
 <h2>User needs and requirements</h2>
-<p>The following outlines a range of user needs and requirements. The user needs have also been compared to existing use cases for Real&#45;time text (<abbr title="Real&#45;time text">RTT</abbr>) such as the <abbr title="Internet Engineering Task Force">IETF</abbr> Framework for Real&#45;time text over IP Using the <abbr title="Internet Engineering Task Force">IETF</abbr> Session Initiation Protocol RFC 5194 and the European Procurement Standard EN 301 549. [[rtt-sip]] [[EN301-549]]</p>
+<p>The following outlines a range of user needs and requirements. The user needs have also been compared to existing use cases for real&#45;time text (<abbr title="Real&#45;time text">RTT</abbr>) such as the <abbr title="Internet Engineering Task Force">IETF</abbr> 'Framework for Real&#45;Time Text over IP Using the Session Initiation Protocol (SIP)' RFC 5194 and the European Procurement Standard EN 301 549. [[rtt-sip]] [[EN301-549]]</p>
 
 
 		<section>
@@ -180,7 +180,7 @@ Successful design of operations required for acting on incoming calls, getting i
  <li><strong>REQ 8c:</strong> If not transmitted in a live screen share - ensure the platform doesn't strip captions or descriptions that may have been part of the original video.</li>
 </ul>
 <p class="note">
- Moving beyond mono in this context is also important, as the stereo spread allows audio descriptions to be sound staged. Applications should also inherit customization settings from the users operating system.
+ Moving beyond mono in this context is also important, as the stereo spread allows audio descriptions to be sound staged. Applications should also inherit customization settings from the user's operating system.
 </p>
 		</section>
 
@@ -207,14 +207,14 @@ Successful design of operations required for acting on incoming calls, getting i
 </ul>
 
 <p class="note">
-This user need may also indicate necessary support for 'Total conversation' services as defined by <abbr title="International Telecommunication Union">ITU</abbr> in <abbr title="Web Real&#45;time communication">WebRTC</abbr> applications. These are combinations of voice, video, and real-time text (RTT) in the same real-time session. [[total-conversation]]
+This user need may also indicate necessary support for 'Total conversation' services as defined by <abbr title="International Telecommunication Union">ITU</abbr> in <abbr title="Web Real&#45;time communication">WebRTC</abbr> applications. These are combinations of voice, video, and <abbr title="Real&#45;time text">RTT</abbr> in the same real-time session. [[total-conversation]]
 </p>
 
 		</section>
 
 		<section>
 
-<h3>Emergency calls: Support for Real&#45;time text (<abbr title="Real&#45;time text">RTT</abbr>) </h3>
+<h3>Emergency calls: Support for Real&#45;Time Text (<abbr title="Real&#45;time text">RTT</abbr>) </h3>
 
 <ul>
 <li><strong>User Need 11:</strong> In an emergency situation a deaf, speech impaired, hard of hearing or deaf blind user needs to make an emergency call, instantly send and receive related text messages and/or sign via a video stream.</li>
@@ -266,7 +266,7 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <h3>Captioning support</h3>
 <ul>
 <li><strong>User Need 15:</strong> A deaf user or user with a cognitive disability needs to access a channel containing live transcriptions during a conference call or broadcast.</li>
- <li><strong>REQ 15a:</strong> Honor user preferences relating to captioned content. Provide support for signing or use of symbol sets e.g. <abbr title="Augmentative and Alternative Communication">AAC</abbr>.</li>
+ <li><strong>REQ 15a:</strong> Honor user preferences relating to captioned content. Provide support for signing or use of symbol sets e.g. Augmentative and Alternative Communication (AAC).</li>
 </ul>
 		</section>
 
@@ -301,12 +301,12 @@ This user need may also indicate necessary support for 'Total conversation' serv
 		
 
 <ul>
-<li><strong>User Need 18: </strong> To translate text to speech interactions into comprehensible speech; a blind screen reader user depending on <abbr title="Text to Speech">TTS</abbr> to interact with their computers and smart devices needs a traditional Internet Relay Chat (IRC) style interface.</li>
+<li><strong>User Need 18: </strong> To translate text to speech interactions into comprehensible speech; a blind screen reader user depending on text to speech (TTS) to interact with their computers and smart devices needs a traditional Internet relay chat (IRC) style interface.</li>
 
-	  <li><strong>REQ 18a:</strong> Preserve <abbr title="Internet Relay Chat">IRC</abbr> as a configuration option in user agents that implement <abbr title="Web Real&#45;time communication">WebRTC</abbr> as opposed to having only the Real&#45;time text (<abbr title="Real&#45;time text">RTT</abbr>) type interface. (<abbr title="Real&#45;time text">RTT</abbr>) is favoured by users who are deaf or hearing impaired.  For screen reader users, <abbr title="Text to Speech">TTS</abbr> cannot reasonably translate text into comprehensible speech unless characters are transmitted in very close timing to one another. Typical gaps will result in stuttering and highly unintelligible speech output from the <abbr title="Text to Speech">TTS</abbr> engine.</li>
+	  <li><strong>REQ 18a:</strong> Preserve <abbr title="Internet relay chat">IRC</abbr> as a configuration option in user agents that implement <abbr title="Web Real&#45;time communication">WebRTC</abbr> as opposed to having only the real&#45;time text type interface. <abbr title="Real&#45;time text">RTT</abbr> is favoured by users who are deaf or hearing impaired.  For screen reader users, <abbr title="Text to Speech">TTS</abbr> cannot reasonably translate text into comprehensible speech unless characters are transmitted in very close timing to one another. Typical gaps will result in stuttering and highly unintelligible speech output from the <abbr title="Text to Speech">TTS</abbr> engine.</li>
 </ul>
 
-<p class="note"> Some braille users will also prefer the <abbr title="Real&#45;time text">RTT</abbr> model. However, braille users desiring text displayed with standard contracted braille might better be served in the manner users relying on text to speech (<abbr title="Text to Speech">TTS</abbr>) engines are served, by buffering the data to be transmitted until an end of line character is reached.</p>
+<p class="note"> Some braille users will also prefer the <abbr title="Real&#45;time text">RTT</abbr> model. However, braille users desiring text displayed with standard contracted braille might better be served in the manner users relying on <abbr title="Text to Speech">TTS</abbr> engines are served, by buffering the data to be transmitted until an end of line character is reached.</p>
 		</section>
 
 		
@@ -367,26 +367,26 @@ This user need may also indicate necessary support for 'Total conversation' serv
 
 <h3>Data table mapping user needs with related specifications</h3>
 
-<p>The following table maps some of the user needs and requirements presented in this document with other related specifications such as those defined in RFC 5194 &#45; Framework for Real&#45;time text over IP Using SIP and EN 301 549 &#45; the EU Procurement Standard. [[rtt-sip]] [[EN301-549]]</p>
+<p>The following table maps some of the user needs and requirements presented in this document with other related specifications such as those defined in RFC 5194 &#45; 'Framework for Real&#45;Time Text over IP Using the Session Initiation Protocol (SIP)' and EN 301 549 &#45; the EU Procurement Standard. [[rtt-sip]] [[EN301-549]]</p>
 
 <table>
 <caption>Overview of what specifications may address some of the user needs outlined above</caption>
 <tr>
 <th scope="col">User Need</th>
 <th scope="col">Related specs or groups</th>
-<th scope="col">Mapping to RFC 5194 &#45; Framework for Real&#45;time text over IP Using SIP:</th>
+<th scope="col">Mapping to RFC 5194 &#45; Framework for Real&#45;Time Text over IP Using SIP:</th>
 <th scope="col">Mapping to EN 301 549 &#45; EU procurement standard</th>
 </tr>
 <tr>
 <th  scope="row">Incoming calls</th>
-<td><abbr title="Web Content Accessibility Guidelines">WCAG</abbr>/<abbr title="Accessibility Guidelines Working Group">AGWG</abbr>, <abbr title="Accessible Rich Internet Applications">ARIA</abbr>.</td>
+<td><abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, <abbr title="Accessible Rich Internet Applications">ARIA</abbr>.</td>
 <td>Similar to 6.2.4.2 Alerting &#45; RFC 5194/ pre&#45;session set up with <abbr title="Real&#45;time text">RTT</abbr> 6.2.1</td>
-<td>Maps to <a href="http://mandate376.standards.eu/standard/technical&#45;requirements/programmatically&#45;determinable&#45;send&#45;and&#45;receive&#45;direction"> 6.2.2.2: Programmatically determinable send and receive direction</a></td>
+<td>Maps to <a href="https://ds.gpii.net/en-301-549/6222-programmatically-determinable-send-and-receive-direction"> 6.2.2.2: Programmatically determinable send and receive direction</a></td>
 </tr>
 
 <tr>
 <th scope="row">Accessible call setup</th>
-<td><abbr title="Web Content Accessibility Guidelines">WCAG</abbr>/<abbr title="Accessibility Guidelines Working Group">AGWG</abbr>, <abbr title="Accessible Rich Internet Applications">ARIA</abbr>.</td>
+<td><abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, <abbr title="Accessible Rich Internet Applications">ARIA</abbr>.</td>
 <td>Under &#39;General Requirements for Text over IP (ToIP) &#39;</td>
 <td>No Mapping</td>
 </tr>
@@ -416,13 +416,13 @@ Media Working Group, Web and Networks Interest Group, Second Screen Working Grou
 <td>
 Media Working Group, Web and Networks Interest Group. Second Screen API may fulfil this user need. HTML5 supports exists and the streams need to be separable. Could be managed via a status bar.</td>
 <td>Similar to R26 in 5.2.4. Presentation and User Requirements.</td>
-<td>Maps to <a href="http://mandate376.standards.eu/standard/technical&#45;requirements/concurrent&#45;voice&#45;and&#45;text"> 6.2.1.2: Concurrent voice and text</a></td>
+<td>Maps to <a href="https://ds.gpii.net/en-301-549/6212-concurrent-voice-and-text"> 6.2.1.2: Concurrent voice and text</a></td>
 </tr>
 <tr>
 <th scope="row">Text communication data channel</th>
 <td>
 Media Working Group, IETF RFC 8865</td>
-	<td> Similar to R26 in RFC 5194 5.2.4. Presentation and User Requirements. NOTE: Very similar user requirement to &#39;Audio Routing and Communication channel control&#39;</td>
+	<td> Similar to R26 in RFC 5194 5.2.4. Presentation and User Requirements and to &#39;Routing and communication channel control&#39;</td>
 	<td>Section 6.2</td>
 </tr>
 <tr>
@@ -430,14 +430,14 @@ Media Working Group, IETF RFC 8865</td>
 <td>
 Web Audio Working Group. Multichannel may be covered by the Web Audio group space, and in audio device proposal, with some <abbr title="Web Real&#45;time communication">WebRTC</abbr> requirements.</td>
 <td>No Mapping</td>
-<td>Maps to <a href="http://mandate376.standards.eu/standard/technical&#45;requirements/concurrent&#45;voice&#45;and&#45;text">6.2.1.2: Concurrent voice and text</a>  NOTE: Very similar user requirement to &#39;Audio Routing and Communication channel control&#39;</td>
+<td>Maps to <a href="https://ds.gpii.net/en-301-549/6212-concurrent-voice-and-text">6.2.1.2: Concurrent voice and text</a> with similar user requirement to &#39;Routing and communication channel control&#39;</td>
 
 </tr>
 <tr>
-<th scope="row">Support for Real&#45;time text </th>
+<th scope="row">Support for <abbr title="Real&#45;time text">RTT</abbr></th>
 <td>
 <abbr title="Web Real&#45;time communication">WebRTC</abbr>, IETF RFC 8865</td>
-<td>Similar to R26 in RFC 5194 5.2.4. Presentation and User Requirements. NOTE: Very similar user requirement to &#39;Audio Routing and Communication channel control&#39;</td>
+<td>Similar to R26 in RFC 5194 5.2.4. Presentation and User Requirements and &#39;Routing and communication channel control&#39;</td>
 <td>Section 6.2</td>
 </tr>
 <tr>
@@ -459,7 +459,7 @@ Relates to RFC 5194 &#45; under R21&#45;R23</td>
 <td>May relate to interoperability with third&#45;party services. This is not <abbr title="Web Real&#45;time communication">WebRTC</abbr> specific and may be a user interface accessibility issue.</td>
 <td>
 Relates to RFC 5194 &#45; under R16 &#45; but this does NOT fully address our use case requirement.</td>
-<td>Maps to <a href="http://mandate376.standards.eu/standard/technical&#45;requirements/visually&#45;distinguishable&#45;display"> 6.2.2.1: Visually distinguishable display</a></td>
+<td>Maps to <a href="https://ds.gpii.net/en-301-549/6221-visually-distinguishable-display"> 6.2.2.1: Visually distinguishable display</a></td>
 </tr>
 <tr>
 <th scope="row">Warning and recovery of lost data</th>
@@ -483,10 +483,10 @@ Relates to RFC 5149 &#45; Transport Requirements/Text over IP (ToIP) and Relay S
 </tr>
 <tr>
 <th scope="row">Identify caller</th>
-<td> <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>/<abbr title="Accessibility Guidelines Working Group">AGWG</abbr>, <abbr title="Accessible Rich Internet Applications">ARIA</abbr>. Needs further clarification/review may be an accessible user interface issue. Identity may be handled by the browser via <a href="https://w3c.github.io/webrtc&#45;identity/identity.html">Identity for <abbr title="Web Real&#45;time communication">WebRTC</abbr> 1.0</a>.</td>
+<td> <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, <abbr title="Accessible Rich Internet Applications">ARIA</abbr>. Needs further clarification/review may be an accessible user interface issue. Identity may be handled by the browser via <a href="https://w3c.github.io/webrtc&#45;identity/identity.html">Identity for <abbr title="Web Real&#45;time communication">WebRTC</abbr> 1.0</a>.</td>
 <td>
 Similar to R27 in RFC 5194 5.2.4. Presentation and User Requirements</td>
-<td>Maps to <a href="http://mandate376.standards.eu/standard/technical&#45;requirements/caller&#45;id">6.3 Caller ID</a></td>
+<td>Maps to <a href="https://ds.gpii.net/en-301-549/63-caller-id">6.3 Caller ID</a></td>
 </tr>
 <tr>
 <th scope="row">Live transcription and captioning</th>
@@ -531,7 +531,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
  <li><strong>Audio description in live conferencing - REQ 8b:</strong> Support a users custom EQ profile.</li>
  <li><strong>Audio description in live conferencing - REQ 8c:</strong> If not transmitted in a live screen share - ensure the platform doesn't strip captions or descriptions that may have been part of the original video.</li>
 
-	<li><strong>Emergency calls and RTT - REQ 11b:</strong>  Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging methods or platforms. </li>
+	<li><strong>Emergency calls and <abbr title="Real&#45;time text">RTT</abbr> - REQ 11b:</strong>  Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging methods or platforms. </li>
 
 <li><strong>Video relay services (VRS) and remote interpretation (VRI) - REQ 12b:</strong> Provide support for other sign languages and translations. For example, VRS calls may be made between a sign language user and a person speaking another language. There are variations in signing itself such as Irish Sign Language (ISL which is related to French sign language) and British Sign Language (BSL). A user may need to stream or pin both.</li>
 <li><strong>Video relay services (VRS) and remote interpretation (VRI) - REQ 12c:</strong> Ensure that privacy and security options are maintained when using relay services. </li> 
@@ -549,7 +549,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 <li>Added note on ITU definition of Total Conversation services that relates to 'REQ 10a: Ensure support for multiple simultaneous streams'.</li>
 </ul> 
 
-<p class="note">This user need may also indicate necessary support for 'Total conversation' services as defined by ITU in <abbr title="Web Real&#45;time communication">WebRTC</abbr> applications. These are combinations of voice, video, and real-time text (RTT) in the same real-time session. [total-conversation]</p>
+<p class="note">This user need may also indicate necessary support for 'Total conversation' services as defined by ITU in <abbr title="Web Real&#45;time communication">WebRTC</abbr> applications. These are combinations of voice, video, and <abbr title="Real&#45;time text">RTT</abbr> in the same real-time session. [total-conversation]</p>
 
 	
 <p>This document has been updated based on document feedback, discussion and Research Questions Task Force consensus.</p>
