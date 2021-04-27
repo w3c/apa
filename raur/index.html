@@ -6,7 +6,7 @@
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer="defer"></script>
 		<script src="respec-config.js" class="remove"></script>
 		<script src="../biblio.js" class="remove" defer="defer"></script>
-		<style type="text/CSS">
+		<style>
 			table{
 	border:solid 2px #999;
 	border-width:1px 0 0 1px;
@@ -45,31 +45,25 @@ th+th, td+td{
 	</head>
 	<body>
 		<section id="abstract">
+			<h2>Abstract</h2>
 <p>This document outlines various accessibility related user needs, requirements and scenarios for real&#45;time communication (RTC). These user needs should drive accessibility requirements in various related specifications and the overall architecture that enables it. It first introduces a definition of <abbr title="real&#45;time communication">RTC</abbr> as used throughout the document and outlines how <abbr title="real&#45;time communication">RTC</abbr> accessibility can support the needs of people with disabilities. It defines the term user needs as used throughout the document and then goes on to list a range of these user needs and their related requirements. Following that some quality related scenarios are outlined and finally a data table that maps the user needs contained in this document to related use case requirements found in other technical specifications.</p>
 
 <p>This document is most explicitly not a collection of baseline requirements. It is also important to note that some of the requirements may be implemented at a system or platform level, and some may be authoring requirements.</p>
 </section>
 
-<section id="sotd">
-
-</section>
-		<section class="introductory">
-			<h2>Introduction</h2>
-
-			                
-
+<section id="sotd"></section>
+		<section class="introductory" id="introduction">
+		<h2>Introduction</h2>  
 		<h3> What is real&#45;time communication (<abbr title="real&#45;time communication">RTC</abbr>)? </h3>
 <p>Real&#45;time communication (<abbr title="real&#45;time communication">RTC</abbr>) is an evolution beyond the traditional data exchange model of client to server resulting in real-time peer to peer audio, video and data exchange directly between supported user agents. This allows instantaneous applications for video, text and audio calls, text chat, file exchange, screen sharing and gaming, all without the need for browser plug&#45;ins. While real&#45;time communication (<abbr title="real&#45;time communication">RTC</abbr>) applications are enabled in the main by specifications like <abbr title="Web Real&#45;time communication">WebRTC</abbr>, <abbr title="Web Real&#45;time communication">WebRTC</abbr> is not the sole specification with responsibility to enable accessible real-time communication applications. The use cases and requirements are broad - for example as outlined in the <abbr title="Internet Engineering Task Force">IETF</abbr> RFC 7478 'Web Real-Time Communication Use Cases and Requirements' document. [[ietf-rtc]] [[webrtc]]</p>
 </section>
 
 <section>
-
 <h2>Real&#45;time communication and accessibility </h2>
 <p><abbr title="real-time communication">RTC</abbr> has the potential to allow improved accessibility features that will support a broad range of user needs for people with a wide range of disabilities. These needs can be met through improved audio and video quality, audio routing, captioning, improved live transcription, transfer of alternate formats such as sign-language, text-messaging / chat, real time user support and status polling.</p>
 
 <p><abbr title="real-time communication">RTC</abbr> accessibility is enabled by a combination of technologies and specifications such as those from the Media Working Group, Web and Networks Interest Group, Second Screen, and Web Audio Working group as well as <abbr title="Accessibility Guidelines Working Group">AGWG</abbr> and <abbr title="Accessible Rich Internet Applications">ARIA</abbr>. The Accessible Platform Architectures Working Group (APA) hopes this document will inform how these groups meet various responsibilities for enabling accessible <abbr title="real-time communication">RTC</abbr>, as well updating related use cases in various groups. For examples, view the current work on <abbr title="Web Real-time communication">WebRTC</abbr> Next Version Use Cases First Public Working Draft. [[webrtc-use-cases]]</p>
 		</section>
-
 
 		<section>
 <h3>User needs definition</h3>
@@ -78,13 +72,9 @@ th+th, td+td{
 <p>User needs are presented here with their related requirements; some in a range of scenarios (which can be thought of as similar to user stories).</p>
 		</section>
 
-
-
-
 <section>
 <h2>User needs and requirements</h2>
 <p>The following outlines a range of user needs and requirements. The user needs have also been compared to existing use cases for real&#45;time text (<abbr title="Real&#45;time text">RTT</abbr>) such as the <abbr title="Internet Engineering Task Force">IETF</abbr> 'Framework for Real&#45;Time Text over IP Using the Session Initiation Protocol (SIP)' RFC 5194 and the European Procurement Standard EN 301 549. [[rtt-sip]] [[EN301-549]]</p>
-
 
 		<section>
 
@@ -128,6 +118,7 @@ Here the term atomic relates to small pieces of data. For the purposes of access
 <li><strong>REQ 3a:</strong> Ensure user profiles and accessibility preferences in <abbr title="real&#45;time communication">RTC</abbr> applications are mobile and can move with the user as they change device or environment.</li>
 </ul>
 </section>
+
 <section>
 
 <h3>Incoming calls and caller ID</h3>
@@ -141,8 +132,6 @@ Here the term atomic relates to small pieces of data. For the purposes of access
 
 <p class="note">
 Successful design of operations required for acting on incoming calls, getting informed about who the caller is and connecting relay services should not require complicated sequences of user actions. </p>
-
-
 </section>
 
 <section>
@@ -157,7 +146,6 @@ Successful design of operations required for acting on incoming calls, getting i
 <li><strong>User Need 6:</strong> A deaf user needs to move parts of a live teleconference session (as separate streams) to one or more devices for greater control.</li>
 
 <li><strong>REQ 6a:</strong> Allow the separate routing of video streams such as, captioning or a sign language interpreter to a separate high resolution display.</li>
-
 </ul>
 
 
@@ -172,7 +160,6 @@ Successful design of operations required for acting on incoming calls, getting i
 
 		<section>
 <h3>Audio description in live conferencing</h3> 
-
 <ul>
 <li><strong>User Need 8:</strong> A user may struggle to hear audio description in a live teleconferencing situation.</li>
  <li><strong>REQ 8a:</strong> Ensure Audio Description (AD) recommended sound values are dynamic and have independent volume, EQ adjustment and routing capability.</li>
@@ -190,7 +177,6 @@ Successful design of operations required for acting on incoming calls, getting i
 
 <ul>
 <li><strong>User Need 9:</strong> Any user watching captioning or audio description needs to be confident it is synchronised and accurate.</li>
-
 <li><strong>REQ 9a:</strong> Ensure that any outages or loss to captioning or audio description will be repaired while preserving context and meaning. </li>
 <li><strong>REQ 9b:</strong> Ensure that the integrity of related alternate supporting tracks or streams such as transcriptions, are in sync with any repairs.</li>
 </ul>
@@ -209,7 +195,6 @@ Successful design of operations required for acting on incoming calls, getting i
 <p class="note">
 This user need may also indicate necessary support for 'Total conversation' services as defined by <abbr title="International Telecommunication Union">ITU</abbr> in <abbr title="Web Real&#45;time communication">WebRTC</abbr> applications. These are combinations of voice, video, and <abbr title="Real&#45;time text">RTT</abbr> in the same real-time session. [[total-conversation]]
 </p>
-
 		</section>
 
 		<section>
@@ -222,26 +207,26 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <li><strong>REQ 11a:</strong> Provide or ensure support for <abbr title="Real&#45;time text">RTT</abbr> in <abbr title="Web Real&#45;time communication">WebRTC</abbr>. </li>
 	<li><strong>REQ 11b:</strong> Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging methods or platforms. </li>
 </ul>
-
 		</section>
 
 		<section>
 
-<h3>Video relay services (<abbr title="Video Relay Services">VRS</abbr>) and remote interpretation (<abbr title="Remote Interpretation">VRI</abbr>)</h3>
+<h3>Video relay services (<abbr title="Video relay services">VRS</abbr>) and video remote interpretation <abbr title="Video remote interpretation">VRI</abbr></h3>
 
 <ul>
 <li><strong>User Need 12:</strong> A deaf, speech impaired, or hard of hearing user, needs to communicate on a call using a remote video interpretation service to access sign language and interpreter services.</li>
 
 <li><strong>REQ 12a:</strong> Provide or ensure support for video relay and remote interpretation services. This user need may relate to interoperability with third&#45;party services;  <abbr title="Internet Engineering Task Force">IETF</abbr> has looked at standardizing a way to use Session Initiation Protocol (SIP) with VRS services. [[ietf-relay]] </li>
-<li><strong>REQ 12b:</strong> Provide <abbr title="Video Relay Services">VRS</abbr> and <abbr title="Remote Interpretation">VRI</abbr> support for different specified sign languages and various spoken language translations. A user may also need to stream or pin both.</li>
+<li><strong>REQ 12b:</strong> Provide <abbr title="Video relay services">VRS</abbr> and <abbr title="Video remote interpretation">VRI</abbr> support for different specified sign languages and various spoken language translations. A user may also need to stream or pin both.</li>
 <li><strong>REQ 12c:</strong> Ensure that privacy and security options are maintained when using relay services.</li> 
-<li><strong>REQ 12d:</strong> Ensure <abbr title="Web Real&#45;time communication">WebRTC</abbr>supports integration of traditional mobile telephony and relay services.</li>
+<li><strong>REQ 12d:</strong> Ensure <abbr title="Web Real&#45;time communication">WebRTC</abbr> supports integration of traditional mobile telephony and relay services.</li>
 </ul>
 
 <p class="note"> Regarding REQ 12d - as mentioned previously, getting informed about who the caller is and connecting relay services should not require complicated sequences of user actions. Currently, in the UK to successfully receive a relay call using a mobile app, a deaf user needs to toggle between the relay app and the built-in telephony app. If the incoming call is a relay call, the user must immediately activate an app, otherwise the call may be lost. The party calling the deaf user provides a prefix to connect to the relay center. If the calling party does not use a prefix for the relay call, then the call with not have text relay assistance. This is different in the US for example, where with captioned phones users have access to add captioning on the go to incoming and outgoing calls, and the other party just handles a regular call without requiring a prefix.</p>
 
 
 </section>
+
 
 		<section>
 
@@ -309,11 +294,10 @@ This user need may also indicate necessary support for 'Total conversation' serv
 <p class="note"> Some braille users will also prefer the <abbr title="Real&#45;time text">RTT</abbr> model. However, braille users desiring text displayed with standard contracted braille might better be served in the manner users relying on <abbr title="Text to Speech">TTS</abbr> engines are served, by buffering the data to be transmitted until an end of line character is reached.</p>
 		</section>
 
-		
+		</section>
 
-</section>
-
-<section><h2>Relationship between <abbr title="real&#45;time communication">RTC</abbr> and XR Accessibility</h2>
+<section>
+	<h2>Relationship between <abbr title="real&#45;time communication">RTC</abbr> and XR Accessibility</h2>
 
 <p>There are potential real-time communication application issues that may only apply in immersive environments or augmented reality contexts.</p>
 
@@ -323,18 +307,15 @@ This user need may also indicate necessary support for 'Total conversation' serv
 
 		
 <section>
-
 	<h2>Quality of service scenarios</h2>
-
-<section>
+	<section>
 <h3>Deaf users: Video resolution and frame rates</h3>
 
 <p><strong>Scenario:</strong> A deaf user watching a signed broadcast needs a high&#45;quality frame rate to maintain legibility and clarity in order to understand what is being signed.</p>
 
 <p class="note">EN 301 549 Section 6,  recommends  <abbr title="Web Real&#45;time communication">WebRTC</abbr> applications should support a frame rate of at least 20 frames per second (FPS). More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a> and ITU-T Series H Supplement 1 "<a href="https://www.itu.int/ITU-T/recommendations/rec.aspx?rec=4834&lang=en">Sign language and lip-reading real-time conversation using low bit-rate video communication</a>".</p>
 
-
-		</section>
+</section>
 
 <section>
 	<h3>Audio frequency bandwidth</h3>
@@ -343,6 +324,7 @@ This user need may also indicate necessary support for 'Total conversation' serv
 
 <p class="note">EN 301 549 Section 6, recommends for <abbr title="Web Real&#45;time communication">WebRTC</abbr> enabled conferencing and communication the application shall be able to encode and decode communication with a frequency range with an upper limit of at least 7KHz. More details can be found at <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"> Accessible Procurement standard for ICT products and services EN 301 549 (PDF)</a></p>
 </section>
+
 
 <section>
 
@@ -356,15 +338,10 @@ This user need may also indicate necessary support for 'Total conversation' serv
 
 <p class="note"><abbr title="Web Real&#45;time communication">WebRTC</abbr> lets applications prioritise bandwidth dedicated to audio / video / data streams; there is also some experimental work in signalling these needs to the network layer as well as support for prioritising frame rate over resolution in case of congestion. [[webrtc-priority]]</p>
 
-
 </section>
-
-
-
 </section>
 
 <section>
-
 <h3>Data table mapping user needs with related specifications</h3>
 
 <p>The following table maps some of the user needs and requirements presented in this document with other related specifications such as those defined in RFC 5194 &#45; 'Framework for Real&#45;Time Text over IP Using the Session Initiation Protocol (SIP)' and EN 301 549 &#45; the EU Procurement Standard. [[rtt-sip]] [[EN301-549]]</p>
@@ -448,7 +425,7 @@ Relates to RFC 5194 &#45; under R2&#45;R8</td>
 <td>6.5.1 and 6.2.1.2</td>
 </tr>
 <tr>
-<th scope="row">Support for video relay services (VRS) and remote interpretation (<abbr title="Remote Interpretation">VRI</abbr>)</th>
+<th scope="row">Support for video relay services (VRS) and video remote interpretation (<abbr title="Video remote interpretation">VRI</abbr>)</th>
 <td>May relate to interoperability with third&#45;party services.</td>
 <td>
 Relates to RFC 5194 &#45; under R21&#45;R23</td>
@@ -533,11 +510,9 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 
 	<li><strong>Emergency calls and <abbr title="Real&#45;time text">RTT</abbr> - REQ 11b:</strong>  Avoid the problem of unsent emergency messages. A user may not be aware when they have not successfully sent an emergency message. For example, <abbr title="Real&#45;time text">RTT</abbr> avoids this problem due to instantaneous data transfer but this may be an issue for other messaging methods or platforms. </li>
 
-<li><strong>Video relay services (VRS) and remote interpretation (VRI) - REQ 12b:</strong> Provide support for other sign languages and translations. For example, VRS calls may be made between a sign language user and a person speaking another language. There are variations in signing itself such as Irish Sign Language (ISL which is related to French sign language) and British Sign Language (BSL). A user may need to stream or pin both.</li>
-<li><strong>Video relay services (VRS) and remote interpretation (VRI) - REQ 12c:</strong> Ensure that privacy and security options are maintained when using relay services. </li> 
+<li><strong>Video relay services (VRS) and video remote interpretation (VRI) - REQ 12b:</strong> Provide support for other sign languages and translations. For example, VRS calls may be made between a sign language user and a person speaking another language. There are variations in signing itself such as Irish Sign Language (ISL),  which is related to French sign language, and British Sign Language (BSL). A user may need to stream or pin both.</li>
+<li><strong>Video relay services (VRS) and video remote interpretation (VRI) - REQ 12c:</strong> Ensure that privacy and security options are maintained when using relay services. </li> 
 </ul>
-
-
 
 <p>The following are other changes in this document:</p>
 
@@ -554,6 +529,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 	
 <p>This document has been updated based on document feedback, discussion and Research Questions Task Force consensus.</p>
 </section>
+
 
 	<section class="appendix">
 			<h2>Acknowledgments</h2>
@@ -583,6 +559,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 					<li>Estella Oncins Noguer, TransMedia UAB</li>		
 				</ul>
 </section>
+</section>
 
 <section id="enabling-funders">
 <h3>Enabling funders<a class="self-link" aria-label="§" href="#enabling-funders"></a></h3>
@@ -592,6 +569,7 @@ Covered under 5.2.3 (transcoding service requirements). Referring to relay servi
 	<section id="references" class="appendix">
   </section>
 
-</section>
+
+
 </body>
 </html>
