@@ -419,9 +419,9 @@ respecConfig.localBiblio = {
     },
     "EN301-549": {
         "date": "August 2018",
-        "href": "http://mandate376.standards.eu/standard",
+        "href": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf",
         "publisher": "CEN/CENELEC/ETSI",
-        "title": "Accessibility requirements suitable for public procurement of ICT products and services in Europe"
+        "title": "Accessibility requirements suitable for public procurement of ICT products and services in Europe (V 2.1.2 / PDF)"
     },
     "webrtc-priority": {
         "date": "12 February 2020",
