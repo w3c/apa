@@ -28,7 +28,7 @@ var respecConfig = {
 	// and its maturity status
 	previousPublishDate:  "2020-03-19",
 	previousMaturity:  "WD",
-	prevRecURI: "https://www.w3.org/TR/2020/WD-raur-20200319/",
+	// prevRecURI: "https://www.w3.org/TR/2020/WD-raur-20200319/",
 	//previousDiffURI: "",
 	
 	// if there a publicly available Editors Draft, this is the link
@@ -91,9 +91,27 @@ var respecConfig = {
 	
 	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
 	
-	group: "apa",
+	//Github details
+
 	github: "w3c/apa",
-	maxTocLevel: 4
+
+	// name of the WG
+	group:           "apa",
+	
+	
+	// URI of the public WG page
+	groupURI:        "https://www.w3.org/WAI/APA/",
+	
+	// name (with the @w3c.org) of the public mailing to which comments are due
+	groupPublicList: "public-apa",
+	
+	// URI of the patent status for this WG, for Rec-track documents
+	// !!!! IMPORTANT !!!!
+	// This is important for Rec-track documents, do not copy a patent URI from a random
+	// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+	// Team Contact.
+	// groupPatentURI:  "https://www.w3.org/2004/01/pp-impl/83907/status",
+	maxTocLevel: 4,
 	
 };
 
