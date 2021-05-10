@@ -28,7 +28,7 @@ var respecConfig = {
 	// and its maturity status
 	previousPublishDate:  "2020-03-19",
 	previousMaturity:  "WD",
-	prevRecURI: "https://www.w3.org/TR/2020/WD-raur-20200319/",
+	// prevRecURI: "https://www.w3.org/TR/2020/WD-raur-20200319/",
 	//previousDiffURI: "",
 	
 	// if there a publicly available Editors Draft, this is the link
