@@ -49,7 +49,7 @@ var respecConfig = {
 		},
 		{
 			name: "Janina Sajka",
-			url: "http://rednote.net/",
+			url: "https://rednote.net/",
 			//mailto: "janina@rednote.net",
 			w3cid: 33688
 		},
