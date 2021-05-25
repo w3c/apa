@@ -42,21 +42,21 @@ var respecConfig = {
 	editors: [
 		{
 			name: "Joshue O'Connor",
-			mailto: "joconnor@w3.org",
-			url: 'https://www.w3.org',
+			//mailto: "joconnor@w3.org",
+			url: 'https://www.w3.org/People#joconnor',
 			company: "W3C",
-			companyURI: "https://www.w3.org",
+			companyURI: "https://www.w3.org/",
 			w3cid: 41218
 		},
 		{
 			name: "Janina Sajka",
 			url: "http://rednote.net/",
-			mailto: "janina@rednote.net",
+			//mailto: "janina@rednote.net",
 			w3cid: 33688
 		},
 	{
 			name: "Jason White",
-			url: "http://www.ets.org/",
+			//url: "http://www.ets.org/",
 			company: "Educational Testing Service",
 			mailto: "jjwhite@ets.org",
 			companyURI: "http://www.ets.org/",
@@ -64,10 +64,10 @@ var respecConfig = {
 		},
 		{
 			name: "Michael Cooper",
-			url: 'https://www.w3.org',
-			mailto: "cooper@w3.org",
+			url: 'https://www.w3.org/People/cooper/',
+			//mailto: "cooper@w3.org",
 			company: "W3C",
-			companyURI: "https://www.w3.org",
+			companyURI: "https://www.w3.org/",
 			w3cid: 34017
 		}
 	],
