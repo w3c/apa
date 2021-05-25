@@ -50,7 +50,7 @@ var respecConfig = {
 		},
 		{
 			name: "Janina Sajka",
-			url: "http://rednote.net/",
+			url: "https://rednote.net/",
 			//mailto: "janina@rednote.net",
 			w3cid: 33688
 		},
@@ -59,7 +59,7 @@ var respecConfig = {
 			//url: "http://www.ets.org/",
 			company: "Educational Testing Service",
 			mailto: "jjwhite@ets.org",
-			companyURI: "http://www.ets.org/",
+			companyURI: "https://www.ets.org/",
 			w3cid: 74028
 		},
 		{
