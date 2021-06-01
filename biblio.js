@@ -627,6 +627,22 @@ respecConfig.localBiblio = {
         "title": "WebRTC 1.0: Real-Time Communication Between Browsers"
 
 },
+
+    "raja-asl": {
+        "date": "27 May 2021",
+        "href": "https://arxiv.org/abs/2105.12928",
+        "publisher": "Cornell UNiversity",
+        "title": "Legibility of Videos with ASL signers"
+
+},
+
+    "wfd-wasli": {
+        "date": "14 March 2081",
+        "href": "https://wfdeaf.org/news/resources/wfd-wasli-statement-use-signing-avatars/",
+        "publisher": "World Federation of the Deaf",
+        "title": "WFD and WASLI"
+
+},
                           
 }
 
