@@ -643,7 +643,11 @@ respecConfig.localBiblio = {
         "title": "WFD and WASLI"
 
 },
-                          
+
+    "Bragg-et-al": {
+	"title": "Sign language recognition, generation, and translation: An interdisciplinary perspective",
+	"authors": ["Danielle Bragg", "Oscar Koller", "Mary Bellard", "Larwan Berke", "Patrick Boudreault", "Annelies Braffort", "Naomi Caselli", "Matt Huenerfauth", "Hernisa Kacorri", "Tessa Verhoef", "Christian Vogler", "Meredith Ringel Morris"],
+	"publisher": "The 21st International ACM SIGACCESS Conference on Computers and Accessibility",
+	"date": "October 2019"
+    },
 }
-
-
