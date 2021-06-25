@@ -17,26 +17,21 @@
 	  <section>
 	    <h2>Introduction</h2>
 	    <section>
-	      <h3>Summary of Issues</h3>
-	      <ul>
-		<li>When two media tracks are synchronized, what degree of time discrepancy between them is acceptable (whether for accessibility or for other reasons)?</li>
-<li>How does this acceptable time discrepancy vary across contexts, and how is it defined?</li>
-<li>What should be the granularity of the synchronization? For example, when text to speech with synchronized highlighting is used, should synchronization occur at the word level or (e.g., in second language learning contexts) at the syllable level? Similarly, for text to speech with highlighting of mathematical expressions, should synchronization occur at the expression/subexpression level rather than at the level of the entire mathematical equation?</li>
-	      </ul>
+	      <h3>Media Synchronization</h3>
+	      <p>In accessible multimedia content, a variety of resources may be presented concurrently. These resources can include a video track, an audio track, captions, audio descriptions, and sign language interpretation of the audio track. To ensure equality of access for users with a variety of disabilities and associated needs, these concurrent resources should be appropriately synchronized. For example, adequate synchronization of the audio and video tracks is necessary to support users who are hard of hearing, and who rely on lip reading to perceive spoken content.</p>
+	      <p>This document addresses the question of what qualifies as sufficient synchronization of the different media resources used in accessible content. The considerations that bear on this question are different depending on the resources involved (audio and video tracks, captions, sign language interpretation, etc.). Likewise, the applicable constraints vary according to whether the multimedia content is presented in real time (as in a video conference or a live event), or prerecorded.</p>
 	    </section>
 	    <section>
-<h3>Contexts of Application</h3>
-<p>The questions summarized above apply to a range of different contexts in which synchronization is needed. These include scenarios in which synchronization meets users' access needs, and therefore a time discrepancy which is too great can reduce accessibility, possibly to the point of making the synchronization unusable.</p>
-<p>Examples of contexts requiring synchronization are as follows.</p>
-<ul>
-<li>Synchronization of audio and video tracks in a multimedia presentation - important to enable lip reading by a person who is deaf or hard of hearing.</li>
-<li>Synchronization of captions with the audio track of a multimedia presentation.</li>
-<li>Synchronization of sign language interpretation with the audio track of a multimedia presentation.</li>
-<li>Synchronization of audio description of video with the video track of a multimedia presentation. Note that this is required whether or not the audio description is recorded human speech or generated via text to speech conversion from textual content.</li>
-<li>Synchronization of auditory and visual content in an XR environment.</li>
-</ul>
-</section>
-</section>
+	      <h3>Media Synchronization and Accessibility</h3>
+	      <p>The adequacy of media synchronization can significantly affect the accessibility of content. For example, for a person who uses captions to follow the progression of a video successfully, a correspondence should be maintained between the captions and the visual track (both of which the user is watching concurrently). This can be accomplished by limiting the delay between the spoken dialogue and the presentation of the captions. The issue of what delay should be regarded as acceptable in such a case is addressed in this document with respect to a variety of media resources.</p>
+	      <p>Issues of media synchronization are relevant to multiple aspects of Web technology. These aspects include the design and implementation of Web standards for media synchronization (e.g., Timed Text), the authoring tools with which accessible multimedia content is created, and the Web applications through which it is presented to the user. This document can serve as a point of reference for the development of each of these technologies. It can also inform the further evolution of standards for Web accessibility, and indeed for multimedia accessibility in general.</p>
+	    </section>
+	    <section>
+	      <h3>Associated Publications</h3>
+	      <p>This document is closely related to other publications developed by the W3C's Web Accessibility Initiative. Normative guidance concerning the accessibility of multimedia is given in <em>Web Content Accessibility Guidelines (WCAG)</em> 2.1 [[wcag21]]. Detailed, non-normative guidance to the accessibility-related aspects of multimedia content is presented in the <em>Media Accessibility User Requirements (MAUR)</em> [[media-accessibility-reqs]], a document that identifies users' needs and associated solutions.</p>
+	      <p>Synchronized media can occur in immersive environments, including virtual reality and augmented reality. The <em>XR Accessibility User Requirements (XAUR)</em> [[xaur]] should be consulted for guidance concerning the accessibility of these technologies. Similarly, synchronized media can arise in real-time communication applications, such as remote meeting environments. The accessibility-related user needs and associated system requirements applicable to these applications are considered in <em>RTC Accessibility User Requirements (RAUR)</em> [[raur]]. The present document should be regarded as complementing each of these publications by examining a specific aspect of media accessibility.</p>
+	    </section>
+	  </section>
 <section>
 <h2>Issues and Opportunities Identified in the Literature</h2>
 <section>
