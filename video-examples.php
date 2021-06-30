@@ -7,14 +7,14 @@
 	<body>
 		<?php include "_header.phi"; ?>
 		<h1>APA Video Examples</h1>
-		<p>The following videos and highlight the work being performed within our task forces. </p>
+		<p>The following videos highlight the work being performed in APA and within our task forces. </p>
 		<section>
 		<h2>Personalization Video Example</h2>
 		<p>The <a href="https://www.w3.org/WAI/APA/task-forces/personalization/">Personalization Task Force</a> created a video to demonstrate a semantic overlay approach to enable user driven personalization, eg. the association of user-preferred symbols with elements having those semantics: <a href="https://www.w3.org/2020/10/TPAC/apa-personalization.html"><strong>Web Support for People with Cognitive and Learning Disabilities</strong>.</a></p>
 		</section>
 		<section>
 		<h2>Pronunciation Video Example</h2>
-		<p> The <a href="https://www.w3.org/WAI/APA/task-forces/pronunciation/"> Spoken Pronunciation Task Force</a> created a video to demonstrate proposed approaches for controlling pronunciation in spans of web content: <a href="https://www.w3.org/2020/10/TPAC/apa-pronunciation.html"><strong>Pronunciation Matters</strong></a>.
+		<p> The <a href="https://www.w3.org/WAI/APA/task-forces/pronunciation/"> Spoken Presentation Task Force</a> created a video to demonstrate proposed approaches for controlling pronunciation in spans of web content: <a href="https://www.w3.org/2020/10/TPAC/apa-pronunciation.html"><strong>Pronunciation Matters</strong></a>.
 		</section>
 		<section>
 		<h2>CSS Media Queries 5 and Personalization - March 10, 2021</h2>
