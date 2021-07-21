@@ -125,9 +125,12 @@
 <h2>XR and supporting multimodality</h2>
 <p>Modality relates to modes of sense perception such as sight, hearing, touch and so on. Accessibility can be thought of as supporting multi-modal requirements and the transformation of content or aspects of a user interface from one mode to another that will support various user needs.</p> 
 
-<p>Considering various modality requirements in the foundation of XR means these platforms will be better able to support accessibility related user needs. There will be many modality aspects for the developer and/or content author to consider. XR authors and content designers will also need access to tools that support the multi-modal requirements listed below. </p>
+<p>Considering various modality requirements in the foundation of XR means these platforms will be better able to support accessibility related user needs. There will be many modality aspects for the developer and/or content author to consider.</p> 
 
-<p>The following Inputs and Outputs can be considered modalities that should be supported in XR environments.</p>
+
+<p>XR authors and content designers will also need access to tools that support the multi-modal requirements listed below. </p>
+
+<p>The following inputs and outputs can be considered modalities that should be supported in XR environments.</p>
 
 </section>
 
@@ -210,6 +213,9 @@ There are a variety of alternative gaming controls that may be very useful in XR
 <li>Should affordances change depending on context of use? What interactions are allowed or not allowed? </li>
 <li>How can we ensure what happens in one modality, is reflected in another, so various modalities are not out of sync? e.g. synchronization of captions between real time text transcriptions and other alternatives such as symbols or AAC?</li>
 </ul>
+
+<p class="note">Regarding the discoverability of accessibility features in XR. It is important for designers of accessible XR to understand how to categorize various accessibility features and understand where to place them, in a menu for example. An accessibility related accommodation may have multiple contexts of use that may not be obvious. For example, the suggested use of "mono" in User Need 19 is not just an accessibility feature under a hearing impaired category, as it is also useful for users with spatial orientation impairments or cognitive and learning disabilities. Care should be taken to ensure these features are categorized in menus correctly and discoverable in multiple contexts.</p>
+
 	</section>
 </section>
 
@@ -235,7 +241,8 @@ There are a variety of alternative gaming controls that may be very useful in XR
 
 <li><strong>REQ 1b:</strong> Controls need to support alternative mapping, rearranging of position, resizing and sensitivity.</li>
 <li><strong>REQ 1c:</strong> Objects that are important within any given context of time and place can be identified in a suitable modality.</li>
-<li><strong>REQ 1d:</strong> Allow filtering  and the ability to query items and their content for more details.</li>
+<li><strong>REQ 1d:</strong>  Allow the user to filter or sort objects and content.</li>
+<li><strong>REQ 1e:</strong>  Allow the user to query objects and content for more details.</li>
 
 
 </ul>
@@ -254,6 +261,8 @@ There are a variety of alternative gaming controls that may be very useful in XR
 
 <li><strong>REQ 2b:</strong> Ensure that all areas of the user interface can be accessed using the same input method.</li>
 <li><strong>REQ 2c:</strong> Allow multiple input methods to be used at the same time.</li>
+
+<p class="note">There are accessibility issues specific to augmented reality. For example, the user may be expected to scan the environment, or scan physical objects, in order to determine the placement of virtual objects. The user may need to mark a location or an area in space so that the AR application can generate appropriate virtual objects. The user should be able to perform these actions in a motion agnostic way.</p>
 
 </ul>
 
@@ -388,7 +397,7 @@ There are a variety of alternative gaming controls that may be very useful in XR
 
 <ul>
 
-<li><strong>User Need 10:</strong> A deaf or hard of hearing person, for whom English or any other written language, may not be their first language and may have a preference for signing of video, text alternatives or equivalents.</li>
+<li><strong>User Need 10:</strong> A deaf or hard of hearing person, for whom a written language may not be their first language, may have a preference for signing of video for text, objects or item descriptions.</li>
 
 <li><strong>REQ 10a:</strong> Allow text, objects or item descriptions to be presented to the user via a signing avatar (pre-recorded only).</li>
 
@@ -450,17 +459,19 @@ Currently, it is not possible to provide an accurate live interpretation via a s
 
 <section>
 
-<h4>Second screen</h4>
+<h4>Second screen devices</h4>
 
 <ul>
 
-<li><strong>User Need 14:</strong> A deaf-blind user communicating via a RTC application in XR may have sophisticated 'routing' requirements for various inputs and outputs and the need to manage same. </li>
+<li><strong>User Need 14:</strong> Users of assistive technology such as a deaf-blind user communicating via a RTC application in XR, may have sophisticated 'routing' requirements for various inputs and outputs and the need to manage same. </li>
 
 <li><strong>REQ 14a:</strong> Allow the user to route text output, alerts, environment sounds or audio to a braille or other second screen device.</li>
 <li><strong>REQ 14b:</strong> Ensure that the user can manage the flow of critical messaging, or content to display on a second screen.</li>
 <li><strong>REQ 14c:</strong> Support touch screen accessibility gestures (e.g. swipes, flicks and single, double or triple taps with 1, 2 or 3 fingers) on a second screen device to allow the user to navigate menus and interact.</li>
 
 </ul>
+
+<p class="note">'Second screen' is a term used in this document to denote any another external output device, such as a monitor or sound card, or assistive technology such as braille output. The use of the term is not restricted to just these devices and can refer to any output device a user may choose.</p>
 
 </section>
 
@@ -475,11 +486,13 @@ Currently, it is not possible to provide an accurate live interpretation via a s
 
 <li><strong>REQ 15b:</strong> Allow timings for interactions or critical inputs to be modified or extended.</li>
 
-<li><strong>REQ 15c:</strong> Provide an XR angel or helper for the user with a cognitive or learning disability.</li>
+<li><strong>REQ 15c:</strong> Provide help for the user with a cognitive or learning disability.</li>
 
 <li><strong>REQ 15d:</strong> Provide clear start and stop mechanisms.</li>
 
 </ul>
+
+<p class="note"> The term 'help' for REQ 15c may vary from explanatory information such as textual/symbolic annotations in an application, to human assistance in real time.</p>
 
 </section>
 
@@ -502,9 +515,10 @@ Currently, it is not possible to provide an accurate live interpretation via a s
 <h4>Spatial audio tracks and alternatives</h4>
 
 <ul>
-<li><strong>User Need 17:</strong> Deaf and hard of hearing users may need spatialized audio content with audio description in order to perceive it.</li>
+<li><strong>User Need 17:</strong> Hard of hearing users may need accommodations in order to perceive audio.</li>
 
-<li><strong>REQ 17a:</strong> Provide spatialized audio content and audio descriptions to emulate three dimensional sound forms in immersive environments.</li>
+<li><strong>REQ 17a:</strong> Provide spatialized audio content to emulate three dimensional sound forms in immersive environments.</li>
+<li><strong>REQ 17b:</strong> Provide text descriptions of important audio content.</li>
 
 </ul>
 
@@ -536,7 +550,7 @@ Currently, it is not possible to provide an accurate live interpretation via a s
 
 <li><strong>REQ 19a:</strong> Allow mono audio sound to be sent to both headphones so that the user can perceive the whole soundscape through either ear. [[mono-ios]].</li>
 
-<p class="note">People with traumatic brain injuries may have visual processing difficulties. This can affect orientation while navigating. Even if provided with accurate directions, they may not recognize surroundings, or experience anxiety when navigating. It is important for designers of XR to understand how to categorize this feature and where to place it in a menu. The use of "mono" is not just an accessibility feature under a hearing impaired category. It is useful for users with cognitive and learning disabilities also and should be discoverable as such.</p>
+<p class="note">People with traumatic brain injuries can develop spatial orientation impairments and may have visual processing difficulties or miss information in stereo or binaural soundscapes. This can affect orientation while navigating. Even if provided with accurate directions, they may not recognize surroundings, or experience anxiety when navigating. </p>
 
 </ul>
 
