@@ -136,18 +136,19 @@
 		  <p>A user who is deaf or who has a speech disability engages the system to process a customer service request. The system is unable to handle the request on its own. It initiates a real-time call between the user and a human customer support representative. Since keyboard input and text output were used in the dialogue between the user and the system, the call with the customer support representative is set up to use real-time text (RTT) rather than speech for communication.</p></aside>
 		  
 		<ul>
-		  <li><strong>User Need 6:</strong> A user who is deaf or hard of hearing needs to provide speech input to an application, while having the output displayed visually as text (with or without spoken output).</li>
-		  <li><strong>REQ 6a:</strong>Support a mode of operation in which the user can speak to the system, and the system's natural language output is directed to a screen.</li>
-		  <li><strong>REQ 6b:</strong> Support a mode of operation in which the user can speak to the system, and the system's natural language output is both spoken and directed to a screen.</li>
+		  <li><strong>User Need 6:</strong> A user who is deaf or hard of hearing needs to provide speech input to an application, while having the output presented as text.</li>
+		  <li><strong>REQ 6:</strong>Support a mode of operation in which the user can speak to the system, and the system's natural language output is presented textually (e.g., displayed visually or conveyed via the user's assistive technology).</li>
 		</ul>
 		  <ul>
-		  <li><strong>User Need 7:</strong> A user with a speech disability needs to provide textual input to the system, and to receive spoken output.</li>
-		  <li><strong>REQ 7:</strong> Provide a mode of operation in which keyboard or other forms of textual input can be given, in combination with speech output.</li>
+		    <li><strong>User Need 7:</strong> A user needs linguistic information presented both as speech and as text to be adequately perceived or understood.</li>
+		    <li><strong>REQ 7:</strong> Provide a mode of operation in which the spoken output of the system is accompanied by a synchronized text transcript.</li>
+		    <li><strong>User Need 8:</strong> A user with a speech disability needs to provide textual input to the system, but can effectively perceive and understand spoken information.</li>
+		  <li><strong>REQ 8:</strong> Provide a mode of operation in which keyboard or other forms of textual input can be given, in combination with speech output.</li>
 		</ul>
 
 		<ul>
-		  <li><strong>User Need 8:</strong> A user who is deaf-blind needs to communicate with the system via a refreshable braille device.</li>
-		  <li><strong>REQ 8:</strong> Support a mode of operation in which input and output are both provided as text.</li>
+		  <li><strong>User Need 9:</strong> A user who is deaf-blind needs to communicate with the system via a refreshable braille device.</li>
+		  <li><strong>REQ 9:</strong> Support a mode of operation in which input and output are both provided as text.</li>
 		</ul>
 		<p class="note">
 		  Support for braille displays is assumed to be provided by a screen reader running under the device's operating system. Therefore, support for keyboard input and textual output is the stated requirement for the natural language interface itself, leaving interaction with the braille hardware to the operating system on which the user interface is run.</p>
@@ -155,36 +156,36 @@
 		<section>
 		  <h3>Communicating in a Language that the User Needs</h3>
 		  <ul>
-		    <li><strong>User Need 9:</strong> A user who is deaf or hard of hearing needs to communicate with the system in a sign language.</li>
-		    <li><strong>REQ 9a:</strong> Provide a mode of operation in which sign language presented by the user is recognized and processed by the system.</li>
-		    <li><strong>REQ 9b:</strong> Provide a mode of operation in which the system's output is presented visually in a sign language.</li>
-		    <li><strong>REQ 9c:</strong> As an alternative to requirements 9a and 9b, provide a mode of operation in which a human sign language interpreter relays communication between the user and the system.</li>
+		    <li><strong>User Need 10:</strong> A user who is deaf or hard of hearing needs to communicate with the system in a sign language.</li>
+		    <li><strong>REQ 10a:</strong> Provide a mode of operation in which sign language presented by the user is recognized and processed by the system.</li>
+		    <li><strong>REQ 10b:</strong> Provide a mode of operation in which the system's output is presented visually in a sign language.</li>
+		    <li><strong>REQ 10c:</strong> As an alternative to requirements 10a and 10b, provide a mode of operation in which a human sign language interpreter relays communication between the user and the system.</li>
 		  </ul>
 		  <p class="note">
 		  Sign languages vary by country and region. Therefore, multiple sign languages may need to be supported, depending on the intended audience of the system.</p>
 
 		  <ul>
-		    <li><strong>User Need 10:</strong> A user with a learning or cognitive disability needs to communicate with the system in a symbol set supported by a particular augmentative and alternative communication (<abbr title="augmentative and alternative communication">AAC</abbr>) assistive technology.</li>
+		    <li><strong>User Need 11:</strong> A user with a learning or cognitive disability needs to communicate with the system in a symbol set supported by a particular augmentative and alternative communication (<abbr title="augmentative and alternative communication">AAC</abbr>) assistive technology.</li>
 		  </ul>
 		</section>
 		<section>
 		  <h3>Speech Recognition and Speech Production</h3>
 		  <ul>
-		    <li><strong>User Need 11:</strong> A user with atypical speech characteristics needs to provide spoken input to the system.</li>
-		    <li><strong>REQ 11a:</strong> Ensure that the system can recognize atypical varieties of speech with adequate accuracy to enable the application to be successfully used.</li>
-		    <li><strong>REQ 11b:</strong> Provide a mode of operation in which the system is trained to recognize a particular user's speech more accurately than it can without training.</li>
+		    <li><strong>User Need 12:</strong> A user with atypical speech characteristics needs to provide spoken input to the system.</li>
+		    <li><strong>REQ 12a:</strong> Ensure that the system can recognize atypical varieties of speech with adequate accuracy to enable the application to be successfully used.</li>
+		    <li><strong>REQ 12b:</strong> Provide a mode of operation in which the system is trained to recognize a particular user's speech more accurately than it can without training.</li>
 		  </ul>
 
 		  <ul>
-		    <li><strong>User Need 12:</strong> A user with atypical speech characteristics needs opportunities to correct the system's speech recognition errors.</li>
-		    <li><strong>REQ 12a:</strong> Enable the system to estimate the probability that a user's utterance has been recognized correctly.</li>
-		    <li><strong>REQ 12b:</strong> If the system's confidence in its recognition of the user's utterance is below a reasonable threshold, prompt the user to repeat or confirm the request made or the information spoken.</li>
-		    <li><strong>REQ 12c:</strong> Allow the user to decide at any time to interact with the system via means of input other than speech, even if a spoken dialogue is already in progress.</li>
+		    <li><strong>User Need 13:</strong> A user with atypical speech characteristics needs opportunities to correct the system's speech recognition errors.</li>
+		    <li><strong>REQ 13a:</strong> Enable the system to estimate the probability that a user's utterance has been recognized correctly.</li>
+		    <li><strong>REQ 13b:</strong> If the system's confidence in its recognition of the user's utterance is below a reasonable threshold, prompt the user to repeat or confirm the request made or the information spoken.</li>
+		    <li><strong>REQ 13c:</strong> Allow the user to decide at any time to interact with the system via means of input other than speech, even if a spoken dialogue is already in progress.</li>
 		  </ul>
 		    
 		  <ul>
-		    <li><strong>User Need 13:</strong> A user needs to adjust the speaking rate, volume or pitch of speech generated by the system in order to understand it well or to interact more efficiently.</li>
-		    <li><strong>REQ 13:</strong> Provide an accessible user interface with which the speaking rate, pitch and volume of speech generated by the system can be configured.</li>
+		    <li><strong>User Need 14:</strong> A user needs to adjust the speaking rate, volume or pitch of speech generated by the system in order to understand it well or to interact more efficiently.</li>
+		    <li><strong>REQ 14:</strong> Provide an accessible user interface with which the speaking rate, pitch and volume of speech generated by the system can be configured.</li>
 		  </ul>
 		  <p class="note">
 		  To ensure this user interface is accessible, it should satisfy relevant accessibility requirements drawn from this document or elsewhere. For example, a system could provide spoken commands, and a settings dialogue in a graphical user interface, as alternative mechanisms for configuring speech properties.</p>
@@ -192,8 +193,8 @@
 		<section>
 		  <h3>Visually displayed text</h3>
 		  <ul>
-		    <li><strong>User Need 14:</strong> A user who has low vision or a learning disability needs to adjust the font style or spacing of text displayed by the system.</li>
-		    <li><strong>REQ 14:</strong> Ensure that font properties and text spacing are configurable by the user, including font size, font style, character, word, line and paragraph spacing.</li>
+		    <li><strong>User Need 15:</strong> A user who has low vision or a learning disability needs to adjust the font style or spacing of text displayed by the system.</li>
+		    <li><strong>REQ 15:</strong> Ensure that font properties and text spacing are configurable by the user, including font size, font style, character, word, line and paragraph spacing.</li>
 		  </ul>
 		  <p class="note">
 		  In some cases, this requirement can be met by capabilities of the operating system or browsing environment.</p>
@@ -205,24 +206,24 @@
 		<section>
 		  <h4>Understanding How to Interact with the Interface</h4>
 		  <ul>
-		    <li><strong>User Need 15:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know what the system can do and how to ask the system to do it.</li>
-		    <li><strong>REQ 15a:</strong> Provide commands with which the user can request help or instructions that give an overview of what the system can do and what requests or commands can be used to achieve it.</li>
-		    <li><strong>REQ 15b:</strong> Provide documentation in a form that satisfies accessibility guidelines which explains and gives examples of how to use the system.</li>
+		    <li><strong>User Need 16:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know what the system can do and how to ask the system to do it.</li>
+		    <li><strong>REQ 16a:</strong> Provide commands with which the user can request help or instructions that give an overview of what the system can do and what requests or commands can be used to achieve it.</li>
+		    <li><strong>REQ 16b:</strong> Provide documentation in a form that satisfies accessibility guidelines which explains and gives examples of how to use the system.</li>
 		  </ul>
 		  <p class="note">
 		    This need is particularly applicable to systems which can serve a wide range of requests, such as personal assistants. Although all users need to know how to interact with a system to start using it, those with learning or cognitive disabilities are likely to be differentially and adversely affected by designs that do not make it obvious what the system can achieve and how to set about achieving it.</p>
 
 		    <ul>
-		    <li><strong>User Need 16:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know how to interact with it to achieve a particular goal.</li>
-		    <li><strong>REQ 16a:</strong> Provide prompts or menus of options that inform the user of what choices are available and what information is requested at each step of a dialogue with the system.</li>
-		    <li><strong>REQ 16b:</strong> Provide commands or menu options for requesting explanations and instructions that help the user to complete tasks successfully.</li>
+		    <li><strong>User Need 17:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know how to interact with it to achieve a particular goal.</li>
+		    <li><strong>REQ 17a:</strong> Provide prompts or menus of options that inform the user of what choices are available and what information is requested at each step of a dialogue with the system.</li>
+		    <li><strong>REQ 17b:</strong> Provide commands or menu options for requesting explanations and instructions that help the user to complete tasks successfully.</li>
 		  </ul>
 
 		  <ul>
-		    <li><strong>User Need 17:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to use it without having to learn specific commands, requests, phrases or vocabulary.</li>
-		    <li><strong>REQ 17a:</strong> Design the system to respond appropriately to a variety of alternative words, phrases and sentences that may be used to ask the same question, to give the same command, or to supply the same information.</li>
-		    <li><strong>REQ 17b:</strong> Design the system to respond appropriately to words and phrases that are likely to be familiar to users of other systems with similar features.</li>
-		    <li><strong>REQ 17c:</strong> If the user's input is ambiguous or cannot be processed, prompt for clarification or additional information, or present a menu of relevant choices.</li>
+		    <li><strong>User Need 18:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to use it without having to learn specific commands, requests, phrases or vocabulary.</li>
+		    <li><strong>REQ 18a:</strong> Design the system to respond appropriately to a variety of alternative words, phrases and sentences that may be used to ask the same question, to give the same command, or to supply the same information.</li>
+		    <li><strong>REQ 18b:</strong> Design the system to respond appropriately to words and phrases that are likely to be familiar to users of other systems with similar features.</li>
+		    <li><strong>REQ 18c:</strong> If the user's input is ambiguous or cannot be processed, prompt for clarification or additional information, or present a menu of relevant choices.</li>
 		  </ul>
 		  <p class="note">
 		  Ensuring this need is met typically involves including people with disabilities in data collection and testing procedures that enable software developers to improve the variety of linguistic inputs to which the system can appropriately respond.</p>
@@ -230,10 +231,10 @@
 Commands for performing a variety of functions typically supported by speech interfaces used for telephony and multimedia applications are standardized in [[ETSI-ES-202-076]].</p>
 
 		  <ul>
-		    <li><strong>User Need 18:</strong> A user with a learning or cognitive disability needs to review information, prompts or questions before deciding how to respond.</li>
-		    <li><strong>REQ 18a:</strong> Design the system to comply with a user's requests for its natural language output (e.g., spoken utterances) to be repeated.</li>
-		    <li><strong>REQ 18b:</strong> Summarize or present information that has been supplied by the user, then ask the user for confirmation, before performing irreversible actions such as financial transactions.</li>
-		    <li><strong>REQ 18c:</strong> If the text of the dialogue between the user and the system is presented in writing (e.g., on screen or via a braille device), ensure that the user can review the entire history of the conversation (scrolling the display, if necessary).</li>
+		    <li><strong>User Need 19:</strong> A user with a learning or cognitive disability needs to review information, prompts or questions before deciding how to respond.</li>
+		    <li><strong>REQ 19a:</strong> Design the system to comply with a user's requests for its natural language output (e.g., spoken utterances) to be repeated.</li>
+		    <li><strong>REQ 19b:</strong> Summarize or present information that has been supplied by the user, then ask the user for confirmation, before performing irreversible actions such as financial transactions.</li>
+		    <li><strong>REQ 19c:</strong> If the text of the dialogue between the user and the system is presented in writing (e.g., on screen or via a braille device), ensure that the user can review the entire history of the conversation (scrolling the display, if necessary).</li>
 		  </ul>
 		  <p class="note">
 		    See WCAG 2.1 [[WCAG21]], success criterion 3.3.4.</p>
@@ -241,11 +242,11 @@ Commands for performing a variety of functions typically supported by speech int
 		<section>
 		  <h4>Giving Users Enough Time to Interact</h4>
 		  <ul>
-		    <li><strong>User Need 19:</strong> A user with a learning or cognitive disability needs ample time to decide how to respond during a dialogue with the system.</li>
-		    <li><strong>REQ 19a:</strong> Unless there are compelling reasons to the contrary, do not limit the amount of time available for the user to respond.</li>
-		    <li><strong>REQ 19b:</strong> If a time limit is unavoidable, allow the length of the time limit to be adjusted, or for the time limit to be eliminated, or prompt for the user to extend it before it expires.</li>
-		    <li><strong>REQ 19c:</strong> Warn users of time limits before any period of time that is subject to a limit begins.</li>
-		    <li><strong>REQ 19d:</strong> Provide a mode of operation in which the system reminds the user periodically that it is waiting for input, and of any time limit that has been imposed.</li>
+		    <li><strong>User Need 20:</strong> A user with a learning or cognitive disability needs ample time to decide how to respond during a dialogue with the system.</li>
+		    <li><strong>REQ 20a:</strong> Unless there are compelling reasons to the contrary, do not limit the amount of time available for the user to respond.</li>
+		    <li><strong>REQ 20b:</strong> If a time limit is unavoidable, allow the length of the time limit to be adjusted, or for the time limit to be eliminated, or prompt for the user to extend it before it expires.</li>
+		    <li><strong>REQ 20c:</strong> Warn users of time limits before any period of time that is subject to a limit begins.</li>
+		    <li><strong>REQ 20d:</strong> Provide a mode of operation in which the system reminds the user periodically that it is waiting for input, and of any time limit that has been imposed.</li>
 		  </ul>
 		  <p class="note">
 		  The mode of operation described in requirement 19d may be distracting or anxiety-provoking for some users. Therefore, it should be optional.</p>
@@ -255,44 +256,44 @@ Commands for performing a variety of functions typically supported by speech int
 		<section>
 		  <h4>Communicating in Language that is Clear, Simple, and Appropriate to the Audience</h4>
 		  <ul>
-		    <li><strong>User Need 20:</strong> Users, especially those who have learning or cognitive disabilities, need the system to use language that is clear and comprehensible to them.</li>
-		    <li><strong>REQ 20a:</strong> Use language (including vocabulary and syntax) that is no more complex than is necessary for clear communication.</li>
-		    <li><strong>REQ 20b:</strong> Use vocabulary (including terminology) that is reasonably predicted to be familiar to the intended users of the system, including users who may have learning or cognitive disabilities.</li>
-		    <li><strong>REQ 20c:</strong> Provide a mode of operation in which simpler language than the default can be requested.</li>
-		    <li><strong>REQ 20d:</strong> Provide definitions or explanations of terms that are likely to be unfamiliar to intended users of the system, including users who may have learning or cognitive disabilities.</li>
+		    <li><strong>User Need 21:</strong> Users, especially those who have learning or cognitive disabilities, need the system to use language that is clear and comprehensible to them.</li>
+		    <li><strong>REQ 21a:</strong> Use language (including vocabulary and syntax) that is no more complex than is necessary for clear communication.</li>
+		    <li><strong>REQ 21b:</strong> Use vocabulary (including terminology) that is reasonably predicted to be familiar to the intended users of the system, including users who may have learning or cognitive disabilities.</li>
+		    <li><strong>REQ 21c:</strong> Provide a mode of operation in which simpler language than the default can be requested.</li>
+		    <li><strong>REQ 21d:</strong> Provide definitions or explanations of terms that are likely to be unfamiliar to intended users of the system, including users who may have learning or cognitive disabilities.</li>
 		  </ul>
 		  <p class="note">
 		    See WCAG 2.1 [[WCAG21]], success criteria 3.1.3, 3.1.4, and 3.1.5.</p>
 
 		    <ul>
-		    <li><strong>User Need 21:</strong> Users, especially those who have learning or cognitive disabilities, need the system to use language that is appropriate to their social and cultural context in order to be clear and understandable.</li>
-		    <li><strong>REQ 21a:</strong> Provide a mode of operation in which the use of language, including terminology, currency, units of measure, and date and time formats, is localized according to the user's preferences.</li>
-		    <li><strong>REQ 21b:</strong> By default, localize the use of language, including terminology, currency, units of measure, and date and time formats, to the user's country and region.</li>
+		    <li><strong>User Need 22:</strong> Users, especially those who have learning or cognitive disabilities, need the system to use language that is appropriate to their social and cultural context in order to be clear and understandable.</li>
+		    <li><strong>REQ 22a:</strong> Provide a mode of operation in which the use of language, including terminology, currency, units of measure, and date and time formats, is localized according to the user's preferences.</li>
+		    <li><strong>REQ 22b:</strong> By default, localize the use of language, including terminology, currency, units of measure, and date and time formats, to the user's country and region.</li>
 		  </ul>
 		</section>
 		<section>
 		  <h4>Pronunciation</h4>
 		  <ul>
-		    <li><strong>User Need 22:</strong> Users, especially those who have learning or cognitive disabilities, need spoken language to be pronounced correctly in order to be understood.</li>
-		    <li><strong>REQ 22a:</strong> Provide a mode of operation in which the pronunciation (e.g., accent) of spoken language is localized according to the user's preferences.</li>
-		    <li><strong>REQ 22b:</strong> By default, localize the pronunciation of spoken language according to the user's country and region.</li>
-		    <li><strong>REQ 22c:</strong> Ensure that spoken text is pronounced correctly, including names, rarely occurring words, and words that have different pronunciations depending on context.</li>
+		    <li><strong>User Need 23:</strong> Users, especially those who have learning or cognitive disabilities, need spoken language to be pronounced correctly in order to be understood.</li>
+		    <li><strong>REQ 23a:</strong> Provide a mode of operation in which the pronunciation (e.g., accent) of spoken language is localized according to the user's preferences.</li>
+		    <li><strong>REQ 23b:</strong> By default, localize the pronunciation of spoken language according to the user's country and region.</li>
+		    <li><strong>REQ 23c:</strong> Ensure that spoken text is pronounced correctly, including names, rarely occurring words, and words that have different pronunciations depending on context.</li>
 		  </ul>
 		</section>
 		<section>
 		  <h4>Avoiding and Recovering from Input Errors</h4>
 		  <ul>
-		    <li><strong>User Need 23:</strong> Users, especially those who have learning or cognitive disabilities, need opportunities to correct data entry errors.</li>
-		    <li><strong>REQ 23a:</strong> Check information provided by the user for errors.</li>
-		    <li><strong>REQ 23b:</strong> If errors are detected that can be automatically corrected with high reliability, make the correction and then prompt the user to confirm the information provided.</li>
-		    <li><strong>REQ 22c:</strong> For errors that cannot be reliably and automatically corrected, provide an explanation to the user and request valid information.</li>
-		    <li><strong>REQ 22d:</strong> Provide suggestions for correcting the error, if there is a known and relatively short list of alternative, valid responses.</li>
+		    <li><strong>User Need 24:</strong> Users, especially those who have learning or cognitive disabilities, need opportunities to correct data entry errors.</li>
+		    <li><strong>REQ 24a:</strong> Check information provided by the user for errors.</li>
+		    <li><strong>REQ 24b:</strong> If errors are detected that can be automatically corrected with high reliability, make the correction and then prompt the user to confirm the information provided.</li>
+		    <li><strong>REQ 24c:</strong> For errors that cannot be reliably and automatically corrected, provide an explanation to the user and request valid information.</li>
+		    <li><strong>REQ 24d:</strong> Provide suggestions for correcting the error, if there is a known and relatively short list of alternative, valid responses.</li>
 		  </ul>
 		  <p class="note">
 		  See WCAG 2.1 [[WCAG21]], success criteria 3.3.1, 3.3.3, 3.3.4, and 3.3.6.</p>
 		  <ul>
-		    <li><strong>User Need 24:</strong> Users, especially those with learning or cognitive disabilities, need opportunities to avoid making errors that are irrevocable.</li>
-		    <li><strong>REQ 24a:</strong> Provide means of reversing actions that can be made reversible.</li>
+		    <li><strong>User Need 25:</strong> Users, especially those with learning or cognitive disabilities, need opportunities to avoid making errors that are irrevocable.</li>
+		    <li><strong>REQ 25a:</strong> Provide means of reversing actions that can be made reversible.</li>
 		  </ul>
 		  <p class="note">
 		  See WCAG 2.1 [[WCAG21]], success criterion 3.3.6.</p>
