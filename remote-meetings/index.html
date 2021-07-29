@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+	  <meta charset="utf-8" />
+	  <title>Accessibility of Remote Meetings</title>
+	  		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer="defer"></script>
+		<script src="respec-config.js" class="remove"></script>
+		<script src="../biblio.js" class="remove" defer="defer"></script>
+	</head>
+	<body>
+<section id="abstract">
+<p>This document summarizes considerations of accessibility that arise in the conduct of remote and hybrid meetings. Such meetings are mediated, for some or all participants, by real-time communication software typically built upon Web technologies. Issues of software selection, and the roles of meeting hosts and participants in providing access are explained. Relevant W3C documents are referred to, where applicable, as sources of more detailed and in some instances normative guidance.</p>
+<p>Whereas the <a href="https://www.w3.org/TR/raur/">RTC Accessibility User Requirements</a> address the design of the underlying technologies and software, the present document examines the accessibility of remote and hybrid meetings from a larger perspective. It is recognized that the accessibility of a meeting experience to participants with disabilities depends on a variety of conditions, only some of which are ensured by the design of the software used. Further conditions need to be put in place as part of the process of organizing and conducting the meeting itself, including the appropriate application of features offered by the meeting software as well as the creation of accessible content.</p>
+</section>
+<section id="sotd">
+<p>This is a draft document that provides accessibility guidance on the use of remote meeting platforms in particular scenarios. Given increased reliance on different forms of remote interactions during the COVID-19 pandemic, it is vital to ensure accessibility of all kinds of remote interactions for people with disabilities, and to rapidly work to improve accessibility support in these technologies.</p>
+<p>This document looks at the different processes and audiences associated with remote and hybrid meetings. This includes procurement considerations, platform development considerations, the accessibility of materials used during meetings and the use of accessibility features during meetings by hosts and participants.</p>
+<p>Contributors: Scott Hollier<em>,</em> Judy Brewer, Jason White, Josh O Connor, Janina Sajka</p>
+<p><em>For: RQTF</em></p>
+<p><em>Date: 16 June 2021</em></p>
+</section>
+<section>
+<h2>Definitions</h2>
+<p>For consistency and clarity, the following terms are used throughout this document, as defined here.</p>
+<section>
+<h3>Remote meeting</h3>
+<p><em>Remote meeting</em> is an umbrella term used to describe real-time discussions or presentations held between two or more parties online. Other related terms often used include virtual meetings, online meetings, online presentations, video conferencing. Webinars can also be considered a remote meeting, however the interaction between presenter and attendee may be restricted.</p>
+<p>A remote meeting generally requires the use of an online meeting platform on an online device such as a computer, smartphone or digital assistant that allows participants to interact with each other. Typical features of remote meeting platforms include the use of audio communication via an online microphone or traditional telephone, video communication via an online camera, a chat feature for text-based communication and the ability to share content. This can include the sharing of a participant’s computer screen, the sharing of an on-screen presentation with media-rich content such as slides and videos, and the transferring of files. In addition, the remote meeting platforms generally have the ability for participants to allocate a meeting host which controls the features that are available to other participants.</p>
+</section>
+<section>
+<h3>Types of remote meeting platforms</h3>
+<p>There are a number of different platform delivery types. These include, but are not limited to:</p>
+<ul>
+<li>Standalone client: this includes a specific web portal or app where the primary purpose is to provide a remote meeting. Examples include Zoom, Microsoft Teams and Cisco WebEx.</li>
+<li>Conference or event platform: this platform provides remote meeting functionality alongside additional content such as the ability to register for a conference, view exhibitors and follow social media feeds.</li>
+<li>Educational platform: this provides remote meeting functionality within a Learning Management System (LMS) for educational purposes such as the addition of a discussion board and learning materials. In these instances the standard remote meeting features are available for the real-time presentation aspects with the extended functionality providing additional features designed to be an equivalent to a real-world experience.</li>
+<li>Medical platform the delivery of remote meeting functionality within a medical platform such as telehealth facilities or to assist with medical procedures.</li>
+<li>XR platform: this is an immersive remote meeting platform'' where immersive XR environments are used as a real-time virtual meeting place.</li>
+</ul>
+<p>Hybrid meetings: In addition to the meetings which occur exclusively online, there are also hybrid meetings where there is a combination of participants using remote meeting software combined with two or more people physically located in a meeting room.</p>
+</section>
+</section>
+<section>
+<h2>Accessibility context</h2>
+<p>In broad terms, the accessibility requirements of standard remote meeting delivery rely on three distinct elements:</p>
+<ul>
+<li>The accessibility of the remote meeting platform;</li>
+<li>The accessibility of content that is shared during the meeting; and</li>
+<li>The accessibility awareness of host participants when the remote meeting is taking place.</li>
+</ul>
+<p>The accessibility challenges faced by people with disabilities participating in remote meetings will depend on how these three elements interact. An example that highlights the challenges across these three areas is the provision of captioned video. In the case of the remote meeting platform, if captioned video playback is not implemented in the software then the tool fails the WCAG requirement. If the tool can support the playback of captioned video but the video itself does not have captions, the same accessibility issue occurs but for a different reason. Additionally, if both the meeting platform can support the display of captions, and the content contains captions, there is the possibility that the host does not know how to enable the captions for viewing by all participants leading to the accessibility issue occurring through yet another mechanism.</p>
+<p>While the playback of captioned video highlights a consistent issue across all three elements, the issues faced by people with disabilities will vary depending on the implementation of accessibility requirements and current limitations of remote meeting software. For example, interface elements for a remote meeting platform can be made operable for screen reader users, but content presented by screen sharing is unlikely to be available due to the way in which visual content is refreshed on screen. As such, specific guidance is needed for software developers, content producers and users respectively to ensure that best practice in remote meeting delivery is achieved. Hybrid meetings add another layer of complexity whereby audio, video and the distribution of meeting materials need to be accessible to all participants regardless of whether they are physically or remotely attending the meeting.</p>
+<p>While W3C has applicable guidance across several standards and Notes relating to real-time communication and XR, it is this level of complexity that this document endeavours to address. In each instance, the level of responsibility for accessibility is different: for the remote meeting tool, guidance is required for developers of the platform. For presentation materials used during a remote meeting, the responsibility is with the content producer. If both of these elements cater effectively for people with disabilities, the final responsibility is with the host to ensure the accessibility features are enabled, or best efforts are made to ensure current limitations of the medium are overcome. In the case of hybrid meetings, there may be a shared responsibility between the online meeting host and the host of the physical meeting attendees.</p>
+<p>For organisations considering these factors, there is also a need to explore appropriate procurement solutions. With the accessibility of remote meeting platforms varying considerably, it is an important consideration that accessibility criteria are prioritized when selecting a platform.</p>
+</section>
+<section>
+<h2>Selecting an accessible remote meeting platform</h2>
+<p>Organizational roles associated with procurement will need to carefully examine the accessibility support and features in remote meeting software before committing to its purchase. The following guidance can help to identify which remote meeting platforms support accessibility requirements.</p>
+<p>Persons responsible for procuring or selecting a platform on which to conduct remote meetings should</p>
+<ul>
+<li>Ensure that platforms have user interfaces that conform to Level AA of the latest version of the WCAG standard</li>
+<li>Ensure that the client platform supports a diversity of operating systems for which the remote meeting platform is supported. Not all access needs or assistive technologies are equally served by each of the popular operating systems. Therefore, the more choice the user has of underlying operating system, the more likely it is that accessibility and compatibility needs can be satisfied.</li>
+<li>Ensure that multiple meeting connection methods are available. This should include the interoperability of remote meeting platforms with the public switched telephone network, and with telephony standards such as the Session Initiation Protocol (SIP). Offering telephone-based access to the meeting allows users greater opportunities to participate using hardware and software that satisfy their access needs and with which they are familiar.</li>
+<li>Preference authoring tools that comply with ATAG 2.0 so that users with disabilities can interact with them and produce accessible content.</li>
+<li>Ensure that accessible authoring tools are recommended in preparing content (documents, presentations, etc.) for dissemination in remote meetings, taking into account the requirements of <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a>.</li>
+<li>Evaluate other accessibility-related features of meeting platforms in light of users' access needs, as described here and in the <em>Real-Time Accessibility User Requirements</em>.</li>
+</ul>
+</section>
+<section>
+<h2>Creating accessible remote meeting software platforms</h2>
+<p>Software developers that create and maintain remote meeting software need to ensure that accessibility features and support for accessible user interface elements are included in their products. W3C provides a number of accessibility resources that can assist along with other guidance in this section.</p>
+<section>
+<h3>W3C guidance relevant for platform selection</h3>
+<p>The W3C Web Accessibility Initiative contains three guidelines and two Notes that provide assistance to the creation of accessible remote meeting platforms. These includes standards relating to web content, user agents and authoring tools along with non-normative notes relating to real-time communication and XR accessibility</p>
+<section>
+<h4>Relevance of the Web Content Accessibility Guidelines</h4>
+<p>Guidance in the <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a> standard applies to user interface elements in remote meeting software.</p>
+</section>
+<section>
+<h4>Relevance of the User Agent Accessibility Guidelines</h4>
+<p>The following success criteria are relevant to the design and implementation of meeting platforms.</p>
+<ul>
+<li>1.1.4 Facilitate Clear Display of Alternative Content for Time-based Media:</li>
+</ul>
+<p>For recognized on-screen alternative content for time-based media (e.g. captions, sign language video), the following are all true: (Level A)</p>
+<p>Don't obscure controls: Displaying time-based media alternatives doesn't obscure recognized controls for the primary time-based media.</p>
+<p>Don't obscure primary media: The user can specify that displaying time-based media alternatives doesn't obscure the primary time-based media.</p>
+<p>Note: Depending on the screen area available, the display of the primary time-based media (slides, documents, etc.) may need to be reduced in size to meet this requirement.</p>
+<p>Reference for 1.1.4</p>
+<ul>
+<li>1.1.5 Provide Configurable Alternative Content Defaults:</li>
+</ul>
+<p>The user can specify which type(s) of alternative content to render by default for each type of non-text content, including time based media. (Level AA) Reference for 1.1.5</p>
+<ul>
+<li>1.1.6 Use Configurable Text for Time-based Media Captions:</li>
+</ul>
+<p>For recognized on-screen alternative content for time-based media (e.g. captions, sign language video), the user can configure recognized text within time-based media alternatives (e.g. captions) in conformance with 1.4.1. (Level AA) Reference for 1.1.6</p>
+<ul>
+<li>1.1.7 Allow Resize and Reposition of Time-based Media Alternatives:</li>
+</ul>
+<p>The user can configure recognized alternative content for time-based media (e.g. captions, sign language video) as follows: (Level AAA)</p>
+<p>Resize: The user can resize alternative content for time-based media to at least 50% of the size of the top-level viewports.</p>
+<p>Reposition: The user can reposition alternative content for time-based media to two or more of the following: above, below, to the right, to the left, and overlapping the primary time-based media.</p>
+<p>Note 1: Depending on the screen area available, the display of the primary time-based media can need to be reduced in size or hidden to meet this requirement.</p>
+<p>Note 2: Implementation can involve displaying alternative content for time-based media in a separate viewport, but this is not required.</p>
+<p>Reference for 1.1.7</p>
+<ul>
+<li><a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a>: this standard applies to remote meeting software that incorporates web browsers or other agents for its presentation mechanism</li>
+</ul>
+</section>
+<section>
+<h4>Relevance of the Authoring Tool Accessibility Guidelines</h4>
+<p>The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> offers normative guidance concerning the development of authoring tools that support the creation of content. This is relevant in the context of extended remote meeting platforms such as conference hubs and LMS platforms where remote functionality is an embedded function. People with disabilities will therefore need to be able to use the frontend and backend processes of these platforms (ATAG 2.0 Part A).</p>
+</section>
+<section>
+<h4>Relevance of the Real-Time Communication Accessibility User Requirements</h4>
+<p>Important considerations relating to the real-time communication development aspects of remote meeting platforms are addressed in greater detail in <a href="https://www.w3.org/TR/raur/">RTC Accessibility User Requirements</a> (W3C Working Group Note). This document also offers additional considerations, based on analysis of users' needs.</p>
+<ul>
+<li>Real-time Text (RTT) support, in which characters are sent to the other party to the communication almost as soon as they are entered, instead of waiting for an entire message to be composed before it is transmitted. This allows for a more immediate conversational exchange (e.g., participants can interrupt each other), and often proves to be a more effective communication method for people who are deaf or hard of hearing than an "instant message" style of textual communication.</li>
+<li>Interoperability with relay services (allowing them to be brought into a conversation, as needed, to support communication, including provision of sign language interpretation).</li>
+<li>Support for enabling the user to switch seamlessly between modes of interaction (voice, video, real-time text, sign language interpreting).</li>
+<li>Support for an "instant message" style of communication in which the entire message is transmitted as a unit, rather than character-by-character. (This may be preferred, for example, by screen reader users.)</li>
+<li>Minimum audio and video quality requirements. Such requirements, addressing issues of video frame rates, audio clarity, and synchronization of audio and video are identified in <a href="https://www.w3.org/TR/raur/">RTC Accessibility User Requirements</a>, with reference to applicable standards.</li>
+</ul>
+</section>
+<section>
+<h4>Relevance of the XR Accessibility User Requirements (XAUR)</h4>
+<p>Important considerations relating to the development of remote meeting platforms that make use of immersive environments are addressed in greater detail in the <a href="https://www.w3.org/TR/xaur/">XR Accessibility User Requirements</a>. This Note also offers additional considerations, based on analysis of users' needs.</p>
+<p>An example of where this guidance may be helpful is if a meeting were to take place entirely in virtual reality. XAUR can assist developers creating remote meeting platforms for this purpose to ensure people with disabilities can effectively participate.</p>
+</section>
+</section>
+<section>
+<h3>Additional guidance for creating remote meeting platforms</h3>
+<p>In addition to existing W3C WAI guidance, meeting platform developers should</p>
+<ul>
+<li>Provide the ability to record a specific user view throughout the meeting such as a sign language interpreter.</li>
+</ul>
+<ul>
+<li>Allow customized window views. For example, sign language participants could be pinned on screen and in particular places, or a consistent view across all participants could be established. This would allow, for example, to reference 'a 'person on the left' which is the same for all participants which provides a more consistent experience for people with cognitive disabilities.</li>
+</ul>
+<ul>
+<li>Allow the size of windows to be adjustable to assist participants with low vision.</li>
+</ul>
+<ul>
+<li>Allow the display of captions and subtitles to be customizable. This would include allowing the text to be enlarged, colors changed, a high contrast mode and moving the on-screen location based on user preferences .</li>
+</ul>
+<ul>
+<li>Ensure that status messages of video-conference controls, including user notification upon activation of camera-on status, is provided to assistive technologies so that someone who cannot see a visual activation sensor is not broadcasting video unawares.</li>
+</ul>
+<ul>
+<li>Provide a prioritization mechanism for low bandwidth scenarios, e.g. sign language participants can prioritize video over audio.</li>
+</ul>
+</section>
+</section>
+<section>
+<h2>Creating accessible content for remote meetings</h2>
+<p>In order for remote meetings to be accessible, the content used within a meeting, such as presentation slides and reference documents, also need to be made accessible. Limitations to the remote meeting software may make it necessary to distribute these documents separately. The following sections provide W3C guidance on content preparation and other practical guidance.</p>
+<section>
+  <h3>W3C guidance relevant for accessible remote meetings</h3>
+  <section>
+<h4>Relevance of the Web Content Accessibility Guidelines</h4>
+<ul>
+<li><strong>Any prepared content (e.g., documents, presentation slides, prerecorded multimedia) that is shared with or shown to meeting participants is subject to the Web Content Accessibility Guidelines (WCAG).</strong> Policies typically specify that documents, presentations and related materials should conform to WCAG 2.1 Level AA.</li>
+<li><strong>Live audio and video communications that take place among meeting participants.</strong> This is the real-time communication component of the meeting. The following WCAG 2.1 success criteria provide support for accessibility of live audio and video:
+<ul>
+<li>Success Criterion 1.2.4: Captions (Live). This is applicable to real-time communication by meeting participants. The quality of captions is essential to effective communication. It should be noted that the use of automatic speech recognition (ASR) technology to generate captions will not yield sufficiently high quality without manual intervention to correct errors. Moreover, such correction is difficult to perform effectively in real time.</li>
+<li>Success criterion 1.2.9: Audio-only (Live). This success criterion specifies that a text transcript of live, audio-only content be provided. In a meeting. This could be achieved by transcribing the dialogue in real time. As with captions of videoconferences, automatic speech recognition will not yield sufficiently high quality captions for most settings.</li>
+<li>For user interfaces presented live in a meeting via screen sharing: success criteria 1.4.1 (Use of color), 1.4.3 (text contrast), 1.4.6 (contrast - enhanced), 2.3.1 (three flashes or below threshold), 2.3.2 (three flashes) are applicable.</li>
+</ul></li>
+</ul>
+<p>Note: sign language interpretation greatly facilitates accessibility of meetings for sign language users. Sign language interpretation is a Level AAA requirement of WCAG 2.1 for prerecorded audio content only. However, sign language can be streamed into a videoconference window during a live videoconferencing session; this may need clarification in future versions of the Guidelines.</p>
+  </section>
+  <section>
+<h4>Relevance of the Authoring Tool Accessibility Guidelines (ATAG)</h4>
+<p><a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> offers normative guidance concerning the development of authoring tools that support the creation of content that meets WCAG accessibility requirements. ATAG 2.0 also specifies requirements for accessibility of the user interface of an authoring tool.</p>
+<p>Although a meeting platform is not, in itself, an authoring tool, authoring tools are used to prepare materials such as presentations and documents for dissemination in remote meetings. These tools include document editing and file format conversion software. In addition, a meeting platform may be integrated with an authoring tool to enable the real-time, collaborative writing or editing of documents or other content during a meeting.</p>
+<p>In summary, ATAG 2.0 is applicable as follows.</p>
+<ul>
+<li>Authoring tools that partly or fully conform to ATAG 2.0 at any level of conformance are the preferred environment in which to create documents, presentations, multimedia and other materials disseminated to participants in remote meetings.</li>
+<li>Authoring tools included in or associated with platforms used for remote meetings, such as real-time document editing environments that allow content to be created and edited collaboratively during a meeting, should conform to ATAG 2.0.</li>
+</ul>
+  </section>
+</section>
+</section>
+<section>
+<h2>Holding accessible remote meetings</h2>
+<p>The successful delivery of a remote meeting will require an awareness from the meeting host and participants as to what accessibility features are available and how to ensure they are available to all participants. Guidance for hosts and participants is provided as best practice.</p>
+<section>
+<h3>Hosting accessible remote meetings</h3>
+<p>Hosts in remote meetings should:</p>
+<ul>
+<li>Prepare documents, presentations, multimedia and other materials so as to conform to <a href="https://www.w3.org/tR/wcag21/">Web Content Accessibility Guidelines (WCAG) 2.1</a>, preferably at Level AA or beyond.</li>
+<li>Ensure that the files containing such documents, presentations, multimedia, etc., are available directly to meeting participants, and that screen sharing is not the only means of obtaining these materials.</li>
+<li>Ensure captions are provided.</li>
+<li>Ensure a sign language interpreter is present where applicable.</li>
+<li>Provide alternatives to any aspects of the remote meeting platform that are not accessible to meeting participants. For example, if a tool used to coordinate turn taking in a meeting (e.g., a "hand raising" control) is not accessible to keyboard-only users or to users of assistive technologies, offer alternative means of managing turn taking.</li>
+<li>Create accessible meeting notes that can be made available to participants before or after the meeting.</li>
+<li>Be familiar with the accessibility features of the meeting software platform. See <a href="https://www.w3.org/WAI/APA/task-forces/research-questions/wiki/Accessibility_of_Remote_Meetings#References">#References</a> below for a partial list of links to accessibility information offered by well known meeting platform providers. For example, enabling live captions. and verifying that core functionality is keyboard accessible</li>
+<li>Encourage all participants to test their audio and video in advance of any meeting.</li>
+<li>Remind all participants to, if possible, ensure that their faces, including their mouths, are visible and well-lit in the videoconferencing window.</li>
+<li>Ensure that any participants using virtual backgrounds (photo or video) test the quality of their projection to ensure that there is no flicker of the participant’s image.</li>
+<li>If the sound degrades during a videoconference, request that participants turn off their video to see if that improves the audio quality.</li>
+<li>If streaming captions or streaming sign language interpreting will be used during a videoconference, make sure to select a videoconferencing platform in which participants can anchor and freely re-size any window in which these communication accommodations will be displayed, independently from the windows showing any content (for instance, slides, whiteboard, etc.), or any other speaker.</li>
+<li>Provide participants with a variety of meeting connection methods (e.g. computer, app, telephone) to maximise accessibility and choice for participants with disabilities. This may also lead to additional in-meeting accessibility considerations (e.g. the need to live caption telephone participants).</li>
+</ul>
+<p>A more detailed elaboration of users' accessibility needs in these scenarios may be found in the <a href="https://www.w3.org/TR/raur/">RTC Accessibility User Requirements</a>.</p>
+</section>
+<section>
+<h3>Participants</h3>
+<p>Participants in remote meetings should:</p>
+<ul>
+<li>Ensure that the video and audio features of the remote meeting connection are tested ahead of the meeting.</li>
+<li>Ensure that any documents, presentations, multimedia and other materials to be used in the meeting conform to <a href="https://www.w3.org/tR/wcag21/">Web Content Accessibility Guidelines (WCAG) 2.1</a>, preferably at Level AA or beyond.</li>
+<li>Ensure that the host has an accessible copy of any resources intended for use prior to the meeting commencing so that the resources can be provided to participants with disabilities.</li>
+<li>If a remote meeting features sign language interpretation, participants should turn off their videos so that the interpreter’s view is prioritized.</li>
+</ul>
+</section>
+</section>
+<section>
+  <h2>Creating accessible virtual conferences</h2>
+  <section>
+<h3>Selecting an accessible virtual conference platform</h3>
+<p>Selecting an appropriate platform (i.e., remote meeting software) can be accomplished by reviewing the extent to which each of the available options supports the applicable standards identified in this document. The commitment of the chosen platform's developers to maintaining and enhancing accessibility-related aspects of the software is an important consideration in making a suitable choice.</p>
+<p>The developers of remote meeting products may publish, or provide on request, an Accessibility Conformance Report based on the <a href="https://www.itic.org/policy/accessibility/vpat">Voluntary Product Accessibility Template (VPAT)</a>. This report assesses the software with respect to public-sector procurement standards established in the European Union (<a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN 301 549</a>) and in the United States (<a href="https://www.law.cornell.edu/cfr/text/36/part-1194">36 CFR Part 1194</a>), which in turn incorporate the <em>Web Content Accessibility Guidelines</em>, together with other accessibility requirements. Such information, if verified as accurate, provides an important basis for assessing the extent to which a remote meeting platform is likely to meet the accessibility-related needs of its users. Nevertheless, as noted elsewhere in this document, current technical accessibility standards do not fully address user needs associated with remote meeting applications. Therefore, additional evaluations are desirable to identify relevant features provided by remote meeting platforms that extend beyond what is required for conformance to technical accessibility standards, and which may not be documented in an Accessibility Conformance Report.</p>
+  </section>
+  <section>
+<h3>Hosting an accessible virtual conference</h3>
+<p>Organizers of remote meetings should become generally familiar with the guidance for hosts provided in this document. In particular, organizers should:</p>
+<ul>
+<li>The platform complies with the WCAG 2.1 Level AA standard</li>
+<li>Audio and video tests are integrated into the platform</li>
+<li>Ensure that participants are informed as to what the core features are, e.g. registration, exhibitions, presentations, etc.</li>
+<li>Ensure that help options are clearly identified</li>
+</ul>
+  </section>
+</section>
+<section>
+<h2>Holding accessible hybrid meetings</h2>
+<p>Hosts for hybrid meetings need to ensure that all participants can access all aspects of a meeting, regardless of whether they are physically present or joining remotely. Issues may include audio, video or content being only available to people attending in person or exclusively for people joining in remotely. The following guidance can help you ensure that your meeting is accessible to all.</p>
+<ul>
+<li>Ensure that the selected online platform conforms to accessibility requirements, as noted in the previously discussed procurement guidance.</li>
+</ul>
+<ul>
+<li>Ensure that all content is prepared to be accessible as discussed in the Creating accessible content for remote meetings section.</li>
+</ul>
+<ul>
+<li>Ensure that that online participants and in-person participants can see and hear each other.</li>
+</ul>
+<ul>
+<li>Ensure that captions and subtitles can be viewed simultaneously by online participants and in-person participants. for example, live captions could be on a display in the room while also being available on the remote meeting platform.</li>
+</ul>
+<ul>
+<li>Ensure that online waiting rooms are disabled so online participants that lose connection can easily rejoin without disturbing the hybrid meeting.</li>
+</ul>
+<ul>
+<li>Ensure that the timeing of discussions and breaks are effectivley conveyed to both in-person participants and online participants.</li>
+</ul>
+</section>
+<section class="appendix">
+<h2>Resources</h2>
+<ul>
+<li><a href="https://zoom.us/accessibility">Zoom Accessibility</a></li>
+<li><a href="https://help.blackboard.com/Collaborate/Ultra/Administrator/Accessibility">Blackboard collaborate: (integrated into Blackboard Ultra)</a></li>
+<li><a href="https://help.webex.com/en-us/cfojgdb/Webex-Web-App-Accessibility-Features">WebEx App Accessibility</a></li>
+<li><a href="https://support.office.com/en-us/article/accessibility-support-for-microsoft-teams-d12ee53f-d15f-445e-be8d-f0ba2c5ee68f">Accessibility support for Microsoft Teams</a></li>
+<li><a href="https://support.google.com/meet/answer/7313544?hl=en">Hangouts Meet accessibility</a></li>
+<li><a href="http://handle.itu.int/11.1002/pub/80d1f733-en">ITU Guidelines for accessible meetings (PDF, Word)</a></li>
+</ul>
+</section>
+</body>
+</html>
