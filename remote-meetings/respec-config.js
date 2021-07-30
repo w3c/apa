@@ -45,17 +45,17 @@ var respecConfig = {
 		mailto: "scott.hollier@accessibility.org.au",
 	    },
 	    {
-		name: "Joshue O'Connor",
-		mailto: "joconnor@w3.org",
-		company: "W3C",
-		companyURI: "https://www.w3.org",
-		w3cid: 41218
-	    },
-	    {
 		name: "Judy Brewer",
 		url: "https://www.w3.org/People/Brewer/",
 		company: "W3C",
 		companyURI: "https://www.w3.org",
+	    },
+	    	    {
+		name: "Jason White",
+		mailto: "jjwhite@ets.org",
+		company: "Educational Testing Service",
+		companyURI: "http://www.ets.org/",
+		w3cid: 74028
 	    },
 	    {
 		name: "Janina Sajka",
@@ -63,11 +63,17 @@ var respecConfig = {
 		w3cid: 33688
 	    },
 	    {
-		name: "Jason White",
-		mailto: "jjwhite@ets.org",
-		company: "Educational Testing Service",
-		companyURI: "http://www.ets.org/",
-		w3cid: 74028
+		name: "Joshue O'Connor",
+		mailto: "joconnor@w3.org",
+		company: "W3C",
+		companyURI: "https://www.w3.org",
+		w3cid: 41218
+	    },
+	    {
+		name: "Stephen Noble",
+		mailto: "steve.noble@pearson.com",
+		company: "Pearson",
+		companyURI: "https://www.pearson.com"
 	    },
 	],
 	
