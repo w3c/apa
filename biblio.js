@@ -353,10 +353,10 @@ respecConfig.localBiblio = {
     	"publisher": "Legal Information Institute"
     },
     "en-301-549": {
-    	"title": "EN 301 549 v2.1.2: Harmonised European Standard - Accessibility requirements for ICT products and services",
+    	"title": "EN 301 549 v3.2.1: Harmonised European Standard - Accessibility requirements for ICT products and services",
     	"publisher": "CEN/CENELEC/ETSI",
-	"date": "2018-08",
-    	"href": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"
+	"date": "2021-03",
+    	"href": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf"
     },
     "ETSI-ES-202-076": {
 	"title": "ETSI ES 202 076 V2.1.1: Human Factors (HF); User Interfaces; Generic spoken command vocabulary for ICT devices and services",
