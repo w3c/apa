@@ -67,7 +67,7 @@ var respecConfig = {
 			name: "Scott Hollier",
 			url: "http://www.hollier.info/",
 			mailto: "scott@hollier.info",
-			
+			w3cid: 43274
 		},
 		{
 			name: "Michael Cooper",
