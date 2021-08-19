@@ -44,7 +44,8 @@ var respecConfig = {
 		name: "Steve Noble",
 		mailto: "steve.noble@pearson.com",
 		company: "Pearson",
-		companyURI: "https://www.pearson.com/"
+		companyURI: "https://www.pearson.com/",
+		w3cid: 81519
 	    },
 	    {
 		name: "Jason White",
@@ -58,6 +59,7 @@ var respecConfig = {
 			name: "Scott Hollier",
 			url: "http://www.hollier.info/",
 			mailto: "scott@hollier.info",
+			w3cid: 43274
 			
 		},
 	    		{
