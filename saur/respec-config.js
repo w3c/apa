@@ -54,11 +54,25 @@ var respecConfig = {
 		companyURI: "http://www.ets.org/",
 		w3cid: 74028
 	    },
+	    	{
+			name: "Scott Hollier",
+			url: "http://www.hollier.info/",
+			mailto: "scott@hollier.info",
+			
+		},
 	    		{
 			name: "Janina Sajka",
 			url: "http://rednote.net/",
 			mailto: "janina@rednote.net",
 			w3cid: 33688
+		},
+		{
+			name: "Joshue O'Connor",
+			mailto: "joconnor@w3.org",
+			url: 'https://www.w3.org',
+			company: "W3C",
+			companyURI: "https://www.w3.org",
+			w3cid: 41218
 		},
 	],
 	
