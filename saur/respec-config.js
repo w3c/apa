@@ -42,7 +42,6 @@ var respecConfig = {
 	editors: [
 	    {
 		name: "Steve Noble",
-		mailto: "steve.noble@pearson.com",
 		company: "Pearson",
 		companyURI: "https://www.pearson.com/",
 		w3cid: 81519
@@ -50,7 +49,6 @@ var respecConfig = {
 	    {
 		name: "Jason White",
 		url: "http://www.ets.org/",
-		mailto: "jjwhite@ets.org",
 		company: "Educational Testing Service",
 		companyURI: "http://www.ets.org/",
 		w3cid: 74028
@@ -58,19 +56,16 @@ var respecConfig = {
 	    	{
 			name: "Scott Hollier",
 			url: "http://www.hollier.info/",
-			mailto: "scott@hollier.info",
 			w3cid: 43274
 			
 		},
 	    		{
 			name: "Janina Sajka",
 			url: "http://rednote.net/",
-			mailto: "janina@rednote.net",
 			w3cid: 33688
 		},
 		{
 			name: "Joshue O'Connor",
-			mailto: "joconnor@w3.org",
 			url: 'https://www.w3.org',
 			company: "W3C",
 			companyURI: "https://www.w3.org",
