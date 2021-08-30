@@ -643,8 +643,16 @@ respecConfig.localBiblio = {
         "publisher": "World Federation of the Deaf",
         "title": "WFD and WASLI"
 
-},
+    },
+    "personal-assistant-architecture": {
+        "title": "Intelligent Personal Assistant Architecture and Potential for Standardization Version 1.2",
+        "editors": ["Dirk Schnelle-Walka", "Deborah Dahl"],
+        "publisher": "Voice Interaction Community Group",
+        "date": "19 July 2021",
+        "href": "https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm"
+    },
+        
                           
-}
+};
 
 
