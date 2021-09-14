@@ -42,6 +42,7 @@ var respecConfig = {
 	editors: [
 	    {
 		name: "Steve Noble",
+		url: "https://www.pearson.com/",
 		company: "Pearson",
 		companyURI: "https://www.pearson.com/",
 		w3cid: 81519
