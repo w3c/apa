@@ -20,7 +20,6 @@ script:
   - cd gh-pages
   - git clone --depth=1 --branch=gh-pages https://github.com/w3c/apa.git
   - cd apa
-  - mkdir -f fast captcha media-accessibility-reqs xaur raur saur
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/fast/index.html -o fast/index.html -f  --retry 3
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/captcha/index.html -o captcha/index.html -f  --retry 3
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/media-accessibility-reqs/index.html -o media-accessibility-reqs/index.html -f  --retry 3
