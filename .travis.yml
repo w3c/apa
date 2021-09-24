@@ -27,6 +27,8 @@ script:
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/xaur/index.html -o xaur/index.html -f  --retry 3
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/raur/index.html -o raur/index.html -f  --retry 3
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/saur/index.html -o saur/index.html -f  --retry 3
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/naur/index.html -o naur/index.html -f  --retry 3
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/apa/main/remote-meetings/index.html -o remote-meetings/index.html -f  --retry 3
   - cp ../../w3c/apa/fast/checklist.html fast/checklist.html
 
 after_success:
