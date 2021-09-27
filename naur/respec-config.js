@@ -43,14 +43,12 @@ var respecConfig = {
 	    {
 		name: "Joshue O'Connor",
 		mailto: "joconnor@w3.org",
-		url: 'https://www.w3.org',
 		company: "W3C",
 		companyURI: "https://www.w3.org",
 		w3cid: 41218
 	    },
 	    {
 		name: "Jason White",
-		url: "http://www.ets.org/",
 		mailto: "jjwhite@ets.org",
 		company: "Educational Testing Service",
 		companyURI: "http://www.ets.org/",

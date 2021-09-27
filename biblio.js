@@ -643,8 +643,20 @@ respecConfig.localBiblio = {
         "publisher": "World Federation of the Deaf",
         "title": "WFD and WASLI"
 
-},
-                          
-}
-
+    },
+    "personal-assistant-architecture": {
+        "title": "Intelligent Personal Assistant Architecture and Potential for Standardization Version 1.2",
+        "editors": ["Dirk Schnelle-Walka", "Deborah Dahl"],
+        "publisher": "Voice Interaction Community Group",
+        "date": "19 July 2021",
+        "href": "https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm"
+    },
+     "Bragg-et-al": {
+	"title": "Sign language recognition, generation, and translation: An interdisciplinary perspective",
+	"authors": ["Danielle Bragg", "Oscar Koller", "Mary Bellard", "Larwan Berke", "Patrick Boudreault", "Annelies Braffort", "Naomi Caselli", "Matt Huenerfauth", "Hernisa Kacorri", "Tessa Verhoef", "Christian Vogler", "Meredith Ringel Morris"],
+	"publisher": "The 21st International ACM SIGACCESS Conference on Computers and Accessibility",
+	"date": "October 2019"
+    },
+       
+};
 

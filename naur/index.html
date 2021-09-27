@@ -29,6 +29,9 @@
 		<li><dfn>Interactive Voice Response</dfn> (<abbr title="Interactive Voice Response">IVR</abbr>) systems that interact with the user via a telephone call, accepting speech or key pad input and generating speech output.</li>
 	      </ul>
 	      <p>These examples are indicative of applications that use natural language interfaces. They are not definitive. Variations of the examples and applications that do not fit these patterns at all are possible.</p>
+              <aside class="note">
+                <p>An increasingly popular type of system offering a natural language interface is the <em>intelligent personal assistant</em>. A general architecture for such systems, and opportunities for future technical standardization, are proposed in [[personal-assistant-architecture]]. Although intelligent personal assistant applications are growing in prominence, it should be noted that the scope of this document is not restricted to these tools. Any application that uses natural language interaction can benefit from consideration of the needs and requirements identified here.</p>
+              </aside>
 	    </section>
 
 
@@ -161,6 +164,8 @@
 		    <li><strong>REQ 10b:</strong> Provide a mode of operation in which the system's output is presented visually in a sign language.</li>
 		    <li><strong>REQ 10c:</strong> As an alternative to requirements 10a and 10b, provide a mode of operation in which a human sign language interpreter relays communication between the user and the system.</li>
 		  </ul>
+		  <p class="note">
+		    At present, it is generally infeasible to implement REQ 9a and REQ 9b with sufficient reliability and accuracy to be useful. Sign language processing (including automatic recognition, translation, and production of sign languages) involves challenging research problems. See [[Bragg-et-al]] for details. These two requirements are nevertheless stated here to encourage further research and development efforts.</p>
 		  <p class="note">
 		  Sign languages vary by country and region. Therefore, multiple sign languages may need to be supported, depending on the intended audience of the system.</p>
 
@@ -297,6 +302,22 @@ Commands for performing a variety of functions typically supported by speech int
 		  </ul>
 		  <p class="note">
 		  See WCAG 2.1 [[WCAG21]], success criterion 3.3.6.</p>
+		</section>
+		<section>
+		  <h4>Using Multimodal Interfaces to Enhance Understanding</h4>
+		  <ul>
+		    <li><strong>User Need 26:</strong>Some users with learning disabilities need textual information to be spoken and presented in written form simultaneously.</li>
+		    <li><strong>REQ 26:</strong> Provide a mode of operation in which textual information is spoken and presented on screen concurrently, with synchronized visual highlighting of the text as it is spoken.</li>
+		  </ul>
+		  <p class="note">The purpose of this multimodal presentation of text is to enhance comprehension of the material, especially by people with learning disabilities that affect reading.</p>
+		  <ul>
+		    <li><strong>User Need 27:</strong> Some users with learning or cognitive disabilities need graphical content that complements and reinforces the meaning of textual information.</li>
+		    <li><strong>REQ 27:</strong>If appropriate graphical conventions exist for presenting information that is provided to the user, then display a graphical presentation in addition to any textual (e.g., spoken) output.</li>
+		  </ul>
+		  <p class="note">Information presented graphically must also be available as text. See <a href="#need4">User Need 4</a> and <a href="#need5">User Need 5</a> above.</p>
+		  <aside class="example">
+		    <p>A user asks a smart agent for travel directions to reach a desired destination. The agent displays the requested directions on a map by highlighting the route, in addition to providing spoken, step-by-step navigation instructions.</p>
+		  </aside>
 		</section>
 	      </section>
 	      </section>
