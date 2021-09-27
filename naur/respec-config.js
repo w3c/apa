@@ -41,18 +41,18 @@ var respecConfig = {
 	// only "name" is required
 	editors: [
 	    {
-		name: "Joshue O'Connor",
-		mailto: "joconnor@w3.org",
-		company: "W3C",
-		companyURI: "https://www.w3.org",
-		w3cid: 41218
-	    },
-	    {
 		name: "Jason White",
 		mailto: "jjwhite@ets.org",
 		company: "Educational Testing Service",
 		companyURI: "http://www.ets.org/",
 		w3cid: 74028
+	    },
+	    {
+		name: "Joshue O'Connor",
+		mailto: "joconnor@w3.org",
+		company: "W3C",
+		companyURI: "https://www.w3.org",
+		w3cid: 41218
 	    },
 	],
 	
