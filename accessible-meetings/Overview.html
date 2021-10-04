@@ -1,0 +1,737 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 26.13.4">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+	  
+	  
+<title>Accessibility of Remote Meetings</title>
+	  		
+		
+		
+	
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+.hljs{background:0 0!important}
+a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+h2,h3,h4,h5,h6{position:relative}
+aside.example .marker>a.self-link{color:inherit}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+@media (max-width:767px){
+dd{margin-left:0}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<meta name="description" content="This document summarizes considerations of accessibility that arise in the conduct of remote and hybrid meetings. Such meetings are mediated, for some or all participants, by real-time communication software typically built upon Web technologies. Issues of software selection, and the roles of meeting hosts and participants in providing access are explained. Relevant W3C documents are referred to, where applicable, as sources of more detailed and in some instances normative guidance.">
+<link rel="canonical" href="https://www.w3.org/TR/remote-meeting-accessibility/">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "trace": true,
+  "useExperimentalStyles": true,
+  "doRDFa": "1.1",
+  "includePermalinks": true,
+  "permalinkEdge": true,
+  "permalinkHide": false,
+  "noRecTrack": true,
+  "tocIntroductory": true,
+  "specStatus": "FPWD",
+  "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+  "shortName": "remote-meeting-accessibility",
+  "copyrightStart": "2021",
+  "license": "w3c-software-doc",
+  "editors": [
+    {
+      "name": "Scott Hollier",
+      "company": "Centre For Accessibility Australia",
+      "mailto": "scott.hollier@accessibility.org.au",
+      "url": "mailto:scott.hollier@accessibility.org.au"
+    },
+    {
+      "name": "Judy Brewer",
+      "url": "https://www.w3.org/People/Brewer/",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org"
+    },
+    {
+      "name": "Jason White",
+      "mailto": "jjwhite@ets.org",
+      "company": "Educational Testing Service",
+      "companyURI": "http://www.ets.org/",
+      "w3cid": 74028,
+      "url": "mailto:jjwhite@ets.org"
+    },
+    {
+      "name": "Janina Sajka",
+      "url": "http://rednote.net/",
+      "w3cid": 33688
+    },
+    {
+      "name": "Joshue O'Connor",
+      "mailto": "joconnor@w3.org",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org",
+      "w3cid": 41218,
+      "url": "mailto:joconnor@w3.org"
+    },
+    {
+      "name": "Stephen Noble",
+      "mailto": "steve.noble@pearson.com",
+      "company": "Pearson",
+      "companyURI": "https://www.pearson.com",
+      "url": "mailto:steve.noble@pearson.com"
+    }
+  ],
+  "group": "apa",
+  "github": "w3c/apa",
+  "maxTocLevel": 4,
+  "publishISODate": "2021-10-14T00:00:00.000Z",
+  "generatedSubtitle": "First Public Working Draft 14 October 2021"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"></head>
+	<body class="h-entry informative"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72" height="48">
+  </a> <h1 id="title" class="title">Accessibility of Remote Meetings</h1>
+    
+    <h2>
+      W3C First Public Working Draft
+      <time class="dt-published" datetime="2021-10-14">14 October 2021</time>
+    </h2>
+    <dl>
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://www.w3.org/TR/2021/WD-remote-meeting-accessibility-20211014/">https://www.w3.org/TR/2021/WD-remote-meeting-accessibility-20211014/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/remote-meeting-accessibility/">https://www.w3.org/TR/remote-meeting-accessibility/</a>
+            </dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a></dd>
+      
+      
+      
+      
+      
+      <dt>Editors:</dt>
+      <dd class="editor p-author h-card vcard">
+    <a class="ed_mailto u-email email p-name" href="mailto:scott.hollier@accessibility.org.au">Scott Hollier</a> (<span class="p-org org h-org">Centre For Accessibility Australia</span>)
+  </dd><dd class="editor p-author h-card vcard">
+    <a class="u-url url p-name fn" href="https://www.w3.org/People/Brewer/">Judy Brewer</a> (<span class="p-org org h-org">W3C</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="74028">
+    <a class="ed_mailto u-email email p-name" href="mailto:jjwhite@ets.org">Jason White</a> (<span class="p-org org h-org">Educational Testing Service</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="33688">
+    <a class="u-url url p-name fn" href="http://rednote.net/">Janina Sajka</a>
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="41218">
+    <a class="ed_mailto u-email email p-name" href="mailto:joconnor@w3.org">Joshue O'Connor</a> (<span class="p-org org h-org">W3C</span>)
+  </dd><dd class="editor p-author h-card vcard">
+    <a class="ed_mailto u-email email p-name" href="mailto:steve.noble@pearson.com">Stephen Noble</a> (<span class="p-org org h-org">Pearson</span>)
+  </dd>
+      
+      
+      <dt>Participate:</dt><dd>
+    <a href="https://github.com/w3c/apa/">GitHub w3c/apa</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/apa/issues/">File an issue</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/apa/commits/">Commit history</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/apa/pulls/">Pull requests</a>
+  </dd>
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2021
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+<section id="abstract" class="introductory"><h2>Abstract</h2>
+<p>This document summarizes considerations of accessibility that arise in the conduct of remote and hybrid meetings. Such meetings are mediated, for some or all participants, by real-time communication software typically built upon Web technologies. Issues of software selection, and the roles of meeting hosts and participants in providing access are explained. Relevant <abbr title="World Wide Web Consortium">W3C</abbr> documents are referred to, where applicable, as sources of more detailed and in some instances normative guidance.</p>
+<p>Whereas the <a href="https://www.w3.org/TR/raur/">RTC Accessibility User Requirements</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-raur" title="RTC Accessibility User Requirements">raur</a></cite>] address the design of the underlying technologies and software, the present document examines the accessibility of remote and hybrid meetings from a larger perspective. It is recognized that the accessibility of a meeting experience to participants with disabilities depends on a variety of conditions, only some of which are ensured by the design of the software used. Further conditions need to be put in place as part of the process of organizing and conducting the meeting itself, including the appropriate application of features offered by the meeting software as well as the creation of accessible content.</p>
+</section>
+<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
+<p>This is a draft document that provides accessibility guidance on the use of remote meeting platforms in particular scenarios. Given increased reliance on different forms of remote interactions during the COVID-19 pandemic, it is vital to ensure accessibility of all kinds of remote interactions for people with disabilities, and to rapidly work to improve accessibility support in these technologies.</p>
+<p>This document looks at the different processes and audiences associated with remote and hybrid meetings. This includes procurement considerations, platform development considerations, the accessibility of materials used during meetings and the use of accessibility features during meetings by hosts and participants.</p>
+<p>
+    This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as a
+    First Public Working Draft. 
+    
+  </p><p>
+    <a href="https://github.com/w3c/apa/issues/">GitHub Issues</a> are preferred for
+          discussion of this specification.
+        
+    
+  </p><p>
+      Publication as a First Public Working Draft does not imply endorsement
+      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
+    </p><p>This is a draft document and may be updated, replaced
+  or obsoleted by other documents at any time. It is inappropriate to cite this
+  document as other than work in progress.
+  </p><p></p><p>
+    
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>.
+       The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/groups/wg/apa/ipr">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#definitions"><bdi class="secno">1. </bdi>Definitions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#remote-meeting"><bdi class="secno">1.1 </bdi>Remote meeting</a></li><li class="tocline"><a class="tocxref" href="#types-of-remote-meeting-platforms"><bdi class="secno">1.2 </bdi>Types of remote meeting platforms</a></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibility-context"><bdi class="secno">2. </bdi>Accessibility context</a></li><li class="tocline"><a class="tocxref" href="#meeting-platform-selection-and-development"><bdi class="secno">3. </bdi>Meeting Platform Selection and Development</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#selection"><bdi class="secno">3.1 </bdi>Selecting an accessible remote meeting platform</a></li><li class="tocline"><a class="tocxref" href="#creating-accessible-remote-meeting-software-platforms"><bdi class="secno">3.2 </bdi>Creating accessible remote meeting software platforms</a></li><li class="tocline"><a class="tocxref" href="#w3c-guidance-relevant-to-platform-development-and-selection"><bdi class="secno">3.3 </bdi><abbr title="World Wide Web Consortium">W3C</abbr> guidance relevant to platform development and selection</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#relevance-of-the-web-content-accessibility-guidelines"><bdi class="secno">3.3.1 </bdi>Relevance of the Web Content Accessibility Guidelines</a></li><li class="tocline"><a class="tocxref" href="#relevance-of-the-user-agent-accessibility-guidelines"><bdi class="secno">3.3.2 </bdi>Relevance of the User Agent Accessibility Guidelines</a></li><li class="tocline"><a class="tocxref" href="#relevance-of-the-authoring-tool-accessibility-guidelines"><bdi class="secno">3.3.3 </bdi>Relevance of the Authoring Tool Accessibility Guidelines</a></li><li class="tocline"><a class="tocxref" href="#relevance-of-the-real-time-communication-accessibility-user-requirements"><bdi class="secno">3.3.4 </bdi>Relevance of the Real-Time Communication Accessibility User Requirements</a></li><li class="tocline"><a class="tocxref" href="#relevance-of-the-xr-accessibility-user-requirements-xaur"><bdi class="secno">3.3.5 </bdi>Relevance of the XR Accessibility User Requirements (XAUR)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#additional-guidance-for-creating-remote-meeting-platforms"><bdi class="secno">3.4 </bdi>Additional guidance for creating remote meeting platforms</a></li></ol></li><li class="tocline"><a class="tocxref" href="#creating-accessible-content-for-remote-meetings"><bdi class="secno">4. </bdi>Creating accessible content for remote meetings</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#w3c-guidance-relevant-for-accessible-remote-meetings"><bdi class="secno">4.1 </bdi><abbr title="World Wide Web Consortium">W3C</abbr> guidance relevant for accessible remote meetings</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#relevance-of-the-web-content-accessibility-guidelines-0"><bdi class="secno">4.1.1 </bdi>Relevance of the Web Content Accessibility Guidelines</a></li><li class="tocline"><a class="tocxref" href="#relevance-of-the-authoring-tool-accessibility-guidelines-atag"><bdi class="secno">4.1.2 </bdi>Relevance of the Authoring Tool Accessibility Guidelines (ATAG)</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#holding-accessible-remote-meetings"><bdi class="secno">5. </bdi>Holding accessible remote meetings</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hosting-accessible-remote-meetings"><bdi class="secno">5.1 </bdi>Hosting accessible remote meetings</a></li><li class="tocline"><a class="tocxref" href="#participating-in-accessible-remote-meetings"><bdi class="secno">5.2 </bdi>Participating in accessible remote meetings</a></li></ol></li><li class="tocline"><a class="tocxref" href="#holding-accessible-hybrid-meetings"><bdi class="secno">6. </bdi>Holding accessible hybrid meetings</a></li><li class="tocline"><a class="tocxref" href="#resources"><bdi class="secno">A. </bdi>Resources</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+<section id="definitions">
+<h2 id="x1-definitions"><bdi class="secno">1. </bdi>Definitions<a class="self-link" aria-label="§" href="#definitions"></a></h2>
+<p>For consistency and clarity, the following terms are used throughout this document, as defined here.</p>
+<section id="remote-meeting">
+<h3 id="x1-1-remote-meeting"><bdi class="secno">1.1 </bdi>Remote meeting<a class="self-link" aria-label="§" href="#remote-meeting"></a></h3>
+<p><em>Remote meeting</em> is an umbrella term used to describe real-time discussions or presentations held between two or more parties online. Other related terms often used include virtual meetings, online meetings, online presentations, video conferencing. Webinars can also be considered a remote meeting, however the interaction between presenter and attendee may be restricted.</p>
+<p>A remote meeting generally requires the use of an online meeting platform on an online device such as a computer, smartphone or digital assistant that allows participants to interact with each other. Typical features of remote meeting platforms include the use of audio communication via an online microphone or traditional telephone, video communication via an online camera, a chat feature for text-based communication and the ability to share content. This can include the sharing of a participant’s computer screen, the sharing of an on-screen presentation with media-rich content such as slides and videos, and the transferring of files. In addition, the remote meeting platforms generally have the ability for participants to allocate a meeting host which controls the features that are available to other participants.</p>
+</section>
+<section id="types-of-remote-meeting-platforms">
+<h3 id="x1-2-types-of-remote-meeting-platforms"><bdi class="secno">1.2 </bdi>Types of remote meeting platforms<a class="self-link" aria-label="§" href="#types-of-remote-meeting-platforms"></a></h3>
+<p>There are a number of different platform delivery types. These include, but are not limited to:</p>
+<dl>
+<dt>Standalone client</dt> <dd>This includes a specific web portal or app where the primary purpose is to provide a remote meeting. Examples include Zoom, Microsoft Teams and Cisco WebEx.</dd>
+<dt>Conference or event platform</dt> <dd>This platform provides remote meeting functionality alongside additional content such as the ability to register for a conference, view exhibitors and follow social media feeds.</dd>
+<dt>Educational platform</dt> <dd>This provides remote meeting functionality within a Learning Management System (LMS) for educational purposes such as the addition of a discussion board and learning materials. In these instances the standard remote meeting features are available for the real-time presentation aspects with the extended functionality providing additional features designed to be an equivalent to a real-world experience.</dd>
+<dt>Medical platform</dt> <dd>The delivery of remote meeting functionality within a medical platform such as telehealth facilities or to assist with medical procedures.</dd>
+<dt>XR platform</dt> <dd>This is an immersive remote meeting platform'' where immersive XR environments are used as a real-time virtual meeting place.</dd>
+</dl>
+<p>Hybrid meetings: In addition to the meetings which occur exclusively online, there are also hybrid meetings where there is a combination of participants using remote meeting software combined with two or more people physically located in a meeting room.</p>
+</section>
+</section>
+<section id="accessibility-context">
+<h2 id="x2-accessibility-context"><bdi class="secno">2. </bdi>Accessibility context<a class="self-link" aria-label="§" href="#accessibility-context"></a></h2>
+<p>In broad terms, the accessibility requirements of standard remote meeting delivery rely on three distinct elements:</p>
+<ul>
+<li>The accessibility of the remote meeting platform;</li>
+<li>The accessibility of content that is shared during the meeting; and</li>
+<li>The accessibility awareness of host participants when the remote meeting is taking place.</li>
+</ul>
+<p>The accessibility challenges faced by people with disabilities participating in remote meetings will depend on how these three elements interact. An example that highlights the challenges across these three areas is the provision of captioned video. In the case of the remote meeting platform, if captioned video playback is not implemented in the software then the tool fails the WCAG requirement. If the tool can support the playback of captioned video but the video itself does not have captions, the same accessibility issue occurs but for a different reason. Additionally, if both the meeting platform can support the display of captions, and the content contains captions, there is the possibility that the host does not know how to enable the captions for viewing by all participants leading to the accessibility issue occurring through yet another mechanism.</p>
+<p>While the playback of captioned video highlights a consistent issue across all three elements, the issues faced by people with disabilities will vary depending on the implementation of accessibility requirements and current limitations of remote meeting software. For example, interface elements for a remote meeting platform can be made operable for screen reader users, but content presented by screen sharing is unlikely to be available due to the way in which visual content is refreshed on screen. As such, specific guidance is needed for software developers, content producers and users respectively to ensure that best practice in remote meeting delivery is achieved. Hybrid meetings add another layer of complexity whereby audio, video and the distribution of meeting materials need to be accessible to all participants regardless of whether they are physically or remotely attending the meeting.</p>
+<p>While <abbr title="World Wide Web Consortium">W3C</abbr> has applicable guidance across several standards and Notes relating to real-time communication and XR, it is this level of complexity that this document endeavours to address. In each instance, the level of responsibility for accessibility is different: for the remote meeting tool, guidance is required for developers of the platform. For presentation materials used during a remote meeting, the responsibility is with the content producer. If both of these elements cater effectively for people with disabilities, the final responsibility is with the host to ensure the accessibility features are enabled, or best efforts are made to ensure current limitations of the medium are overcome. In the case of hybrid meetings, there may be a shared responsibility between the online meeting host and the host of the physical meeting attendees.</p>
+<p>For organisations considering these factors, there is also a need to explore appropriate procurement solutions. With the accessibility of remote meeting platforms varying considerably, it is an important consideration that accessibility criteria are prioritized when selecting a platform.</p>
+</section>
+<section id="meeting-platform-selection-and-development">
+  <h2 id="x3-meeting-platform-selection-and-development"><bdi class="secno">3. </bdi>Meeting Platform Selection and Development<a class="self-link" aria-label="§" href="#meeting-platform-selection-and-development"></a></h2>
+  <p>This section summarizes <abbr title="World Wide Web Consortium">W3C</abbr> guidance relevant to the selection and development of remote meeting software (i.e., meeting platforms) supporting users' access needs. Additional suggestions that extend beyond existing <abbr title="World Wide Web Consortium">W3C</abbr> guidance are also included.</p>
+  <section id="selection">
+  <h3 id="x3-1-selecting-an-accessible-remote-meeting-platform"><bdi class="secno">3.1 </bdi>Selecting an accessible remote meeting platform<a class="self-link" aria-label="§" href="#selection"></a></h3>
+<p>Organizational roles associated with procurement will need to carefully examine the accessibility support and features in remote meeting software before committing to its purchase. The following guidance can help to identify which remote meeting platforms support accessibility requirements.</p>
+<p>Persons responsible for procuring or selecting a platform on which to conduct remote meetings should</p>
+<ul>
+<li>Ensure that platforms have user interfaces that conform to Level AA of the latest version of the WCAG standard</li>
+<li>Ensure that the client platform supports a diversity of operating systems for which the remote meeting platform is supported. Not all access needs or assistive technologies are equally served by each of the popular operating systems. Therefore, the more choice the user has of underlying operating system, the more likely it is that accessibility and compatibility needs can be satisfied.</li>
+<li>Ensure that multiple meeting connection methods are available. This should include the interoperability of remote meeting platforms with the public switched telephone network, and with telephony standards such as the Session Initiation Protocol (SIP). Offering telephone-based access to the meeting allows users greater opportunities to participate using hardware and software that satisfy their access needs and with which they are familiar.</li>
+<li>Preference authoring tools that comply with ATAG 2.0 so that users with disabilities can interact with them and produce accessible content.</li>
+<li>Ensure that accessible authoring tools are recommended in preparing content (documents, presentations, etc.) for dissemination in remote meetings, taking into account the requirements of&nbsp;<a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">atag20</a></cite>].</li>
+<li>Evaluate other accessibility-related features of meeting platforms in light of users' access needs, as described here and in the&nbsp;<em>Real-Time Accessibility User Requirements</em>.</li>
+</ul>
+<p>More generally, selecting an appropriate platform can be accomplished by reviewing the extent to which each of the available options supports the applicable standards identified in this document. The commitment of the chosen platform's developers to maintaining and enhancing accessibility-related aspects of the software is an important consideration in making a suitable choice.</p>
+<p>The developers of remote meeting products may publish, or provide on request, an Accessibility Conformance Report based on the <a href="https://www.itic.org/policy/accessibility/vpat">Voluntary Product Accessibility Template (VPAT)</a>. This report assesses the software with respect to public-sector procurement standards established in the European Union (<a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN 301 549</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-en-301-549" title="EN 301 549 v3.2.1: Harmonised European Standard - Accessibility requirements for ICT products and services">en-301-549</a></cite>]) and in the United States (<a href="https://www.law.cornell.edu/cfr/text/36/part-1194">36 CFR Part 1194</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-36-cfr-1194" title="36 CFR Appendix C to Part 1194, Functional Performance Criteria and Technical Requirements">36-cfr-1194</a></cite>]), which in turn incorporate the <em>Web Content Accessibility Guidelines</em>, together with other accessibility requirements. Such information, if verified as accurate, provides an important basis for assessing the extent to which a remote meeting platform is likely to meet the accessibility-related needs of its users. Nevertheless, as noted elsewhere in this document, current technical accessibility standards do not fully address user needs associated with remote meeting applications. Therefore, additional evaluations are desirable to identify relevant features provided by remote meeting platforms that extend beyond what is required for conformance to technical accessibility standards, and which may not be documented in an Accessibility Conformance Report.</p>
+  </section>
+<section id="creating-accessible-remote-meeting-software-platforms">
+<h3 id="x3-2-creating-accessible-remote-meeting-software-platforms"><bdi class="secno">3.2 </bdi>Creating accessible remote meeting software platforms<a class="self-link" aria-label="§" href="#creating-accessible-remote-meeting-software-platforms"></a></h3>
+<p>Software developers that create and maintain remote meeting software need to ensure that accessibility features and support for accessible user interface elements are included in their products. <abbr title="World Wide Web Consortium">W3C</abbr> provides a number of accessibility resources that can assist along with other guidance in this section.</p>
+</section>
+<section id="w3c-guidance-relevant-to-platform-development-and-selection">
+<h3 id="x3-3-w3c-guidance-relevant-to-platform-development-and-selection"><bdi class="secno">3.3 </bdi><abbr title="World Wide Web Consortium">W3C</abbr> guidance relevant to platform development and selection<a class="self-link" aria-label="§" href="#w3c-guidance-relevant-to-platform-development-and-selection"></a></h3>
+<p>The <abbr title="World Wide Web Consortium">W3C</abbr> Web Accessibility Initiative contains three guidelines and two Notes that provide assistance to the creation of accessible remote meeting platforms. Such guidance can also serve as a basis for criteria with which to evaluate the accessibility of remote meeting platforms, thus facilitating platform selection as well as development. These <abbr title="World Wide Web Consortium">W3C</abbr> resources include standards relating to web content, user agents and authoring tools along with non-normative notes relating to real-time communication and XR accessibility</p>
+<section id="relevance-of-the-web-content-accessibility-guidelines">
+<h4 id="x3-3-1-relevance-of-the-web-content-accessibility-guidelines"><bdi class="secno">3.3.1 </bdi>Relevance of the Web Content Accessibility Guidelines<a class="self-link" aria-label="§" href="#relevance-of-the-web-content-accessibility-guidelines"></a></h4>
+<p>Guidance in the <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">wcag21</a></cite>] standard applies to user interface elements in remote meeting software.</p>
+</section>
+<section id="relevance-of-the-user-agent-accessibility-guidelines">
+<h4 id="x3-3-2-relevance-of-the-user-agent-accessibility-guidelines"><bdi class="secno">3.3.2 </bdi>Relevance of the User Agent Accessibility Guidelines<a class="self-link" aria-label="§" href="#relevance-of-the-user-agent-accessibility-guidelines"></a></h4>
+<p>The following success criteria are relevant to the design and implementation of meeting platforms.</p>
+<blockquote cite="https://www.w3.org/TR/UAAG20/">
+  <ul>
+<li>1.1.4 Facilitate Clear Display of Alternative Content for Time-based Media:</li>
+</ul>
+<p>For recognized on-screen alternative content for time-based media (e.g. captions, sign language video), the following are all true: (Level A)</p>
+<p>Don't obscure controls: Displaying time-based media alternatives doesn't obscure recognized controls for the primary time-based media.</p>
+<p>Don't obscure primary media: The user can specify that displaying time-based media alternatives doesn't obscure the primary time-based media.</p>
+<p>Note: Depending on the screen area available, the display of the primary time-based media (slides, documents, etc.) may need to be reduced in size to meet this requirement.</p>
+<p>Reference for 1.1.4</p>
+<ul>
+<li>1.1.5 Provide Configurable Alternative Content Defaults:</li>
+</ul>
+<p>The user can specify which type(s) of alternative content to render by default for each type of non-text content, including time based media. (Level AA) Reference for 1.1.5</p>
+<ul>
+<li>1.1.6 Use Configurable Text for Time-based Media Captions:</li>
+</ul>
+<p>For recognized on-screen alternative content for time-based media (e.g. captions, sign language video), the user can configure recognized text within time-based media alternatives (e.g. captions) in conformance with 1.4.1. (Level AA) Reference for 1.1.6</p>
+<ul>
+<li>1.1.7 Allow Resize and Reposition of Time-based Media Alternatives:</li>
+</ul>
+<p>The user can configure recognized alternative content for time-based media (e.g. captions, sign language video) as follows: (Level AAA)</p>
+<p>Resize: The user can resize alternative content for time-based media to at least 50% of the size of the top-level viewports.</p>
+<p>Reposition: The user can reposition alternative content for time-based media to two or more of the following: above, below, to the right, to the left, and overlapping the primary time-based media.</p>
+<p>Note 1: Depending on the screen area available, the display of the primary time-based media can need to be reduced in size or hidden to meet this requirement.</p>
+<p>Note 2: Implementation can involve displaying alternative content for time-based media in a separate viewport, but this is not required.</p>
+<p>Reference for 1.1.7</p>
+</blockquote>
+<ul>
+<li><a href="https://www.w3.org/TR/UAAG20/">User Agent Accessibility Guidelines (UAAG) 2.0</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag20" title="User Agent Accessibility Guidelines (UAAG) 2.0">uaag20</a></cite>]: this standard applies to remote meeting software that incorporates web browsers or other agents for its presentation mechanism</li>
+</ul>
+</section>
+<section id="relevance-of-the-authoring-tool-accessibility-guidelines">
+<h4 id="x3-3-3-relevance-of-the-authoring-tool-accessibility-guidelines"><bdi class="secno">3.3.3 </bdi>Relevance of the Authoring Tool Accessibility Guidelines<a class="self-link" aria-label="§" href="#relevance-of-the-authoring-tool-accessibility-guidelines"></a></h4>
+<p>The <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a>&nbsp;[<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">atag20</a></cite>] offers normative guidance concerning the development of authoring tools that support the creation of content. This is relevant in the context of extended remote meeting platforms such as conference hubs and LMS platforms where remote functionality is an embedded function. People with disabilities will therefore need to be able to use the frontend and backend processes of these platforms (ATAG 2.0 Part A).</p>
+</section>
+<section id="relevance-of-the-real-time-communication-accessibility-user-requirements">
+<h4 id="x3-3-4-relevance-of-the-real-time-communication-accessibility-user-requirements"><bdi class="secno">3.3.4 </bdi>Relevance of the Real-Time Communication Accessibility User Requirements<a class="self-link" aria-label="§" href="#relevance-of-the-real-time-communication-accessibility-user-requirements"></a></h4>
+<p>Important considerations relating to the real-time communication development aspects of remote meeting platforms are addressed in greater detail in&nbsp;<a href="https://www.w3.org/TR/raur/">RTC Accessibility User Requirements</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-raur" title="RTC Accessibility User Requirements">raur</a></cite>] (<abbr title="World Wide Web Consortium">W3C</abbr> Working Group Note). This document also offers additional considerations, based on analysis of users' needs.</p>
+<ul>
+<li>Real-time Text (RTT) support, in which characters are sent to the other party to the communication almost as soon as they are entered, instead of waiting for an entire message to be composed before it is transmitted. This allows for a more immediate conversational exchange (e.g., participants can interrupt each other), and often proves to be a more effective communication method for people who are deaf or hard of hearing than an "instant message" style of textual communication.</li>
+<li>Interoperability with relay services (allowing them to be brought into a conversation, as needed, to support communication, including provision of sign language interpretation).</li>
+<li>Support for enabling the user to switch seamlessly between modes of interaction (voice, video, real-time text, sign language interpreting).</li>
+<li>Support for an "instant message" style of communication in which the entire message is transmitted as a unit, rather than character-by-character. (This may be preferred, for example, by screen reader users.)</li>
+<li>Minimum audio and video quality requirements. Such requirements, addressing issues of video frame rates, audio clarity, and synchronization of audio and video are identified in&nbsp;<a href="https://www.w3.org/TR/raur/">RTC Accessibility User Requirements</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-raur" title="RTC Accessibility User Requirements">raur</a></cite>], with reference to applicable standards.</li>
+</ul>
+</section>
+<section id="relevance-of-the-xr-accessibility-user-requirements-xaur">
+<h4 id="x3-3-5-relevance-of-the-xr-accessibility-user-requirements-xaur"><bdi class="secno">3.3.5 </bdi>Relevance of the XR Accessibility User Requirements (XAUR)<a class="self-link" aria-label="§" href="#relevance-of-the-xr-accessibility-user-requirements-xaur"></a></h4>
+<p>Important considerations relating to the development of remote meeting platforms that make use of immersive environments are addressed in greater detail in&nbsp;the <a href="https://www.w3.org/TR/xaur/">XR Accessibility User Requirements</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-xaur" title="XR Accessibility User Requirements">xaur</a></cite>]. This Note also offers additional considerations, based on analysis of users' needs.</p>
+<p>An example of where this guidance may be helpful is if a meeting were to take place entirely in virtual reality. XAUR can assist developers creating remote meeting platforms for this purpose to ensure people with disabilities can effectively participate.</p>
+</section>
+</section>
+<section id="additional-guidance-for-creating-remote-meeting-platforms">
+<h3 id="x3-4-additional-guidance-for-creating-remote-meeting-platforms"><bdi class="secno">3.4 </bdi>Additional guidance for creating remote meeting platforms<a class="self-link" aria-label="§" href="#additional-guidance-for-creating-remote-meeting-platforms"></a></h3>
+<p>In addition to existing <abbr title="World Wide Web Consortium">W3C</abbr> WAI guidance, meeting platform developers should</p>
+<ul>
+<li>Provide the ability to record a specific user view throughout the meeting such as a sign language interpreter.</li>
+<li>Allow customized window views. For example, sign language participants could be pinned on screen and in particular places, or a consistent view across all participants could be established. This would allow, for example, to reference 'a 'person on the left' which is the same for all participants which provides a more consistent experience for people with cognitive disabilities.</li>
+<li>Allow the size of windows to be adjustable to assist participants with low vision.</li>
+<li>Allow the display of captions and subtitles to be customizable. This would include allowing the text to be enlarged, colors changed, a high contrast mode and moving the on-screen location based on user preferences .</li>
+<li>Ensure that status messages of video-conference controls, including user notification upon activation of camera-on status, is provided to assistive technologies so that someone who cannot see a visual activation sensor is not broadcasting video unawares.</li>
+<li>Provide a prioritization mechanism for low bandwidth scenarios, e.g. sign language participants can prioritize video over audio.</li>
+</ul>
+</section>
+</section>
+<section id="creating-accessible-content-for-remote-meetings">
+<h2 id="x4-creating-accessible-content-for-remote-meetings"><bdi class="secno">4. </bdi>Creating accessible content for remote meetings<a class="self-link" aria-label="§" href="#creating-accessible-content-for-remote-meetings"></a></h2>
+<p>In order for remote meetings to be accessible, the content used within a meeting, such as presentation slides and reference documents, also need to be made accessible. Limitations to the remote meeting software may make it necessary to distribute these documents separately. The following sections provide <abbr title="World Wide Web Consortium">W3C</abbr> guidance on content preparation and other practical guidance.</p>
+<section id="w3c-guidance-relevant-for-accessible-remote-meetings">
+  <h3 id="x4-1-w3c-guidance-relevant-for-accessible-remote-meetings"><bdi class="secno">4.1 </bdi><abbr title="World Wide Web Consortium">W3C</abbr> guidance relevant for accessible remote meetings<a class="self-link" aria-label="§" href="#w3c-guidance-relevant-for-accessible-remote-meetings"></a></h3>
+  <section id="relevance-of-the-web-content-accessibility-guidelines-0">
+<h4 id="x4-1-1-relevance-of-the-web-content-accessibility-guidelines"><bdi class="secno">4.1.1 </bdi>Relevance of the Web Content Accessibility Guidelines<a class="self-link" aria-label="§" href="#relevance-of-the-web-content-accessibility-guidelines-0"></a></h4>
+<ul>
+<li><strong>Any prepared content (e.g., documents, presentation slides, prerecorded multimedia) that is shared with or shown to meeting participants is subject to the Web Content Accessibility Guidelines (WCAG).</strong>&nbsp;Policies typically specify that documents, presentations and related materials should conform to WCAG 2.1 Level AA.</li>
+<li><strong>Live audio and video communications that take place among meeting participants.</strong>&nbsp;This is the real-time communication component of the meeting. The following WCAG 2.1 success criteria provide support for accessibility of live audio and video:
+<ul>
+<li>Success Criterion 1.2.4: Captions (Live). This is applicable to real-time communication by meeting participants. The quality of captions is essential to effective communication. It should be noted that the use of automatic speech recognition (ASR) technology to generate captions will not yield sufficiently high quality without manual intervention to correct errors. Moreover, such correction is difficult to perform effectively in real time.</li>
+<li>Success criterion 1.2.9: Audio-only (Live). This success criterion specifies that a text transcript of live, audio-only content be provided. In a meeting. This could be achieved by transcribing the dialogue in real time. As with captions of videoconferences, automatic speech recognition will not yield sufficiently high quality captions for most settings.</li>
+<li>For user interfaces presented live in a meeting via screen sharing: success criteria 1.4.1 (Use of color), 1.4.3 (text contrast), 1.4.6 (contrast - enhanced), 2.3.1 (three flashes or below threshold), 2.3.2 (three flashes) are applicable.</li>
+</ul></li>
+</ul>
+<p>Note: sign language interpretation greatly facilitates accessibility of meetings for sign language users. Sign language interpretation is a Level AAA requirement of WCAG 2.1 for prerecorded audio content only. However, sign language can be streamed into a videoconference window during a live videoconferencing session; this may need clarification in future versions of the Guidelines.</p>
+  </section>
+  <section id="relevance-of-the-authoring-tool-accessibility-guidelines-atag">
+<h4 id="x4-1-2-relevance-of-the-authoring-tool-accessibility-guidelines-atag"><bdi class="secno">4.1.2 </bdi>Relevance of the Authoring Tool Accessibility Guidelines (ATAG)<a class="self-link" aria-label="§" href="#relevance-of-the-authoring-tool-accessibility-guidelines-atag"></a></h4>
+<p><a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a>&nbsp;[<cite><a class="bibref" data-link-type="biblio" href="#bib-atag20" title="Authoring Tool Accessibility Guidelines (ATAG) 2.0">atag20</a></cite>] offers normative guidance concerning the development of authoring tools that support the creation of content that meets WCAG accessibility requirements. ATAG 2.0 also specifies requirements for accessibility of the user interface of an authoring tool.</p>
+<p>Although a meeting platform is not, in itself, an authoring tool, authoring tools are used to prepare materials such as presentations and documents for dissemination in remote meetings. These tools include document editing and file format conversion software. In addition, a meeting platform may be integrated with an authoring tool to enable the real-time, collaborative writing or editing of documents or other content during a meeting.</p>
+<p>In summary, ATAG 2.0 is applicable as follows.</p>
+<ul>
+<li>Authoring tools that partly or fully conform to ATAG 2.0 at any level of conformance are the preferred environment in which to create documents, presentations, multimedia and other materials disseminated to participants in remote meetings.</li>
+<li>Authoring tools included in or associated with platforms used for remote meetings, such as real-time document editing environments that allow content to be created and edited collaboratively during a meeting, should conform to ATAG 2.0.</li>
+</ul>
+  </section>
+</section>
+</section>
+<section id="holding-accessible-remote-meetings">
+<h2 id="x5-holding-accessible-remote-meetings"><bdi class="secno">5. </bdi>Holding accessible remote meetings<a class="self-link" aria-label="§" href="#holding-accessible-remote-meetings"></a></h2>
+<p>The successful delivery of a remote meeting will require an awareness from the meeting host and participants as to what accessibility features are available and how to ensure they are available to all participants. Guidance for hosts and participants is provided as best practice.</p>
+<section id="hosting-accessible-remote-meetings">
+<h3 id="x5-1-hosting-accessible-remote-meetings"><bdi class="secno">5.1 </bdi>Hosting accessible remote meetings<a class="self-link" aria-label="§" href="#hosting-accessible-remote-meetings"></a></h3>
+<p>Hosts in remote meetings should:</p>
+<ul>
+<li>Verify that the meeting platform has been selected appropriately for accessibility, as described in <a href="#selection" class="sec-ref">§&nbsp;<bdi class="secno">3.1 </bdi>Selecting an accessible remote meeting platform</a>.</li>
+<li>Verify that audio and video tests are integrated into the platform.</li>
+<li>Ensure that participants are informed as to what the core features are, e.g. registration, exhibitions, presentations, etc.</li>
+<li>Ensure that help options are clearly identified.</li>
+<li>Prepare documents, presentations, multimedia and other materials so as to conform to&nbsp;<a href="https://www.w3.org/tR/wcag21/">Web Content Accessibility Guidelines (WCAG) 2.1</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">wcag21</a></cite>], preferably at Level AA or beyond.</li>
+<li>Ensure that the files containing such documents, presentations, multimedia, etc., are available directly to meeting participants, and that screen sharing is not the only means of obtaining these materials.</li>
+<li>Ensure captions are provided.</li>
+<li>Ensure a sign language interpreter is present where applicable.</li>
+<li>Provide alternatives to any aspects of the remote meeting platform that are not accessible to meeting participants. For example, if a tool used to coordinate turn taking in a meeting (e.g., a "hand raising" control) is not accessible to keyboard-only users or to users of assistive technologies, offer alternative means of managing turn taking.</li>
+<li>Create accessible meeting notes that can be made available to participants before or after the meeting.</li>
+<li>Be familiar with the accessibility features of the meeting software platform. See&nbsp;<a href="#resources" class="sec-ref">§&nbsp;<bdi class="secno">A. </bdi>Resources</a>&nbsp;below for a partial list of links to accessibility information offered by well known meeting platform providers. For example, enabling live captions. and verifying that core functionality is keyboard accessible</li>
+<li>Encourage all participants to test their audio and video in advance of any meeting.</li>
+<li>Remind all participants to, if possible, ensure that their faces, including their mouths, are visible and well-lit in the videoconferencing window.</li>
+<li>Ensure that any participants using virtual backgrounds (photo or video) test the quality of their projection to ensure that there is no flicker of the participant’s image.</li>
+<li>If the sound degrades during a videoconference, request that participants turn off their video to see if that improves the audio quality.</li>
+<li>If streaming captions or streaming sign language interpreting will be used during a videoconference, make sure to select a videoconferencing platform in which participants can anchor and freely re-size any window in which these communication accommodations will be displayed, independently from the windows showing any content (for instance, slides, whiteboard, etc.), or any other speaker.</li>
+<li>Provide participants with a variety of meeting connection methods (e.g. computer, app, telephone) to maximise accessibility and choice for participants with disabilities. This may also lead to additional in-meeting accessibility considerations (e.g. the need to live caption telephone participants).</li>
+</ul>
+<p>A more detailed elaboration of users' accessibility needs in these scenarios may be found in the&nbsp;<a href="https://www.w3.org/TR/raur/">RTC Accessibility User Requirements</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-raur" title="RTC Accessibility User Requirements">raur</a></cite>].</p>
+</section>
+<section id="participating-in-accessible-remote-meetings">
+<h3 id="x5-2-participating-in-accessible-remote-meetings"><bdi class="secno">5.2 </bdi>Participating in accessible remote meetings<a class="self-link" aria-label="§" href="#participating-in-accessible-remote-meetings"></a></h3>
+<p>Participants in remote meetings should:</p>
+<ul>
+<li>Ensure that the video and audio features of the remote meeting connection are tested ahead of the meeting.</li>
+<li>Ensure that any documents, presentations, multimedia and other materials to be used in the meeting conform to&nbsp;<a href="https://www.w3.org/tR/wcag21/">Web Content Accessibility Guidelines (WCAG) 2.1</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">wcag21</a></cite>], preferably at Level AA or beyond.</li>
+<li>Ensure that the host has an accessible copy of any resources intended for use prior to the meeting commencing so that the resources can be provided to participants with disabilities.</li>
+<li>If a remote meeting features sign language interpretation, participants should turn off their videos so that the interpreter’s view is prioritized.</li>
+</ul>
+</section>
+</section>
+<section id="holding-accessible-hybrid-meetings">
+<h2 id="x6-holding-accessible-hybrid-meetings"><bdi class="secno">6. </bdi>Holding accessible hybrid meetings<a class="self-link" aria-label="§" href="#holding-accessible-hybrid-meetings"></a></h2>
+<p>Hosts for hybrid meetings need to ensure that all participants can access all aspects of a meeting, regardless of whether they are physically present or joining remotely. Issues may include audio, video or content being only available to people attending in person or exclusively for people joining in remotely. The following guidance can help you ensure that your meeting is accessible to all.</p>
+<ul>
+<li>Ensure that the selected online platform conforms to accessibility requirements, as noted in the previously discussed procurement guidance.</li>
+</ul>
+<ul>
+<li>Ensure that all content is prepared to be accessible as discussed in the Creating accessible content for remote meetings section.</li>
+</ul>
+<ul>
+<li>Ensure that that online participants and in-person participants can see and hear each other.</li>
+</ul>
+<ul>
+<li>Ensure that captions and subtitles can be viewed simultaneously by online participants and in-person participants. for example, live captions could be on a display in the room while also being available on the remote meeting platform.</li>
+</ul>
+<ul>
+<li>Ensure that online waiting rooms are disabled so online participants that lose connection can easily rejoin without disturbing the hybrid meeting.</li>
+</ul>
+<ul>
+<li>Ensure that the timeing of discussions and breaks are effectivley conveyed to both in-person participants and online participants.</li>
+</ul>
+</section>
+<section class="appendix" id="resources">
+<h2 id="a-resources"><bdi class="secno">A. </bdi>Resources<a class="self-link" aria-label="§" href="#resources"></a></h2>
+<ul>
+<li><a href="https://zoom.us/accessibility">Zoom Accessibility</a></li>
+<li><a href="https://help.blackboard.com/Collaborate/Ultra/Administrator/Accessibility">Blackboard collaborate: (integrated into Blackboard Ultra)</a></li>
+<li><a href="https://help.webex.com/en-us/cfojgdb/Webex-Web-App-Accessibility-Features">WebEx App Accessibility</a></li>
+<li><a href="https://support.office.com/en-us/article/accessibility-support-for-microsoft-teams-d12ee53f-d15f-445e-be8d-f0ba2c5ee68f">Accessibility support for Microsoft Teams</a></li>
+<li><a href="https://support.google.com/meet/answer/7313544?hl=en">Hangouts Meet accessibility</a></li>
+<li><a href="http://handle.itu.int/11.1002/pub/80d1f733-en">ITU Guidelines for accessible meetings (PDF, Word)</a></li>
+</ul>
+</section>
+
+
+<section id="references" class="appendix"><h2 id="b-references"><bdi class="secno">B. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
+    <h3 id="b-1-informative-references"><bdi class="secno">B.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+    <dl class="bibliography"><dt id="bib-36-cfr-1194">[36-cfr-1194]</dt><dd><a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194"><cite>36 CFR Appendix C to Part 1194, Functional Performance Criteria and Technical Requirements</cite></a>.  Legal Information Institute. URL: <a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194</a></dd><dt id="bib-atag20">[atag20]</dt><dd><a href="https://www.w3.org/TR/ATAG20/"><cite>Authoring Tool Accessibility Guidelines (ATAG) 2.0</cite></a>. Jan Richards; Jeanne F Spellman; Jutta Treviranus.  W3C. 24 September 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/ATAG20/">https://www.w3.org/TR/ATAG20/</a></dd><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf"><cite>EN 301 549 v3.2.1: Harmonised European Standard - Accessibility requirements for ICT products and services</cite></a>.  CEN/CENELEC/ETSI. 2021-03. URL: <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf">https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf</a></dd><dt id="bib-raur">[raur]</dt><dd><a href="https://www.w3.org/TR/raur/"><cite>RTC Accessibility User Requirements</cite></a>. Joshue O'Connor; Janina Sajka; Jason White; Michael Cooper.  W3C. 25 May 2021. W3C Note. URL: <a href="https://www.w3.org/TR/raur/">https://www.w3.org/TR/raur/</a></dd><dt id="bib-uaag20">[uaag20]</dt><dd><a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>. James Allan; Greg Lowney; Kimberly Patch; Jeanne F Spellman.  W3C. 15 December 2015. W3C Note. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a></dd><dt id="bib-wcag21">[wcag21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O'Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd><dt id="bib-xaur">[xaur]</dt><dd><a href="https://www.w3.org/TR/xaur/"><cite>XR Accessibility User Requirements</cite></a>.  W3C. 16 Sept 2020. URL: <a href="https://www.w3.org/TR/xaur/">https://www.w3.org/TR/xaur/</a></dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
