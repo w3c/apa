@@ -1,0 +1,847 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 26.13.4">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+span.example-title{text-transform:none}
+aside.example,div.example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
+div.illegal-example{color:red}
+div.illegal-example p{color:#000}
+aside.example,div.example{padding:.5em;border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}
+aside.example div.example{border-left-width:.1em;border-color:#999;background:#fff}
+aside.example div.example span.example-title{color:#999}
+.example pre{background-color:rgba(0,0,0,.03)}
+</style>
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+	  
+	  
+<title>Natural Language Interface Accessibility User Requirements</title>
+	  		
+		
+		
+	
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+.hljs{background:0 0!important}
+a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+h2,h3,h4,h5,h6{position:relative}
+aside.example .marker>a.self-link{color:inherit}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+@media (max-width:767px){
+dd{margin-left:0}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+<meta name="description" content="This document outlines various accessibility-related user needs, requirements and scenarios for natural language interfaces. These user needs should influence accessibility requirements in various related specifications, as well as the design of applications that include natural language interfaces including speech and voice input. The concept of a natural language interface is first clarified. User needs and associated requirements are then described.">
+<link rel="canonical" href="https://www.w3.org/TR/naur/">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "trace": true,
+  "useExperimentalStyles": true,
+  "doRDFa": "1.1",
+  "includePermalinks": true,
+  "permalinkEdge": true,
+  "permalinkHide": false,
+  "noRecTrack": true,
+  "tocIntroductory": true,
+  "specStatus": "ED",
+  "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+  "shortName": "naur",
+  "copyrightStart": "2021",
+  "license": "w3c-software-doc",
+  "editors": [
+    {
+      "name": "Jason White",
+      "mailto": "jjwhite@ets.org",
+      "company": "Educational Testing Service",
+      "companyURI": "http://www.ets.org/",
+      "w3cid": 74028,
+      "url": "mailto:jjwhite@ets.org"
+    },
+    {
+      "name": "Joshue O'Connor",
+      "mailto": "joconnor@w3.org",
+      "company": "W3C",
+      "companyURI": "https://www.w3.org",
+      "w3cid": 41218,
+      "url": "mailto:joconnor@w3.org"
+    }
+  ],
+  "group": "apa",
+  "github": "w3c/apa",
+  "maxTocLevel": 4,
+  "publishDate": "2021-10-06",
+  "publishISODate": "2021-10-06T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 06 October 2021"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
+	<body class="h-entry informative"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72">
+  </a> <h1 id="title" class="title">Natural Language Interface Accessibility User Requirements</h1>
+    
+    <h2>
+      W3C Editor's Draft
+      <time class="dt-published" datetime="2021-10-06">06 October 2021</time>
+    </h2>
+    <dl>
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/naur/">https://www.w3.org/TR/naur/</a>
+            </dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a></dd>
+      
+      
+      
+      
+      
+      <dt>Editors:</dt>
+      <dd class="editor p-author h-card vcard" data-editor-id="74028">
+    <a class="ed_mailto u-email email p-name" href="mailto:jjwhite@ets.org">Jason White</a> (<span class="p-org org h-org">Educational Testing Service</span>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="41218">
+    <a class="ed_mailto u-email email p-name" href="mailto:joconnor@w3.org">Joshue O'Connor</a> (<span class="p-org org h-org">W3C</span>)
+  </dd>
+      
+      
+      <dt>Participate:</dt><dd>
+    <a href="https://github.com/w3c/apa/">GitHub w3c/apa</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/apa/issues/">File an issue</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/apa/commits/">Commit history</a>
+  </dd><dd>
+    <a href="https://github.com/w3c/apa/pulls/">Pull requests</a>
+  </dd>
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2021
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+	  <section id="abstract" class="introductory"><h2>Abstract</h2>
+	    <p>This document outlines various accessibility-related user needs, requirements and scenarios for natural language interfaces. These user needs should influence accessibility requirements in various related specifications, as well as the design of applications that include natural language interfaces including speech and voice input. The concept of a natural language interface is first clarified. User needs and associated requirements are then described.</p>
+	    <p>This document is most explicitly not a collection of baseline requirements. It is also important to note that some of the requirements may be implemented at a system or platform level, and some may be authoring requirements for development of applications.</p>
+	  </section>
+	  <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
+	  <p>
+    This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
+    Editor's Draft. 
+    
+  </p><p>
+    <a href="https://github.com/w3c/apa/issues/">GitHub Issues</a> are preferred for
+          discussion of this specification.
+        
+    
+  </p><p>
+      Publication as an Editor's Draft does not imply endorsement
+      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
+    </p><p>This is a draft document and may be updated, replaced
+  or obsoleted by other documents at any time. It is inappropriate to cite this
+  document as other than work in progress.
+  </p><p></p><p>
+    
+        This document was produced by a group
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>.
+       The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+    
+                <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+                <a rel="disclosure" href="https://www.w3.org/groups/wg/apa/ipr">public list of any patent disclosures</a>
+          made in connection with the deliverables of
+          the group; that page also includes
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#what-is-a-natural-language-interface"><bdi class="secno">1.1 </bdi>What is a Natural Language Interface?</a></li><li class="tocline"><a class="tocxref" href="#natural-language-interfaces-and-accessibility"><bdi class="secno">1.2 </bdi>Natural Language Interfaces and Accessibility</a></li><li class="tocline"><a class="tocxref" href="#voice-user-interfaces"><bdi class="secno">1.3 </bdi>Voice User Interfaces</a></li><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.4 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#services-and-agents"><bdi class="secno">1.5 </bdi>Services and Agents</a></li><li class="tocline"><a class="tocxref" href="#user-need-definition"><bdi class="secno">1.6 </bdi>User need definition</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-needs-and-requirements"><bdi class="secno">2. </bdi>User needs and requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#user-identification-and-authentication"><bdi class="secno">2.1 </bdi>User Identification and Authentication</a></li><li class="tocline"><a class="tocxref" href="#means-of-input-and-output"><bdi class="secno">2.2 </bdi>Means of Input and Output</a></li><li class="tocline"><a class="tocxref" href="#communicating-in-a-language-that-the-user-needs"><bdi class="secno">2.3 </bdi>Communicating in a Language that the User Needs</a></li><li class="tocline"><a class="tocxref" href="#speech-recognition-and-speech-production"><bdi class="secno">2.4 </bdi>Speech Recognition and Speech Production</a></li><li class="tocline"><a class="tocxref" href="#visually-displayed-text"><bdi class="secno">2.5 </bdi>Visually displayed text</a></li><li class="tocline"><a class="tocxref" href="#designing-for-understanding-and-effective-use"><bdi class="secno">2.6 </bdi>Designing for Understanding and Effective Use</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#understanding-how-to-interact-with-the-interface"><bdi class="secno">2.6.1 </bdi>Understanding How to Interact with the Interface</a></li><li class="tocline"><a class="tocxref" href="#giving-users-enough-time-to-interact"><bdi class="secno">2.6.2 </bdi>Giving Users Enough Time to Interact</a></li><li class="tocline"><a class="tocxref" href="#communicating-in-language-that-is-clear-simple-and-appropriate-to-the-audience"><bdi class="secno">2.6.3 </bdi>Communicating in Language that is Clear, Simple, and Appropriate to the Audience</a></li><li class="tocline"><a class="tocxref" href="#pronunciation"><bdi class="secno">2.6.4 </bdi>Pronunciation</a></li><li class="tocline"><a class="tocxref" href="#avoiding-and-recovering-from-input-errors"><bdi class="secno">2.6.5 </bdi>Avoiding and Recovering from Input Errors</a></li><li class="tocline"><a class="tocxref" href="#using-multimodal-interfaces-to-enhance-understanding"><bdi class="secno">2.6.6 </bdi>Using Multimodal Interfaces to Enhance Understanding</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">3. </bdi>Enabling Funders<span class="formerLink" aria-label="§"></span></a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">A.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+	  <section id="introduction">
+	    <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
+	    <section id="what-is-a-natural-language-interface">
+	      <h3 id="x1-1-what-is-a-natural-language-interface"><bdi class="secno">1.1 </bdi>What is a Natural Language Interface?<a class="self-link" aria-label="§" href="#what-is-a-natural-language-interface"></a></h3>
+	      <p>A <dfn id="dfn-natural-language-interface" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">natural language interface</dfn> is a user interface in which the user and the system communicate via a natural (human) language. The user provides input as sentences via speech or some other input, and the system generates responses in the form of sentences delivered by speech, text or another suitable modality. </p>
+
+	  
+	      <p>Often, systems that provide natural language interfaces support spoken interaction. In this scenario, speech recognition is used to process the user's input, and speech synthesis is used to generate the system's spoken responses. However, the use of speech is not essential to a natural language interface.</p>
+	      <p>Typical examples of natural language interfaces include:</p>
+	      <ul>
+		<li><strong>Voice agents designed primarily to communicate via speech</strong>. These agents may run on a computing device such as a mobile phone, tablet, laptop or desktop computer. They may also be embedded in specialized hardware such as consumer appliances, or the automation system of a vehicle.</li>
+		<li><strong>Chat bots included in Web applications</strong> that process natural language requests from the user. For example, a customer service application available on an organization's web site could offer a natural language user interface to handle customers' inquiries.</li>
+		<li><dfn id="dfn-interactive-voice-response" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">Interactive Voice Response</dfn> (<abbr title="Interactive Voice Response">IVR</abbr>) systems that interact with the user via a telephone call, accepting speech or key pad input and generating speech output.</li>
+	      </ul>
+	      <p>These examples are indicative of applications that use natural language interfaces. They are not definitive. Variations of the examples and applications that do not fit these patterns at all are possible.</p>
+              <div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span></div><aside class="">
+                <p>An increasingly popular type of system offering a natural language interface is the <em>intelligent personal assistant</em>. A general architecture for such systems, and opportunities for future technical standardization, are proposed in [<cite><a class="bibref" data-link-type="biblio" href="#bib-personal-assistant-architecture" title="Intelligent Personal Assistant Architecture and Potential for Standardization Version 1.2">personal-assistant-architecture</a></cite>]. Although intelligent personal assistant applications are growing in prominence, it should be noted that the scope of this document is not restricted to these tools. Any application that uses natural language interaction can benefit from consideration of the needs and requirements identified here.</p>
+              </aside></div>
+	    </section>
+
+
+
+	    <section id="natural-language-interfaces-and-accessibility">
+	      <h3 id="x1-2-natural-language-interfaces-and-accessibility"><bdi class="secno">1.2 </bdi>Natural Language Interfaces and Accessibility<a class="self-link" aria-label="§" href="#natural-language-interfaces-and-accessibility"></a></h3>
+	      <p>The accessibility of natural language interfaces to users with disabilities can be supported by a variety of features at the platform and application levels, including assistive technologies. Multiple modes of input and output should be provided to enable interaction with the system by users who have a variety of physical and sensory capabilities. For example, whereas speech input may be needed by some users with physical disabilities, keyboard input, switch input, or an eye tracking system may be needed by other users. </p>
+	      <p>Similarly, natural language output may be spoken, or it may be provided as visually displayed text. These and other requirements are elaborated further below. In some cases, these requirements may best be satisfied by an assistive technology. For example, a chat bot that does not provide a spoken interface directly may nevertheless satisfy a user's need for speech input via a dictation function provided as part of the user's browser or operating system. There may also be other 'service' aspects that are specifically needed to better support accessibility that operate at a different layer to any modality input or output considerations. </p>
+	      <p>The design of the application should support the cognitive needs of users, including those who have learning or cognitive disabilities. Discoverability, simplicity, and affordances for example, are important considerations in the design of the natural language interaction.</p>
+	    </section>
+
+	        <section id="voice-user-interfaces">
+	    	<h3 id="x1-3-voice-user-interfaces"><bdi class="secno">1.3 </bdi>Voice User Interfaces<a class="self-link" aria-label="§" href="#voice-user-interfaces"></a></h3>
+	    	<p>Voice user interfaces (VUI) using speech such as those found on a range of commercially available devices for home and mobile use represent a part of the stack that make up natural language interfaces. This document aims to identify accessibility related user needs and requirements for VUIs and indicate further areas of work and research in terms of how they relate to new standards like <abbr title="Web content Accessibility Guidelines">WCAG</abbr> 3 and other emerging technologies.</p>
+	    </section>
+	    <section id="scope">
+	      <h3 id="x1-4-scope"><bdi class="secno">1.4 </bdi>Scope<a class="self-link" aria-label="§" href="#scope"></a></h3>
+	      <p>Natural language interfaces frequently occur as components of larger user interfaces and systems. For example, a chat bot may be included in a web application. A natural language interface may be an essential part of a multi-modal application that uses a combinations of language and gestural inputs. An example would be an interactive navigation tool that allows the user to issue spoken commands and to interact with a graphical map with a pointing device.</p>
+	      <p>The scope of this document is largely confined to the accessibility of the natural language aspect of the over-all user interface. It is concerned with the accessibility of natural language interactions to users with disabilities.</p>
+
+
+	      <div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span></div><p class="">
+	      The scope of this work is currently under active  discussion in the Research Questions Task Force.</p></div>
+		</section>
+	      <section id="services-and-agents">
+
+	       <h3 id="x1-5-services-and-agents"><bdi class="secno">1.5 </bdi>Services and Agents<a class="self-link" aria-label="§" href="#services-and-agents"></a></h3>
+	       <p>Behind these interfaces there are services that provide core processing, evaluation and content. This document aims to look at these services and determine to what degree they can and should support the needs of people with disabilities; what system requirements are, or where further research is needed. </p>
+	             <p>Ideally by satisfying system requirements, developers of platforms and applications offering natural language interfaces can meet corresponding user needs. Currently, no stance is taken in this document regarding which needs are best satisfied at the platform level, by an assistive technology, or in the development of applications, but this will change as the document develops. These architectural considerations are left to be decided by system designers, and therefore there may be requirements in accessible system design that they need to be aware of. Often, they also depend on the services provided by the underlying operating system or by the web platform.</p>
+
+	      <p>If natural language interaction is provided as part of a system that also offers other styles of interaction, this document should be read in combination with guidance provided elsewhere which is relevant to the other interface and service aspects. Notably,</p>
+	      <ul>
+		<li><a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (<abbr title="Web content Accessibility Guidelines">WCAG</abbr>) 2.1</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>] establishes normative requirements for the accessibility of web-based applications.</li>
+		<li><a href="https://www.w3.org/TR/raur/"><abbr title="Real-Time Communication">RTC</abbr> Accessibility User Requirements (<abbr>RAUR</abbr>)</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-raur" title="RTC Accessibility User Requirements">raur</a></cite>] identifies user needs and corresponding requirements for the accessibility of real-time communication applications, such as video conference tools and web-based telephony systems.</li>
+		<li><a href="https://www.w3.org/TR/xaur/">XR Accessibility User Requirements (<abbr>XAUR</abbr>)</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-xaur" title="XR Accessibility User Requirements">xaur</a></cite>] identifies user needs and corresponding requirements for the accessibility of virtual reality and augmented reality.</li>
+		<li><a href="https://www.w3.org/WAI/standards-guidelines/uaag/">User Agent Accessibility Guidelines (<abbr>UAAG</abbr>)</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-uaag" title="User Agent Accessibility Guidelines (UAAG) 2.0">uaag</a></cite>]- if we consider the service behind the interface - what parts of the User Agent Accessibility Guidelines (UAAG) are relevant for these particular services?</li>
+	      </ul>
+	      <p>As a general principle, the entire interface of a system or application needs to be accessible to users with disabilities. If only the natural language interaction component is accessible, some users will be unable to complete tasks successfully. For example, a smart agent that answers a user's questions by searching the web for information and then displaying it on screen is only accessible as a whole if both the  interaction and the presentation of the information satisfy the user's access needs. If the on-screen information is not accessible, then the user cannot complete the task of acquiring and understanding the information requested.</p>
+
+	    </section>
+	    <section id="user-need-definition">
+	      <h3 id="x1-6-user-need-definition"><bdi class="secno">1.6 </bdi>User need definition<a class="self-link" aria-label="§" href="#user-need-definition"></a></h3>
+	      <p><dfn id="dfn-user-needs" tabindex="0" aria-haspopup="dialog" data-dfn-type="dfn">User needs</dfn> relate to what a user needs from a particular application or platform to complete a task or to achieve a particular goal. User needs are dependent on the context in which an application is used, including the user's capabilities and the environmental conditions in which interaction with the interface takes place. For example, a spoken interaction would be inaccessible to a person who is deaf, or to a hearing person situated in a noisy environment. Although disability-related needs are the focus of this document, the user needs described here are not limited to people with specific types of disability. The capabilities of users vary greatly. They include a variety of physical, sensory, learning and cognitive abilities that should be taken into account in the design of platforms and applications.</p>
+
+	      <p>The user needs and associated requirements are actively being reviewed by the Research Questions Task Force (<abbr title="Research Questions Task Force">RQTF</abbr>) and by the Accessible Platform Architectures (<abbr title="Accessible Platform Architectures">APA</abbr>) Working Group.</p>
+	    </section>
+	  </section>
+	  <section id="user-needs-and-requirements">
+	    <h2 id="x2-user-needs-and-requirements"><bdi class="secno">2. </bdi>User needs and requirements<a class="self-link" aria-label="§" href="#user-needs-and-requirements"></a></h2>
+	    <p>This section outlines a variety of user needs and system requirements that can satisfy them.</p>
+	    <section id="user-identification-and-authentication">
+	      <h3 id="x2-1-user-identification-and-authentication"><bdi class="secno">2.1 </bdi>User Identification and Authentication<a class="self-link" aria-label="§" href="#user-identification-and-authentication"></a></h3>
+	      <ul>
+		<li><strong>User Need 1:</strong> A user with a physical disability needs to use speech as the only means of communicating with a system that can be shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
+		<li><strong>REQ 1:</strong> Support voice identification as a means of biometric authentication.</li>
+	      </ul>
+	      <div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-0" aria-level="4"><span>Note</span></div><p class="">
+		To achieve adequate security, voice identification may need to be combined with other factors of authentication.</p></div>
+
+		<ul>
+		  <li><strong>User Need 2:</strong> A user who is deaf or who has a speech disability needs to interact with a system that can be shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
+		  <li><strong>REQ 2a:</strong> Support a means of biometric authentication other than voice recognition.</li>
+		  <li><strong>REQ 2b:</strong> Support a non-biometric means of authentication, such as a hardware security token.</li>
+		</ul>
+		<div class="note" role="note" id="issue-container-generatedID-2"><div role="heading" class="note-title marker" id="h-note-1" aria-level="4"><span>Note</span></div><p class="">
+		In some cases, this requirement can be met simply by using authentication mechanisms provided by the underlying operating system or browser environment.</p></div>
+
+		<aside class="example" id="example-1"><div class="marker">
+    <a class="self-link" href="#example-1">Example<bdi> 1</bdi></a>
+  </div>
+		  <p>A smart agent is designed to run under several operating systems used by mobile devices. It can use authentication methods provided by each of these platforms to identify the user reliably. These mechanisms include face recognition and fingerprint recognition.</p>
+		</aside>
+		<aside class="example" id="example-2"><div class="marker">
+    <a class="self-link" href="#example-2">Example<bdi> 2</bdi></a>
+  </div>
+		  <p>A smart agent is embedded in a public kiosk, located for example at an airport. A user can choose face recognition or voice recognition as the means of biometric authentication.</p>
+		</aside>
+	    </section>
+	    <section id="means-of-input-and-output">
+	      <h3 id="x2-2-means-of-input-and-output"><bdi class="secno">2.2 </bdi>Means of Input and Output<a class="self-link" aria-label="§" href="#means-of-input-and-output"></a></h3>
+	      <ul>
+		<li><strong>User Need 3:</strong> Different users have a need for different input devices or mechanisms. For example, a person with a physical disability may need speech input, or single switch input, or eye tracking input. A person who is deaf or who has a speech disability may need to use keyboard input.</li>
+		<li><strong>REQ 3:</strong> Support multiple input devices and methods either within the natural language interface/s or via alternatives.</li>
+	      </ul>
+	      <div class="note" role="note" id="issue-container-generatedID-3"><div role="heading" class="note-title marker" id="h-note-2" aria-level="4"><span>Note</span></div><p class="">
+		This requirement can often be met by supporting the input methods available from the underlying platform, including assistive technologies.
+	      </p></div>
+	      <div class="note" role="note" id="issue-container-generatedID-4"><div role="heading" class="note-title marker" id="h-note-3" aria-level="4"><span>Note</span></div><p class="">
+	      If software that incorporates a natural language interface supports multiple input mechanisms, support for any specific mechanism may be available only on particular hardware devices or in particular environments. For example, a smart speaker may support only speech input, whereas the same smart agent running on a mobile system such as a phone or tablet may support text input via a keyboard or any device capable of emulating a keyboard.</p></div>
+	      <div class="note" role="note" id="issue-container-generatedID-5"><div role="heading" class="note-title marker" id="h-note-4" aria-level="4"><span>Note</span></div><p class="">
+	      See the requirement to support a keyboard interface specified in <abbr title="Web content Accessibility Guidelines">WCAG</abbr> 2.1 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>], success criterion 2.1.1.</p></div>
+
+	      <ul>
+		<li><strong>User Need 4:</strong> Different users have a need for different output devices or mechanisms. For example, a user who is blind may require speech output. A user who is deaf or who has a speech disability may require visually displayed text output. A user who is deaf-blind may require braille output.</li>
+		<li><strong>REQ 4:</strong> Support multiple output devices and methods either within the natural language interface/s or via alternatives.</li>
+	      </ul>
+		<div class="note" role="note" id="issue-container-generatedID-6"><div role="heading" class="note-title marker" id="h-note-5" aria-level="4"><span>Note</span></div><p class="">
+		This requirement can often be met by supporting the output methods available from the underlying platform, including assistive technologies.</p></div>
+		<div class="note" role="note" id="issue-container-generatedID-7"><div role="heading" class="note-title marker" id="h-note-6" aria-level="4"><span>Note</span></div><p class="">
+		If software that incorporates a natural language interface supports multiple output mechanisms, support for any specific mechanism may be available only on particular hardware devices or in particular environments. For example, a smart speaker supports only speech output, whereas the same smart agent running on a mobile system such as a phone or tablet may support a visual display as well, and may be compatible with braille devices.</p></div>
+
+		<ul>
+		  <li><strong>User Need 5:</strong> A user needs to use the same input and output mechanisms to complete an entire task involving an interaction with the system.</li>
+		  <li><strong>REQ 5:</strong> Provide a mode of operation in which the user does not need to switch from one input or output mechanism to another partway through completing an interactive task.</li>
+		</ul>
+		<aside class="example" id="example-3"><div class="marker">
+    <a class="self-link" href="#example-3">Example<bdi> 3</bdi></a>
+  </div>
+		<p>A user who is blind or who has a physical disability needs to use spoken interaction to complete an entire task, such as searching the web for information on a topic of interest. The system can be configured or requested to use speech for the entire process, instead of displaying search results as a web page.</p></aside>
+		<aside class="example" id="example-4"><div class="marker">
+    <a class="self-link" href="#example-4">Example<bdi> 4</bdi></a>
+  </div>
+		  <p>A user who is deaf or who has a speech disability engages the system to process a customer service request. The system is unable to handle the request on its own. It initiates a real-time call between the user and a human customer support representative. Since keyboard input and text output were used in the dialogue between the user and the system, the call with the customer support representative is set up to use real-time text (RTT) rather than speech for communication.</p></aside>
+		  
+		<ul>
+		  <li><strong>User Need 6:</strong> A user who is deaf or hard of hearing needs to provide speech input to an application, while having the output presented as text.</li>
+		  <li><strong>REQ 6:</strong> Support a mode of operation in which the user can speak to the system, and the system's natural language output is presented textually (e.g., displayed visually or conveyed via the user's assistive technology).</li>
+		</ul>
+		  <ul>
+		    <li><strong>User Need 7:</strong> A user needs linguistic information presented both as speech and as text to be adequately perceived or understood.</li>
+		    <li><strong>REQ 7:</strong> Provide a mode of operation in which the spoken output of the system is accompanied by a synchronized text transcript.</li>
+		    <li><strong>User Need 8:</strong> A user with a speech disability needs to provide textual input to the system, but can effectively perceive and understand spoken information.</li>
+		  <li><strong>REQ 8:</strong> Provide a mode of operation in which keyboard or other forms of textual input can be given, in combination with speech output.</li>
+		</ul>
+
+		<ul>
+		  <li><strong>User Need 9:</strong> A user who is deaf-blind needs to communicate with the system via a refreshable braille device.</li>
+		  <li><strong>REQ 9:</strong> Support a mode of operation in which input and output are both provided as text.</li>
+		</ul>
+		<div class="note" role="note" id="issue-container-generatedID-8"><div role="heading" class="note-title marker" id="h-note-7" aria-level="4"><span>Note</span></div><p class="">
+		  Support for braille displays is assumed to be provided by a screen reader running under the device's operating system. Therefore, support for keyboard input and textual output is the stated requirement for the natural language interface itself, leaving interaction with the braille hardware to the operating system on which the user interface is run.</p></div>
+		</section>
+		<section id="communicating-in-a-language-that-the-user-needs">
+		  <h3 id="x2-3-communicating-in-a-language-that-the-user-needs"><bdi class="secno">2.3 </bdi>Communicating in a Language that the User Needs<a class="self-link" aria-label="§" href="#communicating-in-a-language-that-the-user-needs"></a></h3>
+		  <ul>
+		    <li><strong>User Need 10:</strong> A user who is deaf or hard of hearing needs to communicate with the system in a sign language.</li>
+		    <li><strong>REQ 10a:</strong> Provide a mode of operation in which sign language presented by the user is recognized and processed by the system.</li>
+		    <li><strong>REQ 10b:</strong> Provide a mode of operation in which the system's output is presented visually in a sign language.</li>
+		    <li><strong>REQ 10c:</strong> As an alternative to requirements 10a and 10b, provide a mode of operation in which a human sign language interpreter relays communication between the user and the system.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-9"><div role="heading" class="note-title marker" id="h-note-8" aria-level="4"><span>Note</span></div><p class="">
+		    At present, it is generally infeasible to implement REQ 9a and REQ 9b with sufficient reliability and accuracy to be useful. Sign language processing (including automatic recognition, translation, and production of sign languages) involves challenging research problems. See [<cite><a class="bibref" data-link-type="biblio" href="#bib-bragg-et-al" title="Sign language recognition, generation, and translation: An interdisciplinary perspective">Bragg-et-al</a></cite>] for details. These two requirements are nevertheless stated here to encourage further research and development efforts.</p></div>
+		  <div class="note" role="note" id="issue-container-generatedID-10"><div role="heading" class="note-title marker" id="h-note-9" aria-level="4"><span>Note</span></div><p class="">
+		  Sign languages vary by country and region. Therefore, multiple sign languages may need to be supported, depending on the intended audience of the system.</p></div>
+
+		  <ul>
+		    <li><strong>User Need 11:</strong> A user with a learning or cognitive disability needs to communicate with the system in a symbol set supported by a particular augmentative and alternative communication (<abbr title="augmentative and alternative communication">AAC</abbr>) assistive technology.</li>
+		  </ul>
+		</section>
+		<section id="speech-recognition-and-speech-production">
+		  <h3 id="x2-4-speech-recognition-and-speech-production"><bdi class="secno">2.4 </bdi>Speech Recognition and Speech Production<a class="self-link" aria-label="§" href="#speech-recognition-and-speech-production"></a></h3>
+		  <ul>
+		    <li><strong>User Need 12:</strong> A user with atypical speech characteristics needs to provide spoken input to the system.</li>
+		    <li><strong>REQ 12a:</strong> Ensure that the system can recognize atypical varieties of speech with adequate accuracy to enable the application to be successfully used.</li>
+		    <li><strong>REQ 12b:</strong> Provide a mode of operation in which the system is trained to recognize a particular user's speech more accurately than it can without training.</li>
+		  </ul>
+
+		  <ul>
+		    <li><strong>User Need 13:</strong> A user with atypical speech characteristics needs opportunities to correct the system's speech recognition errors.</li>
+		    <li><strong>REQ 13a:</strong> Enable the system to estimate the probability that a user's utterance has been recognized correctly.</li>
+		    <li><strong>REQ 13b:</strong> If the system's confidence in its recognition of the user's utterance is below a reasonable threshold, prompt the user to repeat or confirm the request made or the information spoken.</li>
+		    <li><strong>REQ 13c:</strong> Allow the user to decide at any time to interact with the system via means of input other than speech, even if a spoken dialogue is already in progress.</li>
+		  </ul>
+		    
+		  <ul>
+		    <li><strong>User Need 14:</strong> A user needs to adjust the speaking rate, volume or pitch of speech generated by the system in order to understand it well or to interact more efficiently.</li>
+		    <li><strong>REQ 14:</strong> Provide an accessible user interface with which the speaking rate, pitch and volume of speech generated by the system can be configured.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-11"><div role="heading" class="note-title marker" id="h-note-10" aria-level="4"><span>Note</span></div><p class="">
+		  To ensure this user interface is accessible, it should satisfy relevant accessibility requirements drawn from this document or elsewhere. For example, a system could provide spoken commands, and a settings dialogue in a graphical user interface, as alternative mechanisms for configuring speech properties.</p></div>
+		</section>
+		<section id="visually-displayed-text">
+		  <h3 id="x2-5-visually-displayed-text"><bdi class="secno">2.5 </bdi>Visually displayed text<a class="self-link" aria-label="§" href="#visually-displayed-text"></a></h3>
+		  <ul>
+		    <li><strong>User Need 15:</strong> A user who has low vision or a learning disability needs to adjust the font style or spacing of text displayed by the system.</li>
+		    <li><strong>REQ 15:</strong> Ensure that font properties and text spacing are configurable by the user, including font size, font style, character, word, line and paragraph spacing.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-12"><div role="heading" class="note-title marker" id="h-note-11" aria-level="4"><span>Note</span></div><p class="">
+		  In some cases, this requirement can be met by capabilities of the operating system or browsing environment.</p></div>
+		  <div class="note" role="note" id="issue-container-generatedID-13"><div role="heading" class="note-title marker" id="h-note-12" aria-level="4"><span>Note</span></div><p class="">
+		  See the text spacing requirement specified in <abbr title="Web content Accessibility Guidelines">WCAG</abbr> 2.1 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>], success criterion 1.4.12.</p></div>
+		</section>
+	      <section id="designing-for-understanding-and-effective-use">
+		<h3 id="x2-6-designing-for-understanding-and-effective-use"><bdi class="secno">2.6 </bdi>Designing for Understanding and Effective Use<a class="self-link" aria-label="§" href="#designing-for-understanding-and-effective-use"></a></h3>
+		<section id="understanding-how-to-interact-with-the-interface">
+		  <h4 id="x2-6-1-understanding-how-to-interact-with-the-interface"><bdi class="secno">2.6.1 </bdi>Understanding How to Interact with the Interface<a class="self-link" aria-label="§" href="#understanding-how-to-interact-with-the-interface"></a></h4>
+		  <ul>
+		    <li><strong>User Need 16:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know what the system can do and how to ask the system to do it.</li>
+		    <li><strong>REQ 16a:</strong> Provide commands with which the user can request help or instructions that give an overview of what the system can do and what requests or commands can be used to achieve it.</li>
+		    <li><strong>REQ 16b:</strong> Provide documentation in a form that satisfies accessibility guidelines which explains and gives examples of how to use the system.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-14"><div role="heading" class="note-title marker" id="h-note-13" aria-level="5"><span>Note</span></div><p class="">
+		    This need is particularly applicable to systems which can serve a wide range of requests, such as personal assistants. Although all users need to know how to interact with a system to start using it, those with learning or cognitive disabilities are likely to be differentially and adversely affected by designs that do not make it obvious what the system can achieve and how to set about achieving it.</p></div>
+
+		    <ul>
+		    <li><strong>User Need 17:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know how to interact with it to achieve a particular goal.</li>
+		    <li><strong>REQ 17a:</strong> Provide prompts or menus of options that inform the user of what choices are available and what information is requested at each step of a dialogue with the system.</li>
+		    <li><strong>REQ 17b:</strong> Provide commands or menu options for requesting explanations and instructions that help the user to complete tasks successfully.</li>
+		  </ul>
+
+		  <ul>
+		    <li><strong>User Need 18:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to use it without having to learn specific commands, requests, phrases or vocabulary.</li>
+		    <li><strong>REQ 18a:</strong> Design the system to respond appropriately to a variety of alternative words, phrases and sentences that may be used to ask the same question, to give the same command, or to supply the same information.</li>
+		    <li><strong>REQ 18b:</strong> Design the system to respond appropriately to words and phrases that are likely to be familiar to users of other systems with similar features.</li>
+		    <li><strong>REQ 18c:</strong> If the user's input is ambiguous or cannot be processed, prompt for clarification or additional information, or present a menu of relevant choices.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-15"><div role="heading" class="note-title marker" id="h-note-14" aria-level="5"><span>Note</span></div><p class="">
+		  Ensuring this need is met typically involves including people with disabilities in data collection and testing procedures that enable software developers to improve the variety of linguistic inputs to which the system can appropriately respond.</p></div>
+		  <div class="note" role="note" id="issue-container-generatedID-16"><div role="heading" class="note-title marker" id="h-note-15" aria-level="5"><span>Note</span></div><p class="">
+Commands for performing a variety of functions typically supported by speech interfaces used for telephony and multimedia applications are standardized in [<cite><a class="bibref" data-link-type="biblio" href="#bib-etsi-es-202-076" title="ETSI ES 202 076 V2.1.1: Human Factors (HF); User Interfaces; Generic spoken command vocabulary for ICT devices and services">ETSI-ES-202-076</a></cite>].</p></div>
+
+		  <ul>
+		    <li><strong>User Need 19:</strong> A user with a learning or cognitive disability needs to review information, prompts or questions before deciding how to respond.</li>
+		    <li><strong>REQ 19a:</strong> Design the system to comply with a user's requests for its natural language output (e.g., spoken utterances) to be repeated.</li>
+		    <li><strong>REQ 19b:</strong> Summarize or present information that has been supplied by the user, then ask the user for confirmation, before performing irreversible actions such as financial transactions.</li>
+		    <li><strong>REQ 19c:</strong> If the text of the dialogue between the user and the system is presented in writing (e.g., on screen or via a braille device), ensure that the user can review the entire history of the conversation (scrolling the display, if necessary).</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-17"><div role="heading" class="note-title marker" id="h-note-16" aria-level="5"><span>Note</span></div><p class="">
+		    See <abbr title="Web content Accessibility Guidelines">WCAG</abbr> 2.1 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>], success criterion 3.3.4.</p></div>
+		</section>
+		<section id="giving-users-enough-time-to-interact">
+		  <h4 id="x2-6-2-giving-users-enough-time-to-interact"><bdi class="secno">2.6.2 </bdi>Giving Users Enough Time to Interact<a class="self-link" aria-label="§" href="#giving-users-enough-time-to-interact"></a></h4>
+		  <ul>
+		    <li><strong>User Need 20:</strong> A user with a learning or cognitive disability needs ample time to decide how to respond during a dialogue with the system.</li>
+		    <li><strong>REQ 20a:</strong> Unless there are compelling reasons to the contrary, do not limit the amount of time available for the user to respond.</li>
+		    <li><strong>REQ 20b:</strong> If a time limit is unavoidable, allow the length of the time limit to be adjusted, or for the time limit to be eliminated, or prompt for the user to extend it before it expires.</li>
+		    <li><strong>REQ 20c:</strong> Warn users of time limits before any period of time that is subject to a limit begins.</li>
+		    <li><strong>REQ 20d:</strong> Provide a mode of operation in which the system reminds the user periodically that it is waiting for input, and of any time limit that has been imposed.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-18"><div role="heading" class="note-title marker" id="h-note-17" aria-level="5"><span>Note</span></div><p class="">
+		  The mode of operation described in requirement 19d may be distracting or anxiety-provoking for some users. Therefore, it should be optional.</p></div>
+		  <div class="note" role="note" id="issue-container-generatedID-19"><div role="heading" class="note-title marker" id="h-note-18" aria-level="5"><span>Note</span></div><p class="">
+		  See <abbr title="Web content Accessibility Guidelines">WCAG</abbr> 2.1 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>], success criteria 2.2.1, 2.2.3, and 2.2.6.</p></div>
+		</section>
+		<section id="communicating-in-language-that-is-clear-simple-and-appropriate-to-the-audience">
+		  <h4 id="x2-6-3-communicating-in-language-that-is-clear-simple-and-appropriate-to-the-audience"><bdi class="secno">2.6.3 </bdi>Communicating in Language that is Clear, Simple, and Appropriate to the Audience<a class="self-link" aria-label="§" href="#communicating-in-language-that-is-clear-simple-and-appropriate-to-the-audience"></a></h4>
+		  <ul>
+		    <li><strong>User Need 21:</strong> Users, especially those who have learning or cognitive disabilities, need the system to use language that is clear and comprehensible to them.</li>
+		    <li><strong>REQ 21a:</strong> Use language (including vocabulary and syntax) that is no more complex than is necessary for clear communication.</li>
+		    <li><strong>REQ 21b:</strong> Use vocabulary (including terminology) that is reasonably predicted to be familiar to the intended users of the system, including users who may have learning or cognitive disabilities.</li>
+		    <li><strong>REQ 21c:</strong> Provide a mode of operation in which simpler language than the default can be requested.</li>
+		    <li><strong>REQ 21d:</strong> Provide definitions or explanations of terms that are likely to be unfamiliar to intended users of the system, including users who may have learning or cognitive disabilities.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-20"><div role="heading" class="note-title marker" id="h-note-19" aria-level="5"><span>Note</span></div><p class="">
+		    See <abbr title="Web content Accessibility Guidelines">WCAG</abbr> 2.1 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>], success criteria 3.1.3, 3.1.4, and 3.1.5.</p></div>
+
+		    <ul>
+		    <li><strong>User Need 22:</strong> Users, especially those who have learning or cognitive disabilities, need the system to use language that is appropriate to their social and cultural context in order to be clear and understandable.</li>
+		    <li><strong>REQ 22a:</strong> Provide a mode of operation in which the use of language, including terminology, currency, units of measure, and date and time formats, is localized according to the user's preferences.</li>
+		    <li><strong>REQ 22b:</strong> By default, localize the use of language, including terminology, currency, units of measure, and date and time formats, to the user's country and region.</li>
+		  </ul>
+		</section>
+		<section id="pronunciation">
+		  <h4 id="x2-6-4-pronunciation"><bdi class="secno">2.6.4 </bdi>Pronunciation<a class="self-link" aria-label="§" href="#pronunciation"></a></h4>
+		  <ul>
+		    <li><strong>User Need 23:</strong> Users, especially those who have learning or cognitive disabilities, need spoken language to be pronounced correctly in order to be understood.</li>
+		    <li><strong>REQ 23a:</strong> Provide a mode of operation in which the pronunciation (e.g., accent) of spoken language is localized according to the user's preferences.</li>
+		    <li><strong>REQ 23b:</strong> By default, localize the pronunciation of spoken language according to the user's country and region.</li>
+		    <li><strong>REQ 23c:</strong> Ensure that spoken text is pronounced correctly, including names, rarely occurring words, and words that have different pronunciations depending on context.</li>
+		  </ul>
+		</section>
+		<section id="avoiding-and-recovering-from-input-errors">
+		  <h4 id="x2-6-5-avoiding-and-recovering-from-input-errors"><bdi class="secno">2.6.5 </bdi>Avoiding and Recovering from Input Errors<a class="self-link" aria-label="§" href="#avoiding-and-recovering-from-input-errors"></a></h4>
+		  <ul>
+		    <li><strong>User Need 24:</strong> Users, especially those who have learning or cognitive disabilities, need opportunities to correct data entry errors.</li>
+		    <li><strong>REQ 24a:</strong> Check information provided by the user for errors.</li>
+		    <li><strong>REQ 24b:</strong> If errors are detected that can be automatically corrected with high reliability, make the correction and then prompt the user to confirm the information provided.</li>
+		    <li><strong>REQ 24c:</strong> For errors that cannot be reliably and automatically corrected, provide an explanation to the user and request valid information.</li>
+		    <li><strong>REQ 24d:</strong> Provide suggestions for correcting the error, if there is a known and relatively short list of alternative, valid responses.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-21"><div role="heading" class="note-title marker" id="h-note-20" aria-level="5"><span>Note</span></div><p class="">
+		  See <abbr title="Web content Accessibility Guidelines">WCAG</abbr> 2.1 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>], success criteria 3.3.1, 3.3.3, 3.3.4, and 3.3.6.</p></div>
+		  <ul>
+		    <li><strong>User Need 25:</strong> Users, especially those with learning or cognitive disabilities, need opportunities to avoid making errors that are irrevocable.</li>
+		    <li><strong>REQ 25a:</strong> Provide means of reversing actions that can be made reversible.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-22"><div role="heading" class="note-title marker" id="h-note-21" aria-level="5"><span>Note</span></div><p class="">
+		  See <abbr title="Web content Accessibility Guidelines">WCAG</abbr> 2.1 [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>], success criterion 3.3.6.</p></div>
+		</section>
+		<section id="using-multimodal-interfaces-to-enhance-understanding">
+		  <h4 id="x2-6-6-using-multimodal-interfaces-to-enhance-understanding"><bdi class="secno">2.6.6 </bdi>Using Multimodal Interfaces to Enhance Understanding<a class="self-link" aria-label="§" href="#using-multimodal-interfaces-to-enhance-understanding"></a></h4>
+		  <ul>
+		    <li><strong>User Need 26:</strong> Some users with learning disabilities need textual information to be spoken and presented in written form simultaneously.</li>
+		    <li><strong>REQ 26:</strong> Provide a mode of operation in which textual information is spoken and presented on screen concurrently, with synchronized visual highlighting of the text as it is spoken.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-23"><div role="heading" class="note-title marker" id="h-note-22" aria-level="5"><span>Note</span></div><p class="">The purpose of this multimodal presentation of text is to enhance comprehension of the material, especially by people with learning disabilities that affect reading.</p></div>
+		  <ul>
+		    <li><strong>User Need 27:</strong> Some users with learning or cognitive disabilities need graphical content that complements and reinforces the meaning of textual information.</li>
+		    <li><strong>REQ 27:</strong> If appropriate graphical conventions exist for presenting information that is provided to the user, then display a graphical presentation in addition to any textual (e.g., spoken) output.</li>
+		  </ul>
+		  <div class="note" role="note" id="issue-container-generatedID-24"><div role="heading" class="note-title marker" id="h-note-23" aria-level="5"><span>Note</span></div><p class="">Information presented graphically must also be available as text. See '<a href="#means-of-input-and-output" class="sec-ref">§&nbsp;<bdi class="secno">2.2 </bdi>Means of Input and Output</a>' above.</p></div>
+		  <aside class="example" id="example-5"><div class="marker">
+    <a class="self-link" href="#example-5">Example<bdi> 5</bdi></a>
+  </div>
+		    <p>A user asks a smart agent for travel directions to reach a desired destination. The agent displays the requested directions on a map by highlighting the route, in addition to providing spoken, step-by-step navigation instructions.</p>
+		  </aside>
+		</section>
+	      </section>
+
+	      </section>
+	      <section id="enabling-funders">
+<h2 id="x3-enabling-funders"><bdi class="secno">3. </bdi>Enabling Funders<a class="self-link" aria-label="§" href="#enabling-funders"></a><a class="self-link" aria-label="§" href="#enabling-funders"></a></h2>
+<p>This work is supported by the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">EC-funded WAI-Guide Project</a>.</p>
+	</section>
+	
+      
+      
+<section id="references" class="appendix"><h2 id="a-references"><bdi class="secno">A. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
+    <h3 id="a-1-informative-references"><bdi class="secno">A.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+    <dl class="bibliography"><dt id="bib-bragg-et-al">[Bragg-et-al]</dt><dd><cite>Sign language recognition, generation, and translation: An interdisciplinary perspective</cite>. Danielle Bragg; Oscar Koller; Mary Bellard; Larwan Berke; Patrick Boudreault; Annelies Braffort; Naomi Caselli; Matt Huenerfauth; Hernisa Kacorri; Tessa Verhoef; Christian Vogler; Meredith Ringel Morris.  The 21st International ACM SIGACCESS Conference on Computers and Accessibility. October 2019. </dd><dt id="bib-etsi-es-202-076">[ETSI-ES-202-076]</dt><dd><a href="https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf"><cite>ETSI ES 202 076 V2.1.1: Human Factors (HF); User Interfaces; Generic spoken command vocabulary for ICT devices and services</cite></a>.  ETSI. URL: <a href="https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf">https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf</a></dd><dt id="bib-personal-assistant-architecture">[personal-assistant-architecture]</dt><dd><a href="https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm"><cite>Intelligent Personal Assistant Architecture and Potential for Standardization Version 1.2</cite></a>.  Voice Interaction Community Group. 19 July 2021. URL: <a href="https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm">https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm</a></dd><dt id="bib-raur">[raur]</dt><dd><a href="https://www.w3.org/TR/raur/"><cite>RTC Accessibility User Requirements</cite></a>. Joshue O'Connor; Janina Sajka; Jason White; Michael Cooper.  W3C. 25 May 2021. W3C Note. URL: <a href="https://www.w3.org/TR/raur/">https://www.w3.org/TR/raur/</a></dd><dt id="bib-uaag">[uaag]</dt><dd><a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>.  W3C. 15 December 2015. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O'Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd><dt id="bib-xaur">[xaur]</dt><dd><a href="https://www.w3.org/TR/xaur/"><cite>XR Accessibility User Requirements</cite></a>.  W3C. 16 Sept 2020. URL: <a href="https://www.w3.org/TR/xaur/">https://www.w3.org/TR/xaur/</a></dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-natural-language-interface" aria-label="Links in this document to definition: natural language interface">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-natural-language-interface" aria-label="Permalink for definition: natural language interface. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-interactive-voice-response" aria-label="Links in this document to definition: Interactive Voice Response">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-interactive-voice-response" aria-label="Permalink for definition: Interactive Voice Response. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-user-needs" aria-label="Links in this document to definition: User needs">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-user-needs" aria-label="Permalink for definition: User needs. Activate to close this dialog.">Permalink</a>
+         
+      </div>
+      <p><b>Referenced in:</b></p>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </div><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
