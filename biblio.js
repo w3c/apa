@@ -657,6 +657,20 @@ respecConfig.localBiblio = {
 	"publisher": "The 21st International ACM SIGACCESS Conference on Computers and Accessibility",
 	"date": "October 2019"
     },
+	"media-av": {
+		"title": "Making Audio and Video Media Accessible",
+		"publisher": "W3C web Accessibility Initiative (WAI)",
+		"editors": ["Shawn Lawton henry"],
+		"date": "January 2021",
+		"href": "https://www.w3.org/WAI/media/av/"
+	},
+	"accessible-presentations": {
+		"title": "How to Make Your Presentations Accessible to All",
+		"publisher": "W3C Web accessibility Initiative (WAI)",
+		"editors": ["Shawn Lawton Henry"],
+		"date": "February 2021",
+		"href": "https://www.w3.org/WAI/teach-advocate/accessible-presentations/"
+	},
        
 };
 
