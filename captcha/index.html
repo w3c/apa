@@ -153,11 +153,15 @@ href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">Section
 255 of the Communications Act, 36 CFR 1194, Appendix C</a>, section 403 in the
 United States [[36-cfr-1194]].</p>
 
-<p>For this reason, biometric identification systems should be designed to allow users to choose among multiple and unrelated biometric identifiers. With that sole caveat, properly designed biometric identification systems are particularly attractive in situations where it is necessary to identify a particular human user. Their reliability is high, the cognitive load placed on the user low, and they are particularly difficult to foil. They have not yet been rendered suitable, however, in circumstances when it is necessary to preserve the user’s anonymity (i.e., the task is verifying that the user is human, without providing identifying information).</p>
-
+<p>For this reason, biometric identification systems should be designed to allow users to choose among multiple and unrelated biometric identifiers. With that sole caveat, properly designed biometric identification systems are particularly attractive in situations where it is necessary to identify a particular human user. Their reliability is high, the cognitive load placed on the user low, and they are particularly difficult to foil.  However, conventional applications of biometric authentication verify, and therefore disclose, the user's identity. They are thus unsuitable under circumstances in which it is desirable to preserve the user's anonymity reasons of privacy, while nevertheless establishing that the entity attempting to access an online service is human. The scheme described in the next section is designed to solve this problem.</p>
 
 			</section>
+			<section>
+			  <h4>Cryptographic Attestation of Personhood</h4>
+			  <p>An approach designed to verify that the user is a person, while preserving individual privacy, has recently been proposed by Cloudglare [[attestation]]. It is built upon the Web Authentication (WebAuthn) API [[webauthn-1]]. The WebAuthn registration process is invoked to establish that the user is in control of a hardware authentication device produced by a known and trusted manufacturer, as determined by a valid chain of digital certificates. If biometric authentication occurs in this procedure, as it typically does, then it is used only to unlock the private cryptographic key of the authentication device, and hence the user's identity is never explicitly disclosed to the party requesting evidence of personhood. A variant of this scheme has also been developed which offers stronger protection of privacy by not revealing the identity of the device manufacturer, which could be exploited in combination with other information to infer the user's identity.  This version of the approach requires the implementation of a protocol based on zer-knowledge proofs [[attestation-zero-knowledge]].</p>
+			  <p>Since the user is free to choose among a variety of authentication devices from reliable manufacturers, the hardware can be selected that best satisfies his or her accessibility-related needs and preferences. The inherent flexibility of the proposed approach is clearly advantageous to both security and accessibility.</p>
 			</section>
+		      </section>
 			<section id="noninteract">
 				<h3>Non-Interactive Stand-Alone Approaches</h3>
 

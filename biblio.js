@@ -28,6 +28,20 @@ respecConfig.localBiblio = {
 		"publisher": "Anti-Phishing Working Group",
 		"href": "http://antiphishing.org/APWG_Phishing_Activity_Report_Jul_05.pdf"
 	},
+    "attestation": {
+	"authors": ["Thibault Meunier"],
+	"title": "Humanity wastes about 500 years per day on CAPTCHAs. It’s time to end this madness",
+	"publisher": "Cloudflare",
+	"date": "13 May 2021",
+	"href": "https://blog.cloudflare.com/introducing-cryptographic-attestation-of-personhood/"
+    },
+    "attestation-zero-knowledge": {
+	"authors": ["Watson Ladd"],
+	"title": "Introducing Zero-Knowledge Proofs for Private Web Attestation with Cross/Multi-Vendor Hardware",
+	"publisher": "Cloudflare",
+	"date": "12 August 2021",
+	"href": "https://blog.cloudflare.com/introducing-zero-knowledge-proofs-for-private-web-attestation-with-cross-multi-vendor-hardware/"
+    },
 	"breaking": {
 		"title": "Breaking CAPTCHAs Without Using OCR",
 		"date": "",
