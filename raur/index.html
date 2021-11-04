@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.13.4">
+<meta name="generator" content="ReSpec 27.0.4">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -49,7 +49,7 @@ dfn{cursor:pointer}
 100%{transform:scale(1,1)}
 }
 .hljs{background:0 0!important}
-a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
 dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
@@ -91,11 +91,11 @@ details.respec-tests-details>li{padding-left:1em}
 a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 h2,h3,h4,h5,h6{position:relative}
 aside.example .marker>a.self-link{color:inherit}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
-h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
 @media (max-width:767px){
 dd{margin-left:0}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
 }
 @media print{
 .removeOnSave{display:none}
@@ -157,33 +157,37 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "group": "apa",
   "github": "w3c/apa",
   "maxTocLevel": 4,
-  "publishDate": "2021-10-06",
-  "publishISODate": "2021-10-06T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 06 October 2021"
+  "publishDate": "2021-11-04",
+  "publishISODate": "2021-11-04T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 04 November 2021"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
-    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72">
+    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a> <h1 id="title" class="title">RTC Accessibility User Requirements</h1>
     
-    <h2>
-      W3C Editor's Draft
-      <time class="dt-published" datetime="2021-10-06">06 October 2021</time>
-    </h2>
-    <dl>
-      <dt>This version:</dt><dd>
-              <a class="u-url" href="https://w3c.github.io/apa/raur/">https://w3c.github.io/apa/raur/</a>
-            </dd><dt>Latest published version:</dt><dd>
-              <a href="https://www.w3.org/TR/raur/">https://www.w3.org/TR/raur/</a>
-            </dd>
-      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/raur/">https://w3c.github.io/apa/raur/</a></dd>
-      
-      
-      
-      
-      
-      <dt>Editors:</dt>
-      <dd class="editor p-author h-card vcard" data-editor-id="41218">
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2021-11-04">04 November 2021</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://w3c.github.io/apa/raur/">https://w3c.github.io/apa/raur/</a>
+              </dd><dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/raur/">https://www.w3.org/TR/raur/</a>
+              </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/raur/">https://w3c.github.io/apa/raur/</a></dd>
+        <dt>History:</dt><dd>
+      <a href="https://www.w3.org/standards/history/raur">https://www.w3.org/standards/history/raur</a>
+    </dd><dd>
+        <a href="https://github.com/w3c/apa/commits/">Commit history</a>
+      </dd>
+        
+        
+        
+        
+        
+        <dt>Editors:</dt>
+        <dd class="editor p-author h-card vcard" data-editor-id="41218">
     <a class="u-url url p-name fn" href="https://www.w3.org/People#joconnor">Joshue O'Connor</a> (<span class="p-org org h-org">W3C</span>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="33688">
     <a class="u-url url p-name fn" href="https://rednote.net/">Janina Sajka</a>
@@ -192,19 +196,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </dd><dd class="editor p-author h-card vcard" data-editor-id="34017">
     <a class="u-url url p-name fn" href="https://www.w3.org/People/cooper/">Michael Cooper</a> (<span class="p-org org h-org">W3C</span>)
   </dd>
-      
-      
-      <dt>Participate:</dt><dd>
-    <a href="https://github.com/w3c/apa/">GitHub w3c/apa</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/issues/">File an issue</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/commits/">Commit history</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/pulls/">Pull requests</a>
-  </dd>
-    </dl>
-    
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/apa/">GitHub w3c/apa</a>
+        (<a href="https://github.com/w3c/apa/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/apa/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/apa/issues/">open issues</a>)
+      </dd>
+        
+        
+      </dl>
+    </details>
     
     
     <p class="copyright">
@@ -214,10 +217,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
     <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
-    apply.
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
   </p>
     <hr title="Separator for header">
   </div>
@@ -229,32 +232,25 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </section>
 
 <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
-      document at the time of its publication. Other documents may supersede
-      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
-      of this technical report can be found in the
-      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
       https://www.w3.org/TR/.</em></p><p>
-    This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
-    Editor's Draft. 
+    This document was published by the <a href="https://www.w3.org/groups/wg/apa">Accessible Platform Architectures Working Group</a> as
+    an Editor's Draft. 
+  </p><p>Publication as an Editor's Draft does not
+  imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
+    This is a draft document and may be updated, replaced or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than work in progress.
     
   </p><p>
-    <a href="https://github.com/w3c/apa/issues/">GitHub Issues</a> are preferred for
-          discussion of this specification.
-        
-    
-  </p><p>
-      Publication as an Editor's Draft does not imply endorsement
-      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
-    </p><p>This is a draft document and may be updated, replaced
-  or obsoleted by other documents at any time. It is inappropriate to cite this
-  document as other than work in progress.
-  </p><p></p><p>
     
         This document was produced by a group
         operating under the
         <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
-       The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+      
     
                 <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
                 <a rel="disclosure" href="https://www.w3.org/groups/wg/apa/ipr">public list of any patent disclosures</a>
@@ -266,10 +262,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           must disclose the information in accordance with
           <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
-    
   </p><p>
                   This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction">Introduction</a></li><li class="tocline"><a class="tocxref" href="#real-time-communication-and-accessibility"><bdi class="secno">1. </bdi>Real-time communication and accessibility </a></li><li class="tocline"><a class="tocxref" href="#user-needs-definition"><bdi class="secno">2. </bdi>User needs definition</a></li><li class="tocline"><a class="tocxref" href="#user-needs-and-requirements"><bdi class="secno">3. </bdi>User needs and requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#window-anchoring-and-pinning"><bdi class="secno">3.1 </bdi>Window anchoring and pinning </a></li><li class="tocline"><a class="tocxref" href="#pause-on-record-captioning-in-rtc"><bdi class="secno">3.2 </bdi>Pause 'on record' captioning in <abbr title="real-time communication">RTC</abbr></a></li><li class="tocline"><a class="tocxref" href="#accessibility-user-preferences-and-profiles"><bdi class="secno">3.3 </bdi>Accessibility user preferences and profiles</a></li><li class="tocline"><a class="tocxref" href="#incoming-calls-and-caller-id"><bdi class="secno">3.4 </bdi>Incoming calls and caller ID</a></li><li class="tocline"><a class="tocxref" href="#routing-and-communication-channel-control"><bdi class="secno">3.5 </bdi>Routing and communication channel control</a></li><li class="tocline"><a class="tocxref" href="#audio-description-in-live-conferencing"><bdi class="secno">3.6 </bdi>Audio description in live conferencing</a></li><li class="tocline"><a class="tocxref" href="#quality-synchronisation-and-playback"><bdi class="secno">3.7 </bdi>Quality synchronisation and playback</a></li><li class="tocline"><a class="tocxref" href="#simultaneous-voice-text-signing"><bdi class="secno">3.8 </bdi>Simultaneous voice, text &amp; signing</a></li><li class="tocline"><a class="tocxref" href="#emergency-calls-support-for-real-time-text-rtt"><bdi class="secno">3.9 </bdi>Emergency calls: Support for Real-Time Text (<abbr title="Real-time text">RTT</abbr>) </a></li><li class="tocline"><a class="tocxref" href="#text-and-video-relay-services-vrs"><bdi class="secno">3.10 </bdi>Text and Video relay services (<abbr title="Video relay services">VRS</abbr>)</a></li><li class="tocline"><a class="tocxref" href="#distinguishing-sent-and-received-text-with-rtt"><bdi class="secno">3.11 </bdi>Distinguishing sent and received text with <abbr title="Real-time text">RTT</abbr></a></li><li class="tocline"><a class="tocxref" href="#call-participants-and-status"><bdi class="secno">3.12 </bdi>Call participants and status</a></li><li class="tocline"><a class="tocxref" href="#captioning-support"><bdi class="secno">3.13 </bdi>Captioning support</a></li><li class="tocline"><a class="tocxref" href="#assistance-for-users-with-cognitive-disabilities"><bdi class="secno">3.14 </bdi>Assistance for users with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#personalized-symbol-sets-for-users-with-cognitive-disabilities"><bdi class="secno">3.15 </bdi>Personalized symbol sets for users with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#internet-relay-chat-irc-style-interfaces"><bdi class="secno">3.16 </bdi>Internet relay chat (<abbr title="Internet Relay Chat">IRC</abbr>) style interfaces</a></li></ol></li><li class="tocline"><a class="tocxref" href="#relationship-between-rtc-and-xr-accessibility"><bdi class="secno">4. </bdi>Relationship between <abbr title="real-time communication">RTC</abbr> and XR Accessibility</a></li><li class="tocline"><a class="tocxref" href="#quality-of-service-scenarios"><bdi class="secno">5. </bdi>Quality of service scenarios</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#deaf-users-video-resolution-and-frame-rates"><bdi class="secno">5.1 </bdi>Deaf users: Video resolution and frame rates</a></li><li class="tocline"><a class="tocxref" href="#audio-frequency-bandwidth"><bdi class="secno">5.2 </bdi>Audio frequency bandwidth</a></li></ol></li><li class="tocline"><a class="tocxref" href="#quality-requirements-for-video"><bdi class="secno">6. </bdi>Quality requirements for video </a></li><li class="tocline"><a class="tocxref" href="#c-change-log"><bdi class="secno">A. </bdi>Change Log<span class="formerLink" aria-label="§"></span></a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-apa-working-group-active-in-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants of the <abbr title="Accessible Platform Architectures Working Group">APA</abbr> working group active in the development of this document:</a></li><li class="tocline"><a class="tocxref" href="#previously-active-participants-commenters-and-other-contributors"><bdi class="secno">B.2 </bdi>Previously Active Participants, Commenters, and Other Contributors</a></li></ol></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">C. </bdi>Enabling funders<span class="formerLink" aria-label="§"></span></a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">D. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">D.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 		<section class="introductory" id="introduction">
 		<h2>Introduction</h2>  
@@ -883,4 +878,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>

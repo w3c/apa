@@ -1,7 +1,19 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.13.4">
+<meta name="generator" content="ReSpec 27.0.4">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
 <style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
@@ -36,7 +48,7 @@ dfn{cursor:pointer}
 100%{transform:scale(1,1)}
 }
 .hljs{background:0 0!important}
-a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
 dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
@@ -78,11 +90,11 @@ details.respec-tests-details>li{padding-left:1em}
 a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 h2,h3,h4,h5,h6{position:relative}
 aside.example .marker>a.self-link{color:inherit}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
-h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
 @media (max-width:767px){
 dd{margin-left:0}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
 }
 @media print{
 .removeOnSave{display:none}
@@ -155,33 +167,35 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "group": "apa",
   "github": "w3c/apa",
   "maxTocLevel": 4,
-  "publishDate": "2021-10-06",
-  "publishISODate": "2021-10-06T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 06 October 2021"
+  "publishDate": "2021-11-04",
+  "publishISODate": "2021-11-04T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 04 November 2021"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
-    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72">
+    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a> <h1 id="title" class="title">Accessibility of Remote Meetings</h1>
     
-    <h2>
-      W3C Editor's Draft
-      <time class="dt-published" datetime="2021-10-06">06 October 2021</time>
-    </h2>
-    <dl>
-      <dt>This version:</dt><dd>
-              <a class="u-url" href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a>
-            </dd><dt>Latest published version:</dt><dd>
-              <a href="https://www.w3.org/TR/remote-meeting-accessibility/">https://www.w3.org/TR/remote-meeting-accessibility/</a>
-            </dd>
-      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a></dd>
-      
-      
-      
-      
-      
-      <dt>Editors:</dt>
-      <dd class="editor p-author h-card vcard">
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2021-11-04">04 November 2021</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a>
+              </dd><dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/remote-meeting-accessibility/">https://www.w3.org/TR/remote-meeting-accessibility/</a>
+              </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a></dd>
+        <dt>History:</dt><dd>
+        <a href="https://github.com/w3c/apa/commits/">Commit history</a>
+      </dd>
+        
+        
+        
+        
+        
+        <dt>Editors:</dt>
+        <dd class="editor p-author h-card vcard">
     <a class="ed_mailto u-email email p-name" href="mailto:scott.hollier@accessibility.org.au">Scott Hollier</a>
   </dd><dd class="editor p-author h-card vcard">
     <a class="u-url url p-name fn" href="https://www.w3.org/People/Brewer/">Judy Brewer</a> (<span class="p-org org h-org">W3C</span>)
@@ -194,19 +208,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </dd><dd class="editor p-author h-card vcard">
     <a class="ed_mailto u-email email p-name" href="mailto:steve.noble@pearson.com">Stephen Noble</a> (<span class="p-org org h-org">Pearson</span>)
   </dd>
-      
-      
-      <dt>Participate:</dt><dd>
-    <a href="https://github.com/w3c/apa/">GitHub w3c/apa</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/issues/">File an issue</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/commits/">Commit history</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/pulls/">Pull requests</a>
-  </dd>
-    </dl>
-    
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/apa/">GitHub w3c/apa</a>
+        (<a href="https://github.com/w3c/apa/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/apa/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/apa/issues/">open issues</a>)
+      </dd>
+        
+        
+      </dl>
+    </details>
     
     
     <p class="copyright">
@@ -216,10 +229,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
     <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
-    apply.
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
   </p>
     <hr title="Separator for header">
   </div>
@@ -228,35 +241,28 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <p>Whereas the <a href="https://www.w3.org/TR/raur/">RTC Accessibility User Requirements</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-raur" title="RTC Accessibility User Requirements">raur</a></cite>] address the design of the underlying technologies and software, the present document examines the accessibility of remote and hybrid meetings from a larger perspective. It is recognized that the accessibility of a meeting experience to participants with disabilities depends on a variety of conditions, only some of which are ensured by the design of the software used. Further conditions need to be put in place as part of the process of organizing and conducting the meeting itself, including the appropriate application of features offered by the meeting software as well as the creation of accessible content.</p>
 </section>
 <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
-      document at the time of its publication. Other documents may supersede
-      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
-      of this technical report can be found in the
-      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
       https://www.w3.org/TR/.</em></p>
 <p>This is a draft document that provides accessibility guidance on the use of remote meeting platforms in particular scenarios. Given increased reliance on different forms of remote interactions during the COVID-19 pandemic, it is vital to ensure accessibility of all kinds of remote interactions for people with disabilities, and to rapidly work to improve accessibility support in these technologies.</p>
 <p>This document looks at the different processes and audiences associated with remote and hybrid meetings. This includes procurement considerations, platform development considerations, the accessibility of materials used during meetings and the use of accessibility features during meetings by hosts and participants.</p>
 <p>
-    This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
-    Editor's Draft. 
+    This document was published by the <a href="https://www.w3.org/groups/wg/apa">Accessible Platform Architectures Working Group</a> as
+    an Editor's Draft. 
+  </p><p>Publication as an Editor's Draft does not
+  imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
+    This is a draft document and may be updated, replaced or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than work in progress.
     
   </p><p>
-    <a href="https://github.com/w3c/apa/issues/">GitHub Issues</a> are preferred for
-          discussion of this specification.
-        
-    
-  </p><p>
-      Publication as an Editor's Draft does not imply endorsement
-      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
-    </p><p>This is a draft document and may be updated, replaced
-  or obsoleted by other documents at any time. It is inappropriate to cite this
-  document as other than work in progress.
-  </p><p></p><p>
     
         This document was produced by a group
         operating under the
         <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
-       The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+      
     
                 <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
                 <a rel="disclosure" href="https://www.w3.org/groups/wg/apa/ipr">public list of any patent disclosures</a>
@@ -268,10 +274,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           must disclose the information in accordance with
           <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
-    
   </p><p>
                   This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#definitions"><bdi class="secno">1. </bdi>Definitions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#remote-meeting"><bdi class="secno">1.1 </bdi>Remote meeting</a></li><li class="tocline"><a class="tocxref" href="#types-of-remote-meeting-platforms"><bdi class="secno">1.2 </bdi>Types of remote meeting platforms</a></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibility-context"><bdi class="secno">2. </bdi>Accessibility context</a></li><li class="tocline"><a class="tocxref" href="#meeting-platform-selection-and-development"><bdi class="secno">3. </bdi>Meeting Platform Selection and Development</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#selection"><bdi class="secno">3.1 </bdi>Selecting an accessible remote meeting platform</a></li><li class="tocline"><a class="tocxref" href="#creating-accessible-remote-meeting-software-platforms"><bdi class="secno">3.2 </bdi>Creating accessible remote meeting software platforms</a></li><li class="tocline"><a class="tocxref" href="#w3c-guidance-relevant-to-platform-development-and-selection"><bdi class="secno">3.3 </bdi><abbr title="World Wide Web Consortium">W3C</abbr> guidance relevant to platform development and selection</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#relevance-of-the-web-content-accessibility-guidelines"><bdi class="secno">3.3.1 </bdi>Relevance of the Web Content Accessibility Guidelines</a></li><li class="tocline"><a class="tocxref" href="#relevance-of-the-user-agent-accessibility-guidelines"><bdi class="secno">3.3.2 </bdi>Relevance of the User Agent Accessibility Guidelines</a></li><li class="tocline"><a class="tocxref" href="#relevance-of-the-authoring-tool-accessibility-guidelines"><bdi class="secno">3.3.3 </bdi>Relevance of the Authoring Tool Accessibility Guidelines</a></li><li class="tocline"><a class="tocxref" href="#relevance-of-the-real-time-communication-accessibility-user-requirements"><bdi class="secno">3.3.4 </bdi>Relevance of the Real-Time Communication Accessibility User Requirements</a></li><li class="tocline"><a class="tocxref" href="#relevance-of-the-xr-accessibility-user-requirements-xaur"><bdi class="secno">3.3.5 </bdi>Relevance of the XR Accessibility User Requirements (XAUR)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#additional-guidance-for-creating-remote-meeting-platforms"><bdi class="secno">3.4 </bdi>Additional guidance for creating remote meeting platforms</a></li></ol></li><li class="tocline"><a class="tocxref" href="#creating-accessible-content-for-remote-meetings"><bdi class="secno">4. </bdi>Creating accessible content for remote meetings</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#w3c-guidance-relevant-for-accessible-remote-meetings"><bdi class="secno">4.1 </bdi><abbr title="World Wide Web Consortium">W3C</abbr> guidance relevant for accessible remote meetings</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#relevance-of-the-web-content-accessibility-guidelines-0"><bdi class="secno">4.1.1 </bdi>Relevance of the Web Content Accessibility Guidelines</a></li><li class="tocline"><a class="tocxref" href="#relevance-of-the-authoring-tool-accessibility-guidelines-atag"><bdi class="secno">4.1.2 </bdi>Relevance of the Authoring Tool Accessibility Guidelines (ATAG)</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#holding-accessible-remote-meetings"><bdi class="secno">5. </bdi>Holding accessible remote meetings</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hosting-accessible-remote-meetings"><bdi class="secno">5.1 </bdi>Hosting accessible remote meetings</a></li><li class="tocline"><a class="tocxref" href="#participating-in-accessible-remote-meetings"><bdi class="secno">5.2 </bdi>Participating in accessible remote meetings</a></li></ol></li><li class="tocline"><a class="tocxref" href="#holding-accessible-hybrid-meetings"><bdi class="secno">6. </bdi>Holding accessible hybrid meetings</a></li><li class="tocline"><a class="tocxref" href="#resources"><bdi class="secno">A. </bdi>Resources</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 <section id="definitions">
 <h2 id="x1-definitions"><bdi class="secno">1. </bdi>Definitions<a class="self-link" aria-label="§" href="#definitions"></a></h2>
@@ -393,7 +398,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 </section>
 <section id="additional-guidance-for-creating-remote-meeting-platforms">
 <h3 id="x3-4-additional-guidance-for-creating-remote-meeting-platforms"><bdi class="secno">3.4 </bdi>Additional guidance for creating remote meeting platforms<a class="self-link" aria-label="§" href="#additional-guidance-for-creating-remote-meeting-platforms"></a></h3>
-<p>In addition to existing <abbr title="World Wide Web Consortium">W3C</abbr> WAI guidance, meeting platform developers should</p>
+<p>In addition to existing <abbr title="World Wide Web Consortium">W3C</abbr> <abbr title="Web Accessibility Initiative">WAI</abbr> guidance, meeting platform developers should</p>
 <ul>
 <li>Provide the ability to record a specific user view throughout the meeting such as a sign language interpreter.</li>
 <li>Allow customized window views. For example, sign language participants could be pinned on screen and in particular places, or a consistent view across all participants could be established. This would allow, for example, to reference 'a 'person on the left' which is the same for all participants which provides a more consistent experience for people with cognitive disabilities.</li>
@@ -437,6 +442,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <section id="holding-accessible-remote-meetings">
 <h2 id="x5-holding-accessible-remote-meetings"><bdi class="secno">5. </bdi>Holding accessible remote meetings<a class="self-link" aria-label="§" href="#holding-accessible-remote-meetings"></a></h2>
 <p>The successful delivery of a remote meeting will require an awareness from the meeting host and participants as to what accessibility features are available and how to ensure they are available to all participants. Guidance for hosts and participants is provided as best practice.</p>
+<p>In addition, the following Web Accessibility Initiative (<abbr title="Web Accessibility Initiative">WAI</abbr>) resources should be consulted as complements to this document.</p>
+<ul>
+	<li><cite>Making Audio and Video Media Accessible</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-media-av" title="Making Audio and Video Media Accessible">media-av</a></cite>].</li>
+	<li><cite>How to Make your Presentations Accessible to All</cite> [<cite><a class="bibref" data-link-type="biblio" href="#bib-accessible-presentations" title="How to Make Your Presentations Accessible to All">accessible-presentations</a></cite>].</li>
+</ul>
+
 <section id="hosting-accessible-remote-meetings">
 <h3 id="x5-1-hosting-accessible-remote-meetings"><bdi class="secno">5.1 </bdi>Hosting accessible remote meetings<a class="self-link" aria-label="§" href="#hosting-accessible-remote-meetings"></a></h3>
 <p>Hosts in remote meetings should:</p>
@@ -445,7 +456,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <li>Verify that audio and video tests are integrated into the platform.</li>
 <li>Ensure that participants are informed as to what the core features are, e.g. registration, exhibitions, presentations, etc.</li>
 <li>Ensure that help options are clearly identified.</li>
-<li>Prepare documents, presentations, multimedia and other materials so as to conform to&nbsp;<a href="https://www.w3.org/tR/wcag21/">Web Content Accessibility Guidelines (WCAG) 2.1</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">wcag21</a></cite>], preferably at Level AA or beyond.</li>
+<li>Prepare documents, presentations, multimedia and other materials so as to conform to&nbsp;<a href="https://www.w3.org/tR/wcag21/">Web Content Accessibility Guidelines (WCAG) 2.1</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">wcag21</a></cite>], preferably at Level AA or beyond. For an overview, see [<cite><a class="bibref" data-link-type="biblio" href="#bib-media-av" title="Making Audio and Video Media Accessible">media-av</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-accessible-presentations" title="How to Make Your Presentations Accessible to All">accessible-presentations</a></cite>].</li>
 <li>Ensure that the files containing such documents, presentations, multimedia, etc., are available directly to meeting participants, and that screen sharing is not the only means of obtaining these materials.</li>
 <li>Ensure captions are provided.</li>
 <li>Ensure a sign language interpreter is present where applicable.</li>
@@ -475,6 +486,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <section id="holding-accessible-hybrid-meetings">
 <h2 id="x6-holding-accessible-hybrid-meetings"><bdi class="secno">6. </bdi>Holding accessible hybrid meetings<a class="self-link" aria-label="§" href="#holding-accessible-hybrid-meetings"></a></h2>
 <p>Hosts for hybrid meetings need to ensure that all participants can access all aspects of a meeting, regardless of whether they are physically present or joining remotely. Issues may include audio, video or content being only available to people attending in person or exclusively for people joining in remotely. The following guidance can help you ensure that your meeting is accessible to all.</p>
+<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span></div><p class="">Accessible hybrid meetings have aspects in common with accessible in-person presentations. See [<cite><a class="bibref" data-link-type="biblio" href="#bib-accessible-presentations" title="How to Make Your Presentations Accessible to All">accessible-presentations</a></cite>] for an overview of the latter.</p></div>
 <ul>
 <li>Ensure that the selected online platform conforms to accessibility requirements, as noted in the previously discussed procurement guidance.</li>
 </ul>
@@ -482,7 +494,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <li>Ensure that all content is prepared to be accessible as discussed in the Creating accessible content for remote meetings section.</li>
 </ul>
 <ul>
-<li>Ensure that that online participants and in-person participants can see and hear each other.</li>
+<li>Ensure that online participants and in-person participants can see and hear each other.</li>
 </ul>
 <ul>
 <li>Ensure that captions and subtitles can be viewed simultaneously by online participants and in-person participants. for example, live captions could be on a display in the room while also being available on the remote meeting platform.</li>
@@ -509,7 +521,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 <section id="references" class="appendix"><h2 id="b-references"><bdi class="secno">B. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
     <h3 id="b-1-informative-references"><bdi class="secno">B.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-    <dl class="bibliography"><dt id="bib-36-cfr-1194">[36-cfr-1194]</dt><dd><a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194"><cite>36 CFR Appendix C to Part 1194, Functional Performance Criteria and Technical Requirements</cite></a>.  Legal Information Institute. URL: <a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194</a></dd><dt id="bib-atag20">[atag20]</dt><dd><a href="https://www.w3.org/TR/ATAG20/"><cite>Authoring Tool Accessibility Guidelines (ATAG) 2.0</cite></a>. Jan Richards; Jeanne F Spellman; Jutta Treviranus.  W3C. 24 September 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/ATAG20/">https://www.w3.org/TR/ATAG20/</a></dd><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf"><cite>EN 301 549 v3.2.1: Harmonised European Standard - Accessibility requirements for ICT products and services</cite></a>.  CEN/CENELEC/ETSI. 2021-03. URL: <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf">https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf</a></dd><dt id="bib-raur">[raur]</dt><dd><a href="https://www.w3.org/TR/raur/"><cite>RTC Accessibility User Requirements</cite></a>. Joshue O'Connor; Janina Sajka; Jason White; Michael Cooper.  W3C. 25 May 2021. W3C Note. URL: <a href="https://www.w3.org/TR/raur/">https://www.w3.org/TR/raur/</a></dd><dt id="bib-uaag20">[uaag20]</dt><dd><a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>. James Allan; Greg Lowney; Kimberly Patch; Jeanne F Spellman.  W3C. 15 December 2015. W3C Note. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a></dd><dt id="bib-wcag21">[wcag21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O'Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd><dt id="bib-xaur">[xaur]</dt><dd><a href="https://www.w3.org/TR/xaur/"><cite>XR Accessibility User Requirements</cite></a>.  W3C. 16 Sept 2020. URL: <a href="https://www.w3.org/TR/xaur/">https://www.w3.org/TR/xaur/</a></dd></dl>
+    <dl class="bibliography"><dt id="bib-36-cfr-1194">[36-cfr-1194]</dt><dd><a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194"><cite>36 CFR Appendix C to Part 1194, Functional Performance Criteria and Technical Requirements</cite></a>.  Legal Information Institute. URL: <a href="https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194">https://www.law.cornell.edu/cfr/text/36/appendix-C_to_part_1194</a></dd><dt id="bib-accessible-presentations">[accessible-presentations]</dt><dd><a href="https://www.w3.org/WAI/teach-advocate/accessible-presentations/"><cite>How to Make Your Presentations Accessible to All</cite></a>.  W3C Web accessibility Initiative (WAI). February 2021. URL: <a href="https://www.w3.org/WAI/teach-advocate/accessible-presentations/">https://www.w3.org/WAI/teach-advocate/accessible-presentations/</a></dd><dt id="bib-atag20">[atag20]</dt><dd><a href="https://www.w3.org/TR/ATAG20/"><cite>Authoring Tool Accessibility Guidelines (ATAG) 2.0</cite></a>. Jan Richards; Jeanne F Spellman; Jutta Treviranus.  W3C. 24 September 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/ATAG20/">https://www.w3.org/TR/ATAG20/</a></dd><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf"><cite>EN 301 549 v3.2.1: Harmonised European Standard - Accessibility requirements for ICT products and services</cite></a>.  CEN/CENELEC/ETSI. 2021-03. URL: <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf">https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf</a></dd><dt id="bib-media-av">[media-av]</dt><dd><a href="https://www.w3.org/WAI/media/av/"><cite>Making Audio and Video Media Accessible</cite></a>.  W3C web Accessibility Initiative (WAI). January 2021. URL: <a href="https://www.w3.org/WAI/media/av/">https://www.w3.org/WAI/media/av/</a></dd><dt id="bib-raur">[raur]</dt><dd><a href="https://www.w3.org/TR/raur/"><cite>RTC Accessibility User Requirements</cite></a>. Joshue O'Connor; Janina Sajka; Jason White; Michael Cooper.  W3C. 25 May 2021. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/raur/">https://www.w3.org/TR/raur/</a></dd><dt id="bib-uaag20">[uaag20]</dt><dd><a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>. James Allan; Greg Lowney; Kimberly Patch; Jeanne F Spellman.  W3C. 15 December 2015. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a></dd><dt id="bib-wcag21">[wcag21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O'Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd><dt id="bib-xaur">[xaur]</dt><dd><a href="https://www.w3.org/TR/xaur/"><cite>XR Accessibility User Requirements</cite></a>.  W3C. 16 Sept 2020. URL: <a href="https://www.w3.org/TR/xaur/">https://www.w3.org/TR/xaur/</a></dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script id="respec-dfn-panel">(() => {
@@ -734,4 +746,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>

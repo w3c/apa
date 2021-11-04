@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.13.4">
+<meta name="generator" content="ReSpec 27.0.4">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 .issue-label{text-transform:initial}
@@ -48,7 +48,7 @@ dfn{cursor:pointer}
 100%{transform:scale(1,1)}
 }
 .hljs{background:0 0!important}
-a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
 dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
@@ -90,11 +90,11 @@ details.respec-tests-details>li{padding-left:1em}
 a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 h2,h3,h4,h5,h6{position:relative}
 aside.example .marker>a.self-link{color:inherit}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
-h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
 @media (max-width:767px){
 dd{margin-left:0}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
 }
 @media print{
 .removeOnSave{display:none}
@@ -158,33 +158,37 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "group": "apa",
   "github": "w3c/apa",
   "maxTocLevel": 4,
-  "publishDate": "2021-10-06",
-  "publishISODate": "2021-10-06T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 06 October 2021"
+  "publishDate": "2021-11-04",
+  "publishISODate": "2021-11-04T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 04 November 2021"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
-    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72">
+    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a> <h1 id="title" class="title">Synchronization Accessibility User Requirements</h1>
     
-    <h2>
-      W3C Editor's Draft
-      <time class="dt-published" datetime="2021-10-06">06 October 2021</time>
-    </h2>
-    <dl>
-      <dt>This version:</dt><dd>
-              <a class="u-url" href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a>
-            </dd><dt>Latest published version:</dt><dd>
-              <a href="https://www.w3.org/TR/saur/">https://www.w3.org/TR/saur/</a>
-            </dd>
-      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a></dd>
-      
-      
-      
-      
-      
-      <dt>Editors:</dt>
-      <dd class="editor p-author h-card vcard" data-editor-id="81519">
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2021-11-04">04 November 2021</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a>
+              </dd><dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/saur/">https://www.w3.org/TR/saur/</a>
+              </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a></dd>
+        <dt>History:</dt><dd>
+      <a href="https://www.w3.org/standards/history/saur">https://www.w3.org/standards/history/saur</a>
+    </dd><dd>
+        <a href="https://github.com/w3c/apa/commits/">Commit history</a>
+      </dd>
+        
+        
+        
+        
+        
+        <dt>Editors:</dt>
+        <dd class="editor p-author h-card vcard" data-editor-id="81519">
     <span class="p-name fn">Steve Noble</span> (<span class="p-org org h-org">Pearson</span>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="74028">
     <a class="u-url url p-name fn" href="http://www.ets.org/">Jason White</a> (<span class="p-org org h-org">Educational Testing Service</span>)
@@ -195,19 +199,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   </dd><dd class="editor p-author h-card vcard" data-editor-id="41218">
     <a class="u-url url p-name fn" href="https://www.w3.org">Joshue O'Connor</a> (<span class="p-org org h-org">W3C</span>)
   </dd>
-      
-      
-      <dt>Participate:</dt><dd>
-    <a href="https://github.com/w3c/apa/">GitHub w3c/apa</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/issues/">File an issue</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/commits/">Commit history</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/pulls/">Pull requests</a>
-  </dd>
-    </dl>
-    
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/apa/">GitHub w3c/apa</a>
+        (<a href="https://github.com/w3c/apa/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/apa/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/apa/issues/">open issues</a>)
+      </dd>
+        
+        
+      </dl>
+    </details>
     
     
     <p class="copyright">
@@ -217,10 +220,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
     <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
-    apply.
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
   </p>
     <hr title="Separator for header">
   </div>
@@ -230,33 +233,26 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 	    <p>The purpose of this document is to identify and to characterize synchronization-related needs. It does not constitute normative guidance. It may, nevertheless, influence the further development of <abbr title="World Wide Web Consortium">W3C</abbr> specifications, including accessibility guidelines and media-related technologies. It may also be applied to the development of multimedia content and applications to enhance accessibility.</p>
 	  </section>
 	  <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
-      document at the time of its publication. Other documents may supersede
-      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
-      of this technical report can be found in the
-      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
       https://www.w3.org/TR/.</em></p>
 	  <p>
-    This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
-    Editor's Draft. 
+    This document was published by the <a href="https://www.w3.org/groups/wg/apa">Accessible Platform Architectures Working Group</a> as
+    an Editor's Draft. 
+  </p><p>Publication as an Editor's Draft does not
+  imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
+    This is a draft document and may be updated, replaced or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than work in progress.
     
   </p><p>
-    <a href="https://github.com/w3c/apa/issues/">GitHub Issues</a> are preferred for
-          discussion of this specification.
-        
-    
-  </p><p>
-      Publication as an Editor's Draft does not imply endorsement
-      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
-    </p><p>This is a draft document and may be updated, replaced
-  or obsoleted by other documents at any time. It is inappropriate to cite this
-  document as other than work in progress.
-  </p><p></p><p>
     
         This document was produced by a group
         operating under the
         <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
-       The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+      
     
                 <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
                 <a rel="disclosure" href="https://www.w3.org/groups/wg/apa/ipr">public list of any patent disclosures</a>
@@ -268,10 +264,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           must disclose the information in accordance with
           <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
-    
   </p><p>
                   This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#media-synchronization"><bdi class="secno">1.1 </bdi>Media Synchronization</a></li><li class="tocline"><a class="tocxref" href="#media-synchronization-and-accessibility"><bdi class="secno">1.2 </bdi>Media Synchronization and Accessibility</a></li><li class="tocline"><a class="tocxref" href="#associated-publications"><bdi class="secno">1.3 </bdi>Associated Publications</a></li></ol></li><li class="tocline"><a class="tocxref" href="#issues-and-opportunities-identified-in-the-literature"><bdi class="secno">2. </bdi>Issues and Opportunities Identified in the Literature</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#lip-reading-use-case-synchronization"><bdi class="secno">2.1 </bdi>Lip Reading Use Case Synchronization</a></li><li class="tocline"><a class="tocxref" href="#caption-synchronization"><bdi class="secno">2.2 </bdi>Caption Synchronization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#caption-rate"><bdi class="secno">2.2.1 </bdi>Caption Rate</a></li><li class="tocline"><a class="tocxref" href="#captions-in-live-media"><bdi class="secno">2.2.2 </bdi>Captions in Live Media</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sign-language-interpretation-synchronization"><bdi class="secno">2.3 </bdi>Sign Language Interpretation Synchronization</a></li><li class="tocline"><a class="tocxref" href="#video-description-synchronization"><bdi class="secno">2.4 </bdi>Video Description Synchronization</a></li><li class="tocline"><a class="tocxref" href="#xr-environment-synchronization"><bdi class="secno">2.5 </bdi>XR Environment Synchronization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references-0"><bdi class="secno">3. </bdi>References</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">A.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 	  <section id="introduction">
 	    <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
@@ -424,7 +419,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 
 <section id="references" class="appendix"><h2 id="a-references"><bdi class="secno">A. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
     <h3 id="a-1-informative-references"><bdi class="secno">A.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-    <dl class="bibliography"><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf"><cite>EN 301 549 v3.2.1: Harmonised European Standard - Accessibility requirements for ICT products and services</cite></a>.  CEN/CENELEC/ETSI. 2021-03. URL: <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf">https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf</a></dd><dt id="bib-media-accessibility-reqs">[media-accessibility-reqs]</dt><dd><a href="https://www.w3.org/TR/media-accessibility-reqs/"><cite>Media Accessibility User Requirements</cite></a>. Shane McCarron; Michael Cooper; Mark Sadecki.  W3C. 3 December 2015. W3C Note. URL: <a href="https://www.w3.org/TR/media-accessibility-reqs/">https://www.w3.org/TR/media-accessibility-reqs/</a></dd><dt id="bib-raur">[raur]</dt><dd><a href="https://www.w3.org/TR/raur/"><cite>RTC Accessibility User Requirements</cite></a>. Joshue O'Connor; Janina Sajka; Jason White; Michael Cooper.  W3C. 25 May 2021. W3C Note. URL: <a href="https://www.w3.org/TR/raur/">https://www.w3.org/TR/raur/</a></dd><dt id="bib-wcag21">[wcag21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O'Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd><dt id="bib-xaur">[xaur]</dt><dd><a href="https://www.w3.org/TR/xaur/"><cite>XR Accessibility User Requirements</cite></a>.  W3C. 16 Sept 2020. URL: <a href="https://www.w3.org/TR/xaur/">https://www.w3.org/TR/xaur/</a></dd></dl>
+    <dl class="bibliography"><dt id="bib-en-301-549">[en-301-549]</dt><dd><a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf"><cite>EN 301 549 v3.2.1: Harmonised European Standard - Accessibility requirements for ICT products and services</cite></a>.  CEN/CENELEC/ETSI. 2021-03. URL: <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf">https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf</a></dd><dt id="bib-media-accessibility-reqs">[media-accessibility-reqs]</dt><dd><a href="https://www.w3.org/TR/media-accessibility-reqs/"><cite>Media Accessibility User Requirements</cite></a>. Shane McCarron; Michael Cooper; Mark Sadecki.  W3C. 3 December 2015. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/media-accessibility-reqs/">https://www.w3.org/TR/media-accessibility-reqs/</a></dd><dt id="bib-raur">[raur]</dt><dd><a href="https://www.w3.org/TR/raur/"><cite>RTC Accessibility User Requirements</cite></a>. Joshue O'Connor; Janina Sajka; Jason White; Michael Cooper.  W3C. 25 May 2021. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/raur/">https://www.w3.org/TR/raur/</a></dd><dt id="bib-wcag21">[wcag21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O'Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd><dt id="bib-xaur">[xaur]</dt><dd><a href="https://www.w3.org/TR/xaur/"><cite>XR Accessibility User Requirements</cite></a>.  W3C. 16 Sept 2020. URL: <a href="https://www.w3.org/TR/xaur/">https://www.w3.org/TR/xaur/</a></dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script id="respec-dfn-panel">(() => {
@@ -649,4 +644,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>

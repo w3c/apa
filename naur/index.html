@@ -1,15 +1,14 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 26.13.4">
+<meta name="generator" content="ReSpec 27.0.4">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
-aside.example,div.example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
+:is(aside,div).example,div.illegal-example{padding:.5em;margin:1em 0;position:relative;clear:both}
 div.illegal-example{color:red}
 div.illegal-example p{color:#000}
-aside.example,div.example{padding:.5em;border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}
+:is(aside,div).example{border-left-width:.5em;border-left-style:solid;border-color:#e0cb52;background:#fcfaee}
 aside.example div.example{border-left-width:.1em;border-color:#999;background:#fff}
-aside.example div.example span.example-title{color:#999}
 .example pre{background-color:rgba(0,0,0,.03)}
 </style>
 <style>
@@ -58,7 +57,7 @@ dfn{cursor:pointer}
 100%{transform:scale(1,1)}
 }
 .hljs{background:0 0!important}
-a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
 dfn{font-weight:700}
 a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
 a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
@@ -100,11 +99,11 @@ details.respec-tests-details>li{padding-left:1em}
 a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 h2,h3,h4,h5,h6{position:relative}
 aside.example .marker>a.self-link{color:inherit}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
-h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+:is(h2,h3,h4,h5,h6)>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+:is(h2,h3,h4,h5,h6)>a.self-link::before{content:"§";display:block}
 @media (max-width:767px){
 dd{margin-left:0}
-h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+:is(h2,h3,h4,h5,h6)>a.self-link{left:auto;top:auto}
 }
 @media print{
 .removeOnSave{display:none}
@@ -154,50 +153,53 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "group": "apa",
   "github": "w3c/apa",
   "maxTocLevel": 4,
-  "publishDate": "2021-10-06",
-  "publishISODate": "2021-10-06T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 06 October 2021"
+  "publishDate": "2021-11-04",
+  "publishISODate": "2021-11-04T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 04 November 2021"
 }</script>
-<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
-    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72">
+    <a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
   </a> <h1 id="title" class="title">Natural Language Interface Accessibility User Requirements</h1>
     
-    <h2>
-      W3C Editor's Draft
-      <time class="dt-published" datetime="2021-10-06">06 October 2021</time>
-    </h2>
-    <dl>
-      <dt>This version:</dt><dd>
-              <a class="u-url" href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a>
-            </dd><dt>Latest published version:</dt><dd>
-              <a href="https://www.w3.org/TR/naur/">https://www.w3.org/TR/naur/</a>
-            </dd>
-      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a></dd>
-      
-      
-      
-      
-      
-      <dt>Editors:</dt>
-      <dd class="editor p-author h-card vcard" data-editor-id="74028">
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#ED">W3C Editor's Draft</a> <time class="dt-published" datetime="2021-11-04">04 November 2021</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a>
+              </dd><dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/naur/">https://www.w3.org/TR/naur/</a>
+              </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/apa/">https://w3c.github.io/apa/</a></dd>
+        <dt>History:</dt><dd>
+      <a href="https://www.w3.org/standards/history/naur">https://www.w3.org/standards/history/naur</a>
+    </dd><dd>
+        <a href="https://github.com/w3c/apa/commits/">Commit history</a>
+      </dd>
+        
+        
+        
+        
+        
+        <dt>Editors:</dt>
+        <dd class="editor p-author h-card vcard" data-editor-id="74028">
     <a class="ed_mailto u-email email p-name" href="mailto:jjwhite@ets.org">Jason White</a> (<span class="p-org org h-org">Educational Testing Service</span>)
   </dd><dd class="editor p-author h-card vcard" data-editor-id="41218">
     <a class="ed_mailto u-email email p-name" href="mailto:joconnor@w3.org">Joshue O'Connor</a> (<span class="p-org org h-org">W3C</span>)
   </dd>
-      
-      
-      <dt>Participate:</dt><dd>
-    <a href="https://github.com/w3c/apa/">GitHub w3c/apa</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/issues/">File an issue</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/commits/">Commit history</a>
-  </dd><dd>
-    <a href="https://github.com/w3c/apa/pulls/">Pull requests</a>
-  </dd>
-    </dl>
-    
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/apa/">GitHub w3c/apa</a>
+        (<a href="https://github.com/w3c/apa/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/apa/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/apa/issues/">open issues</a>)
+      </dd>
+        
+        
+      </dl>
+    </details>
     
     
     <p class="copyright">
@@ -207,10 +209,10 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
     <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules
-    apply.
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). W3C
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document" title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
   </p>
     <hr title="Separator for header">
   </div>
@@ -219,33 +221,26 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 	    <p>This document is most explicitly not a collection of baseline requirements. It is also important to note that some of the requirements may be implemented at a system or platform level, and some may be authoring requirements for development of applications.</p>
 	  </section>
 	  <section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
-      document at the time of its publication. Other documents may supersede
-      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
-      of this technical report can be found in the
-      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
       https://www.w3.org/TR/.</em></p>
 	  <p>
-    This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> as an
-    Editor's Draft. 
+    This document was published by the <a href="https://www.w3.org/groups/wg/apa">Accessible Platform Architectures Working Group</a> as
+    an Editor's Draft. 
+  </p><p>Publication as an Editor's Draft does not
+  imply endorsement by <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. </p><p>
+    This is a draft document and may be updated, replaced or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than work in progress.
     
   </p><p>
-    <a href="https://github.com/w3c/apa/issues/">GitHub Issues</a> are preferred for
-          discussion of this specification.
-        
-    
-  </p><p>
-      Publication as an Editor's Draft does not imply endorsement
-      by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership. 
-    </p><p>This is a draft document and may be updated, replaced
-  or obsoleted by other documents at any time. It is inappropriate to cite this
-  document as other than work in progress.
-  </p><p></p><p>
     
         This document was produced by a group
         operating under the
         <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
           Policy</a>.
-       The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+      
     
                 <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
                 <a rel="disclosure" href="https://www.w3.org/groups/wg/apa/ipr">public list of any patent disclosures</a>
@@ -257,10 +252,9 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           must disclose the information in accordance with
           <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
         
-    
   </p><p>
                   This document is governed by the
-                  <a id="w3c_process_revision" href="https://www.w3.org/2020/Process-20200915/">15 September 2020 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                  <a id="w3c_process_revision" href="https://www.w3.org/2021/Process-20211102/">2 November 2021 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#what-is-a-natural-language-interface"><bdi class="secno">1.1 </bdi>What is a Natural Language Interface?</a></li><li class="tocline"><a class="tocxref" href="#natural-language-interfaces-and-accessibility"><bdi class="secno">1.2 </bdi>Natural Language Interfaces and Accessibility</a></li><li class="tocline"><a class="tocxref" href="#voice-user-interfaces"><bdi class="secno">1.3 </bdi>Voice User Interfaces</a></li><li class="tocline"><a class="tocxref" href="#scope"><bdi class="secno">1.4 </bdi>Scope</a></li><li class="tocline"><a class="tocxref" href="#services-and-agents"><bdi class="secno">1.5 </bdi>Services and Agents</a></li><li class="tocline"><a class="tocxref" href="#user-need-definition"><bdi class="secno">1.6 </bdi>User need definition</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-needs-and-requirements"><bdi class="secno">2. </bdi>User needs and requirements</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#user-identification-and-authentication"><bdi class="secno">2.1 </bdi>User Identification and Authentication</a></li><li class="tocline"><a class="tocxref" href="#means-of-input-and-output"><bdi class="secno">2.2 </bdi>Means of Input and Output</a></li><li class="tocline"><a class="tocxref" href="#communicating-in-a-language-that-the-user-needs"><bdi class="secno">2.3 </bdi>Communicating in a Language that the User Needs</a></li><li class="tocline"><a class="tocxref" href="#speech-recognition-and-speech-production"><bdi class="secno">2.4 </bdi>Speech Recognition and Speech Production</a></li><li class="tocline"><a class="tocxref" href="#visually-displayed-text"><bdi class="secno">2.5 </bdi>Visually displayed text</a></li><li class="tocline"><a class="tocxref" href="#designing-for-understanding-and-effective-use"><bdi class="secno">2.6 </bdi>Designing for Understanding and Effective Use</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#understanding-how-to-interact-with-the-interface"><bdi class="secno">2.6.1 </bdi>Understanding How to Interact with the Interface</a></li><li class="tocline"><a class="tocxref" href="#giving-users-enough-time-to-interact"><bdi class="secno">2.6.2 </bdi>Giving Users Enough Time to Interact</a></li><li class="tocline"><a class="tocxref" href="#communicating-in-language-that-is-clear-simple-and-appropriate-to-the-audience"><bdi class="secno">2.6.3 </bdi>Communicating in Language that is Clear, Simple, and Appropriate to the Audience</a></li><li class="tocline"><a class="tocxref" href="#pronunciation"><bdi class="secno">2.6.4 </bdi>Pronunciation</a></li><li class="tocline"><a class="tocxref" href="#avoiding-and-recovering-from-input-errors"><bdi class="secno">2.6.5 </bdi>Avoiding and Recovering from Input Errors</a></li><li class="tocline"><a class="tocxref" href="#using-multimodal-interfaces-to-enhance-understanding"><bdi class="secno">2.6.6 </bdi>Using Multimodal Interfaces to Enhance Understanding</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#enabling-funders"><bdi class="secno">3. </bdi>Enabling Funders<span class="formerLink" aria-label="§"></span></a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">A.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 	  <section id="introduction">
 	    <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
@@ -589,7 +583,7 @@ Commands for performing a variety of functions typically supported by speech int
       
 <section id="references" class="appendix"><h2 id="a-references"><bdi class="secno">A. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
     <h3 id="a-1-informative-references"><bdi class="secno">A.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-    <dl class="bibliography"><dt id="bib-bragg-et-al">[Bragg-et-al]</dt><dd><cite>Sign language recognition, generation, and translation: An interdisciplinary perspective</cite>. Danielle Bragg; Oscar Koller; Mary Bellard; Larwan Berke; Patrick Boudreault; Annelies Braffort; Naomi Caselli; Matt Huenerfauth; Hernisa Kacorri; Tessa Verhoef; Christian Vogler; Meredith Ringel Morris.  The 21st International ACM SIGACCESS Conference on Computers and Accessibility. October 2019. </dd><dt id="bib-etsi-es-202-076">[ETSI-ES-202-076]</dt><dd><a href="https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf"><cite>ETSI ES 202 076 V2.1.1: Human Factors (HF); User Interfaces; Generic spoken command vocabulary for ICT devices and services</cite></a>.  ETSI. URL: <a href="https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf">https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf</a></dd><dt id="bib-personal-assistant-architecture">[personal-assistant-architecture]</dt><dd><a href="https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm"><cite>Intelligent Personal Assistant Architecture and Potential for Standardization Version 1.2</cite></a>.  Voice Interaction Community Group. 19 July 2021. URL: <a href="https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm">https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm</a></dd><dt id="bib-raur">[raur]</dt><dd><a href="https://www.w3.org/TR/raur/"><cite>RTC Accessibility User Requirements</cite></a>. Joshue O'Connor; Janina Sajka; Jason White; Michael Cooper.  W3C. 25 May 2021. W3C Note. URL: <a href="https://www.w3.org/TR/raur/">https://www.w3.org/TR/raur/</a></dd><dt id="bib-uaag">[uaag]</dt><dd><a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>.  W3C. 15 December 2015. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O'Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd><dt id="bib-xaur">[xaur]</dt><dd><a href="https://www.w3.org/TR/xaur/"><cite>XR Accessibility User Requirements</cite></a>.  W3C. 16 Sept 2020. URL: <a href="https://www.w3.org/TR/xaur/">https://www.w3.org/TR/xaur/</a></dd></dl>
+    <dl class="bibliography"><dt id="bib-bragg-et-al">[Bragg-et-al]</dt><dd><cite>Sign language recognition, generation, and translation: An interdisciplinary perspective</cite>. Danielle Bragg; Oscar Koller; Mary Bellard; Larwan Berke; Patrick Boudreault; Annelies Braffort; Naomi Caselli; Matt Huenerfauth; Hernisa Kacorri; Tessa Verhoef; Christian Vogler; Meredith Ringel Morris.  The 21st International ACM SIGACCESS Conference on Computers and Accessibility. October 2019. </dd><dt id="bib-etsi-es-202-076">[ETSI-ES-202-076]</dt><dd><a href="https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf"><cite>ETSI ES 202 076 V2.1.1: Human Factors (HF); User Interfaces; Generic spoken command vocabulary for ICT devices and services</cite></a>.  ETSI. URL: <a href="https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf">https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf</a></dd><dt id="bib-personal-assistant-architecture">[personal-assistant-architecture]</dt><dd><a href="https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm"><cite>Intelligent Personal Assistant Architecture and Potential for Standardization Version 1.2</cite></a>.  Voice Interaction Community Group. 19 July 2021. URL: <a href="https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm">https://w3c.github.io/voiceinteraction/voice%20interaction%20drafts/paArchitecture-1-2.htm</a></dd><dt id="bib-raur">[raur]</dt><dd><a href="https://www.w3.org/TR/raur/"><cite>RTC Accessibility User Requirements</cite></a>. Joshue O'Connor; Janina Sajka; Jason White; Michael Cooper.  W3C. 25 May 2021. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/raur/">https://www.w3.org/TR/raur/</a></dd><dt id="bib-uaag">[uaag]</dt><dd><a href="https://www.w3.org/TR/UAAG20/"><cite>User Agent Accessibility Guidelines (UAAG) 2.0</cite></a>.  W3C. 15 December 2015. URL: <a href="https://www.w3.org/TR/UAAG20/">https://www.w3.org/TR/UAAG20/</a></dd><dt id="bib-wcag21">[WCAG21]</dt><dd><a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. Andrew Kirkpatrick; Joshue O'Connor; Alastair Campbell; Michael Cooper.  W3C. 5 June 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a></dd><dt id="bib-xaur">[xaur]</dt><dd><a href="https://www.w3.org/TR/xaur/"><cite>XR Accessibility User Requirements</cite></a>.  W3C. 16 Sept 2020. URL: <a href="https://www.w3.org/TR/xaur/">https://www.w3.org/TR/xaur/</a></dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-natural-language-interface" aria-label="Links in this document to definition: natural language interface">
@@ -844,4 +838,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
