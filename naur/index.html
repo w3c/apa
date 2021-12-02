@@ -17,7 +17,7 @@
 	  <section>
 	    <h2>Introduction</h2>
 	    <section>
-	      <h3>What is a Natural Language Interface?</h3>
+	      <h3>What is a Natural language interface?</h3>
 	      <p>A <dfn>natural language interface</dfn> is a user interface in which the user and the system communicate via a natural (human) language. The user provides input as sentences via speech or some other input, and the system generates responses in the form of sentences delivered by speech, text or another suitable modality. </p>
 
 	  
@@ -34,14 +34,14 @@
 
 
 	    <section>
-	      <h3>Natural Language Interfaces and Accessibility</h3>
+	      <h3>Natural language interfaces and accessibility</h3>
 	      <p>The accessibility of natural language interfaces to users with disabilities can be supported by a variety of features at the platform and application levels, including assistive technologies. Multiple modes of input and output should be provided to enable interaction with the system by users who have a variety of physical and sensory capabilities. For example, whereas speech input may be needed by some users with physical disabilities, keyboard input, switch input, or an eye tracking system may be needed by other users. </p>
 	      <p>Similarly, natural language output may be spoken, or it may be provided as visually displayed text. These and other requirements are elaborated further below. In some cases, these requirements may best be satisfied by an assistive technology. For example, a chat bot that does not provide a spoken interface directly may nevertheless satisfy a user's need for speech input via a dictation function provided as part of the user's browser or operating system. There may also be other 'service' aspects that are specifically needed to better support accessibility that operate at a different layer to any modality input or output considerations. </p>
 	      <p>The design of the application should support the cognitive needs of users, including those who have learning or cognitive disabilities. Discoverability, simplicity, and affordances for example, are important considerations in the design of the natural language interaction.</p>
 	    </section>
 
 	        <section>
-	    	<h3>Voice User Interfaces</h3>
+	    	<h3>Voice user interfaces</h3>
 	    	<p>Voice user interfaces (VUI) using speech such as those found on a range of commercially available devices for home and mobile use represent a part of the stack that make up natural language interfaces. This document aims to identify accessibility related user needs and requirements for VUIs and indicate further areas of work and research in terms of how they relate to new standards like WCAG 3 and other emerging technologies.</p>
 	    </section>
 	    <section>
@@ -55,7 +55,7 @@
 		</section>
 	      <section>
 
-	       <h3>Services and Agents</h3>
+	       <h3>Services and agents</h3>
 	       <p>Behind these interfaces there are services that provide core processing, evaluation and content. This document aims to look at these services and determine to what degree they can and should support the needs of people with disabilities; what system requirements are, or where further research is needed. </p>
 	             <p>Ideally by satisfying system requirements, developers of platforms and applications offering natural language interfaces can meet corresponding user needs. Currently, no stance is taken in this document regarding which needs are best satisfied at the platform level, by an assistive technology, or in the development of applications, but this will change as the document develops. These architectural considerations are left to be decided by system designers, and therefore there may be requirements in accessible system design that they need to be aware of. Often, they also depend on the services provided by the underlying operating system or by the web platform.</p>
 
@@ -70,7 +70,7 @@
 
 	    </section>
 	    <section>
-	      <h3>User need definition</h3>
+	      <h3>User needs definition</h3>
 	      <p><dfn>User needs</dfn> relate to what a user needs from a particular application or platform to complete a task or to achieve a particular goal. User needs are dependent on the context in which an application is used, including the user's capabilities and the environmental conditions in which interaction with the interface takes place. For example, a spoken interaction would be inaccessible to a person who is deaf, or to a hearing person situated in a noisy environment. Although disability-related needs are the focus of this document, the user needs described here are not limited to people with specific types of disability. The capabilities of users vary greatly. They include a variety of physical, sensory, learning and cognitive abilities that should be taken into account in the design of platforms and applications.</p>
 
 	      <p>The user needs and associated requirements are actively being reviewed by the Research Questions Task Force (<abbr title="Research Questions Task Force">RQTF</abbr>) and by the Accessible Platform Architectures (<abbr title="Accessible Platform Architectures">APA</abbr>) Working Group.</p>
@@ -80,7 +80,7 @@
 	    <h2>User needs and requirements</h2>
 	    <p>This section outlines a variety of user needs and system requirements that can satisfy them.</p>
 	    <section>
-	      <h3>User Identification and Authentication</h3>
+	      <h3>User identification and authentication</h3>
 	      <ul>
 		<li><strong>User Need 1:</strong> A user with a physical disability needs to use speech as the only means of communicating with a system that can be shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
 		<li><strong>REQ 1:</strong> Support voice identification as a means of biometric authentication.</li>
@@ -104,7 +104,7 @@
 		</aside>
 	    </section>
 	    <section>
-	      <h3>Means of Input and Output</h3>
+	      <h3>Means of input and output</h3>
 	      <ul>
 		<li><strong>User Need 3:</strong> Different users have a need for different input devices or mechanisms. For example, a person with a physical disability may need speech input, or single switch input, or eye tracking input. A person who is deaf or who has a speech disability may need to use keyboard input.</li>
 		<li><strong>REQ 3:</strong>Support multiple input devices and methods.</li>
@@ -153,7 +153,7 @@
 		  Support for braille displays is assumed to be provided by a screen reader running under the device's operating system. Therefore, support for keyboard input and textual output is the stated requirement for the natural language interface itself, leaving interaction with the braille hardware to the operating system on which the user interface is run.</p>
 		</section>
 		<section>
-		  <h3>Communicating in a Language that the User Needs</h3>
+		  <h3>Communicating in a language that the user needs</h3>
 		  <ul>
 		    <li><strong>User Need 9:</strong> A user who is deaf or hard of hearing needs to communicate with the system in a sign language.</li>
 		    <li><strong>REQ 9a:</strong> Provide a mode of operation in which sign language presented by the user is recognized and processed by the system.</li>
@@ -168,7 +168,7 @@
 		  </ul>
 		</section>
 		<section>
-		  <h3>Speech Recognition and Speech Production</h3>
+		  <h3>Speech recognition and speech production</h3>
 		  <ul>
 		    <li><strong>User Need 11:</strong> A user with atypical speech characteristics needs to provide spoken input to the system.</li>
 		    <li><strong>REQ 11a:</strong> Ensure that the system can recognize atypical varieties of speech with adequate accuracy to enable the application to be successfully used.</li>
@@ -201,9 +201,9 @@
 		  See the text spacing requirement specified in WCAG 2.1 [[WCAG21]], success criterion 1.4.12.</p>
 		</section>
 	      <section>
-		<h3>Designing for Understanding and Effective Use</h3>
+		<h3>Designing for understanding and effective Use</h3>
 		<section>
-		  <h4>Understanding How to Interact with the Interface</h4>
+		  <h4>Understanding how to interact with the interface</h4>
 		  <ul>
 		    <li><strong>User Need 15:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know what the system can do and how to ask the system to do it.</li>
 		    <li><strong>REQ 15a:</strong> Provide commands with which the user can request help or instructions that give an overview of what the system can do and what requests or commands can be used to achieve it.</li>
@@ -239,7 +239,7 @@ Commands for performing a variety of functions typically supported by speech int
 		    See WCAG 2.1 [[WCAG21]], success criterion 3.3.4.</p>
 		</section>
 		<section>
-		  <h4>Giving Users Enough Time to Interact</h4>
+		  <h4>Giving users enough time to interact</h4>
 		  <ul>
 		    <li><strong>User Need 19:</strong> A user with a learning or cognitive disability needs ample time to decide how to respond during a dialogue with the system.</li>
 		    <li><strong>REQ 19a:</strong> Unless there are compelling reasons to the contrary, do not limit the amount of time available for the user to respond.</li>
@@ -253,7 +253,7 @@ Commands for performing a variety of functions typically supported by speech int
 		  See WCAG 2.1 [[WCAG21]], success criteria 2.2.1, 2.2.3, and 2.2.6.</p>
 		</section>
 		<section>
-		  <h4>Communicating in Language that is Clear, Simple, and Appropriate to the Audience</h4>
+		  <h4>Communicating in language that is clear, simple, and appropriate to the audience</h4>
 		  <ul>
 		    <li><strong>User Need 20:</strong> Users, especially those who have learning or cognitive disabilities, need the system to use language that is clear and comprehensible to them.</li>
 		    <li><strong>REQ 20a:</strong> Use language (including vocabulary and syntax) that is no more complex than is necessary for clear communication.</li>
@@ -280,7 +280,7 @@ Commands for performing a variety of functions typically supported by speech int
 		  </ul>
 		</section>
 		<section>
-		  <h4>Avoiding and Recovering from Input Errors</h4>
+		  <h4>Avoiding and recovering from input errors</h4>
 		  <ul>
 		    <li><strong>User Need 23:</strong> Users, especially those who have learning or cognitive disabilities, need opportunities to correct data entry errors.</li>
 		    <li><strong>REQ 23a:</strong> Check information provided by the user for errors.</li>
