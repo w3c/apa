@@ -684,7 +684,7 @@ respecConfig.localBiblio = {
 			"Scott Hollier",
 			"Michael Cooper"
 		]
-	}
+	},
 
 
 	"short-name": {
