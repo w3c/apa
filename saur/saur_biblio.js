@@ -5,13 +5,13 @@ respecConfig.localBiblio = {
 		"Alho, J",
 		"  Lin, F",
 		" H., Sato",
-		"M., Tiitinen ",
+		"M., Tiitinen",
 		"H., Sams",
 		"M., & Jääskeläinen"
 		],
 		"date": "2014",
 		"title": "Enhanced neural synchrony between left auditory and premotor cortex is associated with successful phonetic categorization.",
-		"publishers": "Frontiers in Psychology, ",
+		"publishers": "Frontiers in Psychology,",
 		"pages": " 5, 394"
 	},
 
@@ -28,7 +28,7 @@ respecConfig.localBiblio = {
 
 	"imperfect-auto-speech": {
 		"authors" : [
-		"Berke, L. ",
+		"Berke, L.",
 		"Caulfield, C.",
 		"Huenerfauth, M"
 		],
@@ -41,7 +41,7 @@ respecConfig.localBiblio = {
 
 		"sync-survey": {
 		"authors" : [
-		"Blakowski, G. ",
+		"Blakowski, G.",
 		"Steinmetz, R "
 		],
 		"date": " ",
@@ -74,7 +74,7 @@ respecConfig.localBiblio = {
 		"Porch, W.",
 		"Treviranus, J"
 		],
-		"date": "Boyce, M. ",
+		"date": "Boyce, M.",
 		"title": "Canadian Network for Inclusive Cultural Exchange",
 		"publishers": "CNICE"
 	
@@ -83,9 +83,9 @@ respecConfig.localBiblio = {
 
 		"sign-recog": {
 		"authors" : [
-		"Bragg, D ",
-		"Koller, O. ",
-		"Bellard, M. ",
+		"Bragg, D",
+		"Koller, O.",
+		"Bellard, M.",
 		"Berke, L",
 		"Boudreault, P.",
 		"Braffort, A.",
@@ -100,12 +100,12 @@ respecConfig.localBiblio = {
 
 		"captions-time": {
 		"authors" : [
-		"Burnham, D ",
-		"Robert-Ribes, J ",
+		"Burnham, D",
+		"Robert-Ribes, J",
 		"Ellison, R "
 		],
 		"date": "1998",
-		"title": "Why captions have to be on time ",
+		"title": "Why captions have to be on time",
 		"publishers": "In AVSP'98 International Conference on Auditory-Visual Speech Processing "
 	
 
@@ -115,15 +115,15 @@ respecConfig.localBiblio = {
 		"authors" : [
 		"Chen, M "
 		],
-		"date": "April 2003 ",
-		"title": "A low-latency lip-synchronized videoconferencing system ",
-		"publishers": "In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems ",
+		"date": "April 2003",
+		"title": "A low-latency lip-synchronized videoconferencing system",
+		"publishers": "In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
 		"pages": "pp. 465-471 "
 
 	},
 			"integration-multi": {
 		"authors" : [
-		"Chen, T. ",
+		"Chen, T.",
 		"Rao, R. R. "
 		],
 		"date": "1998",
@@ -137,19 +137,19 @@ respecConfig.localBiblio = {
 		"Cokely, D "
 		],
 		"date": "1986",
-		"title": "The effects of lag time on interpreter errors ",
-		"publishers": "Sign Language Studies ",
+		"title": "The effects of lag time on interpreter errors",
+		"publishers": "Sign Language Studies",
 		"pages": "341-375 "
 
 	},
 			"dev-video": {
 		"authors" : [
-		"Cronin, B. J. ",
+		"Cronin, B. J.",
 		"King, S. R "
 		],
-		"date": "1990 ",
-		"title": "The Development of the Descriptive Video Services ",
-		"publishers": "Journal of Visual Impairment & Blindness, 84(10), ",
+		"date": "1990",
+		"title": "The Development of the Descriptive Video Services",
+		"publishers": "Journal of Visual Impairment & Blindness, 84(10),",
 		"pages": "503-506 "
 
 	},
@@ -157,74 +157,68 @@ respecConfig.localBiblio = {
 		"authors" : [
 		"De Araújo, T. M. U.",
 		"Ferreira, F. L.",
-		"Silva, D. A. ",
+		"Silva, D. A.",
 		"Oliveira, L. D",
 		"Falcão, E. L.",
 		"Domingues, L. A",
 		"Duarte"
 		],
-		"date": "2014 ",
+		"date": "2014",
 		"title": "An approach to generate and embed sign language video tracks into multimedia contents.",
 		"publishers": "Information Sciences, 281",
-		"pages": "762-780 "
+		"pages": "762-780"
 
 	},
 			"media-for-all": {
 		"authors" : [
-		"Díaz-Cintas, J. ",
-		"Orero, P. ",
-		"Remael, A "
+		"Díaz-Cintas, J.",
+		"Orero, P.",
+		"Remael, A"
 		],
-		"date": "2007 ",
+		"date": "2007",
 		"title": "Media for all: subtitling for the deaf, video description, and sign language (Vol. 30) ",
-		"publishers": "Rodopi "
+		"publishers": "Rodopi"
 	
 
 	},
 			"audio-live": {
 		"authors" : [
-		"Di Giovanni, E ",
-		" ",
-		" "
+		"Di Giovanni, E",
 		],
-		"date": "2018 ",
-		"title": "Audio description for live performances and audience participation ",
-		"publishers": "Jostrans: the Journal of Specialised Translation, 29 ",
-		"pages": "189-211 "
+		"date": "2018",
+		"title": "Audio description for live performances and audience participation",
+		"publishers": "Jostrans: the Journal of Specialised Translation, 29",
+		"pages": "189-211"
 
 	},
 			"auto-speech": {
 		"authors" : [
-		"Errattahi, R. ",
-		"El Hannani, A. ",
-		"Ouahmane, H "
+		"Errattahi, R.",
+		"El Hannani, A.",
+		"Ouahmane, H"
 		],
-		"date": "2018 ",
-		"title": "Automatic speech recognition errors detection and correction: A review ",
-		"publishers": "Procedia Computer Science, 128 ",
-		"pages": "32-37 "
+		"date": "2018",
+		"title": "Automatic speech recognition errors detection and correction: A review",
+		"publishers": "Procedia Computer Science, 128",
+		"pages": "32-37"
 
 	},
 			"fcc-auto-speech": {
 		"authors" : [
-		"Federal Communications Commission ",
-		" ",
-		" "
+		"Federal Communications Commission",
 		],
-		"date": "2018 ",
-		"title": "Declaratory Ruling on Automatic Speech Recognition ",
-		"publishers": "In Report and Order, Declaratory Ruling, Further Notice of Proposed Rulemaking, and Notice of Inquiry (33 FCC Rcd 5800 (9), 5827 ",
+		"date": "2018",
+		"title": "Declaratory Ruling on Automatic Speech Recognition",
+		"publishers": "In Report and Order, Declaratory Ruling, Further Notice of Proposed Rulemaking, and Notice of Inquiry (33 FCC Rcd 5800 (9), 5827",
 		"pages": " para. 48"
 
 	},
 			"lip-sync-video": {
 		"authors" : [
-		"Firestone, S ",
-		" ",
-		" "
+		"Firestone, S"
 		],
-		"date": "2007 ",
-		"title": "Lip Synchronization in Video Conferencing ",
+		"date": "2007",
+		"title": "Lip Synchronization in Video Conferencing",
 		"publishers": "Cisco Systems Ltd - Voice and Video Conferencing Fundamentals "
 	
 
@@ -250,8 +244,7 @@ respecConfig.localBiblio = {
 		"speech-intel": {
 		"authors" : [
 		"Grant, K. W. ",
-		"Greenberg, S ",
-		" "
+		"Greenberg, S "
 		],
 		"date": "2001 ",
 		"title": "Speech intelligibility derived from asynchronous processing of auditory-visual information ",
@@ -263,8 +256,7 @@ respecConfig.localBiblio = {
 		"sign-relay": {
 		"authors" : [
 		"Han, H. H. ",
-		"Yu, H. N ",
-		" "
+		"Yu, H. N "
 		],
 		"date": "2020 ",
 		"title": "An empirical study of temporal variables and their correlations in spoken and sign language relay interpreting ",
@@ -289,8 +281,7 @@ respecConfig.localBiblio = {
 		"app-profile": {
 		"authors" : [
 		"ITU-T ",
-		"S. H ",
-		" "
+		"S. H "
 		],
 		"date": "1999 ",
 		"title": "Application profile–Sign language and lip-reading real-time conversation using low bit-rate video communication ",
@@ -306,7 +297,6 @@ respecConfig.localBiblio = {
 		"Fedotov, D. ",
 		"Kipyatkova, I.",
 		"Ryumin, D.",
-		"Ivanko, D.",
 		"Zelezny, M"
 		],
 		"date": "2018",
@@ -335,7 +325,7 @@ respecConfig.localBiblio = {
 		"Jiline, M ",
 		"Kirk, D. ",
 		"Quirk, K ",
-		" Sandler, M.",
+		"Sandler, M.",
 		"Monette, M"
 		],
 		"date": "2020 ",
@@ -348,8 +338,7 @@ respecConfig.localBiblio = {
 		"distance-effects": {
 		"authors" : [
 		"Jordan, T. R ",
-		"Sergeant, P. ",
-		" "
+		"Sergeant, P. "
 		],
 		"date": "2000 ",
 		"title": "Effects of distance on visual and audiovisual speech recognition ",
@@ -397,9 +386,7 @@ respecConfig.localBiblio = {
 
 	"survey-sign": {
 		"authors" : [
-		"Koller, O. ",
-		" ",
-		" "
+		"Koller, O. "
 		],
 		"date": " 2020",
 		"title": "Quantitative survey of the state of the art in sign language recognition ",
@@ -439,9 +426,8 @@ respecConfig.localBiblio = {
 
 	"dyslexia-web": {
 		"authors" : [
-		"McCarthy, J. E. ",
-		"Swierenga, S. J ",
-		" "
+		"McCarthy, J. E.",
+		"Swierenga, S. J",
 		],
 		"date": "2010",
 		"title": "What we know about dyslexia and web accessibility: a research review ",
@@ -452,9 +438,7 @@ respecConfig.localBiblio = {
 
 	"caption-quality": {
 		"authors" : [
-		"Mikul, C ",
-		" ",
-		" "
+		"Mikul, C "
 		],
 		"date": "2014 ",
 		"title": "Caption quality: Approaches to standards and measurement",
@@ -465,10 +449,10 @@ respecConfig.localBiblio = {
 
 	"media-sync": {
 		"authors" : [
-		"Montagud, M. ",
+		"Montagud, M.",
 		"Cesar, P. ",
-		"Boronat, F. ",
-		" Jansen, J"
+		"Boronat, F.",
+		"Jansen, J"
 		],
 		"date": " 2018",
 		"title": "Introduction to media synchronization (MediaSync) ",
@@ -479,7 +463,7 @@ respecConfig.localBiblio = {
 
 	"prediction-const": {
 		"authors" : [
-		"Peelle, J. E. ",
+		"Peelle, J. E.",
 		"Sommers, M. S "
 		],
 		"date": " 2015",
@@ -490,9 +474,9 @@ respecConfig.localBiblio = {
 	},
 		"interaction-media": {
 		"authors" : [
-		"Petrie, H. L. ",
-		"Weber, G. ",
-		"Fisher, W "
+		"Petrie, H. L.",
+		"Weber, G.",
+		"Fisher, W"
 		],
 		"date": " 2005",
 		"title": "Personalization, interaction, and navigation in rich multimedia documents for print-disabled users ",
@@ -502,9 +486,7 @@ respecConfig.localBiblio = {
 	},
 		"lang-system": {
 		"authors" : [
-		"Piety, P. J ",
-		" ",
-		" "
+		"Piety, P. J"
 		],
 		"date": "2004 ",
 		"title": "The language system of audio description: an investigation as a discursive process ",
@@ -514,7 +496,7 @@ respecConfig.localBiblio = {
 	},
 		"display-rate": {
 		"authors" : [
-		"Sandford, J. "
+		"Sandford, J."
 		],
 		"date": "2015",
 		"title": "The impact of subtitle display rate on enjoyment under normal television viewing conditions ",
@@ -524,8 +506,8 @@ respecConfig.localBiblio = {
 	},
 		"reading-rates": {
 		"authors" : [
-		"Shroyer, E. H. ",
-		"Birch, J "
+		"Shroyer, E. H.",
+		"Birch, J"
 		],
 		"date": "1980 ",
 		"title": "Captions and reading rates of hearing-impaired students ",
@@ -535,7 +517,7 @@ respecConfig.localBiblio = {
 	},
 		"simul-trans-video": {
 		"authors" : [
-		"Staelens ",
+		"Staelens",
 		"Nicolas & De Meulenaere",
 		"Jonas & Bleumers",
 		"Lizzy & Wallendael et al"
@@ -548,8 +530,8 @@ respecConfig.localBiblio = {
 	},
 		"speech-intel-noise": {
 		"authors" : [
-		"Sumby, W. H ",
-		"Pollack, I "
+		"Sumby, W. H",
+		"Pollack, I"
 		],
 		"date": "1954 ",
 		"title": "Visual contribution to speech intelligibility in noise ",
@@ -559,7 +541,7 @@ respecConfig.localBiblio = {
 	},
 		"lip-speech": {
 		"authors" : [
-		"Summerfield, Q "
+		"Summerfield, Q"
 		],
 		"date": "1992 ",
 		"title": "Lipreading and audio-visual speech perception ",
@@ -569,9 +551,9 @@ respecConfig.localBiblio = {
 	},
 		"timing-audiovisual": {
 		"authors" : [
-		"Venezia, J.H. ",
-		"Thurman, S.M. ",
-		"Matchin, W. et al "
+		"Venezia, J.H.",
+		"Thurman, S.M.",
+		"Matchin, W. et al"
 		],
 		"date": "2016 ",
 		"title": "Timing in audiovisual speech perception: A mini review and new psychophysical data ",
@@ -581,8 +563,8 @@ respecConfig.localBiblio = {
 	},
 		"auto-sync": {
 		"authors" : [
-		"Waters, K. ",
-		"Levergood, T "
+		"Waters, K.",
+		"Levergood, T"
 		],
 		"date": "1994",
 		"title": "An automatic lip-synchronization algorithm for synthetic faces ",
@@ -592,9 +574,9 @@ respecConfig.localBiblio = {
 	},
 		"gaze-patterns": {
 		"authors" : [
-		"Yi, A ",
+		"Yi, A",
 		"Wong, W.",
-		"Eizenman, M "
+		"Eizenman, M"
 		],
 		"date": "2013 ",
 		"title": "Gaze patterns and audiovisual speech enhancement",
@@ -604,9 +586,9 @@ respecConfig.localBiblio = {
 	},
 		"sync-delays": {
 		"authors" : [
-		"Ziegler, C. ",
-		"Keimel, C. ",
-		"Ramdhany, R. ",
+		"Ziegler, C.",
+		"Keimel, C.",
+		"Ramdhany, R.",
 		"Vinayagamoorthy, V"
 		],
 		"date": "2017",
