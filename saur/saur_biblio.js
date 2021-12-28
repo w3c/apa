@@ -59,7 +59,7 @@ respecConfig.localBiblio = {
 		],
 		"date": "2020",
 		"title": "Sign language interpreting on TV: a reception study of visual screen exploration in deaf signing users",
-		"publishers": "In: Richart-Marset, Mabel & Francesca Calamita (eds.) 2020. Traducción y Accesibilidad en los medios de comunicación: de la teoría a la práctica / Translation and Media Accessibility: from Theory to Practice. MonTI 12",,
+		"publishers": "Richart-Marset, Mabel & Francesca Calamita (eds.) 2020. Traducción y Accesibilidad en los medios de comunicación: de la teoría a la práctica / Translation and Media Accessibility: from Theory to Practice. MonTI 12",
 		"pages": "108-143."
 
 	},
