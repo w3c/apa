@@ -11,8 +11,8 @@ respecConfig.localBiblio = {
 		],
 		"date": "2014",
 		"title": "Enhanced neural synchrony between left auditory and premotor cortex is associated with successful phonetic categorization.",
-		"publishers": "Frontiers in Psychology,",
-		"pages": "5, 394"
+		"publishers": "Frontiers in Psychology, 5",
+		"pages": "394"
 	},
 
 		"live-tv-subs": {
@@ -34,7 +34,7 @@ respecConfig.localBiblio = {
 		],
 		"date": "Oct 2017",
 		"title": "Deaf and hard-of-hearing perspectives on imperfect automatic speech recognition for captioning one-on-one meetings",
-		"publishers": "In Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility",
+		"publishers": "Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility",
 		"pages": "155-164"
 
 	},
@@ -44,10 +44,10 @@ respecConfig.localBiblio = {
 		"Blakowski, G.",
 		"Steinmetz, R"
 		],
-		"date": "",
+		"date": "1996",
 		"title": "A media synchronization survey: Reference model, specification, and case studies",
-		"publishers": "IEEE journal on selected areas in communications",
-		"pages": "14(1),5-35"
+		"publishers": "IEEE journal on selected areas in communications, 14(1)",
+		"pages": "5-35"
 
 	},
 
@@ -59,8 +59,8 @@ respecConfig.localBiblio = {
 		],
 		"date": "2020",
 		"title": "Sign language interpreting on TV: a reception study of visual screen exploration in deaf signing users",
-		"publishers": "In: Richart-Marset, Mabel & Francesca Calamita (eds.) 2020. Traducción y Accesibilidad en los medios de comunicación: de la teoría a la práctica / Translation and Media Accessibility: from Theory to Practice.",
-		"pages": "MonTI 12, pp. 108-143."
+		"publishers": "In: Richart-Marset, Mabel & Francesca Calamita (eds.) 2020. Traducción y Accesibilidad en los medios de comunicación: de la teoría a la práctica / Translation and Media Accessibility: from Theory to Practice. MonTI 12",,
+		"pages": "108-143."
 
 	},
 
@@ -74,7 +74,7 @@ respecConfig.localBiblio = {
 		"Porch, W.",
 		"Treviranus, J"
 		],
-		"date": "Boyce, M.",
+		"date": "",
 		"title": "Canadian Network for Inclusive Cultural Exchange",
 		"publishers": "CNICE"
 	
@@ -91,10 +91,10 @@ respecConfig.localBiblio = {
 		"Braffort, A.",
 		"Ringel Morris, M"
 		],
-		"date": "",
+		"date": "2019",
 		"title": "Sign language recognition, generation, and translation: An interdisciplinary perspective",
 		"publishers": "21st International ACM SIGACCESS Conference on Computers and Accessibility",
-		"pages": "pp. 16-31"
+		"pages": "16-31"
 
 	},
 
@@ -106,7 +106,7 @@ respecConfig.localBiblio = {
 		],
 		"date": "1998",
 		"title": "Why captions have to be on time",
-		"publishers": "In AVSP'98 International Conference on Auditory-Visual Speech Processing"
+		"publishers": "AVSP'98 International Conference on Auditory-Visual Speech Processing"
 	
 
 	},
@@ -117,8 +117,8 @@ respecConfig.localBiblio = {
 		],
 		"date": "April 2003",
 		"title": "A low-latency lip-synchronized videoconferencing system",
-		"publishers": "In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
-		"pages": "pp. 465-471"
+		"publishers": "Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+		"pages": "465-471"
 
 	},
 			"integration-multi": {
@@ -209,7 +209,7 @@ respecConfig.localBiblio = {
 		],
 		"date": "2018",
 		"title": "Declaratory Ruling on Automatic Speech Recognition",
-		"publishers": "In Report and Order, Declaratory Ruling, Further Notice of Proposed Rulemaking, and Notice of Inquiry (33 FCC Rcd 5800 (9), 5827",
+		"publishers": "Report and Order, Declaratory Ruling, Further Notice of Proposed Rulemaking, and Notice of Inquiry (33 FCC Rcd 5800 (9), 5827",
 		"pages": "para. 48"
 
 	},
@@ -236,8 +236,8 @@ respecConfig.localBiblio = {
 		],
 		"date": "May 2009",
 		"title": "Audio and text synchronization for TV news subtitling based on automatic speech recognition",
-		"publishers": "In 2009 IEEE International Symposium on Broadband Multimedia Systems and Broadcasting",
-		"pages": "pp. 1-6"
+		"publishers": "2009 IEEE International Symposium on Broadband Multimedia Systems and Broadcasting",
+		"pages": "1-6"
 
 	},
 
@@ -248,7 +248,7 @@ respecConfig.localBiblio = {
 		],
 		"date": "2001",
 		"title": "Speech intelligibility derived from asynchronous processing of auditory-visual information",
-		"publishers": "In AVSP 2001-International Conference on Auditory-Visual Speech Processing"
+		"publishers": "AVSP 2001-International Conference on Auditory-Visual Speech Processing"
 	
 
 	},
@@ -354,8 +354,8 @@ respecConfig.localBiblio = {
 		],
 		"date": "Oct 2017",
 		"title": "Evaluating the usability of automatically generated captions for people who are deaf or hard of hearing",
-		"publishers": "In Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility",
-		"pages": "pp. 165-174"
+		"publishers": "Proceedings of the 19th International ACM SIGACCESS Conference on Computers and Accessibility",
+		"pages": "165-174"
 
 	},
 
@@ -419,7 +419,7 @@ respecConfig.localBiblio = {
 		],
 		"date": "1999",
 		"title": "Cognitive experiments on timing lag for superimposing closed captions",
-		"publishers": "In Sixth European Conference on Speech Communication and Technology."
+		"publishers": "Sixth European Conference on Speech Communication and Technology."
 	
 
 	},
@@ -456,7 +456,7 @@ respecConfig.localBiblio = {
 		],
 		"date": "2018",
 		"title": "Introduction to media synchronization (MediaSync)",
-		"publishers": "In MediaSync, Springer, Cham",
+		"publishers": "MediaSync, Springer, Cham",
 		"pages": "pp. 3-31"
 
 	},
@@ -568,7 +568,7 @@ respecConfig.localBiblio = {
 		],
 		"date": "1994",
 		"title": "An automatic lip-synchronization algorithm for synthetic faces",
-		"publishers": "In Proceedings of The second ACM international conference on Multimedia",
+		"publishers": "Proceedings of The second ACM international conference on Multimedia",
 		"pages": "pp. 149-156"
 
 	},
@@ -593,7 +593,7 @@ respecConfig.localBiblio = {
 		],
 		"date": "2017",
 		"title": "On time or not on time: A user study on delays in a synchronised companion-screen experience",
-		"publishers": "In Proceedings of the 2017 ACM International Conference on Interactive Experiences for TV and Online Video",
+		"publishers": "Proceedings of the 2017 ACM International Conference on Interactive Experiences for TV and Online Video",
 		"pages": "pp. 105-114"
 
 	},
