@@ -37,14 +37,14 @@
 
 
 	    <section>
-	      <h3>Natural Language Interfaces and Accessibility</h3>
+	      <h3>Natural Language Interfaces and accessibility</h3>
 	      <p>The accessibility of natural language interfaces to users with disabilities can be supported by a variety of features at the platform and application levels, including assistive technologies. Multiple modes of input and output should be provided to enable interaction with the system by users who have a variety of physical and sensory capabilities. For example, whereas speech input may be needed by some users with physical disabilities, keyboard input, switch input, or an eye tracking system may be needed by other users. </p>
 	      <p>Similarly, natural language output may be spoken, or it may be provided as visually displayed text. These and other requirements are elaborated further below. In some cases, these requirements may best be satisfied by an assistive technology. For example, a chat bot that does not provide a spoken interface directly may nevertheless satisfy a user's need for speech input via a dictation function provided as part of the user's browser or operating system. There may also be other 'service' aspects that are specifically needed to better support accessibility that operate at a different layer to any modality input or output considerations. </p>
 	      <p>The design of the application should support the cognitive needs of users, including those who have learning or cognitive disabilities. Discoverability, simplicity, and affordances for example, are important considerations in the design of the natural language interaction.</p>
 	    </section>
 
 	        <section>
-	    	<h3>Voice User Interfaces</h3>
+	    	<h3>Voice user interfaces</h3>
 	    	<p>Voice user interfaces (VUI) using speech such as those found on a range of commercially available devices for home and mobile use represent a part of the stack that make up natural language interfaces. This document aims to identify accessibility related user needs and requirements for VUIs and indicate further areas of work and research in terms of how they relate to new standards like WCAG 3 and other emerging technologies.</p>
 	    </section>
 	    <section>
@@ -58,7 +58,7 @@
 		</section>
 	      <section>
 
-	       <h3>Services and Agents</h3>
+	       <h3>Services and agents</h3>
 	       <p>Behind these interfaces there are services that provide core processing, evaluation and content. This document aims to look at these services and determine to what degree they can and should support the needs of people with disabilities; what system requirements are, or where further research is needed. </p>
 	             <p>Ideally by satisfying system requirements, developers of platforms and applications offering natural language interfaces can meet corresponding user needs. Currently, no stance is taken in this document regarding which needs are best satisfied at the platform level, by an assistive technology, or in the development of applications, but this will change as the document develops. These architectural considerations are left to be decided by system designers, and therefore there may be requirements in accessible system design that they need to be aware of. Often, they also depend on the services provided by the underlying operating system or by the web platform.</p>
 
@@ -83,9 +83,9 @@
 	    <h2>User needs and requirements</h2>
 	    <p>This section outlines a variety of user needs and system requirements that can satisfy them.</p>
 	    <section>
-	      <h3>User Identification and Authentication</h3>
+	      <h3>User identification and authentication</h3>
 	      <ul>
-		<li><strong>User Need 1:</strong> A user with a physical disability needs to use speech as the only means of communicating with a system that can be shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
+		<li><strong>User need 1:</strong> A user with a physical disability needs to use speech as the only means of communicating with a system that can be shared with other users. Due to security and privacy requirements, each user must be authenticated individually.</li>
 		<li><strong>REQ 1:</strong> Support voice identification as a means of biometric authentication.</li>
 	      </ul>
 	      <p class="note">
@@ -107,7 +107,7 @@
 		</aside>
 	    </section>
 	    <section>
-	      <h3>Means of Input and Output</h3>
+	      <h3>Means of input and output</h3>
 	      <ul>
 		<li><strong>User Need 3:</strong> Different users have a need for different input devices or mechanisms. For example, a person with a physical disability may need speech input, or single switch input, or eye tracking input. A person who is deaf or who has a speech disability may need to use keyboard input.</li>
 		<li><strong>REQ 3:</strong> Support multiple input devices and methods either within the natural language interface/s or via alternatives.</li>
@@ -157,7 +157,7 @@
 		  Support for braille displays is assumed to be provided by a screen reader running under the device's operating system. Therefore, support for keyboard input and textual output is the stated requirement for the natural language interface itself, leaving interaction with the braille hardware to the operating system on which the user interface is run.</p>
 		</section>
 		<section>
-		  <h3>Communicating in a Language that the User Needs</h3>
+		  <h3>Communicating in a language that the user needs</h3>
 		  <ul>
 		    <li><strong>User Need 10:</strong> A user who is deaf or hard of hearing needs to communicate with the system in a sign language.</li>
 		    <li><strong>REQ 10a:</strong> Provide a mode of operation in which sign language presented by the user is recognized and processed by the system.</li>
@@ -174,7 +174,7 @@
 		  </ul>
 		</section>
 		<section>
-		  <h3>Speech Recognition and Speech Production</h3>
+		  <h3>Speech recognition and speech production</h3>
 		  <ul>
 		    <li><strong>User Need 12:</strong> A user with atypical speech characteristics needs to provide spoken input to the system.</li>
 		    <li><strong>REQ 12a:</strong> Ensure that the system can recognize atypical varieties of speech with adequate accuracy to enable the application to be successfully used.</li>
@@ -207,9 +207,9 @@
 		  See the text spacing requirement specified in WCAG 2.1 [[WCAG21]], success criterion 1.4.12.</p>
 		</section>
 	      <section>
-		<h3>Designing for Understanding and Effective Use</h3>
+		<h3>Designing for understanding and effective use</h3>
 		<section>
-		  <h4>Understanding How to Interact with the Interface</h4>
+		  <h4>Understanding how to interact with the interface</h4>
 		  <ul>
 		    <li><strong>User Need 16:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know what the system can do and how to ask the system to do it.</li>
 		    <li><strong>REQ 16a:</strong> Provide commands with which the user can request help or instructions that give an overview of what the system can do and what requests or commands can be used to achieve it.</li>
@@ -245,7 +245,7 @@ Commands for performing a variety of functions typically supported by speech int
 		    See WCAG 2.1 [[WCAG21]], success criterion 3.3.4.</p>
 		</section>
 		<section>
-		  <h4>Giving Users Enough Time to Interact</h4>
+		  <h4>Giving users enough time to interact</h4>
 		  <ul>
 		    <li><strong>User Need 20:</strong> A user with a learning or cognitive disability needs ample time to decide how to respond during a dialogue with the system.</li>
 		    <li><strong>REQ 20a:</strong> Unless there are compelling reasons to the contrary, do not limit the amount of time available for the user to respond.</li>
@@ -259,7 +259,7 @@ Commands for performing a variety of functions typically supported by speech int
 		  See WCAG 2.1 [[WCAG21]], success criteria 2.2.1, 2.2.3, and 2.2.6.</p>
 		</section>
 		<section>
-		  <h4>Communicating in Language that is Clear, Simple, and Appropriate to the Audience</h4>
+		  <h4>Communicating in language that is clear, simple, and appropriate to the audience</h4>
 		  <ul>
 		    <li><strong>User Need 21:</strong> Users, especially those who have learning or cognitive disabilities, need the system to use language that is clear and comprehensible to them.</li>
 		    <li><strong>REQ 21a:</strong> Use language (including vocabulary and syntax) that is no more complex than is necessary for clear communication.</li>
@@ -286,7 +286,7 @@ Commands for performing a variety of functions typically supported by speech int
 		  </ul>
 		</section>
 		<section>
-		  <h4>Avoiding and Recovering from Input Errors</h4>
+		  <h4>Avoiding and recovering from input errors</h4>
 		  <ul>
 		    <li><strong>User Need 24:</strong> Users, especially those who have learning or cognitive disabilities, need opportunities to correct data entry errors.</li>
 		    <li><strong>REQ 24a:</strong> Check information provided by the user for errors.</li>
@@ -304,7 +304,7 @@ Commands for performing a variety of functions typically supported by speech int
 		  See WCAG 2.1 [[WCAG21]], success criterion 3.3.6.</p>
 		</section>
 		<section>
-		  <h4>Using Multimodal Interfaces to Enhance Understanding</h4>
+		  <h4>Using multimodal interfaces to enhance understanding</h4>
 		  <ul>
 		    <li><strong>User Need 26:</strong> Some users with learning disabilities need textual information to be spoken and presented in written form simultaneously.</li>
 		    <li><strong>REQ 26:</strong> Provide a mode of operation in which textual information is spoken and presented on screen concurrently, with synchronized visual highlighting of the text as it is spoken.</li>
@@ -323,7 +323,7 @@ Commands for performing a variety of functions typically supported by speech int
 
 	      </section>
 	      <section id="enabling-funders">
-<h3>Enabling Funders<a class="self-link" aria-label="§" href="#enabling-funders"></a></h3>
+<h3>Enabling funders<a class="self-link" aria-label="§" href="#enabling-funders"></a></h3>
 <p>This work is supported by the <a href="https://www.w3.org/WAI/about/projects/wai-guide/">EC-funded WAI-Guide Project</a>.</p>
 	</section>
 	</body>
