@@ -82,15 +82,15 @@
 </section>
 	<section>
 	<h4>Caption Synchronization Thresholds</h4>
-		<p>There is need for careful consideration of the synchronization thresholds for prepared captions in prerecorded video, as well as captions in live media, live remote meetings, and meeting recordings. The following important user experience factors should be considered by authors and user agents when determining requirements for synchronization accuracy:<br>
+	<p>There is need for careful consideration of the synchronization thresholds for prepared captions in prerecorded video, as well as captions in live media, live remote meetings, and meeting recordings. The following important user experience factors should be considered by authors and user agents when determining requirements for synchronization accuracy:</p>
 <ul>
 	<li>The caption text needs to match the timing of the speaker’s voice (and other important sounds) as closely as practical.</li> 
 	<li>Caption text that appears too early can be confusing and, in some cases, can diminish the impact or enjoyment of the content, for example if the end of a joke is revealed too soon.</li>
 	<li>Caption text that appears too late can add cognitive load to the viewer, especially if they can at least partially hear the sound and need to remember several seconds of audio in order to match it with the relevant captions and confirm their understanding.</li>
 	<li>The caption text should avoid the appearance of the captions “flickering” due to frame synchronization issues. This can occur in prerecorded video when a caption overhangs a shot change by one frame (in either direction), which can create a distracting flicker appearance that may increase the viewer’s cognitive load.</li>
 		</ul>
-		</p>
 	<p>With these factors in mind, it is important that user agents presenting captions over the web should, at a minimum, adopt a synchronization threshold which will ensure that media captions will be closely match authoring practice. It is strongly suggested that user agents should present subtitles within +/- 20ms of the authored time. In the case where lower frame rate videos are created for distribution on low data rate networks, the user agent should match the timing as referenced by the audio rather than the video. This will avoid the negative accessibility implications caused when user agents attempt to match captions to the nearest appropriate encoded video frame, which will cause temporal display errors leading to reduced display duration for a caption [EBU-2018].</p>
+	</section>
 </section>
 <section>
 <h3>Sign Language Interpretation Synchronization</h3>
