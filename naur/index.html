@@ -18,14 +18,14 @@
 	    <h2>Introduction</h2>
 	    <section>
 	      <h3>What is a Natural Language Interface?</h3>
-	      <p>A <dfn>natural language interface</dfn> is a user interface in which the user and the system communicate via a natural (human) language. The user provides input as sentences via speech or some other input, and the system generates responses in the form of sentences delivered by speech, text or another suitable modality. </p>
+	      <p>A <dfn>natural language interface</dfn> is a user interface in which the user and the system communicate via a natural (human) language. The user provides input as sentences via speech, typed language or some other input, and the system generates responses in the form of sentences delivered by speech, text or another suitable modality. </p>
 
 	  
 	      <p>Often, systems that provide natural language interfaces support spoken interaction. In this scenario, speech recognition is used to process the user's input, and speech synthesis is used to generate the system's spoken responses. However, the use of speech is not essential to a natural language interface.</p>
 	      <p>Typical examples of natural language interfaces include:</p>
 	      <ul>
 		<li><strong>Voice agents designed primarily to communicate via speech</strong>. These agents may run on a computing device such as a mobile phone, tablet, laptop or desktop computer. They may also be embedded in specialized hardware such as consumer appliances, or the automation system of a vehicle.</li>
-		<li><strong>Chat bots included in Web applications</strong> that process natural language requests from the user. For example, a customer service application available on an organization's web site could offer a natural language user interface to handle customers' inquiries.</li>
+		<li><strong>Chat bots included in Web applications</strong> that process natural language requests from the user. For example, a customer service application available on an organization's web site could offer a natural language user interface to handle customers' inquiries. Not all chatbots are speech-based, and some text-based chatbots can let people use speech via a keyboard dictation function.</li>
 		<li><dfn>Interactive Voice Response</dfn> (<abbr title="Interactive Voice Response">IVR</abbr>) systems that interact with the user via a telephone call, accepting speech or key pad input and generating speech output.</li>
 	      </ul>
 	      <p>These examples are indicative of applications that use natural language interfaces. They are not definitive. Variations of the examples and applications that do not fit these patterns at all are possible.</p>
@@ -40,7 +40,7 @@
 	      <h3>Natural Language Interfaces and accessibility</h3>
 	      <p>The accessibility of natural language interfaces to users with disabilities can be supported by a variety of features at the platform and application levels, including assistive technologies. Multiple modes of input and output should be provided to enable interaction with the system by users who have a variety of physical and sensory capabilities. For example, whereas speech input may be needed by some users with physical disabilities, keyboard input, switch input, or an eye tracking system may be needed by other users. </p>
 	      <p>Similarly, natural language output may be spoken, or it may be provided as visually displayed text. These and other requirements are elaborated further below. In some cases, these requirements may best be satisfied by an assistive technology. For example, a chat bot that does not provide a spoken interface directly may nevertheless satisfy a user's need for speech input via a dictation function provided as part of the user's browser or operating system. There may also be other 'service' aspects that are specifically needed to better support accessibility that operate at a different layer to any modality input or output considerations. </p>
-	      <p>The design of the application should support the cognitive needs of users, including those who have learning or cognitive disabilities. Discoverability, simplicity, and affordances for example, are important considerations in the design of the natural language interaction.</p>
+	      <p>The design of the application should support the cognitive needs of users, including those who have learning or cognitive disabilities. Discoverability, ease of use, and affordances, are important considerations in the design of the natural language interaction. For example, the design should support memory rather than rely on memory. This includes providing step-by-step instructions and reminding users how many steps they have completed and how many more steps they still need to complete.</p>
 	    </section>
 
 	        <section>
@@ -121,13 +121,13 @@
 	      See the requirement to support a keyboard interface specified in WCAG 2.1 [[WCAG21]], success criterion 2.1.1.</p>
 
 	      <ul>
-		<li><strong>User Need 4:</strong> Different users have a need for different output devices or mechanisms. For example, a user who is blind may require speech output. A user who is deaf or who has a speech disability may require visually displayed text output. A user who is deaf-blind may require braille output.</li>
+		<li><strong>User Need 4:</strong> Users need different output devices or mechanisms. For example, a user who is blind may require speech output. A user who is deaf, or who has a speech disability, may require visually displayed text output. A user who is deaf-blind may require braille output.</li>
 		<li><strong>REQ 4:</strong> Support multiple output devices and methods either within the natural language interface/s or via alternatives.</li>
 	      </ul>
 		<p class="note">
 		This requirement can often be met by supporting the output methods available from the underlying platform, including assistive technologies.</p>
 		<p class="note">
-		If software that incorporates a natural language interface supports multiple output mechanisms, support for any specific mechanism may be available only on particular hardware devices or in particular environments. For example, a smart speaker supports only speech output, whereas the same smart agent running on a mobile system such as a phone or tablet may support a visual display as well, and may be compatible with braille devices.</p>
+		If software that incorporates a natural language interface supports multiple output mechanisms, support for any specific mechanism may be available only on particular hardware devices or in particular environments. For example, a smart speaker supports only audio/sound output, whereas the same smart agent running on a mobile system, such as a phone or tablet, may support a visual display as well, and be compatible with braille devices.</p>
 
 		<ul>
 		  <li><strong>User Need 5:</strong> A user needs to use the same input and output mechanisms to complete an entire task involving an interaction with the system.</li>
@@ -140,7 +140,7 @@
 		  
 		<ul>
 		  <li><strong>User Need 6:</strong> A user who is deaf or hard of hearing needs to provide speech input to an application, while having the output presented as text.</li>
-		  <li><strong>REQ 6:</strong> Support a mode of operation in which the user can speak to the system, and the system's natural language output is presented textually (e.g., displayed visually or conveyed via the user's assistive technology).</li>
+		  <li><strong>REQ 6:</strong> Support a mode of operation in which the user can speak to the system, and system natural language output is presented visually or conveyed via assistive technology.</li>
 		</ul>
 		  <ul>
 		    <li><strong>User Need 7:</strong> A user needs linguistic information presented both as speech and as text to be adequately perceived or understood.</li>
@@ -212,8 +212,9 @@
 		  <h4>Understanding how to interact with the interface</h4>
 		  <ul>
 		    <li><strong>User Need 16:</strong> A user who is unfamiliar with the system or who has a learning or cognitive disability needs to know what the system can do and how to ask the system to do it.</li>
-		    <li><strong>REQ 16a:</strong> Provide commands with which the user can request help or instructions that give an overview of what the system can do and what requests or commands can be used to achieve it.</li>
-		    <li><strong>REQ 16b:</strong> Provide documentation in a form that satisfies accessibility guidelines which explains and gives examples of how to use the system.</li>
+		    <li><strong>REQ 16a:</strong> Provide commands so the user can request help or instructions.</li>
+		      <li><strong>REQ 16b:</strong> Provide commands that give an overview of what the system can do.</li>
+		    <li><strong>REQ 16c:</strong> Provide documentation in a form that satisfies accessibility guidelines which explains and gives examples of how to use the system.</li>
 		  </ul>
 		  <p class="note">
 		    This need is particularly applicable to systems which can serve a wide range of requests, such as personal assistants. Although all users need to know how to interact with a system to start using it, those with learning or cognitive disabilities are likely to be differentially and adversely affected by designs that do not make it obvious what the system can achieve and how to set about achieving it.</p>
