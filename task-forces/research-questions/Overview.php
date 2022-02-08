@@ -44,7 +44,7 @@ if ($sth->rowCount() > 0) {
 			<h2>Meetings and Communication</h2>
 			<p>The APA WG conducts its work using a variety of synchronous and asynchronous tools. The <a href="communication">communication</a> page provides details about:</p>
 			<ul>
-				<li>Teleconferences of the Working Group and its task forces<!-- (also see <a href="minutes">meeting minutes</a>)-->;</li>
+				<li>Teleconferences of the Working Group and its task forces (also see <a href="minutes">meeting minutes</a>);</li>
 				<li>Face to face meetings (also see face to face <a href="wiki/Meetings">meeting pages</a>);</li>
 				<li><a href="#email">Email lists</a>;</li>
 				<li>IRC discussion on the <a href="irc://irc.w3.org/rqtf">#rqtf</a> IRCchannel, used largely for minute-taking;</li>
@@ -65,12 +65,10 @@ if ($sth->rowCount() > 0) {
 				?>
 			</ul>
 			</section>
-			<!--
 			<section id="minutes">
 				<h3>Meeting Minutes</h3>
 				<p><a href="minutes">Minutes from previous meetings</a> are available.</p>
 			</section>
-			-->
 			<section id="email">
 				<h3>Mailing Lists</h3>
 				<p>The RQTF uses the public-rqtf@w3.org mailing list (<a href="https://lists.w3.org/Archives/Public/public-rqtf/">mailing list archives</a>) for email discussion. Participants are automatically added to the mailing list when they become a participant of the Task Force.</p>

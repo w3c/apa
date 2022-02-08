@@ -64,12 +64,10 @@ if ($sth->rowCount() > 0) {
 				<h3>Teleconferences</h3>
 				<p>Teleconference details will be announced when a time is selected.</p>
 			</section>
-			<!--
 			<section id="minutes">
 				<h3>Meeting Minutes</h3>
 				<p><a href="minutes">Minutes from previous meetings</a> are available.</p>
 			</section>
-			-->
 			<section id="email">
 				<h3>Mailing Lists</h3>
 				<p>The CSS A11Y TF uses the public-css-a11y@w3.org mailing list (<a href="http://lists.w3.org/Archives/Public/public-css-a11y/">mailing list archives</a>) for email discussion. Participants are automatically added to the mailing list when they become a participant of the Task Force. Non-subscribers may post, but you must join the task force to subscribe to the list.</p>

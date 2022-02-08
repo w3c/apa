@@ -71,12 +71,10 @@ if ($sth->rowCount() > 0) {
 				<h3>Teleconferences</h3>
 			<p><a href="https://www.w3.org/2017/08/telecon-info_pronunciation-wed">Pronunciation Task Force meetings</a>: Wednesdays at 9:00 until 10:00 Boston time.</p>
 			</section>
-			<!--
 			<section id="minutes">
 				<h3>Meeting Minutes</h3>
 				<p><a href="minutes">Minutes from previous meetings</a> are available.</p>
 			</section>
-			-->
 			<section id="email">
 				<h3>Mailing Lists</h3>
 				<p>The Pronunciation Task Force uses the public-pronunciation@w3.org mailing list (<a href="https://lists.w3.org/Archives/Public/public-pronunciation/">mailing list archives</a>) for email discussion. Participants are automatically added to the mailing list when they become a participant of the Task Force.</p>
