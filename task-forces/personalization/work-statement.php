@@ -53,7 +53,7 @@
 			<h2>Facilitation</h2>
 			<p>Staff contacts from the APA Working Groups oversee attention to W3C Process with respect to the chartered requirements of the Working Group. The Facilitators set agenda, lead meetings, determine consensus, and are the primary liaison to the Working Group.</p>
 			<ul>
-				<li><strong>Facilitators:</strong> <a href="mailto:lisa.seeman@zoho.com">Lisa Seeman-Kestenbaum</a>, <a href="mailto:snidersd@us.ibm.com">Sharon Snider</a></li>
+				<li><strong>Facilitators:</strong> <a href="mailto:lionel@userway.org">Lionel Wolberger</a>, <a href="mailto:snidersd@us.ibm.com">Sharon Snider</a></li>
 				<li><strong>Staff Contact:</strong> <a href="http://www.w3.org/People/Roy/">Ruoxi Ran</a>, <a href="http://www.w3.org/People/cooper/">Michael Cooper</a></li>
 			</ul>
 		</section>
