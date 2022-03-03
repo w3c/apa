@@ -671,6 +671,13 @@ respecConfig.localBiblio = {
 		"date": "February 2021",
 		"href": "https://www.w3.org/WAI/teach-advocate/accessible-presentations/"
 	},
+    "content-usable": {
+        "title": "Making Content Usable for People with Cognitive and Learning Disabilities",
+        "publisher": "W3C Web accessibility Initiative (WAI)",
+        "editors": ["Lisa Seeman-Horwitz","Rachael Bradley Montgomery","Steve Lee", "Ruoxi Ran"],
+        "date": "April 2021",
+        "href": "https://www.w3.org/TR/coga-usable/#user_needs"
+    },
        
 };
 
