@@ -33,8 +33,8 @@
 <dt>Educational platform</dt> <dd>This provides remote meeting functionality within a Learning Management System (LMS) for educational purposes such as the addition of a discussion board and learning materials. In these instances the standard remote meeting features are available for the real-time presentation aspects with the extended functionality providing additional features designed to be an equivalent to a real-world experience.</dd>
 <dt>Medical platform</dt> <dd>The delivery of remote meeting functionality within a medical platform such as telehealth facilities or to assist with medical procedures.</dd>
 <dt>XR platform</dt> <dd>This is an immersive remote meeting platform'' where immersive XR environments are used as a real-time virtual meeting place.</dd>
+<dt>Hybrid meetings</dt><dd>Hybrid meetings feature a combination of participants using remote meeting software combined with two or more people physically located in a meeting room.</dd>
 </dl>
-<p>Hybrid meetings: In addition to the meetings which occur exclusively online, there are also hybrid meetings where there is a combination of participants using remote meeting software combined with two or more people physically located in a meeting room.</p>
 </section>
 </section>
 <section>
@@ -61,9 +61,9 @@
 <li>Ensure that platforms have user interfaces that conform to Level AA of the latest version of the WCAG standard</li>
 <li>Ensure that the client platform supports a diversity of operating systems for which the remote meeting platform is supported. Not all access needs or assistive technologies are equally served by each of the popular operating systems. Therefore, the more choice the user has of underlying operating system, the more likely it is that accessibility and compatibility needs can be satisfied.</li>
 <li>Ensure that multiple meeting connection methods are available. This should include the interoperability of remote meeting platforms with the public switched telephone network, and with telephony standards such as the Session Initiation Protocol (SIP). Offering telephone-based access to the meeting allows users greater opportunities to participate using hardware and software that satisfy their access needs and with which they are familiar.</li>
-<li>Preference authoring tools that comply with ATAG 2.0 so that users with disabilities can interact with them and produce accessible content.</li>
 <li>Ensure that accessible authoring tools are recommended in preparing content (documents, presentations, etc.) for dissemination in remote meetings, taking into account the requirements of <a href="https://www.w3.org/TR/ATAG20/">Authoring Tool Accessibility Guidelines (ATAG) 2.0</a> [[atag20]].</li>
-<li>Evaluate other accessibility-related features of meeting platforms in light of users' access needs, as described here and in the <em>Real-Time Accessibility User Requirements</em>.</li>
+<li>Preference authoring tools that comply with ATAG 2.0 so that users with disabilities can interact with them and produce accessible content.</li>
+<li>Evaluate other accessibility-related features of meeting platforms in light of users' access needs, as described here and in <A HREF="https://www.w3.org/TR/raur/">Real Time Communication Accessibility User Requirements</A>.</li>
 </ul>
 <p>More generally, selecting an appropriate platform can be accomplished by reviewing the extent to which each of the available options supports the applicable standards identified in this document. The commitment of the chosen platform's developers to maintaining and enhancing accessibility-related aspects of the software is an important consideration in making a suitable choice.</p>
 <p>The developers of remote meeting products may publish, or provide on request, an Accessibility Conformance Report based on the <a href="https://www.itic.org/policy/accessibility/vpat">Voluntary Product Accessibility Template (VPAT)</a>. This report assesses the software with respect to public-sector procurement standards established in the European Union (<a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf">EN 301 549</a> [[en-301-549]]) and in the United States (<a href="https://www.law.cornell.edu/cfr/text/36/part-1194">36 CFR Part 1194</a> [[36-cfr-1194]]), which in turn incorporate the <em>Web Content Accessibility Guidelines</em>, together with other accessibility requirements. Such information, if verified as accurate, provides an important basis for assessing the extent to which a remote meeting platform is likely to meet the accessibility-related needs of its users. Nevertheless, as noted elsewhere in this document, current technical accessibility standards do not fully address user needs associated with remote meeting applications. Therefore, additional evaluations are desirable to identify relevant features provided by remote meeting platforms that extend beyond what is required for conformance to technical accessibility standards, and which may not be documented in an Accessibility Conformance Report.</p>
@@ -162,7 +162,7 @@
 <li><strong>Any prepared content (e.g., documents, presentation slides, prerecorded multimedia) that is shared with or shown to meeting participants is subject to the Web Content Accessibility Guidelines (WCAG).</strong> Policies typically specify that documents, presentations and related materials should conform to WCAG 2.1 Level AA.</li>
 <li><strong>Live audio and video communications that take place among meeting participants.</strong> This is the real-time communication component of the meeting. The following WCAG 2.1 success criteria provide support for accessibility of live audio and video:
 <ul>
-<li>Success Criterion 1.2.4: Captions (Live). This is applicable to real-time communication by meeting participants. The quality of captions is essential to effective communication. It should be noted that the use of automatic speech recognition (ASR) technology to generate captions will not yield sufficiently high quality without manual intervention to correct errors. Moreover, such correction is difficult to perform effectively in real time.</li>
+<li>Success Criterion 1.2.4: Captions (Live). This is applicable to real-time communication by meeting participants. The quality of captions is essential to effective communication. It should be noted that the use of automatic speech recognition (ASR) technology to generate captions will not yield sufficiently high quality without manual intervention to correct errors. Moreover, such correction is difficult to perform effectively in real time. In addition, live captioning can help people with cognitive disabilities by providing a transcript that can be reviewed as needed. Participants should be asked prior to the meeting if manual captioning is required.</li>
 <li>Success criterion 1.2.9: Audio-only (Live). This success criterion specifies that a text transcript of live, audio-only content be provided. In a meeting. This could be achieved by transcribing the dialogue in real time. As with captions of videoconferences, automatic speech recognition will not yield sufficiently high quality captions for most settings.</li>
 <li>For user interfaces presented live in a meeting via screen sharing: success criteria 1.4.1 (Use of color), 1.4.3 (text contrast), 1.4.6 (contrast - enhanced), 2.3.1 (three flashes or below threshold), 2.3.2 (three flashes) are applicable.</li>
 </ul></li>
@@ -180,6 +180,12 @@
 </ul>
   </section>
 </section>
+  <h3>Additional guidance for preparing remote meeting content </h3>
+<ul>
+  <li>Use clear language and limit the text on each slide when creating presentations</li>
+<li>Use consistent design in presentations to reduce the cognitive load on each slide</li>
+<li>Start presentation slides with a summary/overview and end with a review of the most important points</li>
+</ul>
 </section>
 <section>
 <h2>Holding accessible remote meetings</h2>
@@ -195,10 +201,12 @@
 <p>Hosts in remote meetings should:</p>
 <ul>
 <li>Verify that the meeting platform has been selected appropriately for accessibility, as described in <a href="#selection"></a>.</li>
+<li>Ensure that calendar invites with all relevant links and documents for the remote meeting are sent with enough time for participants to review.</li>
 <li>Verify that audio and video tests are integrated into the platform.</li>
 <li>Ensure that participants are informed as to what the core features are, e.g. registration, exhibitions, presentations, etc.</li>
 <li>Ensure that help options are clearly identified.</li>
 <li>Prepare documents, presentations, multimedia and other materials so as to conform to <a href="https://www.w3.org/tR/wcag21/">Web Content Accessibility Guidelines (WCAG) 2.1</a> [[wcag21]], preferably at Level AA or beyond. For an overview, see [[media-av]] and [[accessible-presentations]].</li>
+<li>If breakout rooms are used, ensure that all participants understand how to use them and logistics of entering and leaving them.</li>
 <li>Ensure that the files containing such documents, presentations, multimedia, etc., are available directly to meeting participants, and that screen sharing is not the only means of obtaining these materials.</li>
 <li>Ensure captions are provided. If a professional captioning service is not available, enable automated captions. If automated captions are not available in the remote meeting software, consider enabling automated captions in presentation software then share the screen.</li>
 <li>Ensure a sign language interpreter is present where applicable.</li>
@@ -236,9 +244,10 @@
 <li>Ensure that all content is prepared to be accessible as discussed in the Creating accessible content for remote meetings section.</li>
 </ul>
 <ul>
-<li>Ensure that online participants and in-person participants can see and hear each other.</li>
+<li>Ensure that online participants and in-person participants can see and hear each other. This should include a clear view of the person speaking.</li>
 </ul>
 <ul>
+<li>Ensure that any words spoken by a person without a microphone are repeated by a person with a microphone.</li>
 <li>Ensure that captions and subtitles can be viewed simultaneously by online participants and in-person participants. for example, live captions could be on a display in the room while also being available on the remote meeting platform.</li>
 </ul>
 <ul>
