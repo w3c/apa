@@ -65,7 +65,7 @@
 			<p>Staff contacts from the sponsoring WGs oversee attention to W3C Process with respect to the chartered requirements of the respective WGs. The Facilitators set agenda, lead meetings, determine consensus, and are the primary liaison to the WGs. </p>
 			<ul>
 				<li><strong>Facilitators:</strong> Rossen Atanassov, Ian Pouncey, Ted Drake</li>
-				<li><strong>APA and ARIA Staff Contact:</strong> <a href="http://www.w3.org/People/cooper/">Michael Cooper</a></li>
+				<li><strong>APA and ARIA Staff Contact:</strong> <a href="http://www.w3.org/People/Roy/">Roy Ran</a></li>
 				<li><strong>CSS Staff Contact:</strong> Chris Lilley</li>
 			</ul>
 		</section>

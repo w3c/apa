@@ -68,7 +68,7 @@
 			<p>Staff contacts from the APA Working Group oversee attention to W3C Process with respect to the chartered requirements of the Working Group. The Facilitators set agenda, lead meetings, determine consensus, and are the primary liaison to the Working Group.</p>
 			<ul>
 				<li><strong>Facilitators:</strong> Irfan Ali</li>
-				<li><strong>Staff Contact: </strong><a href="http://www.w3.org/People/cooper/">Michael Cooper</a>, <a href="http://www.w3.org/People/Roy/">Ruoxi (Roy) Ran</a></li>
+				<li><strong>Staff Contact:</strong> <a href="http://www.w3.org/People/Roy/">Ruoxi (Roy) Ran</a></li>
 			</ul>
 		</section>
 		<section id="patentpolicy">

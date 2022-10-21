@@ -86,7 +86,7 @@ if ($sth->rowCount() > 0) {
 		
 		<section id="contribute">
 			<h2>How to Comment, Contribute, and Participate</h2>
-			<p>To join the CSS A11Y TF, individuals must be participants of the APA WG. Participants are expected to <a href="work-statement#participation">actively contribute</a> to the work of the Task Force. If you are interested in participating in the CSS A11Y TF, please send e-mail to: <a href="mailto:ratan@microsoft.com,ted_drake@intuit.com?subject=CSS%20Accessibility%20Task%20Force%20Enquiry">Rossen Atanassov, Ted Drake</a> and include a little bit about what you’re interested in and how you think that you may be able to contribute to the Task Force. Then follow the participation procedures of the Working Group through which you wish to participate, and once you have joined ask <a href="mailto:cooper@w3.org">Michael Cooper</a> or <a href="mailto:chris@w3.org">Chris Lilley</a> to add you to the task force.</p>
+			<p>To join the CSS A11Y TF, individuals must be participants of the APA WG. Participants are expected to <a href="work-statement#participation">actively contribute</a> to the work of the Task Force. If you are interested in participating in the CSS A11Y TF, please send e-mail to: <a href="mailto:ratan@microsoft.com,ted_drake@intuit.com?subject=CSS%20Accessibility%20Task%20Force%20Enquiry">Rossen Atanassov, Ted Drake</a> and include a little bit about what you’re interested in and how you think that you may be able to contribute to the Task Force. Then follow the participation procedures of the Working Group through which you wish to participate, and once you have joined ask <a href="mailto:ran@w3.org">Roy Ran</a> or <a href="mailto:chris@w3.org">Chris Lilley</a> to add you to the task force.</p>
 			<p>To contribute without joining the task force, see the public contribution information of each sponsoring Working Group for general instructions. To contribute to documents under development, see <a href="https://github.com/w3c/css-aria/">how to contribute to the source repository directly</a>.</p>
 			<p><a href="https://www.w3.org/2000/09/dbwg/details?group=94039&amp;public=1">Current participants in the CSS A11Y TF</a>.</p>
 		</section> 
@@ -97,7 +97,7 @@ if ($sth->rowCount() > 0) {
 			<h3 id="facilitator">Facilitator and Contacts</h3>
 			<ul>
 				<li><strong>Facilitators:</strong> Rossen Atanassov, Ian Pouncey, Ted Drake</li>
-				<li><strong>APA and ARIA Staff Contact:</strong> Michael Cooper</li>
+				<li><strong>APA and ARIA Staff Contact:</strong> Ruoxi (Roy) Ran</li>
 				<li><strong>CSS Staff Contact:</strong> Chris Lilley</li>
 			</ul>
 			<h3 id="work-statement">Work Statement</h3>

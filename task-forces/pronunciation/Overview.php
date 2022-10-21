@@ -132,7 +132,7 @@ if ($sth->rowCount() > 0) {
 			<ul>
 				<li> <strong>Task Force facilitator:</strong> <a href="mailto:iali@ets.org">Irfan Ali</a>, <a href="mailto:pgrenier@gmail.com">Paul Grenier</a></li>
 				
-				<li><strong>Staff Contact: </strong><a href="http://www.w3.org/People/cooper/">Michael Cooper</a>, <a href="http://www.w3.org/People/roy/">Ruoxi(Roy) Ran</a> </li>
+				<li><strong>Staff Contact: <a href="http://www.w3.org/People/roy/">Ruoxi(Roy) Ran</a> </li>
 			</ul>
 			<h3 id="work-statement">Work Statement</h3>
 			<p>The <a href="work-statement">Spoken Pronunciation Accessibility Task Force Work Statement</a> defines the initial objective, scope, approach, and participation of the Task Force.</p>
