@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+
+    <title>Accessible Platform Architectures Working Group Charter</title>
+
+    <link rel="stylesheet" href="https://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/OldGuide/pubrules-style.css"/>
+    <link rel="stylesheet" type="text/css" href="https://www.w3.org/2006/02/charter-style.css"/>
+    <style>
+      main {
+        max-width: 60em;
+        margin: 0 auto;
+      }
+
+      ul#navbar {
+        font-size: small;
+      }
+
+      dt.spec {
+        font-weight: bold;
+      }
+
+      dt.spec new {
+        background: yellow;
+      }
+
+      ul.out-of-scope > li {
+        font-weight: bold;
+      }
+
+      ul.out-of-scope > li > ul > li{
+        font-weight: normal;
+      }
+
+      .issue {
+        background: cornsilk;
+        font-style: italic;
+      }
+
+      .todo {
+        color: #900;
+      }
+
+      footer {
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <aside>
+        <ul id="navbar">
+					<li>
+						<a href="#scope">Scope</a>
+					</li>
+					<li>
+						<a href="#deliverables">Deliverables</a>
+					</li>
+					<li>
+						<a href="#success-criteria">Success Criteria</a>
+					</li>
+					<li>
+						<a href="#coordination">Coordination</a>
+					</li>
+					<li>
+						<a href="#participation">Participation</a>
+					</li>
+					<li>
+						<a href="#communication">Communication</a>
+					</li>
+					<li>
+						<a href="#decisions">Decision Policy</a>
+					</li>
+					<li>
+						<a href="#patentpolicy">Patent Policy</a>
+					</li>
+					<li>
+						<a href="#licensing">Licensing</a>
+					</li>
+					<li>
+						<a href="#about">About this Charter</a>
+					</li>
+				</ul>
+      </aside>
+      <p>
+        <a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72"/></a>
+      </p>
+    </header>
+
+
+    <main>
+      <h1 id="title"><i class="todo">PROPOSED</i> Accessible Platform Architectures Working Group Charter</h1>
+      <!-- delete PROPOSED after AC review completed -->
+
+      <p class="mission">The <strong>mission</strong> of the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> is to ensure W3C specifications provide support for accessibility to people with disabilities. The group advances this mission through review of W3C specifications, development of new specifications and technical support materials, collaboration with other Working Groups, and coordination of harmonized accessibility strategies within W3C.</p>
+
+      <div class="noprint">
+        <p class="join"><a href="https://www.w3.org/2004/01/pp-impl/83907/join">Join the Accessible Platform Architectures Working Group.</a></p>
+      </div>
+
+         <p style="padding: 0.5ex; border: 1px solid green"> This proposed charter is available on <a href="https://github.com/w3c/apa/blob/charter-2021/charter.html">GitHub</a>. Feel free to raise <a href="https://github.com/w3c/apa/issues">issues</a>. </p>
+
+      <div id="details">
+        <table class="summary-table">
+          <tr id="Duration">
+            <th>
+              Start date
+            </th>
+            <td>
+              <i class="todo">[dd monthname yyyy] (date of the "Call for Participation", when the charter is approved)</i>
+            </td>
+          </tr>
+          <tr id="CharterEnd">
+            <th>
+              End date
+            </th>
+            <td>
+              <i class="todo">[dd monthname yyyy]</i>
+            </td>
+          </tr>
+
+<!--
+          <tr>
+            <th>Charter extension</th>
+            <td>See <a href="#history">Change History</a>.
+            </td>
+          </tr>
+-->
+
+          <tr>
+            <th>
+              Chairs
+            </th>
+            <td>
+							<ul>
+								<li>Becky Gibson (Invited Expert)</li>
+								<li>Janina Sajka (Invited Expert)</li>
+							</ul>
+						</td>
+          </tr>
+          <tr>
+            <th>
+              Team Contacts
+            </th>
+            <td>Michael Cooper (0.30 <abbr title="Full-Time Equivalent">FTE</abbr> Primary <abbr title="Team Contact">TC</abbr> [external funds]), Ruoxi Ran (0.25 <abbr title="Full-Time Equivalent">FTE</abbr> for <abbr title="Personalization Semantics Task Force">Personalization Semantics</abbr>, <abbr title="Pronunciation Task Force">Pronunciation</abbr>, and <abbr title="Accessibility horizontal review">AHR</abbr>), Joshue O Connor (0.80 <abbr title="Full-Time Equivalent">FTE</abbr> for <a href="https://www.w3.org/WAI/APA/task-forces/research-questions/work-statement"><abbr title="Research Questions Task Force">RQTF</abbr></a> [external funds]), Judy Brewer (0.10 <abbr title="Full-Time Equivalent">FTE</abbr> for <abbr title="Research Questions Task Force">RQTF</abbr> [external funds])</td>
+          </tr>
+          <tr>
+            <th>
+              Meeting Schedule
+            </th>
+            <td>
+							<strong>Teleconferences:</strong> The Working Group and its Task Forces generally each hold weekly teleconferences, but this may vary over time according to agenda and preferences.<br /><strong>Face-to-face:</strong> The Working Group generally meets during the W3C's annual Technical Plenary week; additional face-to-face meetings may be scheduled by consent of the participants, usually no more than 3 per year. </td>
+          </tr>
+        </table>
+      </div>
+
+
+
+      <section id="scope" class="scope">
+        <h2>Scope</h2>
+				<ul>
+					<li>Support W3C Working Groups, and external organizations collaborating on web technologies as time allows, to create technical specifications that provide features needed for accessibility to people with disabilities via review of documents as part of the horizontal review process, participation in architecture decisions, and by direct interaction with Working Groups as needed.</li>
+					<li>Develop and publish information about accessibility of web technology, including guidance
+            for technology developers, accessibility user requirements for technologies, and
+            information about accessibility principles in general. </li>
+          <li>Research accessibility risks and solutions for emerging web-enabled devices and web technologies, such as (but not limited to) artificial intelligence, authentication, automotive interfaces, digital publications, graphics and media, mobile communications devices, payments, tablets, virtual and augmented and mixed reality, Web-enabled television, Web of Things, etc.;</li>
+          <li>Develop technological accessibility solutions as stand-alone technologies or as
+            components of other web technologies that could become W3C Recommendations, including
+            but not limited to personalization features and automated pronunciation guidance.</li>
+				</ul>
+
+        <section id="section-out-of-scope">
+          <h3 id="out-of-scope">Out of Scope</h3>
+            <p>The following features are out of scope, and will not be addressed by this Working group.</p>
+
+            <ul class="out-of-scope">
+              <li>Engineering accessibility solutions for technologies in scope of other W3C
+              groups.</li>
+            <li>Addressing accessibility of technologies that do not interact with web content.</li>
+            </ul>
+        </section>
+
+      </section>
+
+      <section id="deliverables">
+        <h2>
+          Deliverables
+        </h2>
+
+      	<p>More detailed milestones and updated publication schedules are available on the <a href="https://www.w3.org/WAI/APA/project">group publication status page</a>.</p>
+
+        <p><i>Draft state</i> indicates the state of the deliverable at the time of the charter approval. <i>Expected completion</i> indicates when the deliverable is projected to become a Recommendation, or otherwise reach a stable state.</p>
+
+        <section id="normative">
+          <h3>
+            Normative Specifications
+          </h3>
+          <p> The Working Group will deliver the following W3C normative specifications: </p>
+					<dl>
+						<dt class="spec new">Personalization Semantics Content Module</dt>
+						<dd>
+							<p>This specification will provide personalization semantics and vocabularies that can be used to annotate web content enabling user agents to augment or adapt content to various user scenarios based on the user’s personalization settings or preferences.</p>
+							<p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/personalization-semantics-content-1.0/">Working Draft</a></p>
+							<p class="milestone"><b>Expected completion:</b> Q4 2023</p>
+							<p><b>Adopted Working Draft:</b> Personalization Semantics Content Module 1.0, <a href="https://www.w3.org/TR/2020/WD-personalization-semantics-content-1.0-20200127/">https://www.w3.org/TR/2020/WD-personalization-semantics-content-1.0-20200127/</a>, 27 January 2020</p>
+							<p><b>Reference Draft:</b> Personalization Semantics Content Module 1.0, <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20180316/">https://www.w3.org/TR/2018/WD-personalization-semantics-content-1.0-20180316/</a>, 16 March 2018. Exclusion period began 13 February 2018; Exclusion period ended 13 July 2018. </p>
+							<p>Produced under <b>Working Group Charter:</b><a href="https://www.w3.org/2015/10/aria-charter.html">https://www.w3.org/2015/10/aria-charter.html</a>. This deliverable was initially published by the Accessible Rich Internet Applications Working Group and is being moved to the Accessible Platform Architectures Working Group.</p>
+						</dd>
+						<dt class="spec new">Personalization Semantics Help and Support Module</dt>
+						<dd>
+							<p>This specification will provide use cases and a vocabulary of terms that can be used to enhance alternative or supportive content that may be useful for people with disabilities.</p>
+							<p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/personalization-semantics-help-1.0/">Working Draft</a></p>
+							<p class="milestone"><b>Expected completion:</b> Q2 2024 (CR)</p>
+              <p><b>Adopted Working Draft:</b> Personalization Help and Support 1.0, <a href="https://www.w3.org/TR/2019/WD-personalization-semantics-help-1.0-20190711/">https://www.w3.org/TR/2019/WD-personalization-semantics-help-1.0-20190711/</a>, 11 July 2019</p>
+              <p><b>Reference Draft:</b> Personalization Help and Support 1.0, <a href="https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/">https://www.w3.org/TR/2018/WD-personalization-semantics-help-1.0-20181018/</a>, 18 October 2018. Exclusion period began 18 October 2018; Exclusion period ended 18 March 2018. </p>
+						</dd>
+					</dl>
+					<p>The Working Group may publish additional Personalization Semantics modules during the course of this charter, and may work with other groups to incorporate personalization features into the native features of web technologies, instead of or in addition to the above work.</p>
+          <dl>
+            <dt class="spec new">Pronunciation Technical Approach</dt>
+            <dd>
+              <p>This specification will provide for proper pronunciation in HTML content when using text to speech (TTS) synthesis and define a standard mechanism to allow content authors to include spoken presentation guidance in HTML content.</p>
+              <p class="draft-status"><b>Draft state:</b> <a href="https://w3c.github.io/pronunciation/technical-approach/">Editor's Draft</a></p>
+              <p class="milestone"><b>Expected completion:</b> Q1 2024</p>
+            </dd>
+          </dl>
+
+
+        </section>
+
+        <section id="ig-other-deliverables">
+          <h3>
+            Other Deliverables
+          </h3>
+					<p> Other non-normative documents may be created such as: </p>
+					<ul>
+						<li>Supporting documents for Personalization such as <a href="https://w3c.github.io/personalization-semantics/">Personalization Semantics Explainer</a> and <a href="https://w3c.github.io/personalization-semantics/requirements/">Requirements for Personalization Semantics</a>, etc.;</li>
+            <li>Supporting documents for Pronunciation such as <a href="https://w3c.github.io/pronunciation/explainer">Explainer: Improving Spoken Presentation</a>, <a href="https://w3c.github.io/pronunciation/gap-analysis_and_use-case">Pronunciation Gap analysis and use cases</a>, <a href="https://w3c.github.io/pronunciation/user-scenarios/">Pronunciation User Scenarios</a>, best practices, etc.;</li>
+						<li>Supporting resources for Specification Review such as <a href="https://w3c.github.io/apa/fast/">Framework for Accessible Specification of Technologies</a> and <a href="http://w3c.github.io/apa/fast/checklist">FAST checklist</a>, <a href="https://www.w3.org/WAI/APA/wiki/Category:Spec_Review">Reviews of web technology specifications</a> sent to maintaining entities, and Working Group Notes to formalize accessibility knowledge on specific topics as the need arises;</li>
+						<li>Accessibility User Requirements such as <a href="http://www.w3.org/TR/media-accessibility-reqs/">Media Accessibility User Requirements</a> and others;</li>
+						<li>Information about accessibility needs of specific user groups, such as <a href="https://www.w3.org/TR/coga-usable/">Making content usable for people with cognitive and learning disabilities</a>;</li>
+						<li>Research reports addressing, as needed, gaps identified during accessibility reviews of draft specifications, and/or technical questions emerging through other aspects of accessibility reviews;</li>
+						<li>Test suite and implementation reports for normative specifications.</li>
+					</ul>
+        </section>
+
+        <section id="timeline">
+          <h3>Timeline</h3>
+					<p>Detailed milestones and updated publication schedules are available on the <a href="https://www.w3.org/WAI/APA/wiki/Project">group publication status page</a>.</p>
+					<ul>
+						<li>June 2021: CR of Personalization Semantics Content Module</li>
+						<li>April 2023: PR of Personalization Semantics Content Module</li>
+            <li>December 2023: Rec of Personalization Semantics Content Module</li>
+						<li>July 2024: CR of Personalization Semantics Help and Support Module</li>
+            <li>June 2021: FPWD of Pronunciation Technical Approach</li>
+            <li>December 2023: CR of Pronunciation Technical Approach</li>
+					</ul>
+        </section>
+      </section>
+
+	<section id="success-criteria">
+	  <h2>Success Criteria</h2>
+	  <p>In order to advance to <a href="https://www.w3.org/Consortium/Process/#RecsPR" title="Proposed Recommendation">Proposed Recommendation</a>, each normative specification is expected to have <a href="https://www.w3.org/Consortium/Process/#implementation-experience">at least two independent implementations</a> of every feature defined in the specification.</p>
+	  <p>Each specification should contain separate sections detailing all known security and privacy implications for implementers, Web authors, and end users. Each specification should contain a section on accessibility that describes the benefits and impacts, including ways specification features can be used to address them, and recommendations for maximising accessibility in implementations.</p>
+	  <p>There should be testing plans for each specification, starting from the earliest drafts. To promote interoperability, all changes made to specifications should have <a href="https://www.w3.org/2019/02/testing-policy.html">tests</a>.</p>
+				<ul>
+					<li>Advancement of personalization support on the web via specifications published by this group and features incorporated into other work.</li>
+					<li>Improved accessibility of web technologies as measured by the activity of accessibility proponents in coordination with APA, accepted comments on specifications, and other tracked Working Group dialog;</li>
+					<li>Release of Framework for Accessible Specifications as Working Group Note and indications of its use by other Working Groups;</li>
+					<li>Documentation of new accessibility issues and solutions, potentially with spin-off work begun;</li>
+					<li>Record of active and sustained coordination between APA and other stakeholders.</li>
+				</ul>
+	</section>
+
+      <section id="coordination">
+        <h2>Coordination</h2>
+        <p>For all specifications, this Working Group will seek <a href="https://www.w3.org/Guide/documentreview/#how_to_get_horizontal_review">horizontal review</a> for accessibility, internationalization, performance, privacy, and security with the relevant Working and Interest Groups, and with the <a href="https://www.w3.org/2001/tag/" title="Technical Architecture Group">TAG</a>. Invitation for review must be issued during each major standards-track document transition, including <a href="https://www.w3.org/Consortium/Process/#RecsWD" title="First Public Working Draft">FPWD</a>. The Working Group is encouraged to engage collaboratively with the horizontal review groups throughout development of each specification. The Working Group is advised to seek a review at least 3 months before first entering <a href="https://www.w3.org/Consortium/Process/#RecsCR" title="Candidate Recommendation">CR</a> and is encouraged to proactively notify the horizontal review groups when major changes
+					occur in a specification following a review.</p>
+
+        <p>Additional technical coordination with the following Groups will be made, per the <a href="https://www.w3.org/Consortium/Process/#WGCharter">W3C Process Document</a>:</p>
+
+        <section>
+          <h3 id="w3c-coordination">W3C Groups</h3>
+					<dl>
+						<dt><a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines (AG) Working Group</a></dt>
+						<dd>Coordinate on development of techniques and general content accessibility issues.</dd>
+						<dt><a href="https://www.w3.org/WAI/APA/">ARIA Working Group</a></dt>
+						<dd>Coordinate on resolution of architectural issues identified by ARIA and meeting user needs identified by APA.</dd>
+						<dt><a href="http://www.w3.org/Style/CSS">CSS Working Group</a></dt>
+						<dd>Coordinate on general CSS accessibility topics.</dd>
+						<dt><a href="https://www.w3.org/2019/html/">HTML Working Group</a></dt>
+						<dd>Coordinate on general HTML and web API accessibility topics.</dd>
+						<dt><a href="https://www.w3.org/International/">Internationalization Working Group</a></dt>
+						<dd>Coordinate how to address accessibility and internationalization in W3C specs.</dd>
+						<dt><a href="http://www.w3.org/Graphics/SVG/">SVG Working Group</a></dt>
+						<dd>Coordinate on general graphics accessibility topics.</dd>
+						<dt><a href="http://www.w3.org/AudioVideo/TT/">Timed Text Working Group</a></dt>
+						<dd>Ensure Media Accessibility User Requirements are met in <a href="http://www.w3.org/TR/ttaf1-dfxp/">TTML</a> and <a href="http://www.w3.org/TR/webvtt1/">WebVTT</a>.</dd>
+						<dt><a href="http://www.w3.org/WAI/IG/">WAI Interest Group</a></dt>
+						<dd>Engage in specification review and research activity.</dd>
+						<dt><a href="http://www.w3.org/2011/04/webrtc/">Web Real-Time Communications Working Group</a></dt>
+						<dd>Ensure Media Accessibility User Requirements are met in WebRTC.</dd>
+						<dt><a href="https://www.w3.org/Payments/WG/">Web Payments Working Group</a></dt>
+						<dd>Coordinate on accessibility of payments.</dd>
+					</dl>
+        </section>
+
+        <section>
+          <h3 id="external-coordination">External Organizations</h3>
+					<dl>
+						<dt><a href="http://www.ietf.org/">IETF</a></dt>
+						<dd>Coordinate on protocols that impact accessibility of web content.</dd>
+						<dt><a href="http://www.iso.org/iso/standards_development/technical_committees/other_bodies/iso_technical_committee.htm?commid=45382">ISO/IEC JTC 1/SC 35 User interfaces</a></dt>
+						<dd>Coordinate user interface requirements and applicability to web content.</dd>
+						<dt><a href="https://itu.int/">ITU (International Telecommunications Union)</a></dt>
+						<dd>Coordinate accessibility of real-time communications.</dd>
+						<dt><a href="https://whatwg.org/">WHATWG</a></dt>
+						<dd>Coordinate on accessibility of web technologies.</dd>
+					</dl>
+        </section>
+      </section>
+
+
+
+      <section class="participation">
+        <h2 id="participation">
+          Participation
+        </h2>
+        <p> To be successful, this Working Group is expected to have 6 or more active participants for its duration, including representatives from the key implementors of this specification, and active Editors and Test Leads for each specification. The Chairs, specification Editors, and Test Leads are expected to contribute half of a working day per week towards the Working Group. There is no minimum requirement for other Participants. </p>
+        <p>
+          The group encourages questions, comments and issues on its public mailing lists and document repositories, as described in <a href='#communication'>Communication</a>.
+        </p>
+        <p>
+          The group also welcomes non-Members to contribute technical submissions for consideration upon their agreement to the terms of the <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>.
+        </p>
+        <p>Participants in the group are required (by the <a href="https://www.w3.org/Consortium/Process/#ParticipationCriteria">W3C Process</a>) to follow the
+          W3C <a href="https://www.w3.org/Consortium/cepc/">Code of Ethics and Professional Conduct</a>.</p>
+      </section>
+
+
+
+      <section id="communication">
+        <h2>
+          Communication
+        </h2>
+        <p id="public"> Technical discussions for this Working Group are conducted in <a href="https://www.w3.org/Consortium/Process/#confidentiality-levels">public</a>: the meeting minutes from teleconference and face-to-face meetings will be archived for public review, and technical discussions and issue tracking will be conducted in a manner that can be both read and written to by the general public. Working Drafts and Editor's Drafts of specifications will be developed in public repositories and may permit direct public contribution requests. The meetings themselves are not open to public participation, however, except by explicit one-time invitation from the chair(s). </p>
+        <p> Information about the group (including details about deliverables, issues, actions, status, participants, and meetings) will be available from the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group home page.</a>
+				</p>
+        <p> This group primarily conducts its technical work <a href="mailto:public-apa@w3.org" id="public-name">public-apa@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-apa/">archive</a>) and <a href="https://github.com/w3c/apa/" id="public-github">GitHub</a>. <a href="https://www.w3.org/WAI/APA/communication">Additional communication channels</a> are also used. The public is invited to review, discuss and contribute to this work. </p>
+        <p>
+          The group may use a Member-confidential mailing list for administrative purposes and, at the discretion of the Chairs and members of the group, for member-only discussions in special cases when a participant requests such a discussion.
+        </p>
+      </section>
+
+
+
+      <section id="decisions">
+        <h2>
+          Decision Policy
+        </h2>
+        <p> This group will seek to make decisions through consensus and due process, per the <a href="https://www.w3.org/Consortium/Process/#Consensus"> W3C Process Document (section 3.3</a>). The Working Group maintains specific procedures to establish and measure consensus and address objections in the <a href="https://www.w3.org/WAI/APA/decision-policy">Accessible Platform Architectures Working Group Decision Policy</a>. All decisions made by the group should be considered resolved unless and until new information becomes available or unless reopened at the discretion of the Chairs or the Director. </p>
+        <p>
+          This charter is written in accordance with the <a href="https://www.w3.org/Consortium/Process/#Votes">W3C Process Document (Section 3.4, Votes)</a> and includes no voting procedures beyond what the Process Document requires.
+        </p>
+      </section>
+
+
+
+      <section id="patentpolicy">
+
+        <h2>
+          Patent Policy
+        </h2>
+        <p> This Working Group operates under the <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a> (Version of 15 September 2020). To promote the widest adoption of Web standards, W3C seeks to issue Web specifications that can be implemented, according to this policy, on a Royalty-Free basis. For more information about disclosure obligations for this group, please see the <a href="https://www.w3.org/2004/01/pp-impl/">W3C Patent Policy Implementation</a>. </p>
+      </section>
+
+
+
+      <section id="licensing">
+        <h2>Licensing</h2>
+        <p>This Working Group will use the <a href="https://www.w3.org/Consortium/Legal/copyright-documents">W3C Document license</a> for Recommendation-track deliverables and the <a href="https://www.w3.org/Consortium/Legal/copyright-software">W3C Software and Document license</a> for Note-track deliverables and licensed non-TR publications.</p>
+      </section>
+
+
+
+      <section id="about">
+        <h2>
+          About this Charter
+        </h2>
+        <p> This charter has been created according to <a href="https://www.w3.org/Consortium/Process/#WG-and-IG">section 5.2</a> of the <a href="https://www.w3.org/Consortium/Process/">Process Document</a>. In the event of a conflict between this document or the provisions of any charter and the W3C Process, the W3C Process shall take precedence. </p>
+
+        <section id="history">
+          <h3>
+            Charter History
+          </h3>
+
+          <p>The following table lists details of all changes from the initial charter, per the <a href="https://www.w3.org/Consortium/Process/#CharterReview">W3C Process Document (section 5.2.3)</a>:</p>
+
+        	<table class="history">
+        		<tbody>
+        			<tr>
+        				<th> Charter Period </th>
+        				<th> Start Date </th>
+        				<th> End Date </th>
+        				<th> Changes </th>
+        			</tr>
+        			<tr>
+        				<th>
+        					<a href="https://www.w3.org/2015/10/apa-charter">Initial Charter</a>
+        				</th>
+        				<td> 22 October 2015 </td>
+        				<td> 31 July 2018 </td>
+        				<td> none </td>
+        			</tr>
+        			<tr>
+        				<th>
+        					<a href="https://www.w3.org/2018/08/apa-charter">Rechartered</a>
+        				</th>
+        				<td>08 August 2018 </td>
+        				<td>31 July 2021</td>
+        				<td>
+        					<p>Changes from the <a href="https://www.w3.org/2015/10/apa-charter.html">previous charter</a> (<a href="https://services.w3.org/htmldiff?doc1=https%3A%2F%2Fwww.w3.org%2F2015%2F10%2Fapa-charter.html&amp;doc2=https%3A%2F%2Fwww.w3.org%2F2018%2F08%2Fapa-charter">diff from previous charter</a>):</p>
+        					<ul>
+        						<li>Added <a href="#normative">Personalization Semantics</a> as a Rec-track deliverable, transferred from the <a href="https://www.w3.org/WAI/ARIA/">ARIA Working Group</a>;</li>
+        						<li>Increased work on non-normative resources to support accessibility horizontal review;</li>
+        						<li>Clarified participation and communication procedures;</li>
+        						<li>Added licensing section to specify the W3C Document license for Recommendation-track deliverables and the W3C Software and Document license for others; </li>
+        						<li>Increased staff effort from .4 FTE to .7 FTE to provide additional support for Research Questions Task Force and accessibility horizontal review, and because of the new Personalization Semantics deliverable.</li>
+        					</ul>
+        				</td>
+        			</tr>
+        			<tr>
+        				<th>Staff change</th>
+        				<td>19 April 2019</td>
+        				<td></td>
+        				<td>Joshue O Connor replaced Shadi Abou-Zahra with .05 FTE staff support.</td>
+        			</tr>
+        			<tr>
+        				<th><a href="https://lists.w3.org/Archives/Member/chairs/2020AprJun/0096.html">New Co-Chair</a></th>
+        				<td>25 June 2020</td>
+        				<td></td>
+        				<td>Becky Gibson joined Janina Sajka as co-chair of the Working Group.</td>
+        			</tr>
+							<tr>
+								<th><a href="https://www.w3.org/2018/08/apa-charter">Rechartered</a>
+								</th>
+								<td><span class="todo">todo</span></td>
+								<td><span class="todo">todo</span></td>
+								<td>Changes from the <a href="https://www.w3.org/2018/08/apa-charter">previous charter</a> (<a href="https://services.w3.org/htmldiff?doc1=https%3A%2F%2Fwww.w3.org%2F2015%2F10%2Fapa-charter.html&amp;doc2=https%3A%2F%2Fwww.w3.org%2F2018%2F08%2Fapa-charter" class="todo">diff from previous charter</a>):<ul>
+										<li>Added <a href="#normative">Pronunciation</a> as an explicit deliverable;</li>
+										<li>Simplified Scope;</li>
+										<li>Updated Process and Patent Policy versions.</li>
+									</ul></td>
+							</tr>
+        		</tbody>
+        	</table>
+        	<p>Work in the scope of this group was, before the previous charter, carried out by the <a href="https://www.w3.org/WAI/PF/charter">Protocols and Formats Working Group</a>.</p>
+        </section>
+      </section>
+    </main>
+
+    <hr/>
+
+    <footer>
+      <address>
+				<a href="mailto:cooper@w3.org">Michael Cooper</a>
+			</address>
+
+      <p class="copyright">
+				<a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2021 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> ( <a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="https://ev.buaa.edu.cn/">Beihang</a> ), All Rights Reserved. <abbr title="World Wide Web Consortium">W3C</abbr>
+				<a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply. </p>
+    </footer>
+
+  </body>
+</html>
