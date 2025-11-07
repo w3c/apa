@@ -13,7 +13,56 @@
   <!-- <script src="../Templates/shower.js"></script>       -->
   <!-- <script src="../Templates/iframe-fixup.js"></script> -->
   <style>
-    /* FIXME */
+    :root {
+      --toprule: 0.15em;
+      --midrule: calc(0.5 * var(--toprule));
+      --totally-rules: 0.01em;
+    }
+
+    fieldset {
+      font-size: 0.8em;
+    }
+
+    #fast-checlist-info,
+    #aurs-info {
+      height: 10.5em;
+      overflow-y: scroll;
+    }
+
+    #cp-ac {
+      height: 15em;
+      overflow-y: scroll;
+    }
+
+    dd {
+      margin-inline-start: 2em;
+    }
+
+    table {
+      border-collapse: collapse;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    th,
+    td {
+      padding-inline: 0.5em;
+    }
+
+    thead tr:first-child {
+      border-block-start: var(--toprule) solid currentColor;
+      border-block-end: var(--midrule) solid currentColor;
+    }
+
+    tr {
+      border-block-end: var(--totally-rules) solid currentColor;
+    }
+
+    tr:last-child {
+      border-block-end: var(--toprule) solid currentColor;
+    }
   </style>
 </head>
 
@@ -52,70 +101,454 @@
 
 
   <section class="slide" id="lists">
-    <h2>Lists</h2>
-    <h3>This is an H3</h3>
-    <ol>
-      <li>Potatoes</li>
-      <li>Onions and olives</li>
-    </ol>
-    <h3>Another H3</h3>
+    <h2>Overview</h2>
     <ul>
-      <li>North pole</li>
-      <li>East pole</li>
-    </ul>
-  </section>
-
-
-  <section class="slide slide-in">
-    <h2>Lists with icons</h2>
-    <ul class=with-icons>
-      <li><span>♪</span> North pole</li>
-      <li><span>🍉</span> East pole</li>
-      <li><img src="../Templates/piechart.png" alt="pie chart"> Metro pole</li>
-      <li><img src="../Templates/simple-car-icon.svg" alt="car"> Straw pole</li>
-      <li><span>🐥</span> Pole tree</li>
-    </ul>
-  </section>
-
-
-  <section class="slide">
-    <h2>Some elements</h2>
-    <p>Words can be given a <strong>strong emphasis</strong>, which
-      makes them appear in bold</p>
-    <p>The <em>normal emphasis</em> has a highlighter effect.</p>
-    <p>Code looks like this: <code>if (a) return b;</code></p>
-    <p>This link goes to <a href="#lists">slide 2</a></p>
-    <p class="note">This is an example of a note, in a smaller font</p>
-  </section>
-
-
-  <section class="slide">
-    <h2>Incremental display (1/3)</h2>
-    <div class=columns>
-      <div>
-        <p>Unfold (default style)</p>
+      <li>Making the horizontal review process more accessible</li>
+      <li>What can the Accessible Platform Architectures WG do for you?</li>
+      <li>Rebooting the Framework for Accessibility in the Specification of Technologies (FAST)</li>
+      <li>We want to hear from <strong>you</strong>!
         <ul>
-          <li>This item is shown right away</li>
-          <li class="next">This one appears on a key press</li>
-          <li class="next">The 2nd key press reveals this</li>
-          <li class="next">And then this</li>
+          <li>Pain points with the horizontal review process</li>
+          <li>What sort of advice would <em>you</em> like to get, how, and when?</li>
         </ul>
-      </div>
-      <div>
-        <p>Fade in (<code>class=emerge</code>)</p>
-        <ul class=emerge>
-          <li>This item is shown right away</li>
-          <li class="next">This one appears on a key press</li>
-          <li class="next">The 2nd key press reveals this</li>
-          <li class="next">And then this</li>
+      </li>
+    </ul>
+  </section>
+
+
+  <section class=slide>
+    <h2>Horiontal Review</h2>
+    <ul>
+      <li>What is it? <span class=next>Peer review in key areas:</span>
+        <ul class=next>
+          <li>Accessibility</li>
+          <li>Internationalization</li>
+          <li>Privacy</li>
+          <li>Security</li>
+          <li>Architecture</li>
         </ul>
+      </li>
+    </ul>
+  </section>
+
+
+  <section class=slide>
+    <h2>Horiontal Review</h2>
+    <ul>
+      <li class=next>Who's it for? <span class=next>Spec <strong>or explainer</strong> authors</span></li>
+      <li class=next>When does it happen? <span class=next>Often too late! Official horizontal review sometimes only
+          comes way <em>after</em> features have shipped.</span></li>
+      <li class=next>What does it provide you with?</li>
+    </ul>
+  </section>
+
+
+  <section class=slide>
+    <h3>Requesting a review</h3>
+    <p>Simple! In general: check out <a href="https://www.w3.org/guide/documentreview/#how-to-get-horizontal-review">How
+        to get
+        horizontal review</a> in the W3C Guidebook</p>
+    <img src="request-apa.jpeg" alt="Options on GitHub for requesting review from APA WG">
+  </section>
+
+
+  <section class=slide>
+    <h3>Resources and points of contact&hellip;</h3>
+    <p>Next we'll point out some resources (recently updated) and points of contact.</p>
+  </section>
+
+
+  <section class=slide id=process-resources>
+    <details>
+      <summary>
+        <img src="hr.svg" alt="Resources and review stages available to support your specifciation">
+      </summary>
+      <ul>
+        <li>Review activities and resourcse for your spec:
+          <ul>
+            <li>TAG screener</li>
+            <li>FAST</li>
+            <li>FAST Checklist</li>
+            <li>APA WG review</li>
+          </ul>
+        </li>
+        <li>The Accessibility User Requirements docs from RQTF feed into the FAST, FAST Checklist, and APA WG
+          reviews.
+        </li>
+      </ul>
+    </details>
+  </section>
+
+  <section class=slide>
+    <details>
+      <summary>
+        <img src="hr-feedback.svg"
+          alt="Resources and review stages available to support your specifciation - feedback cycle">
+      </summary>
+      <p>This is the same diagram as on <a href="#process-resources">the previous slide</a>,
+        but with the addition of feedback lines from your specification,
+        to the APA WG review stage which, in turn, feeds back to:
+        the Accessibility User Requirements from RQTF; the FAST, and the FAST Checklist.</p>
+    </details>
+  </section>
+
+
+  <section class=slide>
+    <h2>Resources to help you</h2>
+  </section>
+
+
+  <section class=slide>
+    <h3><a href="https://w3ctag.github.io/accessibility-screener/">TAG Accessibility Screener</a></h3>
+    <p>Example question (4 of 7):</p>
+    <fieldset>
+      <legend>
+        Does the spec define a protocol that conveys any data meant to be presented to a human?
+      </legend>
+      <div id="q4Description">
+        <p>For example:</p>
+        <ul>
+          <li>
+            a transport mechanism for media, such as images, video, or
+            user strings, which may benefit from including an alternative
+            representation as part of the payload
+          </li>
+        </ul>
+        <p>
+          <strong>Why?</strong> Any given media type in isolation (for
+          example, speech) may be inaccessible or inappropriate for a
+          certain subset of users, so authors should be able to provide
+          alternative forms.
+        </p>
       </div>
+      <input type="radio" id="q4_yes" name="q4" value="Yes" required="" aria-describedby="q4Description">
+      <label for="q4_yes">Yes</label>
+      <input type="radio" id="q4_no" name="q4" value="No" required="" aria-describedby="q4Description">
+      <label for="q4_no">No</label>
+      <input type="radio" id="q4_n/a" name="q4" value="N/A" required="" aria-describedby="q4Description" checked="">
+      <label for="q4_n/a">N/A</label>
+    </fieldset>
+  </section>
+
+
+  <section class=slide>
+    <h3><a href="https://raw.githack.com/w3c/fast/main/checklist.html">FAST Checklist</a></h3>
+    <details>
+      <summary>
+        <img src="fast-checklist.png" alt="FAST Checklist excerpt">
+      </summary>
+      <section id=fast-checlist-info>
+        <p>Excerpt of the FAST Checklist, showing the start of the section titled &quot;If technology provides features
+          to
+          accept user input&quot;, with a couple of checlist items shown under this:</p>
+        <ul>
+          <li>&quot;There is a mechanism to label user input controls in an unambiguous and clear manner.&quot;</li>
+          <li>&quot;Authors can associate extended help information with a control.&quot;</li>
+        </ul>
+        <p>The section as a whole has a set of radio buttons to indicate whether it's applicable. Each checlist item has
+          further explanatory text, an optional external reference, e.g. to WCAG, and a set of yes/no radiobuttons to
+          state whether the checklist item has been met.</p>
+        <section>
+    </details>
+  </section>
+
+
+  <section class=slide>
+    <h3><a href="https://www.w3.org/WAI/research/user-requirements/">Digital Accessibility User Requirements</a></h3>
+    <details>
+      <summary>
+        <img src="aurs.png" alt="Digital Accessibility User Requirements excerpt">
+      </summary>
+      <section id="aurs-info">
+        <p><i>From the Web Accessibility Initiative (WAI) site&hellip;</i></p>
+        <p>WAI continues to analyze research and document user needs in several areas. The documents below:</p>
+        <ul>
+          <li>provide information to developers on how to make their products more accessible</li>
+          <li>inform future standards</li>
+        </ul>
+
+        <h4 id="cross-disability-user-requirements-for-specific-technologies-tools-situations">Cross-disability user
+          requirements for specific technologies, tools, situations</h4>
+
+        <dl>
+          <dt><a href="https://www.w3.org/TR/media-accessibility-reqs/">Media Accessibility User Requirements</a> (MAUR)
+          </dt>
+          <dd>Describes the needs of users with disabilities to be able to consume audio and video media on the web. A
+            <a href="https://w3c.github.io/apa/media-accessibility-reqs/">MAUR updated Working Draft</a> is in progress.
+            (Learn more from the <a
+              href="https://www.w3.org/blog/2015/12/media-accessibility-user-requirements-is-a-w3c-note/">MAUR blog
+              post</a>.)
+          </dd>
+          <dt><a href="https://www.w3.org/TR/saur/">Synchronization Accessibility User Requirements</a> (SAUR) for
+            multimedia</dt>
+          <dd>Addresses synchronization of captions, sign language interpretation, and descriptions in audio and video
+            media. Media needs to be synchronized to very specific limits in order to be understandable. (<a
+              href="https://www.w3.org/blog/2021/09/synchronization-accessibility-user-requirements-call-for-review/">SAUR
+              blog</a>)</dd>
+          <dt><a href="https://www.w3.org/TR/xaur/">XR Accessibility User Requirements</a></dt>
+          <dd>Describes user needs in virtual or immersive environments (XR). (<a
+              href="https://www.w3.org/blog/2020/03/xr-accessibility-user-requirements-call-for-review/">XAUR blog</a>)
+          </dd>
+          <dt><a href="https://www.w3.org/TR/raur/">RTC Accessibility User Requirements</a> (RAUR)</dt>
+          <dd>Describes user needs for real-time communication (RTC). RTC enables instantaneous applications for video
+            and audio calls, text chat, file exchange, screen sharing, and gaming. (<a
+              href="https://www.w3.org/blog/2020/03/rtc-accessibility-user-requirements-call-for-review/">RAUR blog</a>)
+          </dd>
+          <dt><a href="https://www.w3.org/TR/ctaur/">Collaboration Tools Accessibility User Requirements</a></dt>
+          <dd>Describes user needs in tools that support for one or more specific collaborative features. These features
+            include real-time editing of content by multiple authors, the use of comments or annotations, and revision
+            control.</dd>
+          <dt><a href="https://www.w3.org/TR/naur">Natural Language Interface Accessibility User Requirements</a> (NAUR)
+            Draft</dt>
+          <dd>Addresses situations where a user and a system communicate via a natural (human) language. The user
+            provides input as sentences via speech or other input, and the system generates responses as sentences
+            delivered by speech, text, or another modality. (Learn more from the <a
+              href="https://www.w3.org/blog/2021/10/natural-language-interface-accessibility-user-requirements-call-for-review/">NAUR
+              blog post</a>.)</dd>
+          <dt><a href="https://w3c.github.io/apa/fast/">Framework for Accessible Specification of Technologies
+              (FAST)</a> Editors’ Draft</dt>
+          <dd>Advises creators of technical specifications how to ensure their technology meets the needs of users with
+            disabilities.</dd>
+        </dl>
+
+        <h4 id="disability-specific-user-requirements-and-research">Disability-specific user requirements and research
+        </h4>
+        <ul>
+          <li>Cognitive and learning disabilities
+            <ul>
+              <li><a href="https://w3c.github.io/coga/user-research/">Cognitive Accessibility User Research</a></li>
+              <li><a href="https://rawgit.com/w3c/coga/master/issue-papers/">Cognitive Accessibility Issue Papers</a>
+              </li>
+            </ul>
+          </li>
+          <li>Low vision
+            <ul>
+              <li><a href="https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Research">Low Vision Accessibility Research
+                  notes</a></li>
+              <li><a href="https://www.w3.org/TR/low-vision-needs/">Accessibility Requirements for People with Low
+                  Vision</a></li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </details>
+  </section>
+
+
+  <section class=slide>
+    <h2>Explaienrs, and Accessibility Considerations Sections</h2>
+  </section>
+
+
+  <section class=slide>
+    <h3><a href="https://www.w3.org/TR/explainer-explainer/">Writing Effective Explainers</a></h3>
+    <img src="writing-effective-explainers.png" alt="Screengrab of the document">
+  </section>
+
+
+  <section class=slide>
+    <h3><a href="https://www.w3.org/TR/compute-pressure/#accessibility-considerations">Compute Pressure API
+        Accessibility Considerations</a></h3>
+    <section id="cp-ac">
+      <p>
+        The Compute Pressure API is focused on improving the user experience. There are two ways in which applications
+        that build on the API can positively impact accessibility.
+      </p>
+      <ol>
+        <li>
+          Considering users' access needs when making decisions based on information gathered using the API.
+        </li>
+        <li>
+          Designing and making user interfaces based on information gained from the API with accessibility in mind.
+        </li>
+      </ol>
+      <p>
+        As a consumer of the API, it's important to consider both of these opportunities. Here are some examples:
+      </p>
+      <ul>
+        <li>
+          <strong>Decision:</strong> In a video conferencing scenario, there may be multiple video streams. The system
+          may determines that it needs to drop certain streams in order to conserve resources. If one of the video
+          streams comes from a sign language interpreter, then that stream must be prioritized over others, so that
+          the user can still understand the conversation. In practice, this could be simply implemented by allowing
+          the user to "pin" a certain stream, and ensuring that that pinned stream is never automatically dropped by
+          the system.
+        </li>
+        <li>
+          <strong>User Interface:</strong>
+          <ul>
+            <li>
+              A simple load-level meter, in which the current usage level bucket is indicated on the screen. This
+              information must be conveyed using more than just color, so that people who cannot perceive color can
+              still perceive the information. A symbol could be used in conjunction with color. Text could also be
+              used in conjunction with both shape and color.
+            </li>
+            <li>
+              Some applications may present a notification to the user when some functionality is restricted due to
+              compute pressure. These notifications may take the form of "toast" messages, in which case care must be
+              taken to ensure that people using assistive technologies (including screen readers) can be made aware of
+              the notification, and dismiss it, without unduly interrupting their workflow.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </section>
+
+
+  <section class=slide>
+    <hgroup>
+      <h2>About the FAST</h2>
+      <p>&hellip;and ongoing updates</p>
+    </hgroup>
+  </section>
+
+  <section class=slide>
+    <div class=next>
+      <h3>Background</h3>
+      <ul>
+        <li class=next>User needs
+          <ul>
+            <li class=next>e.g. understand the purpose of a UI control</li>
+            <li class=next>e.g. understand some instructional text in the UI</li>
+          </ul>
+        </li>
+        <li class=next>Functional needs (or capabilities)
+          <ul>
+            <li class=next>e.g. color perception deficit</li>
+            <li class=next>e.g. short term memory barriers</li>
+          </ul>
+        </li>
+        <li class=next>The intersection of these gives us specific accessibility scenarios to consider, for which the
+          FAST seeks to advise.</li>
+      </ul>
+      <p class=next>However&hellip;</p>
     </div>
   </section>
 
-  <footer class="long comment">
-    <address>FIXME</address>
-  </footer>
+
+  <section class=slide>
+    <h3>Reboot needed</h3>
+    <ul>
+      <li class=next>Feedback we have had from spec authors (primarily on the checklist) is that the examples are too
+        abstract and the concepts very high-level&hellip;</li>
+      <li class=next>More concrete framing and examples would be of help.</li>
+      <li class=next>Further, projects like the excellent <a href="">Digital Accessibility Framework</a> have been
+        developed to fulfil the need for a general mapping of accessibilty scenarios, across sets of guidelines</li>
+    </ul>
+    <p class=next>So we are rebooting FAST to be more W3C-specific&hellip;</p>
+  </section>
+
+
+  <section class=slide>
+    <h3>Concrete actors</h3>
+    <ul>
+      <li>Spec</li>
+      <li>Author</li>
+      <li><abbr title="User Agent">UA</abbr></li>
+      <li><abbr title="Assistive Technology">AT</abbr></li>
+      <li>User</li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h3>Example</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Spec</th>
+          <th>Author</th>
+          <th><abbr title="User Agent">UA</abbr></th>
+          <th><abbr title="Assistive Technology">AT</abbr></th>
+          <th>User</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alternative content</td>
+          <td>Allow provision (<code>alt</code> attr.)</td>
+          <td>Provide content</td>
+          <td>Expose content (how?)</td>
+          <td>Render content</td>
+          <td>Be aware of possible content</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+  <section class=slide>
+    <h3>Additional actors and considerations</h3>
+    <p>We want to help you promote the accessibility of&hellip;</p>
+    <ul>
+      <li>The products and services built on your spec</li>
+      <li>The authoring tools and processes associated with your spec</li>
+      <li>The spec document itself</li>
+    </ul>
+  </section>
+
+
+  <section class=slide>
+    <h3>Where's WCAG?</h3>
+    <ul>
+      <li class=next>Following WCAG provides a baseline level of accessibiilty for web content.</li>
+      <li class=next>Many of the principles are more generally applicable.</li>
+      <li class=next>But their coverage isn't necessarily even or universal (because we can only recommend what we know
+        works for representative web content).</li>
+      <li class=next>The AURs provide higher-level, user-focused, domain-specific advice.</li>
+      <li class=next>FAST seeks to provide a wider gamut of scenarios, and to be helpful when adding new capabilities to
+        the platform.
+    </ul>
+  </section>
+
+
+  <section class=slide>
+    <h2>APA WG's goals</h2>
+    <ul>
+      <li class=next>Be available as early as possible.</li>
+      <li class=next>Help by highlighting use cases you may be unaware of.</li>
+      <li class=next>Providing technical advice in general, and helping you co-ordinate with other relevant expert
+        groups.
+      </li>
+      <li class=next>Providing <a href="https://github.com/w3c/a11y-longitudinal-tracking">longitudinal tracking of
+          specs' accessibility</a>.</li>
+      <li class=next>Improving the horizontal review process for all.
+        <ul>
+          <li>Via suggestions for the existing tooling, and experiments such as <a
+              href="https://github.com/matatk/nu-tracker">new
+              interfaces onto
+              the process</a>.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+
+  <section class=slide>
+    <h2>Group discussion</h2>
+    <ul>
+      <li>Pain points with the horizontal review process</li>
+      <li>What sort of advice would <em>you</em> like to get, how, and when?</li>
+    </ul>
+  </section>
+
+
+  <section class="slide" id="lists">
+    <h2>Resources</h2>
+    <ul>
+      <li><a href="https://w3ctag.github.io/accessibility-screener/"><abbr
+            title="Technical Architecture Group">TAG</abbr> Accessibility Screener</a></li>
+      <li><a href="https://raw.githack.com/w3c/fast/main/checklist.html"><abbr
+            title="Framework for Accessibility in the Specification of Technologies">FAST</abbr>
+          Checklist</a></li>
+    </ul>
+    <p><strong>Acknowledgement:</strong> thanks to Peter Korn for the &quot;building it in vs. bolting it on&quot;
+      concept.</p>
+    <h2>Join us</h2>
+    <p>If you would like to join the FAST TF, please contact us.</p>
+  </section>
 </body>
 
 </html>
