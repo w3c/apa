@@ -66,7 +66,7 @@
 
   <section class="slide cover clear" id="cover">
     <h1>Fixing HTML element references (IDREFs) on the Web</h1>
-    <address>%%Author%%</address>
+    <address>Matthew Tylee Atkinson, Alice Boxhall, Lea Verou, Sarah Higley, Noam Rosenthal, Jeffrey Yasskin</address>
     <p class=event>TPAC 2025<br>
       Kobe, Japan &amp; online<br>
       10–14 November 2025</p>
@@ -198,17 +198,17 @@
   <section class="slide">
     <h2>Prior art: <code>useId()</code></h2>
     <pre>export default function FormComponent() {
-  const inputId = useId();
+      const inputId = useId();
 
-  return (
-    &lt;form&gt;
-      &lt;label htmlFor={inputId}&gt
-        Enter your name:
+      return (
+      &lt;form&gt;
+      &lt;label htmlFor={inputId}&gt;
+      Enter your name:
       &lt;/label&gt;
       &lt;input id={inputId} type="text" /&gt;
-    &lt;/form&gt;
-  );
-}</pre>
+      &lt;/form&gt;
+      );
+      }</pre>
   </section>
 
 
@@ -216,10 +216,10 @@
     <h2>Prior art: <code>useId()</code></h2>
     <p>The code on the previous slide my result in HTML something like this:</p>
     <pre>&lt;form&gt;
-  &lt;label for=":r1:"&gt;Enter your name:&lt;/label&gt;
-  &lt;input id=":r1:" type="text"&gt;
-&lt;/form&gt;
-</pre>
+      &lt;label for=":r1:"&gt;Enter your name:&lt;/label&gt;
+      &lt;input id=":r1:" type="text"&gt;
+      &lt;/form&gt;
+    </pre>
   </section>
 
 
@@ -228,7 +228,9 @@
     <ul>
       <li>A unique string is added to IDs in repeated content</li>
       <li>The unique string may be generated or author-supplied</li>
-      <li>There are build tools which do this specifically, and it can also be done using something like <code>useId()</code></li>
+      <li>There are build tools which do this specifically, and it can also be done using something like
+        <code>useId()</code>
+      </li>
     </ul>
   </section>
 
@@ -236,51 +238,53 @@
   <section class="slide">
     <h2>Prior art: ID prefixing</h2>
     <pre>export default function FormComponent() {
-  const prefix = useId();
+      const prefix = useId();
 
-  return (
-    &lt;form&gt;
-      &lt;label htmlFor={prefix + '-first'}&gtFirst name:&lt;/label&gt;
+      return (
+      &lt;form&gt;
+      &lt;label htmlFor={prefix + '-first'}&gt;First name:&lt;/label&gt;
       &lt;input id={prefix + '-first'} type="text" /&gt;
       &lt;br /&gt;
-      &lt;label htmlFor={prefix + '-last'}&gtLast name:&lt;/label&gt;
+      &lt;label htmlFor={prefix + '-last'}&gt;Last name:&lt;/label&gt;
       &lt;input id={prefix + '-last'} type="text" /&gt;
-    &lt;/form&gt;
-  );
-}</pre>
+      &lt;/form&gt;
+      );
+      }</pre>
   </section>
 
 
   <section class="slide">
     <h2>Prior art: ID prefixing</h2>
     <ul>
-      <li><code>posthtml-rename-id</code> is a plugin for PostHTML which specifically handles ID usage in SVG and CSS fragment identifiers</li>
+      <li><code>posthtml-rename-id</code> is a plugin for PostHTML which specifically handles ID usage in SVG and CSS
+        fragment identifiers</li>
       <li>Fragment identifiers are used in in-page links (<code>&lt;a href="#myId"&gt;</code>),
-      CSS values (<code>fill: url(#myId)</code>) and SVG <code>href</code> attributes and
-      <code>url()</code> values</li>
+        CSS values (<code>fill: url(#myId)</code>) and SVG <code>href</code> attributes and
+        <code>url()</code> values
+      </li>
     </ul>
     <div class="columns">
       <div>
         <h3>Input</h3>
         <pre>&lt;style>
-.selector {
-  fill: url(#myId);
-}
-&lt;/style>
+          .selector {
+          fill: url(#myId);
+          }
+          &lt;/style>
 
-&lt;div id="myId">&lt;/div>
-&lt;a href="#myId">&lt;/a></pre>
+          &lt;div id="myId">&lt;/div>
+          &lt;a href="#myId">&lt;/a></pre>
       </div>
       <div>
         <h3>Output</h3>
         <pre>&lt;style>
-.selector {
-  fill: url(#prefix_myId);
-}
-&lt;/style>
+          .selector {
+          fill: url(#prefix_myId);
+          }
+          &lt;/style>
 
-&lt;div id="prefix_myId">&lt;/div>
-&lt;a href="#prefix_myId">&lt;/a></pre>
+          &lt;div id="prefix_myId">&lt;/div>
+          &lt;a href="#prefix_myId">&lt;/a></pre>
       </div>
     </div>
   </section>
@@ -289,50 +293,54 @@
   <section class="slide">
     <h2>Prior art: Scoped ID rewriting</h2>
     <ul>
-      <li>Lets developers annotate a parent node to define a "group", within which all IDs are rewritten in a consistent way by the framework</li>
-      <li>In practice, this is similar to ID prefixing, but doesn't require developers to specify how to do the rewriting</p>
+      <li>Lets developers annotate a parent node to define a "group", within which all IDs are rewritten in a consistent
+        way by the framework</li>
+      <li>In practice, this is similar to ID prefixing, but doesn't require developers to specify how to do the
+        rewriting</li>
+    </ul>
   </section>
 
   <section class="slide">
     <h2>Prior art: Scoped ID rewriting</h2>
     <h3>AlpineJS <code>x-id</code> and <code>$id</code></h3>
     <pre>&lt;!-- rewrite 'input' in this scope -->
-&ltdiv x-id="['input']">
-    &lt;label :for="$id('input')"> &lt;!-- "input-1" -->
-    &lt;input :id="$id('text-input')"> &lt;!-- "input-1" -->
-&lt;/div>
+      &lt;div x-id="['input']">
+      &lt;label :for="$id('input')"> &lt;!-- "input-1" -->
+      &lt;input :id="$id('text-input')"> &lt;!-- "input-1" -->
+      &lt;/div>
 
-&lt;!-- rewrite 'input' (differently) in this scope too -->
-&lt;div x-id="['input']">
-    &lt;label :for="$id('input')"> &lt;!-- "input-2" -->
-    &lt;input :id="$id('input')"> &lt;!-- "input-2" -->
-&lt;/div></pre>
+      &lt;!-- rewrite 'input' (differently) in this scope too -->
+      &lt;div x-id="['input']">
+      &lt;label :for="$id('input')"> &lt;!-- "input-2" -->
+      &lt;input :id="$id('input')"> &lt;!-- "input-2" -->
+      &lt;/div></pre>
   </section>
 
 
   <section class="slide">
-      <h2>Prior art: Using selectors to refer to elements</h2>
-      <ul>
-        <li>This allows framework authors to specify an element as a target of some framework property via a selector, or selector-like string</li>
-        <li>This seems to be used less for platform features like label/for, and more for intra-framework operations</li>
-        <li>Example code for this style of writing predominantly uses `#myId` selectors</li>
-      </ul>
+    <h2>Prior art: Using selectors to refer to elements</h2>
+    <ul>
+      <li>This allows framework authors to specify an element as a target of some framework property via a selector, or
+        selector-like string</li>
+      <li>This seems to be used less for platform features like label/for, and more for intra-framework operations</li>
+      <li>Example code for this style of writing predominantly uses `#myId` selectors</li>
+    </ul>
   </section>
 
 
   <section class="slide">
-      <h2>Prior art: Using selectors to refer to elements</h2>
-      <h3>htmx <code>hx-target</code></h3>
-      <pre>&lt;!--A button that causes response-div to be updated-->
-&lt;div>
-  &lt;div id="response-div">&lt;/div>
-  &lt;button hx-post="/register" hx-target="#response-div" hx-swap="beforeend">
-    Register!
-  &lt;/button>
-&lt;/div>
+    <h2>Prior art: Using selectors to refer to elements</h2>
+    <h3>htmx <code>hx-target</code></h3>
+    <pre>&lt;!--A button that causes response-div to be updated-->
+      &lt;div>
+      &lt;div id="response-div">&lt;/div>
+      &lt;button hx-post="/register" hx-target="#response-div" hx-swap="beforeend">
+      Register!
+      &lt;/button>
+      &lt;/div>
 
-&lt;!-- A link that updates itself when clicked-->
-&lt;a hx-post="/new-link" hx-target="this" hx-swap="outerHTML">New link&lt;/a></pre>
+      &lt;!-- A link that updates itself when clicked-->
+      &lt;a hx-post="/new-link" hx-target="this" hx-swap="outerHTML">New link&lt;/a></pre>
   </section>
 
 
@@ -420,7 +428,8 @@
           <li><a href="https://github.com/whatwg/html/issues/10143#issuecomment-3195739405">Alice's summary</a></li>
         </ul>
       </li>
-      <li><a href="https://github.com/webplatformco/project-idrefs/blob/main/research.md">Collation of feedback</a> from State of HTML surveys, selected GitHub issues, and social media.</li>
+      <li><a href="https://github.com/webplatformco/project-idrefs/blob/main/research.md">Collation of feedback</a> from
+        State of HTML surveys, selected GitHub issues, and social media.</li>
       <li><a href="https://notes.igalia.com/XlsPwU5sQfuaWYHwhtBMtA">Feedback on IDREF questions</a>&mdash;document
         containing the questions Alice proposed in the summary comment above, and some answers from developers.</li>
       <li><a href="https://www.w3.org/2025/10/15-apa-minutes.html">Minutes from <abbr
@@ -430,20 +439,20 @@
 
 
   <section class="slide">
-    <p class=huge>Appendix: Quotes from developers </h2>
+    <h2 class=huge>Appendix: Quotes from developers</h2>
   </section>
 
   <section class="slide">
     <h2>Theme: repeated content</h2>
     <ul>
       <li>"labels use the ID, so you can't repeat similar forms and instead have to dynamically
-      generate unique IDs for every form"</li>
+        generate unique IDs for every form"</li>
       <li>"The biggest pain point about IDs is the need for whole-page uniqueness, which conflicts
-      with component-based templates, especially when there are repeated components."</li>
+        with component-based templates, especially when there are repeated components."</li>
       <li>"IDs don't work well with repeated content blocks, you have to uniquify them and refer to
-      that unique'd name"</li>
+        that unique'd name"</li>
       <li>"[...] templates where I need to relate two elements together using an id [...] and the
-      template is usually repeated in the page."</li>
+        template is usually repeated in the page."</li>
     </ul>
   </section>
 
@@ -453,12 +462,12 @@
     <ul>
       <li>"The platform doesn't help with basic needs like creating unique IDREFs."</li>
       <li>"Getting my developer community to care about generating unique IDs for every input is too
-      hard; they aren't doing it and our code is inaccessible."</li>
+        hard; they aren't doing it and our code is inaccessible."</li>
       <li>"having to come up with unique ids"</li>
       <li>"Html ul li counters as native performant unique ID generators would enable so much
-      functionality, it's hard to think of all the use cases."</li>
+        functionality, it's hard to think of all the use cases."</li>
       <li>"I never found myself in a case where a random uuid or a framework provided tool didn't
-      solve the issue."</li>
+        solve the issue."</li>
     </ul>
   </section>
 
@@ -468,11 +477,11 @@
     <h3>Sub-theme: stable IDs</h3>
     <ul>
       <li>"Guaranteeing uniqueness on a page and keeping that uniqueness consistent across page
-      renderings (e.g. if list elements have IDs, and an item gets inserted, do IDs remain
-      consistent?) </li>
+        renderings (e.g. if list elements have IDs, and an item gets inserted, do IDs remain
+        consistent?) </li>
       <li>"Random UUIDs not being ideal in static site generation as every page would be different
-      in every build, making selective syncing of actually changed pages to storage
-      impossible."</li>
+        in every build, making selective syncing of actually changed pages to storage
+        impossible."</li>
     </ul>
   </section>
 
@@ -492,13 +501,13 @@
     <h3>Sub-theme: label/input wrapping</h3>
     <ul>
       <li>"Use to be if you nested an input within a label that was good enough to establish a
-      relationship but now we always need ids which seems like overkill."</li>
+        relationship but now we always need ids which seems like overkill."</li>
       <li>"That nesting inputs in labels have fallen out of favor and ids are wanted for nested
-      inputs"</li>
+        inputs"</li>
       <li>"the wrapping does not always make sense to the structure and we don't always want to
-      create ids just for the labels"</li>
+        create ids just for the labels"</li>
       <li>"the fact that wrapping an input with <code>&lt;label&gt;</code> is not recommended for
-      accessibility means ensuring unique ids per field"</li>
+        accessibility means ensuring unique ids per field"</li>
     </ul>
   </section>
 
@@ -510,9 +519,9 @@
       <li>"SVG masks requiring unique IDs"</li>
       <li>"IDs in inline SVGs needing to be unique on the page"</li>
       <li>"In SVG, for example, defining a gradient requires creating a <code>&lt;defs&gt;</code> block,
-      assigning it an <code>id</code>, and referencing it using <code>url(#id)</code> inside the
-      same SVG. When that SVG is duplicated (for example, multiple icons on a page), all those
-      references end up pointing to the first matching ID in the document."</li>
+        assigning it an <code>id</code>, and referencing it using <code>url(#id)</code> inside the
+        same SVG. When that SVG is duplicated (for example, multiple icons on a page), all those
+        references end up pointing to the first matching ID in the document."</li>
     </ul>
   </section>
 
@@ -522,10 +531,10 @@
     <h3>Sub-theme: getting generated IDs to both ends of a pair</h3>
     <ul>
       <li>"Generating unique-but-matching for-ID pairs in component-based dev frameworks, especially
-      when the actual input is separated from its label and potentially seventeen levels deeper. "</li>
+        when the actual input is separated from its label and potentially seventeen levels deeper. "</li>
       <li>"Passing ids betwen files [in component libraries] is tricky."</li>
       <li>"whole page uniqueness [is] a bit tricky to satisfy in some rare situations because the
-      different elements linked by the IDREF are not in the same component."</li>
+        different elements linked by the IDREF are not in the same component."</li>
     </ul>
   </section>
 
@@ -534,10 +543,10 @@
     <h2>Theme: JS/toolchain requirement</h2>
     <ul>
       <li>"Frequently have to append a uuid or database ID to make it prefixed but unique, which
-      means JS required."</li>
+        means JS required."</li>
       <li>"Most current solutions depend on external tools to handle [ID prefixing] automatically,
-      but that often makes things worse in real projects due to tool limitations or collisions in
-      the processing pipeline."</li>
+        but that often makes things worse in real projects due to tool limitations or collisions in
+        the processing pipeline."</li>
     </ul>
   </section>
 
