@@ -9,7 +9,7 @@ digraph B {
 
 		screener -> fast -> checklist -> apa [style=invis];
 	}
-	reqs [label="Accessibility User Requirements (RQTF)"];
+	reqs [label="Accessibility User Requirements (RQTF)\nMaking Content Usable (COGA TF)"];
 	spec [label="Your spec/explainer",style=filled,fillcolor=palegreen1];
 
 	reqs -> fast;
