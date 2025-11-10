@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html lang="en-gb">
+
+<head>
+  <meta charset=UTF-8>
+  <meta content="width=device-width" name="viewport">
+  <title>Fixing HTML element references (IDREFs) on the Web</title>
+  <link rel="stylesheet" href="../Templates/slides.css">
+  <!-- To use the b6+ framework, include this: -->
+  <script src="../Templates/b6plus.js"></script>
+  <!-- To use the Shower framework, remove b6plus above and add these two: -->
+  <!-- <script src="../Templates/shower.js"></script>       -->
+  <!-- <script src="../Templates/iframe-fixup.js"></script> -->
+  <style>
+    .slide:has(img.fit) h2 {
+      background: var(--long-comment-bg);
+      width: fit-content;
+      padding: 0.5em;
+      border: 0.05em solid var(--h1-h2-fg);
+    }
+
+    .slide:has(img.fit) figcaption {
+      position: absolute;
+      bottom: 1rem;
+      right: 1rem;
+    }
+
+    .slide:has(img.fit) a {
+      background: var(--long-comment-bg);
+      width: fit-content;
+      padding: 0.5em;
+      border: 0.05em solid var(--link-fg);
+    }
+
+    .slide:has(img.fit) a:visited {
+      border: 0.05em solid var(--visited-link-fg);
+    }
+
+    .huge {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body class="shower fade-in duration=15 hidemouse">
+
+  <!-- Remove this element if you don't want a progress bar: -->
+  <div class=progress></div>
+
+  <!-- Remove this element if you don't want the remaining time in
+       index mode and on the 2nd screen. If you keep it, you may want
+       to add the class "duration=n" on BODY, where n is the initial
+       number of minutes on the clock. Default is 30. -->
+  <div class=clock></div>
+
+  <!-- Alternative: Show also real time and elapsed time. -->
+  <!-- <div class=fullclock></div> -->
+
+  <!-- What a screen reader should say on leaving slide mode,
+       instead of the default ‘Stopped.’ -->
+  <div role=region aria-live=assertive>
+    Leaving slide mode.
+  </div>
+
+
+  <section class="slide cover clear" id="cover">
+    <h1>Fixing HTML element references (IDREFs) on the Web</h1>
+    <address>Matthew Tylee Atkinson, Alice Boxhall, Lea Verou, Sarah Higley, Noam Rosenthal, Jeffrey Yasskin</address>
+    <p class=event>TPAC 2025<br>
+      Kobe, Japan &amp; online<br>
+      10–14 November 2025</p>
+  </section>
+
+  <section class=comment>
+    <p>Notes for slide 1 can be put here.</p>
+  </section>
+
+
+  <section class="slide" id="">
+    <h2>Goals for this session</h2>
+    <p>To find areas of consensus regarding</p>
+    <ul>
+      <li class="next">the pain points of IDREFs</li>
+      <li class="next">expected costs and risks from an accessibility perspective</li>
+      <li class="next">the possibilities for conducting research to quantify the above</li>
+    </ul>
+  </section>
+
+
+  <section class="slide" id="non-goals">
+    <h2>Non-goals</h2>
+    <ul>
+      <li class=next>Find <em>the</em> solution</li>
+      <li class=next>Fully flesh out the use case(s) and concerns</li>
+    </ul>
+  </section>
+
+
+  <section class="slide" id="agenda">
+    <h2>Agenda</h2>
+    <ul>
+      <li class=next>What (if anything) needs fixing?</li>
+      <li class=next>Prior art</li>
+      <li class=next>Main part: discussion
+        <ul>
+          <li class=next>Work towards consensus on the problem space</li>
+          <li class=next>Discuss constraints on solutions</li>
+          <li class=next>Concerns, questions, research needed</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+
+  <section class="slide slide-in">
+    <h2>Gaps</h2>
+    <figure>
+      <img src="gaps.png" alt="Issues list of the TAG's web platform gaps repo" class=fit>
+      <figcaption>
+        <a href="https://github.com/w3ctag/gaps/issues">https://github.com/w3ctag/gaps/issues</a>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class=comment>
+    <p>Please file issues on the repo to talk about gaps you've noticed!</p>
+  </section>
+
+
+  <section class="slide slide-in">
+    <h2>IDREFs gap</h2>
+    <figure>
+      <img src="idrefs-gap.png" alt="IDREFs issue in the TAG's web platform gaps repo" class=fit>
+      <figcaption>
+        <a href="https://github.com/w3ctag/gaps/issues/2">https://github.com/w3ctag/gaps/issues/2</a>
+      </figcaption>
+    </figure>
+  </section>
+
+
+  <section class="slide">
+    <h2>What (if anything) needs fixing?</h2>
+    <p>Themes from developer feedback so far:</p>
+    <ul>
+      <li>Repeated content requires rewriting IDs for each repetition</li>
+      <li>Combining content from multiple sources can cause ID collisions</li>
+      <li>No platform support for generating/managing unique IDs
+        <ul>
+          <li>Being forced to add a build step or use JS</li>
+        </ul>
+      </li>
+      <li>Unergonomic using IDs for label/input association in particular
+        <ul>
+          <li>Also well-documented gaps in AT support for nesting inputs within labels</li>
+        </ul>
+      </li>
+      <li>Inline SVG using fragment identifiers can also easily cause collisions</li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2>General concerns</h2>
+    <div class=columns>
+      <div>
+        <h3>DX</h3>
+        <ul>
+          <li>Reducing the pain points.
+            <ul>
+              <li>Identifying the right pain points.</li>
+            </ul>
+          </li>
+          <li>Wide applicability.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>UX/Accessibility</h3>
+        <ul>
+          <li>Complexity required in engine if backreferences are needed.</li>
+          <li>Performance hit.</li>
+          <li>Fragility of approach.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="slide">
+    <h2>Prior art: <code>useId()</code></h2>
+    <ul>
+      <li>Provided by component frameworks Vue and React</li>
+      <li>Generates a unique ID which can be used in templates</li>
+      <li>IDs are stable across multiple runs, as long as an element is in the same position in the tree</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Prior art: <code>useId()</code></h2>
+    <pre>export default function FormComponent() {
+      const inputId = useId();
+
+      return (
+      &lt;form&gt;
+      &lt;label htmlFor={inputId}&gt;
+      Enter your name:
+      &lt;/label&gt;
+      &lt;input id={inputId} type="text" /&gt;
+      &lt;/form&gt;
+      );
+      }</pre>
+  </section>
+
+
+  <section class="slide">
+    <h2>Prior art: <code>useId()</code></h2>
+    <p>The code on the previous slide my result in HTML something like this:</p>
+    <pre>&lt;form&gt;
+      &lt;label for=":r1:"&gt;Enter your name:&lt;/label&gt;
+      &lt;input id=":r1:" type="text"&gt;
+      &lt;/form&gt;
+    </pre>
+  </section>
+
+
+  <section class="slide">
+    <h2>Prior art: ID prefixing</h2>
+    <ul>
+      <li>A unique string is added to IDs in repeated content</li>
+      <li>The unique string may be generated or author-supplied</li>
+      <li>There are build tools which do this specifically, and it can also be done using something like
+        <code>useId()</code>
+      </li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2>Prior art: ID prefixing</h2>
+    <pre>export default function FormComponent() {
+      const prefix = useId();
+
+      return (
+      &lt;form&gt;
+      &lt;label htmlFor={prefix + '-first'}&gt;First name:&lt;/label&gt;
+      &lt;input id={prefix + '-first'} type="text" /&gt;
+      &lt;br /&gt;
+      &lt;label htmlFor={prefix + '-last'}&gt;Last name:&lt;/label&gt;
+      &lt;input id={prefix + '-last'} type="text" /&gt;
+      &lt;/form&gt;
+      );
+      }</pre>
+  </section>
+
+
+  <section class="slide">
+    <h2>Prior art: ID prefixing</h2>
+    <ul>
+      <li><code>posthtml-rename-id</code> is a plugin for PostHTML which specifically handles ID usage in SVG and CSS
+        fragment identifiers</li>
+      <li>Fragment identifiers are used in in-page links (<code>&lt;a href="#myId"&gt;</code>),
+        CSS values (<code>fill: url(#myId)</code>) and SVG <code>href</code> attributes and
+        <code>url()</code> values
+      </li>
+    </ul>
+    <div class="columns">
+      <div>
+        <h3>Input</h3>
+        <pre>&lt;style>
+          .selector {
+          fill: url(#myId);
+          }
+          &lt;/style>
+
+          &lt;div id="myId">&lt;/div>
+          &lt;a href="#myId">&lt;/a></pre>
+      </div>
+      <div>
+        <h3>Output</h3>
+        <pre>&lt;style>
+          .selector {
+          fill: url(#prefix_myId);
+          }
+          &lt;/style>
+
+          &lt;div id="prefix_myId">&lt;/div>
+          &lt;a href="#prefix_myId">&lt;/a></pre>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="slide">
+    <h2>Prior art: Scoped ID rewriting</h2>
+    <ul>
+      <li>Lets developers annotate a parent node to define a "group", within which all IDs are rewritten in a consistent
+        way by the framework</li>
+      <li>In practice, this is similar to ID prefixing, but doesn't require developers to specify how to do the
+        rewriting</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Prior art: Scoped ID rewriting</h2>
+    <h3>AlpineJS <code>x-id</code> and <code>$id</code></h3>
+    <pre>&lt;!-- rewrite 'input' in this scope -->
+      &lt;div x-id="['input']">
+      &lt;label :for="$id('input')"> &lt;!-- "input-1" -->
+      &lt;input :id="$id('text-input')"> &lt;!-- "input-1" -->
+      &lt;/div>
+
+      &lt;!-- rewrite 'input' (differently) in this scope too -->
+      &lt;div x-id="['input']">
+      &lt;label :for="$id('input')"> &lt;!-- "input-2" -->
+      &lt;input :id="$id('input')"> &lt;!-- "input-2" -->
+      &lt;/div></pre>
+  </section>
+
+
+  <section class="slide">
+    <h2>Prior art: Using selectors to refer to elements</h2>
+    <ul>
+      <li>This allows framework authors to specify an element as a target of some framework property via a selector, or
+        selector-like string</li>
+      <li>This seems to be used less for platform features like label/for, and more for intra-framework operations</li>
+      <li>Example code for this style of writing predominantly uses `#myId` selectors</li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2>Prior art: Using selectors to refer to elements</h2>
+    <h3>htmx <code>hx-target</code></h3>
+    <pre>&lt;!--A button that causes response-div to be updated-->
+      &lt;div>
+      &lt;div id="response-div">&lt;/div>
+      &lt;button hx-post="/register" hx-target="#response-div" hx-swap="beforeend">
+      Register!
+      &lt;/button>
+      &lt;/div>
+
+      &lt;!-- A link that updates itself when clicked-->
+      &lt;a hx-post="/new-link" hx-target="this" hx-swap="outerHTML">New link&lt;/a></pre>
+  </section>
+
+
+  <section class=slide>
+    <h2>Some questions&hellip;</h2>
+  </section>
+
+  <section class=slide>
+    <p class=huge>What are the pain points?</p>
+  </section>
+
+  <section class=slide>
+    <p class=huge>Is the problem <em>generation</em> of IDs, or communication <em>accross component boundaries</em> of
+      the IDs?</p>
+  </section>
+
+  <section class=slide>
+    <p class=huge>What other approaches have been used in libraries or tooling?</p>
+  </section>
+
+  <section class=slide>
+    <p class=huge>What are the (UA, AT) development costs?</p>
+  </section>
+
+  <section class=slide>
+    <p class=huge>Could devtools or offline tooling be improved to help the problem?</p>
+  </section>
+
+  <section class=slide>
+    <p class=huge>What are the performance costs?</p>
+  </section>
+
+  <section class=slide>
+    <p class=huge>How would any particular change benefit users?</p>
+  </section>
+
+  <section class="slide">
+    <p class=huge>What other constraints would you want on the potential solution space?</p>
+  </section>
+
+  <section class=slide>
+    <h2>Research</h2>
+    <p class=next>We need to do research to identify the problems. That starts with <em>you</em>!</p>
+    <p class=next>How can we ensure that the reseach is effective?</p>
+    <p class=next>Can you help?</p>
+    <p class=next>Some experiences of developers we've collected&hellip;</p>
+  </section>
+
+
+  <section class=slide>
+    <h2>Discussion time!</h2>
+    <p>Some points to consdier&hellip;</p>
+    <ul>
+      <li>Our goal is to come to consensus on the problem space, which may need more research.</li>
+      <li>If you have experience that expands or constrains the problem space, please let us know.</li>
+      <li>If you have suggestions for research questions, or can help with research, please let us know.</li>
+    </ul>
+  </section>
+
+
+  <section class=slide>
+    <h2>Thank you!</h2>
+    <p>Thank you for participating. Here are some ways you can stay in touch and involved&hellip;</p>
+    <ul>
+      <li>FIXME</li>
+      <li>FIXME</li>
+      <li>FIXME</li>
+    </ul>
+  </section>
+
+
+  <section class=slide>
+    <h2>Reference info</h2>
+    <ul>
+      <li><a href="https://github.com/webplatformco/explainers/blob/main/html-element-references/README.md">Explainer
+          for the proposal</a></li>
+      <li><a href="https://github.com/whatwg/html/issues/10143">WHATWG GitHub thread</a>
+        <ul>
+          <li><a href="https://github.com/whatwg/html/issues/10143#issuecomment-3175870635">Sarah's summary</a></li>
+          <li><a href="https://github.com/whatwg/html/issues/10143#issuecomment-3195739405">Alice's summary</a></li>
+        </ul>
+      </li>
+      <li><a href="https://github.com/webplatformco/project-idrefs/blob/main/research.md">Collation of feedback</a> from
+        State of HTML surveys, selected GitHub issues, and social media.</li>
+      <li><a href="https://notes.igalia.com/XlsPwU5sQfuaWYHwhtBMtA">Feedback on IDREF questions</a>&mdash;document
+        containing the questions Alice proposed in the summary comment above, and some answers from developers.</li>
+      <li><a href="https://www.w3.org/2025/10/15-apa-minutes.html">Minutes from <abbr
+            title="Accessible Platform Architectures">APA</abbr> WG call</a></li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2 class=huge>Appendix: Quotes from developers</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Theme: repeated content</h2>
+    <ul>
+      <li>"labels use the ID, so you can't repeat similar forms and instead have to dynamically
+        generate unique IDs for every form"</li>
+      <li>"The biggest pain point about IDs is the need for whole-page uniqueness, which conflicts
+        with component-based templates, especially when there are repeated components."</li>
+      <li>"IDs don't work well with repeated content blocks, you have to uniquify them and refer to
+        that unique'd name"</li>
+      <li>"[...] templates where I need to relate two elements together using an id [...] and the
+        template is usually repeated in the page."</li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2>Theme: unique ID generation</h2>
+    <ul>
+      <li>"The platform doesn't help with basic needs like creating unique IDREFs."</li>
+      <li>"Getting my developer community to care about generating unique IDs for every input is too
+        hard; they aren't doing it and our code is inaccessible."</li>
+      <li>"having to come up with unique ids"</li>
+      <li>"Html ul li counters as native performant unique ID generators would enable so much
+        functionality, it's hard to think of all the use cases."</li>
+      <li>"I never found myself in a case where a random uuid or a framework provided tool didn't
+        solve the issue."</li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2>Theme: unique ID generation</h2>
+    <h3>Sub-theme: stable IDs</h3>
+    <ul>
+      <li>"Guaranteeing uniqueness on a page and keeping that uniqueness consistent across page
+        renderings (e.g. if list elements have IDs, and an item gets inserted, do IDs remain
+        consistent?) </li>
+      <li>"Random UUIDs not being ideal in static site generation as every page would be different
+        in every build, making selective syncing of actually changed pages to storage
+        impossible."</li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2>Theme: label/input</h2>
+    <ul>
+      <li>"ids for everything for labels even though they're siblings"</li>
+      <li>"Absolute ids for label input relations. Wish to have relative, form - scoped binding</li>
+      <li>"settings ids and labels is very repetitive"</li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2>Theme: label/input</h2>
+    <h3>Sub-theme: label/input wrapping</h3>
+    <ul>
+      <li>"Use to be if you nested an input within a label that was good enough to establish a
+        relationship but now we always need ids which seems like overkill."</li>
+      <li>"That nesting inputs in labels have fallen out of favor and ids are wanted for nested
+        inputs"</li>
+      <li>"the wrapping does not always make sense to the structure and we don't always want to
+        create ids just for the labels"</li>
+      <li>"the fact that wrapping an input with <code>&lt;label&gt;</code> is not recommended for
+        accessibility means ensuring unique ids per field"</li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2>Theme: SVG</h2>
+    <ul>
+      <li>"state of SVG url references and canvas filter ids inside shadow DOMs"</li>
+      <li>"SVG masks requiring unique IDs"</li>
+      <li>"IDs in inline SVGs needing to be unique on the page"</li>
+      <li>"In SVG, for example, defining a gradient requires creating a <code>&lt;defs&gt;</code> block,
+        assigning it an <code>id</code>, and referencing it using <code>url(#id)</code> inside the
+        same SVG. When that SVG is duplicated (for example, multiple icons on a page), all those
+        references end up pointing to the first matching ID in the document."</li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2>Theme: unique ID generation</h2>
+    <h3>Sub-theme: getting generated IDs to both ends of a pair</h3>
+    <ul>
+      <li>"Generating unique-but-matching for-ID pairs in component-based dev frameworks, especially
+        when the actual input is separated from its label and potentially seventeen levels deeper. "</li>
+      <li>"Passing ids betwen files [in component libraries] is tricky."</li>
+      <li>"whole page uniqueness [is] a bit tricky to satisfy in some rare situations because the
+        different elements linked by the IDREF are not in the same component."</li>
+    </ul>
+  </section>
+
+
+  <section class="slide">
+    <h2>Theme: JS/toolchain requirement</h2>
+    <ul>
+      <li>"Frequently have to append a uuid or database ID to make it prefixed but unique, which
+        means JS required."</li>
+      <li>"Most current solutions depend on external tools to handle [ID prefixing] automatically,
+        but that often makes things worse in real projects due to tool limitations or collisions in
+        the processing pipeline."</li>
+    </ul>
+  </section>
+
+
+  <footer class="long comment">
+    <address>FIXME</address>
+  </footer>
+</body>
+
+</html>

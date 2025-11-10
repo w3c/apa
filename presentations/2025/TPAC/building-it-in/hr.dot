@@ -1,0 +1,24 @@
+digraph B {
+	{
+		rank=same;
+
+		screener [label="TAG Screener"];
+		fast [label="FAST"];
+		checklist [label="FAST Checklist"];
+		apa [label="APA WG review"];
+
+		screener -> fast -> checklist -> apa [style=invis];
+	}
+	reqs [label="Accessibility User Requirements (RQTF)\nMaking Content Usable (COGA TF)"];
+	spec [label="Your spec/explainer",style=filled,fillcolor=palegreen1];
+
+	reqs -> fast;
+	reqs -> checklist;
+	reqs -> apa;
+
+	screener -> spec;
+	fast -> spec;
+	checklist -> spec;
+
+	apa -> spec;
+}
