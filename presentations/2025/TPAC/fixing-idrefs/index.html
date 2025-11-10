@@ -140,22 +140,42 @@
 
 
   <section class="slide">
-    <h2>What (if anything) needs fixing?</h2>
-    <p>Themes from developer feedback so far:</p>
+    <p class="huge">What (if anything) needs fixing?</p>
+  </section>
+
+  <section class="slide">
+    <h2>Themes from developer feedback so far:</h2>
     <ul>
-      <li>Repeated content requires rewriting IDs for each repetition</li>
-      <li>Combining content from multiple sources can cause ID collisions</li>
+      <li>Repeated content requires rewriting IDs for each repetition
+        <ul>
+          <li>Code snippets may be copy-pasted multiple times; only IDs need to be edited each time</li>
+        </ul>
+      </li>
+      <li>Inline SVG using fragment identifiers regularly causes ID collisions</li>
+      <li>Combining content from multiple sources (e.g. user-generated content) risks causing ID collisions</li>
+  </section>
+
+  <section class="slide">
+    <h2>Themes from developer feedback so far:</h2>
+    <ul>
       <li>No platform support for generating/managing unique IDs
         <ul>
           <li>Being forced to add a build step or use JS</li>
         </ul>
       </li>
+      <li>An ID may be generated in one component but used in another, creating a coordination problem</li>
+  </section>
+
+  <section class="slide">
+    <h2>Themes from developer feedback so far:</h2>
+    <ul>
       <li>Unergonomic using IDs for label/input association in particular
         <ul>
-          <li>Also well-documented gaps in AT support for nesting inputs within labels</li>
+          <li>Unique IDs must be set for <em>each</em> individual form field, potentially across multiple forms in a page</li>
+          <li>Developers often don't bother, creating an inaccessible experience</li>
         </ul>
       </li>
-      <li>Inline SVG using fragment identifiers can also easily cause collisions</li>
+      <li>Well-documented gaps in AT support for nesting inputs within labels</li>
     </ul>
   </section>
 
@@ -187,38 +207,36 @@
 
 
   <section class="slide">
-    <h2>Prior art: <code>useId()</code></h2>
+    <h2>Prior art: Unique ID generation</h2>
     <ul>
-      <li>Provided by component frameworks Vue and React</li>
+      <li><code>useId()</code> is a hook (function) provided by component frameworks Vue and React</li>
       <li>Generates a unique ID which can be used in templates</li>
-      <li>IDs are stable across multiple runs, as long as an element is in the same position in the tree</li>
+      <li>IDs are stable across multiple runs (i.e. not randomly generated), as long as an element is in the same position in the tree</li>
     </ul>
   </section>
 
   <section class="slide">
-    <h2>Prior art: <code>useId()</code></h2>
+    <h3>React <code>useId()</code></h3>
     <pre>export default function FormComponent() {
-      const inputId = useId();
+  const inputId = useId();
 
-      return (
-      &lt;form&gt;
-      &lt;label htmlFor={inputId}&gt;
-      Enter your name:
-      &lt;/label&gt;
+  return (
+    &lt;form&gt;
+      &lt;label htmlFor={inputId}&gt;Name:&lt;/label&gt;
       &lt;input id={inputId} type="text" /&gt;
-      &lt;/form&gt;
-      );
-      }</pre>
+    &lt;/form&gt;
+  );
+}</pre>
   </section>
 
 
   <section class="slide">
-    <h2>Prior art: <code>useId()</code></h2>
+    <h3>React <code>useId()</code></h3>
     <p>The code on the previous slide my result in HTML something like this:</p>
     <pre>&lt;form&gt;
-      &lt;label for=":r1:"&gt;Enter your name:&lt;/label&gt;
-      &lt;input id=":r1:" type="text"&gt;
-      &lt;/form&gt;
+  &lt;label for=":r1:"&gt;Enter your name:&lt;/label&gt;
+  &lt;input id=":r1:" type="text"&gt;
+&lt;/form&gt;
     </pre>
   </section>
 
@@ -236,20 +254,18 @@
 
 
   <section class="slide">
-    <h2>Prior art: ID prefixing</h2>
+    <h3>ID prefixing using React <code>useId()</code></h3>
     <pre>export default function FormComponent() {
-      const prefix = useId();
-
-      return (
-      &lt;form&gt;
+  const prefix = useId();
+  return (
+    &lt;form&gt;
       &lt;label htmlFor={prefix + '-first'}&gt;First name:&lt;/label&gt;
-      &lt;input id={prefix + '-first'} type="text" /&gt;
-      &lt;br /&gt;
+      &lt;input id={prefix + '-first'} type="text" /&gt;&lt;br /&gt;
       &lt;label htmlFor={prefix + '-last'}&gt;Last name:&lt;/label&gt;
       &lt;input id={prefix + '-last'} type="text" /&gt;
-      &lt;/form&gt;
-      );
-      }</pre>
+    &lt;/form&gt;
+  );
+}</pre>
   </section>
 
 
@@ -263,28 +279,33 @@
         <code>url()</code> values
       </li>
     </ul>
+  </section>
+
+
+  <section class="slide">
+    <h3><code>posthtml-rename-id</code></h3>
     <div class="columns">
       <div>
         <h3>Input</h3>
         <pre>&lt;style>
-          .selector {
-          fill: url(#myId);
-          }
-          &lt;/style>
+  .selector {
+    fill: url(#myId);
+  }
+&lt;/style>
 
-          &lt;div id="myId">&lt;/div>
-          &lt;a href="#myId">&lt;/a></pre>
+&lt;div id="myId">&lt;/div>
+&lt;a href="#myId">&lt;/a></pre>
       </div>
       <div>
         <h3>Output</h3>
         <pre>&lt;style>
-          .selector {
-          fill: url(#prefix_myId);
-          }
-          &lt;/style>
+  .selector {
+    fill: url(#prefix_myId);
+  }
+&lt;/style>
 
-          &lt;div id="prefix_myId">&lt;/div>
-          &lt;a href="#prefix_myId">&lt;/a></pre>
+&lt;div id="prefix_myId">&lt;/div>
+&lt;a href="#prefix_myId">&lt;/a></pre>
       </div>
     </div>
   </section>
@@ -301,19 +322,16 @@
   </section>
 
   <section class="slide">
-    <h2>Prior art: Scoped ID rewriting</h2>
     <h3>AlpineJS <code>x-id</code> and <code>$id</code></h3>
-    <pre>&lt;!-- rewrite 'input' in this scope -->
-      &lt;div x-id="['input']">
-      &lt;label :for="$id('input')"> &lt;!-- "input-1" -->
-      &lt;input :id="$id('text-input')"> &lt;!-- "input-1" -->
-      &lt;/div>
+    <pre>&lt;div x-id="['input']">
+  &lt;label :for="$id('input')">    &lt;!-- becomes "input-1" -->
+  &lt;input :id="$id('input')">     &lt;!-- becomes "input-1" -->
+&lt;/div>
 
-      &lt;!-- rewrite 'input' (differently) in this scope too -->
-      &lt;div x-id="['input']">
-      &lt;label :for="$id('input')"> &lt;!-- "input-2" -->
-      &lt;input :id="$id('input')"> &lt;!-- "input-2" -->
-      &lt;/div></pre>
+&lt;div x-id="['input']">
+  &lt;label :for="$id('input')">    &lt;!-- becomes "input-2" -->
+  &lt;input :id="$id('input')">     &lt;!-- becomes "input-2" -->
+&lt;/div></pre>
   </section>
 
 
@@ -329,18 +347,17 @@
 
 
   <section class="slide">
-    <h2>Prior art: Using selectors to refer to elements</h2>
     <h3>htmx <code>hx-target</code></h3>
     <pre>&lt;!--A button that causes response-div to be updated-->
-      &lt;div>
-      &lt;div id="response-div">&lt;/div>
-      &lt;button hx-post="/register" hx-target="#response-div" hx-swap="beforeend">
-      Register!
-      &lt;/button>
-      &lt;/div>
+&lt;button hx-post="/register" hx-target="#response-div" hx-swap="beforeend">
+  Register!
+&lt;/button>
+&lt;div id="response-div">&lt;/div>
 
-      &lt;!-- A link that updates itself when clicked-->
-      &lt;a hx-post="/new-link" hx-target="this" hx-swap="outerHTML">New link&lt;/a></pre>
+&lt;!-- A link that updates itself when clicked-->
+&lt;a hx-post="/new-link" hx-target="this" hx-swap="outerHTML">
+  New link
+&lt;/a></pre>
   </section>
 
 
@@ -401,14 +418,18 @@
   </section>
 
 
-  <section class=slide>
-    <h2>Thank you!</h2>
-    <p>Thank you for participating. Here are some ways you can stay in touch and involved&hellip;</p>
+  <section class="slide">
+    <p class="huge">Thank you!</p>
+<!--
+    <p>Thank you for participating.</p>
+
+    <p></p>Here are some ways you can stay in touch and involved&hellip;</p>
     <ul>
       <li>FIXME</li>
       <li>FIXME</li>
       <li>FIXME</li>
     </ul>
+-->
   </section>
 
 
