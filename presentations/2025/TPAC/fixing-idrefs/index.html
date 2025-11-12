@@ -72,8 +72,23 @@
       10–14 November 2025</p>
   </section>
 
-  <section class=comment>
-    <p>Notes for slide 1 can be put here.</p>
+  <section class=slide>
+    <h2>Important info</h2>
+    <ul>
+      <li><a href="https://www.w3.org/policies/code-of-conduct">Code of Ethics and Professional Conduct</a></li>
+      <li><a href="https://www.w3.org/policies/antitrust-2024/">Antitrust Policy</a></li>
+      <li><a href="https://raw.githack.com/w3c/apa/main/presentations/2025/TPAC/fixing-idrefs/index.html">Presentation slides</a></li>
+    </ul>
+  </section>
+
+
+  <section class=slide>
+    <h2>Ground rules</h2>
+    <ul>
+      <li>No <code>qq+</code></li>
+      <li>We want problems, not solutions</li>
+      <li>We are listening to the problems, and collecting them (not arguing with them)</li>
+    </ul>
   </section>
 
 
@@ -91,7 +106,7 @@
   <section class="slide" id="non-goals">
     <h2>Non-goals</h2>
     <ul>
-      <li class=next>Find <em>the</em> solution</li>
+      <li class=next>Propose solution</li>
       <li class=next>Fully flesh out the use case(s) and concerns</li>
     </ul>
   </section>
@@ -143,6 +158,7 @@
     <p class="huge">What (if anything) needs fixing?</p>
   </section>
 
+
   <section class="slide">
     <h2>Themes from developer feedback so far:</h2>
     <ul>
@@ -169,7 +185,7 @@
   <section class="slide">
     <h2>Themes from developer feedback so far:</h2>
     <ul>
-      <li>Unergonomic using IDs for label/input association in particular
+      <li>It's unergonomic using IDs for label/input association in particular
         <ul>
           <li>Unique IDs must be set for <em>each</em> individual form field, potentially across multiple forms in a page</li>
           <li>Developers often don't bother, creating an inaccessible experience</li>
@@ -191,13 +207,13 @@
               <li>Identifying the right pain points.</li>
             </ul>
           </li>
-          <li>Wide applicability.</li>
+          <li>Preserve developer flexibility.</li>
         </ul>
       </div>
       <div>
         <h3>UX/Accessibility</h3>
         <ul>
-          <li>Complexity required in engine if backreferences are needed.</li>
+          <li>Implementation and maintainance burden.</li>
           <li>Performance hit.</li>
           <li>Fragility of approach.</li>
         </ul>
@@ -324,13 +340,13 @@
   <section class="slide">
     <h3>AlpineJS <code>x-id</code> and <code>$id</code></h3>
     <pre>&lt;div x-id="['input']">
-  &lt;label :for="$id('input')">    &lt;!-- becomes "input-1" -->
-  &lt;input :id="$id('input')">     &lt;!-- becomes "input-1" -->
+  &lt;label :for="$id('input')">  &lt;!-- ➡ "input-1" -->
+  &lt;input :id="$id('input')">   &lt;!-- ➡ "input-1" -->
 &lt;/div>
 
 &lt;div x-id="['input']">
-  &lt;label :for="$id('input')">    &lt;!-- becomes "input-2" -->
-  &lt;input :id="$id('input')">     &lt;!-- becomes "input-2" -->
+  &lt;label :for="$id('input')">  &lt;!-- ➡ "input-2" -->
+  &lt;input :id="$id('input')">   &lt;!-- ➡ "input-2" -->
 &lt;/div></pre>
   </section>
 
@@ -348,14 +364,20 @@
 
   <section class="slide">
     <h3>htmx <code>hx-target</code></h3>
-    <pre>&lt;!--A button that causes response-div to be updated-->
-&lt;button hx-post="/register" hx-target="#response-div" hx-swap="beforeend">
+    <pre>&lt;!-- A button that causes response-div to be updated -->
+&lt;button hx-post="/register"
+  hx-target="#response-div" hx-swap="beforeend">
   Register!
 &lt;/button>
-&lt;div id="response-div">&lt;/div>
+&lt;div id="response-div">&lt;/div></pre>
+  </section>
 
-&lt;!-- A link that updates itself when clicked-->
-&lt;a hx-post="/new-link" hx-target="this" hx-swap="outerHTML">
+
+  <section class="slide">
+    <h3>htmx <code>hx-target</code></h3>
+    <pre>&lt;!-- A link that updates itself when clicked -->
+&lt;a hx-post="/new-link" hx-target="this"
+  hx-swap="outerHTML">
   New link
 &lt;/a></pre>
   </section>
@@ -363,6 +385,7 @@
 
   <section class=slide>
     <h2>Some questions&hellip;</h2>
+    <p>(Just possibilities for the discussion, or to stimulate the queue.)</p>
   </section>
 
   <section class=slide>
@@ -403,13 +426,13 @@
     <p class=next>We need to do research to identify the problems. That starts with <em>you</em>!</p>
     <p class=next>How can we ensure that the reseach is effective?</p>
     <p class=next>Can you help?</p>
-    <p class=next>Some experiences of developers we've collected&hellip;</p>
+    <p class=next>Themes from developer feedback were given above; more can be found as an appendix within this slide deck.</p>
   </section>
 
 
   <section class=slide>
     <h2>Discussion time!</h2>
-    <p>Some points to consdier&hellip;</p>
+    <p>Some points to consider&hellip;</p>
     <ul>
       <li>Our goal is to come to consensus on the problem space, which may need more research.</li>
       <li>If you have experience that expands or constrains the problem space, please let us know.</li>
@@ -418,18 +441,18 @@
   </section>
 
 
+  <section class=slide>
+    <h2>Ground rules</h2>
+    <ul>
+      <li>No <code>qq+</code></li>
+      <li>We want problems, not solutions</li>
+      <li>We are listening to the problems, and collecting them (not arguing with them)</li>
+    </ul>
+  </section>
+
+
   <section class="slide">
     <p class="huge">Thank you!</p>
-<!--
-    <p>Thank you for participating.</p>
-
-    <p></p>Here are some ways you can stay in touch and involved&hellip;</p>
-    <ul>
-      <li>FIXME</li>
-      <li>FIXME</li>
-      <li>FIXME</li>
-    </ul>
--->
   </section>
 
 
@@ -444,10 +467,9 @@
           <li><a href="https://github.com/whatwg/html/issues/10143#issuecomment-3195739405">Alice's summary</a></li>
         </ul>
       </li>
-      <li><a href="https://github.com/webplatformco/project-idrefs/blob/main/research.md">Collation of feedback</a> from
-        State of HTML surveys, selected GitHub issues, and social media.</li>
+      <li><a href="https://github.com/webplatformco/project-idrefs/blob/main/research.md">Collation of feedback</a></li>
       <li><a href="https://notes.igalia.com/XlsPwU5sQfuaWYHwhtBMtA">Feedback on IDREF questions</a>&mdash;document
-        containing the questions Alice proposed in the summary comment above, and some answers from developers.</li>
+        containing the questions Alice proposed in the summary comment above, and some answers from devs.</li>
       <li><a href="https://www.w3.org/2025/10/15-apa-minutes.html">Minutes from <abbr
             title="Accessible Platform Architectures">APA</abbr> WG call</a></li>
     </ul>
