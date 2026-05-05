@@ -1,9 +1,6 @@
-<style>
-	span.label {
-		display: inline-block;
-		padding: 0.25em;
-	}
-</style>
+<!--
+The `style` attribute is used below, which was an attempt to impart the matching colours to the labels. However, GitHub strips the style attributes, so the `<span>`s were changed to `<q>`s (so that they would at least be quoted to differentiate them from the surrounding text).
+-->
 
 # Reviewing a document for APA
 
@@ -41,13 +38,13 @@ More details of the review process are provided in specific sections below.
 
    See the discussion within [Web Sustainability Guidelines (meta thread) #270](https://github.com/w3c/a11y-tracking/issues/270).
 
-5. If a concern needs to be raised with the document's owning working group, the reviewer creates an issue in a11y-tracking. When creating the issue, select the option, "Add a review comment (pending discussion by APA WG)" from the popup displayed. Follow the instructions within the issue template to create the issue. Add the <span class=label style="background-color: #FBCA04; color: black;">agenda+</span> label to the issue.
+5. If a concern needs to be raised with the document's owning working group, the reviewer creates an issue in a11y-tracking. When creating the issue, select the option, "Add a review comment (pending discussion by APA WG)" from the popup displayed. Follow the instructions within the issue template to create the issue. Add the <q style="background-color: #FBCA04; color: black;">agenda+</q> label to the issue.
 
    Here is an example: [Suggestions for Enhancing Accessibility Clarity in the WSG Draft #281](https://github.com/w3c/a11y-tracking/issues/281)
 
-6. If there are no concerns with the document, the reviewer(s) add a comment in the a11y-tracking meta-thread issue and mark that with <span class=label style="background-color: #FBCA04; color: black;">agenda+</span>. Provide a brief explanation of why there are no concerns.
+6. If there are no concerns with the document, the reviewer(s) add a comment in the a11y-tracking meta-thread issue and mark that with <q style="background-color: #FBCA04; color: black;">agenda+</q>. Provide a brief explanation of why there are no concerns.
 
-7. APA reviews <span class=label style="background-color: #FBCA04; color: black;">agenda+</span> issues within a11y-tracking associated with document reviews during a weekly meeting. This may be a meta-thread comment indicating that there are no APA concerns with the document. Or it is an issue drafted as potential APA comments concerning the document. The group discusses the issue or comment to determine how to proceed.
+7. APA reviews <q style="background-color: #FBCA04; color: black;">agenda+</q> issues within a11y-tracking associated with document reviews during a weekly meeting. This may be a meta-thread comment indicating that there are no APA concerns with the document. Or it is an issue drafted as potential APA comments concerning the document. The group discusses the issue or comment to determine how to proceed.
 
 8. If the APA group agrees there are no concerns with the document, the meta-issue is closed. The APA chairs will add a comment to and close the original a11y-request issue.
 
@@ -77,11 +74,11 @@ The meta-thread issue includes a link to the original spec review request, which
 
 The meta issue is also assigned the following labels:
 
-- the spec short name via <span class=label style="background: #6bc5c6; color: black;">s:\<spec-short-name\></span>
+- the spec short name via <q style="background: #6bc5c6; color: black;">s:\<spec-short-name\></q>
 
-- the working/interest/community group name via <span class=label style="background: #005a9c; color: white;">\<w|i|c\>g:\<group-short-name\></span>
+- the working/interest/community group name via <q style="background: #005a9c; color: white;">\<w|i|c\>g:\<group-short-name\></q>
 
-- <span class=label style="background: #f259f8; color: black;">review-meta-thread</span>
+- <q style="background: #f259f8; color: black;">review-meta-thread</q>
 
 As documented in the overview above, use the meta issue to take notes or discuss the issue with other reviewers. Note questions or concerns that you would like to discuss with other reviewers before drafting an issue for the APA group to review.
 
@@ -137,9 +134,9 @@ The reviewer records any concerns by creating an issue in a11y-tracking. This is
 
 - Write a short, succinct title. Tie this to the meta-thread and original a11y-request by including the meta-thread issue number in the title. This issue number will be removed if this issue gets filed with the document's working group repository.
 
-- Add the spec identification label (beginning with an **s**: ) that is found in the original a11y-request and meta-thread issues. For example, <span class=label style="background: #6bc5c6; color: black;">s:annotation-model</span>, or <span class=label style="background: #6bc5c6; color: black;">s:css-variables</span>.
+- Add the spec identification label (beginning with an **s**: ) that is found in the original a11y-request and meta-thread issues. For example, <q style="background: #6bc5c6; color: black;">s:annotation-model</q>, or <q style="background: #6bc5c6; color: black;">s:css-variables</q>.
 
-- Also add the pending <span class=label style="background: #e11d21; color: white;">pending</span> label to indicate this needs to be reviewed by the APA working group.
+- Also add the pending <q style="background: #e11d21; color: white;">pending</q> label to indicate this needs to be reviewed by the APA working group.
 
 - Describe the issue.
 
@@ -152,13 +149,13 @@ The reviewer records any concerns by creating an issue in a11y-tracking. This is
 
 - Write your comment, in as succinct and well-organized a way as possible. It is helpful to **quote the text you are commenting on** at the beginning of your comment.
 
-- When the issue is ready for review, add the <span class=label style="background-color: #FBCA04; color: black;">agenda+</span> label. This will prompt the APA co-chairs to add this issue to an upcoming meeting agenda.
+- When the issue is ready for review, add the <q style="background-color: #FBCA04; color: black;">agenda+</q> label. This will prompt the APA co-chairs to add this issue to an upcoming meeting agenda.
 
 - Submit the new a11y-tracking issue.
 
 ## Issue discussion
 
-Once the issue is created within a11y-tracking and flagged with the <span class=label style="background-color: #FBCA04; color: black;">agenda+</span> label, the APA chairs will add it to a meeting agenda. The agenda will contain a link to the issue. APA members should review the issue before the meeting and come prepared to discuss it.
+Once the issue is created within a11y-tracking and flagged with the <q style="background-color: #FBCA04; color: black;">agenda+</q> label, the APA chairs will add it to a meeting agenda. The agenda will contain a link to the issue. APA members should review the issue before the meeting and come prepared to discuss it.
 
 At the meeting, the author of the issue, the reviewer, will present a summary and suggested actions. It will save time during the meeting if members have reviewed the issue before the meeting and prepared any feedback. The working group will discuss the issue and decide if the issue should be filed against the document. They may ask the reviewer to include additional comments or clarifications.
 
@@ -174,7 +171,7 @@ In order to achieve this, the reviewer goes through a series of steps, which are
 
    The instructions detailing the process to file the issue in the document's group's repository are in the a11y-tracking issue.
 
-- Use your original comment as the starting point for that new issue adding any suggestions that arose from the APA working group. Add an <span class=label style="background-color: #f9c9ff; color: black;">a11y-needs-resolution</span> label to the **new** issue in the document's working group repository. This flags the issue for that working group.
+- Use your original comment as the starting point for that new issue adding any suggestions that arose from the APA working group. Add an <q style="background-color: #f9c9ff; color: black;">a11y-needs-resolution</q> label to the **new** issue in the document's working group repository. This flags the issue for that working group.
 
 - When you file the issue with the working group, it will be associated with your name. Thus, please make it clear that you are a member of APA filing on behalf of APA.
 
