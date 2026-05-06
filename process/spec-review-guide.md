@@ -52,13 +52,13 @@ More details of the review process are provided in specific sections below.
 
 10. If the group agrees to file the issue, the author of the a11y-tracking issue creates an issue in the document's owning working group repository. Follow the process documented in the [Decision to file](#decision-to-file) section in this document.
 
-   Here is an example: [Suggestions for Enhancing Accessibility Clarity in the WSG Draft #205](https://github.com/w3c/sustainableweb-wsg/issues/205) in [sustainableweb-wsg](https://github.com/w3c/sustainableweb-wsg)
+    Here is an example: [Suggestions for Enhancing Accessibility Clarity in the WSG Draft #205](https://github.com/w3c/sustainableweb-wsg/issues/205) in [sustainableweb-wsg](https://github.com/w3c/sustainableweb-wsg)
 
 11. Once the review of a document is completed and all issues are filed with the owning working group, an issue is created in the a11y-longitudinal-tracking repository. There is only one a11y-longitudinal-tracking issue per document - this one issue covers the life of that document, across revisions.
 
 12. Following each APA review, links to the meta-thread, and any issues raised, are collated into one comment, which is added to the a11y-longitudinal-tracking issue thread for the document.
 
-   This provides a snapshot of the state of the document at the point it was reviewed (and because all the issues have been created within Github, the status is easily tracked). It also allows APA to follow the accessibility changes of the document over time.
+    This provides a snapshot of the state of the document at the point it was reviewed (and because all the issues have been created within Github, the status is easily tracked). It also allows APA to follow the accessibility changes of the document over time.
 
 ## Assigning the review
 
